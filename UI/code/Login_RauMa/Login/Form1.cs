@@ -16,13 +16,57 @@ namespace Login
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtPassword_MouseEnter(object sender, EventArgs e)
+        {
+            pnlPassword.BackgroundImage = Properties.Resources.lock2;
+        }
+
+         private void txtPassword_MouseLeave(object sender, EventArgs e)
+           {
+               pnlPassword.BackgroundImage = Properties.Resources.lock1;
+               txtPassword.PasswordChar = '♥';
+           }
+
+        private void txtUsername_MouseEnter(object sender, EventArgs e)
+        {
+            pnlUsername.BackgroundImage = Properties.Resources.user2_1;
+        }
+
+        private void txtUsername_MouseLeave(object sender, EventArgs e)
+        {
+            pnlUsername.BackgroundImage = Properties.Resources.user2_2;
+            txtUsername.Text = "USERNAME";
+        }
+
+        private void txtUsername_Click(object sender, EventArgs e)
+        {
+            txtUsername.Clear();
+            pnlUsername.BackgroundImage = Properties.Resources.user2_1;
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            txtPassword.Clear();
+            pnlPassword.BackgroundImage = Properties.Resources.lock2;
+        }
+
+        private void btnSignin_MouseEnter(object sender, EventArgs e)
+        {
+            btnSignin.BackColor = Color.White;
+            btnSignin.ForeColor = Color.FromArgb(39, 174, 96);
+            btnSignin.FlatAppearance.BorderSize = 2;
+        }
+
+        private void btnSignin_MouseLeave(object sender, EventArgs e)
+        {
+            btnSignin.BackColor = Color.FromArgb(39, 174, 96);
+            btnSignin.ForeColor = Color.White;
+            btnSignin.FlatAppearance.BorderSize = 0;
         }
     }
 }

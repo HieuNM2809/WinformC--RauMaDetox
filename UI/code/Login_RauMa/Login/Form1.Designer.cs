@@ -28,30 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_RauMa));
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pnlLogo = new System.Windows.Forms.Panel();
+            this.pnlShape2 = new System.Windows.Forms.Panel();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.pnlUsername = new System.Windows.Forms.Panel();
+            this.pnlPassword = new System.Windows.Forms.Panel();
             this.btnSignin = new System.Windows.Forms.Button();
             this.lnkForGotYourPassword = new System.Windows.Forms.LinkLabel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.pnlShape3 = new System.Windows.Forms.Panel();
             this.lnkCreateAnAccount = new System.Windows.Forms.LinkLabel();
             this.btnClose = new System.Windows.Forms.Button();
+            this.pnlPW = new System.Windows.Forms.Panel();
+            this.pnlUS = new System.Windows.Forms.Panel();
+            this.pnlShape1 = new System.Windows.Forms.Panel();
+            this.pnlPW.SuspendLayout();
+            this.pnlUS.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtUsername
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.textBox1.Location = new System.Drawing.Point(102, 165);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 25);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "USERNAME";
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.txtUsername.Location = new System.Drawing.Point(91, 28);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(316, 25);
+            this.txtUsername.TabIndex = 1;
+            this.txtUsername.Text = "USERNAME";
+            this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
+            this.txtUsername.MouseEnter += new System.EventHandler(this.txtUsername_MouseEnter);
+            this.txtUsername.MouseLeave += new System.EventHandler(this.txtUsername_MouseLeave);
             // 
             // panel1
             // 
@@ -61,56 +70,64 @@
             this.panel1.Size = new System.Drawing.Size(335, 2);
             this.panel1.TabIndex = 2;
             // 
-            // panel2
+            // pnlLogo
             // 
-            this.panel2.BackgroundImage = global::Login.Properties.Resources.logoRauMa2;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(12, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(193, 75);
-            this.panel2.TabIndex = 3;
+            this.pnlLogo.BackgroundImage = global::Login.Properties.Resources.logoRauMa2;
+            this.pnlLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlLogo.Location = new System.Drawing.Point(12, 12);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(193, 75);
+            this.pnlLogo.TabIndex = 3;
             // 
-            // panel3
+            // pnlShape2
             // 
-            this.panel3.BackColor = System.Drawing.Color.ForestGreen;
-            this.panel3.Location = new System.Drawing.Point(102, 272);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(335, 2);
-            this.panel3.TabIndex = 5;
+            this.pnlShape2.BackColor = System.Drawing.Color.ForestGreen;
+            this.pnlShape2.Location = new System.Drawing.Point(90, 52);
+            this.pnlShape2.Name = "pnlShape2";
+            this.pnlShape2.Size = new System.Drawing.Size(335, 2);
+            this.pnlShape2.TabIndex = 5;
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.textBox2.Location = new System.Drawing.Point(102, 249);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(316, 25);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "PASSWORD";
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.txtPassword.Location = new System.Drawing.Point(90, 29);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '♥';
+            this.txtPassword.Size = new System.Drawing.Size(316, 25);
+            this.txtPassword.TabIndex = 4;
+            this.txtPassword.Text = "PASSWORD";
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            this.txtPassword.MouseEnter += new System.EventHandler(this.txtPassword_MouseEnter);
+            this.txtPassword.MouseLeave += new System.EventHandler(this.txtPassword_MouseLeave);
             // 
-            // panel4
+            // pnlUsername
             // 
-            this.panel4.BackgroundImage = global::Login.Properties.Resources.user1;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Location = new System.Drawing.Point(21, 154);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(55, 47);
-            this.panel4.TabIndex = 6;
+            this.pnlUsername.BackgroundImage = global::Login.Properties.Resources.user2_2;
+            this.pnlUsername.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlUsername.Location = new System.Drawing.Point(10, 10);
+            this.pnlUsername.Name = "pnlUsername";
+            this.pnlUsername.Size = new System.Drawing.Size(55, 62);
+            this.pnlUsername.TabIndex = 6;
             // 
-            // panel5
+            // pnlPassword
             // 
-            this.panel5.BackgroundImage = global::Login.Properties.Resources.lock1;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(21, 237);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(55, 47);
-            this.panel5.TabIndex = 7;
+            this.pnlPassword.BackgroundImage = global::Login.Properties.Resources.lock1;
+            this.pnlPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlPassword.Location = new System.Drawing.Point(9, 17);
+            this.pnlPassword.Name = "pnlPassword";
+            this.pnlPassword.Size = new System.Drawing.Size(55, 47);
+            this.pnlPassword.TabIndex = 7;
             // 
             // btnSignin
             // 
             this.btnSignin.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnSignin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnSignin.FlatAppearance.BorderSize = 0;
+            this.btnSignin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSignin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSignin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignin.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignin.ForeColor = System.Drawing.Color.White;
             this.btnSignin.Location = new System.Drawing.Point(21, 330);
@@ -119,7 +136,8 @@
             this.btnSignin.TabIndex = 8;
             this.btnSignin.Text = "SIGN IN";
             this.btnSignin.UseVisualStyleBackColor = false;
-            this.btnSignin.Click += new System.EventHandler(this.button1_Click);
+            this.btnSignin.MouseEnter += new System.EventHandler(this.btnSignin_MouseEnter);
+            this.btnSignin.MouseLeave += new System.EventHandler(this.btnSignin_MouseLeave);
             // 
             // lnkForGotYourPassword
             // 
@@ -133,14 +151,14 @@
             this.lnkForGotYourPassword.TabStop = true;
             this.lnkForGotYourPassword.Text = "Forgot your pasword?";
             // 
-            // panel6
+            // pnlShape3
             // 
-            this.panel6.BackColor = System.Drawing.Color.ForestGreen;
-            this.panel6.ForeColor = System.Drawing.Color.ForestGreen;
-            this.panel6.Location = new System.Drawing.Point(128, 452);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(225, 2);
-            this.panel6.TabIndex = 10;
+            this.pnlShape3.BackColor = System.Drawing.Color.ForestGreen;
+            this.pnlShape3.ForeColor = System.Drawing.Color.ForestGreen;
+            this.pnlShape3.Location = new System.Drawing.Point(128, 452);
+            this.pnlShape3.Name = "pnlShape3";
+            this.pnlShape3.Size = new System.Drawing.Size(225, 2);
+            this.pnlShape3.TabIndex = 10;
             // 
             // lnkCreateAnAccount
             // 
@@ -170,6 +188,34 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // pnlPW
+            // 
+            this.pnlPW.Controls.Add(this.pnlPassword);
+            this.pnlPW.Controls.Add(this.pnlShape2);
+            this.pnlPW.Controls.Add(this.txtPassword);
+            this.pnlPW.Location = new System.Drawing.Point(12, 222);
+            this.pnlPW.Name = "pnlPW";
+            this.pnlPW.Size = new System.Drawing.Size(425, 73);
+            this.pnlPW.TabIndex = 13;
+            // 
+            // pnlUS
+            // 
+            this.pnlUS.Controls.Add(this.pnlShape1);
+            this.pnlUS.Controls.Add(this.pnlUsername);
+            this.pnlUS.Controls.Add(this.txtUsername);
+            this.pnlUS.Location = new System.Drawing.Point(12, 137);
+            this.pnlUS.Name = "pnlUS";
+            this.pnlUS.Size = new System.Drawing.Size(424, 85);
+            this.pnlUS.TabIndex = 14;
+            // 
+            // pnlShape1
+            // 
+            this.pnlShape1.BackColor = System.Drawing.Color.ForestGreen;
+            this.pnlShape1.Location = new System.Drawing.Point(90, 62);
+            this.pnlShape1.Name = "pnlShape1";
+            this.pnlShape1.Size = new System.Drawing.Size(335, 2);
+            this.pnlShape1.TabIndex = 6;
+            // 
             // Login_RauMa
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -179,25 +225,28 @@
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
             this.BackgroundImageStore = global::Login.Properties.Resources.panel;
             this.ClientSize = new System.Drawing.Size(1033, 549);
+            this.Controls.Add(this.pnlUS);
+            this.Controls.Add(this.pnlPW);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lnkCreateAnAccount);
-            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.pnlShape3);
             this.Controls.Add(this.lnkForGotYourPassword);
             this.Controls.Add(this.btnSignin);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlLogo);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
             this.DoubleBuffered = true;
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Glow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Login_RauMa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.pnlPW.ResumeLayout(false);
+            this.pnlPW.PerformLayout();
+            this.pnlUS.ResumeLayout(false);
+            this.pnlUS.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,20 +254,21 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pnlLogo;
+        private System.Windows.Forms.Panel pnlShape2;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Panel pnlUsername;
+        private System.Windows.Forms.Panel pnlPassword;
         private System.Windows.Forms.Button btnSignin;
         private System.Windows.Forms.LinkLabel lnkForGotYourPassword;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel pnlShape3;
         private System.Windows.Forms.LinkLabel lnkCreateAnAccount;
         private System.Windows.Forms.Button btnClose;
-
-
+        private System.Windows.Forms.Panel pnlPW;
+        private System.Windows.Forms.Panel pnlUS;
+        private System.Windows.Forms.Panel pnlShape1;
     }
 }
 
