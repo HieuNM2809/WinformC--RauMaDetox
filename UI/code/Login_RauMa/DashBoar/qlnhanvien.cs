@@ -8,19 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace form_NhanVien
+namespace DashBoar
 {
-    public partial class frmQuanLiNhanVien : Form
+    public partial class qlnhanvien : Form
     {
-        public frmQuanLiNhanVien()
+        public qlnhanvien()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void qlnhanvien_Load(object sender, EventArgs e)
         {
             cboChucNang.SelectedIndex = 0;
-            cboLoaiNhanViên.SelectedIndex = 0;
             dtpNgaySinh.Value = DateTime.Now;
         }
 
@@ -28,7 +27,7 @@ namespace form_NhanVien
         {
             if (String.IsNullOrEmpty(txtID.Text) || String.IsNullOrEmpty(txtHoTen.Text) ||
                 String.IsNullOrEmpty(txtTaiKhoan.Text) || String.IsNullOrEmpty(txtMatKhau.Text) ||
-                dtpNgaySinh.Value >= DateTime.Now )
+                dtpNgaySinh.Value >= DateTime.Now)
             {
                 MessageBox.Show("Bạn vui lòng nhập đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -48,9 +47,8 @@ namespace form_NhanVien
                 if (chkTrangThai.Checked == true) lvwTTSV.SubItems.Add("Hoạt động");
                 else lvwTTSV.SubItems.Add("Không hoạt động ");
                 lvwTTSV.SubItems.Add(cboChucNang.Text);
-                lvwTTSV.SubItems.Add(cboLoaiNhanViên.Text);
                 lvwThongTinNhanVien.Items.Add(lvwTTSV);
-                
+
 
                 //Xoa Thong tin nhap
                 txtID.Text = "";
@@ -63,12 +61,9 @@ namespace form_NhanVien
                 txtMatKhau.Text = "";
                 chkTrangThai.Checked = true;
                 cboChucNang.SelectedIndex = 0;
-                cboLoaiNhanViên.SelectedIndex = 0;
             }
 
-            
 
-        
         }
 
         private void lvwThongTinNhanVien_SelectedIndexChanged(object sender, EventArgs e)
@@ -84,13 +79,12 @@ namespace form_NhanVien
                 txtEmail.Text = lvwThongTinNhanVien.SelectedItems[0].SubItems[5].Text;
                 txtTaiKhoan.Text = lvwThongTinNhanVien.SelectedItems[0].SubItems[6].Text;
                 txtMatKhau.Text = lvwThongTinNhanVien.SelectedItems[0].SubItems[7].Text;
-                if (lvwThongTinNhanVien.SelectedItems[0].SubItems[8].Text == "Hoạt động") 
+                if (lvwThongTinNhanVien.SelectedItems[0].SubItems[8].Text == "Hoạt động")
                     chkTrangThai.Checked = true;
                 else chkTrangThai.Checked = false;
-                cboLoaiNhanViên.Text = lvwThongTinNhanVien.SelectedItems[0].SubItems[9].Text;
                 cboChucNang.Text = lvwThongTinNhanVien.SelectedItems[0].SubItems[10].Text;
             }
-            
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -105,7 +99,6 @@ namespace form_NhanVien
             txtMatKhau.Text = "";
             chkTrangThai.Checked = true;
             cboChucNang.SelectedIndex = 0;
-            cboLoaiNhanViên.SelectedIndex = 0;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -128,16 +121,6 @@ namespace form_NhanVien
             txtMatKhau.Text = "";
             chkTrangThai.Checked = true;
             cboChucNang.SelectedIndex = 0;
-            cboLoaiNhanViên.SelectedIndex = 0;
-        }
-
-        private void btnThemAnh_Click(object sender, EventArgs e)
-        {
-            FileAnhNhanVien.ShowDialog();
-            String fileHinh = FileAnhNhanVien.FileName;
-            if (String.IsNullOrEmpty(fileHinh)) return;
-            Image HinhNV = Image.FromFile(fileHinh);
-            picHinhNhanVien.Image = HinhNV;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -149,17 +132,16 @@ namespace form_NhanVien
                 if (radNam.Checked == true) lvwThongTinNhanVien.SelectedItems[0].SubItems[2].Text = "Nam";
                 else if (radNu.Checked == true) lvwThongTinNhanVien.SelectedItems[0].SubItems[2].Text = "Nữ";
                 lvwThongTinNhanVien.SelectedItems[0].SubItems[3].Text = dtpNgaySinh.Text;
-                lvwThongTinNhanVien.SelectedItems[0].SubItems[4].Text =  txtEmail.Text;
+                lvwThongTinNhanVien.SelectedItems[0].SubItems[4].Text = txtEmail.Text;
                 lvwThongTinNhanVien.SelectedItems[0].SubItems[5].Text = txtEmail.Text;
                 lvwThongTinNhanVien.SelectedItems[0].SubItems[6].Text = txtTaiKhoan.Text;
                 lvwThongTinNhanVien.SelectedItems[0].SubItems[7].Text = txtMatKhau.Text;
                 if (chkTrangThai.Checked == true)
                     lvwThongTinNhanVien.SelectedItems[0].SubItems[8].Text = "Hoạt động";
                 else lvwThongTinNhanVien.SelectedItems[0].SubItems[8].Text = "không hoạt động";
-                lvwThongTinNhanVien.SelectedItems[0].SubItems[9].Text = cboLoaiNhanViên.Text  ;
-                lvwThongTinNhanVien.SelectedItems[0].SubItems[10].Text =cboChucNang.Text ;
+                lvwThongTinNhanVien.SelectedItems[0].SubItems[10].Text = cboChucNang.Text;
 
-                
+
             }
         }
     }
