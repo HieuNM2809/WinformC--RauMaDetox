@@ -71,5 +71,10 @@ namespace DashBoar
         {
             btnSanPham.ForeColor = Color.White;
         }
+
+        private void btnQLTaiKhoan_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

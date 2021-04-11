@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DashBoar
+namespace QL_NhanVien
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace DashBoar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmlogin());
+            Application.Run(new frmnhanvien());
         }
     }
 }

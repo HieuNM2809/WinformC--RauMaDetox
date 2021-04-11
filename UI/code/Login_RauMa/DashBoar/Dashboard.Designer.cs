@@ -34,10 +34,11 @@
             this.lblChucVu = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.pnlDecor = new System.Windows.Forms.Panel();
+            this.pnlform = new System.Windows.Forms.Panel();
             this.btnCaiDat = new System.Windows.Forms.Button();
             this.btnSanPham = new System.Windows.Forms.Button();
             this.btnHoaDon = new System.Windows.Forms.Button();
-            this.pnlDecor = new System.Windows.Forms.Panel();
             this.btnQLTaiKhoan = new System.Windows.Forms.Button();
             this.picAvatar = new System.Windows.Forms.PictureBox();
             this.pnlMenu.SuspendLayout();
@@ -93,7 +94,7 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(276, 640);
+            this.pnlMenu.Size = new System.Drawing.Size(276, 695);
             this.pnlMenu.TabIndex = 2;
             // 
             // btnThoat
@@ -104,13 +105,29 @@
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(65, 588);
+            this.btnThoat.Location = new System.Drawing.Point(68, 664);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(144, 31);
             this.btnThoat.TabIndex = 8;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // pnlDecor
+            // 
+            this.pnlDecor.BackColor = System.Drawing.Color.White;
+            this.pnlDecor.Location = new System.Drawing.Point(47, 175);
+            this.pnlDecor.Name = "pnlDecor";
+            this.pnlDecor.Size = new System.Drawing.Size(200, 4);
+            this.pnlDecor.TabIndex = 3;
+            // 
+            // pnlform
+            // 
+            this.pnlform.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlform.Location = new System.Drawing.Point(276, 0);
+            this.pnlform.Name = "pnlform";
+            this.pnlform.Size = new System.Drawing.Size(1425, 695);
+            this.pnlform.TabIndex = 3;
             // 
             // btnCaiDat
             // 
@@ -122,7 +139,7 @@
             this.btnCaiDat.ForeColor = System.Drawing.Color.White;
             this.btnCaiDat.Image = global::DashBoar.Properties.Resources.setting;
             this.btnCaiDat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCaiDat.Location = new System.Drawing.Point(0, 479);
+            this.btnCaiDat.Location = new System.Drawing.Point(0, 534);
             this.btnCaiDat.Name = "btnCaiDat";
             this.btnCaiDat.Size = new System.Drawing.Size(276, 60);
             this.btnCaiDat.TabIndex = 7;
@@ -141,7 +158,7 @@
             this.btnSanPham.ForeColor = System.Drawing.Color.White;
             this.btnSanPham.Image = global::DashBoar.Properties.Resources.product;
             this.btnSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSanPham.Location = new System.Drawing.Point(-1, 387);
+            this.btnSanPham.Location = new System.Drawing.Point(-1, 433);
             this.btnSanPham.Name = "btnSanPham";
             this.btnSanPham.Size = new System.Drawing.Size(277, 60);
             this.btnSanPham.TabIndex = 6;
@@ -161,7 +178,7 @@
             this.btnHoaDon.ForeColor = System.Drawing.Color.White;
             this.btnHoaDon.Image = global::DashBoar.Properties.Resources.bill;
             this.btnHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHoaDon.Location = new System.Drawing.Point(-1, 300);
+            this.btnHoaDon.Location = new System.Drawing.Point(-2, 326);
             this.btnHoaDon.Name = "btnHoaDon";
             this.btnHoaDon.Size = new System.Drawing.Size(277, 60);
             this.btnHoaDon.TabIndex = 5;
@@ -170,14 +187,6 @@
             this.btnHoaDon.UseVisualStyleBackColor = false;
             this.btnHoaDon.MouseEnter += new System.EventHandler(this.btnHoaDon_MouseEnter);
             this.btnHoaDon.MouseLeave += new System.EventHandler(this.btnHoaDon_MouseLeave);
-            // 
-            // pnlDecor
-            // 
-            this.pnlDecor.BackColor = System.Drawing.Color.White;
-            this.pnlDecor.Location = new System.Drawing.Point(47, 175);
-            this.pnlDecor.Name = "pnlDecor";
-            this.pnlDecor.Size = new System.Drawing.Size(200, 4);
-            this.pnlDecor.TabIndex = 3;
             // 
             // btnQLTaiKhoan
             // 
@@ -190,13 +199,14 @@
             this.btnQLTaiKhoan.ForeColor = System.Drawing.Color.White;
             this.btnQLTaiKhoan.Image = global::DashBoar.Properties.Resources.QLTaiKhoan;
             this.btnQLTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLTaiKhoan.Location = new System.Drawing.Point(-2, 209);
+            this.btnQLTaiKhoan.Location = new System.Drawing.Point(-2, 221);
             this.btnQLTaiKhoan.Name = "btnQLTaiKhoan";
             this.btnQLTaiKhoan.Size = new System.Drawing.Size(280, 60);
             this.btnQLTaiKhoan.TabIndex = 0;
             this.btnQLTaiKhoan.Text = "Quản Lí Tài Khoản";
             this.btnQLTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQLTaiKhoan.UseVisualStyleBackColor = false;
+            this.btnQLTaiKhoan.Click += new System.EventHandler(this.btnQLTaiKhoan_Click);
             this.btnQLTaiKhoan.MouseEnter += new System.EventHandler(this.btnQLTaiKhoan_MouseEnter);
             this.btnQLTaiKhoan.MouseLeave += new System.EventHandler(this.btnQLTaiKhoan_MouseLeave);
             // 
@@ -215,7 +225,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1224, 640);
+            this.ClientSize = new System.Drawing.Size(1701, 695);
+            this.Controls.Add(this.pnlform);
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -240,6 +251,7 @@
         private System.Windows.Forms.Button btnSanPham;
         private System.Windows.Forms.Button btnHoaDon;
         private System.Windows.Forms.Panel pnlDecor;
+        private System.Windows.Forms.Panel pnlform;
     }
 }
 

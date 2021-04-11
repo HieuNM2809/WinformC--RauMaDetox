@@ -158,6 +158,8 @@ namespace form_NhanVien
                 else lvwThongTinNhanVien.SelectedItems[0].SubItems[8].Text = "không hoạt động";
                 lvwThongTinNhanVien.SelectedItems[0].SubItems[9].Text = cboLoaiNhanViên.Text  ;
                 lvwThongTinNhanVien.SelectedItems[0].SubItems[10].Text =cboChucNang.Text ;
+
+                
             }
         }
     }

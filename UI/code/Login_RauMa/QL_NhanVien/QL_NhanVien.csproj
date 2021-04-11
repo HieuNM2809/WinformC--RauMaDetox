@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{22E5B251-9193-46CF-A6FD-98A5AF3346B9}</ProjectGuid>
+    <ProjectGuid>{BEBDE24A-DECA-4DF4-9379-5FAF1D26CDDE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>DashBoar</RootNamespace>
-    <AssemblyName>DashBoar</AssemblyName>
+    <RootNamespace>QL_NhanVien</RootNamespace>
+    <AssemblyName>QL_NhanVien</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,25 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,49 +81,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user1new.png" />
+    <None Include="Resources\chínhua.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logoRauMa2.png" />
+    <None Include="Resources\delete.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\QLTaiKhoan.png" />
+    <None Include="Resources\loop2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bill.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\product.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\product1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\setting.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\avatar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lock1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lock2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logoRauMa21.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\panel.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user2-1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user2-2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\panel1.png" />
+    <None Include="Resources\plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "Login\Login.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DashBoar", "DashBoar\DashBoar.csproj", "{22E5B251-9193-46CF-A6FD-98A5AF3346B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QL_NhanVien", "QL_NhanVien\QL_NhanVien.csproj", "{BEBDE24A-DECA-4DF4-9379-5FAF1D26CDDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{22E5B251-9193-46CF-A6FD-98A5AF3346B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22E5B251-9193-46CF-A6FD-98A5AF3346B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22E5B251-9193-46CF-A6FD-98A5AF3346B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEBDE24A-DECA-4DF4-9379-5FAF1D26CDDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEBDE24A-DECA-4DF4-9379-5FAF1D26CDDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEBDE24A-DECA-4DF4-9379-5FAF1D26CDDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEBDE24A-DECA-4DF4-9379-5FAF1D26CDDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
