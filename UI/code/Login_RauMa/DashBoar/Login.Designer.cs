@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmlogin));
             this.pnlUS = new System.Windows.Forms.Panel();
             this.pnlShape1 = new System.Windows.Forms.Panel();
             this.pnlUsername = new System.Windows.Forms.Panel();
@@ -125,7 +126,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '♥';
             this.txtPassword.Size = new System.Drawing.Size(316, 25);
-            this.txtPassword.TabIndex = 4;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.Text = "PASSWORD";
             this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
             this.txtPassword.MouseEnter += new System.EventHandler(this.txtPassword_MouseEnter);
@@ -193,7 +194,7 @@
             this.btnSignin.Location = new System.Drawing.Point(12, 324);
             this.btnSignin.Name = "btnSignin";
             this.btnSignin.Size = new System.Drawing.Size(428, 59);
-            this.btnSignin.TabIndex = 17;
+            this.btnSignin.TabIndex = 3;
             this.btnSignin.Text = "SIGN IN";
             this.btnSignin.UseVisualStyleBackColor = false;
             this.btnSignin.Click += new System.EventHandler(this.btnSignin_Click);
@@ -236,7 +237,9 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmlogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.pnlUS.ResumeLayout(false);
             this.pnlUS.PerformLayout();

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DashBoar
 {
-    public partial class qlnhanvien : Form
+    public partial class frmqlnhanvien : Form
     {
-        public qlnhanvien()
+        public frmqlnhanvien()
         {
             InitializeComponent();
         }
