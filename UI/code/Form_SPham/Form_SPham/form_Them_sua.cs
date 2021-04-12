@@ -28,12 +28,27 @@ namespace Form_SPham
             {
                 byte[] byteHA = File.ReadAllBytes(ofd.FileName);
                 MemoryStream ms = new MemoryStream(byteHA);
-               ptb_anhtai.Image = Image.FromStream(ms);
+               ptb_anhtai.BackgroundImage = Image.FromStream(ms);
             }
             else
             {
                 ptb_anhtai.Image = null;
             }
+        }
+
+        private void btn_huy_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btn_reset_Click(object sender, EventArgs e)
+        {
+            tbx_gia.Text = "";
+            tbx_masanpham.Text = "";
+            tbx_mota.Text = "";
+            tbx_tensanpham.Text = "";
+            cbx_lsp.Text = "";
+            ptb_anhtai.BackgroundImage = null;
         }
     }
 }

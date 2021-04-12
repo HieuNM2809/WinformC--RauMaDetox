@@ -31,6 +31,30 @@ namespace Form_SPham
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Cốc thơ mộng"}, 0, System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point));
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Cốc tinh khiết"}, 1, System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point));
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            "San hô trắng"}, 2, System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point));
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Rau má tinh khiết"}, 3, System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point));
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Rau má tinh khiết"}, 4, System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point));
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Chỉ là rau má"}, 5, System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point));
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Rau má bọt biển"}, 6, System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point));
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Thạch anh kiệt"}, 7, System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point));
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Thạch củ năng"}, 8, System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point));
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Trân châu lục bảo"}, 9, System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point));
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Trân trong trắng"}, 10, System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point));
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Hồng lâu thạch"}, 11, System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_taikhoan = new System.Windows.Forms.Button();
             this.ptB_avt = new System.Windows.Forms.PictureBox();
@@ -47,10 +71,9 @@ namespace Form_SPham
             this.btn_search = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_logo = new System.Windows.Forms.Button();
-            this.dgv_dsSanPham = new System.Windows.Forms.DataGridView();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptB_avt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_dsSanPham)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -219,11 +242,12 @@ namespace Form_SPham
             // 
             // tbx_search
             // 
-            this.tbx_search.Location = new System.Drawing.Point(282, 237);
+            this.tbx_search.Location = new System.Drawing.Point(282, 215);
             this.tbx_search.Name = "tbx_search";
             this.tbx_search.Size = new System.Drawing.Size(250, 27);
             this.tbx_search.TabIndex = 9;
             this.tbx_search.Text = "Nhập tên hoặc mã sản phẩm";
+            this.tbx_search.Click += new System.EventHandler(this.tbx_search_Click);
             // 
             // btn_search
             // 
@@ -235,7 +259,7 @@ namespace Form_SPham
             this.btn_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_search.ForeColor = System.Drawing.Color.White;
             this.btn_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_search.Location = new System.Drawing.Point(538, 237);
+            this.btn_search.Location = new System.Drawing.Point(538, 215);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(42, 28);
             this.btn_search.TabIndex = 10;
@@ -272,15 +296,29 @@ namespace Form_SPham
             this.btn_logo.TabIndex = 18;
             this.btn_logo.UseVisualStyleBackColor = false;
             // 
-            // dgv_dsSanPham
+            // listView1
             // 
-            this.dgv_dsSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_dsSanPham.Location = new System.Drawing.Point(282, 271);
-            this.dgv_dsSanPham.Name = "dgv_dsSanPham";
-            this.dgv_dsSanPham.RowHeadersWidth = 51;
-            this.dgv_dsSanPham.RowTemplate.Height = 29;
-            this.dgv_dsSanPham.Size = new System.Drawing.Size(940, 253);
-            this.dgv_dsSanPham.TabIndex = 19;
+            this.listView1.HideSelection = false;
+            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8,
+            listViewItem9,
+            listViewItem10,
+            listViewItem11,
+            listViewItem12});
+            this.listView1.LargeImageList = this.imageList1;
+            this.listView1.Location = new System.Drawing.Point(282, 249);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(940, 309);
+            this.listView1.TabIndex = 19;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -288,7 +326,7 @@ namespace Form_SPham
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1234, 648);
-            this.Controls.Add(this.dgv_dsSanPham);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.btn_logo);
             this.Controls.Add(this.btn_them);
             this.Controls.Add(this.btn_search);
@@ -301,7 +339,6 @@ namespace Form_SPham
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptB_avt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_dsSanPham)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,7 +362,7 @@ namespace Form_SPham
         private System.Windows.Forms.Button btn_logo;
         private System.Windows.Forms.PictureBox ptB_avt;
         private System.Windows.Forms.Button btn_taikhoan;
-        private System.Windows.Forms.DataGridView dgv_dsSanPham;
+        private System.Windows.Forms.ListView listView1;
     }
 }
 

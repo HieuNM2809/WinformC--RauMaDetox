@@ -45,8 +45,8 @@ namespace Form_SPham
             this.tbx_mota = new System.Windows.Forms.TextBox();
             this.btn_logo = new System.Windows.Forms.Button();
             this.btn_huy = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_reset = new System.Windows.Forms.Button();
+            this.btn_xacnhan = new System.Windows.Forms.Button();
             this.ptb_anhtai = new System.Windows.Forms.PictureBox();
             this.tbx_masanpham = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,7 +55,7 @@ namespace Form_SPham
             this.tbx_gia = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbx_lsp = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_taianh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -238,7 +238,7 @@ namespace Form_SPham
             // btn_logo
             // 
             this.btn_logo.BackColor = System.Drawing.Color.White;
-            this.btn_logo.BackgroundImage = global::Form_SPham.Properties.Resources.logoRauMa21;
+            this.btn_logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_logo.BackgroundImage")));
             this.btn_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_logo.FlatAppearance.BorderSize = 0;
             this.btn_logo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -264,47 +264,50 @@ namespace Form_SPham
             this.btn_huy.Text = "Hủy";
             this.btn_huy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_huy.UseVisualStyleBackColor = false;
+            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 
-            // button2
+            // btn_reset
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(931, 571);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 65);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Nhập lại";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_reset.FlatAppearance.BorderSize = 0;
+            this.btn_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_reset.ForeColor = System.Drawing.Color.White;
+            this.btn_reset.Image = ((System.Drawing.Image)(resources.GetObject("btn_reset.Image")));
+            this.btn_reset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_reset.Location = new System.Drawing.Point(931, 571);
+            this.btn_reset.Name = "btn_reset";
+            this.btn_reset.Size = new System.Drawing.Size(141, 65);
+            this.btn_reset.TabIndex = 24;
+            this.btn_reset.Text = "Nhập lại";
+            this.btn_reset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_reset.UseVisualStyleBackColor = false;
+            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
-            // button3
+            // btn_xacnhan
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::Form_SPham.Properties.Resources.xacnhan;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(773, 571);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 65);
-            this.button3.TabIndex = 25;
-            this.button3.Text = "Xác nhận";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_xacnhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_xacnhan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_xacnhan.FlatAppearance.BorderSize = 0;
+            this.btn_xacnhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_xacnhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_xacnhan.ForeColor = System.Drawing.Color.White;
+            this.btn_xacnhan.Image = global::Form_SPham.Properties.Resources.xacnhan;
+            this.btn_xacnhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_xacnhan.Location = new System.Drawing.Point(773, 571);
+            this.btn_xacnhan.Name = "btn_xacnhan";
+            this.btn_xacnhan.Size = new System.Drawing.Size(150, 65);
+            this.btn_xacnhan.TabIndex = 25;
+            this.btn_xacnhan.Text = "Xác nhận";
+            this.btn_xacnhan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_xacnhan.UseVisualStyleBackColor = false;
             // 
             // ptb_anhtai
             // 
+            this.ptb_anhtai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ptb_anhtai.Location = new System.Drawing.Point(839, 324);
             this.ptb_anhtai.Name = "ptb_anhtai";
-            this.ptb_anhtai.Size = new System.Drawing.Size(207, 168);
+            this.ptb_anhtai.Size = new System.Drawing.Size(181, 191);
             this.ptb_anhtai.TabIndex = 26;
             this.ptb_anhtai.TabStop = false;
             // 
@@ -380,17 +383,17 @@ namespace Form_SPham
             this.label4.TabIndex = 17;
             this.label4.Text = "Loại sản phẩm:";
             // 
-            // comboBox1
+            // cbx_lsp
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbx_lsp.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbx_lsp.FormattingEnabled = true;
+            this.cbx_lsp.Items.AddRange(new object[] {
             "Nước",
             "Topping"});
-            this.comboBox1.Location = new System.Drawing.Point(372, 534);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(348, 37);
-            this.comboBox1.TabIndex = 21;
+            this.cbx_lsp.Location = new System.Drawing.Point(372, 534);
+            this.cbx_lsp.Name = "cbx_lsp";
+            this.cbx_lsp.Size = new System.Drawing.Size(348, 37);
+            this.cbx_lsp.TabIndex = 21;
             // 
             // label6
             // 
@@ -411,7 +414,7 @@ namespace Form_SPham
             this.btn_taianh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_taianh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_taianh.ForeColor = System.Drawing.Color.White;
-            this.btn_taianh.Location = new System.Drawing.Point(1096, 417);
+            this.btn_taianh.Location = new System.Drawing.Point(1081, 440);
             this.btn_taianh.Name = "btn_taianh";
             this.btn_taianh.Size = new System.Drawing.Size(104, 75);
             this.btn_taianh.TabIndex = 28;
@@ -428,11 +431,11 @@ namespace Form_SPham
             this.Controls.Add(this.btn_taianh);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ptb_anhtai);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_xacnhan);
+            this.Controls.Add(this.btn_reset);
             this.Controls.Add(this.btn_huy);
             this.Controls.Add(this.btn_logo);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbx_lsp);
             this.Controls.Add(this.tbx_mota);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -472,8 +475,8 @@ namespace Form_SPham
         private System.Windows.Forms.PictureBox ptB_avt;
         private System.Windows.Forms.Button btn_taikhoan;
         private System.Windows.Forms.Button btn_huy;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_reset;
+        private System.Windows.Forms.Button btn_xacnhan;
         private System.Windows.Forms.PictureBox ptb_anhtai;
         private System.Windows.Forms.TextBox tbx_masanpham;
         private System.Windows.Forms.Label label1;
@@ -482,7 +485,7 @@ namespace Form_SPham
         private System.Windows.Forms.TextBox tbx_gia;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbx_lsp;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_taianh;
     }

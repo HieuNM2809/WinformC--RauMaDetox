@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\đồ én\\WinformC--RauMaDetox\\UI\\code\\Form_SPham\\Form_SPham\\Form_SPham.csproj": {}
+    "C:\\Users\\Thanh Duy\\source\\repos\\Form_SPham\\Form_SPham\\Form_SPham.csproj": {}
   },
   "projects": {
-    "D:\\đồ én\\WinformC--RauMaDetox\\UI\\code\\Form_SPham\\Form_SPham\\Form_SPham.csproj": {
+    "C:\\Users\\Thanh Duy\\source\\repos\\Form_SPham\\Form_SPham\\Form_SPham.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\đồ én\\WinformC--RauMaDetox\\UI\\code\\Form_SPham\\Form_SPham\\Form_SPham.csproj",
+        "projectUniqueName": "C:\\Users\\Thanh Duy\\source\\repos\\Form_SPham\\Form_SPham\\Form_SPham.csproj",
         "projectName": "Form_SPham",
-        "projectPath": "D:\\đồ én\\WinformC--RauMaDetox\\UI\\code\\Form_SPham\\Form_SPham\\Form_SPham.csproj",
+        "projectPath": "C:\\Users\\Thanh Duy\\source\\repos\\Form_SPham\\Form_SPham\\Form_SPham.csproj",
         "packagesPath": "C:\\Users\\Thanh Duy\\.nuget\\packages\\",
-        "outputPath": "D:\\đồ én\\WinformC--RauMaDetox\\UI\\code\\Form_SPham\\Form_SPham\\obj\\",
+        "outputPath": "C:\\Users\\Thanh Duy\\source\\repos\\Form_SPham\\Form_SPham\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Thanh Duy\\AppData\\Roaming\\NuGet\\NuGet.Config",

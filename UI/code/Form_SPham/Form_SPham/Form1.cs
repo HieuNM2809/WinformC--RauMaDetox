@@ -14,7 +14,7 @@ namespace Form_SPham
 {
     public partial class Form1 : Form
     {
-        
+       
         public Form1()
         {
             InitializeComponent();
@@ -25,7 +25,17 @@ namespace Form_SPham
             form_Them_sua form = new form_Them_sua();
             form.ShowDialog();
         }
-      
-      
+
+        private void tbx_search_Click(object sender, EventArgs e)
+        {
+            
+            tbx_search.Text = "";
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            form_View form = new form_View();
+            form.ShowDialog();
+        }
     }
 }

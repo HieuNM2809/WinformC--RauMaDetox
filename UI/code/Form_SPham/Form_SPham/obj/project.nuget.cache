@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4Az0xo0HYZdLucX+aA/BUWip2JKBte01aXSCpkFD2RmHi0XR5uFzaLutsR3dNV8I3ecKR3G75aP+tbs4Eh79KQ==",
+  "dgSpecHash": "wtiVwC805WF8EOMcqBwTTDKoHKcCBfbTuZXnUNB7UT85TfjPWI0Fbt/91tNBXHRw9E1oBMcqpIU3whYjBgqO3w==",
   "success": true,
-  "projectFilePath": "D:\\đồ én\\WinformC--RauMaDetox\\UI\\code\\Form_SPham\\Form_SPham\\Form_SPham.csproj",
+  "projectFilePath": "C:\\Users\\Thanh Duy\\source\\repos\\Form_SPham\\Form_SPham\\Form_SPham.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Thanh Duy\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Thanh Duy\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

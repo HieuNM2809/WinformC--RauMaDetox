@@ -48,7 +48,7 @@ namespace Form_SPham
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_sua = new System.Windows.Forms.Button();
             this.btn_logo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptB_avt)).BeginInit();
@@ -284,22 +284,22 @@ namespace Form_SPham
             this.label9.TabIndex = 15;
             this.label9.Text = "Mô tả:";
             // 
-            // button2
+            // btn_sua
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(1083, 564);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 72);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Sửa";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_sua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_sua.FlatAppearance.BorderSize = 0;
+            this.btn_sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_sua.ForeColor = System.Drawing.Color.White;
+            this.btn_sua.Image = ((System.Drawing.Image)(resources.GetObject("btn_sua.Image")));
+            this.btn_sua.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_sua.Location = new System.Drawing.Point(1083, 564);
+            this.btn_sua.Name = "btn_sua";
+            this.btn_sua.Size = new System.Drawing.Size(139, 72);
+            this.btn_sua.TabIndex = 16;
+            this.btn_sua.Text = "Sửa";
+            this.btn_sua.UseVisualStyleBackColor = false;
+            this.btn_sua.Click += new System.EventHandler(this.button2_Click);
             // 
             // btn_logo
             // 
@@ -321,7 +321,7 @@ namespace Form_SPham
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1234, 648);
             this.Controls.Add(this.btn_logo);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_sua);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -361,7 +361,7 @@ namespace Form_SPham
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_sua;
         private System.Windows.Forms.Button btn_logo;
         private System.Windows.Forms.PictureBox ptB_avt;
         private System.Windows.Forms.Button btn_taikhoan;
