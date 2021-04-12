@@ -71,10 +71,20 @@ namespace DashBoar
         {
             btnSanPham.ForeColor = Color.White;
         }
-
+        private void ForminPanel(object Formhijo)
+        {
+            if (pnlform.Controls.Count > 0)
+                pnlform.Controls.RemoveAt(0);
+            Form hf = Formhijo as Form;
+            hf.TopLevel = false;
+            hf.Dock = DockStyle.Fill;
+            pnlform.Controls.Add(hf);
+            pnlform.Tag = hf;
+            hf.Show();
+        }
         private void btnQLTaiKhoan_Click(object sender, EventArgs e)
         {
-           
+            ForminPanel(new frmqlnhanvien());
         }
     }
 }
