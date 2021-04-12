@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.ColumnHeader cl_HoTen;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmnhanvien));
             this.lblThongTinNhanVien = new System.Windows.Forms.Label();
             this.lvwThongTinNhanVien = new System.Windows.Forms.ListView();
             this.cl_ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -73,6 +74,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             cl_HoTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -180,6 +182,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnTimKiem);
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.btnThemAnh);
             this.groupBox1.Controls.Add(this.btnXoa);
@@ -583,6 +586,25 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Loại nhân viên:";
             // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BackColor = System.Drawing.Color.Green;
+            this.btnTimKiem.FlatAppearance.BorderSize = 0;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
+            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiem.Location = new System.Drawing.Point(169, 638);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(149, 72);
+            this.btnTimKiem.TabIndex = 29;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
             // frmnhanvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -651,6 +673,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnTimKiem;
     }
 }
 

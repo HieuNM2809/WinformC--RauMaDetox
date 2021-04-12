@@ -145,6 +145,10 @@ namespace QL_NhanVien
                 cboChucNang.Text = lvwThongTinNhanVien.SelectedItems[0].SubItems[10].Text;
             }
         }
-       
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
