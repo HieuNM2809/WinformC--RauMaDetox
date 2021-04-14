@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Thanh Duy\\OneDrive\\Tài liệu\\0306191012_Buoi13\\texter\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
+    "D:\\HỌC TẬP\\ĐỒ ÁN LẬP TRÌNH WINDOWS\\WinformC--RauMaDetox\\WinformC--RauMaDetox\\texter\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Thanh Duy\\OneDrive\\Tài liệu\\0306191012_Buoi13\\texter\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
+    "D:\\HỌC TẬP\\ĐỒ ÁN LẬP TRÌNH WINDOWS\\WinformC--RauMaDetox\\WinformC--RauMaDetox\\texter\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Thanh Duy\\OneDrive\\Tài liệu\\0306191012_Buoi13\\texter\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectUniqueName": "D:\\HỌC TẬP\\ĐỒ ÁN LẬP TRÌNH WINDOWS\\WinformC--RauMaDetox\\WinformC--RauMaDetox\\texter\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "C:\\Users\\Thanh Duy\\OneDrive\\Tài liệu\\0306191012_Buoi13\\texter\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
-        "packagesPath": "C:\\Users\\Thanh Duy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Thanh Duy\\OneDrive\\Tài liệu\\0306191012_Buoi13\\texter\\WinFormsApp1\\WinFormsApp1\\obj\\",
+        "projectPath": "D:\\HỌC TẬP\\ĐỒ ÁN LẬP TRÌNH WINDOWS\\WinformC--RauMaDetox\\WinformC--RauMaDetox\\texter\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "D:\\HỌC TẬP\\ĐỒ ÁN LẬP TRÌNH WINDOWS\\WinformC--RauMaDetox\\WinformC--RauMaDetox\\texter\\WinFormsApp1\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Thanh Duy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
