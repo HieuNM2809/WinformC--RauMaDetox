@@ -120,6 +120,7 @@
   <metadata name="cl_HoTen.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+<<<<<<< HEAD
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnTimKiem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -145,4 +146,9 @@
         Dl/KQlmvWPYqsgJoxuGXJ6s9sSyYVfZ5xYfZrf+xOyoq/gRFugQCsuvzEAAAAABJRU5ErkJggg==
 </value>
   </data>
+=======
+  <metadata name="cl_HoTen.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+>>>>>>> 64a0d72fcdfb8cb5b1a1ed99617211f111701382
 </root>

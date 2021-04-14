@@ -34,13 +34,13 @@
             this.lblChucVu = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.pnlDecor = new System.Windows.Forms.Panel();
+            this.pnlform = new System.Windows.Forms.Panel();
             this.btnCaiDat = new System.Windows.Forms.Button();
             this.btnSanPham = new System.Windows.Forms.Button();
             this.btnHoaDon = new System.Windows.Forms.Button();
-            this.pnlDecor = new System.Windows.Forms.Panel();
             this.btnQLTaiKhoan = new System.Windows.Forms.Button();
             this.picAvatar = new System.Windows.Forms.PictureBox();
-            this.pnlform = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
@@ -94,25 +94,40 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(276, 723);
+            this.pnlMenu.Size = new System.Drawing.Size(276, 695);
             this.pnlMenu.TabIndex = 2;
             // 
             // btnThoat
             // 
-            this.btnThoat.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnThoat.FlatAppearance.BorderSize = 0;
             this.btnThoat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(0, 692);
+            this.btnThoat.Location = new System.Drawing.Point(68, 664);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(276, 31);
+            this.btnThoat.Size = new System.Drawing.Size(144, 31);
             this.btnThoat.TabIndex = 8;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // pnlDecor
+            // 
+            this.pnlDecor.BackColor = System.Drawing.Color.White;
+            this.pnlDecor.Location = new System.Drawing.Point(47, 175);
+            this.pnlDecor.Name = "pnlDecor";
+            this.pnlDecor.Size = new System.Drawing.Size(200, 4);
+            this.pnlDecor.TabIndex = 3;
+            // 
+            // pnlform
+            // 
+            this.pnlform.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlform.Location = new System.Drawing.Point(276, 0);
+            this.pnlform.Name = "pnlform";
+            this.pnlform.Size = new System.Drawing.Size(1425, 695);
+            this.pnlform.TabIndex = 3;
             // 
             // btnCaiDat
             // 
@@ -173,14 +188,6 @@
             this.btnHoaDon.MouseEnter += new System.EventHandler(this.btnHoaDon_MouseEnter);
             this.btnHoaDon.MouseLeave += new System.EventHandler(this.btnHoaDon_MouseLeave);
             // 
-            // pnlDecor
-            // 
-            this.pnlDecor.BackColor = System.Drawing.Color.White;
-            this.pnlDecor.Location = new System.Drawing.Point(47, 175);
-            this.pnlDecor.Name = "pnlDecor";
-            this.pnlDecor.Size = new System.Drawing.Size(200, 4);
-            this.pnlDecor.TabIndex = 3;
-            // 
             // btnQLTaiKhoan
             // 
             this.btnQLTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
@@ -214,27 +221,17 @@
             this.picAvatar.TabIndex = 1;
             this.picAvatar.TabStop = false;
             // 
-            // pnlform
-            // 
-            this.pnlform.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlform.Location = new System.Drawing.Point(276, 0);
-            this.pnlform.Name = "pnlform";
-            this.pnlform.Size = new System.Drawing.Size(1455, 723);
-            this.pnlform.TabIndex = 3;
-            // 
             // frmDashboar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1731, 723);
+            this.ClientSize = new System.Drawing.Size(1701, 695);
             this.Controls.Add(this.pnlform);
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDashboar";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rau Má Detox";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlMenu.ResumeLayout(false);
             this.pnlMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();

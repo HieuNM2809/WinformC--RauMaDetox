@@ -22,10 +22,15 @@ namespace form_NhanVien
             cboChucNang.SelectedIndex = 0;
             cboLoaiNhanViên.SelectedIndex = 0;
             dtpNgaySinh.Value = DateTime.Now;
+        } 
+        private void btnThem_MouseLeave(object sender, EventArgs e)
+        {
+
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            btnThem.Font = new Font(" ",12, FontStyle.Bold | FontStyle.Strikeout);
             if (String.IsNullOrEmpty(txtID.Text) || String.IsNullOrEmpty(txtHoTen.Text) ||
                 String.IsNullOrEmpty(txtTaiKhoan.Text) || String.IsNullOrEmpty(txtMatKhau.Text) ||
                 dtpNgaySinh.Value >= DateTime.Now )
@@ -161,6 +166,18 @@ namespace form_NhanVien
 
                 
             }
+        }
+
+        private void btnThem_MouseHover(object sender, EventArgs e)
+        {
+            btnThem.Text = "Thêm";
+            btnThem.Image = null;
+        }
+
+        private void btnThem_MouseLeave_1(object sender, EventArgs e)
+        {
+            btnThem.Text = " ";
+            btnThem.Image = btnThem.Image;
         }
     }
 }

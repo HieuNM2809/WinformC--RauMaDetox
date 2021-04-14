@@ -12,11 +12,11 @@ namespace QL_NhanVien
 {
     public partial class frmnhanvien : Form
     {
-        public delegate void frmNhanVien(String Value);
         public frmnhanvien()
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -150,5 +150,7 @@ namespace QL_NhanVien
         {
 
         }
+=======
+>>>>>>> 64a0d72fcdfb8cb5b1a1ed99617211f111701382
     }
 }

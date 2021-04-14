@@ -45,6 +45,7 @@ namespace DashBoar
 
         private void txtUsername_Click(object sender, EventArgs e)
         {
+            txtUsername.Clear();
             pnlUsername.BackgroundImage = Properties.Resources.user2_1;
         }
 

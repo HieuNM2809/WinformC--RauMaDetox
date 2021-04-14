@@ -1,0 +1,17 @@
+C:\Users\Thanh Duy\OneDrive\Tài liệu\0306191012_Buoi13\texter\WinFormsApp1\WinFormsApp1\bin\Debug\netcoreapp3.1\WinFormsApp1.exe
+C:\Users\Thanh Duy\OneDrive\Tài liệu\0306191012_Buoi13\texter\WinFormsApp1\WinFormsApp1\bin\Debug\netcoreapp3.1\WinFormsApp1.deps.json
+C:\Users\Thanh Duy\OneDrive\Tài liệu\0306191012_Buoi13\texter\WinFormsApp1\WinFormsApp1\bin\Debug\netcoreapp3.1\WinFormsApp1.runtimeconfig.json
+C:\Users\Thanh Duy\OneDrive\Tài liệu\0306191012_Buoi13\texter\WinFormsApp1\WinFormsApp1\bin\Debug\netcoreapp3.1\WinFormsApp1.runtimeconfig.dev.json
+C:\Users\Thanh Duy\OneDrive\Tài liệu\0306191012_Buoi13\texter\WinFormsApp1\WinFormsApp1\bin\Debug\netcoreapp3.1\WinFormsApp1.dll
+C:\Users\Thanh Duy\OneDrive\Tài liệu\0306191012_Buoi13\texter\WinFormsApp1\WinFormsApp1\bin\Debug\netcoreapp3.1\WinFormsApp1.pdb
+C:\Users\Thanh Duy\OneDrive\Tài liệu\0306191012_Buoi13\texter\WinFormsApp1\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.csprojAssemblyReference.cache
+C:\Users\Thanh Duy\OneDrive\Tài liệu\0306191012_Buoi13\texter\WinFormsApp1\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.Form1.resources
+C:\Users\Thanh Duy\OneDrive\Tài liệu\0306191012_Buoi13\texter\WinFormsApp1\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.csproj.GenerateResource.cache
+C:\Users\Thanh Duy\OneDrive\Tài liệu\0306191012_Buoi13\texter\WinFormsApp1\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.AssemblyInfoInputs.cache
+C:\Users\Thanh Duy\OneDrive\Tài liệu\0306191012_Buoi13\texter\WinFormsApp1\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.AssemblyInfo.cs
+C:\Users\Thanh Duy\OneDrive\Tài liệu\0306191012_Buoi13\texter\WinFormsApp1\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Thanh Duy\OneDrive\Tài liệu\0306191012_Buoi13\texter\WinFormsApp1\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.dll
+C:\Users\Thanh Duy\OneDrive\Tài liệu\0306191012_Buoi13\texter\WinFormsApp1\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.pdb
+C:\Users\Thanh Duy\OneDrive\Tài liệu\0306191012_Buoi13\texter\WinFormsApp1\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.genruntimeconfig.cache
+C:\Users\Thanh Duy\OneDrive\Tài liệu\0306191012_Buoi13\texter\WinFormsApp1\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.Properties.Resources.resources
+C:\Users\Thanh Duy\OneDrive\Tài liệu\0306191012_Buoi13\texter\WinFormsApp1\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.Them_sua.resources
