@@ -45,13 +45,13 @@ namespace DashBoar
 
         private void txtUsername_Click(object sender, EventArgs e)
         {
-            txtUsername.Clear();
+           
             pnlUsername.BackgroundImage = Properties.Resources.user2_1;
         }
 
         private void txtPassword_Click(object sender, EventArgs e)
         {
-            txtPassword.Clear();
+           
             pnlPassword.BackgroundImage = Properties.Resources.lock2;
         }
 

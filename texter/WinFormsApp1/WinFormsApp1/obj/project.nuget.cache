@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "ShyO2TmRKqoYHMfrwqRypvXauUPeYgyn6Kc/WMYGxpOf5kPTnxE1n/me69UHu/x4x650Zyx6mLYP+fo854G6xg==",
   "success": true,
   "projectFilePath": "D:\\HỌC TẬP\\ĐỒ ÁN LẬP TRÌNH WINDOWS\\WinformC--RauMaDetox\\WinformC--RauMaDetox\\texter\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+=======
+  "dgSpecHash": "BH9FYIq6MMwqhI9cygqxN9/O3To/wQdviP0qQy6mzjD3EFQDKnFgzCm7yj60kEXvHWosrwgm0Bh0CgG7CQVl9Q==",
+  "success": true,
+  "projectFilePath": "D:\\HỌC TẬP\\ĐỒ ÁN LẬP TRÌNH WINDOWS\\WinformC--RauMaDetox\\texter\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+>>>>>>> 58548ed3165ea7ecdcaa9d670a7d4dd6c5573b59
   "expectedPackageFiles": [],
   "logs": []
 }

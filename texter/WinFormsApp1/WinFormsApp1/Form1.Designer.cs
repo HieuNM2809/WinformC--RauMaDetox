@@ -249,7 +249,6 @@ namespace WinFormsApp1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.BackgroundImage = global::WinFormsApp1.Properties.Resources.lui;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Location = new System.Drawing.Point(427, 72);
             this.button1.Name = "button1";
@@ -260,7 +259,6 @@ namespace WinFormsApp1
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackgroundImage = global::WinFormsApp1.Properties.Resources.next;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Location = new System.Drawing.Point(712, 72);
             this.button2.Name = "button2";
