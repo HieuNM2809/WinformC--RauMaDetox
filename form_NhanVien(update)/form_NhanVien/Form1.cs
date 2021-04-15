@@ -35,6 +35,8 @@ namespace form_NhanVien
         {
             if (lvwThongTinNhanVien.SelectedItems.Count > 0)
             {
+                txtID.Enabled = false;
+                txtTaiKhoan.Enabled = false;
                 txtID.Text = lvwThongTinNhanVien.SelectedItems[0].SubItems[0].Text;
                 txtHoTen.Text = lvwThongTinNhanVien.SelectedItems[0].SubItems[1].Text;
                 if (lvwThongTinNhanVien.SelectedItems[0].SubItems[2].Text == "Nam") radNam.Checked = true;
@@ -55,6 +57,8 @@ namespace form_NhanVien
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            txtID.Enabled = true;
+            txtTaiKhoan.Enabled = true;
             txtID.Text = "";
             txtHoTen.Text = "";
             radNam.Checked = true;
