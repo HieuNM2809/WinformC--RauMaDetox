@@ -14,7 +14,7 @@ namespace Form_SPham
 {
     public partial class Form1 : Form
     {
-        private string connectionString = @"Data Source=.;Initial Catalog=ql_rauma;Integrated Security=True";
+        
         public Form1()
         {
             InitializeComponent();
@@ -26,22 +26,6 @@ namespace Form_SPham
             form.ShowDialog();
         }
       
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            dgv_dsSanPham.DataSource = GetAllSanPham().Tables[0];
-        }
-        DataSet GetAllSanPham() 
-        {
-            DataSet data = new DataSet();
-            String QLSanPham = "SELECT * FROM SanPham";
-            using (SqlConnection connection= new SqlConnection(connectionString) )
-            {
-                connection.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(QLSanPham, connection);
-                adapter.Fill(data);
-                connection.Close(); 
-            }
-            return data;
-        }
+      
     }
 }
