@@ -72,6 +72,18 @@
     <Compile Include="QL_SanPham.Designer.cs">
       <DependentUpon>QL_SanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="Them_sua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Them_sua.Designer.cs">
+      <DependentUpon>Them_sua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xem_SanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xem_SanPham.Designer.cs">
+      <DependentUpon>Xem_SanPham.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +102,15 @@
     </Compile>
     <EmbeddedResource Include="QL_NhanVien.resx">
       <DependentUpon>QL_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QL_SanPham.resx">
+      <DependentUpon>QL_SanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Them_sua.resx">
+      <DependentUpon>Them_sua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xem_SanPham.resx">
+      <DependentUpon>Xem_SanPham.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -157,6 +178,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\menu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoRauMa22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chínhua1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exits1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loop21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xacnhan.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
