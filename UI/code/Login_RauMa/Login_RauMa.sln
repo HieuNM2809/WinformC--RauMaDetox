@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "Login\Login.csproj", "{6625C10E-4AC2-44B5-A43E-23C88BE64665}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DashBoar", "DashBoar\DashBoar.csproj", "{22E5B251-9193-46CF-A6FD-98A5AF3346B9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QL_NhanVien", "QL_NhanVien\QL_NhanVien\QL_NhanVien.csproj", "{252D6B05-B975-43E0-8D48-CDC8E432B1B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6625C10E-4AC2-44B5-A43E-23C88BE64665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6625C10E-4AC2-44B5-A43E-23C88BE64665}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6625C10E-4AC2-44B5-A43E-23C88BE64665}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6625C10E-4AC2-44B5-A43E-23C88BE64665}.Release|Any CPU.Build.0 = Release|Any CPU
 		{22E5B251-9193-46CF-A6FD-98A5AF3346B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{22E5B251-9193-46CF-A6FD-98A5AF3346B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22E5B251-9193-46CF-A6FD-98A5AF3346B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22E5B251-9193-46CF-A6FD-98A5AF3346B9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{252D6B05-B975-43E0-8D48-CDC8E432B1B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{252D6B05-B975-43E0-8D48-CDC8E432B1B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{252D6B05-B975-43E0-8D48-CDC8E432B1B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{252D6B05-B975-43E0-8D48-CDC8E432B1B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
