@@ -94,7 +94,7 @@
             this.btn_search.FlatAppearance.BorderSize = 0;
             this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_search.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_search.Location = new System.Drawing.Point(282, 229);
+            this.btn_search.Location = new System.Drawing.Point(282, 232);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(54, 30);
             this.btn_search.TabIndex = 4;

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace DashBoar
 {
-    public partial class DangKiTaiKhoan : Form
+    public partial class frmDangKiTaiKhoan : Form
     {
-        public DangKiTaiKhoan()
+        public frmDangKiTaiKhoan()
         {
             InitializeComponent();
+        }
+
+        private void frmDangKiTaiKhoan_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
