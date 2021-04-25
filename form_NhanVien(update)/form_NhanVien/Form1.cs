@@ -12,10 +12,12 @@ namespace form_NhanVien
 {
     public partial class frmQuanLiNhanVien : Form
     {
+        
         public frmQuanLiNhanVien()
         {
             InitializeComponent();
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -28,58 +30,13 @@ namespace form_NhanVien
 
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            btnThem.Font = new Font(" ",12, FontStyle.Bold | FontStyle.Strikeout);
-            if (String.IsNullOrEmpty(txtID.Text) || String.IsNullOrEmpty(txtHoTen.Text) ||
-                String.IsNullOrEmpty(txtTaiKhoan.Text) || String.IsNullOrEmpty(txtMatKhau.Text) ||
-                dtpNgaySinh.Value >= DateTime.Now )
-            {
-                MessageBox.Show("Bạn vui lòng nhập đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else
-            {
-                // them thong tin vao listview
-                ListViewItem lvwTTSV = new ListViewItem(txtID.Text);
-                lvwTTSV.SubItems.Add(txtHoTen.Text);
-                if (radNam.Checked == true) lvwTTSV.SubItems.Add("Nam");
-                else if (radNu.Checked == true) lvwTTSV.SubItems.Add("Nữ");
-                lvwTTSV.SubItems.Add(dtpNgaySinh.Text);
-                lvwTTSV.SubItems.Add(txtSDT.Text);
-                lvwTTSV.SubItems.Add(txtEmail.Text);
-                lvwTTSV.SubItems.Add(txtTaiKhoan.Text);
-                lvwTTSV.SubItems.Add(txtMatKhau.Text);
-                if (chkTrangThai.Checked == true) lvwTTSV.SubItems.Add("Hoạt động");
-                else lvwTTSV.SubItems.Add("Không hoạt động ");
-                lvwTTSV.SubItems.Add(cboChucNang.Text);
-                lvwTTSV.SubItems.Add(cboLoaiNhanViên.Text);
-                lvwThongTinNhanVien.Items.Add(lvwTTSV);
-                
-
-                //Xoa Thong tin nhap
-                txtID.Text = "";
-                txtHoTen.Text = "";
-                radNam.Checked = true;
-                dtpNgaySinh.Value = DateTime.Now;
-                txtSDT.Text = "";
-                txtEmail.Text = "";
-                txtTaiKhoan.Text = "";
-                txtMatKhau.Text = "";
-                chkTrangThai.Checked = true;
-                cboChucNang.SelectedIndex = 0;
-                cboLoaiNhanViên.SelectedIndex = 0;
-            }
-
-            
-
-        
-        }
-
+       
         private void lvwThongTinNhanVien_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lvwThongTinNhanVien.SelectedItems.Count > 0)
             {
+                txtID.Enabled = false;
+                txtTaiKhoan.Enabled = false;
                 txtID.Text = lvwThongTinNhanVien.SelectedItems[0].SubItems[0].Text;
                 txtHoTen.Text = lvwThongTinNhanVien.SelectedItems[0].SubItems[1].Text;
                 if (lvwThongTinNhanVien.SelectedItems[0].SubItems[2].Text == "Nam") radNam.Checked = true;
@@ -100,6 +57,8 @@ namespace form_NhanVien
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            txtID.Enabled = true;
+            txtTaiKhoan.Enabled = true;
             txtID.Text = "";
             txtHoTen.Text = "";
             radNam.Checked = true;
@@ -177,7 +136,101 @@ namespace form_NhanVien
         private void btnThem_MouseLeave_1(object sender, EventArgs e)
         {
             btnThem.Text = " ";
-            btnThem.Image = btnThem.Image;
+            String Icon = @"D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\form_NhanVien(update)\form_NhanVien\Icon\add.PNG";
+            btnThem.Image = Image.FromFile(Icon);
+        }
+
+        private void btnSua_MouseHover(object sender, EventArgs e)
+        {
+            btnSua.Text = "Sửa";
+            btnSua.Image = null;
+        }
+
+        private void btnSua_MouseLeave(object sender, EventArgs e)
+        {
+            btnSua.Text = " ";
+            String Icon = @"D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\form_NhanVien(update)\form_NhanVien\Icon\Sua.PNG";
+            btnSua.Image = Image.FromFile(Icon);
+        }
+
+        private void btnXoa_MouseHover_1(object sender, EventArgs e)
+        {
+            btnXoa.Text = "Xóa";
+            btnXoa.Image = null;
+        }
+
+        private void btnXoa_MouseLeave_1(object sender, EventArgs e)
+        {
+            btnXoa.Text = " ";
+            String Icon = @"D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\form_NhanVien(update)\form_NhanVien\Icon\Xoa.PNG";
+            btnXoa.Image = Image.FromFile(Icon);
+        }
+
+        private void btnLamMoi_MouseHover(object sender, EventArgs e)
+        {
+            btnLamMoi.Text = "Làm mới";
+            btnLamMoi.Image = null;
+        }
+
+        private void btnLamMoi_MouseLeave(object sender, EventArgs e)
+        {
+            btnLamMoi.Text = " ";
+            String Icon = @"D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\form_NhanVien(update)\form_NhanVien\Icon\LamMoi.PNG";
+            btnLamMoi.Image = Image.FromFile(Icon);
+        }
+
+        public void GETVALUE(string value)
+        {
+            txtID.Text = value;
+        }
+        private void btnThem_Click_1(object sender, EventArgs e)
+        {
+
+            
+            if (String.IsNullOrEmpty(txtID.Text) || String.IsNullOrEmpty(txtHoTen.Text) ||
+                String.IsNullOrEmpty(txtTaiKhoan.Text) || String.IsNullOrEmpty(txtMatKhau.Text) ||
+                dtpNgaySinh.Value >= DateTime.Now)
+            {
+                MessageBox.Show("Bạn vui lòng nhập đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                // them thong tin vao listview
+                ListViewItem lvwTTSV = new ListViewItem(txtID.Text);
+                lvwTTSV.SubItems.Add(txtHoTen.Text);
+                if (radNam.Checked == true) lvwTTSV.SubItems.Add("Nam");
+                else if (radNu.Checked == true) lvwTTSV.SubItems.Add("Nữ");
+                lvwTTSV.SubItems.Add(dtpNgaySinh.Text);
+                lvwTTSV.SubItems.Add(txtSDT.Text);
+                lvwTTSV.SubItems.Add(txtEmail.Text);
+                lvwTTSV.SubItems.Add(txtTaiKhoan.Text);
+                lvwTTSV.SubItems.Add(txtMatKhau.Text);
+                if (chkTrangThai.Checked == true) lvwTTSV.SubItems.Add("Hoạt động");
+                else lvwTTSV.SubItems.Add("Không hoạt động ");
+                lvwTTSV.SubItems.Add(cboChucNang.Text);
+                lvwTTSV.SubItems.Add(cboLoaiNhanViên.Text);
+                lvwThongTinNhanVien.Items.Add(lvwTTSV);
+
+
+                //Xoa Thong tin nhap
+                txtID.Text = "";
+                txtHoTen.Text = "";
+                radNam.Checked = true;
+                dtpNgaySinh.Value = DateTime.Now;
+                txtSDT.Text = "";
+                txtEmail.Text = "";
+                txtTaiKhoan.Text = "";
+                txtMatKhau.Text = "";
+                chkTrangThai.Checked = true;
+                cboChucNang.SelectedIndex = 0;
+                cboLoaiNhanViên.SelectedIndex = 0;
+            }
+        }
+
+        private void from1_load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,19 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+    "D:\\HỌC TẬP\\ĐỒ ÁN LẬP TRÌNH WINDOWS\\WinformC--RauMaDetox\\WinformC--RauMaDetox\\texter\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
+  },
+  "projects": {
+    "D:\\HỌC TẬP\\ĐỒ ÁN LẬP TRÌNH WINDOWS\\WinformC--RauMaDetox\\WinformC--RauMaDetox\\texter\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\HỌC TẬP\\ĐỒ ÁN LẬP TRÌNH WINDOWS\\WinformC--RauMaDetox\\WinformC--RauMaDetox\\texter\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectName": "WinFormsApp1",
+        "projectPath": "D:\\HỌC TẬP\\ĐỒ ÁN LẬP TRÌNH WINDOWS\\WinformC--RauMaDetox\\WinformC--RauMaDetox\\texter\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "D:\\HỌC TẬP\\ĐỒ ÁN LẬP TRÌNH WINDOWS\\WinformC--RauMaDetox\\WinformC--RauMaDetox\\texter\\WinFormsApp1\\WinFormsApp1\\obj\\",
+=======
     "D:\\HỌC TẬP\\ĐỒ ÁN LẬP TRÌNH WINDOWS\\WinformC--RauMaDetox\\texter\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
@@ -12,9 +25,18 @@
         "projectPath": "D:\\HỌC TẬP\\ĐỒ ÁN LẬP TRÌNH WINDOWS\\WinformC--RauMaDetox\\texter\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
         "outputPath": "D:\\HỌC TẬP\\ĐỒ ÁN LẬP TRÌNH WINDOWS\\WinformC--RauMaDetox\\texter\\WinFormsApp1\\WinFormsApp1\\obj\\",
+>>>>>>> 58548ed3165ea7ecdcaa9d670a7d4dd6c5573b59
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
+<<<<<<< HEAD
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+=======
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 58548ed3165ea7ecdcaa9d670a7d4dd6c5573b59
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

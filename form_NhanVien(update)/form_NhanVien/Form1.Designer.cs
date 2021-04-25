@@ -45,8 +45,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnLamMoi = new System.Windows.Forms.Button();
-            this.btnThemAnh = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.chkTrangThai = new System.Windows.Forms.CheckBox();
             this.btnSua = new System.Windows.Forms.Button();
             this.cboChucNang = new System.Windows.Forms.ComboBox();
@@ -77,6 +75,7 @@
             this.lblThongTinNhanVien = new System.Windows.Forms.Label();
             this.FileAnhNhanVien = new System.Windows.Forms.OpenFileDialog();
             this.btnThem = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             cl_HoTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -218,10 +217,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnXoa);
             this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Controls.Add(this.btnLamMoi);
-            this.groupBox1.Controls.Add(this.btnThemAnh);
-            this.groupBox1.Controls.Add(this.btnXoa);
             this.groupBox1.Controls.Add(this.chkTrangThai);
             this.groupBox1.Controls.Add(this.btnSua);
             this.groupBox1.Controls.Add(this.cboChucNang);
@@ -259,6 +257,7 @@
             this.btnLamMoi.BackColor = System.Drawing.Color.Green;
             this.btnLamMoi.FlatAppearance.BorderSize = 0;
             this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.Color.White;
             this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
             this.btnLamMoi.Location = new System.Drawing.Point(427, 298);
@@ -268,39 +267,8 @@
             this.btnLamMoi.TabIndex = 3;
             this.btnLamMoi.UseVisualStyleBackColor = false;
             this.btnLamMoi.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // btnThemAnh
-            // 
-            this.btnThemAnh.BackColor = System.Drawing.Color.Green;
-            this.btnThemAnh.FlatAppearance.BorderSize = 0;
-            this.btnThemAnh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemAnh.ForeColor = System.Drawing.Color.White;
-            this.btnThemAnh.Location = new System.Drawing.Point(546, 140);
-            this.btnThemAnh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThemAnh.Name = "btnThemAnh";
-            this.btnThemAnh.Size = new System.Drawing.Size(120, 24);
-            this.btnThemAnh.TabIndex = 28;
-            this.btnThemAnh.Text = "Thêm ảnh";
-            this.btnThemAnh.UseVisualStyleBackColor = false;
-            this.btnThemAnh.Click += new System.EventHandler(this.btnThemAnh_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.Green;
-            this.btnXoa.FlatAppearance.BorderSize = 0;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnXoa.Location = new System.Drawing.Point(352, 298);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(69, 43);
-            this.btnXoa.TabIndex = 2;
-            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnLamMoi.MouseLeave += new System.EventHandler(this.btnLamMoi_MouseLeave);
+            this.btnLamMoi.MouseHover += new System.EventHandler(this.btnLamMoi_MouseHover);
             // 
             // chkTrangThai
             // 
@@ -321,7 +289,7 @@
             this.btnSua.BackColor = System.Drawing.Color.Green;
             this.btnSua.FlatAppearance.BorderSize = 0;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.White;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -330,9 +298,10 @@
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(69, 43);
             this.btnSua.TabIndex = 1;
-            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            this.btnSua.MouseLeave += new System.EventHandler(this.btnSua_MouseLeave);
+            this.btnSua.MouseHover += new System.EventHandler(this.btnSua_MouseHover);
             // 
             // cboChucNang
             // 
@@ -480,6 +449,7 @@
             this.CLLoaiNhanVien,
             this.CLChucDanh,
             this.CLHinhNhanVien});
+            this.lvwThongTinNhanVien.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvwThongTinNhanVien.ForeColor = System.Drawing.Color.Green;
             this.lvwThongTinNhanVien.GridLines = true;
             this.lvwThongTinNhanVien.HideSelection = false;
@@ -568,16 +538,34 @@
             // 
             this.btnThem.BackColor = System.Drawing.Color.Green;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ForeColor = System.Drawing.Color.Yellow;
-            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Image = global::form_NhanVien.Properties.Resources.plus;
             this.btnThem.Location = new System.Drawing.Point(198, 295);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 48);
             this.btnThem.TabIndex = 30;
-            this.btnThem.Text = "\r\n";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
             this.btnThem.MouseLeave += new System.EventHandler(this.btnThem_MouseLeave_1);
             this.btnThem.MouseHover += new System.EventHandler(this.btnThem_MouseHover);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.Green;
+            this.btnXoa.FlatAppearance.BorderSize = 0;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Image = global::form_NhanVien.Properties.Resources.delete;
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXoa.Location = new System.Drawing.Point(354, 298);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(67, 45);
+            this.btnXoa.TabIndex = 31;
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.MouseLeave += new System.EventHandler(this.btnXoa_MouseLeave_1);
+            this.btnXoa.MouseHover += new System.EventHandler(this.btnXoa_MouseHover_1);
             // 
             // frmQuanLiNhanVien
             // 
@@ -646,13 +634,12 @@
         private System.Windows.Forms.ColumnHeader CLLoaiNhanVien;
         private System.Windows.Forms.ColumnHeader CLChucDanh;
         private System.Windows.Forms.CheckBox chkTrangThai;
-        private System.Windows.Forms.Button btnThemAnh;
         private System.Windows.Forms.OpenFileDialog FileAnhNhanVien;
         private System.Windows.Forms.ColumnHeader CLHinhNhanVien;
         private System.Windows.Forms.Button btnLamMoi;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnXoa;
     }
 }
 
