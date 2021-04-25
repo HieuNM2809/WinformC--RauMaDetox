@@ -10,22 +10,22 @@ using System.Windows.Forms;
 
 namespace DashBoar
 {
-    public partial class QL_SanPham : Form
+    public partial class Xem_SanPham : Form
     {
-        public QL_SanPham()
+        public Xem_SanPham()
         {
             InitializeComponent();
         }
 
-        private void btn_them_Click(object sender, EventArgs e)
+        private void btn_sua_Click(object sender, EventArgs e)
         {
-            Them_sua them = new Them_sua();
-            them.ShowDialog();
+            Them_sua sua = new Them_sua();
+            sua.ShowDialog();
         }
 
-        private void tbx_search_TextChanged(object sender, EventArgs e)
+        private void btn_thoat_Click(object sender, EventArgs e)
         {
-            tbx_search.Text = "";
+            Close();
         }
     }
 }
