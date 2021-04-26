@@ -159,6 +159,7 @@
             this.lnkCreateAnAccount.TabIndex = 20;
             this.lnkCreateAnAccount.TabStop = true;
             this.lnkCreateAnAccount.Text = "Create an Account";
+            this.lnkCreateAnAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCreateAnAccount_LinkClicked);
             // 
             // pnlShape3
             // 

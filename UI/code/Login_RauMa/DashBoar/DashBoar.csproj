@@ -90,6 +90,9 @@
     <Compile Include="Xem_SanPham.Designer.cs">
       <DependentUpon>Xem_SanPham.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DangKiTaiKhoan.resx">
+      <DependentUpon>DangKiTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>

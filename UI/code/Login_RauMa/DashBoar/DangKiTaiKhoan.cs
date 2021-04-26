@@ -19,7 +19,7 @@ namespace DashBoar
 
         private void frmDangKiTaiKhoan_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

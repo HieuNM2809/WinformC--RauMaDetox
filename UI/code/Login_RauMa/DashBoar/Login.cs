@@ -83,5 +83,10 @@ namespace DashBoar
             }    
             
         }
+
+        private void lnkCreateAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            IsMdiContainer = true;
+        }
     }
 }
