@@ -44,6 +44,7 @@
             this.CLHinhNhanVien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblThongTinNhanVien = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.chkTrangThai = new System.Windows.Forms.CheckBox();
@@ -72,7 +73,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnThem = new System.Windows.Forms.Button();
             this.cbbTimKiem = new System.Windows.Forms.ComboBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
@@ -81,6 +81,11 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHinhNhanVien)).BeginInit();
             this.SuspendLayout();
+            // 
+            // cl_HoTen
+            // 
+            cl_HoTen.Text = "Họ tên";
+            cl_HoTen.Width = 226;
             // 
             // lvwThongTinNhanVien
             // 
@@ -113,11 +118,6 @@
             // 
             this.cl_ID.Text = "ID";
             this.cl_ID.Width = 70;
-            // 
-            // cl_HoTen
-            // 
-            cl_HoTen.Text = "Họ tên";
-            cl_HoTen.Width = 226;
             // 
             // clGioiTinh
             // 
@@ -216,6 +216,24 @@
             this.groupBox1.Size = new System.Drawing.Size(750, 390);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
+            // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.Green;
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.Location = new System.Drawing.Point(222, 320);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(67, 54);
+            this.btnThem.TabIndex = 32;
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnThem.MouseLeave += new System.EventHandler(this.btnThem_MouseLeave);
+            this.btnThem.MouseHover += new System.EventHandler(this.btnThem_MouseHover);
             // 
             // btnXoa
             // 
@@ -536,24 +554,6 @@
             this.label6.Size = new System.Drawing.Size(141, 25);
             this.label6.TabIndex = 6;
             this.label6.Text = "Loại nhân viên:";
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.Color.Green;
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(222, 320);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(67, 54);
-            this.btnThem.TabIndex = 32;
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            this.btnThem.MouseLeave += new System.EventHandler(this.btnThem_MouseLeave);
-            this.btnThem.MouseHover += new System.EventHandler(this.btnThem_MouseHover);
             // 
             // cbbTimKiem
             // 
