@@ -73,7 +73,7 @@ namespace DashBoar
             this.txtNhapLaiMKMoi.Name = "txtNhapLaiMKMoi";
             this.txtNhapLaiMKMoi.PasswordChar = '*';
             this.txtNhapLaiMKMoi.Size = new System.Drawing.Size(206, 30);
-            this.txtNhapLaiMKMoi.TabIndex = 1;
+            this.txtNhapLaiMKMoi.TabIndex = 4;
             // 
             // txtMKMoi
             // 
@@ -82,7 +82,7 @@ namespace DashBoar
             this.txtMKMoi.Name = "txtMKMoi";
             this.txtMKMoi.PasswordChar = '*';
             this.txtMKMoi.Size = new System.Drawing.Size(206, 30);
-            this.txtMKMoi.TabIndex = 1;
+            this.txtMKMoi.TabIndex = 3;
             // 
             // txtMKCu
             // 
@@ -91,7 +91,7 @@ namespace DashBoar
             this.txtMKCu.Name = "txtMKCu";
             this.txtMKCu.PasswordChar = '*';
             this.txtMKCu.Size = new System.Drawing.Size(206, 30);
-            this.txtMKCu.TabIndex = 1;
+            this.txtMKCu.TabIndex = 2;
             // 
             // txtDangNhap
             // 
@@ -147,7 +147,7 @@ namespace DashBoar
             this.btnDongY.Location = new System.Drawing.Point(201, 347);
             this.btnDongY.Name = "btnDongY";
             this.btnDongY.Size = new System.Drawing.Size(90, 58);
-            this.btnDongY.TabIndex = 2;
+            this.btnDongY.TabIndex = 5;
             this.btnDongY.UseVisualStyleBackColor = true;
             // 
             // btnHuy
@@ -156,7 +156,7 @@ namespace DashBoar
             this.btnHuy.Location = new System.Drawing.Point(507, 347);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(90, 58);
-            this.btnHuy.TabIndex = 3;
+            this.btnHuy.TabIndex = 7;
             this.btnHuy.UseVisualStyleBackColor = true;
             // 
             // btnLamMoi
@@ -165,7 +165,7 @@ namespace DashBoar
             this.btnLamMoi.Location = new System.Drawing.Point(354, 347);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(90, 58);
-            this.btnLamMoi.TabIndex = 4;
+            this.btnLamMoi.TabIndex = 6;
             this.btnLamMoi.UseVisualStyleBackColor = true;
             // 
             // FrmQuenMatKhau

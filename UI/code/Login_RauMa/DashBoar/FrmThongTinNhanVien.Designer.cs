@@ -32,6 +32,7 @@ namespace DashBoar
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThongTinNhanVien));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbID = new System.Windows.Forms.ComboBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -50,11 +51,11 @@ namespace DashBoar
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picNhanVien = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.chkTrangThai = new System.Windows.Forms.CheckBox();
-            this.cboChucNang = new System.Windows.Forms.ComboBox();
-            this.cboLoaiNhanViên = new System.Windows.Forms.ComboBox();
+            this.cbbChucNang = new System.Windows.Forms.ComboBox();
+            this.cbbLoaiNhanViên = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -64,12 +65,11 @@ namespace DashBoar
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picNhanVien)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
@@ -87,7 +87,7 @@ namespace DashBoar
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbbID);
             this.groupBox1.Controls.Add(this.txtMatKhau);
             this.groupBox1.Controls.Add(this.txtTaiKhoan);
             this.groupBox1.Controls.Add(this.label9);
@@ -110,13 +110,21 @@ namespace DashBoar
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhân viên";
             // 
+            // cbbID
+            // 
+            this.cbbID.FormattingEnabled = true;
+            this.cbbID.Location = new System.Drawing.Point(129, 47);
+            this.cbbID.Name = "cbbID";
+            this.cbbID.Size = new System.Drawing.Size(155, 28);
+            this.cbbID.TabIndex = 1;
+            // 
             // txtMatKhau
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(437, 307);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(175, 26);
-            this.txtMatKhau.TabIndex = 38;
+            this.txtMatKhau.TabIndex = 9;
             // 
             // txtTaiKhoan
             // 
@@ -124,7 +132,7 @@ namespace DashBoar
             this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(154, 26);
-            this.txtTaiKhoan.TabIndex = 37;
+            this.txtTaiKhoan.TabIndex = 8;
             // 
             // label9
             // 
@@ -167,7 +175,7 @@ namespace DashBoar
             this.radNu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radNu.Name = "radNu";
             this.radNu.Size = new System.Drawing.Size(54, 24);
-            this.radNu.TabIndex = 1;
+            this.radNu.TabIndex = 4;
             this.radNu.Text = "Nữ";
             this.radNu.UseVisualStyleBackColor = true;
             // 
@@ -179,7 +187,7 @@ namespace DashBoar
             this.radNam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radNam.Name = "radNam";
             this.radNam.Size = new System.Drawing.Size(67, 24);
-            this.radNam.TabIndex = 0;
+            this.radNam.TabIndex = 3;
             this.radNam.TabStop = true;
             this.radNam.Text = "Nam";
             this.radNam.UseVisualStyleBackColor = true;
@@ -190,7 +198,7 @@ namespace DashBoar
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(155, 26);
-            this.txtEmail.TabIndex = 33;
+            this.txtEmail.TabIndex = 7;
             // 
             // txtSDT
             // 
@@ -199,7 +207,7 @@ namespace DashBoar
             this.txtSDT.Multiline = true;
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(155, 25);
-            this.txtSDT.TabIndex = 32;
+            this.txtSDT.TabIndex = 6;
             // 
             // dtpNgaySinh
             // 
@@ -209,7 +217,7 @@ namespace DashBoar
             this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(154, 29);
-            this.dtpNgaySinh.TabIndex = 31;
+            this.dtpNgaySinh.TabIndex = 5;
             // 
             // txtHoTen
             // 
@@ -217,7 +225,7 @@ namespace DashBoar
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(175, 26);
-            this.txtHoTen.TabIndex = 30;
+            this.txtHoTen.TabIndex = 2;
             // 
             // label1
             // 
@@ -287,7 +295,7 @@ namespace DashBoar
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.pictureBox1);
+            this.groupBox2.Controls.Add(this.picNhanVien);
             this.groupBox2.Location = new System.Drawing.Point(855, 13);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(317, 185);
@@ -295,19 +303,19 @@ namespace DashBoar
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hình";
             // 
-            // pictureBox1
+            // picNhanVien
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(68, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(193, 121);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picNhanVien.Location = new System.Drawing.Point(68, 26);
+            this.picNhanVien.Name = "picNhanVien";
+            this.picNhanVien.Size = new System.Drawing.Size(193, 121);
+            this.picNhanVien.TabIndex = 0;
+            this.picNhanVien.TabStop = false;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.chkTrangThai);
-            this.groupBox3.Controls.Add(this.cboChucNang);
-            this.groupBox3.Controls.Add(this.cboLoaiNhanViên);
+            this.groupBox3.Controls.Add(this.cbbChucNang);
+            this.groupBox3.Controls.Add(this.cbbLoaiNhanViên);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label6);
@@ -328,35 +336,35 @@ namespace DashBoar
             this.chkTrangThai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkTrangThai.Name = "chkTrangThai";
             this.chkTrangThai.Size = new System.Drawing.Size(138, 30);
-            this.chkTrangThai.TabIndex = 33;
+            this.chkTrangThai.TabIndex = 10;
             this.chkTrangThai.Text = "Hoạt động";
             this.chkTrangThai.UseVisualStyleBackColor = true;
             // 
-            // cboChucNang
+            // cbbChucNang
             // 
-            this.cboChucNang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboChucNang.FormattingEnabled = true;
-            this.cboChucNang.Items.AddRange(new object[] {
+            this.cbbChucNang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbChucNang.FormattingEnabled = true;
+            this.cbbChucNang.Items.AddRange(new object[] {
             "Nhân viên",
             "Quản lí"});
-            this.cboChucNang.Location = new System.Drawing.Point(166, 115);
-            this.cboChucNang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cboChucNang.Name = "cboChucNang";
-            this.cboChucNang.Size = new System.Drawing.Size(95, 28);
-            this.cboChucNang.TabIndex = 32;
+            this.cbbChucNang.Location = new System.Drawing.Point(166, 115);
+            this.cbbChucNang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbChucNang.Name = "cbbChucNang";
+            this.cbbChucNang.Size = new System.Drawing.Size(138, 28);
+            this.cbbChucNang.TabIndex = 12;
             // 
-            // cboLoaiNhanViên
+            // cbbLoaiNhanViên
             // 
-            this.cboLoaiNhanViên.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboLoaiNhanViên.FormattingEnabled = true;
-            this.cboLoaiNhanViên.Items.AddRange(new object[] {
+            this.cbbLoaiNhanViên.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLoaiNhanViên.FormattingEnabled = true;
+            this.cbbLoaiNhanViên.Items.AddRange(new object[] {
             "Phục vụ",
             "Pha chế"});
-            this.cboLoaiNhanViên.Location = new System.Drawing.Point(166, 79);
-            this.cboLoaiNhanViên.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cboLoaiNhanViên.Name = "cboLoaiNhanViên";
-            this.cboLoaiNhanViên.Size = new System.Drawing.Size(95, 28);
-            this.cboLoaiNhanViên.TabIndex = 31;
+            this.cbbLoaiNhanViên.Location = new System.Drawing.Point(166, 79);
+            this.cbbLoaiNhanViên.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbLoaiNhanViên.Name = "cbbLoaiNhanViên";
+            this.cbbLoaiNhanViên.Size = new System.Drawing.Size(138, 28);
+            this.cbbLoaiNhanViên.TabIndex = 11;
             // 
             // label11
             // 
@@ -421,7 +429,7 @@ namespace DashBoar
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(125, 54);
-            this.btnThoat.TabIndex = 37;
+            this.btnThoat.TabIndex = 17;
             this.btnThoat.UseVisualStyleBackColor = false;
             // 
             // btnXoa
@@ -436,7 +444,7 @@ namespace DashBoar
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(123, 54);
-            this.btnXoa.TabIndex = 35;
+            this.btnXoa.TabIndex = 15;
             this.btnXoa.UseVisualStyleBackColor = false;
             // 
             // btnLamMoi
@@ -451,7 +459,7 @@ namespace DashBoar
             this.btnLamMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(123, 54);
-            this.btnLamMoi.TabIndex = 34;
+            this.btnLamMoi.TabIndex = 16;
             this.btnLamMoi.UseVisualStyleBackColor = false;
             // 
             // btnThem
@@ -466,7 +474,7 @@ namespace DashBoar
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(123, 54);
-            this.btnThem.TabIndex = 36;
+            this.btnThem.TabIndex = 13;
             this.btnThem.UseVisualStyleBackColor = false;
             // 
             // btnSua
@@ -481,16 +489,8 @@ namespace DashBoar
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(123, 54);
-            this.btnSua.TabIndex = 33;
+            this.btnSua.TabIndex = 14;
             this.btnSua.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(129, 47);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(155, 28);
-            this.comboBox1.TabIndex = 39;
             // 
             // FrmThongTinNhanVien
             // 
@@ -510,7 +510,7 @@ namespace DashBoar
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picNhanVien)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -525,8 +525,8 @@ namespace DashBoar
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckBox chkTrangThai;
-        private System.Windows.Forms.ComboBox cboChucNang;
-        private System.Windows.Forms.ComboBox cboLoaiNhanViên;
+        private System.Windows.Forms.ComboBox cbbChucNang;
+        private System.Windows.Forms.ComboBox cbbLoaiNhanViên;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -547,13 +547,13 @@ namespace DashBoar
         private System.Windows.Forms.TextBox txtTaiKhoan;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picNhanVien;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbID;
     }
 }

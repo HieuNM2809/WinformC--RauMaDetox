@@ -31,25 +31,25 @@ namespace DashBoar
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDangKiTaiKhoan));
             this.a = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtHoNhanVien = new System.Windows.Forms.TextBox();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.txtMaNhanVien = new System.Windows.Forms.TextBox();
+            this.cbbChứcDanh = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDangNhap = new System.Windows.Forms.TextBox();
             this.dgvDangKiTaiKhoan = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDangKiTaiKhoan)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -61,18 +61,18 @@ namespace DashBoar
             this.a.Location = new System.Drawing.Point(52, 300);
             this.a.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(60, 22);
+            this.a.Size = new System.Drawing.Size(94, 22);
             this.a.TabIndex = 0;
-            this.a.Text = "Quyền";
+            this.a.Text = "Chức danh";
             // 
-            // dateTimePicker1
+            // dtpNgaySinh
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(194, 248);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(262, 30);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgaySinh.Location = new System.Drawing.Point(194, 248);
+            this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(262, 30);
+            this.dtpNgaySinh.TabIndex = 5;
             // 
             // label4
             // 
@@ -80,9 +80,9 @@ namespace DashBoar
             this.label4.Location = new System.Drawing.Point(52, 206);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 22);
+            this.label4.Size = new System.Drawing.Size(67, 22);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Họ tên nhân viên";
+            this.label4.Text = "Họ tên ";
             // 
             // label3
             // 
@@ -114,37 +114,37 @@ namespace DashBoar
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên đăng nhập";
             // 
-            // textBox3
+            // txtHoNhanVien
             // 
-            this.textBox3.Location = new System.Drawing.Point(194, 198);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(262, 30);
-            this.textBox3.TabIndex = 4;
+            this.txtHoNhanVien.Location = new System.Drawing.Point(194, 198);
+            this.txtHoNhanVien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtHoNhanVien.Name = "txtHoNhanVien";
+            this.txtHoNhanVien.Size = new System.Drawing.Size(262, 30);
+            this.txtHoNhanVien.TabIndex = 4;
             // 
-            // textBox2
+            // txtMatKhau
             // 
-            this.textBox2.Location = new System.Drawing.Point(194, 100);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(262, 30);
-            this.textBox2.TabIndex = 2;
+            this.txtMatKhau.Location = new System.Drawing.Point(194, 100);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
+            this.txtMatKhau.Size = new System.Drawing.Size(262, 30);
+            this.txtMatKhau.TabIndex = 2;
             // 
-            // textBox4
+            // txtMaNhanVien
             // 
-            this.textBox4.Location = new System.Drawing.Point(194, 153);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(262, 30);
-            this.textBox4.TabIndex = 3;
+            this.txtMaNhanVien.Location = new System.Drawing.Point(194, 153);
+            this.txtMaNhanVien.Name = "txtMaNhanVien";
+            this.txtMaNhanVien.Size = new System.Drawing.Size(262, 30);
+            this.txtMaNhanVien.TabIndex = 3;
             // 
-            // comboBox1
+            // cbbChứcDanh
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(194, 293);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(262, 30);
-            this.comboBox1.TabIndex = 6;
+            this.cbbChứcDanh.FormattingEnabled = true;
+            this.cbbChứcDanh.Location = new System.Drawing.Point(194, 293);
+            this.cbbChứcDanh.Name = "cbbChứcDanh";
+            this.cbbChứcDanh.Size = new System.Drawing.Size(262, 30);
+            this.cbbChứcDanh.TabIndex = 6;
             // 
             // label5
             // 
@@ -155,13 +155,13 @@ namespace DashBoar
             this.label5.TabIndex = 6;
             this.label5.Text = "Mã nhân viên";
             // 
-            // textBox1
+            // txtDangNhap
             // 
-            this.textBox1.Location = new System.Drawing.Point(194, 42);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 30);
-            this.textBox1.TabIndex = 1;
+            this.txtDangNhap.Location = new System.Drawing.Point(194, 42);
+            this.txtDangNhap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDangNhap.Name = "txtDangNhap";
+            this.txtDangNhap.Size = new System.Drawing.Size(262, 30);
+            this.txtDangNhap.TabIndex = 1;
             // 
             // dgvDangKiTaiKhoan
             // 
@@ -189,30 +189,20 @@ namespace DashBoar
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
             // 
-            // groupBox1
+            // btnThoat
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.a);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(178, 19);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(525, 348);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Đăng kí tài khoản";
+            this.btnThoat.BackColor = System.Drawing.Color.Green;
+            this.btnThoat.FlatAppearance.BorderSize = 0;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.White;
+            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(699, 23);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(97, 52);
+            this.btnThoat.TabIndex = 11;
+            this.btnThoat.UseVisualStyleBackColor = false;
             // 
             // btnThem
             // 
@@ -226,8 +216,9 @@ namespace DashBoar
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(96, 54);
-            this.btnThem.TabIndex = 36;
+            this.btnThem.TabIndex = 7;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa
             // 
@@ -241,7 +232,7 @@ namespace DashBoar
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(97, 54);
-            this.btnXoa.TabIndex = 35;
+            this.btnXoa.TabIndex = 9;
             this.btnXoa.UseVisualStyleBackColor = false;
             // 
             // btnLamMoi
@@ -256,7 +247,7 @@ namespace DashBoar
             this.btnLamMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(97, 52);
-            this.btnLamMoi.TabIndex = 34;
+            this.btnLamMoi.TabIndex = 10;
             this.btnLamMoi.UseVisualStyleBackColor = false;
             // 
             // btnSua
@@ -271,23 +262,33 @@ namespace DashBoar
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(96, 52);
-            this.btnSua.TabIndex = 33;
+            this.btnSua.TabIndex = 8;
             this.btnSua.UseVisualStyleBackColor = false;
             // 
-            // btnThoat
+            // groupBox1
             // 
-            this.btnThoat.BackColor = System.Drawing.Color.Green;
-            this.btnThoat.FlatAppearance.BorderSize = 0;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(699, 23);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(97, 52);
-            this.btnThoat.TabIndex = 35;
-            this.btnThoat.UseVisualStyleBackColor = false;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.txtMaNhanVien);
+            this.groupBox1.Controls.Add(this.cbbChứcDanh);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.a);
+            this.groupBox1.Controls.Add(this.dtpNgaySinh);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtHoNhanVien);
+            this.groupBox1.Controls.Add(this.txtMatKhau);
+            this.groupBox1.Controls.Add(this.txtDangNhap);
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(178, 19);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(525, 348);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Đăng kí tài khoản";
             // 
             // FrmDangKiTaiKhoan
             // 
@@ -311,19 +312,19 @@ namespace DashBoar
 
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Label a;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtHoNhanVien;
+        private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtMaNhanVien;
+        private System.Windows.Forms.ComboBox cbbChứcDanh;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDangNhap;
         private System.Windows.Forms.DataGridView dgvDangKiTaiKhoan;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.GroupBox groupBox2;
