@@ -123,5 +123,12 @@ namespace DashBoar
             qlsp.MdiParent = this;
             qlsp.Show();
         }
+
+        private void btnQLTaiKhoan_Click(object sender, EventArgs e)
+        {
+            QL_NhanVien qlnv = new QL_NhanVien();
+            qlnv.MdiParent = this;
+            qlnv.Show();
+        }
     }
 }
