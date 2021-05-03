@@ -13,7 +13,7 @@ namespace DashBoar
 {
     public partial class FrmDangKiTaiKhoan : Form
     {
-        string strConnection = @"Data Source=DESKTOP-KLO6537\SQLEXPRESS;Initial Catalog=ql_rauma;Integrated Security=True";
+        //string strConnection = @"Data Source=DESKTOP-KLO6537\SQLEXPRESS;Initial Catalog=ql_rauma;Integrated Security=True";
         public FrmDangKiTaiKhoan()
         {
             InitializeComponent();
