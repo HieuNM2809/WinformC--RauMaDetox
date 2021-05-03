@@ -107,17 +107,12 @@
     <Compile Include="QL_SanPham.Designer.cs">
       <DependentUpon>QL_SanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="Them_sua.cs">
+    <Compile Include=".cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Them_sua.Designer.cs">
-      <DependentUpon>Them_sua.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Xem_SanPham.cs">
+    <Compile Include=".Designer.cs">
+      <DependentUpon>.cs</DependentUpon>
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Xem_SanPham.Designer.cs">
-      <DependentUpon>Xem_SanPham.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="DangKiTaiKhoan.resx">
       <DependentUpon>DangKiTaiKhoan.cs</DependentUpon>
@@ -159,11 +154,8 @@
     <EmbeddedResource Include="QL_SanPham.resx">
       <DependentUpon>QL_SanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Them_sua.resx">
-      <DependentUpon>Them_sua.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Xem_SanPham.resx">
-      <DependentUpon>Xem_SanPham.cs</DependentUpon>
+    <EmbeddedResource Include=".resx">
+      <DependentUpon>.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -212,6 +212,7 @@
             this.btnSanPham.TabIndex = 6;
             this.btnSanPham.Text = "    Sản Phẩm";
             this.btnSanPham.UseVisualStyleBackColor = false;
+            this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click_1);
             this.btnSanPham.MouseEnter += new System.EventHandler(this.btnSanPham_MouseEnter);
             this.btnSanPham.MouseLeave += new System.EventHandler(this.btnSanPham_MouseLeave);
             // 

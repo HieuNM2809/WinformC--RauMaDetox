@@ -17,15 +17,14 @@ namespace DashBoar
             InitializeComponent();
         }
 
-        private void btn_them_Click(object sender, EventArgs e)
+        private void btn_exit_Click(object sender, EventArgs e)
         {
-            Them_sua them = new Them_sua();
-            them.ShowDialog();
+            Close();
         }
 
-        private void tbx_search_TextChanged(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
-            tbx_search.Text = "";
+            Close();
         }
     }
 }
