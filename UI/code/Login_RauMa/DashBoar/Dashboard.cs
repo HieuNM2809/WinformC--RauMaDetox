@@ -116,5 +116,12 @@ namespace DashBoar
         {
 
         }
+
+        private void btnSanPham_Click_1(object sender, EventArgs e)
+        {
+            QL_SanPham qlsp = new QL_SanPham();
+            qlsp.MdiParent = this;
+            qlsp.Show();
+        }
     }
 }

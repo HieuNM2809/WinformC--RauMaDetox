@@ -22,3 +22,6 @@ D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--Rau
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.exe
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.pdb
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.QL_NhanVien.resources
+D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.csprojAssemblyReference.cache
+D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.exe
+D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.pdb
