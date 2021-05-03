@@ -19,8 +19,7 @@ namespace DashBoar
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
-            Them_sua sua = new Them_sua();
-            sua.ShowDialog();
+           
         }
 
         private void btn_thoat_Click(object sender, EventArgs e)

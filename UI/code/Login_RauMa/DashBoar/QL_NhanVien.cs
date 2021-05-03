@@ -19,13 +19,7 @@ namespace DashBoar
 
         private void đăngKíTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmDangKiTaiKhoan frmDK = new FrmDangKiTaiKhoan();
-            panel_show.Show();
-            panel_show.Controls.Clear();
-            frmDK.TopLevel = false;
-            frmDK.Dock = DockStyle.Fill;
-            panel_show.Controls.Add(frmDK);
-            frmDK.Show();
+           
         }
 
         private void đổiMậtKhẩuToolStripMenuItem1_Click(object sender, EventArgs e)
