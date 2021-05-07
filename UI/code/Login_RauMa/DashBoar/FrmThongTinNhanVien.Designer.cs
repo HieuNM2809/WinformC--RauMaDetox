@@ -65,6 +65,12 @@ namespace DashBoar
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btnHoTen = new System.Windows.Forms.RadioButton();
+            this.radMaNhanVien = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -72,17 +78,18 @@ namespace DashBoar
             ((System.ComponentModel.ISupportInitialize)(this.picNhanVien)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 500);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 535);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1207, 323);
+            this.dataGridView1.Size = new System.Drawing.Size(1207, 288);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox1
@@ -408,7 +415,7 @@ namespace DashBoar
             this.groupBox5.Controls.Add(this.btnThem);
             this.groupBox5.Controls.Add(this.btnSua);
             this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(13, 390);
+            this.groupBox5.Location = new System.Drawing.Point(13, 375);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
@@ -492,11 +499,77 @@ namespace DashBoar
             this.btnSua.TabIndex = 14;
             this.btnSua.UseVisualStyleBackColor = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(142, 499);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(243, 26);
+            this.textBox1.TabIndex = 9;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Green;
+            this.label12.Location = new System.Drawing.Point(31, 498);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(92, 25);
+            this.label12.TabIndex = 36;
+            this.label12.Text = "Tìm Kiếm";
+            // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(391, 500);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 26);
+            this.button1.TabIndex = 37;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.btnHoTen);
+            this.groupBox6.Controls.Add(this.radMaNhanVien);
+            this.groupBox6.Location = new System.Drawing.Point(428, 489);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(722, 43);
+            this.groupBox6.TabIndex = 38;
+            this.groupBox6.TabStop = false;
+            // 
+            // btnHoTen
+            // 
+            this.btnHoTen.AutoSize = true;
+            this.btnHoTen.Location = new System.Drawing.Point(510, 11);
+            this.btnHoTen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnHoTen.Name = "btnHoTen";
+            this.btnHoTen.Size = new System.Drawing.Size(102, 24);
+            this.btnHoTen.TabIndex = 1;
+            this.btnHoTen.TabStop = true;
+            this.btnHoTen.Text = "Họ và tên";
+            this.btnHoTen.UseVisualStyleBackColor = true;
+            // 
+            // radMaNhanVien
+            // 
+            this.radMaNhanVien.AutoSize = true;
+            this.radMaNhanVien.Location = new System.Drawing.Point(47, 11);
+            this.radMaNhanVien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radMaNhanVien.Name = "radMaNhanVien";
+            this.radMaNhanVien.Size = new System.Drawing.Size(128, 24);
+            this.radMaNhanVien.TabIndex = 2;
+            this.radMaNhanVien.TabStop = true;
+            this.radMaNhanVien.Text = "Mã nhân viên";
+            this.radMaNhanVien.UseVisualStyleBackColor = true;
+            // 
             // FrmThongTinNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1207, 823);
+            this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -514,7 +587,10 @@ namespace DashBoar
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox5.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -555,5 +631,11 @@ namespace DashBoar
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.ComboBox cbbID;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.RadioButton btnHoTen;
+        private System.Windows.Forms.RadioButton radMaNhanVien;
     }
 }
