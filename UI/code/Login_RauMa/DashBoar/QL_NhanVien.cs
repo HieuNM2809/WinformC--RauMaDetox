@@ -43,28 +43,6 @@ namespace DashBoar
             panel_show.Controls.Add(frmTTNV);
             frmTTNV.Show();
         }
-
-        private void hồSơThửViệcToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmThuViec frmTV = new FrmThuViec();
-            panel_show.Show();
-            panel_show.Controls.Clear();
-            frmTV.TopLevel = false;
-            frmTV.Dock = DockStyle.Fill;
-            panel_show.Controls.Add(frmTV);
-            frmTV.Show();
-        }
-
-        private void traCứuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmTimKiem frmTKiem = new FrmTimKiem();
-            panel_show.Show();
-            panel_show.Controls.Clear();
-            frmTKiem.TopLevel = false;
-            frmTKiem.Dock = DockStyle.Fill;
-            panel_show.Controls.Add(frmTKiem);
-            frmTKiem.Show();
-        }
     }
 
 

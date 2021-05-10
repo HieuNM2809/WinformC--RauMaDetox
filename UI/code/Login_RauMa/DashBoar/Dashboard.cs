@@ -129,6 +129,9 @@ namespace DashBoar
             QL_NhanVien qlnv = new QL_NhanVien();
             qlnv.MdiParent = this;
             qlnv.Show();
+            this.Close();
         }
+
+
     }
 }
