@@ -1,0 +1,6 @@
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\BUS.dll
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\BUS.pdb
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.dll
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.pdb
