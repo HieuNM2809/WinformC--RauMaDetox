@@ -12,9 +12,15 @@ namespace BUS
     {
         private NhanVienDAO _NhanVienDAO = new NhanVienDAO();
 
-        public List<NhanVienDAO> LayDSSNhanVien()
+        public List<NhanVienDTO> LayDSNhanVien()
         {
             return _NhanVienDAO.LayDSNhanVien();
         }
+
+        //public bool ThemNV(NhanVienDTO nv)
+        //{
+        //    return _NhanVienDAO.ThemNV(nv);
+        //}
     }
 }
+

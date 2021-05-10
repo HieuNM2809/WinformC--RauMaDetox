@@ -16,7 +16,7 @@ namespace DAO
 
         public List<NhanVienDTO> LayDSNhanVien()
         {
-            List<NhanVienDTO> lstSinhVien = new List<NhanVienDTO>();
+            List<NhanVienDTO> lstNhanVien = new List<NhanVienDTO>();
 
             _conn.Open();
 
@@ -44,14 +44,42 @@ namespace DAO
                         Email = sdr.GetString(9),
                     };
 
-                    lstSinhVien.Add(nv);
+                    lstNhanVien.Add(nv);
                 }
             }
 
             _conn.Close();
 
-            return lstSinhVien;
+            return lstNhanVien;
         }
+
+        //public bool ThemNV(NhanVienDTO nv)
+        //{
+        //    string sqlInsert = "Insert into SinhVien(MSSV, HoTen, NgaySinh, GioiTinh, ChucDanh, LoaiNV, SDT, TaiKhoan, MatKhau, Email, TrangThai) VALUES (@MSSV,@HoTen,@NgaySinh,@GioiTinh,@ChucDanh,@LoaiNV,@SDT,@TaiKhoan,@MatKhau,@Email,1)";
+
+        //    _conn.Open();
+        //    List<SqlParameter> lstParameter = new List<SqlParameter>();
+        //    lstParameter.Add(new SqlParameter("@MSSV", nv.ID_NV));
+        //    lstParameter.Add(new SqlParameter("@HoTen", nv.HoTen));
+        //    lstParameter.Add(new SqlParameter("@NgaySinh", nv.NgaySinh));
+        //    lstParameter.Add(new SqlParameter("@GioiTinh", nv.GioiTinh));
+        //    lstParameter.Add(new SqlParameter("@ChucDanh", nv.ChucDanh));
+        //    lstParameter.Add(new SqlParameter("@LoaiNV", nv.LoaiNV));
+        //    lstParameter.Add(new SqlParameter("@SDT", nv.SDT));
+        //    lstParameter.Add(new SqlParameter("@TaiKhoan", nv.TaiKhoan));
+        //    lstParameter.Add(new SqlParameter("@MatKhau", nv.MatKhau));
+        //    lstParameter.Add(new SqlParameter("@Email", nv.Email));
+
+        //    SqlCommand cmd = new SqlCommand(sqlInsert, _conn);
+
+        //    cmd.Parameters.AddRange(lstParameter.ToArray());
+
+        //    int result = cmd.ExecuteNonQuery();
+
+        //    _conn.Close();
+
+        //    return result > 0;
+        //}
 
         
     }
