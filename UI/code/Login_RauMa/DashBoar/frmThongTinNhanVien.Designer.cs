@@ -50,6 +50,7 @@ namespace DashBoar
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.chkTrangThai = new System.Windows.Forms.CheckBox();
             this.cboChucNang = new System.Windows.Forms.ComboBox();
@@ -57,13 +58,12 @@ namespace DashBoar
             this.label11 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -74,8 +74,8 @@ namespace DashBoar
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox6.SuspendLayout();
@@ -292,12 +292,20 @@ namespace DashBoar
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.pictureBox1);
-            this.groupBox3.Location = new System.Drawing.Point(910, 51);
+            this.groupBox3.Location = new System.Drawing.Point(883, 65);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(316, 174);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Hình Nhân Viên";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(101, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(159, 113);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // groupBox4
             // 
@@ -307,7 +315,7 @@ namespace DashBoar
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Location = new System.Drawing.Point(910, 262);
+            this.groupBox4.Location = new System.Drawing.Point(883, 262);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(316, 155);
             this.groupBox4.TabIndex = 2;
@@ -387,14 +395,6 @@ namespace DashBoar
             this.label6.TabIndex = 29;
             this.label6.Text = "Loại nhân viên:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(101, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(159, 113);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.btnThoat);
@@ -404,10 +404,25 @@ namespace DashBoar
             this.groupBox5.Controls.Add(this.btnSua);
             this.groupBox5.Location = new System.Drawing.Point(29, 432);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1197, 92);
+            this.groupBox5.Size = new System.Drawing.Size(1170, 92);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Chức năng";
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.Color.Green;
+            this.btnThoat.FlatAppearance.BorderSize = 0;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.White;
+            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(909, 24);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(102, 63);
+            this.btnThoat.TabIndex = 12;
+            this.btnThoat.UseVisualStyleBackColor = false;
             // 
             // btnXoa
             // 
@@ -420,7 +435,7 @@ namespace DashBoar
             this.btnXoa.Location = new System.Drawing.Point(534, 24);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(102, 49);
+            this.btnXoa.Size = new System.Drawing.Size(102, 62);
             this.btnXoa.TabIndex = 10;
             this.btnXoa.UseVisualStyleBackColor = false;
             // 
@@ -432,7 +447,7 @@ namespace DashBoar
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.Location = new System.Drawing.Point(146, 21);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(102, 54);
+            this.btnThem.Size = new System.Drawing.Size(102, 71);
             this.btnThem.TabIndex = 8;
             this.btnThem.UseVisualStyleBackColor = false;
             // 
@@ -447,7 +462,7 @@ namespace DashBoar
             this.btnLamMoi.Location = new System.Drawing.Point(737, 24);
             this.btnLamMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(102, 49);
+            this.btnLamMoi.Size = new System.Drawing.Size(102, 63);
             this.btnLamMoi.TabIndex = 11;
             this.btnLamMoi.UseVisualStyleBackColor = false;
             // 
@@ -462,24 +477,9 @@ namespace DashBoar
             this.btnSua.Location = new System.Drawing.Point(334, 24);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(102, 49);
+            this.btnSua.Size = new System.Drawing.Size(102, 62);
             this.btnSua.TabIndex = 9;
             this.btnSua.UseVisualStyleBackColor = false;
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.Color.Green;
-            this.btnThoat.FlatAppearance.BorderSize = 0;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(909, 24);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(102, 49);
-            this.btnThoat.TabIndex = 12;
-            this.btnThoat.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
@@ -489,7 +489,7 @@ namespace DashBoar
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1334, 218);
+            this.dataGridView1.Size = new System.Drawing.Size(1215, 218);
             this.dataGridView1.TabIndex = 4;
             // 
             // label12
@@ -497,7 +497,7 @@ namespace DashBoar
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Green;
-            this.label12.Location = new System.Drawing.Point(58, 556);
+            this.label12.Location = new System.Drawing.Point(42, 556);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(97, 25);
             this.label12.TabIndex = 5;
@@ -505,7 +505,7 @@ namespace DashBoar
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(156, 557);
+            this.txtTimKiem.Location = new System.Drawing.Point(145, 557);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(198, 26);
             this.txtTimKiem.TabIndex = 6;
@@ -547,9 +547,9 @@ namespace DashBoar
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(363, 556);
+            this.button1.Location = new System.Drawing.Point(349, 556);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(27, 25);
+            this.button1.Size = new System.Drawing.Size(52, 32);
             this.button1.TabIndex = 8;
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -557,7 +557,7 @@ namespace DashBoar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1334, 836);
+            this.ClientSize = new System.Drawing.Size(1215, 836);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.txtTimKiem);
@@ -574,9 +574,9 @@ namespace DashBoar
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox6.ResumeLayout(false);

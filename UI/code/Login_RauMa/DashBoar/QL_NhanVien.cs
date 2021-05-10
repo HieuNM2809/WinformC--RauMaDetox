@@ -28,7 +28,7 @@ namespace DashBoar
             panel_show.Show();
             panel_show.Controls.Clear();
             frmQMK.TopLevel = false;
-            frmQMK.Dock = DockStyle.Fill;
+           
             panel_show.Controls.Add(frmQMK);
             frmQMK.Show();
         }
