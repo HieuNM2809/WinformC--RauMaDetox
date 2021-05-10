@@ -114,7 +114,7 @@ namespace DashBoar
             this.panel_show.Location = new System.Drawing.Point(78, 165);
             this.panel_show.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_show.Name = "panel_show";
-            this.panel_show.Size = new System.Drawing.Size(1499, 871);
+            this.panel_show.Size = new System.Drawing.Size(1355, 871);
             this.panel_show.TabIndex = 19;
             // 
             // QL_NhanVien
@@ -122,7 +122,7 @@ namespace DashBoar
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
-            this.ClientSize = new System.Drawing.Size(1608, 1050);
+            this.ClientSize = new System.Drawing.Size(1454, 1050);
             this.Controls.Add(this.panel_show);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
