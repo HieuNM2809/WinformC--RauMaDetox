@@ -222,5 +222,11 @@
   <ItemGroup>
     <None Include="Resources\xacnhan.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{d97c869e-0463-44ee-a8f4-fcef1b3f7a7f}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

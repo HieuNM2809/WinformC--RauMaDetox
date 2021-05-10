@@ -34,7 +34,7 @@ namespace DashBoar
         }
 
         private void thôngTinNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        {    
             frmThongTinNhanVien frmTTNV = new frmThongTinNhanVien();
             panel_show.Show();
             panel_show.Controls.Clear();
