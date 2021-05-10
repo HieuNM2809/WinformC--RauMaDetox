@@ -7,5 +7,8 @@ using System.Threading.Tasks;
 namespace DAO
 {
    public class DAO_sanpham
+    {
+
+    }
    
 }

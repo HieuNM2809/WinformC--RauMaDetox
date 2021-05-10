@@ -24,7 +24,7 @@ namespace DashBoar
 
         private void đổiMậtKhẩuToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FrmQuenMatKhau frmQMK = new FrmQuenMatKhau();
+            FrmDoiMatKhau frmQMK = new FrmDoiMatKhau();
             panel_show.Show();
             panel_show.Controls.Clear();
             frmQMK.TopLevel = false;
@@ -35,7 +35,7 @@ namespace DashBoar
 
         private void thôngTinNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {    
-            FrmThongTinNhanVien frmTTNV = new FrmThongTinNhanVien();
+            frmThongTinNhanVien frmTTNV = new frmThongTinNhanVien();
             panel_show.Show();
             panel_show.Controls.Clear();
             frmTTNV.TopLevel = false;
