@@ -114,7 +114,7 @@ namespace DAO
             lstParameter.Add(new SqlParameter("@Email", nv.Email));
 
             SqlCommand cmd = new SqlCommand(sqlUpdate, _conn);
-            
+            cmd.Parameters.AddRange(lstParameter.ToArray());
 
             int result = cmd.ExecuteNonQuery();
 
