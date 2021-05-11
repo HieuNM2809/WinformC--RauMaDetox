@@ -186,6 +186,7 @@ namespace DashBoar
             this.btnThoat.Size = new System.Drawing.Size(97, 54);
             this.btnThoat.TabIndex = 39;
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnDongY
             // 
