@@ -90,13 +90,6 @@
     <Compile Include="QL_SanPham.Designer.cs">
       <DependentUpon>QL_SanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include=".cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include=".Designer.cs">
-      <DependentUpon>.cs</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <EmbeddedResource Include="DangKiTaiKhoan.resx">
       <DependentUpon>DangKiTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,9 +120,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QL_SanPham.resx">
       <DependentUpon>QL_SanPham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include=".resx">
-      <DependentUpon>.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -231,6 +221,12 @@
       <Project>{7dcc0fa5-7c66-4bdb-9ba9-2f3b92f7f533}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

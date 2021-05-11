@@ -10,7 +10,7 @@ namespace DAO
 {
     public class NhanVienDAO
     {
-        private static string _connectionString = @"Data Source=DESKTOP-KLO6537\SQLEXPRESS;Initial Catalog=ql_rauma;Integrated Security=True";
+        private static string _connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=ql_rauma;Integrated Security=True";
 
         private SqlConnection _conn = new SqlConnection(_connectionString);
 
