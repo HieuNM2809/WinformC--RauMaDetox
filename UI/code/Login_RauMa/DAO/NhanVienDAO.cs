@@ -98,7 +98,7 @@ namespace DAO
 
         public bool CapNhatNV(NhanVienDTO nv)
         {
-            string sqlUpdate = "Update SinhVien Set HoTen = @HoTen, NgaySinh = @NgaySinh, GioiTinh = @GioiTinh, ChucDanh = @ChucDanh," +
+            string sqlUpdate = "Update SinhVien Set HoTen = @HoTen, NgaySinh = @NgaySinh,  ChucDanh = @ChucDanh," +
                 " LoaiNv = @LoaiNV, SDT = @SDT, TaiKhoan = @TaiKhoan, MatKhau=@MatKhau, Email=@Email where ID_NV = @ID_NV";
 
             _conn.Open();
@@ -106,7 +106,7 @@ namespace DAO
             lstParameter.Add(new SqlParameter("@ID_NV", nv.ID_NV));
             lstParameter.Add(new SqlParameter("@HoTen", nv.HoTen));
             lstParameter.Add(new SqlParameter("@NgaySinh", nv.NgaySinh));
-            lstParameter.Add(new SqlParameter("@GioiTinh", nv.GioiTinh));
+          
             lstParameter.Add(new SqlParameter("@ChucDanh", nv.ChucDanh));
             lstParameter.Add(new SqlParameter("@LoaiNV", nv.LoaiNV));
             lstParameter.Add(new SqlParameter("@SDT", nv.SDT));
@@ -115,7 +115,7 @@ namespace DAO
             lstParameter.Add(new SqlParameter("@Email", nv.Email));
 
             SqlCommand cmd = new SqlCommand(sqlUpdate, _conn);
-            cmd.Parameters.AddRange(lstParameter.ToArray());
+            
 
             int result = cmd.ExecuteNonQuery();
 

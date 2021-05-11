@@ -136,7 +136,20 @@ namespace DashBoar
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
-            frmThongTinNhanVien_Load(sender, e);
+            foreach (Control ctrTTNV in this.grTTNV.Controls)
+            {
+                if (ctrTTNV is TextBox )
+                {
+                    ctrTTNV.Text = "";
+                }
+            }
+            dtpNgaySinh.Value = DateTime.Now;
+            chkTrangThai.CheckState = CheckState.Checked;
+            cbbChucDanh.SelectedIndex = 0;
+            cbbLoaiNhanVien.SelectedIndex = 0;
+            picHinhNhanVien.Image = null; 
+
+
         }
     }
 }

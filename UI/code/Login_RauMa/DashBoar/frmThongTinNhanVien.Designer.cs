@@ -50,7 +50,7 @@ namespace DashBoar
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.grHinhNhanVien = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picHinhNhanVien = new System.Windows.Forms.PictureBox();
             this.grTTT = new System.Windows.Forms.GroupBox();
             this.chkTrangThai = new System.Windows.Forms.CheckBox();
             this.cbbChucDanh = new System.Windows.Forms.ComboBox();
@@ -85,7 +85,7 @@ namespace DashBoar
             this.grTTNV.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.grHinhNhanVien.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinhNhanVien)).BeginInit();
             this.grTTT.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinNhanVien)).BeginInit();
@@ -302,7 +302,7 @@ namespace DashBoar
             // 
             // grHinhNhanVien
             // 
-            this.grHinhNhanVien.Controls.Add(this.pictureBox1);
+            this.grHinhNhanVien.Controls.Add(this.picHinhNhanVien);
             this.grHinhNhanVien.Location = new System.Drawing.Point(883, 65);
             this.grHinhNhanVien.Name = "grHinhNhanVien";
             this.grHinhNhanVien.Size = new System.Drawing.Size(316, 174);
@@ -310,13 +310,13 @@ namespace DashBoar
             this.grHinhNhanVien.TabStop = false;
             this.grHinhNhanVien.Text = "Hình Nhân Viên";
             // 
-            // pictureBox1
+            // picHinhNhanVien
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(101, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(159, 113);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picHinhNhanVien.Location = new System.Drawing.Point(101, 36);
+            this.picHinhNhanVien.Name = "picHinhNhanVien";
+            this.picHinhNhanVien.Size = new System.Drawing.Size(159, 113);
+            this.picHinhNhanVien.TabIndex = 0;
+            this.picHinhNhanVien.TabStop = false;
             // 
             // grTTT
             // 
@@ -685,7 +685,7 @@ namespace DashBoar
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.grHinhNhanVien.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinhNhanVien)).EndInit();
             this.grTTT.ResumeLayout(false);
             this.grTTT.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -719,7 +719,7 @@ namespace DashBoar
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox grHinhNhanVien;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picHinhNhanVien;
         private System.Windows.Forms.GroupBox grTTT;
         private System.Windows.Forms.CheckBox chkTrangThai;
         private System.Windows.Forms.ComboBox cbbChucDanh;
