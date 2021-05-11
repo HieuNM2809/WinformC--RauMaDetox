@@ -45,6 +45,7 @@ namespace DashBoar
             // menuStrip1
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tàiKhoảnToolStripMenuItem,
@@ -52,7 +53,7 @@ namespace DashBoar
             this.ChucNang});
             this.menuStrip1.Location = new System.Drawing.Point(48, 82);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(318, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(330, 33);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -62,20 +63,20 @@ namespace DashBoar
             this.MemuItemDangKiTaiKhoan,
             this.MenuItemDoiMatKhau});
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(102, 29);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             // 
             // MemuItemDangKiTaiKhoan
             // 
             this.MemuItemDangKiTaiKhoan.Name = "MemuItemDangKiTaiKhoan";
-            this.MemuItemDangKiTaiKhoan.Size = new System.Drawing.Size(235, 30);
+            this.MemuItemDangKiTaiKhoan.Size = new System.Drawing.Size(253, 34);
             this.MemuItemDangKiTaiKhoan.Text = "Đăng kí tài khoản";
             this.MemuItemDangKiTaiKhoan.Click += new System.EventHandler(this.đăngKíTàiKhoảnToolStripMenuItem_Click);
             // 
             // MenuItemDoiMatKhau
             // 
             this.MenuItemDoiMatKhau.Name = "MenuItemDoiMatKhau";
-            this.MenuItemDoiMatKhau.Size = new System.Drawing.Size(235, 30);
+            this.MenuItemDoiMatKhau.Size = new System.Drawing.Size(253, 34);
             this.MenuItemDoiMatKhau.Text = "Đổi mật khẩu";
             this.MenuItemDoiMatKhau.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem1_Click);
             // 
@@ -84,13 +85,13 @@ namespace DashBoar
             this.nhânViênToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuItemThongTinNhanVien});
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(107, 29);
             this.nhânViênToolStripMenuItem.Text = "Nhân viên";
             // 
             // MenuItemThongTinNhanVien
             // 
             this.MenuItemThongTinNhanVien.Name = "MenuItemThongTinNhanVien";
-            this.MenuItemThongTinNhanVien.Size = new System.Drawing.Size(253, 30);
+            this.MenuItemThongTinNhanVien.Size = new System.Drawing.Size(271, 34);
             this.MenuItemThongTinNhanVien.Text = "Thông tin nhân viên";
             this.MenuItemThongTinNhanVien.Click += new System.EventHandler(this.thôngTinNhânViênToolStripMenuItem_Click);
             // 
@@ -99,13 +100,13 @@ namespace DashBoar
             this.ChucNang.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.báoCáoToolStripMenuItem});
             this.ChucNang.Name = "ChucNang";
-            this.ChucNang.Size = new System.Drawing.Size(109, 29);
+            this.ChucNang.Size = new System.Drawing.Size(113, 29);
             this.ChucNang.Text = "Chức năng";
             // 
             // báoCáoToolStripMenuItem
             // 
             this.báoCáoToolStripMenuItem.Name = "báoCáoToolStripMenuItem";
-            this.báoCáoToolStripMenuItem.Size = new System.Drawing.Size(159, 30);
+            this.báoCáoToolStripMenuItem.Size = new System.Drawing.Size(177, 34);
             this.báoCáoToolStripMenuItem.Text = "Báo cáo";
             // 
             // panel_show
@@ -126,6 +127,7 @@ namespace DashBoar
             this.Controls.Add(this.panel_show);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "QL_NhanVien";
             this.Text = "QL_NhanVien";

@@ -118,8 +118,8 @@ namespace DashBoar
                 txtID.Text = row.Cells[0].Value.ToString();
                 txtHoTen.Text = row.Cells[1].Value.ToString();
                 dtpNgaySinh.Text = row.Cells["colNgaySinh"].Value.ToString();
-                if (row.Cells[3].Value.ToString() == "Nam") radNam.Checked;
-                else radNu.Checked;
+                if (row.Cells[3].Value.ToString() == "Nam") radNam.Checked = true;
+                else radNu.Checked = true;
                 cbbChucDanh.Text = row.Cells["colLop"].FormattedValue.ToString();
                 cbbLoaiNhanVien.Text = row.Cells["colLoaiNV"].FormattedValue.ToString();
                 txtSDT.Text = row.Cells[6].Value.ToString();
