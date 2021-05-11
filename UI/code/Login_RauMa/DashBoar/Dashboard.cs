@@ -126,10 +126,14 @@ namespace DashBoar
 
         private void btnQLTaiKhoan_Click(object sender, EventArgs e)
         {
-            QL_NhanVien qlnv = new QL_NhanVien();
-            qlnv.MdiParent = this;
-            qlnv.Show();
-            this.Close();
+            QL_NhanVien frmQLNV = new QL_NhanVien();
+            pnlform.Show();
+            pnlform.Controls.Clear();
+            frmQLNV.TopLevel = false;
+            frmQLNV.Dock = DockStyle.Fill;
+            pnlform.Controls.Add(frmQLNV);
+            frmQLNV.Show();
+           
         }
 
 
