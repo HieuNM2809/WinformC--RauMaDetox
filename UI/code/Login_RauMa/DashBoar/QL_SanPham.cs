@@ -29,16 +29,30 @@ namespace DashBoar
 
         private void QL_SanPham_Load(object sender, EventArgs e)
         {
-            QLSP_User qlsp = new QLSP_User();
-            qlsp.MdiParent = this;
-            qlsp.Show();
-            //phân quyền admin
-            //QLSP_Admin qlsp = new QLSP_Admin();
-            //qlsp.MdiParent = this;
-            //qlsp.Show();
+            
         }
 
         private void btn_thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_thoat_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_huy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_xoa_huy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_loaisp_huy_Click(object sender, EventArgs e)
         {
             this.Close();
         }

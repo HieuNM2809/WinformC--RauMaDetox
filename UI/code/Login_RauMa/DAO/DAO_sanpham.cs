@@ -12,10 +12,7 @@ namespace DAO
     {
         private static string _conn = @"Data Source=.;Initial Catalog=ql_rauma;Integrated Security=True";
         private SqlConnection conn = new SqlConnection(_conn);
-        public List<DTO_sanpham> laydssp()
-        {
-            return 
-        }
+  
     }
    
 }

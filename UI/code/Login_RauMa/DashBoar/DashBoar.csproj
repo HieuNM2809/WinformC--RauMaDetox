@@ -78,18 +78,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLSP_Admin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QLSP_Admin.Designer.cs">
-      <DependentUpon>QLSP_Admin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QLSP_User.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QLSP_User.Designer.cs">
-      <DependentUpon>QLSP_User.cs</DependentUpon>
-    </Compile>
     <Compile Include="QL_NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,13 +89,6 @@
     </Compile>
     <Compile Include="QL_SanPham.Designer.cs">
       <DependentUpon>QL_SanPham.cs</DependentUpon>
-    </Compile>
-    <Compile Include=".cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include=".Designer.cs">
-      <DependentUpon>.cs</DependentUpon>
-      <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="DangKiTaiKhoan.resx">
       <DependentUpon>DangKiTaiKhoan.cs</DependentUpon>
@@ -134,20 +115,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="QLSP_Admin.resx">
-      <DependentUpon>QLSP_Admin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QLSP_User.resx">
-      <DependentUpon>QLSP_User.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="QL_NhanVien.resx">
       <DependentUpon>QL_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QL_SanPham.resx">
       <DependentUpon>QL_SanPham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include=".resx">
-      <DependentUpon>.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -252,6 +224,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
