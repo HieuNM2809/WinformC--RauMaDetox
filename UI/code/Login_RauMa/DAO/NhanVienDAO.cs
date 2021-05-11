@@ -98,7 +98,7 @@ namespace DAO
 
         public bool CapNhatNV(NhanVienDTO nv)
         {
-            string sqlUpdate = "Update NhanVien Set HoTen =@HoTen , NgaySinh = @NgaySinh,  ChucDanh = @ChucDanh," +
+            string sqlUpdate = "Update NhanVien Set NgaySinh = @NgaySinh,  ChucDanh = @ChucDanh," +
                 " LoaiNv = @LoaiNV, SDT = @SDT, TaiKhoan = @TaiKhoan, MatKhau=@MatKhau, Email=@Email where ID_NV = @ID_NV";
 
             _conn.Open();
