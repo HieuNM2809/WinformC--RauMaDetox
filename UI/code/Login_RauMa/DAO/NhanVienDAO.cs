@@ -106,6 +106,7 @@ namespace DAO
             lstParameter.Add(new SqlParameter("@ID_NV", nv.ID_NV));
             lstParameter.Add(new SqlParameter("@HoTen", nv.HoTen));
             lstParameter.Add(new SqlParameter("@NgaySinh", nv.NgaySinh));
+            lstParameter.Add(new SqlParameter("@GioiTinh", nv.GioiTinh));
             lstParameter.Add(new SqlParameter("@ChucDanh", nv.ChucDanh));
             lstParameter.Add(new SqlParameter("@LoaiNV", nv.LoaiNV));
             lstParameter.Add(new SqlParameter("@SDT", nv.SDT));
