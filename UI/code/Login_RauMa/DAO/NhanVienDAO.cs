@@ -53,34 +53,77 @@ namespace DAO
             return lstNhanVien;
         }
 
-        //public bool ThemNV(NhanVienDTO nv)
-        //{
-        //    string sqlInsert = "Insert into SinhVien(MSSV, HoTen, NgaySinh, GioiTinh, ChucDanh, LoaiNV, SDT, TaiKhoan, MatKhau, Email, TrangThai) VALUES (@MSSV,@HoTen,@NgaySinh,@GioiTinh,@ChucDanh,@LoaiNV,@SDT,@TaiKhoan,@MatKhau,@Email,1)";
+        public bool KiemTraNhanVien(string MSSV)
+        {
+            _conn.Open();
 
-        //    _conn.Open();
-        //    List<SqlParameter> lstParameter = new List<SqlParameter>();
-        //    lstParameter.Add(new SqlParameter("@MSSV", nv.ID_NV));
-        //    lstParameter.Add(new SqlParameter("@HoTen", nv.HoTen));
-        //    lstParameter.Add(new SqlParameter("@NgaySinh", nv.NgaySinh));
-        //    lstParameter.Add(new SqlParameter("@GioiTinh", nv.GioiTinh));
-        //    lstParameter.Add(new SqlParameter("@ChucDanh", nv.ChucDanh));
-        //    lstParameter.Add(new SqlParameter("@LoaiNV", nv.LoaiNV));
-        //    lstParameter.Add(new SqlParameter("@SDT", nv.SDT));
-        //    lstParameter.Add(new SqlParameter("@TaiKhoan", nv.TaiKhoan));
-        //    lstParameter.Add(new SqlParameter("@MatKhau", nv.MatKhau));
-        //    lstParameter.Add(new SqlParameter("@Email", nv.Email));
+            string sqlFormat = "SELECT COUNT(*) FROM NhanVien WHERE ID_NV = '{0}'";
+            string sql = string.Format(sqlFormat, MSSV);
 
-        //    SqlCommand cmd = new SqlCommand(sqlInsert, _conn);
+            SqlCommand cmd = new SqlCommand(sql, _conn);
 
-        //    cmd.Parameters.AddRange(lstParameter.ToArray());
+            object value = cmd.ExecuteScalar();
 
-        //    int result = cmd.ExecuteNonQuery();
+            _conn.Close();
 
-        //    _conn.Close();
+            return Convert.ToInt32(value) > 0;
+        }
+        public bool ThemNV(NhanVienDTO nv)
+        {
+            string sqlInsert = "Insert into NhanVien(ID_NV, HoTen, NgaySinh, GioiTinh, ChucDanh, LoaiNV, SDT, TaiKhoan, MatKhau, Email, TrangThai) VALUES (@ID_NV,@HoTen,@NgaySinh,@GioiTinh,@ChucDanh,@LoaiNV,@SDT,@TaiKhoan,@MatKhau,@Email,1)";
 
-        //    return result > 0;
-        //}
+            _conn.Open();
+            List<SqlParameter> lstParameter = new List<SqlParameter>();
+            lstParameter.Add(new SqlParameter("@ID_NV", nv.ID_NV));
+            lstParameter.Add(new SqlParameter("@HoTen", nv.HoTen));
+            lstParameter.Add(new SqlParameter("@NgaySinh", nv.NgaySinh));
+            lstParameter.Add(new SqlParameter("@GioiTinh", nv.GioiTinh));
+            lstParameter.Add(new SqlParameter("@ChucDanh", nv.ChucDanh));
+            lstParameter.Add(new SqlParameter("@LoaiNV", nv.LoaiNV));
+            lstParameter.Add(new SqlParameter("@SDT", nv.SDT));
+            lstParameter.Add(new SqlParameter("@TaiKhoan", nv.TaiKhoan));
+            lstParameter.Add(new SqlParameter("@MatKhau", nv.MatKhau));
+            lstParameter.Add(new SqlParameter("@Email", nv.Email));
 
-        
+            SqlCommand cmd = new SqlCommand(sqlInsert, _conn);
+
+            cmd.Parameters.AddRange(lstParameter.ToArray());
+
+            int result = cmd.ExecuteNonQuery();
+
+            _conn.Close();
+
+            return result > 0;
+        }
+
+        public bool CapNhatNV(NhanVienDTO nv)
+        {
+            string sqlUpdate = "Update SinhVien Set HoTen = @HoTen, NgaySinh = @NgaySinh, GioiTinh = @GioiTinh, ChucDanh = @ChucDanh," +
+                " LoaiNv = @LoaiNV, SDT = @SDT, TaiKhoan = @TaiKhoan, MatKhau=@MatKhau, Email=@Email where ID_NV = @ID_NV";
+
+            _conn.Open();
+            List<SqlParameter> lstParameter = new List<SqlParameter>();
+            lstParameter.Add(new SqlParameter("@ID_NV", nv.ID_NV));
+            lstParameter.Add(new SqlParameter("@HoTen", nv.HoTen));
+            lstParameter.Add(new SqlParameter("@NgaySinh", nv.NgaySinh));
+            lstParameter.Add(new SqlParameter("@GioiTinh", nv.GioiTinh));
+            lstParameter.Add(new SqlParameter("@ChucDanh", nv.ChucDanh));
+            lstParameter.Add(new SqlParameter("@LoaiNV", nv.LoaiNV));
+            lstParameter.Add(new SqlParameter("@SDT", nv.SDT));
+            lstParameter.Add(new SqlParameter("@TaiKhoan", nv.TaiKhoan));
+            lstParameter.Add(new SqlParameter("@MatKhau", nv.MatKhau));
+            lstParameter.Add(new SqlParameter("@Email", nv.Email));
+
+            SqlCommand cmd = new SqlCommand(sqlUpdate, _conn);
+            cmd.Parameters.AddRange(lstParameter.ToArray());
+
+            int result = cmd.ExecuteNonQuery();
+
+            _conn.Close();
+
+            return result > 0;
+        }
+
+
     }
 }

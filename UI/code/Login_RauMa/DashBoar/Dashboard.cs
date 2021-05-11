@@ -111,11 +111,11 @@ namespace DashBoar
         {
 
         }
-
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
 
         }
+
 
         private void btnSanPham_Click_1(object sender, EventArgs e)
         {
@@ -126,16 +126,20 @@ namespace DashBoar
 
         private void btnQLTaiKhoan_Click(object sender, EventArgs e)
         {
-            QL_NhanVien frmQLNV = new QL_NhanVien();
-            pnlform.Show();
-            pnlform.Controls.Clear();
-            frmQLNV.TopLevel = false;
-            frmQLNV.Dock = DockStyle.Fill;
-            pnlform.Controls.Add(frmQLNV);
-            frmQLNV.Show();
-           
+            //QL_NhanVien frmQLNV = new QL_NhanVien();
+            //pnlform.Show();
+            //pnlform.Controls.Clear();
+            //frmQLNV.TopLevel = false;
+            //frmQLNV.Dock = DockStyle.Fill;
+            //pnlform.Controls.Add(frmQLNV);
+            //frmQLNV.Show();
+
+            QL_NhanVien qlsp = new QL_NhanVien();
+
+            qlsp.Show();
+
         }
 
-
+        
     }
 }
