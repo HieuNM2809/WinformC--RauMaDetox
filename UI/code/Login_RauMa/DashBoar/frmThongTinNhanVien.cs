@@ -7,7 +7,7 @@ namespace DashBoar
 {
     public partial class frmThongTinNhanVien : Form
     {
-        private NhanVienBUS _NhanVienBUS = new NhanVienBUS();
+        private NhanVienBUS _NhanVienBUS = new NhanVienBUS();   
 
 
         public frmThongTinNhanVien()
@@ -43,7 +43,7 @@ namespace DashBoar
         {
             if (txtID.Text == "" || txtHoTen.Text == "" || txtSDT.Text == "" || txtTaiKhoan.Text == "" || txtMatKhau.Text == "" || dtpNgaySinh.Value > DateTime.Now)
             {
-                MessageBox.Show("chưa nhập thông tin hoặc ngày tháng sai ", "Thông báo");
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
 
 
             }

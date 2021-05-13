@@ -6,10 +6,11 @@ go
 create table SanPham
 (
 MaSp char(3) not null primary key,
-TenSp int,
+TenSp nvarchar(20),
 MaLoaiSp char(3) ,
 GiaTien money,
-MoTa nvarchar(20),
+MoTa nvarchar(50),
+Hinh image,
 TrangThai bit default 1
 )
 

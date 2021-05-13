@@ -29,6 +29,10 @@ namespace DTO
             { return trangthaisp; }
             set { trangthaisp = value; }
         }
+        public DTO_loaisp()
+        {
+
+        }
         public DTO_loaisp (string maloaisp,string loaisp,bool trangthaisp)
         {
             this.Maloaisp = maloaisp;

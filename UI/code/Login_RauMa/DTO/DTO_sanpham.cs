@@ -29,8 +29,8 @@ namespace DTO
                     { return loaisp;}
                 set { loaisp = value; }
             }
-            private string giasp;
-            public string Giasp
+            private int giasp;
+            public int Giasp
             {
                 get
                 { return giasp; }
@@ -61,7 +61,7 @@ namespace DTO
         {
 
         }
-        public DTO_sanpham(string masp, string tensp, string loaisp,string giasp,string mota,
+        public DTO_sanpham(string masp, string tensp, string loaisp,int giasp,string mota,
             string hinhsp,bool trangthaisp)
         {
             this.Masp = masp;
