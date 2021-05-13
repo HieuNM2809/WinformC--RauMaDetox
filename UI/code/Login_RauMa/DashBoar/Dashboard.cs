@@ -16,7 +16,18 @@ namespace DashBoar
         {
             InitializeComponent();
         }
-
+        private void loadform(object Form)
+        {
+            if (this.pnlform.Controls.Count > 0)
+                this.pnlform.Controls.RemoveAt(0);
+            Form f = Form as Form;
+            f.TopLevel = false;
+            f.TopMost = true;
+            f.Dock = DockStyle.Fill;
+            this.pnlform.Controls.Add(f);
+            this.pnlform.Tag = f;
+            f.Show();
+        }
         private void btnQLTaiKhoan_DragEnter(object sender, DragEventArgs e)
         {
             btnQLTaiKhoan.Text = "Quản Lí Tài Khoản";
@@ -107,39 +118,23 @@ namespace DashBoar
             btnThoat.ForeColor = Color.White;
         }
 
-        private void btnSanPham_Click(object sender, EventArgs e)
-        {
-
-        }
+        
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
-
+            
         }
 
 
         private void btnSanPham_Click_1(object sender, EventArgs e)
         {
-            QL_SanPham qlsp = new QL_SanPham();
-            
-            qlsp.Show();
+            QL_SanPham sp = new QL_SanPham();
+            loadform(sp);
         }
 
         private void btnQLTaiKhoan_Click(object sender, EventArgs e)
         {
-            //QL_NhanVien frmQLNV = new QL_NhanVien();
-            //pnlform.Show();
-            //pnlform.Controls.Clear();
-            //frmQLNV.TopLevel = false;
-            //frmQLNV.Dock = DockStyle.Fill;
-            //pnlform.Controls.Add(frmQLNV);
-            //frmQLNV.Show();
-
-            QL_NhanVien qlsp = new QL_NhanVien();
-
-            qlsp.Show();
-
+            QL_NhanVien nv = new QL_NhanVien();
+            loadform(nv);
         }
-
-        
     }
 }

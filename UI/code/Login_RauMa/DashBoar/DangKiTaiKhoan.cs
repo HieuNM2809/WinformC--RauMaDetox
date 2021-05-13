@@ -17,9 +17,16 @@ namespace DashBoar
             InitializeComponent();
         }
 
-        private void frmDangKiTaiKhoan_Load(object sender, EventArgs e)
+        private void btnDangKi_Click(object sender, EventArgs e)
         {
+            //kiểm tra thông tin nhập đủ chưa
             
+            //kiểm tra thông tin trùng
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

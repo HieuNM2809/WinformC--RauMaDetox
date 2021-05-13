@@ -24,24 +24,24 @@ namespace DashBoar
 
         private void đổiMậtKhẩuToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FrmDoiMatKhau frmQMK = new FrmDoiMatKhau();
-            panel_show.Show();
-            panel_show.Controls.Clear();
-            frmQMK.TopLevel = false;
+            //FrmDoiMatKhau frmQMK = new FrmDoiMatKhau();
+            //panel_show.Show();
+            //panel_show.Controls.Clear();
+            //frmQMK.TopLevel = false;
            
-            panel_show.Controls.Add(frmQMK);
-            frmQMK.Show();
+            //panel_show.Controls.Add(frmQMK);
+            //frmQMK.Show();
         }
 
         private void thôngTinNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {    
-            frmThongTinNhanVien frmTTNV = new frmThongTinNhanVien();
-            panel_show.Show();
-            panel_show.Controls.Clear();
-            frmTTNV.TopLevel = false;
-            frmTTNV.Dock = DockStyle.Fill;
-            panel_show.Controls.Add(frmTTNV);
-            frmTTNV.Show();
+            //frmThongTinNhanVien frmTTNV = new frmThongTinNhanVien();
+            //panel_show.Show();
+            //panel_show.Controls.Clear();
+            //frmTTNV.TopLevel = false;
+            //frmTTNV.Dock = DockStyle.Fill;
+            //panel_show.Controls.Add(frmTTNV);
+            //frmTTNV.Show();
         }
     }
 

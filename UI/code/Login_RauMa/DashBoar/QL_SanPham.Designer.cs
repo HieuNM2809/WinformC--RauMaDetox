@@ -74,6 +74,7 @@
             this.xem_mota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hinhsp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Trangthaisp = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ptb_anhtai = new System.Windows.Forms.PictureBox();
             this.lbl_tenmon = new System.Windows.Forms.Label();
@@ -148,7 +149,6 @@
             this.tenloaisp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.opfopen = new System.Windows.Forms.OpenFileDialog();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tp_them.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -655,6 +655,16 @@
             this.Trangthaisp.Name = "Trangthaisp";
             this.Trangthaisp.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Trangthaisp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Location = new System.Drawing.Point(3, 32);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1236, 24);
+            this.menuStrip1.TabIndex = 125;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // groupBox2
             // 
@@ -1562,16 +1572,6 @@
             // 
             this.opfopen.FileName = "ofdopen";
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(3, 32);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1236, 24);
-            this.menuStrip1.TabIndex = 125;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
             // QL_SanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1580,6 +1580,7 @@
             this.ClientSize = new System.Drawing.Size(1310, 887);
             this.Controls.Add(this.tp_qlsp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "QL_SanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
