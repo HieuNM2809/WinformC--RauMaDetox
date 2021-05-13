@@ -110,6 +110,8 @@ namespace DashBoar
             this.grTTNV.Controls.Add(this.label4);
             this.grTTNV.Controls.Add(this.label8);
             this.grTTNV.Controls.Add(this.label7);
+            this.grTTNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grTTNV.ForeColor = System.Drawing.Color.White;
             this.grTTNV.Location = new System.Drawing.Point(26, 41);
             this.grTTNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grTTNV.Name = "grTTNV";
@@ -123,6 +125,7 @@ namespace DashBoar
             // 
             this.groupBox2.Controls.Add(this.radNu);
             this.groupBox2.Controls.Add(this.radNam);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Location = new System.Drawing.Point(130, 74);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
@@ -134,10 +137,11 @@ namespace DashBoar
             // radNu
             // 
             this.radNu.AutoSize = true;
+            this.radNu.ForeColor = System.Drawing.Color.White;
             this.radNu.Location = new System.Drawing.Point(74, 10);
             this.radNu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radNu.Name = "radNu";
-            this.radNu.Size = new System.Drawing.Size(47, 21);
+            this.radNu.Size = new System.Drawing.Size(49, 21);
             this.radNu.TabIndex = 1;
             this.radNu.Text = "Nữ";
             this.radNu.UseVisualStyleBackColor = true;
@@ -146,10 +150,11 @@ namespace DashBoar
             // 
             this.radNam.AutoSize = true;
             this.radNam.Checked = true;
+            this.radNam.ForeColor = System.Drawing.Color.White;
             this.radNam.Location = new System.Drawing.Point(13, 10);
             this.radNam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radNam.Name = "radNam";
-            this.radNam.Size = new System.Drawing.Size(58, 21);
+            this.radNam.Size = new System.Drawing.Size(61, 21);
             this.radNam.TabIndex = 0;
             this.radNam.TabStop = true;
             this.radNam.Text = "Nam";
@@ -165,10 +170,10 @@ namespace DashBoar
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(402, 232);
+            this.txtMatKhau.Location = new System.Drawing.Point(385, 108);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(148, 22);
+            this.txtMatKhau.Size = new System.Drawing.Size(184, 22);
             this.txtMatKhau.TabIndex = 7;
             // 
             // txtTaiKhoan
@@ -200,10 +205,10 @@ namespace DashBoar
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(402, 45);
+            this.txtHoTen.Location = new System.Drawing.Point(366, 46);
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(109, 22);
+            this.txtHoTen.Size = new System.Drawing.Size(184, 22);
             this.txtHoTen.TabIndex = 2;
             // 
             // txtID
@@ -218,7 +223,7 @@ namespace DashBoar
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Green;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(32, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 20);
@@ -228,8 +233,9 @@ namespace DashBoar
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Green;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(300, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 20);
@@ -240,7 +246,7 @@ namespace DashBoar
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Green;
+            this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(32, 193);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(51, 20);
@@ -251,7 +257,7 @@ namespace DashBoar
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Green;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(29, 119);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 20);
@@ -261,9 +267,10 @@ namespace DashBoar
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Green;
-            this.label9.Location = new System.Drawing.Point(300, 231);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(300, 110);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(79, 20);
             this.label9.TabIndex = 29;
@@ -273,7 +280,7 @@ namespace DashBoar
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Green;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(32, 82);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 20);
@@ -284,7 +291,7 @@ namespace DashBoar
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Green;
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(32, 230);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 20);
@@ -295,7 +302,7 @@ namespace DashBoar
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Green;
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(32, 154);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 20);
@@ -305,6 +312,8 @@ namespace DashBoar
             // grHinhNhanVien
             // 
             this.grHinhNhanVien.Controls.Add(this.picHinhNhanVien);
+            this.grHinhNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grHinhNhanVien.ForeColor = System.Drawing.Color.White;
             this.grHinhNhanVien.Location = new System.Drawing.Point(785, 52);
             this.grHinhNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grHinhNhanVien.Name = "grHinhNhanVien";
@@ -331,6 +340,8 @@ namespace DashBoar
             this.grTTT.Controls.Add(this.label11);
             this.grTTT.Controls.Add(this.label5);
             this.grTTT.Controls.Add(this.label6);
+            this.grTTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grTTT.ForeColor = System.Drawing.Color.White;
             this.grTTT.Location = new System.Drawing.Point(785, 210);
             this.grTTT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grTTT.Name = "grTTT";
@@ -346,6 +357,7 @@ namespace DashBoar
             this.chkTrangThai.Checked = true;
             this.chkTrangThai.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTrangThai.ForeColor = System.Drawing.Color.White;
             this.chkTrangThai.Location = new System.Drawing.Point(147, 29);
             this.chkTrangThai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkTrangThai.Name = "chkTrangThai";
@@ -369,6 +381,7 @@ namespace DashBoar
             // 
             // cbbLoaiNhanVien
             // 
+            this.cbbLoaiNhanVien.BackColor = System.Drawing.Color.White;
             this.cbbLoaiNhanVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbLoaiNhanVien.FormattingEnabled = true;
             this.cbbLoaiNhanVien.Items.AddRange(new object[] {
@@ -384,7 +397,7 @@ namespace DashBoar
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Green;
+            this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(20, 33);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(87, 20);
@@ -395,7 +408,7 @@ namespace DashBoar
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Green;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(20, 88);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 20);
@@ -406,7 +419,7 @@ namespace DashBoar
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Green;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(20, 59);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(114, 20);
@@ -420,6 +433,8 @@ namespace DashBoar
             this.groupBox5.Controls.Add(this.btnThem);
             this.groupBox5.Controls.Add(this.btnLamMoi);
             this.groupBox5.Controls.Add(this.btnSua);
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
             this.groupBox5.Location = new System.Drawing.Point(26, 346);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
@@ -431,13 +446,13 @@ namespace DashBoar
             // 
             // btnThoat
             // 
-            this.btnThoat.BackColor = System.Drawing.Color.Green;
+            this.btnThoat.BackColor = System.Drawing.Color.White;
             this.btnThoat.FlatAppearance.BorderSize = 0;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(808, 19);
+            this.btnThoat.Location = new System.Drawing.Point(759, 16);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(91, 50);
@@ -447,13 +462,13 @@ namespace DashBoar
             // 
             // btnXoa
             // 
-            this.btnXoa.BackColor = System.Drawing.Color.Green;
+            this.btnXoa.BackColor = System.Drawing.Color.White;
             this.btnXoa.FlatAppearance.BorderSize = 0;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(475, 19);
+            this.btnXoa.Location = new System.Drawing.Point(459, 15);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(91, 50);
@@ -462,11 +477,11 @@ namespace DashBoar
             // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.Color.Green;
+            this.btnThem.BackColor = System.Drawing.Color.White;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(130, 17);
+            this.btnThem.Location = new System.Drawing.Point(130, 12);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(91, 57);
@@ -476,13 +491,13 @@ namespace DashBoar
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.BackColor = System.Drawing.Color.Green;
+            this.btnLamMoi.BackColor = System.Drawing.Color.White;
             this.btnLamMoi.FlatAppearance.BorderSize = 0;
             this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.Color.White;
             this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
-            this.btnLamMoi.Location = new System.Drawing.Point(655, 19);
+            this.btnLamMoi.Location = new System.Drawing.Point(625, 16);
             this.btnLamMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(91, 50);
@@ -492,13 +507,13 @@ namespace DashBoar
             // 
             // btnSua
             // 
-            this.btnSua.BackColor = System.Drawing.Color.Green;
+            this.btnSua.BackColor = System.Drawing.Color.White;
             this.btnSua.FlatAppearance.BorderSize = 0;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.White;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.Location = new System.Drawing.Point(297, 19);
+            this.btnSua.Location = new System.Drawing.Point(288, 15);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(91, 50);
@@ -509,6 +524,7 @@ namespace DashBoar
             // dgvThongTinNhanVien
             // 
             this.dgvThongTinNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvThongTinNhanVien.BackgroundColor = System.Drawing.Color.Green;
             this.dgvThongTinNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongTinNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clID,
@@ -522,6 +538,7 @@ namespace DashBoar
             this.clMatKhau,
             this.clEmail});
             this.dgvThongTinNhanVien.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvThongTinNhanVien.GridColor = System.Drawing.Color.Green;
             this.dgvThongTinNhanVien.Location = new System.Drawing.Point(0, 495);
             this.dgvThongTinNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvThongTinNhanVien.Name = "dgvThongTinNhanVien";
@@ -605,7 +622,7 @@ namespace DashBoar
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Green;
+            this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(37, 445);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(80, 20);
@@ -635,6 +652,7 @@ namespace DashBoar
             // radHoTen
             // 
             this.radHoTen.AutoSize = true;
+            this.radHoTen.ForeColor = System.Drawing.Color.White;
             this.radHoTen.Location = new System.Drawing.Point(319, 11);
             this.radHoTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radHoTen.Name = "radHoTen";
@@ -647,6 +665,7 @@ namespace DashBoar
             // 
             this.radID.AutoSize = true;
             this.radID.Checked = true;
+            this.radID.ForeColor = System.Drawing.Color.White;
             this.radID.Location = new System.Drawing.Point(45, 11);
             this.radID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radID.Name = "radID";
@@ -670,7 +689,7 @@ namespace DashBoar
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Green;
+            this.label13.ForeColor = System.Drawing.Color.DarkOrange;
             this.label13.Location = new System.Drawing.Point(446, 7);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(256, 32);
@@ -681,6 +700,7 @@ namespace DashBoar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(1080, 669);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.button1);
@@ -692,6 +712,7 @@ namespace DashBoar
             this.Controls.Add(this.grTTT);
             this.Controls.Add(this.grHinhNhanVien);
             this.Controls.Add(this.grTTNV);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmThongTinNhanVien";
             this.Text = "frmThongTinNhanVien";

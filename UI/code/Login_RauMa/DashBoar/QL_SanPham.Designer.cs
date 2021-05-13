@@ -148,6 +148,7 @@
             this.tenloaisp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.opfopen = new System.Windows.Forms.OpenFileDialog();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tp_them.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -572,6 +573,7 @@
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.DTGV_xem);
+            this.groupBox7.Controls.Add(this.menuStrip1);
             this.groupBox7.ForeColor = System.Drawing.SystemColors.WindowText;
             this.groupBox7.Location = new System.Drawing.Point(30, 454);
             this.groupBox7.Name = "groupBox7";
@@ -869,7 +871,7 @@
             // 
             this.btn_thoat.BackColor = System.Drawing.Color.SeaGreen;
             this.btn_thoat.FlatAppearance.BorderSize = 0;
-            this.btn_thoat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btn_thoat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_thoat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btn_thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1306,6 +1308,7 @@
             this.groupBox13.Controls.Add(this.btn_loaisp_huy);
             this.groupBox13.Controls.Add(this.btn_loaisp_sua);
             this.groupBox13.Controls.Add(this.btn_loaisp_xoa);
+            this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox13.ForeColor = System.Drawing.Color.White;
             this.groupBox13.Location = new System.Drawing.Point(74, 333);
             this.groupBox13.Name = "groupBox13";
@@ -1419,6 +1422,7 @@
             this.groupBox12.Controls.Add(this.label24);
             this.groupBox12.Controls.Add(this.textBox3);
             this.groupBox12.Controls.Add(this.label25);
+            this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox12.ForeColor = System.Drawing.Color.White;
             this.groupBox12.Location = new System.Drawing.Point(133, 29);
             this.groupBox12.Name = "groupBox12";
@@ -1507,7 +1511,8 @@
             // groupBox11
             // 
             this.groupBox11.Controls.Add(this.dtgv_loaisp);
-            this.groupBox11.ForeColor = System.Drawing.Color.Black;
+            this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox11.ForeColor = System.Drawing.Color.White;
             this.groupBox11.Location = new System.Drawing.Point(7, 476);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(1265, 342);
@@ -1557,6 +1562,16 @@
             // 
             this.opfopen.FileName = "ofdopen";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Location = new System.Drawing.Point(3, 32);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1236, 24);
+            this.menuStrip1.TabIndex = 125;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
             // QL_SanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1565,6 +1580,7 @@
             this.ClientSize = new System.Drawing.Size(1310, 887);
             this.Controls.Add(this.tp_qlsp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "QL_SanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QL_SanPham";
@@ -1579,6 +1595,7 @@
             this.tp_view.ResumeLayout(false);
             this.tp_view.PerformLayout();
             this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DTGV_xem)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -1726,5 +1743,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tenloaisp;
         private System.Windows.Forms.DataGridViewTextBoxColumn Trangthai;
         private System.Windows.Forms.OpenFileDialog opfopen;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
