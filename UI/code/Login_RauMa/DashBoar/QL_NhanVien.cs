@@ -31,10 +31,11 @@ namespace DashBoar
            
             //panel_show.Controls.Add(frmQMK);
             //frmQMK.Show();
+            // ĐỔI LẠI CÁCH KẾT FORM CHA CON NHA NHỚ ĐỪNG BẬT MDICONTAINER
         }
 
         private void thôngTinNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
-        {    
+        {
             //frmThongTinNhanVien frmTTNV = new frmThongTinNhanVien();
             //panel_show.Show();
             //panel_show.Controls.Clear();
@@ -42,6 +43,7 @@ namespace DashBoar
             //frmTTNV.Dock = DockStyle.Fill;
             //panel_show.Controls.Add(frmTTNV);
             //frmTTNV.Show();
+            // ĐỔI LẠI CÁCH KẾT FORM CHA CON NHA NHỚ ĐỪNG BẬT MDICONTAINER
         }
     }
 
