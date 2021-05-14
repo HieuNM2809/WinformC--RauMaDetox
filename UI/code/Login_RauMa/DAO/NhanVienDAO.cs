@@ -10,7 +10,7 @@ namespace DAO
 {
     public class NhanVienDAO
     {
-        private static string _connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=ql_rauma;Integrated Security=True";
+        private static string _connectionString = @"Data Source=Data Source=RAUMA;Initial Catalog=ql_rauma;Integrated Security=True";
 
         private SqlConnection _conn = new SqlConnection(_connectionString);
 
@@ -53,12 +53,12 @@ namespace DAO
             return lstNhanVien;
         }
 
-        public bool KiemTraNhanVien(string MSSV)
+        public bool KiemTraNhanVien(string IDNV)
         {
             _conn.Open();
 
             string sqlFormat = "SELECT COUNT(*) FROM NhanVien WHERE ID_NV = '{0}'";
-            string sql = string.Format(sqlFormat, MSSV);
+            string sql = string.Format(sqlFormat, IDNV;
 
             SqlCommand cmd = new SqlCommand(sql, _conn);
 
