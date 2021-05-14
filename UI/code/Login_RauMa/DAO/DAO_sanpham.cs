@@ -14,6 +14,8 @@ namespace DAO
         private static string _connectionString = @"Data Source=.;Initial Catalog=ql_rauma;Integrated Security=True";
 
         private SqlConnection _conn = new SqlConnection(_connectionString);
+
+
         public List<DTO_sanpham> LayDSSanpham()
         {
             List<DTO_sanpham> lstsanpham = new List<DTO_sanpham>();

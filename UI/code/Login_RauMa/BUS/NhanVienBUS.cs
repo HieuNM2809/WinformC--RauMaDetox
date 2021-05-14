@@ -17,9 +17,9 @@ namespace BUS
             return _NhanVienDAO.LayDSNhanVien();
         }
 
-        public bool KiemTraNhanVien(string ID_NV)
+        public bool KiemTraNhanVien(string IDNV)
         {
-            return _NhanVienDAO.KiemTraNhanVien(ID_NV);
+            return _NhanVienDAO.KiemTraNhanVien(IDNV);
         }
         public bool ThemNV(NhanVienDTO nv)
         {
