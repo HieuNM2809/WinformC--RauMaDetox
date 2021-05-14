@@ -14,7 +14,16 @@ namespace DAO
     
     public partial class PhanQuyen
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public PhanQuyen()
+        {
+            this.CTPhanQuyens = new HashSet<CTPhanQuyen>();
+        }
+    
         public string IDquyen { get; set; }
         public string LoaiQuyen { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CTPhanQuyen> CTPhanQuyens { get; set; }
     }
 }
