@@ -24,11 +24,14 @@ namespace DashBoar
 
         private void đổiMậtKhẩuToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+
+            FrmDoiMatKhau dmk = new FrmDoiMatKhau();
+            dmk.Show();
             //FrmDoiMatKhau frmQMK = new FrmDoiMatKhau();
             //panel_show.Show();
             //panel_show.Controls.Clear();
             //frmQMK.TopLevel = false;
-           
+
             //panel_show.Controls.Add(frmQMK);
             //frmQMK.Show();
             // ĐỔI LẠI CÁCH KẾT FORM CHA CON NHA NHỚ ĐỪNG BẬT MDICONTAINER
@@ -36,6 +39,8 @@ namespace DashBoar
 
         private void thôngTinNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmThongTinNhanVien ttnv = new frmThongTinNhanVien();
+            ttnv.Show();
             //frmThongTinNhanVien frmTTNV = new frmThongTinNhanVien();
             //panel_show.Show();
             //panel_show.Controls.Clear();
