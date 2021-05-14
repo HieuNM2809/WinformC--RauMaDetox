@@ -26,6 +26,8 @@ namespace DashBoar
         {
 
             FrmDoiMatKhau dmk = new FrmDoiMatKhau();
+            panel_show.Show();
+            dmk.Dock = DockStyle.Fill;
             dmk.Show();
             //FrmDoiMatKhau frmQMK = new FrmDoiMatKhau();
             //panel_show.Show();
@@ -40,6 +42,8 @@ namespace DashBoar
         private void thôngTinNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmThongTinNhanVien ttnv = new frmThongTinNhanVien();
+            panel_show.Show();
+            ttnv.Dock = DockStyle.Fill;
             ttnv.Show();
             //frmThongTinNhanVien frmTTNV = new frmThongTinNhanVien();
             //panel_show.Show();
