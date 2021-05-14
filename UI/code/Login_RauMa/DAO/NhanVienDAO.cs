@@ -58,7 +58,7 @@ namespace DAO
             _conn.Open();
 
             string sqlFormat = "SELECT COUNT(*) FROM NhanVien WHERE ID_NV = '{0}'";
-            string sql = string.Format(sqlFormat, IDNV;
+            string sql = string.Format(sqlFormat, IDNV);
 
             SqlCommand cmd = new SqlCommand(sql, _conn);
 
