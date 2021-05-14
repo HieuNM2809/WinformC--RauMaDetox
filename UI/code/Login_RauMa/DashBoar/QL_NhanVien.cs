@@ -22,13 +22,24 @@ namespace DashBoar
            
         }
 
+        private void loadform(object Form)
+        {
+            if (this.panel_show.Controls.Count > 0)
+                this.panel_show.Controls.RemoveAt(0);
+            Form f = Form as Form;
+            f.TopLevel = false;
+            f.TopMost = true;
+            f.Dock = DockStyle.Fill;
+            this.panel_show.Controls.Add(f);
+            this.panel_show.Tag = f;
+            f.Show();
+        }
+
         private void đổiMậtKhẩuToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
             FrmDoiMatKhau dmk = new FrmDoiMatKhau();
-            panel_show.Show();
-            dmk.Dock = DockStyle.Fill;
-            dmk.Show();
+            loadform(dmk);
             //FrmDoiMatKhau frmQMK = new FrmDoiMatKhau();
             //panel_show.Show();
             //panel_show.Controls.Clear();
@@ -42,9 +53,7 @@ namespace DashBoar
         private void thôngTinNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmThongTinNhanVien ttnv = new frmThongTinNhanVien();
-            panel_show.Show();
-            ttnv.Dock = DockStyle.Fill;
-            ttnv.Show();
+            loadform(ttnv);
             //frmThongTinNhanVien frmTTNV = new frmThongTinNhanVien();
             //panel_show.Show();
             //panel_show.Controls.Clear();
