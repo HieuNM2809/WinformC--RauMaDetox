@@ -11,9 +11,7 @@ namespace DAO
    public class DAO_sanpham
     {
         //CHỈNH LẠI TƯƠNG TÁC BẰNG ENTYTIES NHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        private static string _connectionString = @"Data Source=.;Initial Catalog=ql_rauma;Integrated Security=True";
-
-        private SqlConnection _conn = new SqlConnection(_connectionString);
+        
 
 
         public List<DTO_sanpham> LayDSSanpham()
