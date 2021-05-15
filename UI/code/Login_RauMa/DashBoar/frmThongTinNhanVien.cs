@@ -26,58 +26,58 @@ namespace DashBoar
 
         private void frmThongTinNhanVien_Load(object sender, EventArgs e)
         {
-            clChucDanh.DataSource = _NhanVienBUS.LayDSNhanVien();
-            clChucDanh.DisplayMember = "ChucDanh";
-            clChucDanh.ValueMember = "ChucDanh";
+            //clChucDanh.DataSource = _NhanVienBUS.LayDSNhanVien();
+            //clChucDanh.DisplayMember = "ChucDanh";
+            //clChucDanh.ValueMember = "ChucDanh";
 
-            clLoaiNV.DataSource = _NhanVienBUS.LayDSNhanVien();
-            clLoaiNV.DisplayMember = "LoaiNV";
-            clLoaiNV.ValueMember = "LoaiNV";
+            //clLoaiNV.DataSource = _NhanVienBUS.LayDSNhanVien();
+            //clLoaiNV.DisplayMember = "LoaiNV";
+            //clLoaiNV.ValueMember = "LoaiNV";
 
 
-            dgvThongTinNhanVien.DataSource = _NhanVienBUS.LayDSNhanVien();
+            //dgvThongTinNhanVien.DataSource = _NhanVienBUS.LayDSNhanVien();
 
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (txtID.Text == "" || txtHoTen.Text == "" || txtSDT.Text == "" || txtTaiKhoan.Text == "" || txtMatKhau.Text == "" || dtpNgaySinh.Value > DateTime.Now)
-            {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
+            //if (txtID.Text == "" || txtHoTen.Text == "" || txtSDT.Text == "" || txtTaiKhoan.Text == "" || txtMatKhau.Text == "" || dtpNgaySinh.Value > DateTime.Now)
+            //{
+            //    MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
 
 
-            }
-            else
-            {
-                if (_NhanVienBUS.KiemTraNhanVien(txtID.Text))
-                {
-                    MessageBox.Show("MSSV đã tồn tại !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                else
-                {
-                    NhanVienDTO nv = new NhanVienDTO
-                    {
-                        ID_NV = txtID.Text,
-                        HoTen = txtHoTen.Text,
-                        NgaySinh = dtpNgaySinh.Value,
-                        GioiTinh = radNam.Text,
-                        ChucDanh = cbbChucDanh.Text,
-                        LoaiNV = cbbLoaiNhanVien.Text,
-                        SDT = txtSDT.Text,
-                        TaiKhoan = txtTaiKhoan.Text,
-                        MatKhau = txtMatKhau.Text,
-                        Email = txtEmail.Text
+            //}
+            //else
+            //{
+            //    if (_NhanVienBUS.KiemTraNhanVien(txtID.Text))
+            //    {
+            //        MessageBox.Show("MSSV đã tồn tại !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //        return;
+            //    }
+            //    else
+            //    {
+            //        NhanVienDTO nv = new NhanVienDTO
+            //        {
+            //            IDNV = txtID.Text,
+            //            HoTen = txtHoTen.Text,
+            //            NgaySinh = dtpNgaySinh.Value,
+            //            GioiTinh = radNam.Text,
+            //            ChucDanh = cbbChucDanh.Text,
+            //            LoaiNV = cbbLoaiNhanVien.Text,
+            //            SDT = txtSDT.Text,
+            //            TaiKhoan = txtTaiKhoan.Text,
+            //            MatKhau = txtMatKhau.Text,
+            //            Email = txtEmail.Text
 
-                    };
-                    if (_NhanVienBUS.ThemNV(nv))
-                    {
-                        MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        frmThongTinNhanVien_Load(sender, e);
-                    }
-                    else MessageBox.Show("Thêm Thất bại", "Thông báo");
-                }
-            }
+            //        };
+            //        if (_NhanVienBUS.ThemNV(nv))
+            //        {
+            //            MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //            frmThongTinNhanVien_Load(sender, e);
+            //        }
+            //        else MessageBox.Show("Thêm Thất bại", "Thông báo");
+            //    }
+            //}
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -87,26 +87,26 @@ namespace DashBoar
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            NhanVienDTO nv = new NhanVienDTO
-            {
-                ID_NV = txtID.Text,
-                HoTen = txtHoTen.Text,
-                NgaySinh = dtpNgaySinh.Value,
-                GioiTinh = radNam.Text,
-                ChucDanh = cbbChucDanh.Text,
-                LoaiNV = cbbLoaiNhanVien.Text,
-                SDT = txtSDT.Text,
-                TaiKhoan = txtTaiKhoan.Text,
-                MatKhau = txtMatKhau.Text,
-                Email = txtEmail.Text
+            //NhanVienDTO nv = new NhanVienDTO
+            //{
+            //    IDNV = txtID.Text,
+            //    HoTen = txtHoTen.Text,
+            //    NgaySinh = dtpNgaySinh.Value,
+            //    GioiTinh = radNam.Text,
+            //    ChucDanh = cbbChucDanh.Text,
+            //    LoaiNV = cbbLoaiNhanVien.Text,
+            //    SDT = txtSDT.Text,
+            //    TaiKhoan = txtTaiKhoan.Text,
+            //    MatKhau = txtMatKhau.Text,
+            //    Email = txtEmail.Text
 
-            };
-            if (_NhanVienBUS.CapNhatNV(nv))
-            {
-                MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                frmThongTinNhanVien_Load(sender, e);
-            }
-            else MessageBox.Show("Cập nhật thât bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //};
+            //if (_NhanVienBUS.CapNhatNV(nv))
+            //{
+            //    MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    frmThongTinNhanVien_Load(sender, e);
+            //}
+            //else MessageBox.Show("Cập nhật thât bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void dgvThongTinNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)

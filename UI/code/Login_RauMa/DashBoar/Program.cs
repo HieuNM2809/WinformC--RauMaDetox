@@ -16,7 +16,7 @@ namespace DashBoar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDashboar());
+            Application.Run(new frmThongTinNhanVien());
         }
     }
 }

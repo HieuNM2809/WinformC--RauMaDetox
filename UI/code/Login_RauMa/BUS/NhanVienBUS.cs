@@ -17,19 +17,19 @@ namespace BUS
             return _NhanVienDAO.LayDSNhanVien();
         }
 
-        public bool KiemTraNhanVien(string IDNV)
-        {
-            return _NhanVienDAO.KiemTraNhanVien(IDNV);
-        }
-        public bool ThemNV(NhanVienDTO nv)
-        {
-            return _NhanVienDAO.ThemNV(nv);
-        }
+        //public bool KiemTraNhanVien(string IDNV)
+        //{
+        //    return _NhanVienDAO.KiemTraNhanVien(IDNV);
+        //}
+        //public bool ThemNV(NhanVienDTO nv)
+        //{
+        //    return _NhanVienDAO.ThemNV(nv);
+        //}
 
-        public bool CapNhatNV(NhanVienDTO nv)
-        {
-            return _NhanVienDAO.CapNhatNV(nv);
-        }
+        //public bool CapNhatNV(NhanVienDTO nv)
+        //{
+        //    return _NhanVienDAO.CapNhatNV(nv);
+        //}
     }
 }
 

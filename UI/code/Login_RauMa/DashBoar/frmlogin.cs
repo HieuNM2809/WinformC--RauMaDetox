@@ -86,8 +86,8 @@ namespace DashBoar
 
         private void lnkCreateAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmDangKiTaiKhoan frmDangKi = new frmDangKiTaiKhoan();
-            frmDangKi.Show();
+            //frmDangKiTaiKhoan frmDangKi = new frmDangKiTaiKhoan();
+            //frmDangKi.Show();
         }
     }
 }

@@ -30,9 +30,9 @@ namespace DashBoar
         private void QL_SanPham_Load(object sender, EventArgs e,string a)
         {
             
-            dtgv_xoa.DataSource = _sanpham.laytheoloai(a);
-            DTGV_xem.DataSource = _sanpham.laytheoloai(a);
-            dtgv_loaisp.DataSource = _dsloai.LayDSloaisp();
+            //dtgv_xoa.DataSource = _sanpham.laytheoloai(a);
+            //DTGV_xem.DataSource = _sanpham.laytheoloai(a);
+            //dtgv_loaisp.DataSource = _dsloai.LayDSloaisp();
         }
 
      // các button thoát
@@ -104,38 +104,38 @@ namespace DashBoar
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            if (tbx_mamon.Text == "" || tbx_tenmon.Text == "" || tbx_gia.Text == "" || cbb_loai.Text == "" || rtb_mota.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
+            //if (tbx_mamon.Text == "" || tbx_tenmon.Text == "" || tbx_gia.Text == "" || cbb_loai.Text == "" || rtb_mota.Text == "")
+            //{
+            //    MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
 
 
-            }
-            else
-            {
-                //if (_sanpham.KiemTraMaSP(tbx_mamon.Text))
-                //{
-                //    MessageBox.Show("Mã sản phẩm đã tồn tại !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //    return;
-                //}
-                //else
-                {
-                    DTO_sanpham spham = new DTO_sanpham();
-                    {
-                        spham.Masp = tbx_mamon.Text;
-                        spham.Tensp = tbx_tenmon.Text;
-                        spham.Giasp =Convert.ToInt32( tbx_gia.Text);
-                        spham.Mota = rtb_mota.Text;
-                        spham.Loaisp = cbb_loai.Text;
+            //}
+            //else
+            //{
+            //    //if (_sanpham.KiemTraMaSP(tbx_mamon.Text))
+            //    //{
+            //    //    MessageBox.Show("Mã sản phẩm đã tồn tại !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    //    return;
+            //    //}
+            //    //else
+            //    {
+            //        DTO_sanpham spham = new DTO_sanpham();
+            //        {
+            //            spham.Masp = tbx_mamon.Text;
+            //            spham.Tensp = tbx_tenmon.Text;
+            //            spham.Giasp =Convert.ToInt32( tbx_gia.Text);
+            //            spham.Mota = rtb_mota.Text;
+            //            spham.Loaisp = cbb_loai.Text;
                         
-                    };
-                    if (_sanpham.ThemSP(spham))
-                    {
-                        MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        QL_SanPham_Load_1(sender, e);
-                    }
-                    else MessageBox.Show("Thêm Thất bại", "Thông báo");
-                }
-            }
+            //        };
+            //        if (_sanpham.ThemSP(spham))
+            //        {
+            //            MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //            QL_SanPham_Load_1(sender, e);
+            //        }
+            //        else MessageBox.Show("Thêm Thất bại", "Thông báo");
+            //    }
+            //}
         }
 
         private void btn_nhaplai_Click(object sender, EventArgs e)
