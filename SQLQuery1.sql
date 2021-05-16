@@ -1,0 +1,1 @@
+SELECT COUNT(*) FROM NhanVien WHERE IDNV = 1
