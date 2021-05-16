@@ -10,13 +10,19 @@ namespace DAO
 {
     public class NhanVienDAO
     {
+        private static string _connecstring = @"Data Source=RAUMA;Initial Catalog=ql_rauma;Integrated Security=True";
+
+        private SqlConnection _conn = new SqlConnection(_connecstring);
+
         ql_raumaEntities qlrauma = new ql_raumaEntities();
+
+        
 
         
 
         public List<NhanVienDTO> LayDSNhanVien()
         {
-            //List<NhanVienDTO> lstNhanVien = new List<NhanVienDTO>();
+            ////List<NhanVienDTO> lstNhanVien = new List<NhanVienDTO>();
 
             //_conn.Open();
 
