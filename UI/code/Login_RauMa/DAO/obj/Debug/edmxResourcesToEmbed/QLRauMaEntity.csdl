@@ -5,8 +5,8 @@
       <PropertyRef Name="IDHoaDon" />
       <PropertyRef Name="MaSp" />
     </Key>
-    <Property Name="IDHoaDon" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="MaSp" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IDHoaDon" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="SoLuong" Type="Int32" />
     <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="ChietKhau" Type="Decimal" Precision="19" Scale="4" />
@@ -19,8 +19,8 @@
       <PropertyRef Name="IDNV" />
       <PropertyRef Name="IDquyen" />
     </Key>
-    <Property Name="IDNV" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="IDquyen" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IDNV" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IDquyen" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Taikhoan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="LoaiQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="TrangThai" Type="Boolean" />
@@ -30,22 +30,18 @@
   <EntityType Name="HoaDon">
     <Key>
       <PropertyRef Name="IDHoaDon" />
-      <PropertyRef Name="ID_HoaDon" />
     </Key>
-    <Property Name="IDHoaDon" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="IDNV" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="IDHoaDon" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IDNV" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
     <Property Name="NgayLapHoaDon" Type="DateTime" Precision="3" />
     <NavigationProperty Name="CTHoaDons" Relationship="Self.FKCTHoaDonHoaDon" FromRole="HoaDon" ToRole="CTHoaDon" />
     <NavigationProperty Name="NhanVien" Relationship="Self.FKHoaDonNhanVien" FromRole="HoaDon" ToRole="NhanVien" />
-    <Property Name="ID_HoaDon" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
-    <Property Name="ID_NV" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
-    <NavigationProperty Name="NhanVien1" Relationship="ql_raumaModel.FK_HoaDon_NhanVien" FromRole="HoaDon" ToRole="NhanVien" />
   </EntityType>
   <EntityType Name="LoaiSP">
     <Key>
       <PropertyRef Name="MaLoaiSp" />
     </Key>
-    <Property Name="MaLoaiSp" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaLoaiSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LoaiSP1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="TrangThai" Type="Boolean" />
     <NavigationProperty Name="SanPhams" Relationship="Self.FKSanPhamLoaiSanPham" FromRole="LoaiSP" ToRole="SanPham" />
@@ -53,9 +49,8 @@
   <EntityType Name="NhanVien">
     <Key>
       <PropertyRef Name="IDNV" />
-      <PropertyRef Name="ID_NV" />
     </Key>
-    <Property Name="IDNV" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IDNV" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="NgaySinh" Type="DateTime" Precision="3" />
     <Property Name="GioiTinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
@@ -68,26 +63,22 @@
     <Property Name="TrangThai" Type="Boolean" />
     <NavigationProperty Name="CTPhanQuyens" Relationship="Self.FKCTPhanQuyenNhanVien" FromRole="NhanVien" ToRole="CTPhanQuyen" />
     <NavigationProperty Name="HoaDons" Relationship="Self.FKHoaDonNhanVien" FromRole="NhanVien" ToRole="HoaDon" />
-    <Property Name="ID_NV" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
-    <NavigationProperty Name="HoaDons1" Relationship="ql_raumaModel.FK_HoaDon_NhanVien" FromRole="NhanVien" ToRole="HoaDon" />
   </EntityType>
   <EntityType Name="PhanQuyen">
     <Key>
       <PropertyRef Name="IDquyen" />
-      <PropertyRef Name="ID_quyen" />
     </Key>
-    <Property Name="IDquyen" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IDquyen" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LoaiQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="CTPhanQuyens" Relationship="Self.FKCTPhanQuyenPhanQuyen" FromRole="PhanQuyen" ToRole="CTPhanQuyen" />
-    <Property Name="ID_quyen" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
   </EntityType>
   <EntityType Name="SanPham">
     <Key>
       <PropertyRef Name="MaSp" />
     </Key>
-    <Property Name="MaSp" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="TenSp" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="MaLoaiSp" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="MaLoaiSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
     <Property Name="GiaTien" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Hinh" Type="Binary" MaxLength="Max" FixedLength="false" />
@@ -240,10 +231,6 @@
       <Parameter Name="new_diagramname" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sp_upgraddiagrams" />
-    <AssociationSet Name="FK_HoaDon_NhanVien" Association="ql_raumaModel.FK_HoaDon_NhanVien">
-      <End Role="NhanVien" EntitySet="NhanViens" />
-      <End Role="HoaDon" EntitySet="HoaDons" />
-    </AssociationSet>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -256,16 +243,4 @@
     <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
     <Property Type="Int32" Name="OwnerID" Nullable="false" />
   </ComplexType>
-  <Association Name="FK_HoaDon_NhanVien">
-    <End Type="ql_raumaModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
-    <End Type="ql_raumaModel.HoaDon" Role="HoaDon" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NhanVien">
-        <PropertyRef Name="ID_NV" />
-      </Principal>
-      <Dependent Role="HoaDon">
-        <PropertyRef Name="ID_NV" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
 </Schema>
