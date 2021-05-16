@@ -232,6 +232,7 @@
             this.btnHoaDon.TabIndex = 5;
             this.btnHoaDon.Text = "   Hóa Đơn";
             this.btnHoaDon.UseVisualStyleBackColor = false;
+            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click_1);
             this.btnHoaDon.MouseEnter += new System.EventHandler(this.btnHoaDon_MouseEnter);
             this.btnHoaDon.MouseLeave += new System.EventHandler(this.btnHoaDon_MouseLeave);
             // 

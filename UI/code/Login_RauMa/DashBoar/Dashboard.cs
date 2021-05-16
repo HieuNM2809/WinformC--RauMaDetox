@@ -136,5 +136,11 @@ namespace DashBoar
             QL_NhanVien nv = new QL_NhanVien();
             loadform(nv);
         }
+
+        private void btnHoaDon_Click_1(object sender, EventArgs e)
+        {
+            frmHoaDon hd = new frmHoaDon();
+            loadform(hd);
+        }
     }
 }

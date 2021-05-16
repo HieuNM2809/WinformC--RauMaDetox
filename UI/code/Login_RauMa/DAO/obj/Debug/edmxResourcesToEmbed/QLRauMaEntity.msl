@@ -27,6 +27,7 @@
     <EntitySetMapping Name="HoaDons">
       <EntityTypeMapping TypeName="ql_raumaModel.HoaDon">
         <MappingFragment StoreEntitySet="HoaDon">
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
           <ScalarProperty Name="IDHoaDon" ColumnName="IDHoaDon" />
           <ScalarProperty Name="IDNV" ColumnName="IDNV" />
           <ScalarProperty Name="NgayLapHoaDon" ColumnName="NgayLapHoaDon" />

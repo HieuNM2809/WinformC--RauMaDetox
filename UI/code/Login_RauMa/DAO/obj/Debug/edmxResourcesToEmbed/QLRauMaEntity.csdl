@@ -36,6 +36,7 @@
     <Property Name="NgayLapHoaDon" Type="DateTime" Precision="3" />
     <NavigationProperty Name="CTHoaDons" Relationship="Self.FKCTHoaDonHoaDon" FromRole="HoaDon" ToRole="CTHoaDon" />
     <NavigationProperty Name="NhanVien" Relationship="Self.FKHoaDonNhanVien" FromRole="HoaDon" ToRole="NhanVien" />
+    <Property Name="TrangThai" Type="Boolean" />
   </EntityType>
   <EntityType Name="LoaiSP">
     <Key>

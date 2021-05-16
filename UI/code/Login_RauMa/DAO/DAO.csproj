@@ -61,6 +61,7 @@
     <Compile Include="HoaDon.cs">
       <DependentUpon>QLRauMaEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="HoaDonDAO.cs" />
     <Compile Include="LoaiSP.cs">
       <DependentUpon>QLRauMaEntity.tt</DependentUpon>
     </Compile>

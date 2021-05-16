@@ -30,6 +30,7 @@
     <Property Name="IDHoaDon" Type="nvarchar" MaxLength="3" Nullable="false" />
     <Property Name="IDNV" Type="nvarchar" MaxLength="3" />
     <Property Name="NgayLapHoaDon" Type="datetime" />
+    <Property Name="TrangThai" Type="bit" />
   </EntityType>
   <EntityType Name="LoaiSP">
     <Key>
