@@ -14,7 +14,7 @@ namespace DAO
         public List<HoaDonDTO> LayDSHD()
         {
             List<HoaDonDTO> lstHoaDon = new List<HoaDonDTO>();
-            lstHoaDon = qlrauma.HoaDons.SqlQuery("")
+            
             return lstHoaDon;
         }
     }
