@@ -42,8 +42,7 @@ create table CTPhanQuyen
 	IDquyen nvarchar(3),
 	Taikhoan varchar(100),
 	LoaiQuyen varchar(50),
-	TrangThai Bit default 1,
-	primary key (IDNV,Idquyen),
+	TrangThai Bit default 1
 )
 go
 create table PhanQuyen
@@ -67,8 +66,7 @@ create table CTHoaDon
 	SoLuong int,
 	DonGia money,
 	ChietKhau money,
-	TongTien money,
-	primary key(IDHoaDon, MaSp)
+	TongTien money
 )
 go
 

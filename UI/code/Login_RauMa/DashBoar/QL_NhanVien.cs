@@ -63,11 +63,6 @@ namespace DashBoar
             //frmTTNV.Show();
             // ĐỔI LẠI CÁCH KẾT FORM CHA CON NHA NHỚ ĐỪNG BẬT MDICONTAINER
         }
-
-        private void QL_NhanVien_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 
 

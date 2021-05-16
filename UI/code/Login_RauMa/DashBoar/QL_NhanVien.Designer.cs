@@ -44,17 +44,16 @@ namespace DashBoar
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tàiKhoảnToolStripMenuItem,
             this.nhânViênToolStripMenuItem,
             this.ChucNang});
-            this.menuStrip1.Location = new System.Drawing.Point(78, 116);
+            this.menuStrip1.Location = new System.Drawing.Point(43, 66);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(409, 34);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(274, 28);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -63,22 +62,21 @@ namespace DashBoar
             this.tàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MemuItemDangKiTaiKhoan,
             this.MenuItemDoiMatKhau});
-            this.tàiKhoảnToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(131, 30);
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             // 
             // MemuItemDangKiTaiKhoan
             // 
             this.MemuItemDangKiTaiKhoan.Name = "MemuItemDangKiTaiKhoan";
-            this.MemuItemDangKiTaiKhoan.Size = new System.Drawing.Size(296, 34);
+            this.MemuItemDangKiTaiKhoan.Size = new System.Drawing.Size(208, 26);
             this.MemuItemDangKiTaiKhoan.Text = "Đăng kí tài khoản";
             this.MemuItemDangKiTaiKhoan.Click += new System.EventHandler(this.đăngKíTàiKhoảnToolStripMenuItem_Click);
             // 
             // MenuItemDoiMatKhau
             // 
             this.MenuItemDoiMatKhau.Name = "MenuItemDoiMatKhau";
-            this.MenuItemDoiMatKhau.Size = new System.Drawing.Size(296, 34);
+            this.MenuItemDoiMatKhau.Size = new System.Drawing.Size(208, 26);
             this.MenuItemDoiMatKhau.Text = "Đổi mật khẩu";
             this.MenuItemDoiMatKhau.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem1_Click);
             // 
@@ -86,15 +84,14 @@ namespace DashBoar
             // 
             this.nhânViênToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuItemThongTinNhanVien});
-            this.nhânViênToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(131, 30);
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.nhânViênToolStripMenuItem.Text = "Nhân viên";
             // 
             // MenuItemThongTinNhanVien
             // 
             this.MenuItemThongTinNhanVien.Name = "MenuItemThongTinNhanVien";
-            this.MenuItemThongTinNhanVien.Size = new System.Drawing.Size(318, 34);
+            this.MenuItemThongTinNhanVien.Size = new System.Drawing.Size(222, 26);
             this.MenuItemThongTinNhanVien.Text = "Thông tin nhân viên";
             this.MenuItemThongTinNhanVien.Click += new System.EventHandler(this.thôngTinNhânViênToolStripMenuItem_Click);
             // 
@@ -102,40 +99,37 @@ namespace DashBoar
             // 
             this.ChucNang.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.báoCáoToolStripMenuItem});
-            this.ChucNang.ForeColor = System.Drawing.Color.White;
             this.ChucNang.Name = "ChucNang";
-            this.ChucNang.Size = new System.Drawing.Size(139, 30);
+            this.ChucNang.Size = new System.Drawing.Size(93, 24);
             this.ChucNang.Text = "Chức năng";
             // 
             // báoCáoToolStripMenuItem
             // 
             this.báoCáoToolStripMenuItem.Name = "báoCáoToolStripMenuItem";
-            this.báoCáoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.báoCáoToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.báoCáoToolStripMenuItem.Text = "Báo cáo";
             // 
             // panel_show
             // 
             this.panel_show.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_show.Location = new System.Drawing.Point(78, 165);
-            this.panel_show.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel_show.Location = new System.Drawing.Point(69, 132);
+            this.panel_show.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_show.Name = "panel_show";
-            this.panel_show.Size = new System.Drawing.Size(1354, 871);
+            this.panel_show.Size = new System.Drawing.Size(1204, 697);
             this.panel_show.TabIndex = 19;
             // 
             // QL_NhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1454, 1050);
+            this.ClientSize = new System.Drawing.Size(1292, 840);
             this.Controls.Add(this.panel_show);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "QL_NhanVien";
             this.Text = "QL_NhanVien";
-            this.Load += new System.EventHandler(this.QL_NhanVien_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
