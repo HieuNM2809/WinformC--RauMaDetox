@@ -16,3 +16,13 @@ INSERT INTO Sanpham(masp,TenSp,MaLoaiSp,GiaTien,MoTa,TrangThai)
 VALUES ('TP1','cơm chó','002',270.00,'cơm xấy khô kết tinh dạng tròn',1);
 INSERT INTO Sanpham(masp,TenSp,MaLoaiSp,GiaTien,MoTa,TrangThai)
 VALUES ('TP2','chân trâu','002',2700.00,'đúng như tên nó là chân trâu',1);
+-- tao proc
+
+create procedure theoloai
+(
+@maloai nvarchar
+)
+as
+begin
+ select * from sanpham where TrangThai=1 and MaLoaiSp=@maloai
+ end

@@ -8,14 +8,32 @@ using DTO;
 
 namespace DAO
 {
-   public class DAO_sanpham
+    public class DAO_sanpham
     {
         //CHỈNH LẠI TƯƠNG TÁC BẰNG ENTYTIES NHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 
         ql_raumaEntities qlrauma = new ql_raumaEntities();
-        //public List<DTO_sanpham> LayDSSanpham()
-        //{
+
+        public List<DTO_sanpham> LayDSSanpham()
+        {
+            List<DTO_sanpham> lssanpham = new List<DTO_sanpham>();
+            lssanpham = qlrauma.SanPhams.Where(v => v.TrangThai == true).Select(u => new DTO_sanpham
+
+            {
+                Masp = u.MaSp,
+                Tensp = u.TenSp,
+                MaLoaisp = u.MaLoaiSp,
+                Giasp = (int)u.GiaTien,
+                
+                Mota = u.MoTa,
+                Trangthaisp = true
+
+
+            }).ToList();
+            return lssanpham;
+        }
+     
         //    List<DTO_sanpham> lstsanpham = new List<DTO_sanpham>();
 
         //    _conn.Open();

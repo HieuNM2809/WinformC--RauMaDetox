@@ -67,14 +67,6 @@
             this.tp_view = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.DTGV_xem = new System.Windows.Forms.DataGridView();
-            this.xem_masp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.xem_tensp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.xem_gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.xem_loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.xem_mota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hinhsp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Trangthaisp = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ptb_anhtai = new System.Windows.Forms.PictureBox();
             this.lbl_tenmon = new System.Windows.Forms.Label();
@@ -145,10 +137,15 @@
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.dtgv_loaisp = new System.Windows.Forms.DataGridView();
+            this.xem_masp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xem_tensp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xem_gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xem_loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xem_mota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hinhsp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Trangthaisp = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.maloaisp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenloaisp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opfopen = new System.Windows.Forms.OpenFileDialog();
             this.tp_them.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -573,7 +570,6 @@
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.DTGV_xem);
-            this.groupBox7.Controls.Add(this.menuStrip1);
             this.groupBox7.ForeColor = System.Drawing.SystemColors.WindowText;
             this.groupBox7.Location = new System.Drawing.Point(30, 454);
             this.groupBox7.Name = "groupBox7";
@@ -603,68 +599,6 @@
             this.DTGV_xem.Size = new System.Drawing.Size(1227, 314);
             this.DTGV_xem.TabIndex = 124;
             this.DTGV_xem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DTGV_xem_CellClick);
-            // 
-            // xem_masp
-            // 
-            this.xem_masp.DataPropertyName = "Masp";
-            this.xem_masp.HeaderText = "Mã sản phẩm";
-            this.xem_masp.MinimumWidth = 6;
-            this.xem_masp.Name = "xem_masp";
-            // 
-            // xem_tensp
-            // 
-            this.xem_tensp.DataPropertyName = "Tensp";
-            this.xem_tensp.HeaderText = "Tên sản phẩm";
-            this.xem_tensp.MinimumWidth = 6;
-            this.xem_tensp.Name = "xem_tensp";
-            // 
-            // xem_gia
-            // 
-            this.xem_gia.DataPropertyName = "Giasp";
-            this.xem_gia.HeaderText = "Giá";
-            this.xem_gia.MinimumWidth = 6;
-            this.xem_gia.Name = "xem_gia";
-            // 
-            // xem_loai
-            // 
-            this.xem_loai.DataPropertyName = "Loaisp";
-            this.xem_loai.HeaderText = "Loại";
-            this.xem_loai.MinimumWidth = 6;
-            this.xem_loai.Name = "xem_loai";
-            this.xem_loai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // xem_mota
-            // 
-            this.xem_mota.DataPropertyName = "Mota";
-            this.xem_mota.HeaderText = "Mô tả";
-            this.xem_mota.MinimumWidth = 6;
-            this.xem_mota.Name = "xem_mota";
-            // 
-            // hinhsp
-            // 
-            this.hinhsp.DataPropertyName = "Hinhsp";
-            this.hinhsp.HeaderText = "Hình";
-            this.hinhsp.MinimumWidth = 6;
-            this.hinhsp.Name = "hinhsp";
-            // 
-            // Trangthaisp
-            // 
-            this.Trangthaisp.DataPropertyName = "Trangthaisp";
-            this.Trangthaisp.HeaderText = "Trạng thái";
-            this.Trangthaisp.MinimumWidth = 6;
-            this.Trangthaisp.Name = "Trangthaisp";
-            this.Trangthaisp.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Trangthaisp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(3, 32);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1236, 24);
-            this.menuStrip1.TabIndex = 125;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // groupBox2
             // 
@@ -959,6 +893,7 @@
             this.btn_xoa_nhaplai.Text = "Nhập lại";
             this.btn_xoa_nhaplai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_xoa_nhaplai.UseVisualStyleBackColor = false;
+            this.btn_xoa_nhaplai.Click += new System.EventHandler(this.btn_xoa_nhaplai_Click);
             // 
             // btn_xoa_huy
             // 
@@ -1522,7 +1457,7 @@
             // 
             this.groupBox11.Controls.Add(this.dtgv_loaisp);
             this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox11.ForeColor = System.Drawing.Color.White;
+            this.groupBox11.ForeColor = System.Drawing.Color.Black;
             this.groupBox11.Location = new System.Drawing.Point(7, 476);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(1265, 342);
@@ -1537,8 +1472,7 @@
             this.dtgv_loaisp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgv_loaisp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maloaisp,
-            this.tenloaisp,
-            this.Trangthai});
+            this.tenloaisp});
             this.dtgv_loaisp.Location = new System.Drawing.Point(16, 35);
             this.dtgv_loaisp.Name = "dtgv_loaisp";
             this.dtgv_loaisp.RowHeadersVisible = false;
@@ -1546,6 +1480,58 @@
             this.dtgv_loaisp.RowTemplate.Height = 24;
             this.dtgv_loaisp.Size = new System.Drawing.Size(1228, 287);
             this.dtgv_loaisp.TabIndex = 125;
+            // 
+            // xem_masp
+            // 
+            this.xem_masp.DataPropertyName = "Masp";
+            this.xem_masp.HeaderText = "Mã sản phẩm";
+            this.xem_masp.MinimumWidth = 6;
+            this.xem_masp.Name = "xem_masp";
+            // 
+            // xem_tensp
+            // 
+            this.xem_tensp.DataPropertyName = "Tensp";
+            this.xem_tensp.HeaderText = "Tên sản phẩm";
+            this.xem_tensp.MinimumWidth = 6;
+            this.xem_tensp.Name = "xem_tensp";
+            // 
+            // xem_gia
+            // 
+            this.xem_gia.DataPropertyName = "Giasp";
+            this.xem_gia.HeaderText = "Giá";
+            this.xem_gia.MinimumWidth = 6;
+            this.xem_gia.Name = "xem_gia";
+            // 
+            // xem_loai
+            // 
+            this.xem_loai.DataPropertyName = "MaLoaisp";
+            this.xem_loai.HeaderText = "Loại";
+            this.xem_loai.MinimumWidth = 6;
+            this.xem_loai.Name = "xem_loai";
+            this.xem_loai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // xem_mota
+            // 
+            this.xem_mota.DataPropertyName = "Mota";
+            this.xem_mota.HeaderText = "Mô tả";
+            this.xem_mota.MinimumWidth = 6;
+            this.xem_mota.Name = "xem_mota";
+            // 
+            // hinhsp
+            // 
+            this.hinhsp.DataPropertyName = "Hinhsp";
+            this.hinhsp.HeaderText = "Hình";
+            this.hinhsp.MinimumWidth = 6;
+            this.hinhsp.Name = "hinhsp";
+            // 
+            // Trangthaisp
+            // 
+            this.Trangthaisp.DataPropertyName = "Trangthaisp";
+            this.Trangthaisp.HeaderText = "Trạng thái";
+            this.Trangthaisp.MinimumWidth = 6;
+            this.Trangthaisp.Name = "Trangthaisp";
+            this.Trangthaisp.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Trangthaisp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // maloaisp
             // 
@@ -1561,17 +1547,6 @@
             this.tenloaisp.MinimumWidth = 6;
             this.tenloaisp.Name = "tenloaisp";
             // 
-            // Trangthai
-            // 
-            this.Trangthai.DataPropertyName = "trangthaisp";
-            this.Trangthai.HeaderText = "Trạng thái";
-            this.Trangthai.MinimumWidth = 6;
-            this.Trangthai.Name = "Trangthai";
-            // 
-            // opfopen
-            // 
-            this.opfopen.FileName = "ofdopen";
-            // 
             // QL_SanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1581,7 +1556,6 @@
             this.Controls.Add(this.tp_qlsp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "QL_SanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QL_SanPham";
@@ -1596,7 +1570,6 @@
             this.tp_view.ResumeLayout(false);
             this.tp_view.PerformLayout();
             this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DTGV_xem)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -1727,6 +1700,12 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.DataGridView dtgv_loaisp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn xem_masp;
         private System.Windows.Forms.DataGridViewTextBoxColumn xem_tensp;
         private System.Windows.Forms.DataGridViewTextBoxColumn xem_gia;
@@ -1734,16 +1713,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn xem_mota;
         private System.Windows.Forms.DataGridViewTextBoxColumn hinhsp;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Trangthaisp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn maloaisp;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenloaisp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Trangthai;
-        private System.Windows.Forms.OpenFileDialog opfopen;
-        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }

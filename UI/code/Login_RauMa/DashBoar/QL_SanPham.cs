@@ -29,10 +29,10 @@ namespace DashBoar
 
         private void QL_SanPham_Load(object sender, EventArgs e,string a)
         {
-            
+            DTGV_xem.DataSource = _sanpham.LayDSsanpham();
             //dtgv_xoa.DataSource = _sanpham.laytheoloai(a);
             //DTGV_xem.DataSource = _sanpham.laytheoloai(a);
-            //dtgv_loaisp.DataSource = _dsloai.LayDSloaisp();
+            dtgv_loaisp.DataSource = _dsloai.LayDSloaisp();
         }
 
      // các button thoát
@@ -94,12 +94,7 @@ namespace DashBoar
       
         private void btn_Themanh_Click(object sender, EventArgs e)
         {
-            opfopen.ShowDialog();
-            string file = opfopen.FileName;
-            if (string.IsNullOrEmpty(file))
-                return;
-            Image myimage = Image.FromFile(file);
-            ptb_anhrauma.BackgroundImage = myimage;
+
         }
 
         private void btn_them_Click(object sender, EventArgs e)
@@ -146,6 +141,16 @@ namespace DashBoar
             cbb_loai.SelectedIndex = 0;
             rtb_mota.Text = "";
             rdB_co.Checked = true;
+        }
+
+        private void btn_xoa_nhaplai_Click(object sender, EventArgs e)
+        {
+            tbx_xoa_gia.Text = "";
+            tbx_xoa_mamon.Text = "";
+            tbx_xoa_mota.Text = "";
+            tbx_xoa_tenmon.Text = "";
+            rdb_xoa_co.Checked = true;
+
         }
     }
 }
