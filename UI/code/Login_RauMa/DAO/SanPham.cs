@@ -26,10 +26,10 @@ namespace DAO
         public Nullable<decimal> GiaTien { get; set; }
         public string MoTa { get; set; }
         public byte[] Hinh { get; set; }
-        public Nullable<bool> TrangThai { get; set; }
+        public Nullable<short> TrangThai { get; set; }
     
+        public virtual LoaiSP LoaiSP { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHoaDon> CTHoaDons { get; set; }
-        public virtual LoaiSP LoaiSP { get; set; }
     }
 }

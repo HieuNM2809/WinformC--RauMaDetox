@@ -58,7 +58,7 @@ namespace DAO
 
             List<NhanVienDTO> lsnhanvien = new List<NhanVienDTO>();
 
-            lsnhanvien = qlrauma.NhanViens.Where(v => v.TrangThai == true).Select(u => new NhanVienDTO
+            lsnhanvien = qlrauma.NhanViens.Where(v => v.TrangThai == 1).Select(u => new NhanVienDTO
             {
                 IDNV = u.IDNV,
                 HoTen = u.HoTen,
@@ -163,7 +163,7 @@ namespace DAO
             //}
             try
             {
-                NhanVien nhanvien = qlrauma.NhanViens.SingleOrDefault(u => u.IDNV == nv.IDNV && u.TrangThai == true);
+                NhanVien nhanvien = qlrauma.NhanViens.SingleOrDefault(u => u.IDNV == nv.IDNV && u.TrangThai == 1);
                 nhanvien.HoTen = nv.HoTen;
                 nhanvien.NgaySinh = nv.NgaySinh;
                 nhanvien.GioiTinh = nv.GioiTinh;
@@ -187,8 +187,8 @@ namespace DAO
         {
             try
             {
-                NhanVien nhanvien = qlrauma.NhanViens.SingleOrDefault(u => u.IDNV == nv.IDNV && u.TrangThai == false);
-                nhanvien.TrangThai = false;
+                NhanVien nhanvien = qlrauma.NhanViens.SingleOrDefault(u => u.IDNV == nv.IDNV && u.TrangThai == 0);
+                nhanvien.TrangThai = 0;
 
                 qlrauma.SaveChanges();
                 return true;

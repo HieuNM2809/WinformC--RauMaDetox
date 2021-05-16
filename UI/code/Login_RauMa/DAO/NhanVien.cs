@@ -17,7 +17,6 @@ namespace DAO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NhanVien()
         {
-            this.CTPhanQuyens = new HashSet<CTPhanQuyen>();
             this.HoaDons = new HashSet<HoaDon>();
         }
     
@@ -31,10 +30,9 @@ namespace DAO
         public string TaiKhoan { get; set; }
         public string MatKhau { get; set; }
         public string Email { get; set; }
-        public Nullable<bool> TrangThai { get; set; }
+        public Nullable<short> TrangThai { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CTPhanQuyen> CTPhanQuyens { get; set; }
+        public virtual CTPhanQuyen CTPhanQuyen { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
     }

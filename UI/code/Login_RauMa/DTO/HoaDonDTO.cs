@@ -9,11 +9,9 @@ namespace DTO
     public class HoaDonDTO
     {
         public string id { get; set; }
-        public string tensp { get; set; }
-        public int soluong { get; set; }
-        public DateTime ngaylap { get; set; }
-        public float dongia { get; set; }
-        public float tongtien { get; set; }
-        public int trangthai { get; set; }
+        public string idnhanvien { get; set; }
+        public DateTime ngaylaphoadon { get; set; }
+        public byte trangthai { get; set; }
+
     }
 }
