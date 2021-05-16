@@ -9,14 +9,14 @@ namespace DAO
 {
     public class HoaDonDAO
     {
-        
+
         ql_raumaEntities qlrauma = new ql_raumaEntities();
         public List<HoaDonDTO> LayDSHD()
         {
             List<HoaDonDTO> lstHoaDon = new List<HoaDonDTO>();
-            
+
             return lstHoaDon;
         }
-        public bool 
-    }
+        
+    } 
 }

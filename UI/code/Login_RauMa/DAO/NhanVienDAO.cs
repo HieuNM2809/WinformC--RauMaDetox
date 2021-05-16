@@ -16,10 +16,6 @@ namespace DAO
 
         ql_raumaEntities qlrauma = new ql_raumaEntities();
 
-
-
-
-
         public List<NhanVienDTO> LayDSNhanVien()
         {
             ////List<NhanVienDTO> lstNhanVien = new List<NhanVienDTO>();
