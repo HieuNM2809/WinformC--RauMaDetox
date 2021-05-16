@@ -7,7 +7,7 @@ using DTO;
 
 namespace DAO
 {
-    class HoaDonDAO
+    public class HoaDonDAO
     {
         
         ql_raumaEntities qlrauma = new ql_raumaEntities();
