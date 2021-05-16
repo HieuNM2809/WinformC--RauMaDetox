@@ -18,7 +18,7 @@ namespace DAO
         public string IDquyen { get; set; }
         public string Taikhoan { get; set; }
         public string LoaiQuyen { get; set; }
-        public Nullable<bool> TrangThai { get; set; }
+        public Nullable<short> TrangThai { get; set; }
     
         public virtual NhanVien NhanVien { get; set; }
         public virtual PhanQuyen PhanQuyen { get; set; }
