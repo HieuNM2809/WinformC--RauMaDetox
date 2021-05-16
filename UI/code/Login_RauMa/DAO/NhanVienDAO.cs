@@ -10,13 +10,19 @@ namespace DAO
 {
     public class NhanVienDAO
     {
+        private static string _connecstring = @"Data Source=RAUMA;Initial Catalog=ql_rauma;Integrated Security=True";
+
+        private SqlConnection _conn = new SqlConnection(_connecstring);
+
         ql_raumaEntities qlrauma = new ql_raumaEntities();
 
-        
+
+
+
 
         public List<NhanVienDTO> LayDSNhanVien()
         {
-            //List<NhanVienDTO> lstNhanVien = new List<NhanVienDTO>();
+            ////List<NhanVienDTO> lstNhanVien = new List<NhanVienDTO>();
 
             //_conn.Open();
 
@@ -49,86 +55,149 @@ namespace DAO
             //}
 
             //_conn.Close();
-            
-            List<NhanVienDTO> lsnhanvien   = new  List<NhanVienDTO>();
 
-            lsnhanvien = qlrauma.NhanViens.Where(v => v.TrangThai == true).Select(u => new NhanVienDTO {IDNV= u.IDNV,HoTen = u.HoTen, NgaySinh = u.NgaySinh.Value,
-                       GioiTinh =u.GioiTinh, ChucDanh = u.ChucDanh, LoaiNV = u.LoaiNV, TaiKhoan=u.TaiKhoan, MatKhau = u.MatKhau, SDT=u.SDT, Email=u.Email}).ToList();
+            List<NhanVienDTO> lsnhanvien = new List<NhanVienDTO>();
+
+            lsnhanvien = qlrauma.NhanViens.Where(v => v.TrangThai == true).Select(u => new NhanVienDTO
+            {
+                IDNV = u.IDNV,
+                HoTen = u.HoTen,
+                NgaySinh = u.NgaySinh.Value,
+                GioiTinh = u.GioiTinh,
+                ChucDanh = u.ChucDanh,
+                LoaiNV = u.LoaiNV,
+                TaiKhoan = u.TaiKhoan,
+                MatKhau = u.MatKhau,
+                SDT = u.SDT,
+                Email = u.Email
+            }).ToList();
 
             return lsnhanvien;
-                }
+        }
 
-        //public bool KiemTraNhanVien(string IDNV)
-        //{
-        //    _conn.Open();
+        public bool KiemTraNhanVien(string IDNV)
+        {
+            _conn.Open();
 
-        //    string sqlFormat = "SELECT COUNT(*) FROM NhanVien WHERE ID_NV = '{0}'";
-        //    string sql = string.Format(sqlFormat, IDNV);
+            string sqlFormat = "SELECT COUNT(*) FROM NhanVien WHERE ID_NV = '{0}'";
+            string sql = string.Format(sqlFormat, IDNV);
 
-        //    SqlCommand cmd = new SqlCommand(sql, _conn);
+            SqlCommand cmd = new SqlCommand(sql, _conn);
 
-        //    object value = cmd.ExecuteScalar();
+            object value = cmd.ExecuteScalar();
 
-        //    _conn.Close();
+            _conn.Close();
 
-        //    return Convert.ToInt32(value) > 0;
-        //}
-        //    public bool ThemNV(NhanVienDTO nv)
-        //    {
-        //        //string sqlInsert = "Insert into NhanVien(ID_NV, HoTen, NgaySinh, GioiTinh, ChucDanh, LoaiNV, SDT, TaiKhoan, MatKhau, Email, TrangThai) VALUES (@ID_NV,@HoTen,@NgaySinh,@GioiTinh,@ChucDanh,@LoaiNV,@SDT,@TaiKhoan,@MatKhau,@Email,1)";
+            return Convert.ToInt32(value) > 0;
+        }
+        public bool ThemNV(NhanVienDTO nv)
+        {
+            //string sqlInsert = "Insert into NhanVien(ID_NV, HoTen, NgaySinh, GioiTinh, ChucDanh, LoaiNV, SDT, TaiKhoan, MatKhau, Email, TrangThai) VALUES (@ID_NV,@HoTen,@NgaySinh,@GioiTinh,@ChucDanh,@LoaiNV,@SDT,@TaiKhoan,@MatKhau,@Email,1)";
 
-        //        //_conn.Open();
-        //        //List<SqlParameter> lstParameter = new List<SqlParameter>();
-        //        //lstParameter.Add(new SqlParameter("@ID_NV", nv.IDNV));
-        //        //lstParameter.Add(new SqlParameter("@HoTen", nv.HoTen));
-        //        //lstParameter.Add(new SqlParameter("@NgaySinh", nv.NgaySinh));
-        //        //lstParameter.Add(new SqlParameter("@GioiTinh", nv.GioiTinh));
-        //        //lstParameter.Add(new SqlParameter("@ChucDanh", nv.ChucDanh));
-        //        //lstParameter.Add(new SqlParameter("@LoaiNV", nv.LoaiNV));
-        //        //lstParameter.Add(new SqlParameter("@SDT", nv.SDT));
-        //        //lstParameter.Add(new SqlParameter("@TaiKhoan", nv.TaiKhoan));
-        //        //lstParameter.Add(new SqlParameter("@MatKhau", nv.MatKhau));
-        //        //lstParameter.Add(new SqlParameter("@Email", nv.Email));
+            //_conn.Open();
+            //List<SqlParameter> lstParameter = new List<SqlParameter>();
+            //lstParameter.Add(new SqlParameter("@ID_NV", nv.IDNV));
+            //lstParameter.Add(new SqlParameter("@HoTen", nv.HoTen));
+            //lstParameter.Add(new SqlParameter("@NgaySinh", nv.NgaySinh));
+            //lstParameter.Add(new SqlParameter("@GioiTinh", nv.GioiTinh));
+            //lstParameter.Add(new SqlParameter("@ChucDanh", nv.ChucDanh));
+            //lstParameter.Add(new SqlParameter("@LoaiNV", nv.LoaiNV));
+            //lstParameter.Add(new SqlParameter("@SDT", nv.SDT));
+            //lstParameter.Add(new SqlParameter("@TaiKhoan", nv.TaiKhoan));
+            //lstParameter.Add(new SqlParameter("@MatKhau", nv.MatKhau));
+            //lstParameter.Add(new SqlParameter("@Email", nv.Email));
 
-        //        //SqlCommand cmd = new SqlCommand(sqlInsert, _conn);
+            //SqlCommand cmd = new SqlCommand(sqlInsert, _conn);
 
-        //        //cmd.Parameters.AddRange(lstParameter.ToArray());
+            //cmd.Parameters.AddRange(lstParameter.ToArray());
 
-        //        //int result = cmd.ExecuteNonQuery();
+            //int result = cmd.ExecuteNonQuery();
 
-        //        //_conn.Close();
+            //_conn.Close();
 
-        //        //return result > 0;
-        //    }
+            //return result > 0;
+            NhanVien nhanvien = new NhanVien();
 
-        //    public bool CapNhatNV(NhanVienDTO nv)
-        //    {
-        //    //    string sqlUpdate = "Update NhanVien Set NgaySinh = @NgaySinh,  ChucDanh = @ChucDanh," +
-        //    //        " LoaiNv = @LoaiNV, SDT = @SDT, TaiKhoan = @TaiKhoan, MatKhau=@MatKhau, Email=@Email where ID_NV = @ID_NV";
+            nhanvien.IDNV = nv.IDNV;
+            nhanvien.HoTen = nv.HoTen;
+            nhanvien.NgaySinh = nv.NgaySinh;
+            nhanvien.GioiTinh = nv.GioiTinh;
+            nhanvien.ChucDanh = nv.ChucDanh;
+            nhanvien.LoaiNV = nv.LoaiNV;
+            nhanvien.TaiKhoan = nv.TaiKhoan;
+            nhanvien.MatKhau = nv.MatKhau;
+            nhanvien.Email = nv.Email;
 
-        //    //    _conn.Open();
-        //    //    List<SqlParameter> lstParameter = new List<SqlParameter>();
-        //    //    lstParameter.Add(new SqlParameter("@ID_NV", nv.ID_NV));
-        //    //    lstParameter.Add(new SqlParameter("@HoTen", nv.HoTen));
-        //    //    lstParameter.Add(new SqlParameter("@NgaySinh", nv.NgaySinh));
-        //    //    lstParameter.Add(new SqlParameter("@GioiTinh", nv.GioiTinh));
-        //    //    lstParameter.Add(new SqlParameter("@ChucDanh", nv.ChucDanh));
-        //    //    lstParameter.Add(new SqlParameter("@LoaiNV", nv.LoaiNV));
-        //    //    lstParameter.Add(new SqlParameter("@SDT", nv.SDT));
-        //    //    lstParameter.Add(new SqlParameter("@TaiKhoan", nv.TaiKhoan));
-        //    //    lstParameter.Add(new SqlParameter("@MatKhau", nv.MatKhau));
-        //    //    lstParameter.Add(new SqlParameter("@Email", nv.Email));
+            NhanVien nhanvienEF = qlrauma.NhanViens.Add(nhanvien);
+            qlrauma.SaveChanges();
 
-        //    //    SqlCommand cmd = new SqlCommand(sqlUpdate, _conn);
-        //    //    cmd.Parameters.AddRange(lstParameter.ToArray());
+            return true;
+        }
 
-        //    //    int result = cmd.ExecuteNonQuery();
+        public bool CapNhatNV(NhanVienDTO nv)
+        {
+            //    string sqlUpdate = "Update NhanVien Set NgaySinh = @NgaySinh,  ChucDanh = @ChucDanh," +
+            //        " LoaiNv = @LoaiNV, SDT = @SDT, TaiKhoan = @TaiKhoan, MatKhau=@MatKhau, Email=@Email where ID_NV = @ID_NV";
 
-        //    //    _conn.Close();
+            //    _conn.Open();
+            //    List<SqlParameter> lstParameter = new List<SqlParameter>();
+            //    lstParameter.Add(new SqlParameter("@ID_NV", nv.ID_NV));
+            //    lstParameter.Add(new SqlParameter("@HoTen", nv.HoTen));
+            //    lstParameter.Add(new SqlParameter("@NgaySinh", nv.NgaySinh));
+            //    lstParameter.Add(new SqlParameter("@GioiTinh", nv.GioiTinh));
+            //    lstParameter.Add(new SqlParameter("@ChucDanh", nv.ChucDanh));
+            //    lstParameter.Add(new SqlParameter("@LoaiNV", nv.LoaiNV));
+            //    lstParameter.Add(new SqlParameter("@SDT", nv.SDT));
+            //    lstParameter.Add(new SqlParameter("@TaiKhoan", nv.TaiKhoan));
+            //    lstParameter.Add(new SqlParameter("@MatKhau", nv.MatKhau));
+            //    lstParameter.Add(new SqlParameter("@Email", nv.Email));
 
-        //    //    return result > 0;
-        //    //}
+            //    SqlCommand cmd = new SqlCommand(sqlUpdate, _conn);
+            //    cmd.Parameters.AddRange(lstParameter.ToArray());
 
+            //    int result = cmd.ExecuteNonQuery();
 
+            //    _conn.Close();
+
+            //    return result > 0
+            //}
+            try
+            {
+                NhanVien nhanvien = qlrauma.NhanViens.SingleOrDefault(u => u.IDNV == nv.IDNV && u.TrangThai == true);
+                nhanvien.HoTen = nv.HoTen;
+                nhanvien.NgaySinh = nv.NgaySinh;
+                nhanvien.GioiTinh = nv.GioiTinh;
+                nhanvien.ChucDanh = nv.ChucDanh;
+                nhanvien.LoaiNV = nv.LoaiNV;
+                nhanvien.TaiKhoan = nv.TaiKhoan;
+                nhanvien.MatKhau = nv.MatKhau;
+                nhanvien.SDT = nv.SDT;
+                nhanvien.Email = nv.Email;
+
+                qlrauma.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool XoaNV(NhanVienDTO nv)
+        {
+            try
+            {
+                NhanVien nhanvien = qlrauma.NhanViens.SingleOrDefault(u => u.IDNV == nv.IDNV && u.TrangThai == false);
+                nhanvien.TrangThai = false;
+
+                qlrauma.SaveChanges();
+                return true;
+            }
+            catch( Exception)
+            {
+                return false;
+            }
+        }
     }
+
 }
