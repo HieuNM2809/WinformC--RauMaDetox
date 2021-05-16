@@ -14,7 +14,7 @@ namespace DashBoar
         {
             InitializeComponent();
             // Đổ dữ liệu vào combobox
-            cbbChucDanh.SelectedItem = 0;
+            cbbChucDanh.SelectedIndex = 0;
             cbbLoaiNhanVien.SelectedItem = 0;
 
         }

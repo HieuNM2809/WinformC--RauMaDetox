@@ -19,6 +19,7 @@ namespace DashBoar
             InitializeComponent();
         }
         private HoaDonBUS hoadon = new HoaDonBUS();
+
         private HoaDonDTO hd = new HoaDonDTO();
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
