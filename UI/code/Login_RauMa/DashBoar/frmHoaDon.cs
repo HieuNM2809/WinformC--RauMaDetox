@@ -49,6 +49,9 @@ namespace DashBoar
             }
         }
 
-        
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -79,3 +79,4 @@ D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.frmHoaDon.resources
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.xml
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.SqlServer.xml
+D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.FrmDangKiTaiKhoan.resources

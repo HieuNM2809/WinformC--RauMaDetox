@@ -99,38 +99,33 @@ namespace DashBoar
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            //if (tbx_mamon.Text == "" || tbx_tenmon.Text == "" || tbx_gia.Text == "" || cbb_loai.Text == "" || rtb_mota.Text == "")
-            //{
-            //    MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
+            if (tbx_mamon.Text == "" || tbx_tenmon.Text == "" || tbx_gia.Text == "" || cbb_loai.Text == "" || rtb_mota.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
 
 
-            //}
-            //else
-            //{
-            //    //if (_sanpham.KiemTraMaSP(tbx_mamon.Text))
-            //    //{
-            //    //    MessageBox.Show("Mã sản phẩm đã tồn tại !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    //    return;
-            //    //}
-            //    //else
-            //    {
-            //        DTO_sanpham spham = new DTO_sanpham();
-            //        {
-            //            spham.Masp = tbx_mamon.Text;
-            //            spham.Tensp = tbx_tenmon.Text;
-            //            spham.Giasp =Convert.ToInt32( tbx_gia.Text);
-            //            spham.Mota = rtb_mota.Text;
-            //            spham.Loaisp = cbb_loai.Text;
-                        
-            //        };
-            //        if (_sanpham.ThemSP(spham))
-            //        {
-            //            MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //            QL_SanPham_Load_1(sender, e);
-            //        }
-            //        else MessageBox.Show("Thêm Thất bại", "Thông báo");
-            //    }
-            //}
+            }
+            else
+            {
+            
+                {
+                    DTO_sanpham spham = new DTO_sanpham();
+                    {
+                        spham.Masp = tbx_mamon.Text;
+                        spham.Tensp = tbx_tenmon.Text;
+                        spham.Giasp = Convert.ToInt32(tbx_gia.Text);
+                        spham.Mota = rtb_mota.Text;
+                        spham.MaLoaisp = cbb_loai.Text;
+
+                    };
+                    if (_sanpham.ThemSP(spham))
+                    {
+                        MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        QL_SanPham_Load_1(sender, e);
+                    }
+                    else MessageBox.Show("Thêm Thất bại", "Thông báo");
+                }
+            }
         }
 
         private void btn_nhaplai_Click(object sender, EventArgs e)
@@ -151,6 +146,25 @@ namespace DashBoar
             tbx_xoa_tenmon.Text = "";
             rdb_xoa_co.Checked = true;
 
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            DTO_sanpham sanpham = new DTO_sanpham
+            {
+                Masp = tbx_xoa_mamon.Text,
+                Tensp = tbx_xoa_tenmon.Text,
+                Giasp = Convert.ToInt32(tbx_xoa_gia.Text),
+                Mota = tbx_xoa_mota.Text,
+                MaLoaisp = cbb_xoa_loai.Text,
+                Trangthaisp=true
+            };
+            if (_sanpham.SuaSP (sanpham))
+            {
+                MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                QL_SanPham_Load_1(sender, e);
+            }
+            else MessageBox.Show("Cập nhật thât bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

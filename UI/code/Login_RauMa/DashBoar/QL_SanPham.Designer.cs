@@ -67,6 +67,13 @@
             this.tp_view = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.DTGV_xem = new System.Windows.Forms.DataGridView();
+            this.xem_masp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xem_tensp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xem_gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xem_loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xem_mota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hinhsp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Trangthaisp = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ptb_anhtai = new System.Windows.Forms.PictureBox();
             this.lbl_tenmon = new System.Windows.Forms.Label();
@@ -137,13 +144,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.dtgv_loaisp = new System.Windows.Forms.DataGridView();
-            this.xem_masp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.xem_tensp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.xem_gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.xem_loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.xem_mota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hinhsp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Trangthaisp = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.maloaisp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenloaisp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tp_them.SuspendLayout();
@@ -600,6 +600,58 @@
             this.DTGV_xem.TabIndex = 124;
             this.DTGV_xem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DTGV_xem_CellClick);
             // 
+            // xem_masp
+            // 
+            this.xem_masp.DataPropertyName = "Masp";
+            this.xem_masp.HeaderText = "Mã sản phẩm";
+            this.xem_masp.MinimumWidth = 6;
+            this.xem_masp.Name = "xem_masp";
+            // 
+            // xem_tensp
+            // 
+            this.xem_tensp.DataPropertyName = "Tensp";
+            this.xem_tensp.HeaderText = "Tên sản phẩm";
+            this.xem_tensp.MinimumWidth = 6;
+            this.xem_tensp.Name = "xem_tensp";
+            // 
+            // xem_gia
+            // 
+            this.xem_gia.DataPropertyName = "Giasp";
+            this.xem_gia.HeaderText = "Giá";
+            this.xem_gia.MinimumWidth = 6;
+            this.xem_gia.Name = "xem_gia";
+            // 
+            // xem_loai
+            // 
+            this.xem_loai.DataPropertyName = "MaLoaisp";
+            this.xem_loai.HeaderText = "Loại";
+            this.xem_loai.MinimumWidth = 6;
+            this.xem_loai.Name = "xem_loai";
+            this.xem_loai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // xem_mota
+            // 
+            this.xem_mota.DataPropertyName = "Mota";
+            this.xem_mota.HeaderText = "Mô tả";
+            this.xem_mota.MinimumWidth = 6;
+            this.xem_mota.Name = "xem_mota";
+            // 
+            // hinhsp
+            // 
+            this.hinhsp.DataPropertyName = "Hinhsp";
+            this.hinhsp.HeaderText = "Hình";
+            this.hinhsp.MinimumWidth = 6;
+            this.hinhsp.Name = "hinhsp";
+            // 
+            // Trangthaisp
+            // 
+            this.Trangthaisp.DataPropertyName = "Trangthaisp";
+            this.Trangthaisp.HeaderText = "Trạng thái";
+            this.Trangthaisp.MinimumWidth = 6;
+            this.Trangthaisp.Name = "Trangthaisp";
+            this.Trangthaisp.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Trangthaisp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.ptb_anhtai);
@@ -933,6 +985,7 @@
             this.btn_sua.Text = "Sửa";
             this.btn_sua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_sua.UseVisualStyleBackColor = false;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // btn_xoa
             // 
@@ -1481,58 +1534,6 @@
             this.dtgv_loaisp.Size = new System.Drawing.Size(1228, 287);
             this.dtgv_loaisp.TabIndex = 125;
             // 
-            // xem_masp
-            // 
-            this.xem_masp.DataPropertyName = "Masp";
-            this.xem_masp.HeaderText = "Mã sản phẩm";
-            this.xem_masp.MinimumWidth = 6;
-            this.xem_masp.Name = "xem_masp";
-            // 
-            // xem_tensp
-            // 
-            this.xem_tensp.DataPropertyName = "Tensp";
-            this.xem_tensp.HeaderText = "Tên sản phẩm";
-            this.xem_tensp.MinimumWidth = 6;
-            this.xem_tensp.Name = "xem_tensp";
-            // 
-            // xem_gia
-            // 
-            this.xem_gia.DataPropertyName = "Giasp";
-            this.xem_gia.HeaderText = "Giá";
-            this.xem_gia.MinimumWidth = 6;
-            this.xem_gia.Name = "xem_gia";
-            // 
-            // xem_loai
-            // 
-            this.xem_loai.DataPropertyName = "MaLoaisp";
-            this.xem_loai.HeaderText = "Loại";
-            this.xem_loai.MinimumWidth = 6;
-            this.xem_loai.Name = "xem_loai";
-            this.xem_loai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // xem_mota
-            // 
-            this.xem_mota.DataPropertyName = "Mota";
-            this.xem_mota.HeaderText = "Mô tả";
-            this.xem_mota.MinimumWidth = 6;
-            this.xem_mota.Name = "xem_mota";
-            // 
-            // hinhsp
-            // 
-            this.hinhsp.DataPropertyName = "Hinhsp";
-            this.hinhsp.HeaderText = "Hình";
-            this.hinhsp.MinimumWidth = 6;
-            this.hinhsp.Name = "hinhsp";
-            // 
-            // Trangthaisp
-            // 
-            this.Trangthaisp.DataPropertyName = "Trangthaisp";
-            this.Trangthaisp.HeaderText = "Trạng thái";
-            this.Trangthaisp.MinimumWidth = 6;
-            this.Trangthaisp.Name = "Trangthaisp";
-            this.Trangthaisp.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Trangthaisp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // maloaisp
             // 
             this.maloaisp.DataPropertyName = "Maloaisp";
@@ -1555,7 +1556,6 @@
             this.ClientSize = new System.Drawing.Size(1310, 887);
             this.Controls.Add(this.tp_qlsp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.IsMdiContainer = true;
             this.Name = "QL_SanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QL_SanPham";

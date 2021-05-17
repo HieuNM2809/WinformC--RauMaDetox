@@ -33,7 +33,7 @@ namespace DAO
             }).ToList();
             return lssanpham;
         }
-     
+
         //    List<DTO_sanpham> lstsanpham = new List<DTO_sanpham>();
 
         //    _conn.Open();
@@ -121,28 +121,38 @@ namespace DAO
         //        _conn.Close();
         //        return Laytheoloai;
         //    }
-        //    public bool ThemSP(DTO_sanpham sp)
-        //    {
-        //        string sqlInsert = "INSERT INTO Sanpham(Masp,Tensp,giatien,MaLoaiSp,MoTa,TrangThai) VALUES (@Masp,@Tensp,@giatien,@MaLoaiSp,@MoTa,1)";
-
-        //        _conn.Open();
-        //        List<SqlParameter> lstsp = new List<SqlParameter>();
-        //        lstsp.Add(new SqlParameter("@Masp", sp.Masp));
-        //        lstsp.Add(new SqlParameter("@Tensp", sp.Tensp));
-        //        lstsp.Add(new SqlParameter("@Giatien", sp.Giasp));
-        //        lstsp.Add(new SqlParameter("@Maloaisp", sp.Loaisp));
-        //        lstsp.Add(new SqlParameter("@Mota", sp.Mota));
-        //        lstsp.Add(new SqlParameter("@Trangthai", 1));
-        //        SqlCommand cmd = new SqlCommand(sqlInsert, _conn);
-
-        //        cmd.Parameters.AddRange(lstsp.ToArray());
-
-        //        int result = cmd.ExecuteNonQuery();
-
-        //        _conn.Close();
-
-        //        return result > 0;
-        //    }
+        public bool ThemSP(DTO_sanpham sp)
+        {
+            SanPham SP = new SanPham();
+            SP.MaSp = sp.Masp;
+            SP.MaLoaiSp = sp.MaLoaisp;
+            SP.GiaTien = sp.Giasp;
+            SP.MoTa = sp.Mota;
+            SP.TenSp = sp.Tensp;
+            SP.TrangThai = true;
+            SanPham sanphamEF = qlrauma.SanPhams.Add(SP);
+            qlrauma.SaveChanges();
+            return sanphamEF.MaSp != "" ;
+        }
+        public bool SuaSP(DTO_sanpham sp)
+        {
+            try
+            {
+                SanPham SP = qlrauma.SanPhams.SingleOrDefault(u => u.MaSp == sp.Masp && u.TenSp == sp.Tensp && u.MaLoaiSp == sp.MaLoaisp
+                  && u.MoTa == sp.Mota && u.TrangThai == true);
+                SP.MaSp = sp.Masp;
+                SP.TenSp = sp.Tensp;
+                SP.MaLoaiSp = sp.MaLoaisp;
+                SP.GiaTien = sp.Giasp;
+                SP.TrangThai = sp.Trangthaisp;
+                qlrauma.SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
 
     }
 

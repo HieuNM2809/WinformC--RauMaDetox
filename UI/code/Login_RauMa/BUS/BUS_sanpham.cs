@@ -25,9 +25,13 @@ namespace BUS
         //    {
         //        return _dssp.KiemTraMaSP(masp);
         //    }
-        //    public bool ThemSP(DTO_sanpham sp)
-        //    {
-        //        return _dssp.ThemSP(sp);
-        //    }
+        public bool ThemSP(DTO_sanpham sp)
+        {
+            return _dssp.ThemSP(sp);
+        }
+        public bool SuaSP(DTO_sanpham sp)
+        {
+            return _dssp.SuaSP(sp);
+        }
     }
 }
