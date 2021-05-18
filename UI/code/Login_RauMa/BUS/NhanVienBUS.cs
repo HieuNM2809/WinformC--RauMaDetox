@@ -31,7 +31,7 @@ namespace BUS
             return _NhanVienDAO.CapNhatNV(nv);
         }
 
-        public bool XoaN(NhanVienDTO nv)
+        public bool XoaNV(NhanVienDTO nv)
         {
             return _NhanVienDAO.XoaNV(nv);
         }

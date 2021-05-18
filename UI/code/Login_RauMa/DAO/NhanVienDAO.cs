@@ -66,6 +66,7 @@ namespace DAO
                 MatKhau = u.MatKhau,
                 SDT = u.SDT,
                 Email = u.Email
+
             }).ToList();
 
             return lsnhanvien;
@@ -123,7 +124,9 @@ namespace DAO
             nhanvien.LoaiNV = nv.LoaiNV;
             nhanvien.TaiKhoan = nv.TaiKhoan;
             nhanvien.MatKhau = nv.MatKhau;
+            nhanvien.SDT = nv.SDT;
             nhanvien.Email = nv.Email;
+            nhanvien.TrangThai = 1;
 
             NhanVien nhanvienEF = qlrauma.NhanViens.Add(nhanvien);
             qlrauma.SaveChanges();
@@ -171,7 +174,7 @@ namespace DAO
                 nhanvien.SDT = nv.SDT;
                 nhanvien.Email = nv.Email;
 
-                NhanVien nhanvienEF = qlrauma.NhanViens.Add(nhanvien);
+               
 
 
                 qlrauma.SaveChanges();
