@@ -133,8 +133,8 @@ namespace DashBoar
 
         private void btnQLTaiKhoan_Click(object sender, EventArgs e)
         {
-            QL_NhanVien nv = new QL_NhanVien();
-            loadform(nv);
+            
+            
         }
 
         private void btnHoaDon_Click_1(object sender, EventArgs e)

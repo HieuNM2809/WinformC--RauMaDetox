@@ -29,6 +29,7 @@ namespace DashBoar
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThongTinNhanVien));
             this.grTTNV = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -50,7 +51,7 @@ namespace DashBoar
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.grHinhNhanVien = new System.Windows.Forms.GroupBox();
-            this.picHinhNhanVien = new System.Windows.Forms.PictureBox();
+            this.picNhanVien = new System.Windows.Forms.PictureBox();
             this.grTTT = new System.Windows.Forms.GroupBox();
             this.chkTrangThai = new System.Windows.Forms.CheckBox();
             this.cbbChucDanh = new System.Windows.Forms.ComboBox();
@@ -82,10 +83,11 @@ namespace DashBoar
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.imglNhanVien = new System.Windows.Forms.ImageList(this.components);
             this.grTTNV.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.grHinhNhanVien.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHinhNhanVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picNhanVien)).BeginInit();
             this.grTTT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinNhanVien)).BeginInit();
             this.groupBox6.SuspendLayout();
@@ -170,7 +172,7 @@ namespace DashBoar
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(438, 289);
+            this.txtMatKhau.Location = new System.Drawing.Point(480, 288);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(206, 25);
@@ -205,7 +207,7 @@ namespace DashBoar
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(412, 58);
+            this.txtHoTen.Location = new System.Drawing.Point(480, 58);
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(206, 25);
@@ -236,7 +238,7 @@ namespace DashBoar
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(338, 58);
+            this.label2.Location = new System.Drawing.Point(373, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 25);
             this.label2.TabIndex = 24;
@@ -270,7 +272,7 @@ namespace DashBoar
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(334, 288);
+            this.label9.Location = new System.Drawing.Point(363, 288);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 25);
             this.label9.TabIndex = 29;
@@ -311,26 +313,29 @@ namespace DashBoar
             // 
             // grHinhNhanVien
             // 
-            this.grHinhNhanVien.Controls.Add(this.picHinhNhanVien);
+            this.grHinhNhanVien.Controls.Add(this.picNhanVien);
             this.grHinhNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grHinhNhanVien.ForeColor = System.Drawing.Color.White;
-            this.grHinhNhanVien.Location = new System.Drawing.Point(883, 65);
+            this.grHinhNhanVien.Location = new System.Drawing.Point(883, 51);
             this.grHinhNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grHinhNhanVien.Name = "grHinhNhanVien";
             this.grHinhNhanVien.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grHinhNhanVien.Size = new System.Drawing.Size(316, 174);
+            this.grHinhNhanVien.Size = new System.Drawing.Size(316, 188);
             this.grHinhNhanVien.TabIndex = 1;
             this.grHinhNhanVien.TabStop = false;
             this.grHinhNhanVien.Text = "Hình Nhân Viên";
             // 
-            // picHinhNhanVien
+            // picNhanVien
             // 
-            this.picHinhNhanVien.Location = new System.Drawing.Point(101, 36);
-            this.picHinhNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picHinhNhanVien.Name = "picHinhNhanVien";
-            this.picHinhNhanVien.Size = new System.Drawing.Size(159, 112);
-            this.picHinhNhanVien.TabIndex = 0;
-            this.picHinhNhanVien.TabStop = false;
+            this.picNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picNhanVien.Location = new System.Drawing.Point(66, 39);
+            this.picNhanVien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.picNhanVien.Name = "picNhanVien";
+            this.picNhanVien.Size = new System.Drawing.Size(180, 122);
+            this.picNhanVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picNhanVien.TabIndex = 1;
+            this.picNhanVien.TabStop = false;
+            this.picNhanVien.Click += new System.EventHandler(this.picNhanVien_Click);
             // 
             // grTTT
             // 
@@ -699,6 +704,12 @@ namespace DashBoar
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
             // 
+            // imglNhanVien
+            // 
+            this.imglNhanVien.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imglNhanVien.ImageSize = new System.Drawing.Size(16, 16);
+            this.imglNhanVien.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // frmThongTinNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -725,7 +736,7 @@ namespace DashBoar
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.grHinhNhanVien.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picHinhNhanVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picNhanVien)).EndInit();
             this.grTTT.ResumeLayout(false);
             this.grTTT.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinNhanVien)).EndInit();
@@ -759,7 +770,6 @@ namespace DashBoar
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox grHinhNhanVien;
-        private System.Windows.Forms.PictureBox picHinhNhanVien;
         private System.Windows.Forms.GroupBox grTTT;
         private System.Windows.Forms.CheckBox chkTrangThai;
         private System.Windows.Forms.ComboBox cbbChucDanh;
@@ -791,5 +801,7 @@ namespace DashBoar
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ImageList imglNhanVien;
+        private System.Windows.Forms.PictureBox picNhanVien;
     }
 }

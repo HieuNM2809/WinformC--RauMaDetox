@@ -203,6 +203,56 @@ namespace DAO
                 return false;
             }
         }
+
+        public bool DoiMatKhau(NhanVienDTO nv)
+        {
+            try
+            {
+                NhanVien nhanVien = qlrauma.NhanViens.SingleOrDefault(u => u.TaiKhoan == nv.TaiKhoan && u.MatKhau == nv.MatKhau && u.TrangThai == 1);
+                nhanVien.MatKhau = nhanVien.MatKhau;
+                qlrauma.SaveChanges();
+
+                return true;
+            }
+            catch(Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool KiemTraTaiKhoan(string TK)
+        {
+            _conn.Open();
+
+            string sqlFormat = "SELECT COUNT(*) FROM NhanVien WHERE TaiKhoan = '{0}'";
+
+            string sql = string.Format(sqlFormat, TK);
+
+            SqlCommand cmd = new SqlCommand(sql, _conn);
+
+            object value = cmd.ExecuteScalar();
+
+            _conn.Close();
+
+            return Convert.ToInt32(value) > 0;
+        }
+
+        public bool KiemTraMatKhau(string MK)
+        {
+            _conn.Open();
+
+            string sqlFormat = "SELECT COUNT(*) FROM NhanVien WHERE MatKhau = '{0}'";
+
+            string sql = string.Format(sqlFormat, MK);
+
+            SqlCommand cmd = new SqlCommand(sql, _conn);
+
+            object value = cmd.ExecuteScalar();
+
+            _conn.Close();
+
+            return Convert.ToInt32(value) > 0;
+        }
     }
 
 }

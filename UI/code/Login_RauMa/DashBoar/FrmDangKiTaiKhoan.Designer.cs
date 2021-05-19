@@ -36,7 +36,7 @@ namespace DashBoar
             this.txtID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnXacNhan = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -109,20 +109,21 @@ namespace DashBoar
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnXacNhan
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.button1.Location = new System.Drawing.Point(44, 695);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(227, 61);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Xác Nhận";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnXacNhan.BackColor = System.Drawing.Color.White;
+            this.btnXacNhan.FlatAppearance.BorderSize = 0;
+            this.btnXacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXacNhan.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXacNhan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnXacNhan.Location = new System.Drawing.Point(44, 695);
+            this.btnXacNhan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnXacNhan.Name = "btnXacNhan";
+            this.btnXacNhan.Size = new System.Drawing.Size(227, 61);
+            this.btnXacNhan.TabIndex = 34;
+            this.btnXacNhan.Text = "Xác Nhận";
+            this.btnXacNhan.UseVisualStyleBackColor = false;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // label5
             // 
@@ -212,7 +213,7 @@ namespace DashBoar
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
@@ -220,6 +221,7 @@ namespace DashBoar
             this.Controls.Add(this.label3);
             this.Controls.Add(this.picLogo);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmDangKiTaiKhoan";
             this.Text = "FrmDangKiTaiKhoan";
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
@@ -237,7 +239,7 @@ namespace DashBoar
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnXacNhan;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using BUS;
 using DTO;
@@ -7,8 +9,8 @@ namespace DashBoar
 {
     public partial class frmThongTinNhanVien : Form
     {
-        private NhanVienBUS _NhanVienBUS = new NhanVienBUS();   
-
+        private NhanVienBUS _NhanVienBUS = new NhanVienBUS();
+        string str_Hinh = @"D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\imglNhanVien";
 
         public frmThongTinNhanVien()
         {
@@ -40,7 +42,7 @@ namespace DashBoar
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
 
-
+                return;
             }
             else
             {
@@ -83,12 +85,13 @@ namespace DashBoar
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+
             NhanVienDTO nv = new NhanVienDTO
             {
                 IDNV = txtID.Text,
                 HoTen = txtHoTen.Text,
                 NgaySinh = dtpNgaySinh.Value,
-                GioiTinh = radNam.Text,
+                GioiTinh = ChonGioiTinh(),
                 ChucDanh = cbbChucDanh.Text,
                 LoaiNV = cbbLoaiNhanVien.Text,
                 SDT = txtSDT.Text,
@@ -132,37 +135,32 @@ namespace DashBoar
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
-            foreach (Control ctrTTNV in this.grTTNV.Controls)
-            {
-                if (ctrTTNV is TextBox )
-                {
-                    ctrTTNV.Text = "";
-                }
-            }
-            dtpNgaySinh.Value = DateTime.Now;
-            chkTrangThai.CheckState = CheckState.Checked;
-            cbbChucDanh.SelectedIndex = 0;
-            cbbLoaiNhanVien.SelectedIndex = 0;
-            picHinhNhanVien.Image = null; 
+            //foreach (Control ctrTTNV in this.grTTNV.Controls)
+            //{
+            //    if (ctrTTNV is TextBox )
+            //    {
+            //        ctrTTNV.Text = "";
+            //    }
+            //}
+            //dtpNgaySinh.Value = DateTime.Now;
+            //chkTrangThai.CheckState = CheckState.Checked;
+            //cbbChucDanh.SelectedIndex = 0;
+            //cbbLoaiNhanVien.SelectedIndex = 0;
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Multiselect = false;
+            ofd.Filter = "Hinh Anh|*.jpg";
+            ofd.ShowDialog();
 
 
         }
 
-      
+
         private void btnXoa_Click(object sender, EventArgs e)
         {
             NhanVienDTO nv = new NhanVienDTO
             {
                 IDNV = txtID.Text,
-                HoTen = txtHoTen.Text,
-                NgaySinh = dtpNgaySinh.Value,
-                GioiTinh = radNam.Text,
-                ChucDanh = cbbChucDanh.Text,
-                LoaiNV = cbbLoaiNhanVien.Text,
-                SDT = txtSDT.Text,
-                TaiKhoan = txtTaiKhoan.Text,
-                MatKhau = txtMatKhau.Text,
-                Email = txtEmail.Text
+
             };
             if (_NhanVienBUS.XoaNV(nv))
             {
@@ -172,7 +170,51 @@ namespace DashBoar
             else MessageBox.Show("Xóa thât bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        
-        
-    }
+        private string ChonGioiTinh()
+        {
+            if (radNam.Checked == true) return radNam.Text;
+            else return radNu.Text;
+        }
+
+        private void picNhanVien_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Multiselect = false;
+            open.Filter = "Hinh Anh|*.jpg";
+            DialogResult dr = open.ShowDialog();
+            if (dr != System.Windows.Forms.DialogResult.Cancel) //co chon file
+            {
+                byte[] byteHA = File.ReadAllBytes(open.FileName);
+                MemoryStream ms = new MemoryStream(byteHA);
+                picNhanVien.Image = Image.FromStream(ms);
+            }
+            else
+            {
+                picNhanVien.Image = null;
+            }
+        }
+
+        private void LayHinh()
+        {
+            //Lam rong hai danh sach hinh
+            imglNhanVien.Images.Clear();
+         
+            //Doc danh sach hinh bo vao danh sach\
+
+            //Lay thong tin thu muc
+            DirectoryInfo di = new DirectoryInfo(str_Hinh);
+            FileInfo[] fis = di.GetFiles("*.jpg");
+
+            //Doc tung File bo vao danh sach hinh
+            foreach (FileInfo f in fis)
+            {
+                byte[] byteHA = File.ReadAllBytes(f.FullName);
+                MemoryStream ms = new MemoryStream(byteHA);
+
+                Image im = Image.FromStream(ms);
+
+                imglNhanVien.Images.Add(f.Name, im); //Moi hinh anh luu kem khoa
+               
+            }
+        }
 }

@@ -91,12 +91,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QL_NhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QL_NhanVien.Designer.cs">
-      <DependentUpon>QL_NhanVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="QL_SanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,9 +125,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="QL_NhanVien.resx">
-      <DependentUpon>QL_NhanVien.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="QL_SanPham.resx">
       <DependentUpon>QL_SanPham.cs</DependentUpon>
     </EmbeddedResource>
