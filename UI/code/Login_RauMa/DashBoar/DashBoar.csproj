@@ -77,6 +77,12 @@
     <Compile Include="frmHoaDon.Designer.cs">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmThemQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThemQuyen.Designer.cs">
+      <DependentUpon>FrmThemQuyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThongTinNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLNhanVien.Designer.cs">
+      <DependentUpon>QLNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="QL_SanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +121,9 @@
     <EmbeddedResource Include="frmHoaDon.resx">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmThemQuyen.resx">
+      <DependentUpon>FrmThemQuyen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmThongTinNhanVien.resx">
       <DependentUpon>frmThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +140,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QLNhanVien.resx">
+      <DependentUpon>QLNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QL_SanPham.resx">
       <DependentUpon>QL_SanPham.cs</DependentUpon>
     </EmbeddedResource>

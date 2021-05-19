@@ -133,7 +133,8 @@ namespace DashBoar
 
         private void btnQLTaiKhoan_Click(object sender, EventArgs e)
         {
-            
+            QLNhanVien frmTTNV = new QLNhanVien();
+            loadform(frmTTNV);
             
         }
 

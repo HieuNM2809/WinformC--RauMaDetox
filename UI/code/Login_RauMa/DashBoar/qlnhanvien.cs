@@ -10,139 +10,63 @@ using System.Windows.Forms;
 
 namespace DashBoar
 {
-    public partial class qlnhanvien : Form
+    public partial class QLNhanVien : Form
     {
-        public qlnhanvien()
+        public QLNhanVien()
         {
             InitializeComponent();
         }
 
-        private void qlnhanvien_Load(object sender, EventArgs e)
+        private void frmload(object frm)
         {
-            cboChucNang.SelectedIndex = 0;
-            dtpNgaySinh.Value = DateTime.Now;
+            if (this.panel_show.Controls.Count > 0)
+                this.panel_show.Controls.RemoveAt(0);
+            Form f = frm as Form;
+            f.TopLevel = false;
+            f.TopMost = true;
+            f.Dock = DockStyle.None;
+            this.panel_show.Controls.Add(f);
+            this.panel_show.Tag = f;
+            f.Show();
+        }
+        private void đăngKíTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDangKiTaiKhoan dk = new FrmDangKiTaiKhoan();
+            panel_show.Show();
+            panel_show.Controls.Clear();
+            dk.TopLevel = false;
+            dk.Dock = DockStyle.None;
+            panel_show.Controls.Add(dk);
+            dk.Show();
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtID.Text) || String.IsNullOrEmpty(txtHoTen.Text) ||
-                String.IsNullOrEmpty(txtTaiKhoan.Text) || String.IsNullOrEmpty(txtMatKhau.Text) ||
-                dtpNgaySinh.Value >= DateTime.Now)
-            {
-                MessageBox.Show("Bạn vui lòng nhập đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else
-            {
-                // them thong tin vao listview
-                ListViewItem lvwTTSV = new ListViewItem(txtID.Text);
-                lvwTTSV.SubItems.Add(txtHoTen.Text);
-                if (radNam.Checked == true) lvwTTSV.SubItems.Add("Nam");
-                else if (radNu.Checked == true) lvwTTSV.SubItems.Add("Nữ");
-                lvwTTSV.SubItems.Add(dtpNgaySinh.Text);
-                lvwTTSV.SubItems.Add(txtSDT.Text);
-                lvwTTSV.SubItems.Add(txtEmail.Text);
-                lvwTTSV.SubItems.Add(txtTaiKhoan.Text);
-                lvwTTSV.SubItems.Add(txtMatKhau.Text);
-                if (chkTrangThai.Checked == true) lvwTTSV.SubItems.Add("Hoạt động");
-                else lvwTTSV.SubItems.Add("Không hoạt động ");
-                lvwTTSV.SubItems.Add(cboChucNang.Text);
-                lvwThongTinNhanVien.Items.Add(lvwTTSV);
-
-
-                //Xoa Thong tin nhap
-                txtID.Text = "";
-                txtHoTen.Text = "";
-                radNam.Checked = true;
-                dtpNgaySinh.Value = DateTime.Now;
-                txtSDT.Text = "";
-                txtEmail.Text = "";
-                txtTaiKhoan.Text = "";
-                txtMatKhau.Text = "";
-                chkTrangThai.Checked = true;
-                cboChucNang.SelectedIndex = 0;
-            }
-
-
+            FrmDoiMatKhau dk = new FrmDoiMatKhau();
+            panel_show.Show();
+            panel_show.Controls.Clear();
+            dk.TopLevel = false;
+            dk.Dock = DockStyle.None;
+            panel_show.Controls.Add(dk);
+            dk.Show();
         }
 
-        private void lvwThongTinNhanVien_SelectedIndexChanged(object sender, EventArgs e)
+        private void thôngTinNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (lvwThongTinNhanVien.SelectedItems.Count > 0)
-            {
-                txtID.Text = lvwThongTinNhanVien.SelectedItems[0].SubItems[0].Text;
-                txtHoTen.Text = lvwThongTinNhanVien.SelectedItems[0].SubItems[1].Text;
-                if (lvwThongTinNhanVien.SelectedItems[0].SubItems[2].Text == "Nam") radNam.Checked = true;
-                else if (lvwThongTinNhanVien.SelectedItems[0].SubItems[2].Text == "Nữ") radNu.Checked = true;
-                dtpNgaySinh.Text = lvwThongTinNhanVien.SelectedItems[0].SubItems[3].Text;
-                txtSDT.Text = lvwThongTinNhanVien.SelectedItems[0].SubItems[4].Text;
-                txtEmail.Text = lvwThongTinNhanVien.SelectedItems[0].SubItems[5].Text;
-                txtTaiKhoan.Text = lvwThongTinNhanVien.SelectedItems[0].SubItems[6].Text;
-                txtMatKhau.Text = lvwThongTinNhanVien.SelectedItems[0].SubItems[7].Text;
-                if (lvwThongTinNhanVien.SelectedItems[0].SubItems[8].Text == "Hoạt động")
-                    chkTrangThai.Checked = true;
-                else chkTrangThai.Checked = false;
-                cboChucNang.Text = lvwThongTinNhanVien.SelectedItems[0].SubItems[10].Text;
-            }
-
+            frmThongTinNhanVien TTNV = new frmThongTinNhanVien();
+            frmload(TTNV);
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
+        private void QLNhanVien_Load(object sender, EventArgs e)
         {
-            txtID.Text = "";
-            txtHoTen.Text = "";
-            radNam.Checked = true;
-            dtpNgaySinh.Value = DateTime.Now;
-            txtSDT.Text = "";
-            txtEmail.Text = "";
-            txtTaiKhoan.Text = "";
-            txtMatKhau.Text = "";
-            chkTrangThai.Checked = true;
-            cboChucNang.SelectedIndex = 0;
+            frmThongTinNhanVien TTNV = new frmThongTinNhanVien();
+            frmload(TTNV);
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+        private void quyềnTảiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (lvwThongTinNhanVien.SelectedItems.Count > 0)
-            {
-                lvwThongTinNhanVien.Items.Remove(lvwThongTinNhanVien.SelectedItems[0]);
-            }
-            else
-            {
-                MessageBox.Show("Hãy chọn dòng xóa", "Thông báo", MessageBoxButtons.OK);
-            }
-            txtID.Text = "";
-            txtHoTen.Text = "";
-            radNam.Checked = true;
-            dtpNgaySinh.Value = DateTime.Now;
-            txtSDT.Text = "";
-            txtEmail.Text = "";
-            txtTaiKhoan.Text = "";
-            txtMatKhau.Text = "";
-            chkTrangThai.Checked = true;
-            cboChucNang.SelectedIndex = 0;
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            if (lvwThongTinNhanVien.SelectedItems.Count > 0)
-            {
-                lvwThongTinNhanVien.SelectedItems[0].SubItems[0].Text = txtID.Text;
-                lvwThongTinNhanVien.SelectedItems[0].SubItems[1].Text = txtHoTen.Text;
-                if (radNam.Checked == true) lvwThongTinNhanVien.SelectedItems[0].SubItems[2].Text = "Nam";
-                else if (radNu.Checked == true) lvwThongTinNhanVien.SelectedItems[0].SubItems[2].Text = "Nữ";
-                lvwThongTinNhanVien.SelectedItems[0].SubItems[3].Text = dtpNgaySinh.Text;
-                lvwThongTinNhanVien.SelectedItems[0].SubItems[4].Text = txtEmail.Text;
-                lvwThongTinNhanVien.SelectedItems[0].SubItems[5].Text = txtEmail.Text;
-                lvwThongTinNhanVien.SelectedItems[0].SubItems[6].Text = txtTaiKhoan.Text;
-                lvwThongTinNhanVien.SelectedItems[0].SubItems[7].Text = txtMatKhau.Text;
-                if (chkTrangThai.Checked == true)
-                    lvwThongTinNhanVien.SelectedItems[0].SubItems[8].Text = "Hoạt động";
-                else lvwThongTinNhanVien.SelectedItems[0].SubItems[8].Text = "không hoạt động";
-                lvwThongTinNhanVien.SelectedItems[0].SubItems[10].Text = cboChucNang.Text;
-
-
-            }
+            FrmThemQuyen ThemQuyen = new FrmThemQuyen();
+            frmload(ThemQuyen);
         }
     }
 }

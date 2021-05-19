@@ -208,7 +208,7 @@ namespace DAO
         {
             try
             {
-                NhanVien nhanVien = qlrauma.NhanViens.SingleOrDefault(u => u.TaiKhoan == nv.TaiKhoan && u.MatKhau == nv.MatKhau && u.TrangThai == 1);
+                NhanVien nhanVien = qlrauma.NhanViens.SingleOrDefault(u => u.TaiKhoan  == nv.TaiKhoan && u.TrangThai == 1);
                 nhanVien.MatKhau = nhanVien.MatKhau;
                 qlrauma.SaveChanges();
 
@@ -252,6 +252,24 @@ namespace DAO
             _conn.Close();
 
             return Convert.ToInt32(value) > 0;
+        }
+
+        public bool DangKiTaiKhoan(NhanVienDTO nv)
+        {
+            try
+            {
+                NhanVien nhanvien = qlrauma.NhanViens.SingleOrDefault(u => u.IDNV == nv.IDNV && u.TrangThai == 1);
+                nhanvien.TaiKhoan = nv.TaiKhoan;
+                nhanvien.MatKhau = nv.MatKhau;
+
+                qlrauma.SaveChanges();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 

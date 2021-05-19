@@ -75,15 +75,15 @@ namespace DashBoar
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.radHoTen = new System.Windows.Forms.RadioButton();
             this.radID = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.imglNhanVien = new System.Windows.Forms.ImageList(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.grTTNV.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.grHinhNhanVien.SuspendLayout();
@@ -435,8 +435,12 @@ namespace DashBoar
             // 
             // dgvThongTinNhanVien
             // 
+            this.dgvThongTinNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvThongTinNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThongTinNhanVien.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.dgvThongTinNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvThongTinNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongTinNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clID,
@@ -449,20 +453,20 @@ namespace DashBoar
             this.clTaiKhoan,
             this.clMatKhau,
             this.clEmail});
-            this.dgvThongTinNhanVien.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvThongTinNhanVien.GridColor = System.Drawing.Color.Green;
-            this.dgvThongTinNhanVien.Location = new System.Drawing.Point(0, 613);
+            this.dgvThongTinNhanVien.GridColor = System.Drawing.Color.White;
+            this.dgvThongTinNhanVien.Location = new System.Drawing.Point(0, 625);
             this.dgvThongTinNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvThongTinNhanVien.Name = "dgvThongTinNhanVien";
             this.dgvThongTinNhanVien.RowHeadersWidth = 62;
             this.dgvThongTinNhanVien.RowTemplate.Height = 28;
-            this.dgvThongTinNhanVien.Size = new System.Drawing.Size(1215, 223);
+            this.dgvThongTinNhanVien.Size = new System.Drawing.Size(1215, 211);
             this.dgvThongTinNhanVien.TabIndex = 4;
             this.dgvThongTinNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinNhanVien_CellContentClick);
             // 
             // clID
             // 
             this.clID.DataPropertyName = "IDNV";
+            this.clID.FillWeight = 53.8662F;
             this.clID.HeaderText = "ID";
             this.clID.MinimumWidth = 8;
             this.clID.Name = "clID";
@@ -470,6 +474,7 @@ namespace DashBoar
             // clHoTen
             // 
             this.clHoTen.DataPropertyName = "HoTen";
+            this.clHoTen.FillWeight = 87.21559F;
             this.clHoTen.HeaderText = "Họ tên";
             this.clHoTen.MinimumWidth = 8;
             this.clHoTen.Name = "clHoTen";
@@ -477,6 +482,7 @@ namespace DashBoar
             // clNgaySinh
             // 
             this.clNgaySinh.DataPropertyName = "NgaySinh";
+            this.clNgaySinh.FillWeight = 111.4715F;
             this.clNgaySinh.HeaderText = "Ngày sinh";
             this.clNgaySinh.MinimumWidth = 8;
             this.clNgaySinh.Name = "clNgaySinh";
@@ -484,6 +490,7 @@ namespace DashBoar
             // clGioiTinh
             // 
             this.clGioiTinh.DataPropertyName = "GioiTinh";
+            this.clGioiTinh.FillWeight = 102.6667F;
             this.clGioiTinh.HeaderText = "Giới tính";
             this.clGioiTinh.MinimumWidth = 8;
             this.clGioiTinh.Name = "clGioiTinh";
@@ -491,6 +498,7 @@ namespace DashBoar
             // clChucDanh
             // 
             this.clChucDanh.DataPropertyName = "ChucDanh";
+            this.clChucDanh.FillWeight = 94.14895F;
             this.clChucDanh.HeaderText = "Chức danh";
             this.clChucDanh.MinimumWidth = 8;
             this.clChucDanh.Name = "clChucDanh";
@@ -498,6 +506,7 @@ namespace DashBoar
             // clLoaiNV
             // 
             this.clLoaiNV.DataPropertyName = "LoaiNV";
+            this.clLoaiNV.FillWeight = 123.7102F;
             this.clLoaiNV.HeaderText = "Loại nhân viên";
             this.clLoaiNV.MinimumWidth = 8;
             this.clLoaiNV.Name = "clLoaiNV";
@@ -505,6 +514,7 @@ namespace DashBoar
             // clSDT
             // 
             this.clSDT.DataPropertyName = "SDT";
+            this.clSDT.FillWeight = 82.05608F;
             this.clSDT.HeaderText = "SDT";
             this.clSDT.MinimumWidth = 8;
             this.clSDT.Name = "clSDT";
@@ -512,6 +522,7 @@ namespace DashBoar
             // clTaiKhoan
             // 
             this.clTaiKhoan.DataPropertyName = "TaiKhoan";
+            this.clTaiKhoan.FillWeight = 126.5587F;
             this.clTaiKhoan.HeaderText = "Tài khoản";
             this.clTaiKhoan.MinimumWidth = 8;
             this.clTaiKhoan.Name = "clTaiKhoan";
@@ -519,6 +530,7 @@ namespace DashBoar
             // clMatKhau
             // 
             this.clMatKhau.DataPropertyName = "MatKhau";
+            this.clMatKhau.FillWeight = 123.876F;
             this.clMatKhau.HeaderText = "Mật khẩu";
             this.clMatKhau.MinimumWidth = 8;
             this.clMatKhau.Name = "clMatKhau";
@@ -526,6 +538,7 @@ namespace DashBoar
             // clEmail
             // 
             this.clEmail.DataPropertyName = "Email";
+            this.clEmail.FillWeight = 94.43006F;
             this.clEmail.HeaderText = "Email";
             this.clEmail.MinimumWidth = 8;
             this.clEmail.Name = "clEmail";
@@ -587,16 +600,6 @@ namespace DashBoar
             this.radID.Text = "ID";
             this.radID.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(349, 556);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 32);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -607,6 +610,54 @@ namespace DashBoar
             this.label13.Size = new System.Drawing.Size(297, 38);
             this.label13.TabIndex = 9;
             this.label13.Text = "QUẢN LÍ NHÂN VIÊN";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnThoat);
+            this.groupBox1.Controls.Add(this.btnThem);
+            this.groupBox1.Controls.Add(this.btnSua);
+            this.groupBox1.Controls.Add(this.btnLamMoi);
+            this.groupBox1.Controls.Add(this.btnXoa);
+            this.groupBox1.Font = new System.Drawing.Font("Georgia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(29, 430);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1170, 111);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Chức năng";
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.Color.White;
+            this.btnThoat.FlatAppearance.BorderSize = 0;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.White;
+            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(935, 32);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(102, 62);
+            this.btnThoat.TabIndex = 12;
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.White;
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.Location = new System.Drawing.Point(106, 23);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(102, 71);
+            this.btnThem.TabIndex = 8;
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -640,20 +691,6 @@ namespace DashBoar
             this.btnLamMoi.UseVisualStyleBackColor = false;
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.Color.White;
-            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(106, 23);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(102, 71);
-            this.btnThem.TabIndex = 8;
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.Color.White;
@@ -670,45 +707,21 @@ namespace DashBoar
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.Color.White;
-            this.btnThoat.FlatAppearance.BorderSize = 0;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(935, 32);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(102, 62);
-            this.btnThoat.TabIndex = 12;
-            this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnThoat);
-            this.groupBox1.Controls.Add(this.btnThem);
-            this.groupBox1.Controls.Add(this.btnSua);
-            this.groupBox1.Controls.Add(this.btnLamMoi);
-            this.groupBox1.Controls.Add(this.btnXoa);
-            this.groupBox1.Font = new System.Drawing.Font("Georgia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(29, 430);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(1170, 111);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Chức năng";
-            // 
             // imglNhanVien
             // 
             this.imglNhanVien.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imglNhanVien.ImageSize = new System.Drawing.Size(16, 16);
             this.imglNhanVien.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(349, 556);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(52, 32);
+            this.button1.TabIndex = 8;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmThongTinNhanVien
             // 

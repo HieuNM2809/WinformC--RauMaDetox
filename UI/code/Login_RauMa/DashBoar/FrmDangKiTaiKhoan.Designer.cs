@@ -32,9 +32,7 @@ namespace DashBoar
             this.txtNhaplaiMatKhau = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.txtTenTruyCap = new System.Windows.Forms.TextBox();
-            this.txtHoTen = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,31 +46,24 @@ namespace DashBoar
             // 
             // txtNhaplaiMatKhau
             // 
-            this.txtNhaplaiMatKhau.Location = new System.Drawing.Point(241, 609);
+            this.txtNhaplaiMatKhau.Location = new System.Drawing.Point(241, 523);
             this.txtNhaplaiMatKhau.Name = "txtNhaplaiMatKhau";
             this.txtNhaplaiMatKhau.Size = new System.Drawing.Size(230, 26);
             this.txtNhaplaiMatKhau.TabIndex = 27;
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(241, 533);
+            this.txtMatKhau.Location = new System.Drawing.Point(241, 453);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(230, 26);
             this.txtMatKhau.TabIndex = 26;
             // 
             // txtTenTruyCap
             // 
-            this.txtTenTruyCap.Location = new System.Drawing.Point(241, 453);
+            this.txtTenTruyCap.Location = new System.Drawing.Point(241, 383);
             this.txtTenTruyCap.Name = "txtTenTruyCap";
             this.txtTenTruyCap.Size = new System.Drawing.Size(230, 26);
             this.txtTenTruyCap.TabIndex = 25;
-            // 
-            // txtHoTen
-            // 
-            this.txtHoTen.Location = new System.Drawing.Point(241, 380);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(230, 26);
-            this.txtHoTen.TabIndex = 24;
             // 
             // txtID
             // 
@@ -81,19 +72,6 @@ namespace DashBoar
             this.txtID.Size = new System.Drawing.Size(230, 26);
             this.txtID.TabIndex = 23;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(56, 380);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 26);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "Họ tên";
-            // 
             // btnThoat
             // 
             this.btnThoat.BackColor = System.Drawing.Color.White;
@@ -101,13 +79,14 @@ namespace DashBoar
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btnThoat.Location = new System.Drawing.Point(314, 695);
+            this.btnThoat.Location = new System.Drawing.Point(317, 574);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(251, 61);
             this.btnThoat.TabIndex = 35;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnXacNhan
             // 
@@ -116,7 +95,7 @@ namespace DashBoar
             this.btnXacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXacNhan.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btnXacNhan.Location = new System.Drawing.Point(44, 695);
+            this.btnXacNhan.Location = new System.Drawing.Point(31, 574);
             this.btnXacNhan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(227, 61);
@@ -131,7 +110,7 @@ namespace DashBoar
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(56, 609);
+            this.label5.Location = new System.Drawing.Point(56, 521);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(180, 26);
@@ -144,7 +123,7 @@ namespace DashBoar
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(56, 453);
+            this.label1.Location = new System.Drawing.Point(56, 381);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 26);
@@ -157,7 +136,7 @@ namespace DashBoar
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(56, 531);
+            this.label4.Location = new System.Drawing.Point(56, 453);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 26);
@@ -205,13 +184,11 @@ namespace DashBoar
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DashBoar.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(601, 769);
+            this.ClientSize = new System.Drawing.Size(601, 684);
             this.Controls.Add(this.txtNhaplaiMatKhau);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTenTruyCap);
-            this.Controls.Add(this.txtHoTen);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.label5);
@@ -235,9 +212,7 @@ namespace DashBoar
         private System.Windows.Forms.TextBox txtNhaplaiMatKhau;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.TextBox txtTenTruyCap;
-        private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnXacNhan;
         private System.Windows.Forms.Label label5;

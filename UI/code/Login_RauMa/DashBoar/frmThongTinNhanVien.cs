@@ -31,6 +31,8 @@ namespace DashBoar
             clLoaiNV.DisplayMember = "LoaiNV";
             clLoaiNV.ValueMember = "LoaiNV";
 
+            LayHinh();
+            
 
             dgvThongTinNhanVien.DataSource = _NhanVienBUS.LayDSNhanVien();
 
@@ -58,7 +60,7 @@ namespace DashBoar
                         IDNV = txtID.Text,
                         HoTen = txtHoTen.Text,
                         NgaySinh = dtpNgaySinh.Value,
-                        GioiTinh = radNam.Checked ? radNam.Text : radNu.Text,
+                        GioiTinh = ChonGioiTinh(),
 
                         ChucDanh = cbbChucDanh.Text,
                         LoaiNV = cbbLoaiNhanVien.Text,
@@ -126,6 +128,7 @@ namespace DashBoar
                 txtMatKhau.Text = dgvThongTinNhanVien.Rows[hang].Cells[8].Value.ToString();
                 txtEmail.Text = dgvThongTinNhanVien.Rows[hang].Cells[9].Value.ToString();
 
+
             }
             catch
             {
@@ -135,21 +138,19 @@ namespace DashBoar
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
-            //foreach (Control ctrTTNV in this.grTTNV.Controls)
-            //{
-            //    if (ctrTTNV is TextBox )
-            //    {
-            //        ctrTTNV.Text = "";
-            //    }
-            //}
-            //dtpNgaySinh.Value = DateTime.Now;
-            //chkTrangThai.CheckState = CheckState.Checked;
-            //cbbChucDanh.SelectedIndex = 0;
-            //cbbLoaiNhanVien.SelectedIndex = 0;
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Multiselect = false;
-            ofd.Filter = "Hinh Anh|*.jpg";
-            ofd.ShowDialog();
+            foreach (Control ctrTTNV in this.grTTNV.Controls)
+            {
+                if (ctrTTNV is TextBox)
+                {
+                    ctrTTNV.Text = "";
+                }
+            }
+            dtpNgaySinh.Value = DateTime.Now;
+            chkTrangThai.CheckState = CheckState.Checked;
+            cbbChucDanh.SelectedIndex = 0;
+            cbbLoaiNhanVien.SelectedIndex = 0;
+            picNhanVien.Image = null;
+
 
 
         }
@@ -198,7 +199,7 @@ namespace DashBoar
         {
             //Lam rong hai danh sach hinh
             imglNhanVien.Images.Clear();
-         
+
             //Doc danh sach hinh bo vao danh sach\
 
             //Lay thong tin thu muc
@@ -214,7 +215,8 @@ namespace DashBoar
                 Image im = Image.FromStream(ms);
 
                 imglNhanVien.Images.Add(f.Name, im); //Moi hinh anh luu kem khoa
-               
+
             }
         }
+    }
 }

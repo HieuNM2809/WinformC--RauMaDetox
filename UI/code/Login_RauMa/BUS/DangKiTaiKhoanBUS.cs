@@ -26,5 +26,15 @@ namespace BUS
         {
             return _NhanVienDAO.KiemTraMatKhau(MK);
         }
+
+        public bool KiemTraID(string IDNV)
+        {
+            return _NhanVienDAO.KiemTraNhanVien(IDNV);
+        }
+
+        public bool CapNhatNV(NhanVienDTO nv)
+        {
+            return _NhanVienDAO.CapNhatNV(nv);
+        }
     }
 }
