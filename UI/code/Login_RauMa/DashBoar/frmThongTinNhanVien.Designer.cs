@@ -58,20 +58,7 @@ namespace DashBoar
             this.label11 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnLamMoi = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
             this.dgvThongTinNhanVien = new System.Windows.Forms.DataGridView();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.radHoTen = new System.Windows.Forms.RadioButton();
-            this.radID = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
             this.clID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,14 +69,27 @@ namespace DashBoar
             this.clTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clMatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.radHoTen = new System.Windows.Forms.RadioButton();
+            this.radID = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnLamMoi = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.grTTNV.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.grHinhNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHinhNhanVien)).BeginInit();
             this.grTTT.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinNhanVien)).BeginInit();
             this.groupBox6.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grTTNV
@@ -372,7 +372,8 @@ namespace DashBoar
             this.cbbChucDanh.FormattingEnabled = true;
             this.cbbChucDanh.Items.AddRange(new object[] {
             "Nhân viên",
-            "Quản lí"});
+            "Quản lí",
+            ""});
             this.cbbChucDanh.Location = new System.Drawing.Point(165, 111);
             this.cbbChucDanh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbChucDanh.Name = "cbbChucDanh";
@@ -386,7 +387,8 @@ namespace DashBoar
             this.cbbLoaiNhanVien.FormattingEnabled = true;
             this.cbbLoaiNhanVien.Items.AddRange(new object[] {
             "Phục vụ",
-            "Pha chế"});
+            "Pha chế ",
+            ""});
             this.cbbLoaiNhanVien.Location = new System.Drawing.Point(165, 72);
             this.cbbLoaiNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbLoaiNhanVien.Name = "cbbLoaiNhanVien";
@@ -426,105 +428,10 @@ namespace DashBoar
             this.label6.TabIndex = 29;
             this.label6.Text = "Loại nhân viên:";
             // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.btnThoat);
-            this.groupBox5.Controls.Add(this.btnXoa);
-            this.groupBox5.Controls.Add(this.btnThem);
-            this.groupBox5.Controls.Add(this.btnLamMoi);
-            this.groupBox5.Controls.Add(this.btnSua);
-            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.ForeColor = System.Drawing.Color.White;
-            this.groupBox5.Location = new System.Drawing.Point(29, 432);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox5.Size = new System.Drawing.Size(1170, 92);
-            this.groupBox5.TabIndex = 3;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Chức năng";
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.Color.White;
-            this.btnThoat.FlatAppearance.BorderSize = 0;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(854, 20);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(102, 62);
-            this.btnThoat.TabIndex = 12;
-            this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.White;
-            this.btnXoa.FlatAppearance.BorderSize = 0;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(516, 19);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(102, 62);
-            this.btnXoa.TabIndex = 10;
-            this.btnXoa.UseVisualStyleBackColor = false;
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.Color.White;
-            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(146, 15);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(102, 71);
-            this.btnThem.TabIndex = 8;
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.BackColor = System.Drawing.Color.White;
-            this.btnLamMoi.FlatAppearance.BorderSize = 0;
-            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
-            this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
-            this.btnLamMoi.Location = new System.Drawing.Point(703, 20);
-            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(102, 62);
-            this.btnLamMoi.TabIndex = 11;
-            this.btnLamMoi.UseVisualStyleBackColor = false;
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.Color.White;
-            this.btnSua.FlatAppearance.BorderSize = 0;
-            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.Location = new System.Drawing.Point(324, 19);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(102, 62);
-            this.btnSua.TabIndex = 9;
-            this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
             // dgvThongTinNhanVien
             // 
             this.dgvThongTinNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvThongTinNhanVien.BackgroundColor = System.Drawing.Color.Green;
+            this.dgvThongTinNhanVien.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.dgvThongTinNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongTinNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clID,
@@ -539,14 +446,84 @@ namespace DashBoar
             this.clEmail});
             this.dgvThongTinNhanVien.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvThongTinNhanVien.GridColor = System.Drawing.Color.Green;
-            this.dgvThongTinNhanVien.Location = new System.Drawing.Point(0, 618);
+            this.dgvThongTinNhanVien.Location = new System.Drawing.Point(0, 613);
             this.dgvThongTinNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvThongTinNhanVien.Name = "dgvThongTinNhanVien";
             this.dgvThongTinNhanVien.RowHeadersWidth = 62;
             this.dgvThongTinNhanVien.RowTemplate.Height = 28;
-            this.dgvThongTinNhanVien.Size = new System.Drawing.Size(1215, 218);
+            this.dgvThongTinNhanVien.Size = new System.Drawing.Size(1215, 223);
             this.dgvThongTinNhanVien.TabIndex = 4;
             this.dgvThongTinNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinNhanVien_CellContentClick);
+            // 
+            // clID
+            // 
+            this.clID.DataPropertyName = "IDNV";
+            this.clID.HeaderText = "ID";
+            this.clID.MinimumWidth = 8;
+            this.clID.Name = "clID";
+            // 
+            // clHoTen
+            // 
+            this.clHoTen.DataPropertyName = "HoTen";
+            this.clHoTen.HeaderText = "Họ tên";
+            this.clHoTen.MinimumWidth = 8;
+            this.clHoTen.Name = "clHoTen";
+            // 
+            // clNgaySinh
+            // 
+            this.clNgaySinh.DataPropertyName = "NgaySinh";
+            this.clNgaySinh.HeaderText = "Ngày sinh";
+            this.clNgaySinh.MinimumWidth = 8;
+            this.clNgaySinh.Name = "clNgaySinh";
+            // 
+            // clGioiTinh
+            // 
+            this.clGioiTinh.DataPropertyName = "GioiTinh";
+            this.clGioiTinh.HeaderText = "Giới tính";
+            this.clGioiTinh.MinimumWidth = 8;
+            this.clGioiTinh.Name = "clGioiTinh";
+            // 
+            // clChucDanh
+            // 
+            this.clChucDanh.DataPropertyName = "ChucDanh";
+            this.clChucDanh.HeaderText = "Chức danh";
+            this.clChucDanh.MinimumWidth = 8;
+            this.clChucDanh.Name = "clChucDanh";
+            // 
+            // clLoaiNV
+            // 
+            this.clLoaiNV.DataPropertyName = "LoaiNV";
+            this.clLoaiNV.HeaderText = "Loại nhân viên";
+            this.clLoaiNV.MinimumWidth = 8;
+            this.clLoaiNV.Name = "clLoaiNV";
+            // 
+            // clSDT
+            // 
+            this.clSDT.DataPropertyName = "SDT";
+            this.clSDT.HeaderText = "SDT";
+            this.clSDT.MinimumWidth = 8;
+            this.clSDT.Name = "clSDT";
+            // 
+            // clTaiKhoan
+            // 
+            this.clTaiKhoan.DataPropertyName = "TaiKhoan";
+            this.clTaiKhoan.HeaderText = "Tài khoản";
+            this.clTaiKhoan.MinimumWidth = 8;
+            this.clTaiKhoan.Name = "clTaiKhoan";
+            // 
+            // clMatKhau
+            // 
+            this.clMatKhau.DataPropertyName = "MatKhau";
+            this.clMatKhau.HeaderText = "Mật khẩu";
+            this.clMatKhau.MinimumWidth = 8;
+            this.clMatKhau.Name = "clMatKhau";
+            // 
+            // clEmail
+            // 
+            this.clEmail.DataPropertyName = "Email";
+            this.clEmail.HeaderText = "Email";
+            this.clEmail.MinimumWidth = 8;
+            this.clEmail.Name = "clEmail";
             // 
             // label12
             // 
@@ -626,89 +603,115 @@ namespace DashBoar
             this.label13.TabIndex = 9;
             this.label13.Text = "QUẢN LÍ NHÂN VIÊN";
             // 
-            // clID
+            // btnSua
             // 
-            this.clID.DataPropertyName = "IDNV";
-            this.clID.HeaderText = "ID";
-            this.clID.MinimumWidth = 8;
-            this.clID.Name = "clID";
+            this.btnSua.BackColor = System.Drawing.Color.White;
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
+            this.btnSua.Location = new System.Drawing.Point(320, 23);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(102, 71);
+            this.btnSua.TabIndex = 9;
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // clHoTen
+            // btnLamMoi
             // 
-            this.clHoTen.DataPropertyName = "HoTen";
-            this.clHoTen.HeaderText = "Họ tên";
-            this.clHoTen.MinimumWidth = 8;
-            this.clHoTen.Name = "clHoTen";
+            this.btnLamMoi.BackColor = System.Drawing.Color.White;
+            this.btnLamMoi.FlatAppearance.BorderSize = 0;
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
+            this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
+            this.btnLamMoi.Location = new System.Drawing.Point(737, 27);
+            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(102, 67);
+            this.btnLamMoi.TabIndex = 11;
+            this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
-            // clNgaySinh
+            // btnThem
             // 
-            this.clNgaySinh.DataPropertyName = "NgaySinh";
-            this.clNgaySinh.HeaderText = "Ngày sinh";
-            this.clNgaySinh.MinimumWidth = 8;
-            this.clNgaySinh.Name = "clNgaySinh";
+            this.btnThem.BackColor = System.Drawing.Color.White;
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.Location = new System.Drawing.Point(106, 23);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(102, 71);
+            this.btnThem.TabIndex = 8;
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // clGioiTinh
+            // btnXoa
             // 
-            this.clGioiTinh.DataPropertyName = "GioiTinh";
-            this.clGioiTinh.HeaderText = "Giới tính";
-            this.clGioiTinh.MinimumWidth = 8;
-            this.clGioiTinh.Name = "clGioiTinh";
+            this.btnXoa.BackColor = System.Drawing.Color.White;
+            this.btnXoa.FlatAppearance.BorderSize = 0;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(542, 23);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(102, 71);
+            this.btnXoa.TabIndex = 10;
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // clChucDanh
+            // btnThoat
             // 
-            this.clChucDanh.DataPropertyName = "ChucDanh";
-            this.clChucDanh.HeaderText = "Chức danh";
-            this.clChucDanh.MinimumWidth = 8;
-            this.clChucDanh.Name = "clChucDanh";
+            this.btnThoat.BackColor = System.Drawing.Color.White;
+            this.btnThoat.FlatAppearance.BorderSize = 0;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.White;
+            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(935, 32);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(102, 62);
+            this.btnThoat.TabIndex = 12;
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // clLoaiNV
+            // groupBox1
             // 
-            this.clLoaiNV.DataPropertyName = "LoaiNV";
-            this.clLoaiNV.HeaderText = "Loại nhân viên";
-            this.clLoaiNV.MinimumWidth = 8;
-            this.clLoaiNV.Name = "clLoaiNV";
-            // 
-            // clSDT
-            // 
-            this.clSDT.DataPropertyName = "SDT";
-            this.clSDT.HeaderText = "SDT";
-            this.clSDT.MinimumWidth = 8;
-            this.clSDT.Name = "clSDT";
-            // 
-            // clTaiKhoan
-            // 
-            this.clTaiKhoan.DataPropertyName = "TaiKhoan";
-            this.clTaiKhoan.HeaderText = "Tài khoản";
-            this.clTaiKhoan.MinimumWidth = 8;
-            this.clTaiKhoan.Name = "clTaiKhoan";
-            // 
-            // clMatKhau
-            // 
-            this.clMatKhau.DataPropertyName = "MatKhau";
-            this.clMatKhau.HeaderText = "Mật khẩu";
-            this.clMatKhau.MinimumWidth = 8;
-            this.clMatKhau.Name = "clMatKhau";
-            // 
-            // clEmail
-            // 
-            this.clEmail.DataPropertyName = "Email";
-            this.clEmail.HeaderText = "Email";
-            this.clEmail.MinimumWidth = 8;
-            this.clEmail.Name = "clEmail";
+            this.groupBox1.Controls.Add(this.btnThoat);
+            this.groupBox1.Controls.Add(this.btnThem);
+            this.groupBox1.Controls.Add(this.btnSua);
+            this.groupBox1.Controls.Add(this.btnLamMoi);
+            this.groupBox1.Controls.Add(this.btnXoa);
+            this.groupBox1.Font = new System.Drawing.Font("Georgia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(29, 430);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1170, 111);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Chức năng";
             // 
             // frmThongTinNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Green;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(1215, 836);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.dgvThongTinNhanVien);
-            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.grTTT);
             this.Controls.Add(this.grHinhNhanVien);
             this.Controls.Add(this.grTTNV);
@@ -725,10 +728,10 @@ namespace DashBoar
             ((System.ComponentModel.ISupportInitialize)(this.picHinhNhanVien)).EndInit();
             this.grTTT.ResumeLayout(false);
             this.grTTT.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinNhanVien)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -764,12 +767,6 @@ namespace DashBoar
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnLamMoi;
-        private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.DataGridView dgvThongTinNhanVien;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtTimKiem;
@@ -788,5 +785,11 @@ namespace DashBoar
         private System.Windows.Forms.DataGridViewTextBoxColumn clTaiKhoan;
         private System.Windows.Forms.DataGridViewTextBoxColumn clMatKhau;
         private System.Windows.Forms.DataGridViewTextBoxColumn clEmail;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnLamMoi;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

@@ -47,14 +47,15 @@ namespace DashBoar
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tàiKhoảnToolStripMenuItem,
             this.nhânViênToolStripMenuItem,
             this.ChucNang});
-            this.menuStrip1.Location = new System.Drawing.Point(78, 116);
+            this.menuStrip1.Location = new System.Drawing.Point(78, 172);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(409, 34);
+            this.menuStrip1.Size = new System.Drawing.Size(589, 34);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -110,16 +111,16 @@ namespace DashBoar
             // báoCáoToolStripMenuItem
             // 
             this.báoCáoToolStripMenuItem.Name = "báoCáoToolStripMenuItem";
-            this.báoCáoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.báoCáoToolStripMenuItem.Size = new System.Drawing.Size(195, 34);
             this.báoCáoToolStripMenuItem.Text = "Báo cáo";
             // 
             // panel_show
             // 
             this.panel_show.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_show.Location = new System.Drawing.Point(78, 165);
+            this.panel_show.Location = new System.Drawing.Point(78, 227);
             this.panel_show.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_show.Name = "panel_show";
-            this.panel_show.Size = new System.Drawing.Size(1354, 871);
+            this.panel_show.Size = new System.Drawing.Size(1354, 809);
             this.panel_show.TabIndex = 19;
             // 
             // QL_NhanVien

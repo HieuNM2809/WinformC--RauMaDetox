@@ -15,7 +15,7 @@ namespace DashBoar
             InitializeComponent();
             // Đổ dữ liệu vào combobox
             cbbChucDanh.SelectedIndex = 0;
-            cbbLoaiNhanVien.SelectedItem = 0;
+            cbbLoaiNhanVien.SelectedIndex = 0;
 
         }
 
@@ -56,7 +56,8 @@ namespace DashBoar
                         IDNV = txtID.Text,
                         HoTen = txtHoTen.Text,
                         NgaySinh = dtpNgaySinh.Value,
-                        GioiTinh = radNam.Text,
+                        GioiTinh = radNam.Checked ? radNam.Text : radNu.Text,
+
                         ChucDanh = cbbChucDanh.Text,
                         LoaiNV = cbbLoaiNhanVien.Text,
                         SDT = txtSDT.Text,
@@ -146,5 +147,32 @@ namespace DashBoar
 
 
         }
+
+      
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            NhanVienDTO nv = new NhanVienDTO
+            {
+                IDNV = txtID.Text,
+                HoTen = txtHoTen.Text,
+                NgaySinh = dtpNgaySinh.Value,
+                GioiTinh = radNam.Text,
+                ChucDanh = cbbChucDanh.Text,
+                LoaiNV = cbbLoaiNhanVien.Text,
+                SDT = txtSDT.Text,
+                TaiKhoan = txtTaiKhoan.Text,
+                MatKhau = txtMatKhau.Text,
+                Email = txtEmail.Text
+            };
+            if (_NhanVienBUS.XoaNV(nv))
+            {
+                MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmThongTinNhanVien_Load(sender, e);
+            }
+            else MessageBox.Show("Xóa thât bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        
+        
     }
 }
