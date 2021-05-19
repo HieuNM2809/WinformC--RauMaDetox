@@ -30,7 +30,7 @@ namespace DashBoar
         private void QL_SanPham_Load(object sender, EventArgs e,string a)
         {
             DTGV_xem.DataSource = _sanpham.LayDSsanpham();
-            //dtgv_xoa.DataSource = _sanpham.laytheoloai(a);
+            dtgv_xoa.DataSource = _sanpham.LayDSsanpham();
             //DTGV_xem.DataSource = _sanpham.laytheoloai(a);
             dtgv_loaisp.DataSource = _dsloai.LayDSloaisp();
         }
@@ -156,7 +156,7 @@ namespace DashBoar
                 Tensp = tbx_xoa_tenmon.Text,
                 Giasp = Convert.ToInt32(tbx_xoa_gia.Text),
                 Mota = tbx_xoa_mota.Text,
-                MaLoaisp = cbb_xoa_loai.Text,
+                MaLoaisp = cbb_xoa_loai.Text,   
                 Trangthaisp=true
             };
             if (_sanpham.SuaSP (sanpham))
@@ -165,6 +165,11 @@ namespace DashBoar
                 QL_SanPham_Load_1(sender, e);
             }
             else MessageBox.Show("Cập nhật thât bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

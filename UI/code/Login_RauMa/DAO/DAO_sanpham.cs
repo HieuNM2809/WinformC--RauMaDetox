@@ -153,7 +153,25 @@ namespace DAO
                 return false;
             }
         }
-
+        public bool xoaSP(DTO_sanpham sp)
+        {
+            try
+            {
+                SanPham SP = qlrauma.SanPhams.SingleOrDefault(u => u.MaSp == sp.Masp && u.TenSp == sp.Tensp && u.MaLoaiSp == sp.MaLoaisp
+                  && u.MoTa == sp.Mota && u.TrangThai == false);
+                SP.MaSp = sp.Masp;
+                SP.TenSp = sp.Tensp;
+                SP.MaLoaiSp = sp.MaLoaisp;
+                SP.GiaTien = sp.Giasp;
+                SP.TrangThai = sp.Trangthaisp;
+                qlrauma.SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
     }
 
 }

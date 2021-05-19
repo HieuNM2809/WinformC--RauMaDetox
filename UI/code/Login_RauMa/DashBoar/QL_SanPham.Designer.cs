@@ -563,7 +563,7 @@
             this.tp_view.Location = new System.Drawing.Point(4, 34);
             this.tp_view.Name = "tp_view";
             this.tp_view.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_view.Size = new System.Drawing.Size(1289, 836);
+            this.tp_view.Size = new System.Drawing.Size(1302, 836);
             this.tp_view.TabIndex = 0;
             this.tp_view.Text = "Sản phẩm theo loại";
             // 
@@ -889,12 +889,13 @@
             this.tp_qlsp.Controls.Add(this.tp_them);
             this.tp_qlsp.Controls.Add(this.tp_suaxoa);
             this.tp_qlsp.Controls.Add(this.tp_loaisp);
+            this.tp_qlsp.Dock = System.Windows.Forms.DockStyle.Top;
             this.tp_qlsp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tp_qlsp.ItemSize = new System.Drawing.Size(100, 30);
-            this.tp_qlsp.Location = new System.Drawing.Point(1, 1);
+            this.tp_qlsp.Location = new System.Drawing.Point(0, 0);
             this.tp_qlsp.Name = "tp_qlsp";
             this.tp_qlsp.SelectedIndex = 0;
-            this.tp_qlsp.Size = new System.Drawing.Size(1297, 874);
+            this.tp_qlsp.Size = new System.Drawing.Size(1310, 874);
             this.tp_qlsp.TabIndex = 0;
             // 
             // tp_suaxoa
@@ -1005,6 +1006,7 @@
             this.btn_xoa.Text = "Xóa";
             this.btn_xoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_xoa.UseVisualStyleBackColor = false;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // groupBox3
             // 
@@ -1295,7 +1297,7 @@
             this.tp_loaisp.Location = new System.Drawing.Point(4, 34);
             this.tp_loaisp.Name = "tp_loaisp";
             this.tp_loaisp.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_loaisp.Size = new System.Drawing.Size(1289, 836);
+            this.tp_loaisp.Size = new System.Drawing.Size(1302, 849);
             this.tp_loaisp.TabIndex = 7;
             this.tp_loaisp.Text = "Quản lý loại sản phẩm";
             // 
