@@ -14,6 +14,7 @@ using DTO;
 
 namespace DashBoar
 {
+    
     public partial class QL_SanPham : Form
     {     
         private BUS_sanpham _sanpham= new BUS_sanpham();
@@ -168,6 +169,11 @@ namespace DashBoar
         }
 
         private void btn_xoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tp_view_Click(object sender, EventArgs e)
         {
 
         }
