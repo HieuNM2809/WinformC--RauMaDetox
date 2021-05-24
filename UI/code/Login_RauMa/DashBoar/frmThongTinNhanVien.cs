@@ -197,26 +197,26 @@ namespace DashBoar
 
         private void LayHinh()
         {
-            //Lam rong hai danh sach hinh
-            imglNhanVien.Images.Clear();
+            ////Lam rong hai danh sach hinh
+            //imglNhanVien.Images.Clear();
 
-            //Doc danh sach hinh bo vao danh sach\
+            ////Doc danh sach hinh bo vao danh sach\
 
-            //Lay thong tin thu muc
-            DirectoryInfo di = new DirectoryInfo(str_Hinh);
-            FileInfo[] fis = di.GetFiles("*.jpg");
+            ////Lay thong tin thu muc
+            //DirectoryInfo di = new DirectoryInfo(str_Hinh);
+            //FileInfo[] fis = di.GetFiles("*.jpg");
 
-            //Doc tung File bo vao danh sach hinh
-            foreach (FileInfo f in fis)
-            {
-                byte[] byteHA = File.ReadAllBytes(f.FullName);
-                MemoryStream ms = new MemoryStream(byteHA);
+            ////Doc tung File bo vao danh sach hinh
+            //foreach (FileInfo f in fis)
+            //{
+            //    byte[] byteHA = File.ReadAllBytes(f.FullName);
+            //    MemoryStream ms = new MemoryStream(byteHA);
 
-                Image im = Image.FromStream(ms);
+            //    Image im = Image.FromStream(ms);
 
-                imglNhanVien.Images.Add(f.Name, im); //Moi hinh anh luu kem khoa
+            //    imglNhanVien.Images.Add(f.Name, im); //Moi hinh anh luu kem khoa
 
             }
         }
     }
-}
+
