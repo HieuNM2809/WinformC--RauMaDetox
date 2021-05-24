@@ -117,7 +117,7 @@ namespace DashBoar
             this.groupBox13.Controls.Add(this.btn_loaisp_xoa);
             this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox13.ForeColor = System.Drawing.Color.White;
-            this.groupBox13.Location = new System.Drawing.Point(23, 438);
+            this.groupBox13.Location = new System.Drawing.Point(23, 412);
             this.groupBox13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -157,10 +157,10 @@ namespace DashBoar
             this.btn_loaisp_nhaplai.ForeColor = System.Drawing.Color.White;
             this.btn_loaisp_nhaplai.Image = global::DashBoar.Properties.Resources.loop2;
             this.btn_loaisp_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_loaisp_nhaplai.Location = new System.Drawing.Point(836, 65);
+            this.btn_loaisp_nhaplai.Location = new System.Drawing.Point(818, 65);
             this.btn_loaisp_nhaplai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_loaisp_nhaplai.Name = "btn_loaisp_nhaplai";
-            this.btn_loaisp_nhaplai.Size = new System.Drawing.Size(160, 75);
+            this.btn_loaisp_nhaplai.Size = new System.Drawing.Size(182, 75);
             this.btn_loaisp_nhaplai.TabIndex = 132;
             this.btn_loaisp_nhaplai.Text = "Nhập lại";
             this.btn_loaisp_nhaplai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -228,12 +228,14 @@ namespace DashBoar
             // 
             // dgvQuyen
             // 
+            this.dgvQuyen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvQuyen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvQuyen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuyen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clMaQuyen,
             this.clLoaiQuyen});
-            this.dgvQuyen.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvQuyen.Location = new System.Drawing.Point(0, 612);
             this.dgvQuyen.Name = "dgvQuyen";
             this.dgvQuyen.RowHeadersWidth = 62;

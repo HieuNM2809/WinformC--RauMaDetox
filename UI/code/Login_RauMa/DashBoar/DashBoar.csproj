@@ -115,6 +115,9 @@
     <EmbeddedResource Include="FrmDangKiTaiKhoan.resx">
       <DependentUpon>FrmDangKiTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDoiMatKhau.en.resx">
+      <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDoiMatKhau.resx">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>

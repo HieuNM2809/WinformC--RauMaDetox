@@ -48,28 +48,28 @@ namespace DashBoar
             // 
             this.txtNhaplaiMatKhau.Location = new System.Drawing.Point(241, 523);
             this.txtNhaplaiMatKhau.Name = "txtNhaplaiMatKhau";
-            this.txtNhaplaiMatKhau.Size = new System.Drawing.Size(230, 26);
+            this.txtNhaplaiMatKhau.Size = new System.Drawing.Size(412, 26);
             this.txtNhaplaiMatKhau.TabIndex = 27;
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(241, 453);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(230, 26);
+            this.txtMatKhau.Size = new System.Drawing.Size(412, 26);
             this.txtMatKhau.TabIndex = 26;
             // 
             // txtTenTruyCap
             // 
             this.txtTenTruyCap.Location = new System.Drawing.Point(241, 383);
             this.txtTenTruyCap.Name = "txtTenTruyCap";
-            this.txtTenTruyCap.Size = new System.Drawing.Size(230, 26);
+            this.txtTenTruyCap.Size = new System.Drawing.Size(412, 26);
             this.txtTenTruyCap.TabIndex = 25;
             // 
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(241, 312);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(230, 26);
+            this.txtID.Size = new System.Drawing.Size(412, 26);
             this.txtID.TabIndex = 23;
             // 
             // btnThoat
@@ -79,7 +79,7 @@ namespace DashBoar
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btnThoat.Location = new System.Drawing.Point(317, 574);
+            this.btnThoat.Location = new System.Drawing.Point(446, 632);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(251, 61);
@@ -95,7 +95,7 @@ namespace DashBoar
             this.btnXacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXacNhan.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btnXacNhan.Location = new System.Drawing.Point(31, 574);
+            this.btnXacNhan.Location = new System.Drawing.Point(29, 632);
             this.btnXacNhan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(227, 61);
@@ -161,7 +161,7 @@ namespace DashBoar
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.label3.Location = new System.Drawing.Point(164, 185);
+            this.label3.Location = new System.Drawing.Point(235, 169);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(271, 31);
             this.label3.TabIndex = 29;
@@ -171,7 +171,7 @@ namespace DashBoar
             // 
             this.picLogo.BackgroundImage = global::DashBoar.Properties.Resources.logoRauMa2;
             this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picLogo.Location = new System.Drawing.Point(160, 30);
+            this.picLogo.Location = new System.Drawing.Point(222, 13);
             this.picLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(284, 125);
@@ -184,7 +184,7 @@ namespace DashBoar
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DashBoar.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(601, 684);
+            this.ClientSize = new System.Drawing.Size(731, 706);
             this.Controls.Add(this.txtNhaplaiMatKhau);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTenTruyCap);

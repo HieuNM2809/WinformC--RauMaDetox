@@ -51,201 +51,124 @@ namespace DashBoar
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
+            resources.ApplyResources(this.label5, "label5");
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(37, 544);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(180, 26);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Gõ lại mật khẩu";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
+            resources.ApplyResources(this.label4, "label4");
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(37, 465);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 26);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Mật khẩu mới";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
+            resources.ApplyResources(this.label2, "label2");
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(37, 398);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 26);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Mật khẩu cũ";
             // 
             // txtMatKhauCu
             // 
             this.txtMatKhauCu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.txtMatKhauCu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMatKhauCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.txtMatKhauCu, "txtMatKhauCu");
             this.txtMatKhauCu.ForeColor = System.Drawing.Color.White;
-            this.txtMatKhauCu.Location = new System.Drawing.Point(218, 396);
-            this.txtMatKhauCu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMatKhauCu.Name = "txtMatKhauCu";
-            this.txtMatKhauCu.PasswordChar = '*';
-            this.txtMatKhauCu.Size = new System.Drawing.Size(295, 24);
-            this.txtMatKhauCu.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            resources.ApplyResources(this.label1, "label1");
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(37, 322);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 26);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tên truy cập";
             // 
             // txtMatKhauMoi
             // 
             this.txtMatKhauMoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.txtMatKhauMoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMatKhauMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.txtMatKhauMoi, "txtMatKhauMoi");
             this.txtMatKhauMoi.ForeColor = System.Drawing.Color.White;
-            this.txtMatKhauMoi.Location = new System.Drawing.Point(218, 464);
-            this.txtMatKhauMoi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
-            this.txtMatKhauMoi.PasswordChar = '*';
-            this.txtMatKhauMoi.Size = new System.Drawing.Size(295, 24);
-            this.txtMatKhauMoi.TabIndex = 1;
             // 
             // txtTenDangNhap
             // 
             this.txtTenDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.txtTenDangNhap.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.txtTenDangNhap, "txtTenDangNhap");
             this.txtTenDangNhap.ForeColor = System.Drawing.Color.White;
-            this.txtTenDangNhap.Location = new System.Drawing.Point(218, 319);
-            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(295, 24);
-            this.txtTenDangNhap.TabIndex = 1;
             // 
             // txtNhapLaiMKM
             // 
             this.txtNhapLaiMKM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.txtNhapLaiMKM.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNhapLaiMKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.txtNhapLaiMKM, "txtNhapLaiMKM");
             this.txtNhapLaiMKM.ForeColor = System.Drawing.Color.White;
-            this.txtNhapLaiMKM.Location = new System.Drawing.Point(219, 541);
-            this.txtNhapLaiMKM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNhapLaiMKM.Name = "txtNhapLaiMKM";
-            this.txtNhapLaiMKM.PasswordChar = '*';
-            this.txtNhapLaiMKM.Size = new System.Drawing.Size(294, 24);
-            this.txtNhapLaiMKM.TabIndex = 1;
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(218, 348);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(295, 4);
-            this.panel1.TabIndex = 2;
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(218, 426);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(295, 4);
-            this.panel2.TabIndex = 3;
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(218, 490);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(295, 4);
-            this.panel3.TabIndex = 3;
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(218, 569);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(295, 4);
-            this.panel4.TabIndex = 3;
             // 
             // picLogo
             // 
             this.picLogo.BackgroundImage = global::DashBoar.Properties.Resources.logoRauMa2;
-            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picLogo.Location = new System.Drawing.Point(127, 15);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            resources.ApplyResources(this.picLogo, "picLogo");
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(284, 125);
-            this.picLogo.TabIndex = 4;
             this.picLogo.TabStop = false;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label3, "label3");
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.label3.Location = new System.Drawing.Point(174, 172);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(207, 31);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "ĐỔI MẬT KHẨU";
             // 
             // btnXacNhan
             // 
             this.btnXacNhan.BackColor = System.Drawing.Color.White;
             this.btnXacNhan.FlatAppearance.BorderSize = 0;
-            this.btnXacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXacNhan.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.btnXacNhan, "btnXacNhan");
             this.btnXacNhan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btnXacNhan.Location = new System.Drawing.Point(28, 608);
-            this.btnXacNhan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(227, 61);
-            this.btnXacNhan.TabIndex = 6;
-            this.btnXacNhan.Text = "Xác Nhận";
             this.btnXacNhan.UseVisualStyleBackColor = false;
             this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // btnThoat
             // 
             this.btnThoat.BackColor = System.Drawing.Color.White;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.FlatAppearance.BorderSize = 0;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.btnThoat, "btnThoat");
             this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btnThoat.Location = new System.Drawing.Point(262, 608);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(251, 61);
-            this.btnThoat.TabIndex = 7;
-            this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.button2_Click);
             // 
             // FrmDoiMatKhau
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::DashBoar.Properties.Resources.background;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(540, 696);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.label3);
@@ -264,10 +187,7 @@ namespace DashBoar
             this.Controls.Add(this.label2);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmDoiMatKhau";
-            this.Text = "FrmDoiMatKhau";
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

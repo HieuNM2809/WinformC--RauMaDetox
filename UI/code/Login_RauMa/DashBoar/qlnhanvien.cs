@@ -32,6 +32,7 @@ namespace DashBoar
         private void đăngKíTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmDangKiTaiKhoan dk = new FrmDangKiTaiKhoan();
+            
             panel_show.Show();
             panel_show.Controls.Clear();
             dk.TopLevel = false;
@@ -43,11 +44,13 @@ namespace DashBoar
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmDoiMatKhau dk = new FrmDoiMatKhau();
+            
             panel_show.Show();
             panel_show.Controls.Clear();
             dk.TopLevel = false;
             dk.Dock = DockStyle.None;
             panel_show.Controls.Add(dk);
+
             dk.Show();
         }
 
