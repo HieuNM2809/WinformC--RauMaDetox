@@ -91,6 +91,18 @@
     <Compile Include="SanPham.cs">
       <DependentUpon>QLRauMaEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>QLRauMaEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>QLRauMaEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>QLRauMaEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="theoloai_Result.cs">
+      <DependentUpon>QLRauMaEntity.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">

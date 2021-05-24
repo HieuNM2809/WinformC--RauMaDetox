@@ -18,7 +18,6 @@ namespace DAO
         public NhanVien()
         {
             this.HoaDons = new HashSet<HoaDon>();
-            this.CTPhanQuyens = new HashSet<CTPhanQuyen>();
         }
     
         public string IDNV { get; set; }
@@ -33,9 +32,8 @@ namespace DAO
         public string Email { get; set; }
         public Nullable<short> TrangThai { get; set; }
     
+        public virtual CTPhanQuyen CTPhanQuyen { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CTPhanQuyen> CTPhanQuyens { get; set; }
     }
 }

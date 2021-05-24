@@ -14,7 +14,7 @@ namespace DAO
 
         private SqlConnection _conn = new SqlConnection(_connecstring);
 
-        ql_raumaEntities qlrauma = new ql_raumaEntities();
+        ql_raumaEntities1 qlrauma = new ql_raumaEntities1();
 
         public List<NhanVienDTO> LayDSNhanVien()
         {

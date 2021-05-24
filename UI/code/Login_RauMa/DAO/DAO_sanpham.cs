@@ -13,12 +13,12 @@ namespace DAO
         //CHỈNH LẠI TƯƠNG TÁC BẰNG ENTYTIES NHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 
-        ql_raumaEntities qlrauma = new ql_raumaEntities();
+        ql_raumaEntities1 qlrauma = new ql_raumaEntities1();
 
         public List<DTO_sanpham> LayDSSanpham()
         {
             List<DTO_sanpham> lssanpham = new List<DTO_sanpham>();
-            lssanpham = qlrauma.SanPhams.Where(v => v.TrangThai == true).Select(u => new DTO_sanpham
+            lssanpham = qlrauma.SanPhams.Where(v => v.TrangThai == 1).Select(u => new DTO_sanpham
 
             {
                 Masp = u.MaSp,
@@ -129,7 +129,7 @@ namespace DAO
             SP.GiaTien = sp.Giasp;
             SP.MoTa = sp.Mota;
             SP.TenSp = sp.Tensp;
-            SP.TrangThai = true;
+            SP.TrangThai = 1;
             SanPham sanphamEF = qlrauma.SanPhams.Add(SP);
             qlrauma.SaveChanges();
             return sanphamEF.MaSp != "" ;
@@ -139,12 +139,12 @@ namespace DAO
             try
             {
                 SanPham SP = qlrauma.SanPhams.SingleOrDefault(u => u.MaSp == sp.Masp && u.TenSp == sp.Tensp && u.MaLoaiSp == sp.MaLoaisp
-                  && u.MoTa == sp.Mota && u.TrangThai == true);
+                  && u.MoTa == sp.Mota && u.TrangThai == 1);
                 SP.MaSp = sp.Masp;
                 SP.TenSp = sp.Tensp;
                 SP.MaLoaiSp = sp.MaLoaisp;
                 SP.GiaTien = sp.Giasp;
-                SP.TrangThai = sp.Trangthaisp;
+                SP.TrangThai = 1;
                 qlrauma.SaveChanges();
                 return true;
             }
@@ -158,12 +158,12 @@ namespace DAO
             try
             {
                 SanPham SP = qlrauma.SanPhams.SingleOrDefault(u => u.MaSp == sp.Masp && u.TenSp == sp.Tensp && u.MaLoaiSp == sp.MaLoaisp
-                  && u.MoTa == sp.Mota && u.TrangThai == false);
+                  && u.MoTa == sp.Mota && u.TrangThai == 1);
                 SP.MaSp = sp.Masp;
                 SP.TenSp = sp.Tensp;
                 SP.MaLoaiSp = sp.MaLoaisp;
                 SP.GiaTien = sp.Giasp;
-                SP.TrangThai = sp.Trangthaisp;
+                SP.TrangThai = 0;
                 qlrauma.SaveChanges();
                 return true;
             }

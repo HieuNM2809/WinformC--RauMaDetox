@@ -29,13 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHoaDon));
-            this.dgvHoaDon = new System.Windows.Forms.DataGridView();
-            this.IDHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colIDNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnThoat = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -46,47 +41,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtIDNhanVien = new System.Windows.Forms.TextBox();
+            this.dgvHoaDon = new System.Windows.Forms.DataGridView();
+            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIDNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNgayLapHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dgvHoaDon
-            // 
-            this.dgvHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDHoaDon,
-            this.colIDNhanVien,
-            this.colNgayLap});
-            this.dgvHoaDon.Location = new System.Drawing.Point(0, 419);
-            this.dgvHoaDon.Name = "dgvHoaDon";
-            this.dgvHoaDon.RowHeadersWidth = 51;
-            this.dgvHoaDon.RowTemplate.Height = 24;
-            this.dgvHoaDon.Size = new System.Drawing.Size(987, 222);
-            this.dgvHoaDon.TabIndex = 0;
-            // 
-            // IDHoaDon
-            // 
-            this.IDHoaDon.DataPropertyName = "id";
-            this.IDHoaDon.HeaderText = "Mã Hóa Đơn";
-            this.IDHoaDon.MinimumWidth = 6;
-            this.IDHoaDon.Name = "IDHoaDon";
-            // 
-            // colIDNhanVien
-            // 
-            this.colIDNhanVien.DataPropertyName = "idnhanvien";
-            this.colIDNhanVien.HeaderText = "Mã Nhân Viên";
-            this.colIDNhanVien.MinimumWidth = 6;
-            this.colIDNhanVien.Name = "colIDNhanVien";
-            // 
-            // colNgayLap
-            // 
-            this.colNgayLap.DataPropertyName = "ngaylaphoadon";
-            this.colNgayLap.HeaderText = "Ngày Lập";
-            this.colNgayLap.MinimumWidth = 6;
-            this.colNgayLap.Name = "colNgayLap";
             // 
             // panel3
             // 
@@ -110,22 +73,6 @@
             this.label7.Size = new System.Drawing.Size(204, 25);
             this.label7.TabIndex = 17;
             this.label7.Text = "QUẢN LÍ HÓA ĐƠN";
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            this.btnThoat.FlatAppearance.BorderSize = 0;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btnThoat.Image = global::DashBoar.Properties.Resources.exits1;
-            this.btnThoat.Location = new System.Drawing.Point(695, 349);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(282, 61);
-            this.btnThoat.TabIndex = 22;
-            this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnTimKiem
             // 
@@ -275,18 +222,71 @@
             this.txtIDNhanVien.Size = new System.Drawing.Size(155, 21);
             this.txtIDNhanVien.TabIndex = 24;
             // 
+            // dgvHoaDon
+            // 
+            this.dgvHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colID,
+            this.colIDNV,
+            this.colNgayLapHoaDon,
+            this.colTrangThai});
+            this.dgvHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvHoaDon.Location = new System.Drawing.Point(0, 0);
+            this.dgvHoaDon.Name = "dgvHoaDon";
+            this.dgvHoaDon.RowHeadersWidth = 51;
+            this.dgvHoaDon.RowTemplate.Height = 24;
+            this.dgvHoaDon.Size = new System.Drawing.Size(987, 269);
+            this.dgvHoaDon.TabIndex = 25;
+            // 
+            // colID
+            // 
+            this.colID.DataPropertyName = "id";
+            this.colID.HeaderText = "ID";
+            this.colID.MinimumWidth = 6;
+            this.colID.Name = "colID";
+            // 
+            // colIDNV
+            // 
+            this.colIDNV.DataPropertyName = "idnhanvien";
+            this.colIDNV.HeaderText = "ID Nhân Viên";
+            this.colIDNV.MinimumWidth = 6;
+            this.colIDNV.Name = "colIDNV";
+            // 
+            // colNgayLapHoaDon
+            // 
+            this.colNgayLapHoaDon.DataPropertyName = "ngaylaphoadon";
+            this.colNgayLapHoaDon.HeaderText = "Ngày Lập Hóa Đơn";
+            this.colNgayLapHoaDon.MinimumWidth = 6;
+            this.colNgayLapHoaDon.Name = "colNgayLapHoaDon";
+            // 
+            // colTrangThai
+            // 
+            this.colTrangThai.DataPropertyName = "trangthai";
+            this.colTrangThai.HeaderText = "Trạng Thái";
+            this.colTrangThai.MinimumWidth = 6;
+            this.colTrangThai.Name = "colTrangThai";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dgvHoaDon);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 369);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(987, 269);
+            this.panel1.TabIndex = 26;
+            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(987, 638);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtIDNhanVien);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.dgvHoaDon);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCapNhat);
@@ -303,18 +303,17 @@
             this.Text = "Quản Lí Hóa Đơn";
             this.Load += new System.EventHandler(this.frmHoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvHoaDon;
         private System.Windows.Forms.DateTimePicker dtPNgayLap;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtIDHoaDon;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Label label7;
@@ -323,8 +322,11 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtIDNhanVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDHoaDon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colIDNhanVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayLap;
+        private System.Windows.Forms.DataGridView dgvHoaDon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIDNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayLapHoaDon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTrangThai;
+        private System.Windows.Forms.Panel panel1;
     }
 }

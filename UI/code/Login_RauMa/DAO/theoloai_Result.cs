@@ -10,17 +10,15 @@
 namespace DAO
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class CTPhanQuyen
+    public partial class theoloai_Result
     {
-        public string IDNV { get; set; }
-        public string IDquyen { get; set; }
-        public string Taikhoan { get; set; }
-        public string LoaiQuyen { get; set; }
+        public string MaSp { get; set; }
+        public string TenSp { get; set; }
+        public string MaLoaiSp { get; set; }
+        public Nullable<decimal> GiaTien { get; set; }
+        public string MoTa { get; set; }
+        public byte[] Hinh { get; set; }
         public Nullable<short> TrangThai { get; set; }
-    
-        public virtual NhanVien NhanVien { get; set; }
-        public virtual PhanQuyen PhanQuyen { get; set; }
     }
 }

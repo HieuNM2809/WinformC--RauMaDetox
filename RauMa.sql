@@ -102,3 +102,17 @@ go
 alter table HoaDon
 add constraint FK_HoaDon_NhanVien foreign key (IDNV) references NhanVien(IDNV)
 go
+
+--PROCEDURE--
+
+CREATE PROCEDURE THEMHD
+(
+	@idhd nvarchar(3),
+	@idnv nvarchar(3),
+	@ngaylap datetime
+)
+AS
+BEGIN 
+	INSERT INTO HoaDon(IDHoaDon,IDNV,NgayLapHoaDon,TrangThai) VALUES(@idhd,@idnv,@ngaylap,1)
+END
+

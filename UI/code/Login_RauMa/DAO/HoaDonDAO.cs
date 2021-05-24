@@ -10,13 +10,27 @@ namespace DAO
     public class HoaDonDAO
     {
 
-        ql_raumaEntities qlrauma = new ql_raumaEntities();
+        private ql_raumaEntities1 qlrauma = new ql_raumaEntities1();
         public List<HoaDonDTO> LayDSHD()
         {
             List<HoaDonDTO> lstHoaDon = new List<HoaDonDTO>();
-
+            lstHoaDon = qlrauma.HoaDons.Where(v => v.TrangThai == 1).
+                Select(
+                u => new HoaDonDTO
+                {
+                    id = u.IDHoaDon,
+                    idnhanvien = u.IDNV,
+                    ngaylaphoadon = u.NgayLapHoaDon.Value,
+                    trangthai = 1
+                }
+                ).ToList();
             return lstHoaDon;
         }
-        
+        public bool ThemHD(HoaDonDTO hd)
+        {
+            int temp = qlrauma.THEMHD(hd.id, hd.idnhanvien, hd.ngaylaphoadon);
+            qlrauma.SaveChanges();
+            return temp>0;
+        }        
     } 
 }
