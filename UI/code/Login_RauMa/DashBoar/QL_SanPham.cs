@@ -59,9 +59,9 @@ namespace DashBoar
         //xử lý tap xem
         private void DTGV_xem_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridViewRow row = this.DTGV_xem.Rows[e.RowIndex];
             if(e.RowIndex>=0)
             {
-                DataGridViewRow row = this.DTGV_xem.Rows[e.RowIndex];
                 lbl_mamon.Text = row.Cells[0].Value.ToString();
                 lbl_tenmon.Text = row.Cells[1].Value.ToString();
                 lbl_loai.Text = row.Cells[2].Value.ToString();
