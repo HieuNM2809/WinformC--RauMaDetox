@@ -29,7 +29,7 @@ namespace DAO
         public bool ThemHD(HoaDonDTO hd)
         {
             int temp = qlrauma.THEMHD(hd.id, hd.idnhanvien, hd.ngaylaphoadon);
-            qlrauma.SaveChanges();
+                qlrauma.SaveChanges();
             return temp>0;
         }        
     } 

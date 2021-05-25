@@ -22,16 +22,16 @@ namespace DashBoar
         public QL_SanPham()
         {
             InitializeComponent();
-            cbb_loai.DataSource = _dsloai.LayDSloaisp();
-            cbb_loai.DisplayMember = "MaLoaiSp";
-            cbb_loai.ValueMember = "MaLoaiSp";
+            cbb_loai.DataSource =cbb_xoa_loai.DataSource = _dsloai.LayDSloaisp();
+            cbb_loai.DisplayMember =cbb_xoa_loai.DisplayMember= "MaLoaiSp";
+            cbb_loai.ValueMember=cbb_xoa_loai.ValueMember = "MaLoaiSp";
         }
         // xử lý dữ liệu vào datagitview
 
         private void QL_SanPham_Load(object sender, EventArgs e,string a)
         {
-            DTGV_xem.DataSource = _sanpham.LayDSsanpham();
-            dtgv_xoa.DataSource = _sanpham.LayDSsanpham();
+            DTGV_xem.DataSource = _sanpham.LayDSsanpham(a);
+            dtgv_xoa.DataSource = _sanpham.LayDSsanpham(a);
             //DTGV_xem.DataSource = _sanpham.laytheoloai(a);
             dtgv_loaisp.DataSource = _dsloai.LayDSloaisp();
         }
@@ -136,7 +136,7 @@ namespace DashBoar
             tbx_gia.Text = "";
             cbb_loai.SelectedIndex = 0;
             rtb_mota.Text = "";
-            rdB_co.Checked = true;
+            
         }
 
         private void btn_xoa_nhaplai_Click(object sender, EventArgs e)
@@ -144,22 +144,19 @@ namespace DashBoar
             tbx_xoa_gia.Text = "";
             tbx_xoa_mamon.Text = "";
             tbx_xoa_mota.Text = "";
-            tbx_xoa_tenmon.Text = "";
-            rdb_xoa_co.Checked = true;
-
+            tbx_xoa_tenmon.Text = "";        
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
-            DTO_sanpham sanpham = new DTO_sanpham
-            {
-                Masp = tbx_xoa_mamon.Text,
-                Tensp = tbx_xoa_tenmon.Text,
-                Giasp = Convert.ToInt32(tbx_xoa_gia.Text),
-                Mota = tbx_xoa_mota.Text,
-                MaLoaisp = cbb_xoa_loai.Text,   
-                Trangthaisp=true
-            };
+            DTO_sanpham sanpham = new DTO_sanpham();
+
+            sanpham.Masp = tbx_xoa_mamon.Text;
+            sanpham.Tensp = tbx_xoa_tenmon.Text;
+            sanpham.Giasp = Convert.ToInt32(tbx_xoa_gia.Text);
+            sanpham.Mota = tbx_xoa_mota.Text;
+            sanpham.MaLoaisp = cbb_xoa_loai.Text;
+            sanpham.Trangthaisp =true;
             if (_sanpham.SuaSP (sanpham))
             {
                 MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -176,6 +173,22 @@ namespace DashBoar
         private void tp_view_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dtgv_xoa_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void rdb_xoa_nuoc_CheckedChanged(object sender, EventArgs e)
+        {
+            string a = "001";
+            QL_SanPham_Load(sender, e, a);
+        }
+
+        private void rdb_xoa_topping_CheckedChanged(object sender, EventArgs e)
+        {
+            string a = "002";
+            QL_SanPham_Load(sender, e, a);
         }
     }
 }

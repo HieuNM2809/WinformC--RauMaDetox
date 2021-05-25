@@ -12,19 +12,12 @@ namespace BUS
     {
         private DAO_sanpham  _dssp= new DAO_sanpham();
 
-        public List<DTO_sanpham> LayDSsanpham()
+        public List<DTO_sanpham> LayDSsanpham(string a)
         {
 
-            return _dssp.LayDSSanpham();
+            return _dssp.LayDSSanpham(a);
         }
-        //    public List<DTO_sanpham> laytheoloai(string a)
-        //    {
-        //        return _dssp.laytheoloai(a);
-        //    }
-        //    public bool KiemTraMaSP(string masp)
-        //    {
-        //        return _dssp.KiemTraMaSP(masp);
-        //    }
+      
         public bool ThemSP(DTO_sanpham sp)
         {
             return _dssp.ThemSP(sp);

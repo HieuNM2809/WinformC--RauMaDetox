@@ -136,31 +136,7 @@ namespace DAO
 
         public bool CapNhatNV(NhanVienDTO nv)
         {
-            //    string sqlUpdate = "Update NhanVien Set NgaySinh = @NgaySinh,  ChucDanh = @ChucDanh," +
-            //        " LoaiNv = @LoaiNV, SDT = @SDT, TaiKhoan = @TaiKhoan, MatKhau=@MatKhau, Email=@Email where ID_NV = @ID_NV";
-
-            //    _conn.Open();
-            //    List<SqlParameter> lstParameter = new List<SqlParameter>();
-            //    lstParameter.Add(new SqlParameter("@ID_NV", nv.ID_NV));
-            //    lstParameter.Add(new SqlParameter("@HoTen", nv.HoTen));
-            //    lstParameter.Add(new SqlParameter("@NgaySinh", nv.NgaySinh));
-            //    lstParameter.Add(new SqlParameter("@GioiTinh", nv.GioiTinh));
-            //    lstParameter.Add(new SqlParameter("@ChucDanh", nv.ChucDanh));
-            //    lstParameter.Add(new SqlParameter("@LoaiNV", nv.LoaiNV));
-            //    lstParameter.Add(new SqlParameter("@SDT", nv.SDT));
-            //    lstParameter.Add(new SqlParameter("@TaiKhoan", nv.TaiKhoan));
-            //    lstParameter.Add(new SqlParameter("@MatKhau", nv.MatKhau));
-            //    lstParameter.Add(new SqlParameter("@Email", nv.Email));
-
-            //    SqlCommand cmd = new SqlCommand(sqlUpdate, _conn);
-            //    cmd.Parameters.AddRange(lstParameter.ToArray());
-
-            //    int result = cmd.ExecuteNonQuery();
-
-            //    _conn.Close();
-
-            //    return result > 0
-            //}
+          
             try
             {
                 NhanVien nhanvien = qlrauma.NhanViens.SingleOrDefault(u => u.IDNV == nv.IDNV && u.TrangThai == 1);
