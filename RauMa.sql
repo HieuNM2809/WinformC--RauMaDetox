@@ -11,14 +11,14 @@ MaLoaiSp nvarchar(3) ,
 GiaTien money,
 MoTa nvarchar(50),
 Hinh image,
-TrangThai bit default 1
+TrangThai int default 1
 )
 go
 create table LoaiSP
 (
 MaLoaiSp nvarchar(3) primary key not null,
 LoaiSP nvarchar(20),
-TrangThai bit default 1
+TrangThai int default 1
 )
 go
 create table NhanVien

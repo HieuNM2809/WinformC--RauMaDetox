@@ -167,8 +167,10 @@ namespace DAO
         {
             try
             {
-                NhanVien nhanvien = qlrauma.NhanViens.SingleOrDefault(u => u.IDNV == nv.IDNV && u.TrangThai == 1);
-                nhanvien.TrangThai = 0;
+                //NhanVien nhanvien = qlrauma.NhanViens.SingleOrDefault(u => u.IDNV == nv.IDNV && u.TrangThai == 1);
+                //nhanvien.TrangThai = 0;
+
+                
 
                 qlrauma.SaveChanges();
 

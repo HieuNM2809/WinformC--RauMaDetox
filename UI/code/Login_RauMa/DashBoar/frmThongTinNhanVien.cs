@@ -32,7 +32,7 @@ namespace DashBoar
             clLoaiNV.ValueMember = "LoaiNV";
 
             LayHinh();
-            
+
 
             dgvThongTinNhanVien.DataSource = _NhanVienBUS.LayDSNhanVien();
 
@@ -61,7 +61,6 @@ namespace DashBoar
                         HoTen = txtHoTen.Text,
                         NgaySinh = dtpNgaySinh.Value,
                         GioiTinh = ChonGioiTinh(),
-
                         ChucDanh = cbbChucDanh.Text,
                         LoaiNV = cbbLoaiNhanVien.Text,
                         SDT = txtSDT.Text,
@@ -69,10 +68,15 @@ namespace DashBoar
                         MatKhau = txtMatKhau.Text,
                         Email = txtEmail.Text
 
+
                     };
                     if (_NhanVienBUS.ThemNV(nv))
                     {
                         MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (picNhanVien.Image != null)
+                        {
+                            picNhanVien.Image.Save(str_Hinh + @"\" + txtID.Text + ".jpg");
+                        }
                         frmThongTinNhanVien_Load(sender, e);
                     }
                     else MessageBox.Show("Thêm Thất bại", "Thông báo");
@@ -197,26 +201,27 @@ namespace DashBoar
 
         private void LayHinh()
         {
-            ////Lam rong hai danh sach hinh
-            //imglNhanVien.Images.Clear();
+            //Lam rong hai danh sach hinh
+            imglNhanVien.Images.Clear();
 
-            ////Doc danh sach hinh bo vao danh sach\
+            //Doc danh sach hinh bo vao danh sach\
 
-            ////Lay thong tin thu muc
-            //DirectoryInfo di = new DirectoryInfo(str_Hinh);
-            //FileInfo[] fis = di.GetFiles("*.jpg");
+            //Lay thong tin thu muc
+            DirectoryInfo di = new DirectoryInfo(str_Hinh);
+            FileInfo[] fis = di.GetFiles("*.jpg");
 
-            ////Doc tung File bo vao danh sach hinh
-            //foreach (FileInfo f in fis)
-            //{
-            //    byte[] byteHA = File.ReadAllBytes(f.FullName);
-            //    MemoryStream ms = new MemoryStream(byteHA);
+            //Doc tung File bo vao danh sach hinh
+            foreach (FileInfo f in fis)
+            {
+                byte[] byteHA = File.ReadAllBytes(f.FullName);
+                MemoryStream ms = new MemoryStream(byteHA);
 
-            //    Image im = Image.FromStream(ms);
+                Image im = Image.FromStream(ms);
 
-            //    imglNhanVien.Images.Add(f.Name, im); //Moi hinh anh luu kem khoa
+                imglNhanVien.Images.Add(f.Name, im); //Moi hinh anh luu kem khoa
 
             }
         }
     }
+}
 
