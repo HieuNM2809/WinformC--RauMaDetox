@@ -19,17 +19,13 @@ namespace DAO
         {
             List<DTO_sanpham> lssanpham = new List<DTO_sanpham>();
             lssanpham = qlrauma.SanPhams.Where(v => v.TrangThai.Value == true).Where(l => l.MaLoaiSp == a).Select(u => new DTO_sanpham
-
             {
                 Masp = u.MaSp,
                 Tensp = u.TenSp,
                 MaLoaisp = u.MaLoaiSp,
                 Giasp = (int)u.GiaTien,
-                
                 Mota = u.MoTa,
                 Trangthaisp = true
-
-
             }).ToList();
             return lssanpham;
         }
@@ -50,9 +46,17 @@ namespace DAO
         }
         public bool SuaSP(DTO_sanpham sp)
         {
-           int temp= qlrauma.suasp(sp.Masp, sp.Tensp, sp.MaLoaisp, sp.Giasp, sp.Mota, null);
-            qlrauma.SaveChanges();
-            return temp>0;
+            try
+            {
+                qlrauma.suasp(sp.Masp, sp.Tensp, sp.MaLoaisp, sp.Giasp, sp.Mota, null);
+                qlrauma.SaveChanges();
+                return true;
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
+           
         }
         public bool xoaSP(DTO_sanpham sp)
         {

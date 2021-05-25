@@ -9,5 +9,5 @@ CREATE PROCEDURE suasp
 )
 as
 begin
-UPDATE SanPham SET TenSp= @tensp ,MaloaiSp=@maloaisp ,GiaTien=@giatien ,MoTa=@mota,Hinh=NULL,TrangThai=1 WHERE MaSP=@masp AND TrangThai=1
+UPDATE SanPham SET TenSp= @tensp ,MaloaiSp=@maloaisp ,GiaTien=@giatien ,MoTa=@mota,Hinh=NULL WHERE MaSP=@masp AND TrangThai='True'
  end

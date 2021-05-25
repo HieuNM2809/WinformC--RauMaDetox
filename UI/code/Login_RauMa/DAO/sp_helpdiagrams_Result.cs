@@ -10,17 +10,13 @@
 namespace DAO
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class CTPhanQuyen
+    public partial class sp_helpdiagrams_Result
     {
-        public string IDNV { get; set; }
-        public string IDquyen { get; set; }
-        public string Taikhoan { get; set; }
-        public string LoaiQuyen { get; set; }
-        public Nullable<short> TrangThai { get; set; }
-    
-        public virtual NhanVien NhanVien { get; set; }
-        public virtual PhanQuyen PhanQuyen { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

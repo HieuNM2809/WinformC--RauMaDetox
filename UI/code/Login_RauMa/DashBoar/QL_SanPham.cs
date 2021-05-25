@@ -16,7 +16,8 @@ namespace DashBoar
 {
     
     public partial class QL_SanPham : Form
-    {     
+    {
+        DTO_sanpham sanpham = new DTO_sanpham();
         private BUS_sanpham _sanpham= new BUS_sanpham();
         private BUS_loaisp _dsloai = new BUS_loaisp();
         public QL_SanPham()
@@ -148,18 +149,18 @@ namespace DashBoar
        //////////////////////////////////////////////////////tap sua///////////////////////////////////////////////////
         private void btn_sua_Click(object sender, EventArgs e)
         {
-            DTO_sanpham sanpham = new DTO_sanpham();
-
+           
             sanpham.Masp = tbx_xoa_mamon.Text;
             sanpham.Tensp = tbx_xoa_tenmon.Text;
             sanpham.Giasp = Convert.ToInt32(tbx_xoa_gia.Text);
             sanpham.Mota = tbx_xoa_mota.Text;
             sanpham.MaLoaisp = cbb_xoa_loai.Text;
             sanpham.Trangthaisp =true;
-            if (_sanpham.SuaSP (sanpham))
+            if (_sanpham.SuaSP(sanpham))
             {
+                dtgv_xoa.DataSource = _sanpham.LayDSsanpham("001");
                 MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                QL_SanPham_Load_1(sender, e);
+                
             }
             else MessageBox.Show("Cập nhật thât bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
