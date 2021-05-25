@@ -38,7 +38,7 @@
     </Key>
     <Property Name="MaLoaiSp" Type="nvarchar" MaxLength="3" Nullable="false" />
     <Property Name="LoaiSP" Type="nvarchar" MaxLength="20" />
-    <Property Name="TrangThai" Type="int" Nullable="false" />
+    <Property Name="TrangThai" Type="int" />
   </EntityType>
   <EntityType Name="NhanVien">
     <Key>
@@ -54,6 +54,7 @@
     <Property Name="TaiKhoan" Type="varchar" MaxLength="100" />
     <Property Name="MatKhau" Type="varchar" MaxLength="100" />
     <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Hinh" Type="nvarchar(max)" />
     <Property Name="TrangThai" Type="smallint" />
   </EntityType>
   <EntityType Name="PhanQuyen">
@@ -72,8 +73,8 @@
     <Property Name="MaLoaiSp" Type="nvarchar" MaxLength="3" />
     <Property Name="GiaTien" Type="money" />
     <Property Name="MoTa" Type="nvarchar" MaxLength="50" />
-    <Property Name="TrangThai" Type="int" Nullable="false" />
     <Property Name="Hinh" Type="nvarchar(max)" />
+    <Property Name="TrangThai" Type="int" />
   </EntityType>
   <Association Name="FK_CTHoaDon_HoaDon">
     <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
@@ -147,10 +148,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Function Name="THEMHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="idhd" Type="nvarchar" Mode="In" />
+  <Function Name="XoaNhanVien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="idnv" Type="nvarchar" Mode="In" />
-    <Parameter Name="ngaylap" Type="datetime" Mode="In" />
   </Function>
   <EntityContainer Name="ql_raumaModelStoreContainer">
     <EntitySet Name="CTHoaDon" EntityType="Self.CTHoaDon" Schema="dbo" store:Type="Tables" />

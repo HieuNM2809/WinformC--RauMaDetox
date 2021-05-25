@@ -44,7 +44,7 @@
     </Key>
     <Property Name="MaLoaiSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LoaiSP1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="TrangThai" Type="Int32" Nullable="false" />
+    <Property Name="TrangThai" Type="Int32" />
     <NavigationProperty Name="SanPhams" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="LoaiSP" ToRole="SanPham" />
   </EntityType>
   <EntityType Name="NhanVien">
@@ -64,6 +64,7 @@
     <Property Name="TrangThai" Type="Int16" />
     <NavigationProperty Name="CTPhanQuyens" Relationship="Self.FK_CTPhanQuyen_NhanVien" FromRole="NhanVien" ToRole="CTPhanQuyen" />
     <NavigationProperty Name="HoaDons" Relationship="Self.FK_HoaDon_NhanVien" FromRole="NhanVien" ToRole="HoaDon" />
+    <Property Name="Hinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="PhanQuyen">
     <Key>
@@ -82,8 +83,8 @@
     <Property Name="MaLoaiSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
     <Property Name="GiaTien" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="TrangThai" Type="Int32" Nullable="false" />
-    <Property Name="Hinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="Int32" />
+    <Property Name="Hinh" Type="String" FixedLength="false" MaxLength="Max" Unicode="true" />
     <NavigationProperty Name="CTHoaDons" Relationship="Self.FK_CTHoaDon_SanPham" FromRole="SanPham" ToRole="CTHoaDon" />
     <NavigationProperty Name="LoaiSP" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="SanPham" ToRole="LoaiSP" />
   </EntityType>
@@ -195,6 +196,9 @@
       <Parameter Name="idhd" Mode="In" Type="String" />
       <Parameter Name="idnv" Mode="In" Type="String" />
       <Parameter Name="ngaylap" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="XoaNhanVien">
+      <Parameter Name="idnv" Mode="In" Type="String" />
     </FunctionImport>
   </EntityContainer>
 </Schema>
