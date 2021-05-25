@@ -64,6 +64,7 @@ namespace DashBoar
             
            
         }
+        
    //////////////////////////////////////////////////////// các button thoát//////////////////////////////////////////////////////////
         private void btn_thoat_Click_1(object sender, EventArgs e)
         {
@@ -95,6 +96,7 @@ namespace DashBoar
                 lbl_loai.Text = row.Cells[2].Value.ToString();
                 lbl_gia.Text = row.Cells[3].Value.ToString();
                 lbl_mota.Text = row.Cells[4].Value.ToString();
+                ptb_anhtai.BackgroundImage= (ByteToImg(row.Cells[5].Value.ToString()));
             }
         }
 
@@ -123,7 +125,9 @@ namespace DashBoar
             if (openFile.ShowDialog() == DialogResult.OK)
             {
               lbl_duongdan.Text = openFile.FileName;
-                BackgroundImage= 
+                byte[] byteA = File.ReadAllBytes(openFile.FileName);
+                MemoryStream ms = new MemoryStream(byteA);
+                ptb_anhto.Image = Image.FromStream(ms);
             }   
 
         }
