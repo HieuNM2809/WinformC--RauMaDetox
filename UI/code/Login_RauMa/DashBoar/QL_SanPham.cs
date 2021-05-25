@@ -22,21 +22,29 @@ namespace DashBoar
         public QL_SanPham()
         {
             InitializeComponent();
-            cbb_loai.DataSource =cbb_xoa_loai.DataSource = _dsloai.LayDSloaisp();
-            cbb_loai.DisplayMember =cbb_xoa_loai.DisplayMember= "MaLoaiSp";
-            cbb_loai.ValueMember=cbb_xoa_loai.ValueMember = "MaLoaiSp";
+            cbb_loai.DataSource= _dsloai.LayDSloaisp();
+            cbb_loai.DisplayMember= "MaLoaiSp";
+            cbb_loai.ValueMember = "MaLoaiSp";
+            cbb_xoa_loai.DataSource = _dsloai.LayDSloaisp();
+            cbb_xoa_loai.DisplayMember = "MaLoaiSp";
+            cbb_xoa_loai.ValueMember = "MaLoaiSp";
         }
-        // xử lý dữ liệu vào datagitview
+        //////////////////////////////////////// xử lý dữ liệu vào datagitview///////////////////////////////////////////
 
-        private void QL_SanPham_Load(object sender, EventArgs e,string a)
+        private void QL_SanPham_Load(object sender, EventArgs e, string a)
         {
             DTGV_xem.DataSource = _sanpham.LayDSsanpham(a);
             dtgv_xoa.DataSource = _sanpham.LayDSsanpham(a);
-            //DTGV_xem.DataSource = _sanpham.laytheoloai(a);
             dtgv_loaisp.DataSource = _dsloai.LayDSloaisp();
         }
-
-     // các button thoát
+       private void QL_SanPham_Load_1(object sender, EventArgs e)
+        {
+            string a = "001";
+            QL_SanPham_Load(sender, e, a);
+            
+           
+        }
+   //////////////////////////////////////////////////////// các button thoát//////////////////////////////////////////////////////////
         private void btn_thoat_Click_1(object sender, EventArgs e)
         {
             this.Close();
@@ -56,7 +64,7 @@ namespace DashBoar
         {
             this.Close();
         }
-        //xử lý tap xem
+        /////////////////////////////////////////////////////////xử lý tap xem////////////////////////////////////////////////////
         private void DTGV_xem_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if(e.RowIndex>=0)
@@ -75,24 +83,19 @@ namespace DashBoar
         private void rb_nuoc_CheckedChanged(object sender, EventArgs e)
         {
             string a = "001";
+            
             QL_SanPham_Load(sender, e, a);
         }
 
         private void rb_topping_CheckedChanged(object sender, EventArgs e)
         {
             string a = "002";
-            QL_SanPham_Load(sender, e, a);
-        }
-        private void QL_SanPham_Load_1(object sender, EventArgs e)
-        {
-            string a = "001";
-            QL_SanPham_Load(sender, e, a);
             
-           
+            QL_SanPham_Load(sender, e, a);
         }
-        // xử lý tap thêm
-        //xử lý ảnh
-      
+ 
+       ////////////////////////////////// xử lý tap thêm//////////////////////////////////////////////////////////////////
+        
         private void btn_Themanh_Click(object sender, EventArgs e)
         {
 
@@ -127,8 +130,8 @@ namespace DashBoar
                     else MessageBox.Show("Thêm Thất bại", "Thông báo");
                 }
             }
-        }
-
+            
+        } 
         private void btn_nhaplai_Click(object sender, EventArgs e)
         {
             tbx_mamon.Text = "";
@@ -138,15 +141,11 @@ namespace DashBoar
             rtb_mota.Text = "";
             
         }
+//xử lý ảnh
+     
 
-        private void btn_xoa_nhaplai_Click(object sender, EventArgs e)
-        {
-            tbx_xoa_gia.Text = "";
-            tbx_xoa_mamon.Text = "";
-            tbx_xoa_mota.Text = "";
-            tbx_xoa_tenmon.Text = "";        
-        }
-
+      
+       //////////////////////////////////////////////////////tap sua///////////////////////////////////////////////////
         private void btn_sua_Click(object sender, EventArgs e)
         {
             DTO_sanpham sanpham = new DTO_sanpham();
@@ -175,8 +174,22 @@ namespace DashBoar
 
         }
 
+        private void btn_xoa_nhaplai_Click(object sender, EventArgs e)
+        {
+            tbx_xoa_gia.Text = "";
+            tbx_xoa_mamon.Text = "";
+            tbx_xoa_mota.Text = "";
+            tbx_xoa_tenmon.Text = "";        
+        }
+
         private void dtgv_xoa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridViewRow row = this.DTGV_xem.Rows[e.RowIndex];
+            tbx_xoa_mamon.Text = row.Cells[0].Value.ToString();
+            tbx_xoa_tenmon.Text = row.Cells[1].Value.ToString();
+            cbb_xoa_loai.Text = row.Cells[2].Value.ToString();
+            tbx_xoa_gia.Text = row.Cells[3].Value.ToString();
+            tbx_xoa_mota.Text = row.Cells[4].Value.ToString();
         }
 
         private void rdb_xoa_nuoc_CheckedChanged(object sender, EventArgs e)
@@ -187,7 +200,7 @@ namespace DashBoar
 
         private void rdb_xoa_topping_CheckedChanged(object sender, EventArgs e)
         {
-            string a = "002";
+            string a = "002"; 
             QL_SanPham_Load(sender, e, a);
         }
     }
