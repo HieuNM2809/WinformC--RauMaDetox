@@ -22,7 +22,7 @@ namespace DAO
     
         public string MaLoaiSp { get; set; }
         public string LoaiSP1 { get; set; }
-        public Nullable<bool> TrangThai { get; set; }
+        public Nullable<int> TrangThai { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SanPham> SanPhams { get; set; }
