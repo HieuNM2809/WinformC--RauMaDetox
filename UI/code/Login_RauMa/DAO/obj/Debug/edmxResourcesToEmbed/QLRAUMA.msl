@@ -76,8 +76,8 @@
           <ScalarProperty Name="MaLoaiSp" ColumnName="MaLoaiSp" />
           <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
           <ScalarProperty Name="MoTa" ColumnName="MoTa" />
-          <ScalarProperty Name="Hinh" ColumnName="Hinh" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="Hinh" ColumnName="Hinh" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

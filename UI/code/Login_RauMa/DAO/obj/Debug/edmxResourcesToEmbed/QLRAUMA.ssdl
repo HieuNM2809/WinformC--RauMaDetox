@@ -38,7 +38,7 @@
     </Key>
     <Property Name="MaLoaiSp" Type="nvarchar" MaxLength="3" Nullable="false" />
     <Property Name="LoaiSP" Type="nvarchar" MaxLength="20" />
-    <Property Name="TrangThai" Type="int" />
+    <Property Name="TrangThai" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="NhanVien">
     <Key>
@@ -72,8 +72,8 @@
     <Property Name="MaLoaiSp" Type="nvarchar" MaxLength="3" />
     <Property Name="GiaTien" Type="money" />
     <Property Name="MoTa" Type="nvarchar" MaxLength="50" />
-    <Property Name="Hinh" Type="image" />
-    <Property Name="TrangThai" Type="int" />
+    <Property Name="TrangThai" Type="int" Nullable="false" />
+    <Property Name="Hinh" Type="nvarchar(max)" />
   </EntityType>
   <Association Name="FK_CTHoaDon_HoaDon">
     <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />

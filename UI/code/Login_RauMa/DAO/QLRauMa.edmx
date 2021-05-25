@@ -43,7 +43,7 @@
           </Key>
           <Property Name="MaLoaiSp" Type="nvarchar" MaxLength="3" Nullable="false" />
           <Property Name="LoaiSP" Type="nvarchar" MaxLength="20" />
-          <Property Name="TrangThai" Type="int" />
+          <Property Name="TrangThai" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="NhanVien">
           <Key>
@@ -77,8 +77,8 @@
           <Property Name="MaLoaiSp" Type="nvarchar" MaxLength="3" />
           <Property Name="GiaTien" Type="money" />
           <Property Name="MoTa" Type="nvarchar" MaxLength="50" />
-          <Property Name="Hinh" Type="image" />
-          <Property Name="TrangThai" Type="int" />
+          <Property Name="TrangThai" Type="int" Nullable="false" />
+          <Property Name="Hinh" Type="nvarchar(max)" />
         </EntityType>
         <Association Name="FK_CTHoaDon_HoaDon">
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
@@ -239,7 +239,7 @@
           </Key>
           <Property Name="MaLoaiSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LoaiSP1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="TrangThai" Type="Int32" />
+          <Property Name="TrangThai" Type="Int32" Nullable="false" />
           <NavigationProperty Name="SanPhams" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="LoaiSP" ToRole="SanPham" />
         </EntityType>
         <EntityType Name="NhanVien">
@@ -277,8 +277,8 @@
           <Property Name="MaLoaiSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
           <Property Name="GiaTien" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Hinh" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <Property Name="TrangThai" Type="Int32" />
+          <Property Name="TrangThai" Type="Int32" Nullable="false" />
+          <Property Name="Hinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CTHoaDons" Relationship="Self.FK_CTHoaDon_SanPham" FromRole="SanPham" ToRole="CTHoaDon" />
           <NavigationProperty Name="LoaiSP" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="SanPham" ToRole="LoaiSP" />
         </EntityType>
@@ -473,8 +473,8 @@
                 <ScalarProperty Name="MaLoaiSp" ColumnName="MaLoaiSp" />
                 <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
                 <ScalarProperty Name="MoTa" ColumnName="MoTa" />
-                <ScalarProperty Name="Hinh" ColumnName="Hinh" />
                 <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="Hinh" ColumnName="Hinh" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

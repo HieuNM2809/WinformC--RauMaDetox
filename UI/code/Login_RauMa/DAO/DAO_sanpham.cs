@@ -25,7 +25,6 @@ namespace DAO
                 MaLoaisp = u.MaLoaiSp,
                 Giasp = (int)u.GiaTien,
                 Mota = u.MoTa,
-                Trangthaisp = true
             }).ToList();
             return lssanpham;
         }
@@ -39,6 +38,7 @@ namespace DAO
             SP.GiaTien = sp.Giasp;
             SP.MoTa = sp.Mota;
             SP.TenSp = sp.Tensp;
+            SP.Hinh = sp.Hinhsp;
             SP.TrangThai = 1;
             SanPham sanphamEF = qlrauma.SanPhams.Add(SP);
             qlrauma.SaveChanges();
@@ -70,10 +70,6 @@ namespace DAO
             {
                 SanPham SP = qlrauma.SanPhams.SingleOrDefault(u => u.MaSp == sp.Masp && u.TenSp == sp.Tensp && u.MaLoaiSp == sp.MaLoaisp
                   && u.MoTa == sp.Mota && u.TrangThai == 1);
-                SP.MaSp = sp.Masp;
-                SP.TenSp = sp.Tensp;
-                SP.MaLoaiSp = sp.MaLoaisp;
-                SP.GiaTien = sp.Giasp;
                 SP.TrangThai =0;
                 qlrauma.SaveChanges();
                 return true;

@@ -21,23 +21,15 @@ namespace DTO
             get
             { return loaisp; }
             set { loaisp = value; }
-        }
-        private bool trangthaisp;
-        public bool Trangthaisp
-        {
-            get
-            { return trangthaisp; }
-            set { trangthaisp = value; }
-        }
+        } 
         public DTO_loaisp()
         {
-
         }
-        public DTO_loaisp (string maloaisp,string loaisp,bool trangthaisp)
+        public DTO_loaisp (string maloaisp,string loaisp)
         {
             this.Maloaisp = maloaisp;
             this.Loaisp = loaisp;
-            this.Trangthaisp = trangthaisp;
+            
         }
     }
 }

@@ -18,6 +18,7 @@ namespace DashBoar
     public partial class QL_SanPham : Form
     {
         DTO_sanpham sanpham = new DTO_sanpham();
+        DTO_loaisp loaisanpham = new DTO_loaisp();
         private BUS_sanpham _sanpham= new BUS_sanpham();
         private BUS_loaisp _dsloai = new BUS_loaisp();
         public QL_SanPham()
@@ -29,6 +30,24 @@ namespace DashBoar
             cbb_xoa_loai.DataSource = _dsloai.LayDSloaisp();
             cbb_xoa_loai.DisplayMember = "MaLoaiSp";
             cbb_xoa_loai.ValueMember = "MaLoaiSp";
+        }
+        ////////////////////////////////////////////////////xử lý ảnh//////////////////////////////////////////////////////
+        private byte[] converImgToByte()
+        {
+            FileStream fs;
+            fs = new FileStream(lbl_duongdan.Text, FileMode.Open, FileAccess.Read);
+            byte[] picbyte = new byte[fs.Length];
+            fs.Read(picbyte, 0, System.Convert.ToInt32(fs.Length));
+            fs.Close();
+            return picbyte;
+        }
+        private Image ByteToImg(string byteString)
+        {
+            byte[] imgBytes = Convert.FromBase64String(byteString);
+            MemoryStream ms = new MemoryStream(imgBytes, 0, imgBytes.Length);
+            ms.Write(imgBytes, 0, imgBytes.Length);
+            Image image = Image.FromStream(ms, true);
+            return image;
         }
         //////////////////////////////////////// xử lý dữ liệu vào datagitview///////////////////////////////////////////
 
@@ -76,8 +95,6 @@ namespace DashBoar
                 lbl_loai.Text = row.Cells[2].Value.ToString();
                 lbl_gia.Text = row.Cells[3].Value.ToString();
                 lbl_mota.Text = row.Cells[4].Value.ToString();
-                lbl_trangthai.Text = row.Cells[6].Value.ToString();
-
             }
         }
 
@@ -99,6 +116,15 @@ namespace DashBoar
         
         private void btn_Themanh_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
+            openFile.FilterIndex = 1;
+            openFile.RestoreDirectory = true;
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+              lbl_duongdan.Text = openFile.FileName;
+                BackgroundImage= 
+            }   
 
         }
 
@@ -107,8 +133,6 @@ namespace DashBoar
             if (tbx_mamon.Text == "" || tbx_tenmon.Text == "" || tbx_gia.Text == "" || cbb_loai.Text == "" || rtb_mota.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
-
-
             }
             else
             {
@@ -121,7 +145,7 @@ namespace DashBoar
                         spham.Giasp = Convert.ToInt32(tbx_gia.Text);
                         spham.Mota = rtb_mota.Text;
                         spham.MaLoaisp = cbb_loai.Text;
-
+                        spham.Hinhsp=  Convert.ToBase64String(converImgToByte());
                     };
                     if (_sanpham.ThemSP(spham))
                     {
@@ -142,7 +166,7 @@ namespace DashBoar
             rtb_mota.Text = "";
             
         }
-//xử lý ảnh
+
      
 
       
@@ -150,24 +174,34 @@ namespace DashBoar
         private void btn_sua_Click(object sender, EventArgs e)
         {
            
+                sanpham.Masp = tbx_xoa_mamon.Text;
+                sanpham.Tensp = tbx_xoa_tenmon.Text;
+                sanpham.Giasp = Convert.ToInt32(tbx_xoa_gia.Text);
+                sanpham.Mota = tbx_xoa_mota.Text;
+                sanpham.MaLoaisp = cbb_xoa_loai.Text;
+                if (_sanpham.SuaSP(sanpham))
+                {
+                    dtgv_xoa.DataSource = _sanpham.LayDSsanpham("001");
+                    MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                QL_SanPham_Load_1(sender, e);
+                }
+                else MessageBox.Show("Cập nhật thât bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
             sanpham.Masp = tbx_xoa_mamon.Text;
             sanpham.Tensp = tbx_xoa_tenmon.Text;
             sanpham.Giasp = Convert.ToInt32(tbx_xoa_gia.Text);
             sanpham.Mota = tbx_xoa_mota.Text;
             sanpham.MaLoaisp = cbb_xoa_loai.Text;
-            sanpham.Trangthaisp =true;
-            if (_sanpham.SuaSP(sanpham))
+            if (_sanpham.xoaSP(sanpham))
             {
                 dtgv_xoa.DataSource = _sanpham.LayDSsanpham("001");
                 MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                QL_SanPham_Load_1(sender, e);
             }
             else MessageBox.Show("Cập nhật thât bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void btn_xoa_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void tp_view_Click(object sender, EventArgs e)
@@ -203,6 +237,80 @@ namespace DashBoar
         {
             string a = "002"; 
             QL_SanPham_Load(sender, e, a);
+        }
+
+        ////////////////////////////////////trang quan ly loai san pham//////////////////////////////////////////////////////
+
+        private void btn_loaisp_sua_Click(object sender, EventArgs e)
+        {
+            loaisanpham.Maloaisp = tbx_lsp_msloai.Text;
+            loaisanpham.Loaisp = tbx_lsp_tenloai.Text;
+            if (_dsloai.SuaLSP(loaisanpham))
+            {
+                dtgv_loaisp .DataSource = _dsloai.LayDSloaisp();
+                MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            }
+            else MessageBox.Show("Cập nhật thât bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);     
+        }
+
+        private void btn_loaisp_them_Click(object sender, EventArgs e)
+        {
+            if (tbx_lsp_msloai .Text == "" || tbx_lsp_tenloai .Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
+            }
+            else
+            {
+
+                {
+                    DTO_loaisp lspham = new DTO_loaisp();
+                    {
+                        lspham.Maloaisp =tbx_lsp_msloai.Text;
+                        lspham.Loaisp = tbx_lsp_tenloai.Text;
+
+                    };
+                    if (_dsloai.ThemLSP(lspham))
+                    {
+                        MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        QL_SanPham_Load_1(sender, e);
+                    }
+                    else MessageBox.Show("Thêm Thất bại", "Thông báo");
+                }
+            }
+        }
+
+        private void btn_loaisp_xoa_Click(object sender, EventArgs e)
+        {
+            loaisanpham.Maloaisp = tbx_lsp_msloai.Text;
+            loaisanpham.Loaisp = tbx_lsp_tenloai.Text;
+            if (_dsloai.xoaLSP (loaisanpham))
+            {
+
+                dtgv_loaisp.DataSource = _dsloai.LayDSloaisp();
+                MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else MessageBox.Show("Cập nhật thât bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btn_loaisp_nhaplai_Click(object sender, EventArgs e)
+        {
+            tbx_lsp_msloai.Text = "";
+            tbx_lsp_tenloai.Text = "";
+        }
+
+        private void dtgv_loaisp_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.dtgv_loaisp.Rows[e.RowIndex];
+            tbx_lsp_msloai .Text = row.Cells[0].Value.ToString();
+            tbx_lsp_tenloai.Text = row.Cells[1].Value.ToString();
+           
+        }
+
+        private void ptb_anhrauma_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

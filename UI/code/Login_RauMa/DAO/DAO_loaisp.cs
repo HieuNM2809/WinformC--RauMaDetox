@@ -22,7 +22,48 @@ namespace DAO
             }).ToList();
             return dsloaisp;
         }
+        public bool themloai(DTO_loaisp lsp)
+        {
+            LoaiSP LSP = new LoaiSP();
+            LSP.MaLoaiSp = lsp.Maloaisp;
+            LSP.LoaiSP1 = lsp.Loaisp;
+            LSP.TrangThai = 1;
+           LoaiSP lsanpham = qlrauma.LoaiSPs.Add(LSP) ;
+            qlrauma.SaveChanges();
+            return lsanpham.MaLoaiSp != "";
+        }
+        public bool sualoai(DTO_loaisp lsp)
+        {
 
+            try
+            {
+                LoaiSP loaisanpham = qlrauma.LoaiSPs.SingleOrDefault(u => u.MaLoaiSp == lsp.Maloaisp && u.TrangThai == 1);
+                loaisanpham.LoaiSP1 = lsp.Loaisp;
+                qlrauma.SaveChanges();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        public bool xoaloai(DTO_loaisp lsp)
+        {
+
+            try
+            {
+                LoaiSP loaisanpham = qlrauma.LoaiSPs.SingleOrDefault(u => u.MaLoaiSp == lsp.Maloaisp && u.TrangThai == 1);
+                loaisanpham.TrangThai = 0;
+                qlrauma.SaveChanges();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 
 

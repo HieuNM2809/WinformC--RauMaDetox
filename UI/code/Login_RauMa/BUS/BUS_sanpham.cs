@@ -26,5 +26,9 @@ namespace BUS
         {
             return _dssp.SuaSP(sp);
         }
+        public bool xoaSP(DTO_sanpham sp)
+        {
+            return _dssp.xoaSP(sp);
+        }
     }
 }

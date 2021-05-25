@@ -25,8 +25,8 @@ namespace DAO
         public string MaLoaiSp { get; set; }
         public Nullable<decimal> GiaTien { get; set; }
         public string MoTa { get; set; }
-        public byte[] Hinh { get; set; }
-        public Nullable<int> TrangThai { get; set; }
+        public int TrangThai { get; set; }
+        public string Hinh { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHoaDon> CTHoaDons { get; set; }

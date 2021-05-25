@@ -50,19 +50,12 @@ namespace DTO
             { return hinhsp; }
             set { hinhsp = value; }
         }
-        private bool trangthaisp;
-        public bool Trangthaisp
-        {
-            get
-            { return trangthaisp; }
-            set { trangthaisp = value; }
-        }
         public DTO_sanpham()
         {
 
         }
         public DTO_sanpham(string masp, string tensp, string loaisp, int giasp, string mota,
-            string hinhsp, bool trangthaisp)
+            string hinhsp)
         {
             this.Masp = masp;
             this.Tensp = tensp;
@@ -70,7 +63,7 @@ namespace DTO
             this.Giasp = giasp;
             this.Mota = mota;
             this.Hinhsp = hinhsp;
-            this.Trangthaisp = trangthaisp;
+        
         }
     }
 }
