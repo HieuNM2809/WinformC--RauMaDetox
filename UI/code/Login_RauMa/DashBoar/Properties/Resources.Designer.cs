@@ -203,6 +203,16 @@ namespace DashBoar.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logoWin {
+            get {
+                object obj = ResourceManager.GetObject("logoWin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loop2 {
             get {
                 object obj = ResourceManager.GetObject("loop2", resourceCulture);

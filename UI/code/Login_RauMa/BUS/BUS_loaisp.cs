@@ -24,10 +24,11 @@ namespace BUS
         {
             return _dsloaisp.sualoai(lsp);
         }
-        public bool xoaLSP(DTO_loaisp lsp)
+     public bool xoaLSP(DTO_loaisp lsp)
         {
             return _dsloaisp.xoaloai(lsp);
         }
+     
     }
 
     

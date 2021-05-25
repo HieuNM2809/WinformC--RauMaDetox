@@ -29,13 +29,6 @@ namespace DAO
             }).ToList();
             return lssanpham;
         }
-        public string layhinh(DTO_sanpham sp)
-        {
-            string a;
-            SanPham sanpham = qlrauma.SanPhams.SingleOrDefault(u => u.MaSp == sp.Masp && u.TrangThai == 1);
-            a = sp.Hinhsp;
-            return a;
-        }
         
         public bool ThemSP(DTO_sanpham sp)
         {

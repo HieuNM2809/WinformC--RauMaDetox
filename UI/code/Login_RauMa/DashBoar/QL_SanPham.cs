@@ -229,6 +229,7 @@ namespace DashBoar
             cbb_xoa_loai.Text = row.Cells[2].Value.ToString();
             tbx_xoa_gia.Text = row.Cells[3].Value.ToString();
             tbx_xoa_mota.Text = row.Cells[4].Value.ToString();
+            ptb_anhrauma.BackgroundImage = (ByteToImg(row.Cells[5].Value.ToString()));
         }
 
         private void rdb_xoa_nuoc_CheckedChanged(object sender, EventArgs e)

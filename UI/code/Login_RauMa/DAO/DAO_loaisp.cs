@@ -28,7 +28,7 @@ namespace DAO
             LSP.MaLoaiSp = lsp.Maloaisp;
             LSP.LoaiSP1 = lsp.Loaisp;
             LSP.TrangThai = 1;
-           LoaiSP lsanpham = qlrauma.LoaiSPs.Add(LSP) ;
+           LoaiSP lsanpham = qlrauma.LoaiSPs.Add(LSP);
             qlrauma.SaveChanges();
             return lsanpham.MaLoaiSp != "";
         }

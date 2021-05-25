@@ -30,9 +30,6 @@ namespace BUS
         {
             return _dssp.xoaSP(sp);
         }
-        public string hinh(DTO_sanpham sp)
-        {
-            return _dssp.layhinh(sp);
-        }
+       
     }
 }
