@@ -39,7 +39,11 @@ namespace DashBoar
             {
                 if (_DKTK.KiemTraID(txtID.Text))
                 {
-                    if (_DKTK.KiemTraTK(txtTenTruyCap.Text)== false)
+                    MessageBox.Show("IDNV đã tồn tại", "Thông Báo");
+                }
+                else
+                {
+                    if (_DKTK.KiemTraTK(txtTenTruyCap.Text) == false)
                     {
                         if (txtMatKhau.Text != txtNhaplaiMatKhau.Text)
                         {
@@ -56,8 +60,8 @@ namespace DashBoar
                         }
                     }
                     else MessageBox.Show("Tên tài khoản đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else MessageBox.Show("ID không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                } 
+                    
             }
         }
 
