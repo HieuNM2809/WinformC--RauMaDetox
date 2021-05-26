@@ -50,10 +50,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CTHoaDon.cs">
+      <DependentUpon>QLRauMa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTPhanQuyen.cs">
+      <DependentUpon>QLRauMa.tt</DependentUpon>
+    </Compile>
     <Compile Include="DAO_loaisp.cs" />
     <Compile Include="DAO_sanpham.cs" />
+    <Compile Include="HoaDon.cs">
+      <DependentUpon>QLRauMa.tt</DependentUpon>
+    </Compile>
     <Compile Include="HoaDonDAO.cs" />
+    <Compile Include="LoaiSP.cs">
+      <DependentUpon>QLRauMa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien.cs">
+      <DependentUpon>QLRauMa.tt</DependentUpon>
+    </Compile>
     <Compile Include="NhanVienDAO.cs" />
+    <Compile Include="PhanQuyen.cs">
+      <DependentUpon>QLRauMa.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLRauMa.Context.cs">
       <AutoGen>True</AutoGen>
@@ -69,6 +87,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLRauMa.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SanPham.cs">
+      <DependentUpon>QLRauMa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>QLRauMa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>QLRauMa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>QLRauMa.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

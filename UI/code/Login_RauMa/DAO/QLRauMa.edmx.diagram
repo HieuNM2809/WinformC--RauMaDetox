@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3af9bfa215414678b5be138bdd46896b" Name="Diagram1">
+      <Diagram DiagramId="de6341e8e773417a895ff3b2f3617def" Name="Diagram1">
         <EntityTypeShape EntityType="ql_raumaModel.CTHoaDon" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="ql_raumaModel.CTPhanQuyen" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ql_raumaModel.HoaDon" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
@@ -12,13 +12,13 @@
         <EntityTypeShape EntityType="ql_raumaModel.NhanVien" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ql_raumaModel.PhanQuyen" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ql_raumaModel.SanPham" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_raumaModel.sysdiagram" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
         <AssociationConnector Association="ql_raumaModel.FK_CTHoaDon_HoaDon" ManuallyRouted="false" />
         <AssociationConnector Association="ql_raumaModel.FK_CTHoaDon_SanPham" ManuallyRouted="false" />
         <AssociationConnector Association="ql_raumaModel.FK_CTPhanQuyen_NhanVien" ManuallyRouted="false" />
         <AssociationConnector Association="ql_raumaModel.FK_CTPhanQuyen_PhanQuyen" ManuallyRouted="false" />
         <AssociationConnector Association="ql_raumaModel.FK_HoaDon_NhanVien" ManuallyRouted="false" />
         <AssociationConnector Association="ql_raumaModel.FK_SanPham_LoaiSanPham" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="ql_raumaModel.sysdiagram" Width="1.5" PointX="6.625" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
