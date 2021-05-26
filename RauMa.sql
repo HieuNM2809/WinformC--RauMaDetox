@@ -116,5 +116,15 @@ BEGIN
 	INSERT INTO HoaDon(IDHoaDon,IDNV,NgayLapHoaDon,TrangThai) VALUES(@idhd,@idnv,@ngaylap,1)
 END
 
+
+--thêm bảng MaHD làm khóa chính cho CTHoaDon--
+
 alter table CTHoaDon
 add MaHD nvarchar(3) not null 
+
+
+-- Khóa ngoại CTHoaDon qua HoaDon --
+
+alter table CTHoaDon
+add constraint FK_CTHoaDon_HoaDon foreign key (IDHoaDon) references HoaDon(IDHoaDon)
+
