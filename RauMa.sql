@@ -33,7 +33,8 @@ SDT char(10),
 TaiKhoan varchar(100),
 MatKhau varchar(100),
 Email varchar(100),
-TrangThai smallint,
+Hinh nvarchar(MAX),
+TrangThai smallint
 )
 go
 create table CTPhanQuyen
@@ -63,7 +64,7 @@ go
 create table CTHoaDon
 (
 	IDHoaDon nvarchar(3),
-	MaSp nvarchar(3),
+	MaSp nvarchar(5),
 	SoLuong int,
 	DonGia money,
 	ChietKhau money,
