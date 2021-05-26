@@ -67,17 +67,11 @@ namespace DashBoar
                         TaiKhoan = txtTaiKhoan.Text,
                         MatKhau = txtMatKhau.Text,
                         Email = txtEmail.Text
-
-
                     };
                     if (_NhanVienBUS.ThemNV(nv))
-                    {
-                        MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        if (picNhanVien.Image != null)
-                        {
-                            picNhanVien.Image.Save(str_Hinh + @"\" + txtID.Text + ".jpg");
-                        }
+                    {   
                         frmThongTinNhanVien_Load(sender, e);
+                        MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else MessageBox.Show("Thêm Thất bại", "Thông báo");
                 }

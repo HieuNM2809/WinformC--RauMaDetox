@@ -47,24 +47,10 @@ namespace DAO
         }
         public bool ThemNV(NhanVienDTO nv)
         {
-            NhanVien nhanvien = new NhanVien();
-
-            nhanvien.IDNV = nv.IDNV;
-            nhanvien.HoTen = nv.HoTen;
-            nhanvien.NgaySinh = nv.NgaySinh;
-            nhanvien.GioiTinh = nv.GioiTinh;
-            nhanvien.ChucDanh = nv.ChucDanh;
-            nhanvien.LoaiNV = nv.LoaiNV;
-            nhanvien.TaiKhoan = nv.TaiKhoan;
-            nhanvien.MatKhau = nv.MatKhau;
-            nhanvien.SDT = nv.SDT;
-            nhanvien.Email = nv.Email;
-            nhanvien.TrangThai = 1;
-
-            NhanVien nhanvienEF = qlrauma.NhanViens.Add(nhanvien);
+            int temp = qlrauma.THEMNV(nv.IDNV, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.ChucDanh, nv.LoaiNV, nv.SDT, nv.TaiKhoan, nv.MatKhau, nv.Email);
             qlrauma.SaveChanges();
 
-            return true;
+            return temp>0;
         }
 
         public bool CapNhatNV(NhanVienDTO nv)
@@ -72,20 +58,9 @@ namespace DAO
           
             try
             {
-                NhanVien nhanvien = qlrauma.NhanViens.SingleOrDefault(u => u.IDNV == nv.IDNV && u.TrangThai == 1);
-                nhanvien.HoTen = nv.HoTen;
-                nhanvien.NgaySinh = nv.NgaySinh;
-                nhanvien.GioiTinh = nv.GioiTinh;
-                nhanvien.ChucDanh = nv.ChucDanh;
-                nhanvien.LoaiNV = nv.LoaiNV;
-                nhanvien.TaiKhoan = nv.TaiKhoan;
-                nhanvien.MatKhau = nv.MatKhau;
-                nhanvien.SDT = nv.SDT;
-                nhanvien.Email = nv.Email;
-
+               int temp= qlrauma.CAPNHATNV(nv.IDNV, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.ChucDanh, nv.LoaiNV, nv.SDT, nv.TaiKhoan, nv.MatKhau, nv.Email);
                 qlrauma.SaveChanges();
-
-                return true ;
+                return temp>0;
             }
             catch (Exception)
             {
@@ -97,11 +72,10 @@ namespace DAO
         {
             try
             {
-                NhanVien nhanvien = qlrauma.NhanViens.SingleOrDefault(u => u.IDNV == nv.IDNV && u.TrangThai == 1);
-                nhanvien.TrangThai = 0;
+                int temp = qlrauma.XOANV(nv.IDNV);
                 qlrauma.SaveChanges();
 
-                return true;
+                return temp > 0;
             }
             catch( Exception)
             {

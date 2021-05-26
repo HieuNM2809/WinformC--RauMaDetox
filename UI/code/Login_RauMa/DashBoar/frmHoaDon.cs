@@ -23,6 +23,7 @@ namespace DashBoar
         private HoaDonDTO hd = new HoaDonDTO();
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
+            dtPNgayLap.Value = DateTime.Now;
             dgvHoaDon.DataSource = hoadon.laydshd();
 
         }
@@ -31,24 +32,7 @@ namespace DashBoar
             this.Close();
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            hd.id = txtIDHoaDon.Text;
-            hd.idnhanvien = txtIDNhanVien.Text;
-            hd.ngaylaphoadon = dtPNgayLap.Value;
-            if(hoadon.ThemHoaDon(hd))
-            {
-                dgvHoaDon.DataSource = hoadon.laydshd();
-                MessageBox.Show("Thêm Thành Công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else
-            {
-                MessageBox.Show("Thêm Thất Bại !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-        }
-
+        
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
             hd.id = txtIDHoaDon.Text;
@@ -76,6 +60,22 @@ namespace DashBoar
                 txtIDNhanVien.Text = row.Cells[1].Value.ToString();
                 dtPNgayLap.Text = row.Cells[2].FormattedValue.ToString();
                 
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            hd.id = txtIDHoaDon.Text;
+            if (hoadon.XoaHD(hd))
+            {
+                dgvHoaDon.DataSource = hoadon.laydshd();
+                MessageBox.Show("Xóa Thành Công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Xóa Thất Bại !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
         }
     }

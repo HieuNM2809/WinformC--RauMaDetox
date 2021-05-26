@@ -5,7 +5,7 @@
       <PropertyRef Name="MaHD" />
     </Key>
     <Property Name="IDHoaDon" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="MaSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="MaSp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
     <Property Name="SoLuong" Type="Int32" />
     <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="ChietKhau" Type="Decimal" Precision="19" Scale="4" />
@@ -41,7 +41,7 @@
     <Key>
       <PropertyRef Name="MaLoaiSp" />
     </Key>
-    <Property Name="MaLoaiSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaLoaiSp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LoaiSP1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="TrangThai" Type="Int16" />
     <NavigationProperty Name="SanPhams" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="LoaiSP" ToRole="SanPham" />
@@ -76,9 +76,9 @@
     <Key>
       <PropertyRef Name="MaSp" />
     </Key>
-    <Property Name="MaSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaSp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="TenSp" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="MaLoaiSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="MaLoaiSp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
     <Property Name="GiaTien" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Hinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -245,6 +245,55 @@
       <Parameter Name="idhd" Mode="In" Type="String" />
       <Parameter Name="idnv" Mode="In" Type="String" />
       <Parameter Name="ngaylap" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CAPNHATNV">
+      <Parameter Name="idnv" Mode="In" Type="String" />
+      <Parameter Name="hoten" Mode="In" Type="String" />
+      <Parameter Name="ngaysinh" Mode="In" Type="DateTime" />
+      <Parameter Name="gioitinh" Mode="In" Type="String" />
+      <Parameter Name="chucdanh" Mode="In" Type="String" />
+      <Parameter Name="loainv" Mode="In" Type="String" />
+      <Parameter Name="sdt" Mode="In" Type="String" />
+      <Parameter Name="taikhoan" Mode="In" Type="String" />
+      <Parameter Name="matkhau" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SUASP">
+      <Parameter Name="masp" Mode="In" Type="String" />
+      <Parameter Name="Tensp" Mode="In" Type="String" />
+      <Parameter Name="Maloaisp" Mode="In" Type="String" />
+      <Parameter Name="Giatien" Mode="In" Type="Decimal" />
+      <Parameter Name="Mota" Mode="In" Type="String" />
+      <Parameter Name="Hinh" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="THEMNV">
+      <Parameter Name="idnv" Mode="In" Type="String" />
+      <Parameter Name="hoten" Mode="In" Type="String" />
+      <Parameter Name="ngaysinh" Mode="In" Type="DateTime" />
+      <Parameter Name="gioitinh" Mode="In" Type="String" />
+      <Parameter Name="chucdanh" Mode="In" Type="String" />
+      <Parameter Name="loainv" Mode="In" Type="String" />
+      <Parameter Name="sdt" Mode="In" Type="String" />
+      <Parameter Name="taikhoan" Mode="In" Type="String" />
+      <Parameter Name="matkhau" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="THEMSP">
+      <Parameter Name="masp" Mode="In" Type="String" />
+      <Parameter Name="Tensp" Mode="In" Type="String" />
+      <Parameter Name="Maloaisp" Mode="In" Type="String" />
+      <Parameter Name="Giatien" Mode="In" Type="Decimal" />
+      <Parameter Name="Mota" Mode="In" Type="String" />
+      <Parameter Name="Hinh" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="XOANV">
+      <Parameter Name="idnv" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="XOASP">
+      <Parameter Name="masp" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="XOAHD1">
+      <Parameter Name="idhd" Mode="In" Type="String" />
     </FunctionImport>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">

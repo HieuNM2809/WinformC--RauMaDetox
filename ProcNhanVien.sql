@@ -1,4 +1,4 @@
-CREATE PROC ThemNV
+CREATE PROC THEMNV
 (	
 	@idnv nvarchar(3),
 	@hoten nvarchar(50),
@@ -19,7 +19,7 @@ END
 
 GO 
 
-CREATE PROC XaoNV
+CREATE PROC XOANV
 (
 	@idnv nvarchar(3)
 )
@@ -31,7 +31,7 @@ BEGIN
 END
 
 GO
-CREATE PROC CapNhatNV
+CREATE PROC CAPNHATNV
 (
 	@idnv nvarchar(3),
 	@hoten nvarchar(50),
@@ -50,6 +50,6 @@ BEGIN
 	SET IDNV = @idnv, HoTen = @hoten, NgaySinh = @ngaysinh, GioiTinh = @gioitinh,
 		ChucDanh = @chucdanh, LoaiNV = @loainv, SDT = @sdt, TaiKhoan = @taikhoan,
 		MatKhau = @matkhau, Email = @Email
-	WHERE IDNV = @idnv
+	WHERE IDNV = @idnv AND TrangThai=1
 END
 

@@ -34,7 +34,6 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
             this.dtPNgayLap = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.txtIDHoaDon = new System.Windows.Forms.TextBox();
@@ -125,24 +124,7 @@
             this.btnXoa.TabIndex = 16;
             this.btnXoa.Text = "Xóa ";
             this.btnXoa.UseVisualStyleBackColor = false;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThem.BackColor = System.Drawing.Color.White;
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btnThem.Image = global::DashBoar.Properties.Resources.plus;
-            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(693, 70);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(282, 61);
-            this.btnThem.TabIndex = 15;
-            this.btnThem.Text = "  Thêm ";
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // dtPNgayLap
             // 
@@ -154,7 +136,7 @@
             this.dtPNgayLap.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dtPNgayLap.Location = new System.Drawing.Point(228, 197);
             this.dtPNgayLap.Name = "dtPNgayLap";
-            this.dtPNgayLap.Size = new System.Drawing.Size(248, 28);
+            this.dtPNgayLap.Size = new System.Drawing.Size(373, 28);
             this.dtPNgayLap.TabIndex = 14;
             this.dtPNgayLap.Value = new System.DateTime(2021, 5, 26, 22, 13, 29, 0);
             // 
@@ -179,9 +161,9 @@
             this.txtIDHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIDHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDHoaDon.ForeColor = System.Drawing.Color.White;
-            this.txtIDHoaDon.Location = new System.Drawing.Point(165, 113);
+            this.txtIDHoaDon.Location = new System.Drawing.Point(144, 113);
             this.txtIDHoaDon.Name = "txtIDHoaDon";
-            this.txtIDHoaDon.Size = new System.Drawing.Size(155, 21);
+            this.txtIDHoaDon.Size = new System.Drawing.Size(176, 21);
             this.txtIDHoaDon.TabIndex = 7;
             // 
             // label1
@@ -226,6 +208,7 @@
             // dgvHoaDon
             // 
             this.dgvHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHoaDon.BackgroundColor = System.Drawing.Color.White;
             this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colID,
@@ -280,6 +263,7 @@
             this.colTrangThai.HeaderText = "Trạng Thái";
             this.colTrangThai.MinimumWidth = 6;
             this.colTrangThai.Name = "colTrangThai";
+            this.colTrangThai.Visible = false;
             // 
             // frmHoaDon
             // 
@@ -296,7 +280,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dtPNgayLap);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtIDHoaDon);
@@ -323,7 +306,6 @@
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtIDNhanVien;

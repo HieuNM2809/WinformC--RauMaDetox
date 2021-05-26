@@ -33,7 +33,8 @@ SDT char(10),
 TaiKhoan varchar(100),
 MatKhau varchar(100),
 Email varchar(100),
-TrangThai smallint,
+Hinh nvarchar(MAX),
+TrangThai smallint
 )
 go
 create table CTPhanQuyen
@@ -63,7 +64,7 @@ go
 create table CTHoaDon
 (
 	IDHoaDon nvarchar(3),
-	MaSp nvarchar(3),
+	MaSp nvarchar(5),
 	SoLuong int,
 	DonGia money,
 	ChietKhau money,
@@ -116,6 +117,14 @@ BEGIN
 	INSERT INTO HoaDon(IDHoaDon,IDNV,NgayLapHoaDon,TrangThai) VALUES(@idhd,@idnv,@ngaylap,1)
 END
 
+CREATE PROC XOAHD
+(
+	@idhd nvarchar(3)
+)
+AS
+BEGIN
+UPDATE HoaDon SET TrangThai=0 WHERE IDHoaDon=@idhd
+END
 
 --thêm bảng MaHD làm khóa chính cho CTHoaDon--
 
@@ -158,8 +167,9 @@ AS
 BEGIN 
 	UPDATE SanPham
 SET TenSp=@Tensp, MaLoaiSp=@Maloaisp,GiaTien=@Giatien,MoTa=@Mota,Hinh=@Hinh,TrangThai=1
-WHERE masp=@masp and TrangThai=1;
+WHERE MaSp=@masp and TrangThai=1;
 END
+
 CREATE PROCEDURE XOASP
 (
 	@masp nvarchar(5)
@@ -168,5 +178,5 @@ AS
 BEGIN 
 	UPDATE SanPham
 SET TrangThai=0
-WHERE masp=@masp and MaSp=1;
+WHERE MaSp=@masp 
 END
