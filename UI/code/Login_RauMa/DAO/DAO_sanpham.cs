@@ -32,32 +32,18 @@ namespace DAO
         
         public bool ThemSP(DTO_sanpham sp)
         {
-            SanPham SP = new SanPham();
-            SP.MaSp = sp.Masp;
-            SP.MaLoaiSp = sp.MaLoaisp;
-            SP.GiaTien = sp.Giasp;
-            SP.MoTa = sp.Mota;
-            SP.TenSp = sp.Tensp;
-            SP.Hinh = sp.Hinhsp;
-            SP.TrangThai = 1;
-            SanPham sanphamEF = qlrauma.SanPhams.Add(SP);
+            int temp = qlrauma.THEMSP(sp.Masp, sp.Tensp, sp.MaLoaisp, sp.Giasp, sp.Mota, sp.Hinhsp);
             qlrauma.SaveChanges();
-            return sanphamEF.MaSp != "" ;
+            return temp > 0;
         }
         public bool SuaSP(DTO_sanpham sp)
         {
 
             try
             {
-               SanPham sanpham = qlrauma.SanPhams.SingleOrDefault(u => u.MaSp == sp.Masp && u.TrangThai == 1);
-                sanpham.TenSp = sp.Tensp;
-                sanpham.MaLoaiSp = sp.MaLoaisp;
-                sanpham.GiaTien = sp.Giasp;
-                sanpham.MoTa = sp.Mota;
-                sanpham.Hinh = null;
+                int temp = qlrauma.SUASP(sp.Masp, sp.Tensp, sp.MaLoaisp, sp.Giasp, sp.Mota, sp.Hinhsp);
                 qlrauma.SaveChanges();
-
-                return true;
+                return temp>0;
             }
             catch (Exception)
             {
@@ -68,11 +54,9 @@ namespace DAO
         {
             try
             {
-                SanPham SP = qlrauma.SanPhams.SingleOrDefault(u => u.MaSp == sp.Masp && u.TenSp == sp.Tensp && u.MaLoaiSp == sp.MaLoaisp
-                  && u.MoTa == sp.Mota && u.TrangThai == 1);
-                SP.TrangThai = 0;
+                int temp = qlrauma.XOASP(sp.Masp);
                 qlrauma.SaveChanges();
-                return true;
+                return temp > 0;
             }
             catch (Exception e)
             {

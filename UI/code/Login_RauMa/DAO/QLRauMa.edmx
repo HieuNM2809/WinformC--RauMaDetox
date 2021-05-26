@@ -10,7 +10,7 @@
             <PropertyRef Name="MaHD" />
           </Key>
           <Property Name="IDHoaDon" Type="nvarchar" MaxLength="3" Nullable="false" />
-          <Property Name="MaSp" Type="nvarchar" MaxLength="3" />
+          <Property Name="MaSp" Type="nvarchar" MaxLength="5" />
           <Property Name="SoLuong" Type="int" />
           <Property Name="DonGia" Type="money" />
           <Property Name="ChietKhau" Type="money" />
@@ -40,7 +40,7 @@
           <Key>
             <PropertyRef Name="MaLoaiSp" />
           </Key>
-          <Property Name="MaLoaiSp" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="MaLoaiSp" Type="nvarchar" MaxLength="5" Nullable="false" />
           <Property Name="LoaiSP" Type="nvarchar" MaxLength="20" />
           <Property Name="TrangThai" Type="int" />
         </EntityType>
@@ -71,9 +71,9 @@
           <Key>
             <PropertyRef Name="MaSp" />
           </Key>
-          <Property Name="MaSp" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="MaSp" Type="nvarchar" MaxLength="5" Nullable="false" />
           <Property Name="TenSp" Type="nvarchar" MaxLength="20" />
-          <Property Name="MaLoaiSp" Type="nvarchar" MaxLength="3" />
+          <Property Name="MaLoaiSp" Type="nvarchar" MaxLength="5" />
           <Property Name="GiaTien" Type="money" />
           <Property Name="MoTa" Type="nvarchar" MaxLength="50" />
           <Property Name="Hinh" Type="nvarchar(max)" />
@@ -166,6 +166,18 @@
           <Parameter Name="idnv" Type="nvarchar" Mode="In" />
           <Parameter Name="ngaylap" Type="datetime" Mode="In" />
         </Function>
+        <Function Name="CAPNHATNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idnv" Type="nvarchar" Mode="In" />
+          <Parameter Name="hoten" Type="nvarchar" Mode="In" />
+          <Parameter Name="ngaysinh" Type="datetime" Mode="In" />
+          <Parameter Name="gioitinh" Type="nvarchar" Mode="In" />
+          <Parameter Name="chucdanh" Type="nvarchar" Mode="In" />
+          <Parameter Name="loainv" Type="nvarchar" Mode="In" />
+          <Parameter Name="sdt" Type="char" Mode="In" />
+          <Parameter Name="taikhoan" Type="varchar" Mode="In" />
+          <Parameter Name="matkhau" Type="varchar" Mode="In" />
+          <Parameter Name="Email" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
@@ -197,15 +209,49 @@
           <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SUASP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="masp" Type="nvarchar" Mode="In" />
+          <Parameter Name="Tensp" Type="nvarchar" Mode="In" />
+          <Parameter Name="Maloaisp" Type="nvarchar" Mode="In" />
+          <Parameter Name="Giatien" Type="money" Mode="In" />
+          <Parameter Name="Mota" Type="nvarchar" Mode="In" />
+          <Parameter Name="Hinh" Type="nvarchar(max)" Mode="In" />
+        </Function>
         <Function Name="THEMHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idhd" Type="nvarchar" Mode="In" />
           <Parameter Name="idnv" Type="nvarchar" Mode="In" />
           <Parameter Name="ngaylap" Type="datetime" Mode="In" />
         </Function>
+        <Function Name="THEMNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idnv" Type="nvarchar" Mode="In" />
+          <Parameter Name="hoten" Type="nvarchar" Mode="In" />
+          <Parameter Name="ngaysinh" Type="datetime" Mode="In" />
+          <Parameter Name="gioitinh" Type="nvarchar" Mode="In" />
+          <Parameter Name="chucdanh" Type="nvarchar" Mode="In" />
+          <Parameter Name="loainv" Type="nvarchar" Mode="In" />
+          <Parameter Name="sdt" Type="char" Mode="In" />
+          <Parameter Name="taikhoan" Type="varchar" Mode="In" />
+          <Parameter Name="matkhau" Type="varchar" Mode="In" />
+          <Parameter Name="Email" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="THEMSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="masp" Type="nvarchar" Mode="In" />
+          <Parameter Name="Tensp" Type="nvarchar" Mode="In" />
+          <Parameter Name="Maloaisp" Type="nvarchar" Mode="In" />
+          <Parameter Name="Giatien" Type="money" Mode="In" />
+          <Parameter Name="Mota" Type="nvarchar" Mode="In" />
+          <Parameter Name="Hinh" Type="nvarchar(max)" Mode="In" />
+        </Function>
         <Function Name="XOAHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idhd" Type="nvarchar" Mode="In" />
           <Parameter Name="idnv" Type="nvarchar" Mode="In" />
           <Parameter Name="ngaylap" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="XOANV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idnv" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="XOASP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="masp" Type="nvarchar" Mode="In" />
         </Function>
         <EntityContainer Name="ql_raumaModelStoreContainer">
           <EntitySet Name="CTHoaDon" EntityType="Self.CTHoaDon" Schema="dbo" store:Type="Tables" />
@@ -250,7 +296,7 @@
             <PropertyRef Name="MaHD" />
           </Key>
           <Property Name="IDHoaDon" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MaSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="MaSp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Name="SoLuong" Type="Int32" />
           <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="ChietKhau" Type="Decimal" Precision="19" Scale="4" />
@@ -286,7 +332,7 @@
           <Key>
             <PropertyRef Name="MaLoaiSp" />
           </Key>
-          <Property Name="MaLoaiSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MaLoaiSp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LoaiSP1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="TrangThai" Type="Int16" />
           <NavigationProperty Name="SanPhams" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="LoaiSP" ToRole="SanPham" />
@@ -321,9 +367,9 @@
           <Key>
             <PropertyRef Name="MaSp" />
           </Key>
-          <Property Name="MaSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MaSp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TenSp" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="MaLoaiSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="MaLoaiSp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Name="GiaTien" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Hinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -491,6 +537,52 @@
             <Parameter Name="idnv" Mode="In" Type="String" />
             <Parameter Name="ngaylap" Mode="In" Type="DateTime" />
           </FunctionImport>
+          <FunctionImport Name="CAPNHATNV">
+            <Parameter Name="idnv" Mode="In" Type="String" />
+            <Parameter Name="hoten" Mode="In" Type="String" />
+            <Parameter Name="ngaysinh" Mode="In" Type="DateTime" />
+            <Parameter Name="gioitinh" Mode="In" Type="String" />
+            <Parameter Name="chucdanh" Mode="In" Type="String" />
+            <Parameter Name="loainv" Mode="In" Type="String" />
+            <Parameter Name="sdt" Mode="In" Type="String" />
+            <Parameter Name="taikhoan" Mode="In" Type="String" />
+            <Parameter Name="matkhau" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SUASP">
+            <Parameter Name="masp" Mode="In" Type="String" />
+            <Parameter Name="Tensp" Mode="In" Type="String" />
+            <Parameter Name="Maloaisp" Mode="In" Type="String" />
+            <Parameter Name="Giatien" Mode="In" Type="Decimal" />
+            <Parameter Name="Mota" Mode="In" Type="String" />
+            <Parameter Name="Hinh" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="THEMNV">
+            <Parameter Name="idnv" Mode="In" Type="String" />
+            <Parameter Name="hoten" Mode="In" Type="String" />
+            <Parameter Name="ngaysinh" Mode="In" Type="DateTime" />
+            <Parameter Name="gioitinh" Mode="In" Type="String" />
+            <Parameter Name="chucdanh" Mode="In" Type="String" />
+            <Parameter Name="loainv" Mode="In" Type="String" />
+            <Parameter Name="sdt" Mode="In" Type="String" />
+            <Parameter Name="taikhoan" Mode="In" Type="String" />
+            <Parameter Name="matkhau" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="THEMSP">
+            <Parameter Name="masp" Mode="In" Type="String" />
+            <Parameter Name="Tensp" Mode="In" Type="String" />
+            <Parameter Name="Maloaisp" Mode="In" Type="String" />
+            <Parameter Name="Giatien" Mode="In" Type="Decimal" />
+            <Parameter Name="Mota" Mode="In" Type="String" />
+            <Parameter Name="Hinh" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="XOANV">
+            <Parameter Name="idnv" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="XOASP">
+            <Parameter Name="masp" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -628,6 +720,12 @@
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="ql_raumaModel.Store.sp_upgraddiagrams" />
           <FunctionImportMapping FunctionImportName="THEMHD" FunctionName="ql_raumaModel.Store.THEMHD" />
           <FunctionImportMapping FunctionImportName="XOAHD" FunctionName="ql_raumaModel.Store.XOAHD" />
+          <FunctionImportMapping FunctionImportName="CAPNHATNV" FunctionName="ql_raumaModel.Store.CAPNHATNV" />
+          <FunctionImportMapping FunctionImportName="SUASP" FunctionName="ql_raumaModel.Store.SUASP" />
+          <FunctionImportMapping FunctionImportName="THEMNV" FunctionName="ql_raumaModel.Store.THEMNV" />
+          <FunctionImportMapping FunctionImportName="THEMSP" FunctionName="ql_raumaModel.Store.THEMSP" />
+          <FunctionImportMapping FunctionImportName="XOANV" FunctionName="ql_raumaModel.Store.XOANV" />
+          <FunctionImportMapping FunctionImportName="XOASP" FunctionName="ql_raumaModel.Store.XOASP" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

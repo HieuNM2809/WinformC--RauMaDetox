@@ -120,5 +120,11 @@
     <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="ql_raumaModel.Store.sp_upgraddiagrams" />
     <FunctionImportMapping FunctionImportName="THEMHD" FunctionName="ql_raumaModel.Store.THEMHD" />
     <FunctionImportMapping FunctionImportName="XOAHD" FunctionName="ql_raumaModel.Store.XOAHD" />
+    <FunctionImportMapping FunctionImportName="CAPNHATNV" FunctionName="ql_raumaModel.Store.CAPNHATNV" />
+    <FunctionImportMapping FunctionImportName="SUASP" FunctionName="ql_raumaModel.Store.SUASP" />
+    <FunctionImportMapping FunctionImportName="THEMNV" FunctionName="ql_raumaModel.Store.THEMNV" />
+    <FunctionImportMapping FunctionImportName="THEMSP" FunctionName="ql_raumaModel.Store.THEMSP" />
+    <FunctionImportMapping FunctionImportName="XOANV" FunctionName="ql_raumaModel.Store.XOANV" />
+    <FunctionImportMapping FunctionImportName="XOASP" FunctionName="ql_raumaModel.Store.XOASP" />
   </EntityContainerMapping>
 </Mapping>
