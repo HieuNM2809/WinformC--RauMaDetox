@@ -18,40 +18,6 @@ namespace DAO
 
         public List<NhanVienDTO> LayDSNhanVien()
         {
-            ////List<NhanVienDTO> lstNhanVien = new List<NhanVienDTO>();
-
-            //_conn.Open();
-
-            //string sql = "SELECT * FROM NhanVien WHERE TrangThai = 1";
-
-            //SqlCommand cmd = new SqlCommand(sql, _conn);
-
-            //SqlDataReader sdr = cmd.ExecuteReader();
-
-            //if (sdr.HasRows)
-            //{
-            //    while (sdr.Read())
-            //    {
-            //        NhanVienDTO nv = new NhanVienDTO
-            //        {
-            //            ID_NV = sdr.GetString(0),
-            //            HoTen = sdr.GetString(1),
-            //            NgaySinh = sdr.GetDateTime(2),
-            //            GioiTinh = sdr.GetString(3),
-            //            ChucDanh = sdr.GetString(4),
-            //            LoaiNV = sdr.GetString(5),
-            //            SDT = sdr.GetString(6),
-            //            TaiKhoan = sdr.GetString(7),
-            //            MatKhau = sdr.GetString(8),
-            //            Email = sdr.GetString(9),
-            //        };
-
-            //        lstNhanVien.Add(nv);
-            //    }
-            //}
-
-            //_conn.Close();
-
             List<NhanVienDTO> lsnhanvien = new List<NhanVienDTO>();
 
             lsnhanvien = qlrauma.NhanViens.Where(v => v.TrangThai == 1).Select(u => new NhanVienDTO
@@ -72,48 +38,29 @@ namespace DAO
             return lsnhanvien;
         }
 
-        public bool KiemTraNhanVien(string IDNV)
+        public bool KiemTraNhanVien(string idnv)
         {
-            _conn.Open();
+            // _conn.Open();
 
-            string sqlFormat = "SELECT COUNT(*) FROM NhanVien WHERE IDNV = '{0}'";
+            // string sqlFormat = "SELECT COUNT(*) FROM NhanVien WHERE IDNV = '{0}'";
 
-            string sql = string.Format(sqlFormat, IDNV);
+            // string sql = string.Format(sqlFormat, IDNV);
 
-            SqlCommand cmd = new SqlCommand(sql, _conn);
+            // SqlCommand cmd = new SqlCommand(sql, _conn);
 
-           object value = cmd.ExecuteScalar();
+            //object value = cmd.ExecuteScalar();
 
-            _conn.Close();
+            // _conn.Close();
 
-            return Convert.ToInt32(value) > 0;
+            // return Convert.ToInt32(value) > 0;
+
+            int temp = qlrauma.NhanViens.Count(v => v.IDNV == idnv);
+            qlrauma.SaveChanges();
+            return temp > 0;
+
         }
         public bool ThemNV(NhanVienDTO nv)
         {
-            //string sqlInsert = "Insert into NhanVien(ID_NV, HoTen, NgaySinh, GioiTinh, ChucDanh, LoaiNV, SDT, TaiKhoan, MatKhau, Email, TrangThai) VALUES (@ID_NV,@HoTen,@NgaySinh,@GioiTinh,@ChucDanh,@LoaiNV,@SDT,@TaiKhoan,@MatKhau,@Email,1)";
-
-            //_conn.Open();
-            //List<SqlParameter> lstParameter = new List<SqlParameter>();
-            //lstParameter.Add(new SqlParameter("@ID_NV", nv.IDNV));
-            //lstParameter.Add(new SqlParameter("@HoTen", nv.HoTen));
-            //lstParameter.Add(new SqlParameter("@NgaySinh", nv.NgaySinh));
-            //lstParameter.Add(new SqlParameter("@GioiTinh", nv.GioiTinh));
-            //lstParameter.Add(new SqlParameter("@ChucDanh", nv.ChucDanh));
-            //lstParameter.Add(new SqlParameter("@LoaiNV", nv.LoaiNV));
-            //lstParameter.Add(new SqlParameter("@SDT", nv.SDT));
-            //lstParameter.Add(new SqlParameter("@TaiKhoan", nv.TaiKhoan));
-            //lstParameter.Add(new SqlParameter("@MatKhau", nv.MatKhau));
-            //lstParameter.Add(new SqlParameter("@Email", nv.Email));
-
-            //SqlCommand cmd = new SqlCommand(sqlInsert, _conn);
-
-            //cmd.Parameters.AddRange(lstParameter.ToArray());
-
-            //int result = cmd.ExecuteNonQuery();
-
-            //_conn.Close();
-
-            //return result > 0;
             NhanVien nhanvien = new NhanVien();
 
             nhanvien.IDNV = nv.IDNV;
@@ -150,9 +97,6 @@ namespace DAO
                 nhanvien.SDT = nv.SDT;
                 nhanvien.Email = nv.Email;
 
-               
-
-
                 qlrauma.SaveChanges();
 
                 return true ;
@@ -167,11 +111,8 @@ namespace DAO
         {
             try
             {
-                //NhanVien nhanvien = qlrauma.NhanViens.SingleOrDefault(u => u.IDNV == nv.IDNV && u.TrangThai == 1);
-                //nhanvien.TrangThai = 0;
-
-                
-
+                NhanVien nhanvien = qlrauma.NhanViens.SingleOrDefault(u => u.IDNV == nv.IDNV && u.TrangThai == 1);
+                nhanvien.TrangThai = 0;
                 qlrauma.SaveChanges();
 
                 return true;
@@ -186,7 +127,7 @@ namespace DAO
         {
             try
             {
-                NhanVien nhanVien = qlrauma.NhanViens.SingleOrDefault(u => u.TaiKhoan  == nv.TaiKhoan && u.TrangThai == 1);
+                NhanVien nhanVien = qlrauma.NhanViens.SingleOrDefault(u => u.TaiKhoan  == nv.TaiKhoan);
                 nhanVien.MatKhau = nhanVien.MatKhau;
                 qlrauma.SaveChanges();
 
@@ -198,48 +139,32 @@ namespace DAO
             }
         }
 
-        public bool KiemTraTaiKhoan(string TK)
+        public bool KiemTraTaiKhoan(string tk)
         {
-            _conn.Open();
-
-            string sqlFormat = "SELECT COUNT(*) FROM NhanVien WHERE TaiKhoan = '{0}'";
-
-            string sql = string.Format(sqlFormat, TK);
-
-            SqlCommand cmd = new SqlCommand(sql, _conn);
-
-            object value = cmd.ExecuteScalar();
-
-            _conn.Close();
-
-            return Convert.ToInt32(value) > 0;
+           int i = qlrauma.NhanViens.Count(v => v.TaiKhoan == tk);
+            qlrauma.SaveChanges();
+                return i >0;
         }
 
-        public bool KiemTraMatKhau(string MK)
+        public bool KiemTraMatKhau(string mk)
         {
-            _conn.Open();
-
-            string sqlFormat = "SELECT COUNT(*) FROM NhanVien WHERE MatKhau = '{0}'";
-
-            string sql = string.Format(sqlFormat, MK);
-
-            SqlCommand cmd = new SqlCommand(sql, _conn);
-
-            object value = cmd.ExecuteScalar();
-
-            _conn.Close();
-
-            return Convert.ToInt32(value) > 0;
+            int i = qlrauma.NhanViens.Count(v => v.MatKhau == mk);
+            qlrauma.SaveChanges();
+            return i > 0;
         }
 
         public bool DangKiTaiKhoan(NhanVienDTO nv)
         {
             try
             {
-                NhanVien nhanvien = qlrauma.NhanViens.SingleOrDefault(u => u.IDNV == nv.IDNV && u.TrangThai == 1);
+                NhanVien nhanvien = new NhanVien();
+
+                nhanvien.IDNV = nv.IDNV;
                 nhanvien.TaiKhoan = nv.TaiKhoan;
                 nhanvien.MatKhau = nv.MatKhau;
+                nhanvien.TrangThai = 1;
 
+                NhanVien nhanvienEF = qlrauma.NhanViens.Add(nhanvien);
                 qlrauma.SaveChanges();
 
                 return true;

@@ -469,7 +469,7 @@
     <value>Stretch</value>
   </data>
   <data name="picLogo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>243, 13</value>
+    <value>153, 13</value>
   </data>
   <data name="picLogo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -499,7 +499,7 @@
     <value>Microsoft YaHei UI, 12pt, style=Bold</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 169</value>
+    <value>195, 162</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>207, 31</value>
@@ -529,7 +529,7 @@
     <value>Microsoft YaHei UI, 10.2pt, style=Bold</value>
   </data>
   <data name="btnXacNhan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 651</value>
+    <value>32, 602</value>
   </data>
   <data name="btnXacNhan.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -562,7 +562,7 @@
     <value>Microsoft YaHei UI, 10.2pt, style=Bold</value>
   </data>
   <data name="btnThoat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>477, 651</value>
+    <value>292, 602</value>
   </data>
   <data name="btnThoat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -598,7 +598,7 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>761, 725</value>
+    <value>575, 725</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

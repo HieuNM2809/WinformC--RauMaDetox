@@ -31,7 +31,7 @@ namespace DashBoar
             clLoaiNV.DisplayMember = "LoaiNV";
             clLoaiNV.ValueMember = "LoaiNV";
 
-            LayHinh();
+            //LayHinh();
 
 
             dgvThongTinNhanVien.DataSource = _NhanVienBUS.LayDSNhanVien();
