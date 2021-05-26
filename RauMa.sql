@@ -7,7 +7,7 @@ create table SanPham
 (
 MaSp nvarchar(5) not null primary key,
 TenSp nvarchar(20),
-MaLoaiSp nvarchar(3) ,
+MaLoaiSp nvarchar(5) ,
 GiaTien money,
 MoTa nvarchar(50),
 Hinh nvarchar(MAX),
@@ -128,3 +128,45 @@ add MaHD nvarchar(3) not null
 alter table CTHoaDon
 add constraint FK_CTHoaDon_HoaDon foreign key (IDHoaDon) references HoaDon(IDHoaDon)
 
+--Thêm xóa sửa sản phẩm--
+
+CREATE PROCEDURE THEMSP
+(
+	@masp nvarchar(5),
+	@Tensp nvarchar(20),
+	@Maloaisp nvarchar(5),
+	@Giatien money,
+	@Mota nvarchar(50),
+	@Hinh nvarchar(MAX)
+)
+AS
+BEGIN 
+	INSERT INTO SanPham(MaSp,TenSp,MaLoaiSp,GiaTien,MoTa,Hinh,TrangThai) 
+	VALUES(@masp,@Tensp,@Maloaisp,@Giatien,@Mota,@Hinh,1)
+END
+
+CREATE PROCEDURE SUASP
+(
+	@masp nvarchar(5),
+	@Tensp nvarchar(20),
+	@Maloaisp nvarchar(5),
+	@Giatien money,
+	@Mota nvarchar(50),
+	@Hinh nvarchar(MAX)
+)
+AS
+BEGIN 
+	UPDATE SanPham
+SET TenSp=@Tensp, MaLoaiSp=@Maloaisp,GiaTien=@Giatien,MoTa=@Mota,Hinh=@Hinh,TrangThai=1
+WHERE masp=@masp and TrangThai=1;
+END
+CREATE PROCEDURE XOASP
+(
+	@masp nvarchar(5)
+)
+AS
+BEGIN 
+	UPDATE SanPham
+SET TrangThai=0
+WHERE masp=@masp and MaSp=1;
+END

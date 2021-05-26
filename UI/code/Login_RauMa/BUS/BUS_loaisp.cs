@@ -16,18 +16,6 @@ namespace BUS
 
             return _dsloaisp.LayDSloaisp();
         }
-        public bool ThemLSP(DTO_loaisp lsp)
-        {
-            return _dsloaisp.themloai(lsp);
-        }
-     public bool SuaLSP(DTO_loaisp lsp)
-        {
-            return _dsloaisp.sualoai(lsp);
-        }
-     public bool xoaLSP(DTO_loaisp lsp)
-        {
-            return _dsloaisp.xoaloai(lsp);
-        }
      
     }
 

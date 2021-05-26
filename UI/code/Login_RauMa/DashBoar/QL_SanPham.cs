@@ -55,7 +55,6 @@ namespace DashBoar
         {
             DTGV_xem.DataSource = _sanpham.LayDSsanpham(a);
             dtgv_xoa.DataSource = _sanpham.LayDSsanpham(a);
-            dtgv_loaisp.DataSource = _dsloai.LayDSloaisp();
         }
        private void QL_SanPham_Load_1(object sender, EventArgs e)
         {
@@ -243,76 +242,7 @@ namespace DashBoar
             string a = "002"; 
             QL_SanPham_Load(sender, e, a);
         }
-
-        ////////////////////////////////////trang quan ly loai san pham//////////////////////////////////////////////////////
-
-        private void btn_loaisp_sua_Click(object sender, EventArgs e)
-        {
-            loaisanpham.Maloaisp = tbx_lsp_msloai.Text;
-            loaisanpham.Loaisp = tbx_lsp_tenloai.Text;
-            if (_dsloai.SuaLSP(loaisanpham))
-            {
-                dtgv_loaisp .DataSource = _dsloai.LayDSloaisp();
-                MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-            }
-            else MessageBox.Show("Cập nhật thât bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);     
-        }
-
-        private void btn_loaisp_them_Click(object sender, EventArgs e)
-        {
-            if (tbx_lsp_msloai .Text == "" || tbx_lsp_tenloai .Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
-            }
-            else
-            {
-
-                {
-                    DTO_loaisp lspham = new DTO_loaisp();
-                    {
-                        lspham.Maloaisp =tbx_lsp_msloai.Text;
-                        lspham.Loaisp = tbx_lsp_tenloai.Text;
-
-                    };
-                    if (_dsloai.ThemLSP(lspham))
-                    {
-                        MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        QL_SanPham_Load_1(sender, e);
-                    }
-                    else MessageBox.Show("Thêm Thất bại", "Thông báo");
-                }
-            }
-        }
-
-        private void btn_loaisp_xoa_Click(object sender, EventArgs e)
-        {
-            loaisanpham.Maloaisp = tbx_lsp_msloai.Text;
-            loaisanpham.Loaisp = tbx_lsp_tenloai.Text;
-            if (_dsloai.xoaLSP (loaisanpham))
-            {
-
-                dtgv_loaisp.DataSource = _dsloai.LayDSloaisp();
-                MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            else MessageBox.Show("Cập nhật thât bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void btn_loaisp_nhaplai_Click(object sender, EventArgs e)
-        {
-            tbx_lsp_msloai.Text = "";
-            tbx_lsp_tenloai.Text = "";
-        }
-
-        private void dtgv_loaisp_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow row = this.dtgv_loaisp.Rows[e.RowIndex];
-            tbx_lsp_msloai .Text = row.Cells[0].Value.ToString();
-            tbx_lsp_tenloai.Text = row.Cells[1].Value.ToString();
-           
-        }
-
+ 
         private void ptb_anhrauma_Click(object sender, EventArgs e)
         {
 
