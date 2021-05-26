@@ -116,3 +116,5 @@ BEGIN
 	INSERT INTO HoaDon(IDHoaDon,IDNV,NgayLapHoaDon,TrangThai) VALUES(@idhd,@idnv,@ngaylap,1)
 END
 
+alter table CTHoaDon
+add MaHD nvarchar(3) not null 

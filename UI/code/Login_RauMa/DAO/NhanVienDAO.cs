@@ -10,9 +10,7 @@ namespace DAO
 {
     public class NhanVienDAO
     {
-        private static string _connecstring = @"Data Source=RAUMA;Initial Catalog=ql_rauma;Integrated Security=True";
-
-        private SqlConnection _conn = new SqlConnection(_connecstring);
+        
 
         ql_raumaEntities1 qlrauma = new ql_raumaEntities1();
 
@@ -40,19 +38,7 @@ namespace DAO
 
         public bool KiemTraNhanVien(string idnv)
         {
-            // _conn.Open();
-
-            // string sqlFormat = "SELECT COUNT(*) FROM NhanVien WHERE IDNV = '{0}'";
-
-            // string sql = string.Format(sqlFormat, IDNV);
-
-            // SqlCommand cmd = new SqlCommand(sql, _conn);
-
-            //object value = cmd.ExecuteScalar();
-
-            // _conn.Close();
-
-            // return Convert.ToInt32(value) > 0;
+            
 
             int temp = qlrauma.NhanViens.Count(v => v.IDNV == idnv);
             qlrauma.SaveChanges();

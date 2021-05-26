@@ -4,14 +4,13 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ql_raumaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ql_raumaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CTHoaDon">
           <Key>
             <PropertyRef Name="IDHoaDon" />
-            <PropertyRef Name="MaSp" />
           </Key>
           <Property Name="IDHoaDon" Type="nvarchar" MaxLength="3" Nullable="false" />
-          <Property Name="MaSp" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="MaSp" Type="nvarchar" MaxLength="3" />
           <Property Name="SoLuong" Type="int" />
           <Property Name="DonGia" Type="money" />
           <Property Name="ChietKhau" Type="money" />
@@ -20,13 +19,12 @@
         <EntityType Name="CTPhanQuyen">
           <Key>
             <PropertyRef Name="IDNV" />
-            <PropertyRef Name="IDquyen" />
           </Key>
           <Property Name="IDNV" Type="nvarchar" MaxLength="3" Nullable="false" />
-          <Property Name="IDquyen" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="IDquyen" Type="nvarchar" MaxLength="3" />
           <Property Name="Taikhoan" Type="varchar" MaxLength="100" />
           <Property Name="LoaiQuyen" Type="varchar" MaxLength="50" />
-          <Property Name="TrangThai" Type="bit" />
+          <Property Name="TrangThai" Type="smallint" />
         </EntityType>
         <EntityType Name="HoaDon">
           <Key>
@@ -43,7 +41,7 @@
           </Key>
           <Property Name="MaLoaiSp" Type="nvarchar" MaxLength="3" Nullable="false" />
           <Property Name="LoaiSP" Type="nvarchar" MaxLength="20" />
-          <Property Name="TrangThai" Type="int" Nullable="false" />
+          <Property Name="TrangThai" Type="bit" />
         </EntityType>
         <EntityType Name="NhanVien">
           <Key>
@@ -77,12 +75,12 @@
           <Property Name="MaLoaiSp" Type="nvarchar" MaxLength="3" />
           <Property Name="GiaTien" Type="money" />
           <Property Name="MoTa" Type="nvarchar" MaxLength="50" />
-          <Property Name="TrangThai" Type="int" Nullable="false" />
-          <Property Name="Hinh" Type="nvarchar(max)" />
+          <Property Name="Hinh" Type="image" />
+          <Property Name="TrangThai" Type="bit" />
         </EntityType>
         <Association Name="FK_CTHoaDon_HoaDon">
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
-          <End Role="CTHoaDon" Type="Self.CTHoaDon" Multiplicity="*" />
+          <End Role="CTHoaDon" Type="Self.CTHoaDon" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="HoaDon">
               <PropertyRef Name="IDHoaDon" />
@@ -93,7 +91,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CTHoaDon_SanPham">
-          <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
           <End Role="CTHoaDon" Type="Self.CTHoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="SanPham">
@@ -106,7 +104,7 @@
         </Association>
         <Association Name="FK_CTPhanQuyen_NhanVien">
           <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
-          <End Role="CTPhanQuyen" Type="Self.CTPhanQuyen" Multiplicity="*" />
+          <End Role="CTPhanQuyen" Type="Self.CTPhanQuyen" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
               <PropertyRef Name="IDNV" />
@@ -117,7 +115,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CTPhanQuyen_PhanQuyen">
-          <End Role="PhanQuyen" Type="Self.PhanQuyen" Multiplicity="1" />
+          <End Role="PhanQuyen" Type="Self.PhanQuyen" Multiplicity="0..1" />
           <End Role="CTPhanQuyen" Type="Self.CTPhanQuyen" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PhanQuyen">
@@ -152,7 +150,17 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="CAPNHATHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idhd" Type="nvarchar" Mode="In" />
+          <Parameter Name="idnv" Type="nvarchar" Mode="In" />
+          <Parameter Name="ngaylap" Type="datetime" Mode="In" />
+        </Function>
         <Function Name="THEMHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idhd" Type="nvarchar" Mode="In" />
+          <Parameter Name="idnv" Type="nvarchar" Mode="In" />
+          <Parameter Name="ngaylap" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="XOAHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idhd" Type="nvarchar" Mode="In" />
           <Parameter Name="idnv" Type="nvarchar" Mode="In" />
           <Parameter Name="ngaylap" Type="datetime" Mode="In" />
@@ -190,8 +198,7 @@
             <End Role="SanPham" EntitySet="SanPham" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ql_raumaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -201,7 +208,7 @@
             <PropertyRef Name="MaSp" />
           </Key>
           <Property Name="IDHoaDon" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MaSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MaSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
           <Property Name="SoLuong" Type="Int32" />
           <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="ChietKhau" Type="Decimal" Precision="19" Scale="4" />
@@ -215,7 +222,7 @@
             <PropertyRef Name="IDquyen" />
           </Key>
           <Property Name="IDNV" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="IDquyen" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IDquyen" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
           <Property Name="Taikhoan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="LoaiQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TrangThai" Type="Boolean" />
@@ -239,7 +246,7 @@
           </Key>
           <Property Name="MaLoaiSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LoaiSP1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="TrangThai" Type="Int32" Nullable="false" />
+          <Property Name="TrangThai" Type="Int32" />
           <NavigationProperty Name="SanPhams" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="LoaiSP" ToRole="SanPham" />
         </EntityType>
         <EntityType Name="NhanVien">
@@ -277,8 +284,8 @@
           <Property Name="MaLoaiSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
           <Property Name="GiaTien" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TrangThai" Type="Int32" Nullable="false" />
-          <Property Name="Hinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TrangThai" Type="Int32" />
+          <Property Name="Hinh" Type="String" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="CTHoaDons" Relationship="Self.FK_CTHoaDon_SanPham" FromRole="SanPham" ToRole="CTHoaDon" />
           <NavigationProperty Name="LoaiSP" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="SanPham" ToRole="LoaiSP" />
         </EntityType>
@@ -391,6 +398,16 @@
             <Parameter Name="idnv" Mode="In" Type="String" />
             <Parameter Name="ngaylap" Mode="In" Type="DateTime" />
           </FunctionImport>
+          <FunctionImport Name="CAPNHATHD">
+            <Parameter Name="idhd" Mode="In" Type="String" />
+            <Parameter Name="idnv" Mode="In" Type="String" />
+            <Parameter Name="ngaylap" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="XOAHD">
+            <Parameter Name="idhd" Mode="In" Type="String" />
+            <Parameter Name="idnv" Mode="In" Type="String" />
+            <Parameter Name="ngaylap" Mode="In" Type="DateTime" />
+          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -479,6 +496,8 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="THEMHD" FunctionName="ql_raumaModel.Store.THEMHD" />
+          <FunctionImportMapping FunctionImportName="CAPNHATHD" FunctionName="ql_raumaModel.Store.CAPNHATHD" />
+          <FunctionImportMapping FunctionImportName="XOAHD" FunctionName="ql_raumaModel.Store.XOAHD" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

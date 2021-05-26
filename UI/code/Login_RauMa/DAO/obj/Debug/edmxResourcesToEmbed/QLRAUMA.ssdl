@@ -3,10 +3,9 @@
   <EntityType Name="CTHoaDon">
     <Key>
       <PropertyRef Name="IDHoaDon" />
-      <PropertyRef Name="MaSp" />
     </Key>
     <Property Name="IDHoaDon" Type="nvarchar" MaxLength="3" Nullable="false" />
-    <Property Name="MaSp" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="MaSp" Type="nvarchar" MaxLength="3" />
     <Property Name="SoLuong" Type="int" />
     <Property Name="DonGia" Type="money" />
     <Property Name="ChietKhau" Type="money" />
@@ -15,13 +14,12 @@
   <EntityType Name="CTPhanQuyen">
     <Key>
       <PropertyRef Name="IDNV" />
-      <PropertyRef Name="IDquyen" />
     </Key>
     <Property Name="IDNV" Type="nvarchar" MaxLength="3" Nullable="false" />
-    <Property Name="IDquyen" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="IDquyen" Type="nvarchar" MaxLength="3" />
     <Property Name="Taikhoan" Type="varchar" MaxLength="100" />
     <Property Name="LoaiQuyen" Type="varchar" MaxLength="50" />
-    <Property Name="TrangThai" Type="bit" />
+    <Property Name="TrangThai" Type="smallint" />
   </EntityType>
   <EntityType Name="HoaDon">
     <Key>
@@ -38,7 +36,7 @@
     </Key>
     <Property Name="MaLoaiSp" Type="nvarchar" MaxLength="3" Nullable="false" />
     <Property Name="LoaiSP" Type="nvarchar" MaxLength="20" />
-    <Property Name="TrangThai" Type="int" Nullable="false" />
+    <Property Name="TrangThai" Type="bit" />
   </EntityType>
   <EntityType Name="NhanVien">
     <Key>
@@ -72,12 +70,12 @@
     <Property Name="MaLoaiSp" Type="nvarchar" MaxLength="3" />
     <Property Name="GiaTien" Type="money" />
     <Property Name="MoTa" Type="nvarchar" MaxLength="50" />
-    <Property Name="TrangThai" Type="int" Nullable="false" />
-    <Property Name="Hinh" Type="nvarchar(max)" />
+    <Property Name="Hinh" Type="image" />
+    <Property Name="TrangThai" Type="bit" />
   </EntityType>
   <Association Name="FK_CTHoaDon_HoaDon">
     <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
-    <End Role="CTHoaDon" Type="Self.CTHoaDon" Multiplicity="*" />
+    <End Role="CTHoaDon" Type="Self.CTHoaDon" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="HoaDon">
         <PropertyRef Name="IDHoaDon" />
@@ -88,7 +86,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CTHoaDon_SanPham">
-    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
     <End Role="CTHoaDon" Type="Self.CTHoaDon" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SanPham">
@@ -101,7 +99,7 @@
   </Association>
   <Association Name="FK_CTPhanQuyen_NhanVien">
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
-    <End Role="CTPhanQuyen" Type="Self.CTPhanQuyen" Multiplicity="*" />
+    <End Role="CTPhanQuyen" Type="Self.CTPhanQuyen" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="NhanVien">
         <PropertyRef Name="IDNV" />
@@ -112,7 +110,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CTPhanQuyen_PhanQuyen">
-    <End Role="PhanQuyen" Type="Self.PhanQuyen" Multiplicity="1" />
+    <End Role="PhanQuyen" Type="Self.PhanQuyen" Multiplicity="0..1" />
     <End Role="CTPhanQuyen" Type="Self.CTPhanQuyen" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PhanQuyen">
@@ -147,7 +145,17 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="CAPNHATHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idhd" Type="nvarchar" Mode="In" />
+    <Parameter Name="idnv" Type="nvarchar" Mode="In" />
+    <Parameter Name="ngaylap" Type="datetime" Mode="In" />
+  </Function>
   <Function Name="THEMHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idhd" Type="nvarchar" Mode="In" />
+    <Parameter Name="idnv" Type="nvarchar" Mode="In" />
+    <Parameter Name="ngaylap" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="XOAHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="idhd" Type="nvarchar" Mode="In" />
     <Parameter Name="idnv" Type="nvarchar" Mode="In" />
     <Parameter Name="ngaylap" Type="datetime" Mode="In" />

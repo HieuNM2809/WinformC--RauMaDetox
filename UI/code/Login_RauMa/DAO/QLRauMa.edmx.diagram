@@ -18,6 +18,7 @@
         <AssociationConnector Association="ql_raumaModel.FK_CTPhanQuyen_PhanQuyen" ManuallyRouted="false" />
         <AssociationConnector Association="ql_raumaModel.FK_HoaDon_NhanVien" ManuallyRouted="false" />
         <AssociationConnector Association="ql_raumaModel.FK_SanPham_LoaiSanPham" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ql_raumaModel.sysdiagram" Width="1.5" PointX="6.625" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
