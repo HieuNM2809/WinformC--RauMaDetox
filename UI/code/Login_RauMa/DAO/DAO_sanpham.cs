@@ -13,7 +13,7 @@ namespace DAO
         //CHỈNH LẠI TƯƠNG TÁC BẰNG ENTYTIES NHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 
-        ql_raumaEntities qlrauma = new ql_raumaEntities();
+        ql_raumaEntities1 qlrauma = new ql_raumaEntities1();
 
         public List<DTO_sanpham> LayDSSanpham(string a)
         {

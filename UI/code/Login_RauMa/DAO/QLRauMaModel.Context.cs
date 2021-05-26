@@ -13,9 +13,9 @@ namespace DAO
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ql_raumaEntities : DbContext
+    public partial class ql_raumaEntities1 : DbContext
     {
-        public ql_raumaEntities()
+        public ql_raumaEntities1()
             : base("name=ql_raumaEntities")
         {
         }
