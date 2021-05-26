@@ -70,7 +70,7 @@ namespace DAO
             {
                 SanPham SP = qlrauma.SanPhams.SingleOrDefault(u => u.MaSp == sp.Masp && u.TenSp == sp.Tensp && u.MaLoaiSp == sp.MaLoaisp
                   && u.MoTa == sp.Mota && u.TrangThai == 1);
-                SP.TrangThai =0;
+                SP.TrangThai = 0;
                 qlrauma.SaveChanges();
                 return true;
             }

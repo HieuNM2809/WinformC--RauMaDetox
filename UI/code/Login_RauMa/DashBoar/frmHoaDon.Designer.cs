@@ -42,11 +42,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtIDNhanVien = new System.Windows.Forms.TextBox();
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colIDNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNgayLapHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -119,7 +119,7 @@
             this.btnXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.btnXoa.Image = global::DashBoar.Properties.Resources.delete;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(693, 281);
+            this.btnXoa.Location = new System.Drawing.Point(693, 291);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(282, 59);
             this.btnXoa.TabIndex = 16;
@@ -148,14 +148,15 @@
             // 
             this.dtPNgayLap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.dtPNgayLap.CustomFormat = "dd/MM/yyyy h:mm ";
+            this.dtPNgayLap.CustomFormat = "dd/MM/yyyy HH:mm";
             this.dtPNgayLap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtPNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtPNgayLap.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dtPNgayLap.Location = new System.Drawing.Point(228, 197);
             this.dtPNgayLap.Name = "dtPNgayLap";
-            this.dtPNgayLap.Size = new System.Drawing.Size(199, 28);
+            this.dtPNgayLap.Size = new System.Drawing.Size(248, 28);
             this.dtPNgayLap.TabIndex = 14;
+            this.dtPNgayLap.Value = new System.DateTime(2021, 5, 26, 22, 13, 29, 0);
             // 
             // label6
             // 
@@ -238,6 +239,19 @@
             this.dgvHoaDon.RowTemplate.Height = 24;
             this.dgvHoaDon.Size = new System.Drawing.Size(987, 269);
             this.dgvHoaDon.TabIndex = 25;
+            this.dgvHoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDon_CellClick);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.dgvHoaDon);
+            this.panel1.ForeColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(0, 369);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(987, 269);
+            this.panel1.TabIndex = 26;
             // 
             // colID
             // 
@@ -266,16 +280,6 @@
             this.colTrangThai.HeaderText = "Trạng Thái";
             this.colTrangThai.MinimumWidth = 6;
             this.colTrangThai.Name = "colTrangThai";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dgvHoaDon);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(0, 369);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(987, 269);
-            this.panel1.TabIndex = 26;
             // 
             // frmHoaDon
             // 
@@ -324,10 +328,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtIDNhanVien;
         private System.Windows.Forms.DataGridView dgvHoaDon;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colID;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIDNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNgayLapHoaDon;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTrangThai;
-        private System.Windows.Forms.Panel panel1;
     }
 }

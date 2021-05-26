@@ -19,5 +19,9 @@ namespace BUS
         {
             return hd.ThemHD(hoadon);
         }
+        public bool CapnhatHD(HoaDonDTO hoadon)
+        {
+            return hd.CapnhatHD(hoadon);
+        }
     }
 }

@@ -5,18 +5,18 @@ go
 
 create table SanPham
 (
-MaSp nvarchar(3) not null primary key,
+MaSp nvarchar(5) not null primary key,
 TenSp nvarchar(20),
 MaLoaiSp nvarchar(3) ,
 GiaTien money,
 MoTa nvarchar(50),
-Hinh image,
+Hinh nvarchar(MAX),
 TrangThai int default 1
 )
 go
 create table LoaiSP
 (
-MaLoaiSp nvarchar(3) primary key not null,
+MaLoaiSp nvarchar(5) primary key not null,
 LoaiSP nvarchar(20),
 TrangThai int default 1
 )

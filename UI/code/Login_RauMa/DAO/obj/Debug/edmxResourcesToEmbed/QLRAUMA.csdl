@@ -43,7 +43,7 @@
     </Key>
     <Property Name="MaLoaiSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LoaiSP1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="TrangThai" Type="Byte" />
+    <Property Name="TrangThai" Type="Int16" />
     <NavigationProperty Name="SanPhams" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="LoaiSP" ToRole="SanPham" />
   </EntityType>
   <EntityType Name="NhanVien">
@@ -81,8 +81,8 @@
     <Property Name="MaLoaiSp" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
     <Property Name="GiaTien" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Hinh" Type="String" />
-    <Property Name="TrangThai" Type="Byte" />
+    <Property Name="Hinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="Int16" />
     <NavigationProperty Name="CTHoaDons" Relationship="Self.FK_CTHoaDon_SanPham" FromRole="SanPham" ToRole="CTHoaDon" />
     <NavigationProperty Name="LoaiSP" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="SanPham" ToRole="LoaiSP" />
   </EntityType>
