@@ -10,7 +10,7 @@ namespace DAO
     public class HoaDonDAO
     {
 
-        private ql_raumaEntities1 qlrauma = new ql_raumaEntities1();
+        private ql_raumaEntities qlrauma = new ql_raumaEntities();
         public List<HoaDonDTO> LayDSHD()
         {
             List<HoaDonDTO> lstHoaDon = new List<HoaDonDTO>();

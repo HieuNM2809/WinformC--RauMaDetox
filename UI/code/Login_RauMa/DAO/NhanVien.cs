@@ -31,6 +31,7 @@ namespace DAO
         public string TaiKhoan { get; set; }
         public string MatKhau { get; set; }
         public string Email { get; set; }
+        public string Hinh { get; set; }
         public Nullable<short> TrangThai { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
