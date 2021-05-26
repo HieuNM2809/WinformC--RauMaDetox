@@ -26,15 +26,16 @@ namespace DAO
                 ).ToList();
             return lstHoaDon;
         }
-        public bool ThemHD(HoaDonDTO hd)
-        {
-            int temp = qlrauma.THEMHD(hd.id, hd.idnhanvien, hd.ngaylaphoadon);
-                qlrauma.SaveChanges();
-            return temp>0;
-        }
+        
         public bool CapnhatHD(HoaDonDTO hd)
         {
             int temp = qlrauma.CAPNHATHD(hd.id, hd.idnhanvien, hd.ngaylaphoadon);
+            qlrauma.SaveChanges();
+            return temp > 0;
+        }
+        public bool XoaHD(HoaDonDTO hd)
+        {
+            int temp = qlrauma.XOAHD(hd.id);
             qlrauma.SaveChanges();
             return temp > 0;
         }

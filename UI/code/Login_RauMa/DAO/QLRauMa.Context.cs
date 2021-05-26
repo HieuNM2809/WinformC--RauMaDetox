@@ -355,5 +355,14 @@ namespace DAO
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("XOASP", maspParameter);
         }
+    
+        public virtual int XOAHD1(string idhd)
+        {
+            var idhdParameter = idhd != null ?
+                new ObjectParameter("idhd", idhd) :
+                new ObjectParameter("idhd", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("XOAHD1", idhdParameter);
+        }
     }
 }

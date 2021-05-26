@@ -217,11 +217,6 @@
           <Parameter Name="Mota" Type="nvarchar" Mode="In" />
           <Parameter Name="Hinh" Type="nvarchar(max)" Mode="In" />
         </Function>
-        <Function Name="THEMHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="idhd" Type="nvarchar" Mode="In" />
-          <Parameter Name="idnv" Type="nvarchar" Mode="In" />
-          <Parameter Name="ngaylap" Type="datetime" Mode="In" />
-        </Function>
         <Function Name="THEMNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idnv" Type="nvarchar" Mode="In" />
           <Parameter Name="hoten" Type="nvarchar" Mode="In" />
@@ -244,8 +239,6 @@
         </Function>
         <Function Name="XOAHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idhd" Type="nvarchar" Mode="In" />
-          <Parameter Name="idnv" Type="nvarchar" Mode="In" />
-          <Parameter Name="ngaylap" Type="datetime" Mode="In" />
         </Function>
         <Function Name="XOANV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idnv" Type="nvarchar" Mode="In" />
@@ -578,10 +571,13 @@
             <Parameter Name="Hinh" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="XOANV">
-            <Parameter Name="idnv" Mode="In" Type="String" />
+          <Parameter Name="idnv" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="XOASP">
-            <Parameter Name="masp" Mode="In" Type="String" />
+          <Parameter Name="masp" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="XOAHD1">
+            <Parameter Name="idhd" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
@@ -718,14 +714,13 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="ql_raumaModel.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="ql_raumaModel.Store.sp_upgraddiagrams" />
-          <FunctionImportMapping FunctionImportName="THEMHD" FunctionName="ql_raumaModel.Store.THEMHD" />
-          <FunctionImportMapping FunctionImportName="XOAHD" FunctionName="ql_raumaModel.Store.XOAHD" />
           <FunctionImportMapping FunctionImportName="CAPNHATNV" FunctionName="ql_raumaModel.Store.CAPNHATNV" />
           <FunctionImportMapping FunctionImportName="SUASP" FunctionName="ql_raumaModel.Store.SUASP" />
           <FunctionImportMapping FunctionImportName="THEMNV" FunctionName="ql_raumaModel.Store.THEMNV" />
           <FunctionImportMapping FunctionImportName="THEMSP" FunctionName="ql_raumaModel.Store.THEMSP" />
           <FunctionImportMapping FunctionImportName="XOANV" FunctionName="ql_raumaModel.Store.XOANV" />
           <FunctionImportMapping FunctionImportName="XOASP" FunctionName="ql_raumaModel.Store.XOASP" />
+          <FunctionImportMapping FunctionImportName="XOAHD1" FunctionName="ql_raumaModel.Store.XOAHD" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

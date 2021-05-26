@@ -292,6 +292,9 @@
     <FunctionImport Name="XOASP">
       <Parameter Name="masp" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="XOAHD1">
+      <Parameter Name="idhd" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />

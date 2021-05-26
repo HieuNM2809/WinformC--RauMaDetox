@@ -116,6 +116,14 @@ BEGIN
 	INSERT INTO HoaDon(IDHoaDon,IDNV,NgayLapHoaDon,TrangThai) VALUES(@idhd,@idnv,@ngaylap,1)
 END
 
+CREATE PROC XOAHD
+(
+	@idhd nvarchar(3)
+)
+AS
+BEGIN
+UPDATE HoaDon SET TrangThai=0 WHERE IDHoaDon=@idhd
+END
 
 --thêm bảng MaHD làm khóa chính cho CTHoaDon--
 
@@ -158,8 +166,9 @@ AS
 BEGIN 
 	UPDATE SanPham
 SET TenSp=@Tensp, MaLoaiSp=@Maloaisp,GiaTien=@Giatien,MoTa=@Mota,Hinh=@Hinh,TrangThai=1
-WHERE masp=@masp and TrangThai=1;
+WHERE MaSp=@masp and TrangThai=1;
 END
+
 CREATE PROCEDURE XOASP
 (
 	@masp nvarchar(5)
@@ -168,5 +177,5 @@ AS
 BEGIN 
 	UPDATE SanPham
 SET TrangThai=0
-WHERE masp=@masp and MaSp=1;
+WHERE MaSp=@masp 
 END

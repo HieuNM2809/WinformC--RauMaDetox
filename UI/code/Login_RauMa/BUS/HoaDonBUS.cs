@@ -15,13 +15,14 @@ namespace BUS
         {
             return hd.LayDSHD();
         }
-        public bool ThemHoaDon(HoaDonDTO hoadon)
-        {
-            return hd.ThemHD(hoadon);
-        }
+        
         public bool CapnhatHD(HoaDonDTO hoadon)
         {
             return hd.CapnhatHD(hoadon);
+        }
+        public bool XoaHD(HoaDonDTO hoadon)
+        {
+            return hd.XoaHD(hoadon);
         }
     }
 }
