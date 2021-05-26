@@ -127,7 +127,7 @@ namespace DashBoar
               lbl_duongdan.Text = openFile.FileName;
                 byte[] byteA = File.ReadAllBytes(openFile.FileName);
                 MemoryStream ms = new MemoryStream(byteA);
-                ptb_anhto.Image = Image.FromStream(ms);
+                ptb_anhto.BackgroundImage = Image.FromStream(ms);
             }   
 
         }
