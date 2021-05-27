@@ -86,7 +86,7 @@ namespace DashBoar
             this.ofdimgNhanVien = new System.Windows.Forms.OpenFileDialog();
             this.pnDTGV = new System.Windows.Forms.Panel();
             this.qnTTNV = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnChucNang = new System.Windows.Forms.Panel();
             this.grTTNV.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.grHinhNhanVien.SuspendLayout();
@@ -97,7 +97,7 @@ namespace DashBoar
             this.groupBox1.SuspendLayout();
             this.pnDTGV.SuspendLayout();
             this.qnTTNV.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnChucNang.SuspendLayout();
             this.SuspendLayout();
             // 
             // grTTNV
@@ -761,13 +761,13 @@ namespace DashBoar
             this.qnTTNV.Size = new System.Drawing.Size(1215, 397);
             this.qnTTNV.TabIndex = 12;
             // 
-            // panel1
+            // pnChucNang
             // 
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 453);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1215, 134);
-            this.panel1.TabIndex = 13;
+            this.pnChucNang.Controls.Add(this.groupBox1);
+            this.pnChucNang.Location = new System.Drawing.Point(0, 453);
+            this.pnChucNang.Name = "pnChucNang";
+            this.pnChucNang.Size = new System.Drawing.Size(1215, 134);
+            this.pnChucNang.TabIndex = 13;
             // 
             // frmThongTinNhanVien
             // 
@@ -775,7 +775,7 @@ namespace DashBoar
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(1215, 891);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnChucNang);
             this.Controls.Add(this.qnTTNV);
             this.Controls.Add(this.pnDTGV);
             this.Controls.Add(this.label13);
@@ -799,7 +799,7 @@ namespace DashBoar
             this.pnDTGV.ResumeLayout(false);
             this.pnDTGV.PerformLayout();
             this.qnTTNV.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.pnChucNang.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -863,6 +863,6 @@ namespace DashBoar
         private System.Windows.Forms.OpenFileDialog ofdimgNhanVien;
         private System.Windows.Forms.Panel pnDTGV;
         private System.Windows.Forms.Panel qnTTNV;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnChucNang;
     }
 }

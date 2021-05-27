@@ -10,7 +10,7 @@ namespace DAO
 {
     public class DAO_loaisp
     {
-        ql_raumaEntities2 qlrauma = new ql_raumaEntities2();
+        ql_raumaEntities1 qlrauma = new ql_raumaEntities1();
         public List<DTO_loaisp> LayDSloaisp()
         {
             List<DTO_loaisp> dsloaisp = new List<DTO_loaisp>();

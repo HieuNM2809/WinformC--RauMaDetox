@@ -11,7 +11,7 @@ namespace DAO
     public class NhanVienDAO
     {
 
-        ql_raumaEntities2 qlrauma = new ql_raumaEntities2();
+        ql_raumaEntities1 qlrauma = new ql_raumaEntities1();
 
         public List<NhanVienDTO> LayDSNhanVien()
         {
@@ -29,7 +29,6 @@ namespace DAO
                 MatKhau = u.MatKhau,
                 SDT = u.SDT,
                 Email = u.Email,
-                Hinh = u.Hinh
 
             }).ToList();
 
@@ -60,7 +59,6 @@ namespace DAO
                     MatKhau = nv.MatKhau,
                     SDT = nv.SDT,
                     Email = nv.Email,
-                    Hinh = nv.Hinh,
                     TrangThai = 1
                 };
 
