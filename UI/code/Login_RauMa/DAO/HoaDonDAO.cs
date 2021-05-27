@@ -10,7 +10,7 @@ namespace DAO
     public class HoaDonDAO
     {
 
-        private ql_raumaEntities1 qlrauma = new ql_raumaEntities1();
+        private ql_raumaEntities2 qlrauma = new ql_raumaEntities2();
         public List<HoaDonDTO> LayDSHD()
         {
             List<HoaDonDTO> lstHoaDon = new List<HoaDonDTO>();
@@ -29,15 +29,15 @@ namespace DAO
         
         public bool CapnhatHD(HoaDonDTO hd)
         {
-            int temp = qlrauma.CAPNHATHD(hd.id, hd.idnhanvien, hd.ngaylaphoadon);
+            /*nt temp = qlrauma.CAPNHATHD(hd.id, hd.idnhanvien, hd.ngaylaphoadon);*/
             qlrauma.SaveChanges();
-            return temp > 0;
+            return true;
         }
         public bool XoaHD(HoaDonDTO hd)
         {
-            int temp = qlrauma.XOAHD(hd.id);
+            //int temp = qlrauma.XOAHD(hd.id);
             qlrauma.SaveChanges();
-            return temp > 0;
+            return true;
         }
     } 
 }

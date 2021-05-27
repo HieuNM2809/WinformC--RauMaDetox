@@ -13,10 +13,10 @@ namespace DAO
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ql_raumaEntities1 : DbContext
+    public partial class ql_raumaEntities2 : DbContext
     {
-        public ql_raumaEntities1()
-            : base("name=ql_raumaEntities")
+        public ql_raumaEntities2()
+            : base("name=ql_raumaEntities2")
         {
         }
     

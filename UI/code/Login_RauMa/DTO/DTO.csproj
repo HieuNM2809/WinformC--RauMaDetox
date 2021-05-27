@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="DTO_loaisp.cs" />
     <Compile Include="DTO_sanpham.cs" />
+    <Compile Include="Helper.cs" />
     <Compile Include="HoaDonDTO.cs" />
     <Compile Include="NhanVienDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

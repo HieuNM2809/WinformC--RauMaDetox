@@ -10,9 +10,8 @@ namespace DAO
 {
     public class NhanVienDAO
     {
-        
 
-        ql_raumaEntities1 qlrauma = new ql_raumaEntities1();
+        ql_raumaEntities2 qlrauma = new ql_raumaEntities2();
 
         public List<NhanVienDTO> LayDSNhanVien()
         {
@@ -29,7 +28,8 @@ namespace DAO
                 TaiKhoan = u.TaiKhoan,
                 MatKhau = u.MatKhau,
                 SDT = u.SDT,
-                Email = u.Email
+                Email = u.Email,
+                Hinh = u.Hinh
 
             }).ToList();
 
@@ -38,8 +38,6 @@ namespace DAO
 
         public bool KiemTraNhanVien(string idnv)
         {
-            
-
             int temp = qlrauma.NhanViens.Count(v => v.IDNV == idnv);
             qlrauma.SaveChanges();
             return temp > 0;
@@ -47,10 +45,35 @@ namespace DAO
         }
         public bool ThemNV(NhanVienDTO nv)
         {
-            int temp = qlrauma.THEMNV(nv.IDNV, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.ChucDanh, nv.LoaiNV, nv.SDT, nv.TaiKhoan, nv.MatKhau, nv.Email);
-            qlrauma.SaveChanges();
+            try
+            {
+                //int temp = qlrauma.THEMNV(nv.IDNV, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.ChucDanh, nv.LoaiNV, nv.SDT, nv.TaiKhoan, nv.MatKhau, nv.Email);
 
-            return temp>0;
+                NhanVien nhanVien = new NhanVien
+                {
+                    HoTen = nv.HoTen,
+                    NgaySinh = nv.NgaySinh,
+                    GioiTinh = nv.GioiTinh,
+                    ChucDanh = nv.ChucDanh,
+                    LoaiNV = nv.LoaiNV,
+                    TaiKhoan = nv.TaiKhoan,
+                    MatKhau = nv.MatKhau,
+                    SDT = nv.SDT,
+                    Email = nv.Email,
+                    Hinh = nv.Hinh,
+                    TrangThai = 1
+                };
+
+                nhanVien = qlrauma.NhanViens.Add(nhanVien);
+                qlrauma.SaveChanges();
+
+                return true;
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
+          
         }
 
         public bool CapNhatNV(NhanVienDTO nv)
@@ -58,9 +81,10 @@ namespace DAO
           
             try
             {
-               int temp= qlrauma.CAPNHATNV(nv.IDNV, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.ChucDanh, nv.LoaiNV, nv.SDT, nv.TaiKhoan, nv.MatKhau, nv.Email);
-                qlrauma.SaveChanges();
-                return temp>0;
+                //int temp= qlrauma.CAPNHATNV(nv.IDNV, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.ChucDanh, nv.LoaiNV, nv.SDT, nv.TaiKhoan, nv.MatKhau, nv.Email);
+                // qlrauma.SaveChanges();
+                // return temp>0;
+                return true;
             }
             catch (Exception)
             {
@@ -72,10 +96,10 @@ namespace DAO
         {
             try
             {
-                int temp = qlrauma.XOANV(nv.IDNV);
+                //int temp = qlrauma.XOANV(nv.IDNV);
                 qlrauma.SaveChanges();
 
-                return temp > 0;
+                return true;
             }
             catch( Exception)
             {
@@ -125,9 +149,8 @@ namespace DAO
                 nhanvien.TrangThai = 1;
 
                 NhanVien nhanvienEF = qlrauma.NhanViens.Add(nhanvien);
-                qlrauma.SaveChanges();
 
-                return true;
+                return qlrauma.SaveChanges() > 0;
             }
             catch (Exception)
             {

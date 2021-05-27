@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
 using BUS;
@@ -10,7 +11,6 @@ namespace DashBoar
     public partial class frmThongTinNhanVien : Form
     {
         private NhanVienBUS _NhanVienBUS = new NhanVienBUS();
-        string str_Hinh = @"D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\imglNhanVien";
 
         public frmThongTinNhanVien()
         {
@@ -40,7 +40,8 @@ namespace DashBoar
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (txtID.Text == "" || txtHoTen.Text == "" || txtSDT.Text == "" || txtTaiKhoan.Text == "" || txtMatKhau.Text == "" || dtpNgaySinh.Value > DateTime.Now)
+            if ( String.IsNullOrEmpty(txtHoTen.Text) || String.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtSDT.Text) || String.IsNullOrEmpty(txtTaiKhoan.Text) 
+                || String.IsNullOrEmpty(txtMatKhau.Text) || dtpNgaySinh.Value >= DateTime.Now)
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
 
@@ -55,19 +56,22 @@ namespace DashBoar
                 }
                 else
                 {
-                    NhanVienDTO nv = new NhanVienDTO
-                    {
-                        IDNV = txtID.Text,
-                        HoTen = txtHoTen.Text,
-                        NgaySinh = dtpNgaySinh.Value,
-                        GioiTinh = ChonGioiTinh(),
-                        ChucDanh = cbbChucDanh.Text,
-                        LoaiNV = cbbLoaiNhanVien.Text,
-                        SDT = txtSDT.Text,
-                        TaiKhoan = txtTaiKhoan.Text,
-                        MatKhau = txtMatKhau.Text,
-                        Email = txtEmail.Text
-                    };
+                    NhanVienDTO nv = new NhanVienDTO();
+
+                    nv.IDNV = txtID.Text;
+                    nv.HoTen = txtHoTen.Text;
+                    nv.NgaySinh = dtpNgaySinh.Value;
+                    nv.GioiTinh = ChonGioiTinh();
+                    nv.ChucDanh = cbbChucDanh.Text;
+                    nv.LoaiNV = cbbLoaiNhanVien.Text;
+                    nv.SDT = txtSDT.Text;
+                    nv.TaiKhoan = txtTaiKhoan.Text;
+                    nv.MatKhau = txtMatKhau.Text;
+                    nv.Email = txtEmail.Text;
+                    nv.Hinh = string.Format("{0}.jpg", txtID.Text);
+
+                    SaveImage(picNhanVien.Image);
+                   
                     if (_NhanVienBUS.ThemNV(nv))
                     {   
                         frmThongTinNhanVien_Load(sender, e);
@@ -125,7 +129,9 @@ namespace DashBoar
                 txtTaiKhoan.Text = dgvThongTinNhanVien.Rows[hang].Cells[7].Value.ToString();
                 txtMatKhau.Text = dgvThongTinNhanVien.Rows[hang].Cells[8].Value.ToString();
                 txtEmail.Text = dgvThongTinNhanVien.Rows[hang].Cells[9].Value.ToString();
-
+                string path = string.Format(@"{0}\..\..\imgNhanVien\{1}", Environment.CurrentDirectory,
+                    dgvThongTinNhanVien.Rows[hang].Cells[10].Value.ToString());
+                picNhanVien.Image = Image.FromFile(path);
 
             }
             catch
@@ -153,7 +159,6 @@ namespace DashBoar
 
         }
 
-
         private void btnXoa_Click(object sender, EventArgs e)
         {
             NhanVienDTO nv = new NhanVienDTO
@@ -177,44 +182,18 @@ namespace DashBoar
 
         private void picNhanVien_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Multiselect = false;
-            open.Filter = "Hinh Anh|*.jpg";
-            DialogResult dr = open.ShowDialog();
-            if (dr != System.Windows.Forms.DialogResult.Cancel) //co chon file
+            if(ofdimgNhanVien.ShowDialog() == DialogResult.OK)
             {
-                byte[] byteHA = File.ReadAllBytes(open.FileName);
-                MemoryStream ms = new MemoryStream(byteHA);
-                picNhanVien.Image = Image.FromStream(ms);
-            }
-            else
-            {
-                picNhanVien.Image = null;
-            }
+                picNhanVien.Image = Image.FromFile(ofdimgNhanVien.FileName);
+            }    
         }
-
-        private void LayHinh()
+        
+        private void SaveImage(Image image)
         {
-            //Lam rong hai danh sach hinh
-            imglNhanVien.Images.Clear();
+            Bitmap bmp = new Bitmap(image);
+            string path = string.Format(@"{0}\..\..\imgNhanVien\{1}.jpg", Environment.CurrentDirectory, txtID.Text);
 
-            //Doc danh sach hinh bo vao danh sach\
-
-            //Lay thong tin thu muc
-            DirectoryInfo di = new DirectoryInfo(str_Hinh);
-            FileInfo[] fis = di.GetFiles("*.jpg");
-
-            //Doc tung File bo vao danh sach hinh
-            foreach (FileInfo f in fis)
-            {
-                byte[] byteHA = File.ReadAllBytes(f.FullName);
-                MemoryStream ms = new MemoryStream(byteHA);
-
-                Image im = Image.FromStream(ms);
-
-                imglNhanVien.Images.Add(f.Name, im); //Moi hinh anh luu kem khoa
-
-            }
+            bmp.Save(path, ImageFormat.Jpeg);
         }
     }
 }
