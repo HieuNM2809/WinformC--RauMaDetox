@@ -8,6 +8,8 @@ namespace DTO
 {
     public static class Constants
     {
+        #region THÔNG BÁO
+
         public static string MESSAGE_TITLE = "Thông báo";
         public static string ERR_REQUIRED = "Vui lòng điền đủ thông tin!";
         public static string ERR_MAIL_FORMAT = "Email chưa đúng định dạng!";
@@ -21,5 +23,13 @@ namespace DTO
 
         public static string ADD_SUCESS = "Thêm thành công!";
         public static string ADD_FAIL = "Thêm thất bại!";
+
+        public static string UPDATE_SUCESS = "Cập nhật thành công!";
+        public static string UPDATE_FAIL = "Cập nhật thất bại!";
+
+        public static string MSSV_EXIST = "MSSV đã tồn tại!";
+        public static string ACCOUNT_EXIST = "tài khoản đã tồn tại!";
+  
+        #endregion
     }
 }

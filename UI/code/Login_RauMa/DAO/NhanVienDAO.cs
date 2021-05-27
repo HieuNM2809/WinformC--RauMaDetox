@@ -11,7 +11,7 @@ namespace DAO
     public class NhanVienDAO
     {
 
-        ql_raumaEntities1 qlrauma = new ql_raumaEntities1();
+        ql_raumaEntities2 qlrauma = new ql_raumaEntities2();
 
         public List<NhanVienDTO> LayDSNhanVien()
         {
@@ -29,6 +29,7 @@ namespace DAO
                 MatKhau = u.MatKhau,
                 SDT = u.SDT,
                 Email = u.Email,
+                Hinh = u.Hinh
 
             }).ToList();
 
@@ -59,6 +60,7 @@ namespace DAO
                     MatKhau = nv.MatKhau,
                     SDT = nv.SDT,
                     Email = nv.Email,
+                    Hinh = nv.Hinh,
                     TrangThai = 1
                 };
 
@@ -82,6 +84,8 @@ namespace DAO
                 //int temp= qlrauma.CAPNHATNV(nv.IDNV, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.ChucDanh, nv.LoaiNV, nv.SDT, nv.TaiKhoan, nv.MatKhau, nv.Email);
                 // qlrauma.SaveChanges();
                 // return temp>0;
+
+                
                 return true;
             }
             catch (Exception)
@@ -94,10 +98,10 @@ namespace DAO
         {
             try
             {
-                //int temp = qlrauma.XOANV(nv.IDNV);
+                int temp = qlrauma.XOANV(nv.IDNV);
                 qlrauma.SaveChanges();
 
-                return true;
+                return temp > 0;
             }
             catch( Exception)
             {
@@ -130,7 +134,8 @@ namespace DAO
 
         public bool KiemTraMatKhau(string mk)
         {
-            int i = qlrauma.NhanViens.Count(v => v.MatKhau == mk);
+            string maKhoaMatKhau = mk.MaHoaMD5();
+            int i = qlrauma.NhanViens.Count(v => v.MatKhau == maKhoaMatKhau);
             qlrauma.SaveChanges();
             return i > 0;
         }
@@ -154,6 +159,83 @@ namespace DAO
             {
                 return false;
             }
+        }
+
+        public string MAXIDNV()
+        {
+            return qlrauma.NhanViens.Max(v => v.IDNV);
+        }
+
+        public NhanVienDTO KTDangNhap(string taikhoan, string matkhau)
+        {
+            string maHoaMatKhau = matkhau.MaHoaMD5();
+
+            NhanVien nv = qlrauma.NhanViens.SingleOrDefault(u => u.TaiKhoan == taikhoan  && u.MatKhau == maHoaMatKhau);
+
+            if (nv == null) return null;
+
+            NhanVienDTO nhanvienDTO = new NhanVienDTO
+            {
+                IDNV = nv.IDNV,
+                HoTen = nv.HoTen,
+                NgaySinh = nv.NgaySinh.Value,
+                GioiTinh = nv.GioiTinh,
+                ChucDanh = nv.ChucDanh,
+                LoaiNV = nv.LoaiNV,
+                TaiKhoan = nv.TaiKhoan,
+                MatKhau = nv.MatKhau,
+                SDT = nv.SDT,
+                Email = nv.Email,
+                Hinh = nv.Hinh,
+            };
+
+            return nhanvienDTO;
+        }
+
+        public List<NhanVienDTO> TimKiemIDNV(string idnv)
+        {
+            List<NhanVienDTO> lsnhanvien = new List<NhanVienDTO>();
+
+            lsnhanvien = qlrauma.NhanViens.Where(v => v.IDNV.Contains(idnv) ).Select(u => new NhanVienDTO
+            {
+                IDNV = u.IDNV,
+                HoTen = u.HoTen,
+                NgaySinh = u.NgaySinh.Value,
+                GioiTinh = u.GioiTinh,
+                ChucDanh = u.ChucDanh,
+                LoaiNV = u.LoaiNV,
+                TaiKhoan = u.TaiKhoan,
+                MatKhau = u.MatKhau,
+                SDT = u.SDT,
+                Email = u.Email,
+                Hinh = u.Hinh
+
+            }).ToList();
+
+            return lsnhanvien;
+        }
+
+        public List<NhanVienDTO> TimKiemHoTenNV(string hoten)
+        {
+            List<NhanVienDTO> lsnhanvien = new List<NhanVienDTO>();
+
+            lsnhanvien = qlrauma.NhanViens.Where(v => v.HoTen.Contains(hoten)).Select(u => new NhanVienDTO
+            {
+                IDNV = u.IDNV,
+                HoTen = u.HoTen,
+                NgaySinh = u.NgaySinh.Value,
+                GioiTinh = u.GioiTinh,
+                ChucDanh = u.ChucDanh,
+                LoaiNV = u.LoaiNV,
+                TaiKhoan = u.TaiKhoan,
+                MatKhau = u.MatKhau,
+                SDT = u.SDT,
+                Email = u.Email,
+                Hinh = u.Hinh
+
+            }).ToList();
+
+            return lsnhanvien;
         }
     }
 

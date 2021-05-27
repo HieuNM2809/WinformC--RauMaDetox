@@ -54,6 +54,7 @@
     <Compile Include="DoiMatKhauBUS.cs" />
     <Compile Include="HoaDonBUS.cs" />
     <Compile Include="NhanVienBUS.cs" />
+    <Compile Include="PhanQuyenBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

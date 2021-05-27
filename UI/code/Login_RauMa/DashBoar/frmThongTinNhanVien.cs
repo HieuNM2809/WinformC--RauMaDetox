@@ -10,31 +10,35 @@ namespace DashBoar
 {
     public partial class frmThongTinNhanVien : Form
     {
-        private NhanVienBUS _NhanVienBUS = new NhanVienBUS();
+        private NhanVienBUS _nhanvienBUS = new NhanVienBUS();
+        private PhanQuyenBUS _phanQuyenBUS = new PhanQuyenBUS();
 
         public frmThongTinNhanVien()
         {
             InitializeComponent();
             // Đổ dữ liệu vào combobox
-            cbbChucDanh.SelectedIndex = 0;
             cbbLoaiNhanVien.SelectedIndex = 0;
 
         }
 
         private void frmThongTinNhanVien_Load(object sender, EventArgs e)
         {
-            clChucDanh.DataSource = _NhanVienBUS.LayDSNhanVien();
-            clChucDanh.DisplayMember = "ChucDanh";
-            clChucDanh.ValueMember = "ChucDanh";
+            clChucDanh.DataSource = _phanQuyenBUS.LayDSPhanQuyen();
+            clChucDanh.DisplayMember = "LoaiQuyen";
+            clChucDanh.ValueMember = "IDQuyen";
 
-            clLoaiNV.DataSource = _NhanVienBUS.LayDSNhanVien();
+            clLoaiNV.DataSource = _nhanvienBUS.LayDSNhanVien();
             clLoaiNV.DisplayMember = "LoaiNV";
             clLoaiNV.ValueMember = "LoaiNV";
 
+
+            cbbChucDanh.DataSource = _phanQuyenBUS.LayDSPhanQuyen();
+            cbbChucDanh.DisplayMember = "LoaiQuyen";
+            cbbChucDanh.ValueMember = "IDQuyen";
             //LayHinh();
 
 
-            dgvThongTinNhanVien.DataSource = _NhanVienBUS.LayDSNhanVien();
+            dgvThongTinNhanVien.DataSource = _nhanvienBUS.LayDSNhanVien();
 
         }
 
@@ -43,21 +47,26 @@ namespace DashBoar
             if ( String.IsNullOrEmpty(txtHoTen.Text) || String.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtSDT.Text) || String.IsNullOrEmpty(txtTaiKhoan.Text) 
                 || String.IsNullOrEmpty(txtMatKhau.Text) || dtpNgaySinh.Value >= DateTime.Now)
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
+                MessageBox.Show(Constants.ERR_REQUIRED, Constants.MESSAGE_TITLE);
 
                 return;
             }
             else
             {
-                if (_NhanVienBUS.KiemTraNhanVien(txtID.Text))
+                if (_nhanvienBUS.KiemTraNhanVien(txtID.Text))
                 {
-                    MessageBox.Show("MSSV đã tồn tại !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(Constants.MSSV_EXIST, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 else
                 {
+                    if (!_nhanvienBUS.KTDinhDangEmail(txtEmail.Text))
+                    {
+                        MessageBox.Show(Constants.ERR_MAIL_FORMAT, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                     NhanVienDTO nv = new NhanVienDTO();
-
+                   
                     nv.IDNV = txtID.Text;
                     nv.HoTen = txtHoTen.Text;
                     nv.NgaySinh = dtpNgaySinh.Value;
@@ -66,18 +75,19 @@ namespace DashBoar
                     nv.LoaiNV = cbbLoaiNhanVien.Text;
                     nv.SDT = txtSDT.Text;
                     nv.TaiKhoan = txtTaiKhoan.Text;
-                    nv.MatKhau = txtMatKhau.Text;
+                    nv.MatKhau = txtMatKhau.Text.MaHoaMD5();
+
                     nv.Email = txtEmail.Text;
                     nv.Hinh = string.Format("{0}.jpg", txtID.Text);
 
                     SaveImage(picNhanVien.Image);
                    
-                    if (_NhanVienBUS.ThemNV(nv))
+                    if (_nhanvienBUS.ThemNV(nv))
                     {   
                         frmThongTinNhanVien_Load(sender, e);
-                        MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(Constants.ADD_SUCESS, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    else MessageBox.Show("Thêm Thất bại", "Thông báo");
+                    else MessageBox.Show(Constants.ADD_FAIL, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -104,12 +114,12 @@ namespace DashBoar
                 Email = txtEmail.Text
 
             };
-            if (_NhanVienBUS.CapNhatNV(nv))
+            if (_nhanvienBUS.CapNhatNV(nv))
             {
-                MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Constants.UPDATE_SUCESS, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmThongTinNhanVien_Load(sender, e);
             }
-            else MessageBox.Show("Cập nhật thât bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show(Constants.UPDATE_FAIL, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void dgvThongTinNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -146,7 +156,7 @@ namespace DashBoar
             {
                 if (ctrTTNV is TextBox)
                 {
-                    ctrTTNV.Text = "";
+                    ctrTTNV.Text = string.Empty;
                 }
             }
             dtpNgaySinh.Value = DateTime.Now;
@@ -154,7 +164,8 @@ namespace DashBoar
             cbbChucDanh.SelectedIndex = 0;
             cbbLoaiNhanVien.SelectedIndex = 0;
             picNhanVien.Image = null;
-
+            txtID.Text = (_nhanvienBUS.MAXID() + 1);
+            frmThongTinNhanVien_Load(sender, e);
 
 
         }
@@ -166,12 +177,12 @@ namespace DashBoar
                 IDNV = txtID.Text,
 
             };
-            if (_NhanVienBUS.XoaNV(nv))
+            if (_nhanvienBUS.XoaNV(nv))
             {
-                MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Constants.DELETE_SUCESS, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmThongTinNhanVien_Load(sender, e);
             }
-            else MessageBox.Show("Xóa thât bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show(Constants.DELETE_FAIL, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private string ChonGioiTinh()
@@ -190,10 +201,25 @@ namespace DashBoar
         
         private void SaveImage(Image image)
         {
+           
             Bitmap bmp = new Bitmap(image);
             string path = string.Format(@"{0}\..\..\imgNhanVien\{1}.jpg", Environment.CurrentDirectory, txtID.Text);
 
             bmp.Save(path, ImageFormat.Jpeg);
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if(radHoTen.Checked == true )
+            {
+               dgvThongTinNhanVien.DataSource = _nhanvienBUS.TimKiemIDNV(txtTimKiem.Text);
+                return;
+            }
+            if(radID.Checked == true )
+            {
+                dgvThongTinNhanVien.DataSource = _nhanvienBUS.TimKiemIDNV(txtTimKiem.Text);
+                return;
+            }    
         }
     }
 }

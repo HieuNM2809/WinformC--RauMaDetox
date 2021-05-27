@@ -31,6 +31,5 @@ namespace BUS
             return _dssp.xoaSP(sp);
         }
        
-       
     }
 }

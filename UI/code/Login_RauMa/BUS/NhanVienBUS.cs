@@ -22,6 +22,7 @@ namespace BUS
         {
             return _NhanVienDAO.KiemTraNhanVien(IDNV);
         }
+
         public bool ThemNV(NhanVienDTO nv)
         {
             return _NhanVienDAO.ThemNV(nv);
@@ -43,6 +44,25 @@ namespace BUS
             Match match = regex.Match(email);
 
             return match.Success;
+        }
+
+        public string MAXID()
+        {
+            return _NhanVienDAO.MAXIDNV();
+        }
+
+        public NhanVienDTO KTDangNhap(string taikhoan, string matkhau)
+        {
+            return _NhanVienDAO.KTDangNhap(taikhoan, matkhau);
+        }
+        public List<NhanVienDTO> TimKiemIDNV(string idnv)
+        {
+            return _NhanVienDAO.TimKiemIDNV(idnv);
+        }
+
+        public List<NhanVienDTO> TimKiemHoTenNV(string hoten)
+        {
+            return _NhanVienDAO.TimKiemHoTenNV(hoten);
         }
     }
 }

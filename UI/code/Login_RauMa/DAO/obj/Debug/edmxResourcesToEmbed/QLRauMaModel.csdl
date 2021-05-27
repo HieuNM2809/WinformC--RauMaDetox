@@ -191,5 +191,8 @@
       <End Role="LoaiSP" EntitySet="LoaiSPs" />
       <End Role="SanPham" EntitySet="SanPhams" />
     </AssociationSet>
+    <FunctionImport Name="XOANV">
+      <Parameter Name="idnv" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
 </Schema>

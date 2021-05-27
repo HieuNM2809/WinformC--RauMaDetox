@@ -147,6 +147,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="XOANV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idnv" Type="nvarchar" Mode="In" />
+  </Function>
   <EntityContainer Name="ql_raumaModelStoreContainer">
     <EntitySet Name="CTHoaDon" EntityType="Self.CTHoaDon" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CTPhanQuyen" EntityType="Self.CTPhanQuyen" Schema="dbo" store:Type="Tables" />

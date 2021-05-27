@@ -13,7 +13,6 @@
     <Property Name="MaHD" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="HoaDon" Relationship="Self.FK_CTHoaDon_HoaDon" FromRole="CTHoaDon" ToRole="HoaDon" />
     <NavigationProperty Name="SanPham" Relationship="Self.FK_CTHoaDon_SanPham" FromRole="CTHoaDon" ToRole="SanPham" />
-    <Property Name="TenSp" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
   </EntityType>
   <EntityType Name="CTPhanQuyen">
     <Key>
@@ -44,7 +43,7 @@
     </Key>
     <Property Name="MaLoaiSp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LoaiSP1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="TrangThai" Type="Int32" />
+    <Property Name="TrangThai" Type="Int16" />
     <NavigationProperty Name="SanPhams" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="LoaiSP" ToRole="SanPham" />
   </EntityType>
   <EntityType Name="NhanVien">
@@ -83,7 +82,7 @@
     <Property Name="GiaTien" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Hinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="TrangThai" Type="Int32" />
+    <Property Name="TrangThai" Type="Int16" />
     <NavigationProperty Name="CTHoaDons" Relationship="Self.FK_CTHoaDon_SanPham" FromRole="SanPham" ToRole="CTHoaDon" />
     <NavigationProperty Name="LoaiSP" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="SanPham" ToRole="LoaiSP" />
   </EntityType>
@@ -207,18 +206,6 @@
       <Parameter Name="idnv" Mode="In" Type="String" />
       <Parameter Name="ngaylap" Mode="In" Type="DateTime" />
     </FunctionImport>
-    <FunctionImport Name="CAPNHATNV">
-      <Parameter Name="idnv" Mode="In" Type="String" />
-      <Parameter Name="hoten" Mode="In" Type="String" />
-      <Parameter Name="ngaysinh" Mode="In" Type="DateTime" />
-      <Parameter Name="gioitinh" Mode="In" Type="String" />
-      <Parameter Name="chucdanh" Mode="In" Type="String" />
-      <Parameter Name="loainv" Mode="In" Type="String" />
-      <Parameter Name="sdt" Mode="In" Type="String" />
-      <Parameter Name="taikhoan" Mode="In" Type="String" />
-      <Parameter Name="matkhau" Mode="In" Type="String" />
-      <Parameter Name="Email" Mode="In" Type="String" />
-    </FunctionImport>
     <FunctionImport Name="sp_alterdiagram">
       <Parameter Name="diagramname" Mode="In" Type="String" />
       <Parameter Name="owner_id" Mode="In" Type="Int32" />
@@ -249,6 +236,28 @@
       <Parameter Name="new_diagramname" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="THEMHD">
+      <Parameter Name="idhd" Mode="In" Type="String" />
+      <Parameter Name="idnv" Mode="In" Type="String" />
+      <Parameter Name="ngaylap" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="XOAHD">
+      <Parameter Name="idhd" Mode="In" Type="String" />
+      <Parameter Name="idnv" Mode="In" Type="String" />
+      <Parameter Name="ngaylap" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CAPNHATNV">
+      <Parameter Name="idnv" Mode="In" Type="String" />
+      <Parameter Name="hoten" Mode="In" Type="String" />
+      <Parameter Name="ngaysinh" Mode="In" Type="DateTime" />
+      <Parameter Name="gioitinh" Mode="In" Type="String" />
+      <Parameter Name="chucdanh" Mode="In" Type="String" />
+      <Parameter Name="loainv" Mode="In" Type="String" />
+      <Parameter Name="sdt" Mode="In" Type="String" />
+      <Parameter Name="taikhoan" Mode="In" Type="String" />
+      <Parameter Name="matkhau" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
     <FunctionImport Name="SUASP">
       <Parameter Name="masp" Mode="In" Type="String" />
       <Parameter Name="Tensp" Mode="In" Type="String" />
@@ -256,11 +265,6 @@
       <Parameter Name="Giatien" Mode="In" Type="Decimal" />
       <Parameter Name="Mota" Mode="In" Type="String" />
       <Parameter Name="Hinh" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="THEMHD">
-      <Parameter Name="idhd" Mode="In" Type="String" />
-      <Parameter Name="idnv" Mode="In" Type="String" />
-      <Parameter Name="ngaylap" Mode="In" Type="DateTime" />
     </FunctionImport>
     <FunctionImport Name="THEMNV">
       <Parameter Name="idnv" Mode="In" Type="String" />
@@ -282,14 +286,14 @@
       <Parameter Name="Mota" Mode="In" Type="String" />
       <Parameter Name="Hinh" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="XOAHD">
-      <Parameter Name="idhd" Mode="In" Type="String" />
-    </FunctionImport>
     <FunctionImport Name="XOANV">
       <Parameter Name="idnv" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="XOASP">
       <Parameter Name="masp" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="XOAHD1">
+      <Parameter Name="idhd" Mode="In" Type="String" />
     </FunctionImport>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
