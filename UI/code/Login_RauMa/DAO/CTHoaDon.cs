@@ -21,6 +21,7 @@ namespace DAO
         public Nullable<decimal> ChietKhau { get; set; }
         public Nullable<decimal> TongTien { get; set; }
         public string MaHD { get; set; }
+        public string TenSp { get; set; }
     
         public virtual HoaDon HoaDon { get; set; }
         public virtual SanPham SanPham { get; set; }

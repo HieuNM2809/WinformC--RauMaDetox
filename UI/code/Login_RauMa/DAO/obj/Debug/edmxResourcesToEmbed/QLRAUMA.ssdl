@@ -6,6 +6,7 @@
     </Key>
     <Property Name="IDHoaDon" Type="nvarchar" MaxLength="3" Nullable="false" />
     <Property Name="MaSp" Type="nvarchar" MaxLength="5" />
+    <Property Name="TenSp" Type="nchar" MaxLength="10" />
     <Property Name="SoLuong" Type="int" />
     <Property Name="DonGia" Type="money" />
     <Property Name="ChietKhau" Type="money" />
@@ -211,6 +212,11 @@
     <Parameter Name="Giatien" Type="money" Mode="In" />
     <Parameter Name="Mota" Type="nvarchar" Mode="In" />
     <Parameter Name="Hinh" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="THEMHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idhd" Type="nvarchar" Mode="In" />
+    <Parameter Name="idnv" Type="nvarchar" Mode="In" />
+    <Parameter Name="ngaylap" Type="datetime" Mode="In" />
   </Function>
   <Function Name="THEMNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="idnv" Type="nvarchar" Mode="In" />
