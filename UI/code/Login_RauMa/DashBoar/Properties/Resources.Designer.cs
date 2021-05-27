@@ -153,6 +153,26 @@ namespace DashBoar.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exits2 {
+            get {
+                object obj = ResourceManager.GetObject("exits2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exits3 {
+            get {
+                object obj = ResourceManager.GetObject("exits3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lock1 {
             get {
                 object obj = ResourceManager.GetObject("lock1", resourceCulture);
@@ -253,6 +273,16 @@ namespace DashBoar.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap No {
+            get {
+                object obj = ResourceManager.GetObject("No", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap panel {
             get {
                 object obj = ResourceManager.GetObject("panel", resourceCulture);
@@ -266,6 +296,26 @@ namespace DashBoar.Properties {
         internal static System.Drawing.Bitmap panel1 {
             get {
                 object obj = ResourceManager.GetObject("panel1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap phone_call_icon {
+            get {
+                object obj = ResourceManager.GetObject("phone-call-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap phone_call_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("phone-call-icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -406,6 +456,36 @@ namespace DashBoar.Properties {
         internal static System.Drawing.Bitmap xacnhan {
             get {
                 object obj = ResourceManager.GetObject("xacnhan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xacnhan1 {
+            get {
+                object obj = ResourceManager.GetObject("xacnhan1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yes {
+            get {
+                object obj = ResourceManager.GetObject("yes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yes1 {
+            get {
+                object obj = ResourceManager.GetObject("yes1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
