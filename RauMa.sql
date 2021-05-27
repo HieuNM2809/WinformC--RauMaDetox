@@ -50,7 +50,8 @@ go
 create table PhanQuyen
 (
 	IDquyen nvarchar(3) not null,
-	LoaiQuyen varchar(50)
+	LoaiQuyen varchar(50),
+	TrangThai smallint
 )
 go
 create table HoaDon
@@ -74,7 +75,7 @@ create table CTHoaDon
 )
 go
 
---thêm bảng MaHD làm khóa chính cho CTHoaDon--
+
 
 
 --Khóa Chính, Khóa Ngoại 

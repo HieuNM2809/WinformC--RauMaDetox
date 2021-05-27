@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\HỌC TẬP\WinformC--RauMaDetox-47070b5a5845f57864c8de9c8d3cc00d5fd0fee2\UI\code\Login_RauMa\DAO\QLRauMaModel.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\DAO\QLRauMaModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

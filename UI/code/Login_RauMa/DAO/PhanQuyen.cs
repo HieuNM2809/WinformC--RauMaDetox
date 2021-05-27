@@ -31,6 +31,8 @@ public partial class PhanQuyen
 
     public string LoaiQuyen { get; set; }
 
+    public Nullable<short> TrangThai { get; set; }
+
 
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

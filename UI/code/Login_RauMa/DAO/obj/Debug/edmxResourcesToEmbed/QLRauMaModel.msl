@@ -65,6 +65,7 @@
     <EntitySetMapping Name="PhanQuyens">
       <EntityTypeMapping TypeName="ql_raumaModel.PhanQuyen">
         <MappingFragment StoreEntitySet="PhanQuyen">
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
           <ScalarProperty Name="IDquyen" ColumnName="IDquyen" />
           <ScalarProperty Name="LoaiQuyen" ColumnName="LoaiQuyen" />
         </MappingFragment>

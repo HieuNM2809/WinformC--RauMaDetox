@@ -62,6 +62,7 @@
     </Key>
     <Property Name="IDquyen" Type="nvarchar" MaxLength="3" Nullable="false" />
     <Property Name="LoaiQuyen" Type="varchar" MaxLength="50" />
+    <Property Name="TrangThai" Type="smallint" />
   </EntityType>
   <EntityType Name="SanPham">
     <Key>

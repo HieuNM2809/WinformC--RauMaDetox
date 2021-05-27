@@ -67,6 +67,7 @@
           </Key>
           <Property Name="IDquyen" Type="nvarchar" MaxLength="3" Nullable="false" />
           <Property Name="LoaiQuyen" Type="varchar" MaxLength="50" />
+          <Property Name="TrangThai" Type="smallint" />
         </EntityType>
         <EntityType Name="SanPham">
           <Key>
@@ -264,6 +265,7 @@
           <Property Name="IDquyen" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LoaiQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="CTPhanQuyens" Relationship="Self.FK_CTPhanQuyen_PhanQuyen" FromRole="PhanQuyen" ToRole="CTPhanQuyen" />
+          <Property Name="TrangThai" Type="Int16" />
         </EntityType>
         <EntityType Name="SanPham">
           <Key>
@@ -384,7 +386,7 @@
             <End Role="SanPham" EntitySet="SanPhams" />
           </AssociationSet>
           <FunctionImport Name="XOANV">
-            <Parameter Name="idnv" Mode="In" Type="String" />
+          <Parameter Name="idnv" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
       </Schema>
@@ -457,6 +459,7 @@
           <EntitySetMapping Name="PhanQuyens">
             <EntityTypeMapping TypeName="ql_raumaModel.PhanQuyen">
               <MappingFragment StoreEntitySet="PhanQuyen">
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
                 <ScalarProperty Name="IDquyen" ColumnName="IDquyen" />
                 <ScalarProperty Name="LoaiQuyen" ColumnName="LoaiQuyen" />
               </MappingFragment>

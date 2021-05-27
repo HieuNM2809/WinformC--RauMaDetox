@@ -72,6 +72,7 @@
     <Property Name="IDquyen" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LoaiQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="CTPhanQuyens" Relationship="Self.FK_CTPhanQuyen_PhanQuyen" FromRole="PhanQuyen" ToRole="CTPhanQuyen" />
+    <Property Name="TrangThai" Type="Int16" />
   </EntityType>
   <EntityType Name="SanPham">
     <Key>
