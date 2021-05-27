@@ -13,7 +13,7 @@ namespace DAO
         //CHỈNH LẠI TƯƠNG TÁC BẰNG ENTYTIES NHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 
-        ql_raumaEntities1 qlrauma = new ql_raumaEntities1();
+        ql_raumaEntities2 qlrauma = new ql_raumaEntities2();
 
         public List<DTO_sanpham> LayDSSanpham(string a)
         {
@@ -32,18 +32,18 @@ namespace DAO
         
         public bool ThemSP(DTO_sanpham sp)
         {
-            int temp = qlrauma.THEMSP(sp.Masp, sp.Tensp, sp.MaLoaisp, sp.Giasp, sp.Mota, sp.Hinhsp);
+            //int temp = qlrauma.THEMSP(sp.Masp, sp.Tensp, sp.MaLoaisp, sp.Giasp, sp.Mota, sp.Hinhsp);
             qlrauma.SaveChanges();
-            return temp > 0;
+            return true;
         }
         public bool SuaSP(DTO_sanpham sp)
         {
 
             try
             {
-                int temp = qlrauma.SUASP(sp.Masp, sp.Tensp, sp.MaLoaisp, sp.Giasp, sp.Mota, sp.Hinhsp);
+                //int temp = qlrauma.SUASP(sp.Masp, sp.Tensp, sp.MaLoaisp, sp.Giasp, sp.Mota, sp.Hinhsp);
                 qlrauma.SaveChanges();
-                return temp>0;
+                return true;
             }
             catch (Exception)
             {
@@ -54,9 +54,9 @@ namespace DAO
         {
             try
             {
-                int temp = qlrauma.XOASP(sp.Masp);
+                //int temp = qlrauma.XOASP(sp.Masp);
                 qlrauma.SaveChanges();
-                return temp > 0;
+                return true;
             }
             catch (Exception e)
             {

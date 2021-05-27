@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace BUS
@@ -34,6 +35,14 @@ namespace BUS
         public bool XoaNV(NhanVienDTO nv)
         {
             return _NhanVienDAO.XoaNV(nv);
+        }
+
+        public bool KTDinhDangEmail(string email)
+        {
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(email);
+
+            return match.Success;
         }
     }
 }
