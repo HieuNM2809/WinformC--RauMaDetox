@@ -286,5 +286,26 @@
   <ItemGroup>
     <None Include="Resources\exits2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xacnhan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exits3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone-call-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone-call-icon1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
