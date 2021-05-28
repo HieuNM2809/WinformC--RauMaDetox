@@ -31,8 +31,11 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             this.button2 = new System.Windows.Forms.Button();
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -60,10 +63,14 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             this.button1 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.colIDHD = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colMaSp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+=======
+            this.lstDanhSachSP = new System.Windows.Forms.ListView();
+>>>>>>> Stashed changes
 =======
             this.lstDanhSachSP = new System.Windows.Forms.ListView();
 >>>>>>> Stashed changes
@@ -109,7 +116,10 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -355,6 +365,7 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
@@ -377,6 +388,10 @@
             // lstDanhSachSP
 >>>>>>> Stashed changes
             // 
+=======
+            // lstDanhSachSP
+            // 
+>>>>>>> Stashed changes
 =======
             // lstDanhSachSP
             // 
