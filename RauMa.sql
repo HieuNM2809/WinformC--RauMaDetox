@@ -50,8 +50,7 @@ go
 create table PhanQuyen
 (
 	IDquyen nvarchar(3) not null,
-	LoaiQuyen varchar(50),
-	TrangThai smallint
+	LoaiQuyen varchar(50)
 )
 go
 create table HoaDon
@@ -172,23 +171,4 @@ BEGIN
 SET TrangThai=0
 WHERE masp=@masp and MaSp=1;
 END
-
---Thêm dữ liệu cho phân quyền--
-
-INSERT INTO PhanQuyen (IDquyen, LoaiQuyen)
-VALUES (1,N'Nhân viên')
-Go
-INSERT INTO PhanQuyen(IDquyen,LoaiQuyen)
-VALUES (2, N'Admin')
-
-CREATE PROC LAYGIA(@masp nvarchar(5))
-AS
-BEGIN
-	SELECT GiaTien FROM SanPham WHERE MaSp=@masp AND TrangThai=1
-END
-
-
-
-alter table CTHoaDon
-add constraint PK_IDHoaDon_CTHoaDon primary key(IDHoaDon)
 

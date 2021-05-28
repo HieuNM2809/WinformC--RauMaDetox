@@ -131,11 +131,14 @@ namespace DashBoar
 
                 picNhanVien.Image = Image.FromFile(path);
                 picNhanVien.Enabled = false;
+                txtTaiKhoan.Enabled = false;
+
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             picNhanVien.Enabled = true;
+            txtTaiKhoan.Enabled = true;
             int i = 1;
             if (_nhanvienBUS.MAXID() == null) txtID.Text = i+"";
 
@@ -207,17 +210,69 @@ namespace DashBoar
             }    
         }
 
+        private void MouseHover(string text, Button btn)
+        {
+            btn.Image = null;
+            btn.ForeColor = Color.FromArgb(39, 174, 96);
+            btn.Text = "text";
+        }
+
+        private void MouseLeave(Button btn, string tenhinh)
+        {
+            string path = string.Format(@"{0}\..\..\Icon\{1}.pns", Environment.CurrentDirectory, tenhinh);
+            btn.Text = null;
+            btn.Image = Image.FromFile(path);
+        }
         private void btnThem_MouseHover(object sender, EventArgs e)
         {
-            btnThem.Image = null;
-            btnThem.ForeColor = Color.Red;
-            btnThem.Text = "Thêm";
+            MouseHover("Thêm", btnThem);
         }
 
         private void btnThem_MouseLeave(object sender, EventArgs e)
         {
-            string.IsNullOrEmpty(btnThem.Text);
-            btnThem.Image = Image.FromFile(@"D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\img\plus.png");
+            //btnThem.Text = null;
+            //btnThem.Image = Image.FromFile(@"D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\img\plus.png");
+            MouseLeave(btnThem, "plus.pns");
+        }
+
+        private void btnSua_MouseHover(object sender, EventArgs e)
+        {
+            MouseHover("Sửa", btnSua);
+        }
+
+        private void btnSua_ClientSizeChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoa_MouseHover(object sender, EventArgs e)
+        {
+            MouseHover("Xóa", btnXoa);
+        }
+
+        private void btnXoa_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLamMoi_MouseHover(object sender, EventArgs e)
+        {
+            MouseHover("Làm mới", btnLamMoi);
+        }
+
+        private void btnLamMoi_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThoat_MouseHover(object sender, EventArgs e)
+        {
+            MouseHover("Thoát", btnThoat);
+        }
+
+        private void btnThoat_MouseLeave(object sender, EventArgs e)
+        {
+
         }
     }
 }

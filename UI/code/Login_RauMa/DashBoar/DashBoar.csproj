@@ -285,6 +285,7 @@
     <None Include="Resources\logoWin.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Icon\" />
     <Folder Include="imgNhanVien\" />
   </ItemGroup>
   <ItemGroup>
@@ -292,9 +293,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\shutdown.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\raumadau.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
