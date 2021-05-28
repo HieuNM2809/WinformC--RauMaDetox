@@ -293,8 +293,5 @@
   <ItemGroup>
     <None Include="Resources\shutdown.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\raumadau.PNG" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

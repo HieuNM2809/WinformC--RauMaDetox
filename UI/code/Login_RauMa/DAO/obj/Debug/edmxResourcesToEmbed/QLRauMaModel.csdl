@@ -248,19 +248,5 @@
       <Parameter Name="taikhoan" Mode="In" Type="String" />
       <Parameter Name="matkhau" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="DSNHANVIEN" ReturnType="Collection(ql_raumaModel.DSNHANVIEN_Result)" />
   </EntityContainer>
-  <ComplexType Name="DSNHANVIEN_Result">
-    <Property Type="String" Name="IDNV" Nullable="false" MaxLength="3" />
-    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
-    <Property Type="DateTime" Name="NgaySinh" Nullable="true" Precision="23" />
-    <Property Type="String" Name="GioiTinh" Nullable="true" MaxLength="10" />
-    <Property Type="String" Name="ChucDanh" Nullable="true" MaxLength="30" />
-    <Property Type="String" Name="LoaiNV" Nullable="true" MaxLength="20" />
-    <Property Type="String" Name="SDT" Nullable="true" MaxLength="10" />
-    <Property Type="String" Name="TaiKhoan" Nullable="true" MaxLength="100" />
-    <Property Type="String" Name="MatKhau" Nullable="true" MaxLength="100" />
-    <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
-    <Property Type="String" Name="Hinh" Nullable="true" />
-  </ComplexType>
 </Schema>

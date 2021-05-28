@@ -12,8 +12,6 @@ namespace DTO
 
         public static string MESSAGE_TITLE = "Thông báo";
         public static string ERR_REQUIRED = "Vui lòng điền đủ thông tin!";
-        public static string ERR_REQUIRED_2 = "Vui lòng kiểm tra thông tin!";
-
         public static string ERR_MAIL_FORMAT = "Email chưa đúng định dạng!";
         public static string LOGIN_SUCESS = "Đăng nhập thành công!";
         public static string LOGIN_FAIL = "Đăng nhập thất bại!";

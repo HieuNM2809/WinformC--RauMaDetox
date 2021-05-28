@@ -15,10 +15,10 @@ namespace DAO
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class ql_raumaEntities2 : DbContext
+    public partial class ql_raumaEntities1 : DbContext
     {
-        public ql_raumaEntities2()
-            : base("name=ql_raumaEntities2")
+        public ql_raumaEntities1()
+            : base("name=ql_raumaEntities1")
         {
         }
     
@@ -51,60 +51,6 @@ namespace DAO
                 new ObjectParameter("ngaylap", typeof(System.DateTime));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("CAPNHATHD", idhdParameter, idnvParameter, ngaylapParameter);
-        }
-    
-        public virtual int CAPNHATNV(string idnv, string hoten, Nullable<System.DateTime> ngaysinh, string gioitinh, string chucdanh, string loainv, string sdt, string taikhoan, string matkhau, string email)
-        {
-            var idnvParameter = idnv != null ?
-                new ObjectParameter("idnv", idnv) :
-                new ObjectParameter("idnv", typeof(string));
-    
-            var hotenParameter = hoten != null ?
-                new ObjectParameter("hoten", hoten) :
-                new ObjectParameter("hoten", typeof(string));
-    
-            var ngaysinhParameter = ngaysinh.HasValue ?
-                new ObjectParameter("ngaysinh", ngaysinh) :
-                new ObjectParameter("ngaysinh", typeof(System.DateTime));
-    
-            var gioitinhParameter = gioitinh != null ?
-                new ObjectParameter("gioitinh", gioitinh) :
-                new ObjectParameter("gioitinh", typeof(string));
-    
-            var chucdanhParameter = chucdanh != null ?
-                new ObjectParameter("chucdanh", chucdanh) :
-                new ObjectParameter("chucdanh", typeof(string));
-    
-            var loainvParameter = loainv != null ?
-                new ObjectParameter("loainv", loainv) :
-                new ObjectParameter("loainv", typeof(string));
-    
-            var sdtParameter = sdt != null ?
-                new ObjectParameter("sdt", sdt) :
-                new ObjectParameter("sdt", typeof(string));
-    
-            var taikhoanParameter = taikhoan != null ?
-                new ObjectParameter("taikhoan", taikhoan) :
-                new ObjectParameter("taikhoan", typeof(string));
-    
-            var matkhauParameter = matkhau != null ?
-                new ObjectParameter("matkhau", matkhau) :
-                new ObjectParameter("matkhau", typeof(string));
-    
-            var emailParameter = email != null ?
-                new ObjectParameter("Email", email) :
-                new ObjectParameter("Email", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("CAPNHATNV", idnvParameter, hotenParameter, ngaysinhParameter, gioitinhParameter, chucdanhParameter, loainvParameter, sdtParameter, taikhoanParameter, matkhauParameter, emailParameter);
-        }
-    
-        public virtual ObjectResult<Nullable<decimal>> LAYGIA(string masp)
-        {
-            var maspParameter = masp != null ?
-                new ObjectParameter("masp", masp) :
-                new ObjectParameter("masp", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>("LAYGIA", maspParameter);
         }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
@@ -210,6 +156,85 @@ namespace DAO
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
         }
     
+        public virtual int THEMHD(string idhd, string idnv, Nullable<System.DateTime> ngaylap)
+        {
+            var idhdParameter = idhd != null ?
+                new ObjectParameter("idhd", idhd) :
+                new ObjectParameter("idhd", typeof(string));
+    
+            var idnvParameter = idnv != null ?
+                new ObjectParameter("idnv", idnv) :
+                new ObjectParameter("idnv", typeof(string));
+    
+            var ngaylapParameter = ngaylap.HasValue ?
+                new ObjectParameter("ngaylap", ngaylap) :
+                new ObjectParameter("ngaylap", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("THEMHD", idhdParameter, idnvParameter, ngaylapParameter);
+        }
+    
+        public virtual int XOAHD(string idhd, string idnv, Nullable<System.DateTime> ngaylap)
+        {
+            var idhdParameter = idhd != null ?
+                new ObjectParameter("idhd", idhd) :
+                new ObjectParameter("idhd", typeof(string));
+    
+            var idnvParameter = idnv != null ?
+                new ObjectParameter("idnv", idnv) :
+                new ObjectParameter("idnv", typeof(string));
+    
+            var ngaylapParameter = ngaylap.HasValue ?
+                new ObjectParameter("ngaylap", ngaylap) :
+                new ObjectParameter("ngaylap", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("XOAHD", idhdParameter, idnvParameter, ngaylapParameter);
+        }
+    
+        public virtual int CAPNHATNV(string idnv, string hoten, Nullable<System.DateTime> ngaysinh, string gioitinh, string chucdanh, string loainv, string sdt, string taikhoan, string matkhau, string email)
+        {
+            var idnvParameter = idnv != null ?
+                new ObjectParameter("idnv", idnv) :
+                new ObjectParameter("idnv", typeof(string));
+    
+            var hotenParameter = hoten != null ?
+                new ObjectParameter("hoten", hoten) :
+                new ObjectParameter("hoten", typeof(string));
+    
+            var ngaysinhParameter = ngaysinh.HasValue ?
+                new ObjectParameter("ngaysinh", ngaysinh) :
+                new ObjectParameter("ngaysinh", typeof(System.DateTime));
+    
+            var gioitinhParameter = gioitinh != null ?
+                new ObjectParameter("gioitinh", gioitinh) :
+                new ObjectParameter("gioitinh", typeof(string));
+    
+            var chucdanhParameter = chucdanh != null ?
+                new ObjectParameter("chucdanh", chucdanh) :
+                new ObjectParameter("chucdanh", typeof(string));
+    
+            var loainvParameter = loainv != null ?
+                new ObjectParameter("loainv", loainv) :
+                new ObjectParameter("loainv", typeof(string));
+    
+            var sdtParameter = sdt != null ?
+                new ObjectParameter("sdt", sdt) :
+                new ObjectParameter("sdt", typeof(string));
+    
+            var taikhoanParameter = taikhoan != null ?
+                new ObjectParameter("taikhoan", taikhoan) :
+                new ObjectParameter("taikhoan", typeof(string));
+    
+            var matkhauParameter = matkhau != null ?
+                new ObjectParameter("matkhau", matkhau) :
+                new ObjectParameter("matkhau", typeof(string));
+    
+            var emailParameter = email != null ?
+                new ObjectParameter("Email", email) :
+                new ObjectParameter("Email", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("CAPNHATNV", idnvParameter, hotenParameter, ngaysinhParameter, gioitinhParameter, chucdanhParameter, loainvParameter, sdtParameter, taikhoanParameter, matkhauParameter, emailParameter);
+        }
+    
         public virtual int SUASP(string masp, string tensp, string maloaisp, Nullable<decimal> giatien, string mota, string hinh)
         {
             var maspParameter = masp != null ?
@@ -237,23 +262,6 @@ namespace DAO
                 new ObjectParameter("Hinh", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SUASP", maspParameter, tenspParameter, maloaispParameter, giatienParameter, motaParameter, hinhParameter);
-        }
-    
-        public virtual int THEMHD(string idhd, string idnv, Nullable<System.DateTime> ngaylap)
-        {
-            var idhdParameter = idhd != null ?
-                new ObjectParameter("idhd", idhd) :
-                new ObjectParameter("idhd", typeof(string));
-    
-            var idnvParameter = idnv != null ?
-                new ObjectParameter("idnv", idnv) :
-                new ObjectParameter("idnv", typeof(string));
-    
-            var ngaylapParameter = ngaylap.HasValue ?
-                new ObjectParameter("ngaylap", ngaylap) :
-                new ObjectParameter("ngaylap", typeof(System.DateTime));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("THEMHD", idhdParameter, idnvParameter, ngaylapParameter);
         }
     
         public virtual int THEMNV(string idnv, string hoten, Nullable<System.DateTime> ngaysinh, string gioitinh, string chucdanh, string loainv, string sdt, string taikhoan, string matkhau, string email)
@@ -330,15 +338,6 @@ namespace DAO
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("THEMSP", maspParameter, tenspParameter, maloaispParameter, giatienParameter, motaParameter, hinhParameter);
         }
     
-        public virtual int XOAHD(string idhd)
-        {
-            var idhdParameter = idhd != null ?
-                new ObjectParameter("idhd", idhd) :
-                new ObjectParameter("idhd", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("XOAHD", idhdParameter);
-        }
-    
         public virtual int XOANV(string idnv)
         {
             var idnvParameter = idnv != null ?
@@ -355,6 +354,15 @@ namespace DAO
                 new ObjectParameter("masp", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("XOASP", maspParameter);
+        }
+    
+        public virtual int XOAHD1(string idhd)
+        {
+            var idhdParameter = idhd != null ?
+                new ObjectParameter("idhd", idhd) :
+                new ObjectParameter("idhd", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("XOAHD1", idhdParameter);
         }
     }
 }

@@ -2,17 +2,15 @@
 <Schema Namespace="ql_raumaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="CTHoaDon">
     <Key>
-      <PropertyRef Name="IDHoaDon" />
-      <PropertyRef Name="STT" />
+      <PropertyRef Name="MaHD" />
     </Key>
     <Property Name="IDHoaDon" Type="nvarchar" MaxLength="3" Nullable="false" />
     <Property Name="MaSp" Type="nvarchar" MaxLength="5" />
-    <Property Name="TenSp" Type="nvarchar" MaxLength="50" />
     <Property Name="SoLuong" Type="int" />
     <Property Name="DonGia" Type="money" />
-    <Property Name="ChietKhau" Type="float" />
+    <Property Name="ChietKhau" Type="money" />
     <Property Name="TongTien" Type="money" />
-    <Property Name="STT" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="MaHD" Type="nvarchar" MaxLength="3" Nullable="false" />
   </EntityType>
   <EntityType Name="CTPhanQuyen">
     <Key>
@@ -55,7 +53,6 @@
     <Property Name="TaiKhoan" Type="varchar" MaxLength="100" />
     <Property Name="MatKhau" Type="varchar" MaxLength="100" />
     <Property Name="Email" Type="varchar" MaxLength="100" />
-    <Property Name="Hinh" Type="nvarchar(max)" />
     <Property Name="TrangThai" Type="smallint" />
   </EntityType>
   <EntityType Name="PhanQuyen">
@@ -177,9 +174,6 @@
     <Parameter Name="Email" Type="varchar" Mode="In" />
   </Function>
   <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
-  <Function Name="LAYGIA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="masp" Type="nvarchar" Mode="In" />
-  </Function>
   <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
     <Parameter Name="owner_id" Type="int" Mode="In" />
@@ -217,11 +211,6 @@
     <Parameter Name="Giatien" Type="money" Mode="In" />
     <Parameter Name="Mota" Type="nvarchar" Mode="In" />
     <Parameter Name="Hinh" Type="nvarchar(max)" Mode="In" />
-  </Function>
-  <Function Name="THEMHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="idhd" Type="nvarchar" Mode="In" />
-    <Parameter Name="idnv" Type="nvarchar" Mode="In" />
-    <Parameter Name="ngaylap" Type="datetime" Mode="In" />
   </Function>
   <Function Name="THEMNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="idnv" Type="nvarchar" Mode="In" />
