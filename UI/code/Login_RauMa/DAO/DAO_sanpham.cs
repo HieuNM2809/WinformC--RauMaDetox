@@ -47,7 +47,7 @@ namespace DAO
 
         public bool ThemSP(DTO_sanpham sp)
         {
-            //int temp = qlrauma.THEMSP(sp.Masp, sp.Tensp, sp.MaLoaisp, sp.Giasp, sp.Mota, sp.Hinhsp);
+            int temp = qlrauma.THEMSP(sp.Masp, sp.Tensp, sp.MaLoaisp, sp.Giasp, sp.Mota, sp.Hinhsp);
             qlrauma.SaveChanges();
             return true;
         }
@@ -56,7 +56,7 @@ namespace DAO
 
             try
             {
-                //int temp = qlrauma.SUASP(sp.Masp, sp.Tensp, sp.MaLoaisp, sp.Giasp, sp.Mota, sp.Hinhsp);
+                int temp = qlrauma.SUASP(sp.Masp, sp.Tensp, sp.MaLoaisp, sp.Giasp, sp.Mota, sp.Hinhsp);
                 qlrauma.SaveChanges();
                 return true;
             }
@@ -69,7 +69,7 @@ namespace DAO
         {
             try
             {
-                //int temp = qlrauma.XOASP(sp.Masp);
+                int temp = qlrauma.XOASP(sp.Masp);
                 qlrauma.SaveChanges();
                 return true;
             }

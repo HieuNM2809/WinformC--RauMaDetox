@@ -2,27 +2,28 @@
 <Schema Namespace="ql_raumaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="CTHoaDon">
     <Key>
-      <PropertyRef Name="IDHoaDon" />
       <PropertyRef Name="STT" />
+      <PropertyRef Name="IDHoaDon" />
     </Key>
+    <Property Name="STT" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="IDHoaDon" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="MaSp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
-    <Property Name="TenSp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="SoLuong" Type="Int32" />
     <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
-    <Property Name="ChietKhau" Type="Double" />
+    <Property Name="ChietKhau" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" />
-    <Property Name="STT" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="HoaDon" Relationship="Self.FK_CTHoaDon_HoaDon" FromRole="CTHoaDon" ToRole="HoaDon" />
+    <NavigationProperty Name="SanPham" Relationship="Self.FK_CTHoaDon_SanPham" FromRole="CTHoaDon" ToRole="SanPham" />
   </EntityType>
   <EntityType Name="CTPhanQuyen">
     <Key>
       <PropertyRef Name="Taikhoan" />
     </Key>
-    <Property Name="IDNV" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="IDquyen" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IDNV" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="IDquyen" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
     <Property Name="Taikhoan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="LoaiQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="TrangThai" Type="Int16" />
+    <Property Name="TrangThai" Type="Boolean" />
     <NavigationProperty Name="NhanVien" Relationship="Self.FK_CTPhanQuyen_NhanVien" FromRole="CTPhanQuyen" ToRole="NhanVien" />
     <NavigationProperty Name="PhanQuyen" Relationship="Self.FK_CTPhanQuyen_PhanQuyen" FromRole="CTPhanQuyen" ToRole="PhanQuyen" />
   </EntityType>
@@ -34,6 +35,7 @@
     <Property Name="IDNV" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
     <Property Name="NgayLapHoaDon" Type="DateTime" Precision="3" />
     <Property Name="TrangThai" Type="Int16" />
+    <NavigationProperty Name="CTHoaDons" Relationship="Self.FK_CTHoaDon_HoaDon" FromRole="HoaDon" ToRole="CTHoaDon" />
     <NavigationProperty Name="NhanVien" Relationship="Self.FK_HoaDon_NhanVien" FromRole="HoaDon" ToRole="NhanVien" />
   </EntityType>
   <EntityType Name="LoaiSP">
@@ -70,6 +72,7 @@
     </Key>
     <Property Name="IDquyen" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LoaiQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TrangThai" Type="Int16" />
     <NavigationProperty Name="CTPhanQuyens" Relationship="Self.FK_CTPhanQuyen_PhanQuyen" FromRole="PhanQuyen" ToRole="CTPhanQuyen" />
   </EntityType>
   <EntityType Name="SanPham">
@@ -83,6 +86,7 @@
     <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Hinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="TrangThai" Type="Int32" />
+    <NavigationProperty Name="CTHoaDons" Relationship="Self.FK_CTHoaDon_SanPham" FromRole="SanPham" ToRole="CTHoaDon" />
     <NavigationProperty Name="LoaiSP" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="SanPham" ToRole="LoaiSP" />
   </EntityType>
   <EntityType Name="sysdiagram">
@@ -95,8 +99,32 @@
     <Property Name="version" Type="Int32" />
     <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
+  <Association Name="FK_CTHoaDon_HoaDon">
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
+    <End Role="CTHoaDon" Type="Self.CTHoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoaDon">
+        <PropertyRef Name="IDHoaDon" />
+      </Principal>
+      <Dependent Role="CTHoaDon">
+        <PropertyRef Name="IDHoaDon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTHoaDon_SanPham">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
+    <End Role="CTHoaDon" Type="Self.CTHoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSp" />
+      </Principal>
+      <Dependent Role="CTHoaDon">
+        <PropertyRef Name="MaSp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_CTPhanQuyen_NhanVien">
-    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
     <End Role="CTPhanQuyen" Type="Self.CTPhanQuyen" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NhanVien">
@@ -108,7 +136,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CTPhanQuyen_PhanQuyen">
-    <End Role="PhanQuyen" Type="Self.PhanQuyen" Multiplicity="1" />
+    <End Role="PhanQuyen" Type="Self.PhanQuyen" Multiplicity="0..1" />
     <End Role="CTPhanQuyen" Type="Self.CTPhanQuyen" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PhanQuyen">
@@ -152,6 +180,14 @@
     <EntitySet Name="PhanQuyens" EntityType="Self.PhanQuyen" />
     <EntitySet Name="SanPhams" EntityType="Self.SanPham" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK_CTHoaDon_HoaDon" Association="Self.FK_CTHoaDon_HoaDon">
+      <End Role="HoaDon" EntitySet="HoaDons" />
+      <End Role="CTHoaDon" EntitySet="CTHoaDons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTHoaDon_SanPham" Association="Self.FK_CTHoaDon_SanPham">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="CTHoaDon" EntitySet="CTHoaDons" />
+    </AssociationSet>
     <AssociationSet Name="FK_CTPhanQuyen_NhanVien" Association="Self.FK_CTPhanQuyen_NhanVien">
       <End Role="NhanVien" EntitySet="NhanViens" />
       <End Role="CTPhanQuyen" EntitySet="CTPhanQuyens" />
@@ -185,13 +221,6 @@
       <Parameter Name="matkhau" Mode="In" Type="String" />
       <Parameter Name="Email" Mode="In" Type="String" />
       <Parameter Name="hinh" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="DOIMATKHAU">
-      <Parameter Name="taikhoan" Mode="In" Type="String" />
-      <Parameter Name="matkhau" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="LAYGIA" ReturnType="Collection(Decimal)">
-      <Parameter Name="masp" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sp_alterdiagram">
       <Parameter Name="diagramname" Mode="In" Type="String" />
@@ -265,6 +294,10 @@
     </FunctionImport>
     <FunctionImport Name="XOASP">
       <Parameter Name="masp" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DOIMATKHAU">
+      <Parameter Name="taikhoan" Mode="In" Type="String" />
+      <Parameter Name="matkhau" Mode="In" Type="String" />
     </FunctionImport>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">

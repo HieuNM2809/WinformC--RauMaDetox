@@ -14,11 +14,19 @@ namespace DAO
     
     public partial class HoaDon
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public HoaDon()
+        {
+            this.CTHoaDons = new HashSet<CTHoaDon>();
+        }
+    
         public string IDHoaDon { get; set; }
         public string IDNV { get; set; }
         public Nullable<System.DateTime> NgayLapHoaDon { get; set; }
         public Nullable<short> TrangThai { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CTHoaDon> CTHoaDons { get; set; }
         public virtual NhanVien NhanVien { get; set; }
     }
 }

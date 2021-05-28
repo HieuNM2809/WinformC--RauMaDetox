@@ -102,28 +102,6 @@ namespace DAO
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("CapNhatNV", idnvParameter, hotenParameter, ngaysinhParameter, gioitinhParameter, chucdanhParameter, loainvParameter, sdtParameter, taikhoanParameter, matkhauParameter, emailParameter, hinhParameter);
         }
     
-        public virtual int DOIMATKHAU(string taikhoan, string matkhau)
-        {
-            var taikhoanParameter = taikhoan != null ?
-                new ObjectParameter("taikhoan", taikhoan) :
-                new ObjectParameter("taikhoan", typeof(string));
-    
-            var matkhauParameter = matkhau != null ?
-                new ObjectParameter("matkhau", matkhau) :
-                new ObjectParameter("matkhau", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("DOIMATKHAU", taikhoanParameter, matkhauParameter);
-        }
-    
-        public virtual ObjectResult<Nullable<decimal>> LAYGIA(string masp)
-        {
-            var maspParameter = masp != null ?
-                new ObjectParameter("masp", masp) :
-                new ObjectParameter("masp", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>("LAYGIA", maspParameter);
-        }
-    
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {
             var diagramnameParameter = diagramname != null ?
@@ -376,6 +354,19 @@ namespace DAO
                 new ObjectParameter("masp", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("XOASP", maspParameter);
+        }
+    
+        public virtual int DOIMATKHAU(string taikhoan, string matkhau)
+        {
+            var taikhoanParameter = taikhoan != null ?
+                new ObjectParameter("taikhoan", taikhoan) :
+                new ObjectParameter("taikhoan", typeof(string));
+    
+            var matkhauParameter = matkhau != null ?
+                new ObjectParameter("matkhau", matkhau) :
+                new ObjectParameter("matkhau", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("DOIMATKHAU", taikhoanParameter, matkhauParameter);
         }
     }
 }

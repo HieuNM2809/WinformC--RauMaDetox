@@ -38,24 +38,24 @@
             this.lstDSSP = new System.Windows.Forms.ListView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblGia = new System.Windows.Forms.Label();
             this.txtChietKhau = new System.Windows.Forms.RichTextBox();
             this.cbbTenSP = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.numSoLuong = new System.Windows.Forms.NumericUpDown();
+            this.cbbGia = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.txtTongTien = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTongSoLuong = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.button3 = new System.Windows.Forms.Button();
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblGia = new System.Windows.Forms.Label();
-            this.cbbGia = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -84,17 +84,17 @@
             // colTongTien
             // 
             this.colTongTien.Text = "Tổng Tiền";
-            this.colTongTien.Width = 145;
+            this.colTongTien.Width = 227;
             // 
             // colChietKhau
             // 
             this.colChietKhau.Text = "Chiết Khấu ";
-            this.colChietKhau.Width = 81;
+            this.colChietKhau.Width = 105;
             // 
             // colDonGia
             // 
             this.colDonGia.Text = "Giá";
-            this.colDonGia.Width = 48;
+            this.colDonGia.Width = 132;
             // 
             // colSoLuong
             // 
@@ -167,6 +167,19 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(576, 118);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
+            // lblGia
+            // 
+            this.lblGia.AutoSize = true;
+            this.lblGia.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGia.ForeColor = System.Drawing.Color.White;
+            this.lblGia.Location = new System.Drawing.Point(3, 87);
+            this.lblGia.Name = "lblGia";
+            this.lblGia.Size = new System.Drawing.Size(282, 31);
+            this.lblGia.TabIndex = 11;
+            this.lblGia.Text = "Giá Tiền";
+            this.lblGia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // txtChietKhau
             // 
             this.txtChietKhau.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -235,6 +248,16 @@
             this.numSoLuong.Size = new System.Drawing.Size(282, 27);
             this.numSoLuong.TabIndex = 5;
             // 
+            // cbbGia
+            // 
+            this.cbbGia.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbGia.FormattingEnabled = true;
+            this.cbbGia.Location = new System.Drawing.Point(291, 90);
+            this.cbbGia.Name = "cbbGia";
+            this.cbbGia.Size = new System.Drawing.Size(282, 28);
+            this.cbbGia.TabIndex = 12;
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
@@ -297,6 +320,19 @@
             this.txtTongSoLuong.TabIndex = 8;
             this.txtTongSoLuong.Text = "";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::DashBoar.Properties.Resources.plus;
+            this.button1.Location = new System.Drawing.Point(3, 127);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(576, 105);
+            this.button1.TabIndex = 2;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 2;
@@ -357,42 +393,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1165, 327);
             this.tableLayoutPanel1.TabIndex = 8;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::DashBoar.Properties.Resources.plus;
-            this.button1.Location = new System.Drawing.Point(3, 127);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(576, 105);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // lblGia
-            // 
-            this.lblGia.AutoSize = true;
-            this.lblGia.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGia.ForeColor = System.Drawing.Color.White;
-            this.lblGia.Location = new System.Drawing.Point(3, 87);
-            this.lblGia.Name = "lblGia";
-            this.lblGia.Size = new System.Drawing.Size(282, 31);
-            this.lblGia.TabIndex = 11;
-            this.lblGia.Text = "Giá Tiền";
-            this.lblGia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cbbGia
-            // 
-            this.cbbGia.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbGia.FormattingEnabled = true;
-            this.cbbGia.Location = new System.Drawing.Point(291, 90);
-            this.cbbGia.Name = "cbbGia";
-            this.cbbGia.Size = new System.Drawing.Size(282, 28);
-            this.cbbGia.TabIndex = 12;
             // 
             // frmChiTietHoaDon
             // 

@@ -29,7 +29,7 @@ namespace DashBoar
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            count++;
+            count++; 
             ListViewItem lst = new ListViewItem(count.ToString());
             lst.SubItems.Add(cbbTenSP.Text);
             lst.SubItems.Add(numSoLuong.Text);
@@ -43,7 +43,7 @@ namespace DashBoar
         {
             cbbGia.DataSource = cthd.LayGia(cbbTenSP.SelectedValue.ToString());
             cbbGia.DisplayMember = "DonGia";
-            cbbGia.ValueMember = "Masp";
+            cbbGia.ValueMember = "DonGia";
         }
     }
 }

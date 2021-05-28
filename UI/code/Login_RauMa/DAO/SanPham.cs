@@ -14,6 +14,12 @@ namespace DAO
     
     public partial class SanPham
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public SanPham()
+        {
+            this.CTHoaDons = new HashSet<CTHoaDon>();
+        }
+    
         public string MaSp { get; set; }
         public string TenSp { get; set; }
         public string MaLoaiSp { get; set; }
@@ -22,6 +28,8 @@ namespace DAO
         public string Hinh { get; set; }
         public Nullable<int> TrangThai { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CTHoaDon> CTHoaDons { get; set; }
         public virtual LoaiSP LoaiSP { get; set; }
     }
 }

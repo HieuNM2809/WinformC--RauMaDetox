@@ -4,14 +4,13 @@
     <EntitySetMapping Name="CTHoaDons">
       <EntityTypeMapping TypeName="ql_raumaModel.CTHoaDon">
         <MappingFragment StoreEntitySet="CTHoaDon">
+          <ScalarProperty Name="STT" ColumnName="STT" />
           <ScalarProperty Name="IDHoaDon" ColumnName="IDHoaDon" />
           <ScalarProperty Name="MaSp" ColumnName="MaSp" />
-          <ScalarProperty Name="TenSp" ColumnName="TenSp" />
           <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
           <ScalarProperty Name="DonGia" ColumnName="DonGia" />
           <ScalarProperty Name="ChietKhau" ColumnName="ChietKhau" />
           <ScalarProperty Name="TongTien" ColumnName="TongTien" />
-          <ScalarProperty Name="STT" ColumnName="STT" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -68,6 +67,7 @@
         <MappingFragment StoreEntitySet="PhanQuyen">
           <ScalarProperty Name="IDquyen" ColumnName="IDquyen" />
           <ScalarProperty Name="LoaiQuyen" ColumnName="LoaiQuyen" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -97,8 +97,6 @@
     </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="CAPNHATHD" FunctionName="ql_raumaModel.Store.CAPNHATHD" />
     <FunctionImportMapping FunctionImportName="CapNhatNV" FunctionName="ql_raumaModel.Store.CapNhatNV" />
-    <FunctionImportMapping FunctionImportName="DOIMATKHAU" FunctionName="ql_raumaModel.Store.DOIMATKHAU" />
-    <FunctionImportMapping FunctionImportName="LAYGIA" FunctionName="ql_raumaModel.Store.LAYGIA" />
     <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="ql_raumaModel.Store.sp_alterdiagram" />
     <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="ql_raumaModel.Store.sp_creatediagram" />
     <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="ql_raumaModel.Store.sp_dropdiagram" />
@@ -130,5 +128,6 @@
     <FunctionImportMapping FunctionImportName="XOAHD" FunctionName="ql_raumaModel.Store.XOAHD" />
     <FunctionImportMapping FunctionImportName="XoaNV" FunctionName="ql_raumaModel.Store.XoaNV" />
     <FunctionImportMapping FunctionImportName="XOASP" FunctionName="ql_raumaModel.Store.XOASP" />
+    <FunctionImportMapping FunctionImportName="DOIMATKHAU" FunctionName="ql_raumaModel.Store.DOIMATKHAU" />
   </EntityContainerMapping>
 </Mapping>

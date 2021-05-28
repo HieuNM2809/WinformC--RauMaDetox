@@ -25,11 +25,9 @@ namespace DAO
         public List<ChiTietHoaDonDTO> LayGia(string masanpham)
         {
             List<ChiTietHoaDonDTO> lssanpham = new List<ChiTietHoaDonDTO>();
-            lssanpham = qlrauma.CTHoaDons.Where(v => v.MaSp == masanpham).Select(u => new ChiTietHoaDonDTO
+            lssanpham = qlrauma.SanPhams.Where(v => v.MaSp == masanpham).Select(u => new ChiTietHoaDonDTO
             {
-                IDHoaDon = u.HoaDon.IDHoaDon,
-                STT = u.STT,
-                DonGia = (decimal)u.SanPham.GiaTien,
+                DonGia=(decimal)u.GiaTien
 
             }).ToList();
             qlrauma.SaveChanges();

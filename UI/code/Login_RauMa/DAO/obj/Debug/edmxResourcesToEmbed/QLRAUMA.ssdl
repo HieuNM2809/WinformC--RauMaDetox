@@ -2,27 +2,26 @@
 <Schema Namespace="ql_raumaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="CTHoaDon">
     <Key>
-      <PropertyRef Name="IDHoaDon" />
       <PropertyRef Name="STT" />
+      <PropertyRef Name="IDHoaDon" />
     </Key>
+    <Property Name="STT" Type="nvarchar" MaxLength="3" Nullable="false" />
     <Property Name="IDHoaDon" Type="nvarchar" MaxLength="3" Nullable="false" />
     <Property Name="MaSp" Type="nvarchar" MaxLength="5" />
-    <Property Name="TenSp" Type="nvarchar" MaxLength="50" />
     <Property Name="SoLuong" Type="int" />
     <Property Name="DonGia" Type="money" />
-    <Property Name="ChietKhau" Type="float" />
+    <Property Name="ChietKhau" Type="money" />
     <Property Name="TongTien" Type="money" />
-    <Property Name="STT" Type="nvarchar" MaxLength="3" Nullable="false" />
   </EntityType>
   <EntityType Name="CTPhanQuyen">
     <Key>
       <PropertyRef Name="Taikhoan" />
     </Key>
-    <Property Name="IDNV" Type="nvarchar" MaxLength="3" Nullable="false" />
-    <Property Name="IDquyen" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="IDNV" Type="nvarchar" MaxLength="3" />
+    <Property Name="IDquyen" Type="nvarchar" MaxLength="3" />
     <Property Name="Taikhoan" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="LoaiQuyen" Type="varchar" MaxLength="50" />
-    <Property Name="TrangThai" Type="smallint" />
+    <Property Name="TrangThai" Type="bit" />
   </EntityType>
   <EntityType Name="HoaDon">
     <Key>
@@ -64,6 +63,7 @@
     </Key>
     <Property Name="IDquyen" Type="nvarchar" MaxLength="3" Nullable="false" />
     <Property Name="LoaiQuyen" Type="varchar" MaxLength="50" />
+    <Property Name="TrangThai" Type="smallint" />
   </EntityType>
   <EntityType Name="SanPham">
     <Key>
@@ -87,8 +87,32 @@
     <Property Name="version" Type="int" />
     <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
+  <Association Name="FK_CTHoaDon_HoaDon">
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
+    <End Role="CTHoaDon" Type="Self.CTHoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoaDon">
+        <PropertyRef Name="IDHoaDon" />
+      </Principal>
+      <Dependent Role="CTHoaDon">
+        <PropertyRef Name="IDHoaDon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTHoaDon_SanPham">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
+    <End Role="CTHoaDon" Type="Self.CTHoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSp" />
+      </Principal>
+      <Dependent Role="CTHoaDon">
+        <PropertyRef Name="MaSp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_CTPhanQuyen_NhanVien">
-    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
     <End Role="CTPhanQuyen" Type="Self.CTPhanQuyen" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NhanVien">
@@ -100,7 +124,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CTPhanQuyen_PhanQuyen">
-    <End Role="PhanQuyen" Type="Self.PhanQuyen" Multiplicity="1" />
+    <End Role="PhanQuyen" Type="Self.PhanQuyen" Multiplicity="0..1" />
     <End Role="CTPhanQuyen" Type="Self.CTPhanQuyen" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PhanQuyen">
@@ -158,9 +182,6 @@
     <Parameter Name="matkhau" Type="varchar" Mode="In" />
   </Function>
   <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
-  <Function Name="LAYGIA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="masp" Type="nvarchar" Mode="In" />
-  </Function>
   <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
     <Parameter Name="owner_id" Type="int" Mode="In" />
@@ -243,6 +264,14 @@
     <EntitySet Name="PhanQuyen" EntityType="Self.PhanQuyen" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CTHoaDon_HoaDon" Association="Self.FK_CTHoaDon_HoaDon">
+      <End Role="HoaDon" EntitySet="HoaDon" />
+      <End Role="CTHoaDon" EntitySet="CTHoaDon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTHoaDon_SanPham" Association="Self.FK_CTHoaDon_SanPham">
+      <End Role="SanPham" EntitySet="SanPham" />
+      <End Role="CTHoaDon" EntitySet="CTHoaDon" />
+    </AssociationSet>
     <AssociationSet Name="FK_CTPhanQuyen_NhanVien" Association="Self.FK_CTPhanQuyen_NhanVien">
       <End Role="NhanVien" EntitySet="NhanVien" />
       <End Role="CTPhanQuyen" EntitySet="CTPhanQuyen" />
