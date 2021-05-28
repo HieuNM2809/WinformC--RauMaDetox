@@ -12,15 +12,12 @@ namespace DAO
     using System;
     using System.Collections.Generic;
     
-    public partial class CTPhanQuyen
+    public partial class sysdiagram
     {
-        public string IDNV { get; set; }
-        public string IDquyen { get; set; }
-        public string Taikhoan { get; set; }
-        public string LoaiQuyen { get; set; }
-        public Nullable<short> TrangThai { get; set; }
-    
-        public virtual NhanVien NhanVien { get; set; }
-        public virtual PhanQuyen PhanQuyen { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }
