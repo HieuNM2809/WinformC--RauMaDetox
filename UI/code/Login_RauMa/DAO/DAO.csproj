@@ -50,11 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietHoaDonDAO.cs" />
     <Compile Include="CTHoaDon.cs">
-      <DependentUpon>QLRauMaModel.tt</DependentUpon>
+      <DependentUpon>QLRauMa.tt</DependentUpon>
     </Compile>
     <Compile Include="CTPhanQuyen.cs">
-      <DependentUpon>QLRauMaModel.tt</DependentUpon>
+      <DependentUpon>QLRauMa.tt</DependentUpon>
     </Compile>
     <Compile Include="DAO_loaisp.cs" />
     <Compile Include="DAO_sanpham.cs" />
@@ -62,38 +63,47 @@
       <DependentUpon>QLRauMaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="HoaDon.cs">
-      <DependentUpon>QLRauMaModel.tt</DependentUpon>
+      <DependentUpon>QLRauMa.tt</DependentUpon>
     </Compile>
     <Compile Include="HoaDonDAO.cs" />
     <Compile Include="LoaiSP.cs">
-      <DependentUpon>QLRauMaModel.tt</DependentUpon>
+      <DependentUpon>QLRauMa.tt</DependentUpon>
     </Compile>
     <Compile Include="NhanVien.cs">
-      <DependentUpon>QLRauMaModel.tt</DependentUpon>
+      <DependentUpon>QLRauMa.tt</DependentUpon>
     </Compile>
     <Compile Include="NhanVienDAO.cs" />
     <Compile Include="PhanQuyen.cs">
-      <DependentUpon>QLRauMaModel.tt</DependentUpon>
+      <DependentUpon>QLRauMa.tt</DependentUpon>
     </Compile>
     <Compile Include="PhanQuyenDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLRauMaModel.Context.cs">
+    <Compile Include="QLRauMa.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLRauMaModel.Context.tt</DependentUpon>
+      <DependentUpon>QLRauMa.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="QLRauMaModel.cs">
+    <Compile Include="QLRauMa.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLRauMaModel.tt</DependentUpon>
+      <DependentUpon>QLRauMa.tt</DependentUpon>
     </Compile>
-    <Compile Include="QLRauMaModel.Designer.cs">
+    <Compile Include="QLRauMa.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLRauMaModel.edmx</DependentUpon>
+      <DependentUpon>QLRauMa.edmx</DependentUpon>
     </Compile>
     <Compile Include="SanPham.cs">
-      <DependentUpon>QLRauMaModel.tt</DependentUpon>
+      <DependentUpon>QLRauMa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>QLRauMa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>QLRauMa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>QLRauMa.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -105,12 +115,12 @@
   <ItemGroup>
     <None Include="App.Config" />
     <None Include="packages.config" />
-    <EntityDeploy Include="QLRauMaModel.edmx">
+    <EntityDeploy Include="QLRauMa.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QLRauMaModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>QLRauMa.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="QLRauMaModel.edmx.diagram">
-      <DependentUpon>QLRauMaModel.edmx</DependentUpon>
+    <None Include="QLRauMa.edmx.diagram">
+      <DependentUpon>QLRauMa.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -120,15 +130,15 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="QLRauMaModel.Context.tt">
+    <Content Include="QLRauMa.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLRauMaModel.edmx</DependentUpon>
-      <LastGenOutput>QLRauMaModel.Context.cs</LastGenOutput>
+      <DependentUpon>QLRauMa.edmx</DependentUpon>
+      <LastGenOutput>QLRauMa.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="QLRauMaModel.tt">
+    <Content Include="QLRauMa.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLRauMaModel.edmx</DependentUpon>
-      <LastGenOutput>QLRauMaModel.cs</LastGenOutput>
+      <DependentUpon>QLRauMa.edmx</DependentUpon>
+      <LastGenOutput>QLRauMa.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

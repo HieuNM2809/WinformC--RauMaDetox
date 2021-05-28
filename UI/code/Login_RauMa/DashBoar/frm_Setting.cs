@@ -35,14 +35,20 @@ namespace DashBoar
             this.Close();
         }
 
-        private void btn_xacnhan_Click(object sender, EventArgs e)
+        public void btn_xacnhan_Click(object sender, EventArgs e)
         {
-            frmDashboar db = new frmDashboar();
-            Size si = new Size();
-            si.Width = 1600;
-            si.Height = 900;
-            db.Size = si;
+            string a=null;
+            frmDashboar  db = new frmDashboar();
+            if(cbb_tyle.Text=="1600x900")
+            {
+                db.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            }
+            else
+            {
+                db.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            }
             db.ShowDialog();
         }
+
     }
 }
