@@ -29,7 +29,22 @@ namespace DAO
             }).ToList();
             return lssanpham;
         }
-        
+
+        public List<DTO_sanpham> lstViewSP()
+        {
+            List<DTO_sanpham> lssanpham = new List<DTO_sanpham>();
+            lssanpham = qlrauma.SanPhams.Where(v => v.TrangThai == 1).Select(u => new DTO_sanpham
+            {
+                Masp = u.MaSp,
+                Tensp = u.TenSp,
+                MaLoaisp = u.MaLoaiSp,
+                Giasp = (int)u.GiaTien,
+                Mota = u.MoTa,
+                Hinhsp = u.Hinh
+            }).ToList();
+            return lssanpham;
+        }
+
         public bool ThemSP(DTO_sanpham sp)
         {
             //int temp = qlrauma.THEMSP(sp.Masp, sp.Tensp, sp.MaLoaisp, sp.Giasp, sp.Mota, sp.Hinhsp);

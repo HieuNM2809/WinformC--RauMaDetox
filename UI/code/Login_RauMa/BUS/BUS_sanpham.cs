@@ -17,7 +17,13 @@ namespace BUS
 
             return _dssp.LayDSSanpham(a);
         }
-      
+        
+        public List<DTO_sanpham> lstViewSP()
+        {
+
+            return _dssp.lstViewSP();
+        }
+
         public bool ThemSP(DTO_sanpham sp)
         {
             return _dssp.ThemSP(sp);

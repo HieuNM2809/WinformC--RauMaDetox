@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboar));
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnQLTaiKhoan = new System.Windows.Forms.Button();
             this.pnlmenu1 = new System.Windows.Forms.Panel();
-            this.btnMenu = new System.Windows.Forms.Button();
             this.lblChucVu = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.lbltentaikhoan = new System.Windows.Forms.Label();
+            this.pnlform = new System.Windows.Forms.Panel();
+            this.btnQLTaiKhoan = new System.Windows.Forms.Button();
+            this.btnMenu = new System.Windows.Forms.Button();
             this.picAvatar = new System.Windows.Forms.PictureBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnCaiDat = new System.Windows.Forms.Button();
             this.btnSanPham = new System.Windows.Forms.Button();
             this.btnHoaDon = new System.Windows.Forms.Button();
-            this.pnlform = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.pnlmenu1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
@@ -59,10 +59,68 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.ForeColor = System.Drawing.Color.White;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
-            this.pnlMenu.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pnlMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(392, 869);
+            this.pnlMenu.Size = new System.Drawing.Size(348, 695);
             this.pnlMenu.TabIndex = 2;
+            // 
+            // pnlmenu1
+            // 
+            this.pnlmenu1.Controls.Add(this.btnMenu);
+            this.pnlmenu1.Controls.Add(this.lblChucVu);
+            this.pnlmenu1.Controls.Add(this.lblID);
+            this.pnlmenu1.Controls.Add(this.lbltentaikhoan);
+            this.pnlmenu1.Controls.Add(this.picAvatar);
+            this.pnlmenu1.Location = new System.Drawing.Point(0, 0);
+            this.pnlmenu1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlmenu1.Name = "pnlmenu1";
+            this.pnlmenu1.Size = new System.Drawing.Size(345, 219);
+            this.pnlmenu1.TabIndex = 13;
+            // 
+            // lblChucVu
+            // 
+            this.lblChucVu.AutoSize = true;
+            this.lblChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChucVu.ForeColor = System.Drawing.Color.White;
+            this.lblChucVu.Location = new System.Drawing.Point(167, 150);
+            this.lblChucVu.Name = "lblChucVu";
+            this.lblChucVu.Size = new System.Drawing.Size(91, 24);
+            this.lblChucVu.TabIndex = 11;
+            this.lblChucVu.Text = "Chức Vụ";
+            this.lblChucVu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.ForeColor = System.Drawing.Color.White;
+            this.lblID.Location = new System.Drawing.Point(200, 87);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(29, 24);
+            this.lblID.TabIndex = 10;
+            this.lblID.Text = "ID";
+            this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbltentaikhoan
+            // 
+            this.lbltentaikhoan.AutoSize = true;
+            this.lbltentaikhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltentaikhoan.ForeColor = System.Drawing.Color.White;
+            this.lbltentaikhoan.Location = new System.Drawing.Point(140, 118);
+            this.lbltentaikhoan.Name = "lbltentaikhoan";
+            this.lbltentaikhoan.Size = new System.Drawing.Size(148, 24);
+            this.lbltentaikhoan.TabIndex = 9;
+            this.lbltentaikhoan.Text = "Tên Tài Khoản";
+            this.lbltentaikhoan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlform
+            // 
+            this.pnlform.ForeColor = System.Drawing.Color.Black;
+            this.pnlform.Location = new System.Drawing.Point(348, 0);
+            this.pnlform.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlform.Name = "pnlform";
+            this.pnlform.Size = new System.Drawing.Size(1035, 695);
+            this.pnlform.TabIndex = 3;
             // 
             // btnQLTaiKhoan
             // 
@@ -75,29 +133,16 @@
             this.btnQLTaiKhoan.ForeColor = System.Drawing.Color.White;
             this.btnQLTaiKhoan.Image = global::DashBoar.Properties.Resources.QLTaiKhoan;
             this.btnQLTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLTaiKhoan.Location = new System.Drawing.Point(-1, 300);
-            this.btnQLTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnQLTaiKhoan.Location = new System.Drawing.Point(-1, 240);
+            this.btnQLTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnQLTaiKhoan.Name = "btnQLTaiKhoan";
-            this.btnQLTaiKhoan.Size = new System.Drawing.Size(390, 75);
+            this.btnQLTaiKhoan.Size = new System.Drawing.Size(347, 60);
             this.btnQLTaiKhoan.TabIndex = 0;
             this.btnQLTaiKhoan.Text = "     Tài Khoản";
             this.btnQLTaiKhoan.UseVisualStyleBackColor = false;
             this.btnQLTaiKhoan.Click += new System.EventHandler(this.btnQLTaiKhoan_Click);
             this.btnQLTaiKhoan.MouseEnter += new System.EventHandler(this.btnQLTaiKhoan_MouseEnter);
             this.btnQLTaiKhoan.MouseLeave += new System.EventHandler(this.btnQLTaiKhoan_MouseLeave);
-            // 
-            // pnlmenu1
-            // 
-            this.pnlmenu1.Controls.Add(this.btnMenu);
-            this.pnlmenu1.Controls.Add(this.lblChucVu);
-            this.pnlmenu1.Controls.Add(this.lblID);
-            this.pnlmenu1.Controls.Add(this.lbltentaikhoan);
-            this.pnlmenu1.Controls.Add(this.picAvatar);
-            this.pnlmenu1.Location = new System.Drawing.Point(0, 0);
-            this.pnlmenu1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.pnlmenu1.Name = "pnlmenu1";
-            this.pnlmenu1.Size = new System.Drawing.Size(388, 274);
-            this.pnlmenu1.TabIndex = 13;
             // 
             // btnMenu
             // 
@@ -106,65 +151,29 @@
             this.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMenu.FlatAppearance.BorderSize = 0;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Location = new System.Drawing.Point(15, 19);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnMenu.Location = new System.Drawing.Point(13, 15);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(62, 55);
+            this.btnMenu.Size = new System.Drawing.Size(55, 44);
             this.btnMenu.TabIndex = 12;
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // lblChucVu
-            // 
-            this.lblChucVu.AutoSize = true;
-            this.lblChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChucVu.ForeColor = System.Drawing.Color.White;
-            this.lblChucVu.Location = new System.Drawing.Point(188, 188);
-            this.lblChucVu.Name = "lblChucVu";
-            this.lblChucVu.Size = new System.Drawing.Size(103, 26);
-            this.lblChucVu.TabIndex = 11;
-            this.lblChucVu.Text = "Chức Vụ";
-            this.lblChucVu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Location = new System.Drawing.Point(225, 109);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(36, 26);
-            this.lblID.TabIndex = 10;
-            this.lblID.Text = "ID";
-            this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbltentaikhoan
-            // 
-            this.lbltentaikhoan.AutoSize = true;
-            this.lbltentaikhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltentaikhoan.ForeColor = System.Drawing.Color.White;
-            this.lbltentaikhoan.Location = new System.Drawing.Point(158, 148);
-            this.lbltentaikhoan.Name = "lbltentaikhoan";
-            this.lbltentaikhoan.Size = new System.Drawing.Size(165, 26);
-            this.lbltentaikhoan.TabIndex = 9;
-            this.lbltentaikhoan.Text = "Tên Tài Khoản";
-            this.lbltentaikhoan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picAvatar
             // 
             this.picAvatar.BackColor = System.Drawing.Color.Transparent;
             this.picAvatar.Image = global::DashBoar.Properties.Resources.avatar;
-            this.picAvatar.Location = new System.Drawing.Point(-1, 109);
-            this.picAvatar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.picAvatar.Location = new System.Drawing.Point(-1, 87);
+            this.picAvatar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picAvatar.Name = "picAvatar";
-            this.picAvatar.Size = new System.Drawing.Size(126, 119);
+            this.picAvatar.Size = new System.Drawing.Size(112, 95);
             this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAvatar.TabIndex = 1;
             this.picAvatar.TabStop = false;
             // 
             // btnThoat
             // 
-            this.btnThoat.BackgroundImage = global::DashBoar.Properties.Resources.exits;
+            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnThoat.FlatAppearance.BorderSize = 0;
             this.btnThoat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -172,12 +181,12 @@
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(0, 801);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnThoat.Image = global::DashBoar.Properties.Resources.shutdown;
+            this.btnThoat.Location = new System.Drawing.Point(0, 641);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(388, 68);
+            this.btnThoat.Size = new System.Drawing.Size(356, 54);
             this.btnThoat.TabIndex = 8;
-            this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             this.btnThoat.MouseEnter += new System.EventHandler(this.btnThoat_MouseEnter);
@@ -193,13 +202,14 @@
             this.btnCaiDat.ForeColor = System.Drawing.Color.White;
             this.btnCaiDat.Image = global::DashBoar.Properties.Resources.setting;
             this.btnCaiDat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCaiDat.Location = new System.Drawing.Point(0, 668);
-            this.btnCaiDat.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnCaiDat.Location = new System.Drawing.Point(0, 534);
+            this.btnCaiDat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCaiDat.Name = "btnCaiDat";
-            this.btnCaiDat.Size = new System.Drawing.Size(388, 75);
+            this.btnCaiDat.Size = new System.Drawing.Size(345, 60);
             this.btnCaiDat.TabIndex = 7;
             this.btnCaiDat.Text = "Cài Đặt";
             this.btnCaiDat.UseVisualStyleBackColor = false;
+            this.btnCaiDat.Click += new System.EventHandler(this.btnCaiDat_Click);
             this.btnCaiDat.MouseEnter += new System.EventHandler(this.btnCaiDat_MouseEnter);
             this.btnCaiDat.MouseLeave += new System.EventHandler(this.btnCaiDat_MouseLeave);
             // 
@@ -213,10 +223,10 @@
             this.btnSanPham.ForeColor = System.Drawing.Color.White;
             this.btnSanPham.Image = global::DashBoar.Properties.Resources.product;
             this.btnSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSanPham.Location = new System.Drawing.Point(-1, 541);
-            this.btnSanPham.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnSanPham.Location = new System.Drawing.Point(-1, 433);
+            this.btnSanPham.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSanPham.Name = "btnSanPham";
-            this.btnSanPham.Size = new System.Drawing.Size(390, 75);
+            this.btnSanPham.Size = new System.Drawing.Size(347, 60);
             this.btnSanPham.TabIndex = 6;
             this.btnSanPham.Text = "    Sản Phẩm";
             this.btnSanPham.UseVisualStyleBackColor = false;
@@ -234,10 +244,10 @@
             this.btnHoaDon.ForeColor = System.Drawing.Color.White;
             this.btnHoaDon.Image = global::DashBoar.Properties.Resources.bill;
             this.btnHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHoaDon.Location = new System.Drawing.Point(-1, 408);
-            this.btnHoaDon.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnHoaDon.Location = new System.Drawing.Point(-1, 326);
+            this.btnHoaDon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHoaDon.Name = "btnHoaDon";
-            this.btnHoaDon.Size = new System.Drawing.Size(393, 75);
+            this.btnHoaDon.Size = new System.Drawing.Size(349, 60);
             this.btnHoaDon.TabIndex = 5;
             this.btnHoaDon.Text = "   Hóa Đơn";
             this.btnHoaDon.UseVisualStyleBackColor = false;
@@ -245,25 +255,16 @@
             this.btnHoaDon.MouseEnter += new System.EventHandler(this.btnHoaDon_MouseEnter);
             this.btnHoaDon.MouseLeave += new System.EventHandler(this.btnHoaDon_MouseLeave);
             // 
-            // pnlform
-            // 
-            this.pnlform.ForeColor = System.Drawing.Color.Black;
-            this.pnlform.Location = new System.Drawing.Point(392, 0);
-            this.pnlform.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.pnlform.Name = "pnlform";
-            this.pnlform.Size = new System.Drawing.Size(1164, 869);
-            this.pnlform.TabIndex = 3;
-            // 
             // frmDashboar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1556, 869);
+            this.ClientSize = new System.Drawing.Size(1383, 695);
             this.Controls.Add(this.pnlform);
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmDashboar";
             this.Text = "Rau Má Detox";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

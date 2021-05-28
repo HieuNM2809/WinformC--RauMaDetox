@@ -19,7 +19,7 @@ namespace DashBoar
         private void loadform(object Form)
         {
             if (this.pnlform.Controls.Count > 0)
-                this.pnlform.Controls.RemoveAt(0);
+            this.pnlform.Controls.RemoveAt(0);
             Form f = Form as Form;
             f.TopLevel = false;
             f.TopMost = true;
@@ -97,6 +97,7 @@ namespace DashBoar
                 btnCaiDat.Width = 298;
                 btnHoaDon.Width = 298;
                 btnMenu.BackgroundImage = Properties.Resources.menu1;
+                pnlform.Dock = DockStyle.Fill;
             }
             else
             {
@@ -142,6 +143,12 @@ namespace DashBoar
         {
             frmHoaDon hd = new frmHoaDon();
             loadform(hd);
+        }
+
+        private void btnCaiDat_Click(object sender, EventArgs e)
+        {
+            frm_Setting set = new frm_Setting();
+            loadform(set);
         }
     }
 }

@@ -172,3 +172,4 @@ BEGIN
 SET TrangThai=0
 WHERE masp=@masp and MaSp=1;
 END
+
