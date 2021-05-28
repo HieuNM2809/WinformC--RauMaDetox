@@ -16,9 +16,7 @@ namespace DashBoar
         public frmThongTinNhanVien()
         {
             InitializeComponent();
-            // Đổ dữ liệu vào combobox
             cbbLoaiNhanVien.SelectedIndex = 0;
-
         }
 
         private void frmThongTinNhanVien_Load(object sender, EventArgs e)
@@ -27,17 +25,10 @@ namespace DashBoar
             clChucDanh.DisplayMember = "LoaiQuyen";
             clChucDanh.ValueMember = "IDQuyen";
 
-            clLoaiNV.DataSource = _nhanvienBUS.LayDSNhanVien();
-            clLoaiNV.DisplayMember = "LoaiNV";
-            clLoaiNV.ValueMember = "LoaiNV";
-
-
             cbbChucDanh.DataSource = _phanQuyenBUS.LayDSPhanQuyen();
             cbbChucDanh.DisplayMember = "LoaiQuyen";
             cbbChucDanh.ValueMember = "IDQuyen";
-            //LayHinh();
-
-
+            
             dgvThongTinNhanVien.DataSource = _nhanvienBUS.LayDSNhanVien();
 
         }
@@ -47,8 +38,7 @@ namespace DashBoar
             if ( String.IsNullOrEmpty(txtHoTen.Text) || String.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtSDT.Text) || String.IsNullOrEmpty(txtTaiKhoan.Text) 
                 || String.IsNullOrEmpty(txtMatKhau.Text) || dtpNgaySinh.Value >= DateTime.Now)
             {
-                MessageBox.Show(Constants.ERR_REQUIRED, Constants.MESSAGE_TITLE);
-
+                MessageBox.Show(Constants.ERR_REQUIRED, Constants.MESSAGE_TITLE,MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
             else
@@ -65,6 +55,10 @@ namespace DashBoar
                         MessageBox.Show(Constants.ERR_MAIL_FORMAT, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
+                    if(_nhanvienBUS.KiemTraTK(txtTaiKhoan.Text))
+                    {
+                        MessageBox.Show(Constants.ACCOUNT_EXIST, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }    
                     NhanVienDTO nv = new NhanVienDTO();
                    
                     nv.IDNV = txtID.Text;
@@ -79,8 +73,8 @@ namespace DashBoar
                     nv.Email = txtEmail.Text;
                     nv.Hinh = string.Format("{0}.jpg", txtID.Text);
 
-                    //SaveImage(picNhanVien.Image);
-                   
+                    SaveImage(picNhanVien.Image);
+
                     if (_nhanvienBUS.ThemNV(nv))
                     {   
                         frmThongTinNhanVien_Load(sender, e);
@@ -97,22 +91,19 @@ namespace DashBoar
         }
 
         private void btnSua_Click(object sender, EventArgs e)
-        {
+        {   
+            NhanVienDTO nv = new NhanVienDTO();
+            nv.IDNV = txtID.Text;
+            nv.HoTen = txtHoTen.Text;
+            nv.NgaySinh = dtpNgaySinh.Value;
+            nv.GioiTinh = ChonGioiTinh();
+            nv.ChucDanh = cbbChucDanh.Text;
+            nv.LoaiNV = cbbLoaiNhanVien.Text;
+            nv.SDT = txtSDT.Text;
+            nv.TaiKhoan = txtTaiKhoan.Text;
+            nv.MatKhau = txtMatKhau.Text.MaHoaMD5();
+            nv.Email = txtEmail.Text;
 
-            NhanVienDTO nv = new NhanVienDTO
-            {
-                IDNV = txtID.Text,
-                HoTen = txtHoTen.Text,
-                NgaySinh = dtpNgaySinh.Value,
-                GioiTinh = ChonGioiTinh(),
-                ChucDanh = cbbChucDanh.Text,
-                LoaiNV = cbbLoaiNhanVien.Text,
-                SDT = txtSDT.Text,
-                TaiKhoan = txtTaiKhoan.Text,
-                MatKhau = txtMatKhau.Text,
-                Email = txtEmail.Text
-
-            };
             if (_nhanvienBUS.CapNhatNV(nv))
             {
                 MessageBox.Show(Constants.UPDATE_SUCESS, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -123,35 +114,33 @@ namespace DashBoar
 
         private void dgvThongTinNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = dgvThongTinNhanVien.Rows[dgvThongTinNhanVien.CurrentCell.RowIndex];
-            int hang = e.RowIndex;
-            try
-            {
-                txtID.Text = dgvThongTinNhanVien.Rows[hang].Cells[0].Value.ToString();
-                txtHoTen.Text = dgvThongTinNhanVien.Rows[hang].Cells[1].Value.ToString();
-                dtpNgaySinh.Text = dgvThongTinNhanVien.Rows[hang].Cells[2].Value.ToString();
-                if (dgvThongTinNhanVien.Rows[hang].Cells[3].Value.ToString() == "Nam") radNam.Checked = true;
+            if (e.RowIndex < 0) return;
+                txtID.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtHoTen.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[1].Value.ToString();
+                dtpNgaySinh.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[2].Value.ToString();
+                if (dgvThongTinNhanVien.Rows[e.RowIndex].Cells[3].Value.ToString() == "Nam") radNam.Checked = true;
                 else radNu.Checked = true;
-                cbbChucDanh.Text = dgvThongTinNhanVien.Rows[hang].Cells[4].Value.ToString();
-                cbbLoaiNhanVien.Text = dgvThongTinNhanVien.Rows[hang].Cells[5].Value.ToString();
-                txtSDT.Text = dgvThongTinNhanVien.Rows[hang].Cells[6].Value.ToString();
-                txtTaiKhoan.Text = dgvThongTinNhanVien.Rows[hang].Cells[7].Value.ToString();
-                txtMatKhau.Text = dgvThongTinNhanVien.Rows[hang].Cells[8].Value.ToString();
-                txtEmail.Text = dgvThongTinNhanVien.Rows[hang].Cells[9].Value.ToString();
+                cbbChucDanh.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[4].Value.ToString();
+                cbbLoaiNhanVien.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[5].Value.ToString();
+                txtSDT.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txtTaiKhoan.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[7].Value.ToString();
+                txtMatKhau.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[8].Value.ToString();
+                txtEmail.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[9].Value.ToString();
+
                 string path = string.Format(@"{0}\..\..\imgNhanVien\{1}", Environment.CurrentDirectory,
-                    dgvThongTinNhanVien.Rows[hang].Cells[10].Value.ToString());
+                    dgvThongTinNhanVien.Rows[e.RowIndex].Cells[10].Value.ToString());
+
                 picNhanVien.Image = Image.FromFile(path);
-
-            }
-            catch
-            {
-
-            }
+            picNhanVien.Enabled = false;
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
-            int i = int.Parse(_nhanvienBUS.MAXID()) + 1;
+            picNhanVien.Enabled = true;
+            int i = 1;
+            if (_nhanvienBUS.MAXID() == null) txtID.Text = i+"";
+
+            else i = int.Parse(_nhanvienBUS.MAXID()) + 1; 
             foreach (Control ctrTTNV in this.grTTNV.Controls)
             {
                 if (ctrTTNV is TextBox)
@@ -164,10 +153,8 @@ namespace DashBoar
             cbbChucDanh.SelectedIndex = 0;
             cbbLoaiNhanVien.SelectedIndex = 0;
             picNhanVien.Image = null;
-            txtID.Text = i + " ";
+            txtID.Text = i + "";
             frmThongTinNhanVien_Load(sender, e);
-
-
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -200,8 +187,7 @@ namespace DashBoar
         }
         
         private void SaveImage(Image image)
-        {
-           
+        {  
             Bitmap bmp = new Bitmap(image);
             string path = string.Format(@"{0}\..\..\imgNhanVien\{1}.jpg", Environment.CurrentDirectory, txtID.Text);
 
@@ -212,7 +198,7 @@ namespace DashBoar
         {
             if(radHoTen.Checked == true )
             {
-               dgvThongTinNhanVien.DataSource = _nhanvienBUS.TimKiemIDNV(txtTimKiem.Text);
+               dgvThongTinNhanVien.DataSource = _nhanvienBUS.TimKiemHoTenNV(txtTimKiem.Text);
                 return;
             }
             if(radID.Checked == true )

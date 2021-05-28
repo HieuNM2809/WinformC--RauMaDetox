@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,17 +24,9 @@ namespace DashBoar
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            NhanVienDTO nv = new NhanVienDTO()
-            {
-                IDNV = (_DKTK.MAXID() + 1),
-                HoTen = txtHoTen.Text,
-                SDT = txtSDT.Text,
-                TaiKhoan = txtTenTruyCap.Text,
-                MatKhau = txtMatKhau.Text.MaHoaMD5()
-
-            };
-            if  ( string.IsNullOrEmpty(txtHoTen.Text) || string.IsNullOrEmpty(txtMatKhau.Text)|| string.IsNullOrEmpty(txtNhaplaiMatKhau.Text) 
-                || string.IsNullOrEmpty(txtSDT.Text) || string.IsNullOrEmpty(txtTenTruyCap.Text))
+          
+            if (string.IsNullOrEmpty(txtHoTen.Text) || string.IsNullOrEmpty(txtMatKhau.Text) || string.IsNullOrEmpty(txtNhaplaiMatKhau.Text)
+                || string.IsNullOrEmpty(txtSDT.Text) || string.IsNullOrEmpty(txtTenTruyCap.Text) || picNV.Image == null )
             {
                 MessageBox.Show(Constants.ERR_REQUIRED, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -42,19 +35,44 @@ namespace DashBoar
             {
                     if (_DKTK.KiemTraTK(txtTenTruyCap.Text) == false)
                     {
-                        if (txtMatKhau.Text != txtNhaplaiMatKhau.Text)
+                    if (txtMatKhau.Text != txtNhaplaiMatKhau.Text)
+                    {
+                        MessageBox.Show(Constants.PASSWORD_DIF, Constants.MESSAGE_TITLE, MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        if (!_DKTK.KTDinhDangEmail(txtEmail.Text))
                         {
-                            MessageBox.Show(Constants.PASSWORD_DIF, Constants.MESSAGE_TITLE, MessageBoxButtons.OK);
+                            MessageBox.Show(Constants.ERR_MAIL_FORMAT, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
                         }
-                        else
+                        NhanVienDTO nv = new NhanVienDTO();
+                        int i = 1;
+                        if (_DKTK.MAXID() == null) nv.IDNV = i + "";
+                        else i = int.Parse(_DKTK.MAXID()) + 1;
+                        nv.IDNV = i + "";
+                        nv.HoTen = txtHoTen.Text;
+                        nv.NgaySinh = dtpNgaySinh.Value;
+                        nv.GioiTinh = ChonGioiTinh();
+                        nv.ChucDanh = "Nhân Viên";
+                        nv.SDT = txtSDT.Text;
+                        nv.TaiKhoan = txtTenTruyCap.Text;
+                        nv.LoaiNV = cbbLoaiNV.Text;
+                        nv.MatKhau = txtMatKhau.Text.MaHoaMD5();
+                        nv.Hinh = string.Format("{0}.jpg", i);
+
+                        picNV.Text = i + ".jpg";
+
+                        SaveImage(picNV.Image);
+
+                        if (_DKTK.DangKiTK(nv))
                         {
-                            if (_DKTK.DangKiTK(nv))
-                            {
-                                MessageBox.Show(Constants.ACCOUT_SUCESS, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                return;
-                            }
-                            else MessageBox.Show(Constants.ACCOUT_FAIL, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show(Constants.ACCOUT_SUCESS, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
                         }
+                        else MessageBox.Show(Constants.ACCOUT_FAIL, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                        
                     }
                     else MessageBox.Show(Constants.ACCOUNT_EXIST, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -63,11 +81,41 @@ namespace DashBoar
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }  
+
+        private void SaveImage(Image image)
+        {
+            int i = int.Parse(_DKTK.MAXID()) + 1;
+            Bitmap bmp = new Bitmap(image);
+            string path = string.Format(@"{0}\..\..\imgNhanVien\{1}.jpg", Environment.CurrentDirectory, i);
+
+            bmp.Save(path, ImageFormat.Jpeg);
+        }
+
+        private void picNV_Click(object sender, EventArgs e)
+        {
+            if (ofdMoFile.ShowDialog() == DialogResult.OK)
+            {
+                picNV.Image = Image.FromFile(ofdMoFile.FileName);
+            }
+        }
+
+      
+
+        private string ChonGioiTinh()
+        {
+            if (radNam.Checked == true) return radNam.Text;
+            else return radNu.Text;
+        }
+
+        private void btnThoat_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void FrmDangKiTaiKhoan_Load(object sender, EventArgs e)
         {
-
+            cbbLoaiNV.SelectedIndex = 0;
         }
     }
 }

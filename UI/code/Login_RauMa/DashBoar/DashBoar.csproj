@@ -152,9 +152,6 @@
     <EmbeddedResource Include="frm_Setting.resx">
       <DependentUpon>frm_Setting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Setting.vi.resx">
-      <DependentUpon>frm_Setting.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

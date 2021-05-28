@@ -17,7 +17,20 @@ namespace DashBoar
             InitializeComponent();
         }
 
-        private void frmload(object frm)
+        private void frmloadFill(object frm)
+        {
+            if (this.panel_show.Controls.Count > 0)
+                this.panel_show.Controls.RemoveAt(0);
+            Form f = frm as Form;
+            f.TopLevel = false;
+            f.TopMost = true;
+            f.Dock = DockStyle.Fill;
+            this.panel_show.Controls.Add(f);
+            this.panel_show.Tag = f;
+            f.Show();
+        }
+
+        private void frmloadNoNe(object frm)
         {
             if (this.panel_show.Controls.Count > 0)
                 this.panel_show.Controls.RemoveAt(0);
@@ -32,7 +45,6 @@ namespace DashBoar
         private void đăngKíTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmDangKiTaiKhoan dk = new FrmDangKiTaiKhoan();
-            
             panel_show.Show();
             panel_show.Controls.Clear();
             dk.TopLevel = false;
@@ -44,32 +56,19 @@ namespace DashBoar
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmDoiMatKhau dk = new FrmDoiMatKhau();
-            
-            panel_show.Show();
-            panel_show.Controls.Clear();
-            dk.TopLevel = false;
-            dk.Dock = DockStyle.None;
-            panel_show.Controls.Add(dk);
-
-            dk.Show();
+            frmloadNoNe(dk);
         }
 
         private void thôngTinNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmThongTinNhanVien TTNV = new frmThongTinNhanVien();
-            frmload(TTNV);
+            frmloadFill(TTNV);
         }
 
         private void QLNhanVien_Load(object sender, EventArgs e)
         {
             FrmDangKiTaiKhoan DKTK = new FrmDangKiTaiKhoan();
-            frmload(DKTK);
-        }
-
-        private void quyềnTảiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmThemQuyen ThemQuyen = new FrmThemQuyen();
-            frmload(ThemQuyen);
+            frmloadNoNe(DKTK);
         }
     }
 }

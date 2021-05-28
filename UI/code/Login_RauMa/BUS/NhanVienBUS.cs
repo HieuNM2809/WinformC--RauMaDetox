@@ -64,6 +64,10 @@ namespace BUS
         {
             return _NhanVienDAO.TimKiemHoTenNV(hoten);
         }
+        public bool KiemTraTK(string tk)
+        {
+            return _NhanVienDAO.KiemTraTaiKhoan(tk);
+        }
     }
 }
 

@@ -9,12 +9,13 @@ CREATE PROC ThemNV
 	@sdt char(10),
 	@taikhoan varchar(100),
 	@matkhau varchar(100),
+	@hinh nvarchar(max),
 	@Email varchar(100) 
 )
 AS 
 BEGIN
-	INSERT INTO NhanVien(IDNV,HoTen, NgaySinh, GioiTinh, ChucDanh, LoaiNV, SDT, TaiKhoan, MatKhau, Email, TrangThai) 
-	VALUES (@idnv, @hoten, @ngaysinh, @gioitinh, @chucdanh, @loainv, @sdt, @taikhoan, @matkhau, @Email, 1)
+	INSERT INTO NhanVien(IDNV,HoTen, NgaySinh, GioiTinh, ChucDanh, LoaiNV, SDT, TaiKhoan, MatKhau, Email, Hinh, TrangThai) 
+	VALUES (@idnv, @hoten, @ngaysinh, @gioitinh, @chucdanh, @loainv, @sdt, @taikhoan, @matkhau, @Email, @hinh, 1)
 END
 
 GO 
@@ -42,7 +43,8 @@ CREATE PROC CapNhatNV
 	@sdt char(10),
 	@taikhoan varchar(100),
 	@matkhau varchar(100),
-	@Email varchar(100) 
+	@Email varchar(100), 
+	@hinh nvarchar(max)
 )
 AS
 BEGIN
@@ -50,6 +52,6 @@ BEGIN
 	SET IDNV = @idnv, HoTen = @hoten, NgaySinh = @ngaysinh, GioiTinh = @gioitinh,
 		ChucDanh = @chucdanh, LoaiNV = @loainv, SDT = @sdt, TaiKhoan = @taikhoan,
 		MatKhau = @matkhau, Email = @Email
-	WHERE IDNV = @idnv
+	WHERE IDNV = @idnv and TrangThai = 1
 END
 

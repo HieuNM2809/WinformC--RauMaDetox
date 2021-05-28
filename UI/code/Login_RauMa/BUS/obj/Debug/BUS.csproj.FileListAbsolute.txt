@@ -7,6 +7,7 @@ D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\DAO.pdb
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\DAO.dll.config
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\DTO.pdb
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\EntityFramework.xml
+D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.dll
@@ -67,4 +68,3 @@ D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--Rau
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.dll
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.pdb
-D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache

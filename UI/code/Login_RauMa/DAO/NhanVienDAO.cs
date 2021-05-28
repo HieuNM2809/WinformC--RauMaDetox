@@ -47,27 +47,11 @@ namespace DAO
         {
             try
             {
-                //int temp = qlrauma.THEMNV(nv.IDNV, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.ChucDanh, nv.LoaiNV, nv.SDT, nv.TaiKhoan, nv.MatKhau, nv.Email);
-
-                NhanVien nhanVien = new NhanVien();
-                nhanVien.IDNV = nv.IDNV;
-                nhanVien.HoTen = nv.HoTen;
-                nhanVien.NgaySinh = nv.NgaySinh;
-                nhanVien.GioiTinh = nv.GioiTinh;
-                nhanVien.ChucDanh = nv.ChucDanh;
-                nhanVien.LoaiNV = nv.LoaiNV;
-                nhanVien.TaiKhoan = nv.TaiKhoan;
-                nhanVien.MatKhau = nv.MatKhau;
-                nhanVien.SDT = nv.SDT;
-                nhanVien.Email = nv.Email;
-                nhanVien.Hinh = nv.Hinh;
-                nhanVien.TrangThai = 1;
-                
-
-                NhanVien nhanvienEF = qlrauma.NhanViens.Add(nhanVien);
+                int temp = qlrauma.ThemNV(nv.IDNV, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.ChucDanh, nv.LoaiNV, nv.SDT,
+                            nv.TaiKhoan, nv.MatKhau, nv.Hinh, nv.Email);
                 qlrauma.SaveChanges();
 
-                return int.Parse(nhanvienEF.IDNV) > 0;
+                return temp > 0;
             }
             catch(Exception e)
             {
@@ -81,12 +65,10 @@ namespace DAO
           
             try
             {
-                //int temp= qlrauma.CAPNHATNV(nv.IDNV, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.ChucDanh, nv.LoaiNV, nv.SDT, nv.TaiKhoan, nv.MatKhau, nv.Email);
-                // qlrauma.SaveChanges();
-                // return temp>0;
+                int temp = qlrauma.CapNhatNV(nv.IDNV, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.ChucDanh, nv.LoaiNV, nv.SDT, nv.TaiKhoan, nv.MatKhau, nv.Email, nv.Hinh);
+                qlrauma.SaveChanges();
 
-                
-                return true;
+                return temp > 0;
             }
             catch (Exception)
             {
@@ -113,8 +95,7 @@ namespace DAO
         {
             try
             {
-                NhanVien nhanVien = qlrauma.NhanViens.SingleOrDefault(u => u.TaiKhoan  == nv.TaiKhoan);
-                nhanVien.MatKhau = nhanVien.MatKhau;
+                qlrauma.DOIMATKHAU(nv.TaiKhoan, nv.MatKhau);
                 qlrauma.SaveChanges();
 
                 return true;

@@ -9,6 +9,7 @@ D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\BUS.pdb
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\DTO.pdb
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\DAO.pdb
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\DAO.dll.config
+D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.csprojAssemblyReference.cache
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.frmDashboar.resources
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.FrmDangKiTaiKhoan.resources
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.FrmDoiMatKhau.resources
@@ -124,13 +125,18 @@ D:\HỌC TẬP\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\en\Da
 D:\HỌC TẬP\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.csproj.CopyComplete
 D:\HỌC TẬP\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.exe
 D:\HỌC TẬP\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.pdb
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.dll
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.SqlServer.dll
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.xml
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.SqlServer.xml
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.frm_Setting.resources
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.dll
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\DashBoar.exe.config
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\DashBoar.exe
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\DashBoar.pdb
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\en\DashBoar.resources.dll
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\BUS.dll
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\DTO.dll
-D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.dll
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.SqlServer.dll
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\DAO.dll
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\BUS.pdb
@@ -159,18 +165,3 @@ D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--Rau
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.csproj.CopyComplete
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.exe
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.pdb
-D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.dll
-D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.SqlServer.dll
-D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.xml
-D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.SqlServer.xml
-D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.frm_Setting.resources
-D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.dll
-D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.SqlServer.dll
-D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.xml
-D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.SqlServer.xml
-D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.csproj.AssemblyReference.cache
-D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.frmChiTietHoaDon.resources
-D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.frm_Setting.resources
-D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\vi\DashBoar.resources.dll
-D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.frm_Setting.vi.resources
-D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\vi\DashBoar.resources.dll
