@@ -65,7 +65,6 @@
     <EntitySetMapping Name="PhanQuyens">
       <EntityTypeMapping TypeName="ql_raumaModel.PhanQuyen">
         <MappingFragment StoreEntitySet="PhanQuyen">
-          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
           <ScalarProperty Name="IDquyen" ColumnName="IDquyen" />
           <ScalarProperty Name="LoaiQuyen" ColumnName="LoaiQuyen" />
         </MappingFragment>
@@ -89,5 +88,7 @@
     <FunctionImportMapping FunctionImportName="THEMHD" FunctionName="ql_raumaModel.Store.THEMHD" />
     <FunctionImportMapping FunctionImportName="THEMSP" FunctionName="ql_raumaModel.Store.THEMSP" />
     <FunctionImportMapping FunctionImportName="XOASP" FunctionName="ql_raumaModel.Store.XOASP" />
+    <FunctionImportMapping FunctionImportName="CapNhatNV" FunctionName="ql_raumaModel.Store.CapNhatNV" />
+    <FunctionImportMapping FunctionImportName="ThemNV" FunctionName="ql_raumaModel.Store.ThemNV" />
   </EntityContainerMapping>
 </Mapping>

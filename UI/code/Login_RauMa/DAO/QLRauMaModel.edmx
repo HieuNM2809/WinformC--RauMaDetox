@@ -67,7 +67,6 @@
           </Key>
           <Property Name="IDquyen" Type="nvarchar" MaxLength="3" Nullable="false" />
           <Property Name="LoaiQuyen" Type="varchar" MaxLength="50" />
-          <Property Name="TrangThai" Type="smallint" />
         </EntityType>
         <EntityType Name="SanPham">
           <Key>
@@ -153,6 +152,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="CapNhatNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idnv" Type="nvarchar" Mode="In" />
+          <Parameter Name="hoten" Type="nvarchar" Mode="In" />
+          <Parameter Name="ngaysinh" Type="datetime" Mode="In" />
+          <Parameter Name="gioitinh" Type="nvarchar" Mode="In" />
+          <Parameter Name="chucdanh" Type="nvarchar" Mode="In" />
+          <Parameter Name="loainv" Type="nvarchar" Mode="In" />
+          <Parameter Name="sdt" Type="char" Mode="In" />
+          <Parameter Name="taikhoan" Type="varchar" Mode="In" />
+          <Parameter Name="matkhau" Type="varchar" Mode="In" />
+          <Parameter Name="Email" Type="varchar" Mode="In" />
+          <Parameter Name="hinh" Type="nvarchar(max)" Mode="In" />
+        </Function>
         <Function Name="SUASP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="masp" Type="nvarchar" Mode="In" />
           <Parameter Name="Tensp" Type="nvarchar" Mode="In" />
@@ -165,6 +177,19 @@
           <Parameter Name="idhd" Type="nvarchar" Mode="In" />
           <Parameter Name="idnv" Type="nvarchar" Mode="In" />
           <Parameter Name="ngaylap" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="ThemNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idnv" Type="nvarchar" Mode="In" />
+          <Parameter Name="hoten" Type="nvarchar" Mode="In" />
+          <Parameter Name="ngaysinh" Type="datetime" Mode="In" />
+          <Parameter Name="gioitinh" Type="nvarchar" Mode="In" />
+          <Parameter Name="chucdanh" Type="nvarchar" Mode="In" />
+          <Parameter Name="loainv" Type="nvarchar" Mode="In" />
+          <Parameter Name="sdt" Type="char" Mode="In" />
+          <Parameter Name="taikhoan" Type="varchar" Mode="In" />
+          <Parameter Name="matkhau" Type="varchar" Mode="In" />
+          <Parameter Name="hinh" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Email" Type="varchar" Mode="In" />
         </Function>
         <Function Name="THEMSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="masp" Type="nvarchar" Mode="In" />
@@ -289,7 +314,6 @@
           <Property Name="IDquyen" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LoaiQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="CTPhanQuyens" Relationship="Self.FK_CTPhanQuyen_PhanQuyen" FromRole="PhanQuyen" ToRole="CTPhanQuyen" />
-          <Property Name="TrangThai" Type="Int16" />
         </EntityType>
         <EntityType Name="SanPham">
           <Key>
@@ -436,6 +460,32 @@
           <FunctionImport Name="XOASP">
           <Parameter Name="masp" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="CapNhatNV">
+            <Parameter Name="idnv" Mode="In" Type="String" />
+            <Parameter Name="hoten" Mode="In" Type="String" />
+            <Parameter Name="ngaysinh" Mode="In" Type="DateTime" />
+            <Parameter Name="gioitinh" Mode="In" Type="String" />
+            <Parameter Name="chucdanh" Mode="In" Type="String" />
+            <Parameter Name="loainv" Mode="In" Type="String" />
+            <Parameter Name="sdt" Mode="In" Type="String" />
+            <Parameter Name="taikhoan" Mode="In" Type="String" />
+            <Parameter Name="matkhau" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="hinh" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="ThemNV">
+            <Parameter Name="idnv" Mode="In" Type="String" />
+            <Parameter Name="hoten" Mode="In" Type="String" />
+            <Parameter Name="ngaysinh" Mode="In" Type="DateTime" />
+            <Parameter Name="gioitinh" Mode="In" Type="String" />
+            <Parameter Name="chucdanh" Mode="In" Type="String" />
+            <Parameter Name="loainv" Mode="In" Type="String" />
+            <Parameter Name="sdt" Mode="In" Type="String" />
+            <Parameter Name="taikhoan" Mode="In" Type="String" />
+            <Parameter Name="matkhau" Mode="In" Type="String" />
+            <Parameter Name="hinh" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -507,7 +557,6 @@
           <EntitySetMapping Name="PhanQuyens">
             <EntityTypeMapping TypeName="ql_raumaModel.PhanQuyen">
               <MappingFragment StoreEntitySet="PhanQuyen">
-                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
                 <ScalarProperty Name="IDquyen" ColumnName="IDquyen" />
                 <ScalarProperty Name="LoaiQuyen" ColumnName="LoaiQuyen" />
               </MappingFragment>
@@ -531,6 +580,8 @@
           <FunctionImportMapping FunctionImportName="THEMHD" FunctionName="ql_raumaModel.Store.THEMHD" />
           <FunctionImportMapping FunctionImportName="THEMSP" FunctionName="ql_raumaModel.Store.THEMSP" />
           <FunctionImportMapping FunctionImportName="XOASP" FunctionName="ql_raumaModel.Store.XOASP" />
+          <FunctionImportMapping FunctionImportName="CapNhatNV" FunctionName="ql_raumaModel.Store.CapNhatNV" />
+          <FunctionImportMapping FunctionImportName="ThemNV" FunctionName="ql_raumaModel.Store.ThemNV" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

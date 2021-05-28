@@ -72,7 +72,6 @@
     <Property Name="IDquyen" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LoaiQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="CTPhanQuyens" Relationship="Self.FK_CTPhanQuyen_PhanQuyen" FromRole="PhanQuyen" ToRole="CTPhanQuyen" />
-    <Property Name="TrangThai" Type="Int16" />
   </EntityType>
   <EntityType Name="SanPham">
     <Key>
@@ -218,6 +217,32 @@
     </FunctionImport>
     <FunctionImport Name="XOASP">
       <Parameter Name="masp" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CapNhatNV">
+      <Parameter Name="idnv" Mode="In" Type="String" />
+      <Parameter Name="hoten" Mode="In" Type="String" />
+      <Parameter Name="ngaysinh" Mode="In" Type="DateTime" />
+      <Parameter Name="gioitinh" Mode="In" Type="String" />
+      <Parameter Name="chucdanh" Mode="In" Type="String" />
+      <Parameter Name="loainv" Mode="In" Type="String" />
+      <Parameter Name="sdt" Mode="In" Type="String" />
+      <Parameter Name="taikhoan" Mode="In" Type="String" />
+      <Parameter Name="matkhau" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="hinh" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ThemNV">
+      <Parameter Name="idnv" Mode="In" Type="String" />
+      <Parameter Name="hoten" Mode="In" Type="String" />
+      <Parameter Name="ngaysinh" Mode="In" Type="DateTime" />
+      <Parameter Name="gioitinh" Mode="In" Type="String" />
+      <Parameter Name="chucdanh" Mode="In" Type="String" />
+      <Parameter Name="loainv" Mode="In" Type="String" />
+      <Parameter Name="sdt" Mode="In" Type="String" />
+      <Parameter Name="taikhoan" Mode="In" Type="String" />
+      <Parameter Name="matkhau" Mode="In" Type="String" />
+      <Parameter Name="hinh" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
     </FunctionImport>
   </EntityContainer>
 </Schema>
