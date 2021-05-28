@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ql_raumaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="LoaiSP">
+    <Key>
+      <PropertyRef Name="MaLoaiSp" />
+    </Key>
+    <Property Name="MaLoaiSp" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="LoaiSP" Type="nvarchar" MaxLength="20" />
+    <Property Name="TrangThai" Type="bit" />
+  </EntityType>
+  <EntityType Name="PhanQuyen">
+    <Key>
+      <PropertyRef Name="ID_quyen" />
+    </Key>
+    <Property Name="ID_quyen" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="LoaiQuyen" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="MaSp" />
+    </Key>
+    <Property Name="MaSp" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="TenSp" Type="nvarchar" MaxLength="20" />
+    <Property Name="MaLoaiSp" Type="char" MaxLength="3" />
+    <Property Name="GiaTien" Type="money" />
+    <Property Name="MoTa" Type="nvarchar" MaxLength="50" />
+    <Property Name="Hinh" Type="nvarchar" MaxLength="1" />
+    <Property Name="TrangThai" Type="bit" />
+  </EntityType>
+  <Association Name="FK_SanPham_LoaiSanPham">
+    <End Role="LoaiSP" Type="Self.LoaiSP" Multiplicity="0..1" />
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiSP">
+        <PropertyRef Name="MaLoaiSp" />
+      </Principal>
+      <Dependent Role="SanPham">
+        <PropertyRef Name="MaLoaiSp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ql_raumaModelStoreContainer">
+    <EntitySet Name="LoaiSP" EntityType="Self.LoaiSP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PhanQuyen" EntityType="Self.PhanQuyen" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_SanPham_LoaiSanPham" Association="Self.FK_SanPham_LoaiSanPham">
+      <End Role="LoaiSP" EntitySet="LoaiSP" />
+      <End Role="SanPham" EntitySet="SanPham" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
