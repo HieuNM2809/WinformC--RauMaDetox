@@ -47,7 +47,8 @@ namespace DashBoar
             {
                 db.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             }
-           
+            db.ShowDialog();
         }
+
     }
 }
