@@ -169,6 +169,7 @@
           <Parameter Name="taikhoan" Type="varchar" Mode="In" />
           <Parameter Name="matkhau" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="DSNHANVIEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SUASP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="masp" Type="nvarchar" Mode="In" />
           <Parameter Name="Tensp" Type="nvarchar" Mode="In" />
@@ -494,7 +495,21 @@
             <Parameter Name="taikhoan" Mode="In" Type="String" />
             <Parameter Name="matkhau" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="DSNHANVIEN" ReturnType="Collection(ql_raumaModel.DSNHANVIEN_Result)" />
         </EntityContainer>
+        <ComplexType Name="DSNHANVIEN_Result">
+          <Property Type="String" Name="IDNV" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="NgaySinh" Nullable="true" Precision="23" />
+          <Property Type="String" Name="GioiTinh" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ChucDanh" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="LoaiNV" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="SDT" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="TaiKhoan" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="MatKhau" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Hinh" Nullable="true" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -591,6 +606,23 @@
           <FunctionImportMapping FunctionImportName="CapNhatNV" FunctionName="ql_raumaModel.Store.CapNhatNV" />
           <FunctionImportMapping FunctionImportName="ThemNV" FunctionName="ql_raumaModel.Store.ThemNV" />
           <FunctionImportMapping FunctionImportName="DOIMATKHAU" FunctionName="ql_raumaModel.Store.DOIMATKHAU" />
+          <FunctionImportMapping FunctionImportName="DSNHANVIEN" FunctionName="ql_raumaModel.Store.DSNHANVIEN">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ql_raumaModel.DSNHANVIEN_Result">
+                <ScalarProperty Name="IDNV" ColumnName="IDNV" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="ChucDanh" ColumnName="ChucDanh" />
+                <ScalarProperty Name="LoaiNV" ColumnName="LoaiNV" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Hinh" ColumnName="Hinh" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

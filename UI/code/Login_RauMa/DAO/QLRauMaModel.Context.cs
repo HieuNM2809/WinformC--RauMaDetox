@@ -310,6 +310,13 @@ public partial class ql_raumaEntities2 : DbContext
         return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("DOIMATKHAU", taikhoanParameter, matkhauParameter);
     }
 
+
+    public virtual ObjectResult<DSNHANVIEN_Result> DSNHANVIEN()
+    {
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<DSNHANVIEN_Result>("DSNHANVIEN");
+    }
+
 }
 
 }
