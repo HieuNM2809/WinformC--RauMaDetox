@@ -58,9 +58,6 @@
     </Compile>
     <Compile Include="DAO_loaisp.cs" />
     <Compile Include="DAO_sanpham.cs" />
-    <Compile Include="DSNHANVIEN_Result.cs">
-      <DependentUpon>QLRauMaModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="HoaDon.cs">
       <DependentUpon>QLRauMaModel.tt</DependentUpon>
     </Compile>

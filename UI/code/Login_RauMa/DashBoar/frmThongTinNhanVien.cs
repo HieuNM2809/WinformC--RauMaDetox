@@ -30,6 +30,7 @@ namespace DashBoar
             cbbChucDanh.ValueMember = "IDQuyen";
             
             dgvThongTinNhanVien.DataSource = _nhanvienBUS.LayDSNhanVien();
+
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -130,7 +131,7 @@ namespace DashBoar
                     dgvThongTinNhanVien.Rows[e.RowIndex].Cells[10].Value.ToString());
 
                 picNhanVien.Image = Image.FromFile(path);
-                picNhanVien.Enabled = false;
+            picNhanVien.Enabled = false;
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
@@ -205,19 +206,6 @@ namespace DashBoar
                 dgvThongTinNhanVien.DataSource = _nhanvienBUS.TimKiemIDNV(txtTimKiem.Text);
                 return;
             }    
-        }
-
-        private void btnThem_MouseHover(object sender, EventArgs e)
-        {
-            btnThem.Image = null;
-            btnThem.ForeColor = Color.Red;
-            btnThem.Text = "Thêm";
-        }
-
-        private void btnThem_MouseLeave(object sender, EventArgs e)
-        {
-            string.IsNullOrEmpty(btnThem.Text);
-            btnThem.Image = Image.FromFile(@"D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\img\plus.png");
         }
     }
 }

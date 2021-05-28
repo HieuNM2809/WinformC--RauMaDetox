@@ -62,6 +62,7 @@ namespace DAO
 
         public bool CapNhatNV(NhanVienDTO nv)
         {
+          
             try
             {
                 int temp = qlrauma.CapNhatNV(nv.IDNV, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.ChucDanh, nv.LoaiNV, nv.SDT, nv.TaiKhoan, nv.MatKhau, nv.Email, nv.Hinh);
