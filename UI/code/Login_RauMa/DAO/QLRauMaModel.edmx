@@ -434,7 +434,7 @@
             <Parameter Name="Hinh" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="XOASP">
-            <Parameter Name="masp" Mode="In" Type="String" />
+          <Parameter Name="masp" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
       </Schema>

@@ -50,6 +50,7 @@ namespace DAO
                 //int temp = qlrauma.THEMNV(nv.IDNV, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.ChucDanh, nv.LoaiNV, nv.SDT, nv.TaiKhoan, nv.MatKhau, nv.Email);
 
                 NhanVien nhanVien = new NhanVien();
+                nhanVien.IDNV = nv.IDNV;
                 nhanVien.HoTen = nv.HoTen;
                 nhanVien.NgaySinh = nv.NgaySinh;
                 nhanVien.GioiTinh = nv.GioiTinh;
@@ -63,10 +64,10 @@ namespace DAO
                 nhanVien.TrangThai = 1;
                 
 
-                 qlrauma.NhanViens.Add(nhanVien);
-                _ = qlrauma.SaveChanges();
+                NhanVien nhanvienEF = qlrauma.NhanViens.Add(nhanVien);
+                qlrauma.SaveChanges();
 
-                return true;
+                return int.Parse(nhanvienEF.IDNV) > 0;
             }
             catch(Exception e)
             {
@@ -143,19 +144,25 @@ namespace DAO
         {
             try
             {
-                NhanVien nhanvien = new NhanVien();
-                nhanvien.IDNV = nv.IDNV;
-                nhanvien.HoTen = nv.HoTen;
-                nhanvien.SDT = nv.SDT;
-                nhanvien.NgaySinh = nv.NgaySinh;
-                nhanvien.TaiKhoan = nv.TaiKhoan;
-                nhanvien.MatKhau = nv.MatKhau;
-                nhanvien.TrangThai = 1;
+               
+                NhanVien nhanVien = new NhanVien();
+                nhanVien.IDNV = nv.IDNV;
+                nhanVien.HoTen = nv.HoTen;
+                nhanVien.NgaySinh = nv.NgaySinh;
+                nhanVien.GioiTinh = nv.GioiTinh;
+                nhanVien.ChucDanh = nv.ChucDanh;
+                nhanVien.LoaiNV = nv.LoaiNV;
+                nhanVien.TaiKhoan = nv.TaiKhoan;
+                nhanVien.MatKhau = nv.MatKhau;
+                nhanVien.SDT = nv.SDT;
+                nhanVien.Email = nv.Email;
+                nhanVien.Hinh = nv.Hinh;
+                nhanVien.TrangThai = 1;
 
-                qlrauma.NhanViens.Add(nhanvien);
+               NhanVien nhanvienEF =  qlrauma.NhanViens.Add(nhanVien);
                 qlrauma.SaveChanges();
 
-                return qlrauma.SaveChanges() > 0;
+                return int.Parse(nhanvienEF.IDNV) > 0;
             }
             catch (Exception)
             {
