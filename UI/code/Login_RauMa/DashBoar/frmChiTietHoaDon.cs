@@ -19,17 +19,15 @@ namespace DashBoar
         {
             InitializeComponent();
         }
-        
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmChiTietHoaDon_Load(object sender, EventArgs e)
+        private void frmChiTietHoaDon_load(object sender, EventArgs e)
         {
             cbbTenSP.DataSource = sp.lstViewSP();
-            cbbTenSP.DisplayMember = "Tensp";
-            cbbTenSP.ValueMember = "Masp";
+            cbbTenSP.DisplayMember = "tensp";
+            cbbTenSP.ValueMember = "masp";
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -459,7 +459,6 @@
           </FunctionImport>
           <FunctionImport Name="XOASP">
           <Parameter Name="masp" Mode="In" Type="String" />
-<<<<<<< Updated upstream
           </FunctionImport>
           <FunctionImport Name="CapNhatNV">
             <Parameter Name="idnv" Mode="In" Type="String" />
@@ -486,8 +485,6 @@
             <Parameter Name="matkhau" Mode="In" Type="String" />
             <Parameter Name="hinh" Mode="In" Type="String" />
             <Parameter Name="Email" Mode="In" Type="String" />
-=======
->>>>>>> Stashed changes
           </FunctionImport>
         </EntityContainer>
       </Schema>

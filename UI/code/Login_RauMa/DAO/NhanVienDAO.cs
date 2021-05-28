@@ -49,7 +49,6 @@ namespace DAO
             {
                 //int temp = qlrauma.THEMNV(nv.IDNV, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.ChucDanh, nv.LoaiNV, nv.SDT, nv.TaiKhoan, nv.MatKhau, nv.Email);
 
-<<<<<<< Updated upstream
                 //NhanVien nhanVien = new NhanVien();
                 //nhanVien.IDNV = nv.IDNV;
                 //nhanVien.HoTen = nv.HoTen;
@@ -72,27 +71,6 @@ namespace DAO
                 qlrauma.SaveChanges();
 
                 return temp > 0;
-=======
-                NhanVien nhanVien = new NhanVien();
-                nhanVien.IDNV = nv.IDNV;
-                nhanVien.HoTen = nv.HoTen;
-                nhanVien.NgaySinh = nv.NgaySinh;
-                nhanVien.GioiTinh = nv.GioiTinh;
-                nhanVien.ChucDanh = nv.ChucDanh;
-                nhanVien.LoaiNV = nv.LoaiNV;
-                nhanVien.TaiKhoan = nv.TaiKhoan;
-                nhanVien.MatKhau = nv.MatKhau;
-                nhanVien.SDT = nv.SDT;
-                nhanVien.Email = nv.Email;
-                nhanVien.Hinh = nv.Hinh;
-                nhanVien.TrangThai = 1;
-                
-
-                NhanVien nhanvienEF = qlrauma.NhanViens.Add(nhanVien);
-                qlrauma.SaveChanges();
-
-                return int.Parse(nhanvienEF.IDNV) > 0;
->>>>>>> Stashed changes
             }
             catch(Exception e)
             {
