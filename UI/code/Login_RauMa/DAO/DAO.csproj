@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietHoaDonDAO.cs" />
     <Compile Include="CTHoaDon.cs">
       <DependentUpon>QLRauMa.tt</DependentUpon>
     </Compile>
@@ -90,6 +91,15 @@
       <DependentUpon>QLRauMa.edmx</DependentUpon>
     </Compile>
     <Compile Include="SanPham.cs">
+      <DependentUpon>QLRauMa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>QLRauMa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>QLRauMa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
       <DependentUpon>QLRauMa.tt</DependentUpon>
     </Compile>
   </ItemGroup>

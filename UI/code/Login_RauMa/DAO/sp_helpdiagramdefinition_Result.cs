@@ -10,17 +10,10 @@
 namespace DAO
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class CTHoaDon
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public string IDHoaDon { get; set; }
-        public string MaSp { get; set; }
-        public string TenSp { get; set; }
-        public Nullable<int> SoLuong { get; set; }
-        public Nullable<decimal> DonGia { get; set; }
-        public Nullable<double> ChietKhau { get; set; }
-        public Nullable<decimal> TongTien { get; set; }
-        public string STT { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }
