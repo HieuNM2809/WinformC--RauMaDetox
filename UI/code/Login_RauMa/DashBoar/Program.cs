@@ -16,7 +16,11 @@ namespace DashBoar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< Updated upstream
             Application.Run(new FrmDangKiTaiKhoan());
+=======
+            Application.Run(new frmDashboar());
+>>>>>>> Stashed changes
         }
     }
 }

@@ -142,10 +142,14 @@ namespace DashBoar
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             int i = 1;
             if (_nhanvienBUS.MAXID() == null) txtID.Text = i+"";
 
             else i = int.Parse(_nhanvienBUS.MAXID()) + 1; 
+=======
+            int i = int.Parse(_nhanvienBUS.MAXID()) + 1;
+>>>>>>> Stashed changes
             foreach (Control ctrTTNV in this.grTTNV.Controls)
             {
                 if (ctrTTNV is TextBox)
@@ -158,7 +162,11 @@ namespace DashBoar
             cbbChucDanh.SelectedIndex = 0;
             cbbLoaiNhanVien.SelectedIndex = 0;
             picNhanVien.Image = null;
+<<<<<<< Updated upstream
             txtID.Text = i + "";
+=======
+            txtID.Text = i + " ";
+>>>>>>> Stashed changes
             frmThongTinNhanVien_Load(sender, e);
         }
 
