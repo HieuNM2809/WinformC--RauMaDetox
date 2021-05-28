@@ -160,6 +160,10 @@
     <Parameter Name="Email" Type="varchar" Mode="In" />
     <Parameter Name="hinh" Type="nvarchar(max)" Mode="In" />
   </Function>
+  <Function Name="DOIMATKHAU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="taikhoan" Type="varchar" Mode="In" />
+    <Parameter Name="matkhau" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="SUASP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="masp" Type="nvarchar" Mode="In" />
     <Parameter Name="Tensp" Type="nvarchar" Mode="In" />

@@ -293,6 +293,23 @@ public partial class ql_raumaEntities2 : DbContext
         return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("ThemNV", idnvParameter, hotenParameter, ngaysinhParameter, gioitinhParameter, chucdanhParameter, loainvParameter, sdtParameter, taikhoanParameter, matkhauParameter, hinhParameter, emailParameter);
     }
 
+
+    public virtual int DOIMATKHAU(string taikhoan, string matkhau)
+    {
+
+        var taikhoanParameter = taikhoan != null ?
+            new ObjectParameter("taikhoan", taikhoan) :
+            new ObjectParameter("taikhoan", typeof(string));
+
+
+        var matkhauParameter = matkhau != null ?
+            new ObjectParameter("matkhau", matkhau) :
+            new ObjectParameter("matkhau", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("DOIMATKHAU", taikhoanParameter, matkhauParameter);
+    }
+
 }
 
 }

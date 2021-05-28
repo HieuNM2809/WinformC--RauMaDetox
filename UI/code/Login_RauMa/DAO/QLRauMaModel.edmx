@@ -165,6 +165,10 @@
           <Parameter Name="Email" Type="varchar" Mode="In" />
           <Parameter Name="hinh" Type="nvarchar(max)" Mode="In" />
         </Function>
+        <Function Name="DOIMATKHAU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="taikhoan" Type="varchar" Mode="In" />
+          <Parameter Name="matkhau" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="SUASP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="masp" Type="nvarchar" Mode="In" />
           <Parameter Name="Tensp" Type="nvarchar" Mode="In" />
@@ -486,6 +490,10 @@
             <Parameter Name="hinh" Mode="In" Type="String" />
             <Parameter Name="Email" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="DOIMATKHAU">
+            <Parameter Name="taikhoan" Mode="In" Type="String" />
+            <Parameter Name="matkhau" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -582,6 +590,7 @@
           <FunctionImportMapping FunctionImportName="XOASP" FunctionName="ql_raumaModel.Store.XOASP" />
           <FunctionImportMapping FunctionImportName="CapNhatNV" FunctionName="ql_raumaModel.Store.CapNhatNV" />
           <FunctionImportMapping FunctionImportName="ThemNV" FunctionName="ql_raumaModel.Store.ThemNV" />
+          <FunctionImportMapping FunctionImportName="DOIMATKHAU" FunctionName="ql_raumaModel.Store.DOIMATKHAU" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

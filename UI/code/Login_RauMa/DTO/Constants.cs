@@ -31,8 +31,13 @@ namespace DTO
         public static string IDNV_EXIST = "IDNV đã tồn tại!";
 
         public static string ACCOUNT_EXIST = "Tài khoản đã tồn tại!";
+        public static string ACCOUNT_NOT_EXIST = "Tài khoản không tồn tại!";
         public static string ACCOUT_SUCESS = "Đăng kí thành công!";
         public static string ACCOUT_FAIL = "Đăng kí thât bại";
+
+        public static string PASSWORD_SUCESS = "Đổi mật khẩu thành công!";
+        public static string PASSWORD_FAIL = "Đổi mật khẩu thất bại!";
+        public static string PASSWORD_INCORRECT = "Mật khẩu không đúng!";
   
         #endregion
     }

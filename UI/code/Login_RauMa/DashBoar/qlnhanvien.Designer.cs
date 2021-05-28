@@ -33,7 +33,6 @@ namespace DashBoar
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngKíTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quyềnTảiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLíNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_show = new System.Windows.Forms.Panel();
@@ -60,8 +59,7 @@ namespace DashBoar
             // 
             this.tàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.đăngKíTàiKhoảnToolStripMenuItem,
-            this.đổiMậtKhẩuToolStripMenuItem,
-            this.quyềnTảiKhoảnToolStripMenuItem});
+            this.đổiMậtKhẩuToolStripMenuItem});
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
             this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(121, 32);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài Khoản";
@@ -79,13 +77,6 @@ namespace DashBoar
             this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(282, 36);
             this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
             this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
-            // 
-            // quyềnTảiKhoảnToolStripMenuItem
-            // 
-            this.quyềnTảiKhoảnToolStripMenuItem.Name = "quyềnTảiKhoảnToolStripMenuItem";
-            this.quyềnTảiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(282, 36);
-            this.quyềnTảiKhoảnToolStripMenuItem.Text = "Quyền Tải Khoản";
-            this.quyềnTảiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.quyềnTảiKhoảnToolStripMenuItem_Click);
             // 
             // quảnLíNhânViênToolStripMenuItem
             // 
@@ -137,7 +128,6 @@ namespace DashBoar
         private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLíNhânViênToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinNhânViênToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quyềnTảiKhoảnToolStripMenuItem;
         private System.Windows.Forms.Panel panel_show;
     }
 }

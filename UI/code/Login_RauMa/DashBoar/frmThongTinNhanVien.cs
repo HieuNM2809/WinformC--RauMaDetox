@@ -16,9 +16,7 @@ namespace DashBoar
         public frmThongTinNhanVien()
         {
             InitializeComponent();
-            // Đổ dữ liệu vào combobox
             cbbLoaiNhanVien.SelectedIndex = 0;
-
         }
 
         private void frmThongTinNhanVien_Load(object sender, EventArgs e)
@@ -27,14 +25,10 @@ namespace DashBoar
             clChucDanh.DisplayMember = "LoaiQuyen";
             clChucDanh.ValueMember = "IDQuyen";
 
-
-
             cbbChucDanh.DataSource = _phanQuyenBUS.LayDSPhanQuyen();
             cbbChucDanh.DisplayMember = "LoaiQuyen";
             cbbChucDanh.ValueMember = "IDQuyen";
-            //LayHinh();
-
-
+            
             dgvThongTinNhanVien.DataSource = _nhanvienBUS.LayDSNhanVien();
 
         }
@@ -98,7 +92,6 @@ namespace DashBoar
 
         private void btnSua_Click(object sender, EventArgs e)
         {   
-
             NhanVienDTO nv = new NhanVienDTO();
             nv.IDNV = txtID.Text;
             nv.HoTen = txtHoTen.Text;
@@ -138,10 +131,12 @@ namespace DashBoar
                     dgvThongTinNhanVien.Rows[e.RowIndex].Cells[10].Value.ToString());
 
                 picNhanVien.Image = Image.FromFile(path);
+            picNhanVien.Enabled = false;
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
+            picNhanVien.Enabled = true;
             int i = 1;
             if (_nhanvienBUS.MAXID() == null) txtID.Text = i+"";
 
@@ -203,7 +198,7 @@ namespace DashBoar
         {
             if(radHoTen.Checked == true )
             {
-               dgvThongTinNhanVien.DataSource = _nhanvienBUS.TimKiemIDNV(txtTimKiem.Text);
+               dgvThongTinNhanVien.DataSource = _nhanvienBUS.TimKiemHoTenNV(txtTimKiem.Text);
                 return;
             }
             if(radID.Checked == true )

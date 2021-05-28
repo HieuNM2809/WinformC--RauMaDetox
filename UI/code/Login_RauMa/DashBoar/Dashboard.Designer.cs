@@ -80,7 +80,7 @@
             this.btnQLTaiKhoan.Name = "btnQLTaiKhoan";
             this.btnQLTaiKhoan.Size = new System.Drawing.Size(390, 75);
             this.btnQLTaiKhoan.TabIndex = 0;
-            this.btnQLTaiKhoan.Text = "     Tài Khoản";
+            this.btnQLTaiKhoan.Text = "     Nhân Viên";
             this.btnQLTaiKhoan.UseVisualStyleBackColor = false;
             this.btnQLTaiKhoan.Click += new System.EventHandler(this.btnQLTaiKhoan_Click);
             this.btnQLTaiKhoan.MouseEnter += new System.EventHandler(this.btnQLTaiKhoan_MouseEnter);

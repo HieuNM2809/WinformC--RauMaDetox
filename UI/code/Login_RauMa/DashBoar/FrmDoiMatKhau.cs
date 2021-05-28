@@ -41,7 +41,7 @@ namespace DashBoar
             };
             if (txtTenDangNhap.Text == "" || txtMatKhauCu.Text == "" || txtMatKhauMoi.Text == "" || txtNhapLaiMKM.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
+                MessageBox.Show(Constants.ERR_REQUIRED, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
@@ -52,21 +52,21 @@ namespace DashBoar
                     {
                         if (txtMatKhauMoi.Text != txtNhapLaiMKM.Text)
                         {
-                            MessageBox.Show("Mật khẩu không trùng khớp", "Thông báo", MessageBoxButtons.OK);
+                            MessageBox.Show(Constants.PASSWORD_DIF, Constants.MESSAGE_TITLE, MessageBoxButtons.OK);
                         }
                         else
                         {
                             if (_DoiMatKhau.DoiMatKhau(nv))
                             {
-                                MessageBox.Show("Đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show(Constants.PASSWORD_SUCESS, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 return;
                             }
-                            else MessageBox.Show("Đổi mật khẩu thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else MessageBox.Show(Constants.PASSWORD_FAIL, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }    
-                    else MessageBox.Show("Mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else MessageBox.Show(Constants.PASSWORD_INCORRECT, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else MessageBox.Show("Tên truy cập không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else MessageBox.Show(Constants.ACCOUNT_NOT_EXIST, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

@@ -47,25 +47,6 @@ namespace DAO
         {
             try
             {
-                //int temp = qlrauma.THEMNV(nv.IDNV, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.ChucDanh, nv.LoaiNV, nv.SDT, nv.TaiKhoan, nv.MatKhau, nv.Email);
-
-                //NhanVien nhanVien = new NhanVien();
-                //nhanVien.IDNV = nv.IDNV;
-                //nhanVien.HoTen = nv.HoTen;
-                //nhanVien.NgaySinh = nv.NgaySinh;
-                //nhanVien.GioiTinh = nv.GioiTinh;
-                //nhanVien.ChucDanh = nv.ChucDanh;
-                //nhanVien.LoaiNV = nv.LoaiNV;
-                //nhanVien.TaiKhoan = nv.TaiKhoan;
-                //nhanVien.MatKhau = nv.MatKhau;
-                //nhanVien.SDT = nv.SDT;
-                //nhanVien.Email = nv.Email;
-                //nhanVien.Hinh = nv.Hinh;
-                //nhanVien.TrangThai = 1;
-
-
-                //NhanVien nhanvienEF = qlrauma.NhanViens.Add(nhanVien);
-                //qlrauma.SaveChanges();
                 int temp = qlrauma.ThemNV(nv.IDNV, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.ChucDanh, nv.LoaiNV, nv.SDT,
                             nv.TaiKhoan, nv.MatKhau, nv.Hinh, nv.Email);
                 qlrauma.SaveChanges();
@@ -114,8 +95,7 @@ namespace DAO
         {
             try
             {
-                NhanVien nhanVien = qlrauma.NhanViens.SingleOrDefault(u => u.TaiKhoan  == nv.TaiKhoan);
-                nhanVien.MatKhau = nhanVien.MatKhau;
+                qlrauma.DOIMATKHAU(nv.TaiKhoan, nv.MatKhau);
                 qlrauma.SaveChanges();
 
                 return true;

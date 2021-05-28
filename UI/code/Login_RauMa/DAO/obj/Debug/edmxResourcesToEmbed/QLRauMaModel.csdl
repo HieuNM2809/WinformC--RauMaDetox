@@ -244,5 +244,9 @@
       <Parameter Name="hinh" Mode="In" Type="String" />
       <Parameter Name="Email" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="DOIMATKHAU">
+      <Parameter Name="taikhoan" Mode="In" Type="String" />
+      <Parameter Name="matkhau" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
 </Schema>

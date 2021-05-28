@@ -118,112 +118,112 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbNhapLaiMK.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lbNhapLaiMK.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.8pt, style=Bold</value>
   </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 544</value>
+  <data name="lbNhapLaiMK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 278</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="lbNhapLaiMK.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 26</value>
+  <data name="lbNhapLaiMK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 26</value>
   </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbNhapLaiMK.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Gõ lại mật khẩu</value>
+  <data name="lbNhapLaiMK.Text" xml:space="preserve">
+    <value>Nhập lại mật khẩu</value>
   </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
+  <data name="&gt;&gt;lbNhapLaiMK.Name" xml:space="preserve">
+    <value>lbNhapLaiMK</value>
   </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbNhapLaiMK.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;lbNhapLaiMK.Parent" xml:space="preserve">
+    <value>pnThongTinDMK</value>
   </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>11</value>
+  <data name="&gt;&gt;lbNhapLaiMK.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbMKM.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lbMKM.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.8pt, style=Bold</value>
   </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 465</value>
+  <data name="lbMKM.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 199</value>
   </data>
-  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="lbMKM.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbMKM.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 26</value>
   </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbMKM.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
+  <data name="lbMKM.Text" xml:space="preserve">
     <value>Mật khẩu mới</value>
   </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
+  <data name="&gt;&gt;lbMKM.Name" xml:space="preserve">
+    <value>lbMKM</value>
   </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbMKM.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;lbMKM.Parent" xml:space="preserve">
+    <value>pnThongTinDMK</value>
   </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <data name="&gt;&gt;lbMKM.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbMKC.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lbMKC.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.8pt, style=Bold</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 398</value>
+  <data name="lbMKC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 132</value>
   </data>
-  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="lbMKC.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbMKC.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 26</value>
   </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbMKC.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
+  <data name="lbMKC.Text" xml:space="preserve">
     <value>Mật khẩu cũ</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
+  <data name="&gt;&gt;lbMKC.Name" xml:space="preserve">
+    <value>lbMKC</value>
   </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbMKC.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;lbMKC.Parent" xml:space="preserve">
+    <value>pnThongTinDMK</value>
   </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>15</value>
+  <data name="&gt;&gt;lbMKC.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="txtMatKhauCu.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
   <data name="txtMatKhauCu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>218, 396</value>
+    <value>201, 130</value>
   </data>
   <data name="txtMatKhauCu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -244,49 +244,49 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txtMatKhauCu.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>pnThongTinDMK</value>
   </data>
   <data name="&gt;&gt;txtMatKhauCu.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>3</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbTenTruyCap.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lbTenTruyCap.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.8pt, style=Bold</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 322</value>
+  <data name="lbTenTruyCap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 56</value>
   </data>
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="lbTenTruyCap.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbTenTruyCap.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 26</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbTenTruyCap.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="lbTenTruyCap.Text" xml:space="preserve">
     <value>Tên truy cập</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="&gt;&gt;lbTenTruyCap.Name" xml:space="preserve">
+    <value>lbTenTruyCap</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbTenTruyCap.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;lbTenTruyCap.Parent" xml:space="preserve">
+    <value>pnThongTinDMK</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>12</value>
+  <data name="&gt;&gt;lbTenTruyCap.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="txtMatKhauMoi.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
   <data name="txtMatKhauMoi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>218, 464</value>
+    <value>201, 198</value>
   </data>
   <data name="txtMatKhauMoi.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -307,43 +307,16 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txtMatKhauMoi.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>pnThongTinDMK</value>
   </data>
   <data name="&gt;&gt;txtMatKhauMoi.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="txtTenDangNhap.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
-  </data>
-  <data name="txtTenDangNhap.Location" type="System.Drawing.Point, System.Drawing">
-    <value>218, 319</value>
-  </data>
-  <data name="txtTenDangNhap.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
-  </data>
-  <data name="txtTenDangNhap.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 24</value>
-  </data>
-  <data name="txtTenDangNhap.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtTenDangNhap.Name" xml:space="preserve">
-    <value>txtTenDangNhap</value>
-  </data>
-  <data name="&gt;&gt;txtTenDangNhap.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtTenDangNhap.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtTenDangNhap.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
   <data name="txtNhapLaiMKM.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
   <data name="txtNhapLaiMKM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>219, 541</value>
+    <value>202, 275</value>
   </data>
   <data name="txtNhapLaiMKM.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -364,37 +337,13 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txtNhapLaiMKM.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>pnThongTinDMK</value>
   </data>
   <data name="&gt;&gt;txtNhapLaiMKM.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>218, 348</value>
-  </data>
-  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 4</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>13</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>218, 426</value>
+    <value>201, 160</value>
   </data>
   <data name="panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -412,13 +361,13 @@
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>pnThongTinDMK</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>10</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>218, 490</value>
+    <value>201, 224</value>
   </data>
   <data name="panel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -436,13 +385,13 @@
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>pnThongTinDMK</value>
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>218, 569</value>
+    <value>201, 303</value>
   </data>
   <data name="panel4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -460,16 +409,16 @@
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>pnThongTinDMK</value>
   </data>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="picLogo.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
   <data name="picLogo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 13</value>
+    <value>65, 13</value>
   </data>
   <data name="picLogo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -487,10 +436,10 @@
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;picLogo.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>pnTieuDe</value>
   </data>
   <data name="&gt;&gt;picLogo.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>0</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -499,7 +448,7 @@
     <value>Microsoft YaHei UI, 12pt, style=Bold</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 162</value>
+    <value>104, 142</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>207, 31</value>
@@ -517,10 +466,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>pnTieuDe</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="btnXacNhan.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -529,7 +478,7 @@
     <value>Microsoft YaHei UI, 10.2pt, style=Bold</value>
   </data>
   <data name="btnXacNhan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 602</value>
+    <value>9, 347</value>
   </data>
   <data name="btnXacNhan.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -550,10 +499,10 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnXacNhan.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>pnThongTinDMK</value>
   </data>
   <data name="&gt;&gt;btnXacNhan.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="btnThoat.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -562,7 +511,7 @@
     <value>Microsoft YaHei UI, 10.2pt, style=Bold</value>
   </data>
   <data name="btnThoat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 602</value>
+    <value>269, 347</value>
   </data>
   <data name="btnThoat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -583,9 +532,102 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnThoat.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>pnThongTinDMK</value>
   </data>
   <data name="&gt;&gt;btnThoat.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnTieuDe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 27</value>
+  </data>
+  <data name="pnTieuDe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>418, 188</value>
+  </data>
+  <data name="pnTieuDe.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;pnTieuDe.Name" xml:space="preserve">
+    <value>pnTieuDe</value>
+  </data>
+  <data name="&gt;&gt;pnTieuDe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnTieuDe.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnTieuDe.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtTenDangNhap.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="txtTenDangNhap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 53</value>
+  </data>
+  <data name="txtTenDangNhap.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="txtTenDangNhap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>295, 24</value>
+  </data>
+  <data name="txtTenDangNhap.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtTenDangNhap.Name" xml:space="preserve">
+    <value>txtTenDangNhap</value>
+  </data>
+  <data name="&gt;&gt;txtTenDangNhap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtTenDangNhap.Parent" xml:space="preserve">
+    <value>pnThongTinDMK</value>
+  </data>
+  <data name="&gt;&gt;txtTenDangNhap.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 82</value>
+  </data>
+  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>295, 4</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>pnThongTinDMK</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="pnThongTinDMK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 331</value>
+  </data>
+  <data name="pnThongTinDMK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>556, 485</value>
+  </data>
+  <data name="pnThongTinDMK.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;pnThongTinDMK.Name" xml:space="preserve">
+    <value>pnThongTinDMK</value>
+  </data>
+  <data name="&gt;&gt;pnThongTinDMK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnThongTinDMK.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnThongTinDMK.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -598,7 +640,7 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>575, 725</value>
+    <value>575, 828</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
