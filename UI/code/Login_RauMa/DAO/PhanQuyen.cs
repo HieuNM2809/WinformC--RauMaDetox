@@ -30,6 +30,7 @@ namespace DAO
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 
     public string IDquyen { get; set; }
@@ -44,6 +45,8 @@ namespace DAO
 
 }
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======

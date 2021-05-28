@@ -25,6 +25,7 @@ namespace DashBoar
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         private void frmChiTietHoaDon_load(object sender, EventArgs e)
         {
             cbbTenSP.DataSource = sp.lstViewSP();
@@ -45,6 +46,11 @@ namespace DashBoar
         private int count = 0;
         private void frmChiTietHoaDon_Load(object sender, EventArgs e)
         {
+=======
+        private int count = 0;
+        private void frmChiTietHoaDon_Load(object sender, EventArgs e)
+        {
+>>>>>>> Stashed changes
             cbbTenSP.DataSource = cthd.layDSSP();
             cbbTenSP.DisplayMember = "Tensp";
             cbbTenSP.ValueMember = "Masp";
@@ -52,6 +58,7 @@ namespace DashBoar
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
+<<<<<<< Updated upstream
         {
             if(String.IsNullOrEmpty(txtChietKhau.Text)||cbbTenSP.SelectedValue==null||numbrSoluong.Value<0)
             {
@@ -75,10 +82,28 @@ namespace DashBoar
             cbbTenSP.DisplayMember = "Tensp";
             cbbTenSP.ValueMember = "Masp";
 >>>>>>> Stashed changes
+=======
+        {
+            if(String.IsNullOrEmpty(txtChietKhau.Text)||cbbTenSP.SelectedValue==null||numbrSoluong.Value<0)
+            {
+                MessageBox.Show(Constants.ERR_REQUIRED_2, "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            { 
+                count++;
+                ListViewItem lst = new ListViewItem(count.ToString());
+                lst.SubItems.Add(cbbTenSP.SelectedValue.ToString());
+                
+                lst.SubItems.Add(cbbTenSP.Text);
+                lst.SubItems.Add(numbrSoluong.Value.ToString());
+                lst.SubItems.Add(cbbGiaTien.Text);
+                lst.SubItems.Add(txtChietKhau.Text);
+>>>>>>> Stashed changes
 
                 lstDanhSachSP.Items.Add(lst); 
             }    
         }
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 
 <<<<<<< Updated upstream
@@ -168,6 +193,9 @@ namespace DashBoar
                 lstDanhSachSP.Items.Add(lst); 
             }    
         }
+
+>>>>>>> Stashed changes
+=======
 
 >>>>>>> Stashed changes
         private void cbbTenSP_SelectedValueChanged(object sender, EventArgs e)

@@ -167,9 +167,12 @@
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
+<<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
         <Function Name="CapNhatNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
 =======
+=======
+>>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
 =======
 >>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
 =======
@@ -185,7 +188,10 @@
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
+<<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 >>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMa.edmx
+=======
+>>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
 =======
 >>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
 =======
@@ -205,6 +211,7 @@
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
+<<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
           <Parameter Name="hinh" Type="nvarchar(max)" Mode="In" />
         </Function>
@@ -213,6 +220,8 @@
           <Parameter Name="matkhau" Type="varchar" Mode="In" />
         </Function>
 =======
+=======
+>>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
 =======
 >>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
 =======
@@ -257,7 +266,10 @@
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
+<<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 >>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMa.edmx
+=======
+>>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
 =======
 >>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
 =======
@@ -280,11 +292,15 @@
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
+<<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
         <Function Name="ThemNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
 =======
         <Function Name="THEMNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
 >>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMa.edmx
+=======
+        <Function Name="THEMNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+>>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
 =======
         <Function Name="THEMNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
 >>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
@@ -306,10 +322,13 @@
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
+<<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
           <Parameter Name="hinh" Type="nvarchar(max)" Mode="In" />
 =======
 >>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMa.edmx
+=======
+>>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
 =======
 >>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
 =======
@@ -611,6 +630,7 @@
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
+<<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
           </FunctionImport>
           <FunctionImport Name="sp_dropdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
@@ -656,10 +676,20 @@
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
+=======
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+>>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
           <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(ql_raumaModel.sp_helpdiagramdefinition_Result)">
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
+<<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
+>>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
+=======
 >>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
           <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(ql_raumaModel.sp_helpdiagrams_Result)">
             <Parameter Name="diagramname" Mode="In" Type="String" />
@@ -672,6 +702,9 @@
           </FunctionImport>
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
+<<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
+>>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
+=======
 >>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
 =======
 >>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
