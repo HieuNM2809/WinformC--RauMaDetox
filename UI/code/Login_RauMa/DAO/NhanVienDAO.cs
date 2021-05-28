@@ -39,7 +39,7 @@ namespace DAO
         public bool KiemTraNhanVien(string idnv)
         {
             int temp = qlrauma.NhanViens.Count(v => v.IDNV == idnv);
-            qlrauma.SaveChanges();
+     
             return temp > 0;
 
         }
@@ -49,23 +49,22 @@ namespace DAO
             {
                 //int temp = qlrauma.THEMNV(nv.IDNV, nv.HoTen, nv.NgaySinh, nv.GioiTinh, nv.ChucDanh, nv.LoaiNV, nv.SDT, nv.TaiKhoan, nv.MatKhau, nv.Email);
 
-                NhanVien nhanVien = new NhanVien
-                {
-                    HoTen = nv.HoTen,
-                    NgaySinh = nv.NgaySinh,
-                    GioiTinh = nv.GioiTinh,
-                    ChucDanh = nv.ChucDanh,
-                    LoaiNV = nv.LoaiNV,
-                    TaiKhoan = nv.TaiKhoan,
-                    MatKhau = nv.MatKhau,
-                    SDT = nv.SDT,
-                    Email = nv.Email,
-                    Hinh = nv.Hinh,
-                    TrangThai = 1
-                };
+                NhanVien nhanVien = new NhanVien();
+                nhanVien.HoTen = nv.HoTen;
+                nhanVien.NgaySinh = nv.NgaySinh;
+                nhanVien.GioiTinh = nv.GioiTinh;
+                nhanVien.ChucDanh = nv.ChucDanh;
+                nhanVien.LoaiNV = nv.LoaiNV;
+                nhanVien.TaiKhoan = nv.TaiKhoan;
+                nhanVien.MatKhau = nv.MatKhau;
+                nhanVien.SDT = nv.SDT;
+                nhanVien.Email = nv.Email;
+                nhanVien.Hinh = nv.Hinh;
+                nhanVien.TrangThai = 1;
+                
 
-                nhanVien = qlrauma.NhanViens.Add(nhanVien);
-                qlrauma.SaveChanges();
+                 qlrauma.NhanViens.Add(nhanVien);
+                _ = qlrauma.SaveChanges();
 
                 return true;
             }
@@ -128,7 +127,7 @@ namespace DAO
         public bool KiemTraTaiKhoan(string tk)
         {
            int i = qlrauma.NhanViens.Count(v => v.TaiKhoan == tk);
-            qlrauma.SaveChanges();
+         
                 return i >0;
         }
 
@@ -145,13 +144,16 @@ namespace DAO
             try
             {
                 NhanVien nhanvien = new NhanVien();
-
                 nhanvien.IDNV = nv.IDNV;
+                nhanvien.HoTen = nv.HoTen;
+                nhanvien.SDT = nv.SDT;
+                nhanvien.NgaySinh = nv.NgaySinh;
                 nhanvien.TaiKhoan = nv.TaiKhoan;
                 nhanvien.MatKhau = nv.MatKhau;
                 nhanvien.TrangThai = 1;
 
-                NhanVien nhanvienEF = qlrauma.NhanViens.Add(nhanvien);
+                qlrauma.NhanViens.Add(nhanvien);
+                qlrauma.SaveChanges();
 
                 return qlrauma.SaveChanges() > 0;
             }

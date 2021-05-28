@@ -15,6 +15,7 @@ namespace DTO
         public static string ERR_MAIL_FORMAT = "Email chưa đúng định dạng!";
         public static string LOGIN_SUCESS = "Đăng nhập thành công!";
         public static string LOGIN_FAIL = "Đăng nhập thất bại!";
+        public static string PASSWORD_DIF = "Mật khẩu không trung khớp!";
 
         public static string MESSAGE_CONFIRM_DELETE = "Bạn có chắc muốn xóa";
 
@@ -27,8 +28,11 @@ namespace DTO
         public static string UPDATE_SUCESS = "Cập nhật thành công!";
         public static string UPDATE_FAIL = "Cập nhật thất bại!";
 
-        public static string MSSV_EXIST = "MSSV đã tồn tại!";
-        public static string ACCOUNT_EXIST = "tài khoản đã tồn tại!";
+        public static string IDNV_EXIST = "IDNV đã tồn tại!";
+
+        public static string ACCOUNT_EXIST = "Tài khoản đã tồn tại!";
+        public static string ACCOUT_SUCESS = "Đăng kí thành công!";
+        public static string ACCOUT_FAIL = "Đăng kí thât bại";
   
         #endregion
     }

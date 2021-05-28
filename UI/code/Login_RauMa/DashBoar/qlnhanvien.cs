@@ -36,7 +36,7 @@ namespace DashBoar
             panel_show.Show();
             panel_show.Controls.Clear();
             dk.TopLevel = false;
-            dk.Dock = DockStyle.None;
+            dk.Dock = DockStyle.Left;
             panel_show.Controls.Add(dk);
             dk.Show();
         }
@@ -62,8 +62,8 @@ namespace DashBoar
 
         private void QLNhanVien_Load(object sender, EventArgs e)
         {
-            frmThongTinNhanVien TTNV = new frmThongTinNhanVien();
-            frmload(TTNV);
+            FrmDangKiTaiKhoan DKTK = new FrmDangKiTaiKhoan();
+            frmload(DKTK);
         }
 
         private void quyềnTảiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)

@@ -61,6 +61,114 @@ public partial class ql_raumaEntities2 : DbContext
         return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("XOANV", idnvParameter);
     }
 
+
+    public virtual int SUASP(string masp, string tensp, string maloaisp, Nullable<decimal> giatien, string mota, string hinh)
+    {
+
+        var maspParameter = masp != null ?
+            new ObjectParameter("masp", masp) :
+            new ObjectParameter("masp", typeof(string));
+
+
+        var tenspParameter = tensp != null ?
+            new ObjectParameter("Tensp", tensp) :
+            new ObjectParameter("Tensp", typeof(string));
+
+
+        var maloaispParameter = maloaisp != null ?
+            new ObjectParameter("Maloaisp", maloaisp) :
+            new ObjectParameter("Maloaisp", typeof(string));
+
+
+        var giatienParameter = giatien.HasValue ?
+            new ObjectParameter("Giatien", giatien) :
+            new ObjectParameter("Giatien", typeof(decimal));
+
+
+        var motaParameter = mota != null ?
+            new ObjectParameter("Mota", mota) :
+            new ObjectParameter("Mota", typeof(string));
+
+
+        var hinhParameter = hinh != null ?
+            new ObjectParameter("Hinh", hinh) :
+            new ObjectParameter("Hinh", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SUASP", maspParameter, tenspParameter, maloaispParameter, giatienParameter, motaParameter, hinhParameter);
+    }
+
+
+    public virtual int THEMHD(string idhd, string idnv, Nullable<System.DateTime> ngaylap)
+    {
+
+        var idhdParameter = idhd != null ?
+            new ObjectParameter("idhd", idhd) :
+            new ObjectParameter("idhd", typeof(string));
+
+
+        var idnvParameter = idnv != null ?
+            new ObjectParameter("idnv", idnv) :
+            new ObjectParameter("idnv", typeof(string));
+
+
+        var ngaylapParameter = ngaylap.HasValue ?
+            new ObjectParameter("ngaylap", ngaylap) :
+            new ObjectParameter("ngaylap", typeof(System.DateTime));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("THEMHD", idhdParameter, idnvParameter, ngaylapParameter);
+    }
+
+
+    public virtual int THEMSP(string masp, string tensp, string maloaisp, Nullable<decimal> giatien, string mota, string hinh)
+    {
+
+        var maspParameter = masp != null ?
+            new ObjectParameter("masp", masp) :
+            new ObjectParameter("masp", typeof(string));
+
+
+        var tenspParameter = tensp != null ?
+            new ObjectParameter("Tensp", tensp) :
+            new ObjectParameter("Tensp", typeof(string));
+
+
+        var maloaispParameter = maloaisp != null ?
+            new ObjectParameter("Maloaisp", maloaisp) :
+            new ObjectParameter("Maloaisp", typeof(string));
+
+
+        var giatienParameter = giatien.HasValue ?
+            new ObjectParameter("Giatien", giatien) :
+            new ObjectParameter("Giatien", typeof(decimal));
+
+
+        var motaParameter = mota != null ?
+            new ObjectParameter("Mota", mota) :
+            new ObjectParameter("Mota", typeof(string));
+
+
+        var hinhParameter = hinh != null ?
+            new ObjectParameter("Hinh", hinh) :
+            new ObjectParameter("Hinh", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("THEMSP", maspParameter, tenspParameter, maloaispParameter, giatienParameter, motaParameter, hinhParameter);
+    }
+
+
+    public virtual int XOASP(string masp)
+    {
+
+        var maspParameter = masp != null ?
+            new ObjectParameter("masp", masp) :
+            new ObjectParameter("masp", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("XOASP", maspParameter);
+    }
+
 }
 
 }

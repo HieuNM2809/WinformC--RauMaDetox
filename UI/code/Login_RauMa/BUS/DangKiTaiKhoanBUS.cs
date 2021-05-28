@@ -36,5 +36,10 @@ namespace BUS
         {
             return _NhanVienDAO.CapNhatNV(nv);
         }
+
+        public string MAXID()
+        {
+            return _NhanVienDAO.MAXIDNV();
+        }
     }
 }

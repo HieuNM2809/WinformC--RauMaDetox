@@ -148,8 +148,32 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="SUASP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="masp" Type="nvarchar" Mode="In" />
+    <Parameter Name="Tensp" Type="nvarchar" Mode="In" />
+    <Parameter Name="Maloaisp" Type="nvarchar" Mode="In" />
+    <Parameter Name="Giatien" Type="money" Mode="In" />
+    <Parameter Name="Mota" Type="nvarchar" Mode="In" />
+    <Parameter Name="Hinh" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="THEMHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idhd" Type="nvarchar" Mode="In" />
+    <Parameter Name="idnv" Type="nvarchar" Mode="In" />
+    <Parameter Name="ngaylap" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="THEMSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="masp" Type="nvarchar" Mode="In" />
+    <Parameter Name="Tensp" Type="nvarchar" Mode="In" />
+    <Parameter Name="Maloaisp" Type="nvarchar" Mode="In" />
+    <Parameter Name="Giatien" Type="money" Mode="In" />
+    <Parameter Name="Mota" Type="nvarchar" Mode="In" />
+    <Parameter Name="Hinh" Type="nvarchar(max)" Mode="In" />
+  </Function>
   <Function Name="XOANV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="idnv" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="XOASP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="masp" Type="nvarchar" Mode="In" />
   </Function>
   <EntityContainer Name="ql_raumaModelStoreContainer">
     <EntitySet Name="CTHoaDon" EntityType="Self.CTHoaDon" Schema="dbo" store:Type="Tables" />

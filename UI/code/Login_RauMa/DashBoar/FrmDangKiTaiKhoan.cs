@@ -23,51 +23,51 @@ namespace DashBoar
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            NhanVienDTO nv = new NhanVienDTO
+            NhanVienDTO nv = new NhanVienDTO()
             {
-                IDNV = txtID.Text,
+                IDNV = (_DKTK.MAXID() + 1),
+                HoTen = txtHoTen.Text,
+                SDT = txtSDT.Text,
                 TaiKhoan = txtTenTruyCap.Text,
-                MatKhau = txtMatKhau.Text
+                MatKhau = txtMatKhau.Text.MaHoaMD5()
 
             };
-            if (txtID.Text == "" || txtMatKhau.Text == "" || txtTenTruyCap.Text == "" || txtID.Text == "")
+            if  ( string.IsNullOrEmpty(txtHoTen.Text) || string.IsNullOrEmpty(txtMatKhau.Text)|| string.IsNullOrEmpty(txtNhaplaiMatKhau.Text) 
+                || string.IsNullOrEmpty(txtSDT.Text) || string.IsNullOrEmpty(txtTenTruyCap.Text))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
+                MessageBox.Show(Constants.ERR_REQUIRED, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else
             {
-                if (_DKTK.KiemTraID(txtID.Text))
-                {
-                    MessageBox.Show("IDNV đã tồn tại", "Thông Báo");
-                }
-                else
-                {
                     if (_DKTK.KiemTraTK(txtTenTruyCap.Text) == false)
                     {
                         if (txtMatKhau.Text != txtNhaplaiMatKhau.Text)
                         {
-                            MessageBox.Show("Mật khẩu không trùng khớp", "Thông báo", MessageBoxButtons.OK);
+                            MessageBox.Show(Constants.PASSWORD_DIF, Constants.MESSAGE_TITLE, MessageBoxButtons.OK);
                         }
                         else
                         {
                             if (_DKTK.DangKiTK(nv))
                             {
-                                MessageBox.Show("Đăng kí thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show(Constants.ACCOUT_SUCESS, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 return;
                             }
-                            else MessageBox.Show("Đăng kí thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else MessageBox.Show(Constants.ACCOUT_FAIL, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
-                    else MessageBox.Show("Tên tài khoản đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                } 
-                    
+                    else MessageBox.Show(Constants.ACCOUNT_EXIST, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FrmDangKiTaiKhoan_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

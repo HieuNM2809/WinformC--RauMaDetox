@@ -55,7 +55,7 @@ namespace DashBoar
             {
                 if (_nhanvienBUS.KiemTraNhanVien(txtID.Text))
                 {
-                    MessageBox.Show(Constants.MSSV_EXIST, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(Constants.IDNV_EXIST, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 else
@@ -76,11 +76,10 @@ namespace DashBoar
                     nv.SDT = txtSDT.Text;
                     nv.TaiKhoan = txtTaiKhoan.Text;
                     nv.MatKhau = txtMatKhau.Text.MaHoaMD5();
-
                     nv.Email = txtEmail.Text;
                     nv.Hinh = string.Format("{0}.jpg", txtID.Text);
 
-                    SaveImage(picNhanVien.Image);
+                    //SaveImage(picNhanVien.Image);
                    
                     if (_nhanvienBUS.ThemNV(nv))
                     {   
@@ -164,7 +163,7 @@ namespace DashBoar
             cbbChucDanh.SelectedIndex = 0;
             cbbLoaiNhanVien.SelectedIndex = 0;
             picNhanVien.Image = null;
-            txtID.Text = (_nhanvienBUS.MAXID() + 1);
+            txtID.Text = (_nhanvienBUS.MAXID() + (int)1);
             frmThongTinNhanVien_Load(sender, e);
 
 
