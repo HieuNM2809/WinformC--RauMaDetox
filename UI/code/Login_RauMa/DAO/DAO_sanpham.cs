@@ -29,7 +29,7 @@ namespace DAO
             }).ToList();
             return lssanpham;
         }
-        
+
         public List<DTO_sanpham> lstViewSP()
         {
             List<DTO_sanpham> lssanpham = new List<DTO_sanpham>();
