@@ -40,7 +40,6 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_nhaplai = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -55,7 +54,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lbl_gia = new System.Windows.Forms.Label();
             this.lbl_loai = new System.Windows.Forms.Label();
-            this.ptb_anhtai = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rb_topping = new System.Windows.Forms.RadioButton();
             this.rb_nuoc = new System.Windows.Forms.RadioButton();
@@ -76,7 +74,6 @@
             this.lbl_duongdan = new System.Windows.Forms.Label();
             this.Thêm = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.ptb_anhto = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -93,14 +90,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btn_them = new System.Windows.Forms.Button();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tp_qlsp = new System.Windows.Forms.TabControl();
             this.tp_them = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_huy = new System.Windows.Forms.Button();
             this.tp_suaxoa = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dtgv_xoa = new System.Windows.Forms.DataGridView();
@@ -113,10 +108,6 @@
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_sua = new System.Windows.Forms.Button();
-            this.btn_xoa_nhaplai = new System.Windows.Forms.Button();
-            this.btn_xoa = new System.Windows.Forms.Button();
-            this.btn_xoa_huy = new System.Windows.Forms.Button();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.rdb_xoa_topping = new System.Windows.Forms.RadioButton();
@@ -124,7 +115,6 @@
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
-            this.ptb_anhrauma = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.label21 = new System.Windows.Forms.Label();
             this.tbx_xoa_mota = new System.Windows.Forms.RichTextBox();
@@ -151,11 +141,20 @@
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ptb_anhtai = new System.Windows.Forms.PictureBox();
+            this.btn_them = new System.Windows.Forms.Button();
+            this.btn_nhaplai = new System.Windows.Forms.Button();
+            this.btn_huy = new System.Windows.Forms.Button();
+            this.ptb_anhto = new System.Windows.Forms.PictureBox();
+            this.btn_sua = new System.Windows.Forms.Button();
+            this.btn_xoa_nhaplai = new System.Windows.Forms.Button();
+            this.btn_xoa = new System.Windows.Forms.Button();
+            this.btn_xoa_huy = new System.Windows.Forms.Button();
+            this.ptb_anhrauma = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhtai)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -164,7 +163,6 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.tp_view.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhto)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
@@ -186,10 +184,12 @@
             this.groupBox8.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhrauma)).BeginInit();
             this.tableLayoutPanel17.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhtai)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhrauma)).BeginInit();
             this.SuspendLayout();
             // 
             // admin_masp
@@ -275,25 +275,6 @@
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.Width = 125;
-            // 
-            // btn_nhaplai
-            // 
-            this.btn_nhaplai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_nhaplai.BackColor = System.Drawing.Color.White;
-            this.btn_nhaplai.FlatAppearance.BorderSize = 0;
-            this.btn_nhaplai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_nhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nhaplai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btn_nhaplai.Image = global::DashBoar.Properties.Resources.loop2;
-            this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_nhaplai.Location = new System.Drawing.Point(266, 3);
-            this.btn_nhaplai.Name = "btn_nhaplai";
-            this.btn_nhaplai.Size = new System.Drawing.Size(176, 74);
-            this.btn_nhaplai.TabIndex = 132;
-            this.btn_nhaplai.Text = "Nhập lại";
-            this.btn_nhaplai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_nhaplai.UseVisualStyleBackColor = false;
-            this.btn_nhaplai.Click += new System.EventHandler(this.btn_nhaplai_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -493,19 +474,6 @@
             this.lbl_loai.TabIndex = 151;
             this.lbl_loai.Text = "Loại";
             // 
-            // ptb_anhtai
-            // 
-            this.ptb_anhtai.BackColor = System.Drawing.Color.White;
-            this.ptb_anhtai.BackgroundImage = global::DashBoar.Properties.Resources.logoWin;
-            this.ptb_anhtai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ptb_anhtai.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ptb_anhtai.Location = new System.Drawing.Point(3, 2);
-            this.ptb_anhtai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ptb_anhtai.Name = "ptb_anhtai";
-            this.ptb_anhtai.Size = new System.Drawing.Size(223, 210);
-            this.ptb_anhtai.TabIndex = 134;
-            this.ptb_anhtai.TabStop = false;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.rb_topping);
@@ -553,6 +521,7 @@
             this.btn_thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_thoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_thoat.Image = global::DashBoar.Properties.Resources.exits1;
             this.btn_thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_thoat.Location = new System.Drawing.Point(1097, 274);
             this.btn_thoat.Name = "btn_thoat";
@@ -766,18 +735,6 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(1295, 100);
             this.tableLayoutPanel7.TabIndex = 132;
             // 
-            // ptb_anhto
-            // 
-            this.ptb_anhto.BackColor = System.Drawing.Color.White;
-            this.ptb_anhto.BackgroundImage = global::DashBoar.Properties.Resources.logoWin;
-            this.ptb_anhto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ptb_anhto.Location = new System.Drawing.Point(27, 74);
-            this.ptb_anhto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ptb_anhto.Name = "ptb_anhto";
-            this.ptb_anhto.Size = new System.Drawing.Size(267, 229);
-            this.ptb_anhto.TabIndex = 112;
-            this.ptb_anhto.TabStop = false;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -852,7 +809,7 @@
             this.btn_Themanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Themanh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.btn_Themanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Themanh.Location = new System.Drawing.Point(79, 332);
+            this.btn_Themanh.Location = new System.Drawing.Point(69, 353);
             this.btn_Themanh.Name = "btn_Themanh";
             this.btn_Themanh.Size = new System.Drawing.Size(147, 50);
             this.btn_Themanh.TabIndex = 123;
@@ -998,25 +955,6 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin chi tiết";
             // 
-            // btn_them
-            // 
-            this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_them.BackColor = System.Drawing.Color.White;
-            this.btn_them.FlatAppearance.BorderSize = 0;
-            this.btn_them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_them.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btn_them.Image = global::DashBoar.Properties.Resources.plus;
-            this.btn_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_them.Location = new System.Drawing.Point(3, 3);
-            this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(176, 74);
-            this.btn_them.TabIndex = 124;
-            this.btn_them.Text = "Thêm";
-            this.btn_them.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_them.UseVisualStyleBackColor = false;
-            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
-            // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.ColumnCount = 2;
@@ -1113,25 +1051,6 @@
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel12.Size = new System.Drawing.Size(728, 100);
             this.tableLayoutPanel12.TabIndex = 134;
-            // 
-            // btn_huy
-            // 
-            this.btn_huy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_huy.BackColor = System.Drawing.Color.White;
-            this.btn_huy.FlatAppearance.BorderSize = 0;
-            this.btn_huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_huy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btn_huy.Image = global::DashBoar.Properties.Resources.exits;
-            this.btn_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_huy.Location = new System.Drawing.Point(514, 3);
-            this.btn_huy.Name = "btn_huy";
-            this.btn_huy.Size = new System.Drawing.Size(176, 74);
-            this.btn_huy.TabIndex = 133;
-            this.btn_huy.Text = "Hủy";
-            this.btn_huy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_huy.UseVisualStyleBackColor = false;
-            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 
             // tp_suaxoa
             // 
@@ -1278,82 +1197,6 @@
             this.tableLayoutPanel20.Size = new System.Drawing.Size(866, 88);
             this.tableLayoutPanel20.TabIndex = 167;
             // 
-            // btn_sua
-            // 
-            this.btn_sua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_sua.BackColor = System.Drawing.Color.White;
-            this.btn_sua.FlatAppearance.BorderSize = 0;
-            this.btn_sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btn_sua.Image = global::DashBoar.Properties.Resources.chínhua;
-            this.btn_sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sua.Location = new System.Drawing.Point(47, 3);
-            this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(131, 70);
-            this.btn_sua.TabIndex = 164;
-            this.btn_sua.Text = "Sửa";
-            this.btn_sua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_sua.UseVisualStyleBackColor = false;
-            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
-            // 
-            // btn_xoa_nhaplai
-            // 
-            this.btn_xoa_nhaplai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_xoa_nhaplai.BackColor = System.Drawing.Color.White;
-            this.btn_xoa_nhaplai.FlatAppearance.BorderSize = 0;
-            this.btn_xoa_nhaplai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_xoa_nhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xoa_nhaplai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btn_xoa_nhaplai.Image = global::DashBoar.Properties.Resources.loop2;
-            this.btn_xoa_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_xoa_nhaplai.Location = new System.Drawing.Point(478, 3);
-            this.btn_xoa_nhaplai.Name = "btn_xoa_nhaplai";
-            this.btn_xoa_nhaplai.Size = new System.Drawing.Size(180, 70);
-            this.btn_xoa_nhaplai.TabIndex = 165;
-            this.btn_xoa_nhaplai.Text = "Nhập lại";
-            this.btn_xoa_nhaplai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_xoa_nhaplai.UseVisualStyleBackColor = false;
-            this.btn_xoa_nhaplai.Click += new System.EventHandler(this.btn_xoa_nhaplai_Click);
-            // 
-            // btn_xoa
-            // 
-            this.btn_xoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_xoa.BackColor = System.Drawing.Color.White;
-            this.btn_xoa.FlatAppearance.BorderSize = 0;
-            this.btn_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btn_xoa.Image = global::DashBoar.Properties.Resources.delete;
-            this.btn_xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_xoa.Location = new System.Drawing.Point(245, 3);
-            this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.Size = new System.Drawing.Size(171, 70);
-            this.btn_xoa.TabIndex = 163;
-            this.btn_xoa.Text = "Xóa";
-            this.btn_xoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_xoa.UseVisualStyleBackColor = false;
-            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
-            // 
-            // btn_xoa_huy
-            // 
-            this.btn_xoa_huy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_xoa_huy.BackColor = System.Drawing.Color.White;
-            this.btn_xoa_huy.FlatAppearance.BorderSize = 0;
-            this.btn_xoa_huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_xoa_huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xoa_huy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btn_xoa_huy.Image = global::DashBoar.Properties.Resources.exits;
-            this.btn_xoa_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_xoa_huy.Location = new System.Drawing.Point(702, 3);
-            this.btn_xoa_huy.Name = "btn_xoa_huy";
-            this.btn_xoa_huy.Size = new System.Drawing.Size(131, 70);
-            this.btn_xoa_huy.TabIndex = 166;
-            this.btn_xoa_huy.Text = "Hủy";
-            this.btn_xoa_huy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_xoa_huy.UseVisualStyleBackColor = false;
-            this.btn_xoa_huy.Click += new System.EventHandler(this.btn_xoa_huy_Click);
-            // 
             // tableLayoutPanel14
             // 
             this.tableLayoutPanel14.ColumnCount = 2;
@@ -1455,19 +1298,6 @@
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.210526F));
             this.tableLayoutPanel18.Size = new System.Drawing.Size(237, 228);
             this.tableLayoutPanel18.TabIndex = 165;
-            // 
-            // ptb_anhrauma
-            // 
-            this.ptb_anhrauma.BackColor = System.Drawing.Color.White;
-            this.ptb_anhrauma.BackgroundImage = global::DashBoar.Properties.Resources.logoWin;
-            this.ptb_anhrauma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ptb_anhrauma.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ptb_anhrauma.Location = new System.Drawing.Point(21, 2);
-            this.ptb_anhrauma.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ptb_anhrauma.Name = "ptb_anhrauma";
-            this.ptb_anhrauma.Size = new System.Drawing.Size(201, 203);
-            this.ptb_anhrauma.TabIndex = 134;
-            this.ptb_anhrauma.TabStop = false;
             // 
             // tableLayoutPanel17
             // 
@@ -1731,6 +1561,177 @@
             this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
             this.dataGridViewTextBoxColumn23.Width = 125;
             // 
+            // ptb_anhtai
+            // 
+            this.ptb_anhtai.BackColor = System.Drawing.Color.White;
+            this.ptb_anhtai.BackgroundImage = global::DashBoar.Properties.Resources.logoWin;
+            this.ptb_anhtai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptb_anhtai.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ptb_anhtai.Location = new System.Drawing.Point(3, 2);
+            this.ptb_anhtai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ptb_anhtai.Name = "ptb_anhtai";
+            this.ptb_anhtai.Size = new System.Drawing.Size(223, 230);
+            this.ptb_anhtai.TabIndex = 134;
+            this.ptb_anhtai.TabStop = false;
+            // 
+            // btn_them
+            // 
+            this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_them.BackColor = System.Drawing.Color.White;
+            this.btn_them.FlatAppearance.BorderSize = 0;
+            this.btn_them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_them.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_them.Image = global::DashBoar.Properties.Resources.plus;
+            this.btn_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_them.Location = new System.Drawing.Point(3, 3);
+            this.btn_them.Name = "btn_them";
+            this.btn_them.Size = new System.Drawing.Size(176, 74);
+            this.btn_them.TabIndex = 124;
+            this.btn_them.Text = "Thêm";
+            this.btn_them.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_them.UseVisualStyleBackColor = false;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
+            // 
+            // btn_nhaplai
+            // 
+            this.btn_nhaplai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_nhaplai.BackColor = System.Drawing.Color.White;
+            this.btn_nhaplai.FlatAppearance.BorderSize = 0;
+            this.btn_nhaplai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_nhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nhaplai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_nhaplai.Image = global::DashBoar.Properties.Resources.loop2;
+            this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_nhaplai.Location = new System.Drawing.Point(266, 3);
+            this.btn_nhaplai.Name = "btn_nhaplai";
+            this.btn_nhaplai.Size = new System.Drawing.Size(176, 74);
+            this.btn_nhaplai.TabIndex = 132;
+            this.btn_nhaplai.Text = "Nhập lại";
+            this.btn_nhaplai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_nhaplai.UseVisualStyleBackColor = false;
+            this.btn_nhaplai.Click += new System.EventHandler(this.btn_nhaplai_Click);
+            // 
+            // btn_huy
+            // 
+            this.btn_huy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_huy.BackColor = System.Drawing.Color.White;
+            this.btn_huy.FlatAppearance.BorderSize = 0;
+            this.btn_huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_huy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_huy.Image = global::DashBoar.Properties.Resources.exits;
+            this.btn_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_huy.Location = new System.Drawing.Point(514, 3);
+            this.btn_huy.Name = "btn_huy";
+            this.btn_huy.Size = new System.Drawing.Size(176, 74);
+            this.btn_huy.TabIndex = 133;
+            this.btn_huy.Text = "Hủy";
+            this.btn_huy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_huy.UseVisualStyleBackColor = false;
+            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
+            // 
+            // ptb_anhto
+            // 
+            this.ptb_anhto.BackColor = System.Drawing.Color.White;
+            this.ptb_anhto.BackgroundImage = global::DashBoar.Properties.Resources.logoWin;
+            this.ptb_anhto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptb_anhto.Location = new System.Drawing.Point(49, 46);
+            this.ptb_anhto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ptb_anhto.Name = "ptb_anhto";
+            this.ptb_anhto.Size = new System.Drawing.Size(222, 279);
+            this.ptb_anhto.TabIndex = 112;
+            this.ptb_anhto.TabStop = false;
+            // 
+            // btn_sua
+            // 
+            this.btn_sua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_sua.BackColor = System.Drawing.Color.White;
+            this.btn_sua.FlatAppearance.BorderSize = 0;
+            this.btn_sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_sua.Image = global::DashBoar.Properties.Resources.chínhua;
+            this.btn_sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_sua.Location = new System.Drawing.Point(47, 3);
+            this.btn_sua.Name = "btn_sua";
+            this.btn_sua.Size = new System.Drawing.Size(131, 70);
+            this.btn_sua.TabIndex = 164;
+            this.btn_sua.Text = "Sửa";
+            this.btn_sua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_sua.UseVisualStyleBackColor = false;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
+            // 
+            // btn_xoa_nhaplai
+            // 
+            this.btn_xoa_nhaplai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_xoa_nhaplai.BackColor = System.Drawing.Color.White;
+            this.btn_xoa_nhaplai.FlatAppearance.BorderSize = 0;
+            this.btn_xoa_nhaplai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_xoa_nhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoa_nhaplai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_xoa_nhaplai.Image = global::DashBoar.Properties.Resources.loop2;
+            this.btn_xoa_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_xoa_nhaplai.Location = new System.Drawing.Point(478, 3);
+            this.btn_xoa_nhaplai.Name = "btn_xoa_nhaplai";
+            this.btn_xoa_nhaplai.Size = new System.Drawing.Size(180, 70);
+            this.btn_xoa_nhaplai.TabIndex = 165;
+            this.btn_xoa_nhaplai.Text = "Nhập lại";
+            this.btn_xoa_nhaplai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_xoa_nhaplai.UseVisualStyleBackColor = false;
+            this.btn_xoa_nhaplai.Click += new System.EventHandler(this.btn_xoa_nhaplai_Click);
+            // 
+            // btn_xoa
+            // 
+            this.btn_xoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_xoa.BackColor = System.Drawing.Color.White;
+            this.btn_xoa.FlatAppearance.BorderSize = 0;
+            this.btn_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_xoa.Image = global::DashBoar.Properties.Resources.delete;
+            this.btn_xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_xoa.Location = new System.Drawing.Point(245, 3);
+            this.btn_xoa.Name = "btn_xoa";
+            this.btn_xoa.Size = new System.Drawing.Size(171, 70);
+            this.btn_xoa.TabIndex = 163;
+            this.btn_xoa.Text = "Xóa";
+            this.btn_xoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_xoa.UseVisualStyleBackColor = false;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
+            // 
+            // btn_xoa_huy
+            // 
+            this.btn_xoa_huy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_xoa_huy.BackColor = System.Drawing.Color.White;
+            this.btn_xoa_huy.FlatAppearance.BorderSize = 0;
+            this.btn_xoa_huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_xoa_huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoa_huy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_xoa_huy.Image = global::DashBoar.Properties.Resources.exits;
+            this.btn_xoa_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_xoa_huy.Location = new System.Drawing.Point(702, 3);
+            this.btn_xoa_huy.Name = "btn_xoa_huy";
+            this.btn_xoa_huy.Size = new System.Drawing.Size(131, 70);
+            this.btn_xoa_huy.TabIndex = 166;
+            this.btn_xoa_huy.Text = "Hủy";
+            this.btn_xoa_huy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_xoa_huy.UseVisualStyleBackColor = false;
+            this.btn_xoa_huy.Click += new System.EventHandler(this.btn_xoa_huy_Click);
+            // 
+            // ptb_anhrauma
+            // 
+            this.ptb_anhrauma.BackColor = System.Drawing.Color.White;
+            this.ptb_anhrauma.BackgroundImage = global::DashBoar.Properties.Resources.logoWin;
+            this.ptb_anhrauma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptb_anhrauma.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptb_anhrauma.Location = new System.Drawing.Point(21, 2);
+            this.ptb_anhrauma.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ptb_anhrauma.Name = "ptb_anhrauma";
+            this.ptb_anhrauma.Size = new System.Drawing.Size(201, 203);
+            this.ptb_anhrauma.TabIndex = 134;
+            this.ptb_anhrauma.TabStop = false;
+            // 
             // QL_SanPham
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1748,7 +1749,6 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhtai)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
@@ -1760,7 +1760,6 @@
             this.tp_view.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhto)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
@@ -1786,13 +1785,15 @@
             this.groupBox8.ResumeLayout(false);
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel18.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhrauma)).EndInit();
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel17.PerformLayout();
             this.tableLayoutPanel16.ResumeLayout(false);
             this.tableLayoutPanel16.PerformLayout();
             this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhtai)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhrauma)).EndInit();
             this.ResumeLayout(false);
 
         }

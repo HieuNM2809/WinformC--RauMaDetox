@@ -151,7 +151,13 @@ namespace DashBoar
         private void btnCaiDat_Click(object sender, EventArgs e)
         {
             frm_Setting set = new frm_Setting();
-            loadform(set);
+            set.ShowDialog();
+        }
+
+        private void frmDashboar_Load(object sender, EventArgs e)
+        {
+         
+           
         }
     }
 }

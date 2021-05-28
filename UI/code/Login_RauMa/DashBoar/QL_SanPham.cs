@@ -14,18 +14,18 @@ using DTO;
 
 namespace DashBoar
 {
-    
+
     public partial class QL_SanPham : Form
     {
         DTO_sanpham sanpham = new DTO_sanpham();
         DTO_loaisp loaisanpham = new DTO_loaisp();
-        private BUS_sanpham _sanpham= new BUS_sanpham();
+        private BUS_sanpham _sanpham = new BUS_sanpham();
         private BUS_loaisp _dsloai = new BUS_loaisp();
         public QL_SanPham()
         {
             InitializeComponent();
-            cbb_loai.DataSource= _dsloai.LayDSloaisp();
-            cbb_loai.DisplayMember= "MaLoaiSp";
+            cbb_loai.DataSource = _dsloai.LayDSloaisp();
+            cbb_loai.DisplayMember = "MaLoaiSp";
             cbb_loai.ValueMember = "MaLoaiSp";
             cbb_xoa_loai.DataSource = _dsloai.LayDSloaisp();
             cbb_xoa_loai.DisplayMember = "MaLoaiSp";
@@ -56,15 +56,15 @@ namespace DashBoar
             DTGV_xem.DataSource = _sanpham.LayDSsanpham(a);
             dtgv_xoa.DataSource = _sanpham.LayDSsanpham(a);
         }
-       private void QL_SanPham_Load_1(object sender, EventArgs e)
+        private void QL_SanPham_Load_1(object sender, EventArgs e)
         {
             string a = "001";
             QL_SanPham_Load(sender, e, a);
-            
-           
+
+
         }
-        
-   //////////////////////////////////////////////////////// các button thoát//////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////// các button thoát//////////////////////////////////////////////////////////
         private void btn_thoat_Click_1(object sender, EventArgs e)
         {
             this.Close();
@@ -87,15 +87,18 @@ namespace DashBoar
         /////////////////////////////////////////////////////////xử lý tap xem////////////////////////////////////////////////////
         private void DTGV_xem_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex != -1)
+            { 
             DataGridViewRow row = this.DTGV_xem.Rows[e.RowIndex];
-            if(e.RowIndex>=0)
-            {
+            if (e.RowIndex >= 0)
+                {
                 lbl_mamon.Text = row.Cells[0].Value.ToString();
                 lbl_tenmon.Text = row.Cells[1].Value.ToString();
                 lbl_loai.Text = row.Cells[2].Value.ToString();
                 lbl_gia.Text = row.Cells[3].Value.ToString();
                 lbl_mota.Text = row.Cells[4].Value.ToString();
-                ptb_anhtai.BackgroundImage= (ByteToImg(row.Cells[5].Value.ToString()));
+                ptb_anhtai.BackgroundImage = (ByteToImg(row.Cells[5].Value.ToString()));
+                }
             }
         }
 
@@ -222,13 +225,17 @@ namespace DashBoar
 
         private void dtgv_xoa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = this.DTGV_xem.Rows[e.RowIndex];
-            tbx_xoa_mamon.Text = row.Cells[0].Value.ToString();
-            tbx_xoa_tenmon.Text = row.Cells[1].Value.ToString();
-            cbb_xoa_loai.Text = row.Cells[2].Value.ToString();
-            tbx_xoa_gia.Text = row.Cells[3].Value.ToString();
-            tbx_xoa_mota.Text = row.Cells[4].Value.ToString();
-            ptb_anhrauma.BackgroundImage = (ByteToImg(row.Cells[5].Value.ToString()));
+            if (e.RowIndex != -1)
+            {
+                DataGridViewRow row = this.DTGV_xem.Rows[e.RowIndex];
+
+                tbx_xoa_mamon.Text = row.Cells[0].Value.ToString();
+                tbx_xoa_tenmon.Text = row.Cells[1].Value.ToString();
+                cbb_xoa_loai.Text = row.Cells[2].Value.ToString();
+                tbx_xoa_gia.Text = row.Cells[3].Value.ToString();
+                tbx_xoa_mota.Text = row.Cells[4].Value.ToString();
+                ptb_anhrauma.BackgroundImage = (ByteToImg(row.Cells[5].Value.ToString()));
+            }
         }
 
         private void rdb_xoa_nuoc_CheckedChanged(object sender, EventArgs e)
