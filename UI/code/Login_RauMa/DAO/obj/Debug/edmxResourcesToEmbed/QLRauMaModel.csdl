@@ -220,8 +220,11 @@
       <Parameter Name="masp" Mode="In" Type="String" />
     </FunctionImport>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <FunctionImport Name="CapNhatNV">
 =======
+=======
+>>>>>>> Stashed changes
     <EntitySet Name="sysdiagrams" EntityType="ql_raumaModel.sysdiagram" />
     <FunctionImport Name="CAPNHATHD">
       <Parameter Name="idhd" Mode="In" Type="String" />
@@ -229,6 +232,9 @@
       <Parameter Name="ngaylap" Mode="In" Type="DateTime" />
     </FunctionImport>
     <FunctionImport Name="CAPNHATNV">
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       <Parameter Name="idnv" Mode="In" Type="String" />
       <Parameter Name="hoten" Mode="In" Type="String" />
@@ -241,10 +247,13 @@
       <Parameter Name="matkhau" Mode="In" Type="String" />
       <Parameter Name="Email" Mode="In" Type="String" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <Parameter Name="hinh" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="ThemNV">
 =======
+=======
+>>>>>>> Stashed changes
     </FunctionImport>
     <FunctionImport Name="LAYGIA" ReturnType="Collection(Decimal)">
       <Parameter Name="masp" Mode="In" Type="String" />
@@ -280,6 +289,9 @@
     </FunctionImport>
     <FunctionImport Name="sp_upgraddiagrams" />
     <FunctionImport Name="THEMNV">
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       <Parameter Name="idnv" Mode="In" Type="String" />
       <Parameter Name="hoten" Mode="In" Type="String" />
@@ -291,6 +303,7 @@
       <Parameter Name="taikhoan" Mode="In" Type="String" />
       <Parameter Name="matkhau" Mode="In" Type="String" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <Parameter Name="hinh" Mode="In" Type="String" />
       <Parameter Name="Email" Mode="In" Type="String" />
     </FunctionImport>
@@ -298,10 +311,15 @@
       <Parameter Name="taikhoan" Mode="In" Type="String" />
       <Parameter Name="matkhau" Mode="In" Type="String" />
 =======
+=======
+>>>>>>> Stashed changes
       <Parameter Name="Email" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="XOAHD">
       <Parameter Name="idhd" Mode="In" Type="String" />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     </FunctionImport>
   </EntityContainer>

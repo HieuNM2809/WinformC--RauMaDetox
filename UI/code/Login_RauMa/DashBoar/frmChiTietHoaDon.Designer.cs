@@ -29,8 +29,11 @@
         private void InitializeComponent()
         {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             this.button2 = new System.Windows.Forms.Button();
 =======
+=======
+>>>>>>> Stashed changes
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
 >>>>>>> Stashed changes
@@ -52,10 +55,14 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             this.button1 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.colIDHD = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colMaSp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+=======
+            this.lstDanhSachSP = new System.Windows.Forms.ListView();
+>>>>>>> Stashed changes
 =======
             this.lstDanhSachSP = new System.Windows.Forms.ListView();
 >>>>>>> Stashed changes
@@ -93,7 +100,10 @@
             this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
@@ -333,6 +343,7 @@
             this.tableLayoutPanel4.TabIndex = 1;
             // 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
@@ -348,6 +359,9 @@
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // listView1
+=======
+            // lstDanhSachSP
+>>>>>>> Stashed changes
 =======
             // lstDanhSachSP
 >>>>>>> Stashed changes

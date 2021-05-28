@@ -27,6 +27,7 @@ namespace DAO
         public virtual ICollection<CTPhanQuyen> CTPhanQuyens { get; set; }
     }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 
     public string IDquyen { get; set; }
@@ -41,6 +42,8 @@ namespace DAO
 
 }
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 }

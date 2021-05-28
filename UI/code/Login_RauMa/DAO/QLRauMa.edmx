@@ -164,16 +164,22 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
         <Function Name="CapNhatNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
 =======
+=======
+>>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
         <Function Name="CAPNHATHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idhd" Type="nvarchar" Mode="In" />
           <Parameter Name="idnv" Type="nvarchar" Mode="In" />
           <Parameter Name="ngaylap" Type="datetime" Mode="In" />
         </Function>
         <Function Name="CAPNHATNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+<<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 >>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMa.edmx
+=======
+>>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
           <Parameter Name="idnv" Type="nvarchar" Mode="In" />
           <Parameter Name="hoten" Type="nvarchar" Mode="In" />
           <Parameter Name="ngaysinh" Type="datetime" Mode="In" />
@@ -184,6 +190,7 @@
           <Parameter Name="taikhoan" Type="varchar" Mode="In" />
           <Parameter Name="matkhau" Type="varchar" Mode="In" />
           <Parameter Name="Email" Type="varchar" Mode="In" />
+<<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
           <Parameter Name="hinh" Type="nvarchar(max)" Mode="In" />
         </Function>
@@ -192,6 +199,8 @@
           <Parameter Name="matkhau" Type="varchar" Mode="In" />
         </Function>
 =======
+=======
+>>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
         </Function>
         <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="LAYGIA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -227,7 +236,10 @@
           <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+<<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 >>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMa.edmx
+=======
+>>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
         <Function Name="SUASP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="masp" Type="nvarchar" Mode="In" />
           <Parameter Name="Tensp" Type="nvarchar" Mode="In" />
@@ -241,11 +253,15 @@
           <Parameter Name="idnv" Type="nvarchar" Mode="In" />
           <Parameter Name="ngaylap" Type="datetime" Mode="In" />
         </Function>
+<<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
         <Function Name="ThemNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
 =======
         <Function Name="THEMNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
 >>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMa.edmx
+=======
+        <Function Name="THEMNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+>>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
           <Parameter Name="idnv" Type="nvarchar" Mode="In" />
           <Parameter Name="hoten" Type="nvarchar" Mode="In" />
           <Parameter Name="ngaysinh" Type="datetime" Mode="In" />
@@ -255,10 +271,13 @@
           <Parameter Name="sdt" Type="char" Mode="In" />
           <Parameter Name="taikhoan" Type="varchar" Mode="In" />
           <Parameter Name="matkhau" Type="varchar" Mode="In" />
+<<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
 <<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
           <Parameter Name="hinh" Type="nvarchar(max)" Mode="In" />
 =======
 >>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMa.edmx
+=======
+>>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
           <Parameter Name="Email" Type="varchar" Mode="In" />
         </Function>
         <Function Name="THEMSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -551,6 +570,7 @@
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
             <Parameter Name="version" Mode="In" Type="Int32" />
             <Parameter Name="definition" Mode="In" Type="Binary" />
+<<<<<<< Updated upstream:UI/code/Login_RauMa/DAO/QLRauMa.edmx
           </FunctionImport>
           <FunctionImport Name="sp_dropdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
@@ -569,6 +589,26 @@
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
+=======
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(ql_raumaModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(ql_raumaModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+>>>>>>> Stashed changes:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx
           <FunctionImport Name="sp_upgraddiagrams" />
           <FunctionImport Name="SUASP">
             <Parameter Name="masp" Mode="In" Type="String" />
