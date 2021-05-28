@@ -329,12 +329,10 @@ namespace DashBoar
             this.btnThoat.Location = new System.Drawing.Point(935, 32);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(102, 73);
+            this.btnThoat.Size = new System.Drawing.Size(102, 62);
             this.btnThoat.TabIndex = 12;
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            this.btnThoat.MouseLeave += new System.EventHandler(this.btnThoat_MouseLeave);
-            this.btnThoat.MouseHover += new System.EventHandler(this.btnThoat_MouseHover);
             // 
             // btnThem
             // 
@@ -345,7 +343,7 @@ namespace DashBoar
             this.btnThem.Location = new System.Drawing.Point(106, 22);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(102, 83);
+            this.btnThem.Size = new System.Drawing.Size(102, 71);
             this.btnThem.TabIndex = 8;
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -361,12 +359,10 @@ namespace DashBoar
             this.btnSua.Location = new System.Drawing.Point(320, 22);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(102, 83);
+            this.btnSua.Size = new System.Drawing.Size(102, 71);
             this.btnSua.TabIndex = 9;
             this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.ClientSizeChanged += new System.EventHandler(this.btnSua_ClientSizeChanged);
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            this.btnSua.MouseHover += new System.EventHandler(this.btnSua_MouseHover);
             // 
             // btnLamMoi
             // 
@@ -379,12 +375,10 @@ namespace DashBoar
             this.btnLamMoi.Location = new System.Drawing.Point(737, 28);
             this.btnLamMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(102, 77);
+            this.btnLamMoi.Size = new System.Drawing.Size(102, 68);
             this.btnLamMoi.TabIndex = 11;
             this.btnLamMoi.UseVisualStyleBackColor = false;
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
-            this.btnLamMoi.MouseLeave += new System.EventHandler(this.btnLamMoi_MouseLeave);
-            this.btnLamMoi.MouseHover += new System.EventHandler(this.btnLamMoi_MouseHover);
             // 
             // btnXoa
             // 
@@ -397,12 +391,10 @@ namespace DashBoar
             this.btnXoa.Location = new System.Drawing.Point(542, 22);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(102, 83);
+            this.btnXoa.Size = new System.Drawing.Size(102, 71);
             this.btnXoa.TabIndex = 10;
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            this.btnXoa.MouseLeave += new System.EventHandler(this.btnXoa_MouseLeave);
-            this.btnXoa.MouseHover += new System.EventHandler(this.btnXoa_MouseHover);
             // 
             // btnTimKiem
             // 

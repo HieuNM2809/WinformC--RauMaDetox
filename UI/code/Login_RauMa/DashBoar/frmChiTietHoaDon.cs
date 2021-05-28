@@ -14,29 +14,12 @@ namespace DashBoar
 {
     public partial class frmChiTietHoaDon : Form
     {
-<<<<<<< HEAD
-        BUS_sanpham sp = new BUS_sanpham();
-=======
         ChiTietHoaDonBUS cthd = new ChiTietHoaDonBUS();
         int count = 0;
->>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700
         public frmChiTietHoaDon()
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
-        private void frmChiTietHoaDon_load(object sender, EventArgs e)
-        {
-            cbbTenSP.DataSource = sp.lstViewSP();
-            cbbTenSP.DisplayMember = "tensp";
-            cbbTenSP.ValueMember = "masp";
-
-
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-=======
         private void frmChiTietHoaDon_Load(object sender, EventArgs e)
         {
             cbbTenSP.DataSource = cthd.LayDSSP();
@@ -61,7 +44,6 @@ namespace DashBoar
             cbbGia.DataSource = cthd.LayGia(cbbTenSP.SelectedValue.ToString());
             cbbGia.DisplayMember = "DonGia";
             cbbGia.ValueMember = "DonGia";
->>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700
         }
     }
 }
