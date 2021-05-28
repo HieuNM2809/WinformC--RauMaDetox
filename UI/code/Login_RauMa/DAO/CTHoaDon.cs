@@ -14,14 +14,13 @@ namespace DAO
     
     public partial class CTHoaDon
     {
+        public string MaHD { get; set; }
         public string IDHoaDon { get; set; }
         public string MaSp { get; set; }
-        public string TenSp { get; set; }
         public Nullable<int> SoLuong { get; set; }
         public Nullable<decimal> DonGia { get; set; }
-        public Nullable<double> ChietKhau { get; set; }
+        public Nullable<decimal> ChietKhau { get; set; }
         public Nullable<decimal> TongTien { get; set; }
-        public string STT { get; set; }
     
         public virtual HoaDon HoaDon { get; set; }
         public virtual SanPham SanPham { get; set; }

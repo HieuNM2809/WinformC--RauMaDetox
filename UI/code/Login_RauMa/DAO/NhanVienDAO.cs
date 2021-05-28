@@ -80,12 +80,12 @@ namespace DAO
         {
             try
             {
-                int temp = qlrauma.XOANV(nv.IDNV);
+                int temp = qlrauma.XaoNV(nv.IDNV);
                 qlrauma.SaveChanges();
 
                 return temp > 0;
             }
-            catch( Exception)
+            catch (Exception)
             {
                 return false;
             }

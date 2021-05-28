@@ -171,3 +171,7 @@ D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.csproj.AssemblyReference.cache
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.frmChiTietHoaDon.resources
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.frm_Setting.resources
+D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.dll
+D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.SqlServer.dll
+D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.xml
+D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\EntityFramework.SqlServer.xml
