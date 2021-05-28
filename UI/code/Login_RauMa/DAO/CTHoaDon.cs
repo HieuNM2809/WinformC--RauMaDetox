@@ -15,6 +15,7 @@ namespace DAO
 using System;
     using System.Collections.Generic;
     
+<<<<<<< HEAD
 public partial class CTHoaDon
 {
 
@@ -40,4 +41,19 @@ public partial class CTHoaDon
 
 }
 
+=======
+    public partial class CTHoaDon
+    {
+        public string STT { get; set; }
+        public string IDHoaDon { get; set; }
+        public string MaSp { get; set; }
+        public Nullable<int> SoLuong { get; set; }
+        public Nullable<decimal> DonGia { get; set; }
+        public Nullable<decimal> ChietKhau { get; set; }
+        public Nullable<decimal> TongTien { get; set; }
+    
+        public virtual HoaDon HoaDon { get; set; }
+        public virtual SanPham SanPham { get; set; }
+    }
+>>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700
 }

@@ -2,8 +2,14 @@
 <Schema Namespace="ql_raumaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="CTHoaDon">
     <Key>
+<<<<<<< HEAD
       <PropertyRef Name="MaHD" />
+=======
+      <PropertyRef Name="STT" />
+      <PropertyRef Name="IDHoaDon" />
+>>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700
     </Key>
+    <Property Name="STT" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="IDHoaDon" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="MaSp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
     <Property Name="SoLuong" Type="Int32" />
@@ -18,11 +24,11 @@
     <Key>
       <PropertyRef Name="Taikhoan" />
     </Key>
-    <Property Name="IDNV" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="IDquyen" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IDNV" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="IDquyen" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
     <Property Name="Taikhoan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="LoaiQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="TrangThai" Type="Int16" />
+    <Property Name="TrangThai" Type="Boolean" />
     <NavigationProperty Name="NhanVien" Relationship="Self.FK_CTPhanQuyen_NhanVien" FromRole="CTPhanQuyen" ToRole="NhanVien" />
     <NavigationProperty Name="PhanQuyen" Relationship="Self.FK_CTPhanQuyen_PhanQuyen" FromRole="CTPhanQuyen" ToRole="PhanQuyen" />
   </EntityType>
@@ -70,6 +76,7 @@
     </Key>
     <Property Name="IDquyen" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LoaiQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TrangThai" Type="Int16" />
     <NavigationProperty Name="CTPhanQuyens" Relationship="Self.FK_CTPhanQuyen_PhanQuyen" FromRole="PhanQuyen" ToRole="CTPhanQuyen" />
   </EntityType>
   <EntityType Name="SanPham">
@@ -121,7 +128,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CTPhanQuyen_NhanVien">
-    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
     <End Role="CTPhanQuyen" Type="Self.CTPhanQuyen" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NhanVien">
@@ -133,7 +140,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CTPhanQuyen_PhanQuyen">
-    <End Role="PhanQuyen" Type="Self.PhanQuyen" Multiplicity="1" />
+    <End Role="PhanQuyen" Type="Self.PhanQuyen" Multiplicity="0..1" />
     <End Role="CTPhanQuyen" Type="Self.CTPhanQuyen" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PhanQuyen">
@@ -206,6 +213,22 @@
       <Parameter Name="idnv" Mode="In" Type="String" />
       <Parameter Name="ngaylap" Mode="In" Type="DateTime" />
     </FunctionImport>
+<<<<<<< HEAD
+=======
+    <FunctionImport Name="CapNhatNV">
+      <Parameter Name="idnv" Mode="In" Type="String" />
+      <Parameter Name="hoten" Mode="In" Type="String" />
+      <Parameter Name="ngaysinh" Mode="In" Type="DateTime" />
+      <Parameter Name="gioitinh" Mode="In" Type="String" />
+      <Parameter Name="chucdanh" Mode="In" Type="String" />
+      <Parameter Name="loainv" Mode="In" Type="String" />
+      <Parameter Name="sdt" Mode="In" Type="String" />
+      <Parameter Name="taikhoan" Mode="In" Type="String" />
+      <Parameter Name="matkhau" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="hinh" Mode="In" Type="String" />
+    </FunctionImport>
+>>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700
     <FunctionImport Name="sp_alterdiagram">
       <Parameter Name="diagramname" Mode="In" Type="String" />
       <Parameter Name="owner_id" Mode="In" Type="Int32" />
@@ -266,7 +289,16 @@
       <Parameter Name="Mota" Mode="In" Type="String" />
       <Parameter Name="Hinh" Mode="In" Type="String" />
     </FunctionImport>
+<<<<<<< HEAD
     <FunctionImport Name="THEMNV">
+=======
+    <FunctionImport Name="THEMHD">
+      <Parameter Name="idhd" Mode="In" Type="String" />
+      <Parameter Name="idnv" Mode="In" Type="String" />
+      <Parameter Name="ngaylap" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="ThemNV">
+>>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700
       <Parameter Name="idnv" Mode="In" Type="String" />
       <Parameter Name="hoten" Mode="In" Type="String" />
       <Parameter Name="ngaysinh" Mode="In" Type="DateTime" />
@@ -276,6 +308,7 @@
       <Parameter Name="sdt" Mode="In" Type="String" />
       <Parameter Name="taikhoan" Mode="In" Type="String" />
       <Parameter Name="matkhau" Mode="In" Type="String" />
+      <Parameter Name="hinh" Mode="In" Type="String" />
       <Parameter Name="Email" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="THEMSP">
@@ -286,14 +319,27 @@
       <Parameter Name="Mota" Mode="In" Type="String" />
       <Parameter Name="Hinh" Mode="In" Type="String" />
     </FunctionImport>
+<<<<<<< HEAD
     <FunctionImport Name="XOANV">
+=======
+    <FunctionImport Name="XOAHD">
+      <Parameter Name="idhd" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="XoaNV">
+>>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700
       <Parameter Name="idnv" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="XOASP">
       <Parameter Name="masp" Mode="In" Type="String" />
     </FunctionImport>
+<<<<<<< HEAD
     <FunctionImport Name="XOAHD1">
       <Parameter Name="idhd" Mode="In" Type="String" />
+=======
+    <FunctionImport Name="DOIMATKHAU">
+      <Parameter Name="taikhoan" Mode="In" Type="String" />
+      <Parameter Name="matkhau" Mode="In" Type="String" />
+>>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700
     </FunctionImport>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">

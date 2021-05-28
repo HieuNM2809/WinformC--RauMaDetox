@@ -7,7 +7,6 @@ D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\DAO.pdb
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\DAO.dll.config
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\DTO.pdb
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\EntityFramework.xml
-D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.dll
@@ -54,6 +53,24 @@ D:\HỌC TẬP\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.csproj
 D:\HỌC TẬP\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\HỌC TẬP\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.dll
 D:\HỌC TẬP\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.pdb
+<<<<<<< HEAD
+=======
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\BUS.dll
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\BUS.pdb
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\DAO.dll
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\DTO.dll
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\EntityFramework.dll
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\DAO.pdb
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\DAO.dll.config
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\DTO.pdb
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\EntityFramework.xml
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.dll
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.pdb
+D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+>>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\BUS.dll
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\BUS.pdb
 D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\UI\code\Login_RauMa\BUS\bin\Debug\DAO.dll

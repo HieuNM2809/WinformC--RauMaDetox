@@ -30,6 +30,7 @@ namespace DashBoar
             cbbChucDanh.ValueMember = "IDQuyen";
             
             dgvThongTinNhanVien.DataSource = _nhanvienBUS.LayDSNhanVien();
+
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -130,9 +131,13 @@ namespace DashBoar
                     dgvThongTinNhanVien.Rows[e.RowIndex].Cells[10].Value.ToString());
 
                 picNhanVien.Image = Image.FromFile(path);
+<<<<<<< HEAD
                 picNhanVien.Enabled = false;
                 txtTaiKhoan.Enabled = false;
 
+=======
+            picNhanVien.Enabled = false;
+>>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
@@ -209,6 +214,7 @@ namespace DashBoar
                 return;
             }    
         }
+<<<<<<< HEAD
 
         private void MouseHover(string text, Button btn)
         {
@@ -274,6 +280,8 @@ namespace DashBoar
         {
 
         }
+=======
+>>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700
     }
 }
 

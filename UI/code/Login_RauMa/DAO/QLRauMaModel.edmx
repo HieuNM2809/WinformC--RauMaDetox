@@ -4,13 +4,14 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="ql_raumaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ql_raumaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CTHoaDon">
           <Key>
-            <PropertyRef Name="MaHD" />
+            <PropertyRef Name="STT" />
+            <PropertyRef Name="IDHoaDon" />
           </Key>
-          <Property Name="MaHD" Type="nvarchar" MaxLength="3" Nullable="false" />
-          <Property Name="IDHoaDon" Type="nvarchar" MaxLength="3" />
+          <Property Name="STT" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="IDHoaDon" Type="nvarchar" MaxLength="3" Nullable="false" />
           <Property Name="MaSp" Type="nvarchar" MaxLength="5" />
           <Property Name="SoLuong" Type="int" />
           <Property Name="DonGia" Type="money" />
@@ -67,6 +68,7 @@
           </Key>
           <Property Name="IDquyen" Type="nvarchar" MaxLength="3" Nullable="false" />
           <Property Name="LoaiQuyen" Type="varchar" MaxLength="50" />
+          <Property Name="TrangThai" Type="smallint" />
         </EntityType>
         <EntityType Name="SanPham">
           <Key>
@@ -80,8 +82,18 @@
           <Property Name="Hinh" Type="nvarchar(max)" />
           <Property Name="TrangThai" Type="int" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <Association Name="FK_CTHoaDon_HoaDon">
-          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="0..1" />
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
           <End Role="CTHoaDon" Type="Self.CTHoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HoaDon">
@@ -152,6 +164,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="CAPNHATHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idhd" Type="nvarchar" Mode="In" />
+          <Parameter Name="idnv" Type="nvarchar" Mode="In" />
+          <Parameter Name="ngaylap" Type="datetime" Mode="In" />
+        </Function>
         <Function Name="CapNhatNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idnv" Type="nvarchar" Mode="In" />
           <Parameter Name="hoten" Type="nvarchar" Mode="In" />
@@ -169,7 +186,37 @@
           <Parameter Name="taikhoan" Type="varchar" Mode="In" />
           <Parameter Name="matkhau" Type="varchar" Mode="In" />
         </Function>
-        <Function Name="DSNHANVIEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SUASP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="masp" Type="nvarchar" Mode="In" />
           <Parameter Name="Tensp" Type="nvarchar" Mode="In" />
@@ -204,7 +251,10 @@
           <Parameter Name="Mota" Type="nvarchar" Mode="In" />
           <Parameter Name="Hinh" Type="nvarchar(max)" Mode="In" />
         </Function>
-        <Function Name="XOANV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="XOAHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idhd" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="XoaNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idnv" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="XOASP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -218,6 +268,7 @@
           <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PhanQuyen" EntityType="Self.PhanQuyen" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_CTHoaDon_HoaDon" Association="Self.FK_CTHoaDon_HoaDon">
             <End Role="HoaDon" EntitySet="HoaDon" />
             <End Role="CTHoaDon" EntitySet="CTHoaDon" />
@@ -249,10 +300,11 @@
       <Schema Namespace="ql_raumaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="CTHoaDon">
           <Key>
-            <PropertyRef Name="MaHD" />
+            <PropertyRef Name="STT" />
+            <PropertyRef Name="IDHoaDon" />
           </Key>
-          <Property Name="MaHD" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="IDHoaDon" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="STT" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IDHoaDon" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="MaSp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Name="SoLuong" Type="Int32" />
           <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
@@ -318,6 +370,7 @@
           </Key>
           <Property Name="IDquyen" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LoaiQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TrangThai" Type="Int16" />
           <NavigationProperty Name="CTPhanQuyens" Relationship="Self.FK_CTPhanQuyen_PhanQuyen" FromRole="PhanQuyen" ToRole="CTPhanQuyen" />
         </EntityType>
         <EntityType Name="SanPham">
@@ -334,8 +387,18 @@
           <NavigationProperty Name="CTHoaDons" Relationship="Self.FK_CTHoaDon_SanPham" FromRole="SanPham" ToRole="CTHoaDon" />
           <NavigationProperty Name="LoaiSP" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="SanPham" ToRole="LoaiSP" />
         </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
         <Association Name="FK_CTHoaDon_HoaDon">
-          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="0..1" />
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
           <End Role="CTHoaDon" Type="Self.CTHoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HoaDon">
@@ -414,6 +477,7 @@
           <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
           <EntitySet Name="PhanQuyens" EntityType="Self.PhanQuyen" />
           <EntitySet Name="SanPhams" EntityType="Self.SanPham" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <AssociationSet Name="FK_CTHoaDon_HoaDon" Association="Self.FK_CTHoaDon_HoaDon">
             <End Role="HoaDon" EntitySet="HoaDons" />
             <End Role="CTHoaDon" EntitySet="CTHoaDons" />
@@ -438,32 +502,10 @@
             <End Role="LoaiSP" EntitySet="LoaiSPs" />
             <End Role="SanPham" EntitySet="SanPhams" />
           </AssociationSet>
-          <FunctionImport Name="XOANV">
-          <Parameter Name="idnv" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="SUASP">
-            <Parameter Name="masp" Mode="In" Type="String" />
-            <Parameter Name="Tensp" Mode="In" Type="String" />
-            <Parameter Name="Maloaisp" Mode="In" Type="String" />
-            <Parameter Name="Giatien" Mode="In" Type="Decimal" />
-            <Parameter Name="Mota" Mode="In" Type="String" />
-            <Parameter Name="Hinh" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="THEMHD">
+          <FunctionImport Name="CAPNHATHD">
             <Parameter Name="idhd" Mode="In" Type="String" />
             <Parameter Name="idnv" Mode="In" Type="String" />
             <Parameter Name="ngaylap" Mode="In" Type="DateTime" />
-          </FunctionImport>
-          <FunctionImport Name="THEMSP">
-            <Parameter Name="masp" Mode="In" Type="String" />
-            <Parameter Name="Tensp" Mode="In" Type="String" />
-            <Parameter Name="Maloaisp" Mode="In" Type="String" />
-            <Parameter Name="Giatien" Mode="In" Type="Decimal" />
-            <Parameter Name="Mota" Mode="In" Type="String" />
-            <Parameter Name="Hinh" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="XOASP">
-          <Parameter Name="masp" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="CapNhatNV">
             <Parameter Name="idnv" Mode="In" Type="String" />
@@ -478,6 +520,49 @@
             <Parameter Name="Email" Mode="In" Type="String" />
             <Parameter Name="hinh" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(ql_raumaModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(ql_raumaModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="SUASP">
+            <Parameter Name="masp" Mode="In" Type="String" />
+            <Parameter Name="Tensp" Mode="In" Type="String" />
+            <Parameter Name="Maloaisp" Mode="In" Type="String" />
+            <Parameter Name="Giatien" Mode="In" Type="Decimal" />
+            <Parameter Name="Mota" Mode="In" Type="String" />
+            <Parameter Name="Hinh" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="THEMHD">
+            <Parameter Name="idhd" Mode="In" Type="String" />
+            <Parameter Name="idnv" Mode="In" Type="String" />
+            <Parameter Name="ngaylap" Mode="In" Type="DateTime" />
+          </FunctionImport>
           <FunctionImport Name="ThemNV">
             <Parameter Name="idnv" Mode="In" Type="String" />
             <Parameter Name="hoten" Mode="In" Type="String" />
@@ -491,24 +576,38 @@
             <Parameter Name="hinh" Mode="In" Type="String" />
             <Parameter Name="Email" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="THEMSP">
+            <Parameter Name="masp" Mode="In" Type="String" />
+            <Parameter Name="Tensp" Mode="In" Type="String" />
+            <Parameter Name="Maloaisp" Mode="In" Type="String" />
+            <Parameter Name="Giatien" Mode="In" Type="Decimal" />
+            <Parameter Name="Mota" Mode="In" Type="String" />
+            <Parameter Name="Hinh" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="XOAHD">
+          <Parameter Name="idhd" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="XoaNV">
+          <Parameter Name="idnv" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="XOASP">
+          <Parameter Name="masp" Mode="In" Type="String" />
+          </FunctionImport>
           <FunctionImport Name="DOIMATKHAU">
             <Parameter Name="taikhoan" Mode="In" Type="String" />
             <Parameter Name="matkhau" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="DSNHANVIEN" ReturnType="Collection(ql_raumaModel.DSNHANVIEN_Result)" />
         </EntityContainer>
-        <ComplexType Name="DSNHANVIEN_Result">
-          <Property Type="String" Name="IDNV" Nullable="false" MaxLength="3" />
-          <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
-          <Property Type="DateTime" Name="NgaySinh" Nullable="true" Precision="23" />
-          <Property Type="String" Name="GioiTinh" Nullable="true" MaxLength="10" />
-          <Property Type="String" Name="ChucDanh" Nullable="true" MaxLength="30" />
-          <Property Type="String" Name="LoaiNV" Nullable="true" MaxLength="20" />
-          <Property Type="String" Name="SDT" Nullable="true" MaxLength="10" />
-          <Property Type="String" Name="TaiKhoan" Nullable="true" MaxLength="100" />
-          <Property Type="String" Name="MatKhau" Nullable="true" MaxLength="100" />
-          <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
-          <Property Type="String" Name="Hinh" Nullable="true" />
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -519,7 +618,7 @@
           <EntitySetMapping Name="CTHoaDons">
             <EntityTypeMapping TypeName="ql_raumaModel.CTHoaDon">
               <MappingFragment StoreEntitySet="CTHoaDon">
-                <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+                <ScalarProperty Name="STT" ColumnName="STT" />
                 <ScalarProperty Name="IDHoaDon" ColumnName="IDHoaDon" />
                 <ScalarProperty Name="MaSp" ColumnName="MaSp" />
                 <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
@@ -582,6 +681,7 @@
               <MappingFragment StoreEntitySet="PhanQuyen">
                 <ScalarProperty Name="IDquyen" ColumnName="IDquyen" />
                 <ScalarProperty Name="LoaiQuyen" ColumnName="LoaiQuyen" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -598,31 +698,51 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="XOANV" FunctionName="ql_raumaModel.Store.XOANV" />
-          <FunctionImportMapping FunctionImportName="SUASP" FunctionName="ql_raumaModel.Store.SUASP" />
-          <FunctionImportMapping FunctionImportName="THEMHD" FunctionName="ql_raumaModel.Store.THEMHD" />
-          <FunctionImportMapping FunctionImportName="THEMSP" FunctionName="ql_raumaModel.Store.THEMSP" />
-          <FunctionImportMapping FunctionImportName="XOASP" FunctionName="ql_raumaModel.Store.XOASP" />
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="ql_raumaModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="CAPNHATHD" FunctionName="ql_raumaModel.Store.CAPNHATHD" />
           <FunctionImportMapping FunctionImportName="CapNhatNV" FunctionName="ql_raumaModel.Store.CapNhatNV" />
-          <FunctionImportMapping FunctionImportName="ThemNV" FunctionName="ql_raumaModel.Store.ThemNV" />
-          <FunctionImportMapping FunctionImportName="DOIMATKHAU" FunctionName="ql_raumaModel.Store.DOIMATKHAU" />
-          <FunctionImportMapping FunctionImportName="DSNHANVIEN" FunctionName="ql_raumaModel.Store.DSNHANVIEN">
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="ql_raumaModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="ql_raumaModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="ql_raumaModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="ql_raumaModel.Store.sp_helpdiagramdefinition">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="ql_raumaModel.DSNHANVIEN_Result">
-                <ScalarProperty Name="IDNV" ColumnName="IDNV" />
-                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
-                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
-                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
-                <ScalarProperty Name="ChucDanh" ColumnName="ChucDanh" />
-                <ScalarProperty Name="LoaiNV" ColumnName="LoaiNV" />
-                <ScalarProperty Name="SDT" ColumnName="SDT" />
-                <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
-                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Hinh" ColumnName="Hinh" />
+              <ComplexTypeMapping TypeName="ql_raumaModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="ql_raumaModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ql_raumaModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="ql_raumaModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="ql_raumaModel.Store.sp_upgraddiagrams" />
+          <FunctionImportMapping FunctionImportName="SUASP" FunctionName="ql_raumaModel.Store.SUASP" />
+          <FunctionImportMapping FunctionImportName="THEMHD" FunctionName="ql_raumaModel.Store.THEMHD" />
+          <FunctionImportMapping FunctionImportName="ThemNV" FunctionName="ql_raumaModel.Store.ThemNV" />
+          <FunctionImportMapping FunctionImportName="THEMSP" FunctionName="ql_raumaModel.Store.THEMSP" />
+          <FunctionImportMapping FunctionImportName="XOAHD" FunctionName="ql_raumaModel.Store.XOAHD" />
+          <FunctionImportMapping FunctionImportName="XoaNV" FunctionName="ql_raumaModel.Store.XoaNV" />
+          <FunctionImportMapping FunctionImportName="XOASP" FunctionName="ql_raumaModel.Store.XOASP" />
+          <FunctionImportMapping FunctionImportName="DOIMATKHAU" FunctionName="ql_raumaModel.Store.DOIMATKHAU" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

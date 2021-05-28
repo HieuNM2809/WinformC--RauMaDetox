@@ -2,25 +2,34 @@
 <Schema Namespace="ql_raumaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="CTHoaDon">
     <Key>
+<<<<<<< HEAD
       <PropertyRef Name="MaHD" />
+=======
+      <PropertyRef Name="STT" />
+      <PropertyRef Name="IDHoaDon" />
+>>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700
     </Key>
+    <Property Name="STT" Type="nvarchar" MaxLength="3" Nullable="false" />
     <Property Name="IDHoaDon" Type="nvarchar" MaxLength="3" Nullable="false" />
     <Property Name="MaSp" Type="nvarchar" MaxLength="5" />
     <Property Name="SoLuong" Type="int" />
     <Property Name="DonGia" Type="money" />
     <Property Name="ChietKhau" Type="money" />
     <Property Name="TongTien" Type="money" />
+<<<<<<< HEAD
     <Property Name="MaHD" Type="nvarchar" MaxLength="3" Nullable="false" />
+=======
+>>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700
   </EntityType>
   <EntityType Name="CTPhanQuyen">
     <Key>
       <PropertyRef Name="Taikhoan" />
     </Key>
-    <Property Name="IDNV" Type="nvarchar" MaxLength="3" Nullable="false" />
-    <Property Name="IDquyen" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="IDNV" Type="nvarchar" MaxLength="3" />
+    <Property Name="IDquyen" Type="nvarchar" MaxLength="3" />
     <Property Name="Taikhoan" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="LoaiQuyen" Type="varchar" MaxLength="50" />
-    <Property Name="TrangThai" Type="smallint" />
+    <Property Name="TrangThai" Type="bit" />
   </EntityType>
   <EntityType Name="HoaDon">
     <Key>
@@ -61,6 +70,7 @@
     </Key>
     <Property Name="IDquyen" Type="nvarchar" MaxLength="3" Nullable="false" />
     <Property Name="LoaiQuyen" Type="varchar" MaxLength="50" />
+    <Property Name="TrangThai" Type="smallint" />
   </EntityType>
   <EntityType Name="SanPham">
     <Key>
@@ -109,7 +119,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CTPhanQuyen_NhanVien">
-    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
     <End Role="CTPhanQuyen" Type="Self.CTPhanQuyen" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NhanVien">
@@ -121,7 +131,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CTPhanQuyen_PhanQuyen">
-    <End Role="PhanQuyen" Type="Self.PhanQuyen" Multiplicity="1" />
+    <End Role="PhanQuyen" Type="Self.PhanQuyen" Multiplicity="0..1" />
     <End Role="CTPhanQuyen" Type="Self.CTPhanQuyen" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PhanQuyen">
@@ -161,7 +171,7 @@
     <Parameter Name="idnv" Type="nvarchar" Mode="In" />
     <Parameter Name="ngaylap" Type="datetime" Mode="In" />
   </Function>
-  <Function Name="CAPNHATNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+  <Function Name="CapNhatNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="idnv" Type="nvarchar" Mode="In" />
     <Parameter Name="hoten" Type="nvarchar" Mode="In" />
     <Parameter Name="ngaysinh" Type="datetime" Mode="In" />
@@ -172,7 +182,15 @@
     <Parameter Name="taikhoan" Type="varchar" Mode="In" />
     <Parameter Name="matkhau" Type="varchar" Mode="In" />
     <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="hinh" Type="nvarchar(max)" Mode="In" />
   </Function>
+<<<<<<< HEAD
+=======
+  <Function Name="DOIMATKHAU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="taikhoan" Type="varchar" Mode="In" />
+    <Parameter Name="matkhau" Type="varchar" Mode="In" />
+  </Function>
+>>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700
   <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
   <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
@@ -212,7 +230,16 @@
     <Parameter Name="Mota" Type="nvarchar" Mode="In" />
     <Parameter Name="Hinh" Type="nvarchar(max)" Mode="In" />
   </Function>
+<<<<<<< HEAD
   <Function Name="THEMNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+=======
+  <Function Name="THEMHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idhd" Type="nvarchar" Mode="In" />
+    <Parameter Name="idnv" Type="nvarchar" Mode="In" />
+    <Parameter Name="ngaylap" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="ThemNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+>>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700
     <Parameter Name="idnv" Type="nvarchar" Mode="In" />
     <Parameter Name="hoten" Type="nvarchar" Mode="In" />
     <Parameter Name="ngaysinh" Type="datetime" Mode="In" />
@@ -222,6 +249,7 @@
     <Parameter Name="sdt" Type="char" Mode="In" />
     <Parameter Name="taikhoan" Type="varchar" Mode="In" />
     <Parameter Name="matkhau" Type="varchar" Mode="In" />
+    <Parameter Name="hinh" Type="nvarchar(max)" Mode="In" />
     <Parameter Name="Email" Type="varchar" Mode="In" />
   </Function>
   <Function Name="THEMSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -235,7 +263,7 @@
   <Function Name="XOAHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="idhd" Type="nvarchar" Mode="In" />
   </Function>
-  <Function Name="XOANV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+  <Function Name="XoaNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="idnv" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="XOASP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">

@@ -66,6 +66,7 @@
         <MappingFragment StoreEntitySet="PhanQuyen">
           <ScalarProperty Name="IDquyen" ColumnName="IDquyen" />
           <ScalarProperty Name="LoaiQuyen" ColumnName="LoaiQuyen" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -94,6 +95,10 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="CAPNHATHD" FunctionName="ql_raumaModel.Store.CAPNHATHD" />
+<<<<<<< HEAD
+=======
+    <FunctionImportMapping FunctionImportName="CapNhatNV" FunctionName="ql_raumaModel.Store.CapNhatNV" />
+>>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700
     <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="ql_raumaModel.Store.sp_alterdiagram" />
     <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="ql_raumaModel.Store.sp_creatediagram" />
     <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="ql_raumaModel.Store.sp_dropdiagram" />
@@ -120,10 +125,20 @@
     <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="ql_raumaModel.Store.sp_upgraddiagrams" />
     <FunctionImportMapping FunctionImportName="CAPNHATNV" FunctionName="ql_raumaModel.Store.CAPNHATNV" />
     <FunctionImportMapping FunctionImportName="SUASP" FunctionName="ql_raumaModel.Store.SUASP" />
+<<<<<<< HEAD
     <FunctionImportMapping FunctionImportName="THEMNV" FunctionName="ql_raumaModel.Store.THEMNV" />
     <FunctionImportMapping FunctionImportName="THEMSP" FunctionName="ql_raumaModel.Store.THEMSP" />
     <FunctionImportMapping FunctionImportName="XOANV" FunctionName="ql_raumaModel.Store.XOANV" />
     <FunctionImportMapping FunctionImportName="XOASP" FunctionName="ql_raumaModel.Store.XOASP" />
     <FunctionImportMapping FunctionImportName="XOAHD1" FunctionName="ql_raumaModel.Store.XOAHD" />
+=======
+    <FunctionImportMapping FunctionImportName="THEMHD" FunctionName="ql_raumaModel.Store.THEMHD" />
+    <FunctionImportMapping FunctionImportName="ThemNV" FunctionName="ql_raumaModel.Store.ThemNV" />
+    <FunctionImportMapping FunctionImportName="THEMSP" FunctionName="ql_raumaModel.Store.THEMSP" />
+    <FunctionImportMapping FunctionImportName="XOAHD" FunctionName="ql_raumaModel.Store.XOAHD" />
+    <FunctionImportMapping FunctionImportName="XoaNV" FunctionName="ql_raumaModel.Store.XoaNV" />
+    <FunctionImportMapping FunctionImportName="XOASP" FunctionName="ql_raumaModel.Store.XOASP" />
+    <FunctionImportMapping FunctionImportName="DOIMATKHAU" FunctionName="ql_raumaModel.Store.DOIMATKHAU" />
+>>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700
   </EntityContainerMapping>
 </Mapping>

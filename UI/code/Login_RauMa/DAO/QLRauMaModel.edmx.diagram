@@ -4,14 +4,24 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
+<<<<<<< HEAD:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx.diagram
       <Diagram DiagramId="cad85143ddf541aeb5e3502c586aafc4" Name="Diagram1">
+=======
+      <Diagram DiagramId="950af9ef367e47eab7cfd45ee6f0bddb" Name="Diagram1">
+>>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700:UI/code/Login_RauMa/DAO/QLRauMa.edmx.diagram
         <EntityTypeShape EntityType="ql_raumaModel.CTHoaDon" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="ql_raumaModel.CTPhanQuyen" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ql_raumaModel.HoaDon" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
         <EntityTypeShape EntityType="ql_raumaModel.LoaiSP" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ql_raumaModel.NhanVien" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+<<<<<<< HEAD:UI/code/Login_RauMa/DAO/QLRauMaModel.edmx.diagram
         <EntityTypeShape EntityType="ql_raumaModel.PhanQuyen" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ql_raumaModel.SanPham" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+=======
+        <EntityTypeShape EntityType="ql_raumaModel.PhanQuyen" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_raumaModel.SanPham" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_raumaModel.sysdiagram" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+>>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700:UI/code/Login_RauMa/DAO/QLRauMa.edmx.diagram
         <AssociationConnector Association="ql_raumaModel.FK_CTHoaDon_HoaDon" ManuallyRouted="false" />
         <AssociationConnector Association="ql_raumaModel.FK_CTHoaDon_SanPham" ManuallyRouted="false" />
         <AssociationConnector Association="ql_raumaModel.FK_CTPhanQuyen_NhanVien" ManuallyRouted="false" />

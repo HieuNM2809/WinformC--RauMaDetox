@@ -58,7 +58,7 @@ namespace DashBoar
         }
        private void QL_SanPham_Load_1(object sender, EventArgs e)
         {
-            string a = "001";
+            string a = "LI001";
             QL_SanPham_Load(sender, e, a);
             
            
@@ -101,14 +101,14 @@ namespace DashBoar
 
         private void rb_nuoc_CheckedChanged(object sender, EventArgs e)
         {
-            string a = "001";
+            string a = "LI001";
             
             QL_SanPham_Load(sender, e, a);
         }
 
         private void rb_topping_CheckedChanged(object sender, EventArgs e)
         {
-            string a = "002";
+            string a = "LI002";
             
             QL_SanPham_Load(sender, e, a);
         }

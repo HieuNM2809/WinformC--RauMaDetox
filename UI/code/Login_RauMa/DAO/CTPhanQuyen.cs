@@ -15,6 +15,7 @@ namespace DAO
 using System;
     using System.Collections.Generic;
     
+<<<<<<< HEAD
 public partial class CTPhanQuyen
 {
 
@@ -36,4 +37,17 @@ public partial class CTPhanQuyen
 
 }
 
+=======
+    public partial class CTPhanQuyen
+    {
+        public string IDNV { get; set; }
+        public string IDquyen { get; set; }
+        public string Taikhoan { get; set; }
+        public string LoaiQuyen { get; set; }
+        public Nullable<bool> TrangThai { get; set; }
+    
+        public virtual NhanVien NhanVien { get; set; }
+        public virtual PhanQuyen PhanQuyen { get; set; }
+    }
+>>>>>>> 03aac24c7ebbbb114cdf087881bc786dd8086700
 }
