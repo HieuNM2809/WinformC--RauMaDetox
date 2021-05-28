@@ -151,6 +151,7 @@ namespace DashBoar
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
+            int i = int.Parse(_nhanvienBUS.MAXID()) + 1;
             foreach (Control ctrTTNV in this.grTTNV.Controls)
             {
                 if (ctrTTNV is TextBox)
@@ -163,7 +164,7 @@ namespace DashBoar
             cbbChucDanh.SelectedIndex = 0;
             cbbLoaiNhanVien.SelectedIndex = 0;
             picNhanVien.Image = null;
-            txtID.Text = (_nhanvienBUS.MAXID() + (int)1);
+            txtID.Text = i + " ";
             frmThongTinNhanVien_Load(sender, e);
 
 
