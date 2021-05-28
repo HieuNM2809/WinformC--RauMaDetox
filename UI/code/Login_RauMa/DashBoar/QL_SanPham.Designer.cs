@@ -286,9 +286,9 @@
             this.btn_nhaplai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.btn_nhaplai.Image = global::DashBoar.Properties.Resources.loop2;
             this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_nhaplai.Location = new System.Drawing.Point(268, 3);
+            this.btn_nhaplai.Location = new System.Drawing.Point(266, 3);
             this.btn_nhaplai.Name = "btn_nhaplai";
-            this.btn_nhaplai.Size = new System.Drawing.Size(177, 74);
+            this.btn_nhaplai.Size = new System.Drawing.Size(176, 74);
             this.btn_nhaplai.TabIndex = 132;
             this.btn_nhaplai.Text = "Nhập lại";
             this.btn_nhaplai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -349,7 +349,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.1203F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.8797F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 247F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 248F));
             this.tableLayoutPanel4.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.lbl_mota, 3, 2);
             this.tableLayoutPanel4.Controls.Add(this.label9, 2, 2);
@@ -391,9 +391,9 @@
             this.lbl_mota.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_mota.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_mota.ForeColor = System.Drawing.Color.White;
-            this.lbl_mota.Location = new System.Drawing.Point(549, 128);
+            this.lbl_mota.Location = new System.Drawing.Point(548, 128);
             this.lbl_mota.Name = "lbl_mota";
-            this.lbl_mota.Size = new System.Drawing.Size(242, 58);
+            this.lbl_mota.Size = new System.Drawing.Size(243, 58);
             this.lbl_mota.TabIndex = 162;
             this.lbl_mota.Text = "Mô tả";
             // 
@@ -403,7 +403,7 @@
             this.label9.Dock = System.Windows.Forms.DockStyle.Top;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(417, 128);
+            this.label9.Location = new System.Drawing.Point(416, 128);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(126, 29);
             this.label9.TabIndex = 160;
@@ -429,7 +429,7 @@
             this.lbl_mamon.ForeColor = System.Drawing.Color.White;
             this.lbl_mamon.Location = new System.Drawing.Point(202, 0);
             this.lbl_mamon.Name = "lbl_mamon";
-            this.lbl_mamon.Size = new System.Drawing.Size(209, 29);
+            this.lbl_mamon.Size = new System.Drawing.Size(208, 29);
             this.lbl_mamon.TabIndex = 155;
             this.lbl_mamon.Text = "Mã món";
             // 
@@ -441,7 +441,7 @@
             this.lbl_tenmon.ForeColor = System.Drawing.Color.White;
             this.lbl_tenmon.Location = new System.Drawing.Point(202, 69);
             this.lbl_tenmon.Name = "lbl_tenmon";
-            this.lbl_tenmon.Size = new System.Drawing.Size(209, 29);
+            this.lbl_tenmon.Size = new System.Drawing.Size(208, 29);
             this.lbl_tenmon.TabIndex = 150;
             this.lbl_tenmon.Text = "Tên món";
             // 
@@ -463,7 +463,7 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(417, 0);
+            this.label4.Location = new System.Drawing.Point(416, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 69);
             this.label4.TabIndex = 148;
@@ -477,7 +477,7 @@
             this.lbl_gia.ForeColor = System.Drawing.Color.DarkOrange;
             this.lbl_gia.Location = new System.Drawing.Point(202, 128);
             this.lbl_gia.Name = "lbl_gia";
-            this.lbl_gia.Size = new System.Drawing.Size(209, 32);
+            this.lbl_gia.Size = new System.Drawing.Size(208, 32);
             this.lbl_gia.TabIndex = 153;
             this.lbl_gia.Text = "Giá";
             // 
@@ -487,9 +487,9 @@
             this.lbl_loai.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbl_loai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_loai.ForeColor = System.Drawing.Color.White;
-            this.lbl_loai.Location = new System.Drawing.Point(549, 0);
+            this.lbl_loai.Location = new System.Drawing.Point(548, 0);
             this.lbl_loai.Name = "lbl_loai";
-            this.lbl_loai.Size = new System.Drawing.Size(242, 29);
+            this.lbl_loai.Size = new System.Drawing.Size(243, 29);
             this.lbl_loai.TabIndex = 151;
             this.lbl_loai.Text = "Loại";
             // 
@@ -1010,7 +1010,7 @@
             this.btn_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_them.Location = new System.Drawing.Point(3, 3);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(177, 74);
+            this.btn_them.Size = new System.Drawing.Size(176, 74);
             this.btn_them.TabIndex = 124;
             this.btn_them.Text = "Thêm";
             this.btn_them.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1100,7 +1100,7 @@
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.24309F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.530387F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.24309F));
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel12.Controls.Add(this.btn_them, 0, 0);
             this.tableLayoutPanel12.Controls.Add(this.btn_nhaplai, 2, 0);
@@ -1124,9 +1124,9 @@
             this.btn_huy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.btn_huy.Image = global::DashBoar.Properties.Resources.exits;
             this.btn_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_huy.Location = new System.Drawing.Point(517, 3);
+            this.btn_huy.Location = new System.Drawing.Point(514, 3);
             this.btn_huy.Name = "btn_huy";
-            this.btn_huy.Size = new System.Drawing.Size(177, 74);
+            this.btn_huy.Size = new System.Drawing.Size(176, 74);
             this.btn_huy.TabIndex = 133;
             this.btn_huy.Text = "Hủy";
             this.btn_huy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1445,7 +1445,7 @@
             this.tableLayoutPanel18.ColumnCount = 3;
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.181818F));
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 91.81818F));
-            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 11F));
             this.tableLayoutPanel18.Controls.Add(this.ptb_anhrauma, 1, 0);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel18.Location = new System.Drawing.Point(3, 3);
@@ -1465,7 +1465,7 @@
             this.ptb_anhrauma.Location = new System.Drawing.Point(21, 2);
             this.ptb_anhrauma.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ptb_anhrauma.Name = "ptb_anhrauma";
-            this.ptb_anhrauma.Size = new System.Drawing.Size(202, 203);
+            this.ptb_anhrauma.Size = new System.Drawing.Size(201, 203);
             this.ptb_anhrauma.TabIndex = 134;
             this.ptb_anhrauma.TabStop = false;
             // 

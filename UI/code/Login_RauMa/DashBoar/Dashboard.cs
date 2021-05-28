@@ -96,6 +96,8 @@ namespace DashBoar
                 btnThoat.Width = 298;
                 btnCaiDat.Width = 298;
                 btnHoaDon.Width = 298;
+                btnThoat.Width = 298;
+                btnThoat.ImageAlign = ContentAlignment.MiddleCenter;
                 btnMenu.BackgroundImage = Properties.Resources.menu1;
                 pnlform.Dock = DockStyle.Fill;
             }
@@ -106,6 +108,7 @@ namespace DashBoar
                 picAvatar.Height = 64;
                 picAvatar.Location = new Point(0, 100);
                 btnMenu.BackgroundImage = Properties.Resources.menu2;
+                btnThoat.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
 

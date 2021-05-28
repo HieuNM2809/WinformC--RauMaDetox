@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboar));
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnQLTaiKhoan = new System.Windows.Forms.Button();
             this.pnlmenu1 = new System.Windows.Forms.Panel();
+            this.btnMenu = new System.Windows.Forms.Button();
             this.lblChucVu = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.lbltentaikhoan = new System.Windows.Forms.Label();
-            this.pnlform = new System.Windows.Forms.Panel();
-            this.btnQLTaiKhoan = new System.Windows.Forms.Button();
-            this.btnMenu = new System.Windows.Forms.Button();
             this.picAvatar = new System.Windows.Forms.PictureBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnCaiDat = new System.Windows.Forms.Button();
             this.btnSanPham = new System.Windows.Forms.Button();
             this.btnHoaDon = new System.Windows.Forms.Button();
+            this.pnlform = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.pnlmenu1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
@@ -64,6 +64,28 @@
             this.pnlMenu.Size = new System.Drawing.Size(348, 695);
             this.pnlMenu.TabIndex = 2;
             // 
+            // btnQLTaiKhoan
+            // 
+            this.btnQLTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnQLTaiKhoan.FlatAppearance.BorderSize = 0;
+            this.btnQLTaiKhoan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnQLTaiKhoan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnQLTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLTaiKhoan.ForeColor = System.Drawing.Color.White;
+            this.btnQLTaiKhoan.Image = global::DashBoar.Properties.Resources.QLTaiKhoan;
+            this.btnQLTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLTaiKhoan.Location = new System.Drawing.Point(-1, 240);
+            this.btnQLTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnQLTaiKhoan.Name = "btnQLTaiKhoan";
+            this.btnQLTaiKhoan.Size = new System.Drawing.Size(347, 60);
+            this.btnQLTaiKhoan.TabIndex = 0;
+            this.btnQLTaiKhoan.Text = "     Tài Khoản";
+            this.btnQLTaiKhoan.UseVisualStyleBackColor = false;
+            this.btnQLTaiKhoan.Click += new System.EventHandler(this.btnQLTaiKhoan_Click);
+            this.btnQLTaiKhoan.MouseEnter += new System.EventHandler(this.btnQLTaiKhoan_MouseEnter);
+            this.btnQLTaiKhoan.MouseLeave += new System.EventHandler(this.btnQLTaiKhoan_MouseLeave);
+            // 
             // pnlmenu1
             // 
             this.pnlmenu1.Controls.Add(this.btnMenu);
@@ -76,6 +98,21 @@
             this.pnlmenu1.Name = "pnlmenu1";
             this.pnlmenu1.Size = new System.Drawing.Size(345, 219);
             this.pnlmenu1.TabIndex = 13;
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnMenu.BackgroundImage = global::DashBoar.Properties.Resources.menu1;
+            this.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMenu.FlatAppearance.BorderSize = 0;
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.Location = new System.Drawing.Point(13, 15);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(55, 44);
+            this.btnMenu.TabIndex = 12;
+            this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // lblChucVu
             // 
@@ -112,52 +149,6 @@
             this.lbltentaikhoan.TabIndex = 9;
             this.lbltentaikhoan.Text = "Tên Tài Khoản";
             this.lbltentaikhoan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnlform
-            // 
-            this.pnlform.ForeColor = System.Drawing.Color.Black;
-            this.pnlform.Location = new System.Drawing.Point(348, 0);
-            this.pnlform.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnlform.Name = "pnlform";
-            this.pnlform.Size = new System.Drawing.Size(1035, 695);
-            this.pnlform.TabIndex = 3;
-            // 
-            // btnQLTaiKhoan
-            // 
-            this.btnQLTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btnQLTaiKhoan.FlatAppearance.BorderSize = 0;
-            this.btnQLTaiKhoan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnQLTaiKhoan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnQLTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLTaiKhoan.ForeColor = System.Drawing.Color.White;
-            this.btnQLTaiKhoan.Image = global::DashBoar.Properties.Resources.QLTaiKhoan;
-            this.btnQLTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLTaiKhoan.Location = new System.Drawing.Point(-1, 240);
-            this.btnQLTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnQLTaiKhoan.Name = "btnQLTaiKhoan";
-            this.btnQLTaiKhoan.Size = new System.Drawing.Size(347, 60);
-            this.btnQLTaiKhoan.TabIndex = 0;
-            this.btnQLTaiKhoan.Text = "     Tài Khoản";
-            this.btnQLTaiKhoan.UseVisualStyleBackColor = false;
-            this.btnQLTaiKhoan.Click += new System.EventHandler(this.btnQLTaiKhoan_Click);
-            this.btnQLTaiKhoan.MouseEnter += new System.EventHandler(this.btnQLTaiKhoan_MouseEnter);
-            this.btnQLTaiKhoan.MouseLeave += new System.EventHandler(this.btnQLTaiKhoan_MouseLeave);
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btnMenu.BackgroundImage = global::DashBoar.Properties.Resources.menu1;
-            this.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMenu.FlatAppearance.BorderSize = 0;
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Location = new System.Drawing.Point(13, 15);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(55, 44);
-            this.btnMenu.TabIndex = 12;
-            this.btnMenu.UseVisualStyleBackColor = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // picAvatar
             // 
@@ -254,6 +245,15 @@
             this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click_1);
             this.btnHoaDon.MouseEnter += new System.EventHandler(this.btnHoaDon_MouseEnter);
             this.btnHoaDon.MouseLeave += new System.EventHandler(this.btnHoaDon_MouseLeave);
+            // 
+            // pnlform
+            // 
+            this.pnlform.ForeColor = System.Drawing.Color.Black;
+            this.pnlform.Location = new System.Drawing.Point(348, 0);
+            this.pnlform.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlform.Name = "pnlform";
+            this.pnlform.Size = new System.Drawing.Size(1035, 695);
+            this.pnlform.TabIndex = 3;
             // 
             // frmDashboar
             // 
