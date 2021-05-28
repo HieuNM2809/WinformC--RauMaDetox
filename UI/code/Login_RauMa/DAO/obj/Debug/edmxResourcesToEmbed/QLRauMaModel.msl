@@ -90,10 +90,13 @@
     <FunctionImportMapping FunctionImportName="XOASP" FunctionName="ql_raumaModel.Store.XOASP" />
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <FunctionImportMapping FunctionImportName="CapNhatNV" FunctionName="ql_raumaModel.Store.CapNhatNV" />
     <FunctionImportMapping FunctionImportName="ThemNV" FunctionName="ql_raumaModel.Store.ThemNV" />
     <FunctionImportMapping FunctionImportName="DOIMATKHAU" FunctionName="ql_raumaModel.Store.DOIMATKHAU" />
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     <EntitySetMapping Name="sysdiagrams">
@@ -137,6 +140,9 @@
     <FunctionImportMapping FunctionImportName="THEMNV" FunctionName="ql_raumaModel.Store.THEMNV" />
     <FunctionImportMapping FunctionImportName="XOAHD" FunctionName="ql_raumaModel.Store.XOAHD" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

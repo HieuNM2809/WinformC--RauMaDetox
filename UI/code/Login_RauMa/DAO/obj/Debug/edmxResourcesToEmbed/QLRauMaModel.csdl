@@ -221,8 +221,11 @@
     </FunctionImport>
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <FunctionImport Name="CapNhatNV">
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     <EntitySet Name="sysdiagrams" EntityType="ql_raumaModel.sysdiagram" />
@@ -233,6 +236,9 @@
     </FunctionImport>
     <FunctionImport Name="CAPNHATNV">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -248,10 +254,13 @@
       <Parameter Name="Email" Mode="In" Type="String" />
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <Parameter Name="hinh" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="ThemNV">
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     </FunctionImport>
@@ -290,6 +299,9 @@
     <FunctionImport Name="sp_upgraddiagrams" />
     <FunctionImport Name="THEMNV">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -304,6 +316,7 @@
       <Parameter Name="matkhau" Mode="In" Type="String" />
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <Parameter Name="hinh" Mode="In" Type="String" />
       <Parameter Name="Email" Mode="In" Type="String" />
     </FunctionImport>
@@ -313,11 +326,16 @@
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
       <Parameter Name="Email" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="XOAHD">
       <Parameter Name="idhd" Mode="In" Type="String" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

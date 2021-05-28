@@ -30,8 +30,11 @@
         {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             this.button2 = new System.Windows.Forms.Button();
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
             this.btnXacNhan = new System.Windows.Forms.Button();
@@ -56,10 +59,14 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             this.button1 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.colIDHD = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colMaSp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+=======
+            this.lstDanhSachSP = new System.Windows.Forms.ListView();
+>>>>>>> Stashed changes
 =======
             this.lstDanhSachSP = new System.Windows.Forms.ListView();
 >>>>>>> Stashed changes
@@ -101,7 +108,10 @@
             // 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
             // button1
@@ -344,6 +354,7 @@
             // 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
@@ -366,6 +377,10 @@
             // lstDanhSachSP
 >>>>>>> Stashed changes
             // 
+=======
+            // lstDanhSachSP
+            // 
+>>>>>>> Stashed changes
             this.lstDanhSachSP.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colSTT,
             this.colTenSp,
