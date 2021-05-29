@@ -10,7 +10,6 @@
     <Property Name="MaSp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
     <Property Name="SoLuong" Type="Int32" />
     <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
-    <Property Name="ChietKhau" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="HoaDon" Relationship="Self.FK_CTHoaDon_HoaDon" FromRole="CTHoaDon" ToRole="HoaDon" />
     <NavigationProperty Name="SanPham" Relationship="Self.FK_CTHoaDon_SanPham" FromRole="CTHoaDon" ToRole="SanPham" />
@@ -298,6 +297,14 @@
     <FunctionImport Name="DOIMATKHAU">
       <Parameter Name="taikhoan" Mode="In" Type="String" />
       <Parameter Name="matkhau" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="THEMCTHD">
+      <Parameter Name="stt" Mode="In" Type="String" />
+      <Parameter Name="idhd" Mode="In" Type="String" />
+      <Parameter Name="masp" Mode="In" Type="String" />
+      <Parameter Name="soluong" Mode="In" Type="Int32" />
+      <Parameter Name="dongia" Mode="In" Type="Decimal" />
+      <Parameter Name="tongtien" Mode="In" Type="Decimal" />
     </FunctionImport>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">

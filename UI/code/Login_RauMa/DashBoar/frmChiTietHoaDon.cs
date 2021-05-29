@@ -14,6 +14,7 @@ namespace DashBoar
 {
     public partial class frmChiTietHoaDon : Form
     {
+        
         ChiTietHoaDonBUS cthd = new ChiTietHoaDonBUS();
         int count = 0;
         float Tong = 0;
@@ -86,6 +87,36 @@ namespace DashBoar
                     i--;
                 }
             }
+        }
+
+        private void btnThemCTHD_Click(object sender, EventArgs e)
+        {
+            
+            int mahd = (cthd.max());
+            ChiTietHoaDonDTO hoadon = new ChiTietHoaDonDTO();
+            
+            for (int i = 0; i <= lstDSSP.Items.Count; i++)
+            {
+                count--;
+                hoadon.STT =count.ToString();
+                hoadon.IDHoaDon = mahd.ToString();
+                hoadon.MaSp = cbbTenSP.SelectedValue.ToString();
+                hoadon.TenSp = lstDSSP.Items[i].SubItems[1].Text;
+                hoadon.SoLuong = Convert.ToInt32(lstDSSP.Items[i].SubItems[2].Text);
+                hoadon.DonGia = Convert.ToInt32(lstDSSP.Items[i].SubItems[3].Text);
+                hoadon.TongTien = Convert.ToInt32(lstDSSP.Items[i].SubItems[4].Text);
+                if (cthd.hienthicthd(hoadon))
+                {
+                   dgvDSHD.DataSource = cthd.hienthi();
+                   MessageBox.Show("Cập nhật Thành Công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật Thất Bại !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            
+               
         }
     }
 }

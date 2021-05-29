@@ -172,3 +172,17 @@ SET TrangThai=0
 WHERE masp=@masp and MaSp=1;
 END
 
+CREATE PROC THEMCTHD
+(
+	@stt nvarchar(3),
+	@idhd nvarchar(3),
+	@masp nvarchar(5),
+	@soluong int,
+	@dongia money,
+	@tongtien money
+)
+AS
+BEGIN
+	INSERT INTO CTHoaDon(STT,IDHoaDon,MaSp,SoLuong,DonGia,TongTien) 
+	VALUES (@stt,@idhd,@masp,@soluong,@dongia,@tongtien)
+END

@@ -9,7 +9,6 @@
           <ScalarProperty Name="MaSp" ColumnName="MaSp" />
           <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
           <ScalarProperty Name="DonGia" ColumnName="DonGia" />
-          <ScalarProperty Name="ChietKhau" ColumnName="ChietKhau" />
           <ScalarProperty Name="TongTien" ColumnName="TongTien" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -129,5 +128,6 @@
     <FunctionImportMapping FunctionImportName="XoaNV" FunctionName="ql_raumaModel.Store.XoaNV" />
     <FunctionImportMapping FunctionImportName="XOASP" FunctionName="ql_raumaModel.Store.XOASP" />
     <FunctionImportMapping FunctionImportName="DOIMATKHAU" FunctionName="ql_raumaModel.Store.DOIMATKHAU" />
+    <FunctionImportMapping FunctionImportName="THEMCTHD" FunctionName="ql_raumaModel.Store.THEMCTHD" />
   </EntityContainerMapping>
 </Mapping>
