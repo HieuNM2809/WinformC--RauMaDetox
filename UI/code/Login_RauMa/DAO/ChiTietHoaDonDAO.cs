@@ -27,7 +27,7 @@ namespace DAO
             List<ChiTietHoaDonDTO> lssanpham = new List<ChiTietHoaDonDTO>();
             lssanpham = qlrauma.SanPhams.Where(v => v.MaSp == masanpham).Select(u => new ChiTietHoaDonDTO
             {
-                DonGia=(decimal)u.GiaTien
+                DonGia=(int)u.GiaTien
 
             }).ToList();
             qlrauma.SaveChanges();

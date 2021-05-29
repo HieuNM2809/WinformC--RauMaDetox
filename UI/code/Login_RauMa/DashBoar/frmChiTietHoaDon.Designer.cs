@@ -31,26 +31,23 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.colSTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colTongTien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colChietKhau = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colDonGia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colSoLuong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colTenSp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstDSSP = new System.Windows.Forms.ListView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblGia = new System.Windows.Forms.Label();
-            this.txtChietKhau = new System.Windows.Forms.RichTextBox();
-            this.cbbTenSP = new System.Windows.Forms.ComboBox();
-            this.lbl_chietkhau = new System.Windows.Forms.Label();
             this.lbl_tensp = new System.Windows.Forms.Label();
-            this.lbl_soluong = new System.Windows.Forms.Label();
+            this.cbbTenSP = new System.Windows.Forms.ComboBox();
             this.numSoLuong = new System.Windows.Forms.NumericUpDown();
             this.cbbGia = new System.Windows.Forms.ComboBox();
+            this.lbl_soluong = new System.Windows.Forms.Label();
+            this.lblGia = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtTongTien = new System.Windows.Forms.RichTextBox();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.lbl_tong = new System.Windows.Forms.Label();
             this.lbl_tongtien = new System.Windows.Forms.Label();
-            this.txtTongSoLuong = new System.Windows.Forms.RichTextBox();
+            this.txtTongSoLuong = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_bo = new System.Windows.Forms.Button();
@@ -86,11 +83,6 @@
             this.colTongTien.Text = "Tổng Tiền";
             this.colTongTien.Width = 227;
             // 
-            // colChietKhau
-            // 
-            this.colChietKhau.Text = "Chiết Khấu ";
-            this.colChietKhau.Width = 105;
-            // 
             // colDonGia
             // 
             this.colDonGia.Text = "Giá";
@@ -113,9 +105,9 @@
             this.colTenSp,
             this.colSoLuong,
             this.colDonGia,
-            this.colChietKhau,
             this.colTongTien});
             this.lstDSSP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstDSSP.FullRowSelect = true;
             this.lstDSSP.GridLines = true;
             this.lstDSSP.HideSelection = false;
             this.lstDSSP.Location = new System.Drawing.Point(585, 3);
@@ -148,70 +140,21 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.lblGia, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.txtChietKhau, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.cbbTenSP, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.lbl_chietkhau, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.lbl_tensp, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.lbl_soluong, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.numSoLuong, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.cbbGia, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_tensp, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.cbbTenSP, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.numSoLuong, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.cbbGia, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_soluong, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.lblGia, 0, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 4;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(576, 118);
             this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // lblGia
-            // 
-            this.lblGia.AutoSize = true;
-            this.lblGia.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGia.ForeColor = System.Drawing.Color.White;
-            this.lblGia.Location = new System.Drawing.Point(3, 87);
-            this.lblGia.Name = "lblGia";
-            this.lblGia.Size = new System.Drawing.Size(282, 31);
-            this.lblGia.TabIndex = 11;
-            this.lblGia.Text = "Giá Tiền";
-            this.lblGia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtChietKhau
-            // 
-            this.txtChietKhau.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtChietKhau.Location = new System.Drawing.Point(291, 3);
-            this.txtChietKhau.Name = "txtChietKhau";
-            this.txtChietKhau.Size = new System.Drawing.Size(282, 23);
-            this.txtChietKhau.TabIndex = 10;
-            this.txtChietKhau.Text = "";
-            // 
-            // cbbTenSP
-            // 
-            this.cbbTenSP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbbTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTenSP.FormattingEnabled = true;
-            this.cbbTenSP.Location = new System.Drawing.Point(291, 32);
-            this.cbbTenSP.Name = "cbbTenSP";
-            this.cbbTenSP.Size = new System.Drawing.Size(282, 28);
-            this.cbbTenSP.TabIndex = 4;
-            this.cbbTenSP.SelectedValueChanged += new System.EventHandler(this.cbbTenSP_SelectedValueChanged);
-            // 
-            // lbl_chietkhau
-            // 
-            this.lbl_chietkhau.AutoSize = true;
-            this.lbl_chietkhau.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_chietkhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_chietkhau.ForeColor = System.Drawing.Color.White;
-            this.lbl_chietkhau.Location = new System.Drawing.Point(3, 0);
-            this.lbl_chietkhau.Name = "lbl_chietkhau";
-            this.lbl_chietkhau.Size = new System.Drawing.Size(282, 29);
-            this.lbl_chietkhau.TabIndex = 0;
-            this.lbl_chietkhau.Text = "Chiết Khấu";
-            this.lbl_chietkhau.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_tensp
             // 
@@ -219,31 +162,30 @@
             this.lbl_tensp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_tensp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tensp.ForeColor = System.Drawing.Color.White;
-            this.lbl_tensp.Location = new System.Drawing.Point(3, 29);
+            this.lbl_tensp.Location = new System.Drawing.Point(3, 0);
             this.lbl_tensp.Name = "lbl_tensp";
-            this.lbl_tensp.Size = new System.Drawing.Size(282, 29);
+            this.lbl_tensp.Size = new System.Drawing.Size(282, 39);
             this.lbl_tensp.TabIndex = 1;
             this.lbl_tensp.Text = "Tên Sản Phẩm";
             this.lbl_tensp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_tensp.Click += new System.EventHandler(this.lbl_tensp_Click);
             // 
-            // lbl_soluong
+            // cbbTenSP
             // 
-            this.lbl_soluong.AutoSize = true;
-            this.lbl_soluong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_soluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_soluong.ForeColor = System.Drawing.Color.White;
-            this.lbl_soluong.Location = new System.Drawing.Point(3, 58);
-            this.lbl_soluong.Name = "lbl_soluong";
-            this.lbl_soluong.Size = new System.Drawing.Size(282, 29);
-            this.lbl_soluong.TabIndex = 2;
-            this.lbl_soluong.Text = "Số Lượng";
-            this.lbl_soluong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cbbTenSP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbbTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTenSP.FormattingEnabled = true;
+            this.cbbTenSP.Location = new System.Drawing.Point(291, 3);
+            this.cbbTenSP.Name = "cbbTenSP";
+            this.cbbTenSP.Size = new System.Drawing.Size(282, 28);
+            this.cbbTenSP.TabIndex = 4;
+            this.cbbTenSP.SelectedValueChanged += new System.EventHandler(this.cbbTenSP_SelectedValueChanged);
             // 
             // numSoLuong
             // 
             this.numSoLuong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.numSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numSoLuong.Location = new System.Drawing.Point(291, 61);
+            this.numSoLuong.Location = new System.Drawing.Point(291, 42);
             this.numSoLuong.Name = "numSoLuong";
             this.numSoLuong.Size = new System.Drawing.Size(282, 27);
             this.numSoLuong.TabIndex = 5;
@@ -253,10 +195,36 @@
             this.cbbGia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbGia.FormattingEnabled = true;
-            this.cbbGia.Location = new System.Drawing.Point(291, 90);
+            this.cbbGia.Location = new System.Drawing.Point(291, 81);
             this.cbbGia.Name = "cbbGia";
             this.cbbGia.Size = new System.Drawing.Size(282, 28);
             this.cbbGia.TabIndex = 12;
+            // 
+            // lbl_soluong
+            // 
+            this.lbl_soluong.AutoSize = true;
+            this.lbl_soluong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_soluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_soluong.ForeColor = System.Drawing.Color.White;
+            this.lbl_soluong.Location = new System.Drawing.Point(3, 39);
+            this.lbl_soluong.Name = "lbl_soluong";
+            this.lbl_soluong.Size = new System.Drawing.Size(282, 39);
+            this.lbl_soluong.TabIndex = 2;
+            this.lbl_soluong.Text = "Số Lượng";
+            this.lbl_soluong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblGia
+            // 
+            this.lblGia.AutoSize = true;
+            this.lblGia.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGia.ForeColor = System.Drawing.Color.White;
+            this.lblGia.Location = new System.Drawing.Point(3, 78);
+            this.lblGia.Name = "lblGia";
+            this.lblGia.Size = new System.Drawing.Size(282, 40);
+            this.lblGia.TabIndex = 11;
+            this.lblGia.Text = "Giá Tiền";
+            this.lblGia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel4
             // 
@@ -279,11 +247,11 @@
             // txtTongTien
             // 
             this.txtTongTien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongTien.Location = new System.Drawing.Point(291, 62);
             this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(283, 53);
-            this.txtTongTien.TabIndex = 9;
-            this.txtTongTien.Text = "";
+            this.txtTongTien.Size = new System.Drawing.Size(283, 27);
+            this.txtTongTien.TabIndex = 11;
             // 
             // lbl_tong
             // 
@@ -296,7 +264,7 @@
             this.lbl_tong.Size = new System.Drawing.Size(282, 59);
             this.lbl_tong.TabIndex = 6;
             this.lbl_tong.Text = "Tổng Số Lượng";
-            this.lbl_tong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_tong.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbl_tongtien
             // 
@@ -309,16 +277,16 @@
             this.lbl_tongtien.Size = new System.Drawing.Size(282, 59);
             this.lbl_tongtien.TabIndex = 7;
             this.lbl_tongtien.Text = "Tổng Tiền";
-            this.lbl_tongtien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_tongtien.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtTongSoLuong
             // 
             this.txtTongSoLuong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTongSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongSoLuong.Location = new System.Drawing.Point(291, 3);
             this.txtTongSoLuong.Name = "txtTongSoLuong";
-            this.txtTongSoLuong.Size = new System.Drawing.Size(283, 53);
-            this.txtTongSoLuong.TabIndex = 8;
-            this.txtTongSoLuong.Text = "";
+            this.txtTongSoLuong.Size = new System.Drawing.Size(283, 27);
+            this.txtTongSoLuong.TabIndex = 10;
             // 
             // button1
             // 
@@ -362,6 +330,7 @@
             this.btn_bo.TabIndex = 1;
             this.btn_bo.Text = "Bỏ chọn";
             this.btn_bo.UseVisualStyleBackColor = false;
+            this.btn_bo.Click += new System.EventHandler(this.btn_bo_Click);
             // 
             // btnXacNhan
             // 
@@ -424,30 +393,27 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ColumnHeader colSTT;
         private System.Windows.Forms.ColumnHeader colTongTien;
-        private System.Windows.Forms.ColumnHeader colChietKhau;
         private System.Windows.Forms.ColumnHeader colDonGia;
         private System.Windows.Forms.ColumnHeader colSoLuong;
         private System.Windows.Forms.ColumnHeader colTenSp;
         private System.Windows.Forms.ListView lstDSSP;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.RichTextBox txtChietKhau;
         private System.Windows.Forms.ComboBox cbbTenSP;
-        private System.Windows.Forms.Label lbl_chietkhau;
         private System.Windows.Forms.Label lbl_tensp;
         private System.Windows.Forms.Label lbl_soluong;
         private System.Windows.Forms.NumericUpDown numSoLuong;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.RichTextBox txtTongTien;
         private System.Windows.Forms.Label lbl_tong;
         private System.Windows.Forms.Label lbl_tongtien;
-        private System.Windows.Forms.RichTextBox txtTongSoLuong;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Button btn_bo;
         private System.Windows.Forms.Button btnXacNhan;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label lblGia;
+        private System.Windows.Forms.TextBox txtTongTien;
+        private System.Windows.Forms.TextBox txtTongSoLuong;
         private System.Windows.Forms.ComboBox cbbGia;
+        private System.Windows.Forms.Label lblGia;
     }
 }
