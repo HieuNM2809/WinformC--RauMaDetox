@@ -19,7 +19,6 @@ namespace DAO
         public string MaSp { get; set; }
         public Nullable<int> SoLuong { get; set; }
         public Nullable<decimal> DonGia { get; set; }
-        public Nullable<decimal> ChietKhau { get; set; }
         public Nullable<decimal> TongTien { get; set; }
     
         public virtual HoaDon HoaDon { get; set; }

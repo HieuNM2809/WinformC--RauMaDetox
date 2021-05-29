@@ -14,6 +14,7 @@ namespace DashBoar
 {
     public partial class frmChiTietHoaDon : Form
     {
+        ChiTietHoaDonDTO hoadon = new ChiTietHoaDonDTO();
         ChiTietHoaDonBUS cthd = new ChiTietHoaDonBUS();
         int count = 0;
         float Tong = 0;
@@ -43,6 +44,8 @@ namespace DashBoar
             cbbTenSP.DataSource = cthd.LayDSSP();
             cbbTenSP.DisplayMember = "Tensp";
             cbbTenSP.ValueMember = "Masp";
+
+            dgvDSHD.DataSource = cthd.hienthi();
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
@@ -86,6 +89,30 @@ namespace DashBoar
                     i--;
                 }
             }
+        }
+
+        private void btnThemCTHD_Click(object sender, EventArgs e)
+        {
+            
+            int mahd = (cthd.max());
+            
+
+            for (int i = 1; i < lstDSSP.Items.Count; i++)
+            {
+                hoadon.STT = i.ToString();
+                hoadon.IDHoaDon = mahd.ToString();
+                hoadon.MaSp = cbbTenSP.SelectedValue.ToString();
+                hoadon.TenSp = lstDSSP.Items[i].SubItems[1].Text;
+                hoadon.SoLuong = Convert.ToInt32(lstDSSP.Items[i].SubItems[2].Text);
+                hoadon.DonGia = Convert.ToInt32(lstDSSP.Items[i].SubItems[3].Text);
+                hoadon.TongTien = Convert.ToInt32(lstDSSP.Items[i].SubItems[4].Text);
+                if(cthd.hienthicthd(hoadon))
+                {
+                    frmChiTietHoaDon_Load(sender,e); 
+                    MessageBox.Show("Thêm Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }    
+            }
+              
         }
     }
 }

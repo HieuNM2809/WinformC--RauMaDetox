@@ -43,11 +43,13 @@ namespace DashBoar
             dgvHoaDon.Columns[2].HeaderText = "Ngày lập hóa đơn";
         }
         private HoaDonBUS hoadon = new HoaDonBUS();
-
+        private ChiTietHoaDonBUS cthd = new ChiTietHoaDonBUS();
         private HoaDonDTO hd = new HoaDonDTO();
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
-            this. 
+            
+            int mahd = (cthd.max()) + 1;
+            txtIDHoaDon.Text = mahd.ToString();
             dtPNgayLap.Value = DateTime.Now;
             dgvHoaDon.DataSource = hoadon.laydshd();
 
@@ -100,6 +102,32 @@ namespace DashBoar
             else
             {
                 MessageBox.Show("Xóa Thất Bại !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+        }
+
+        private void tạoHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnThemHD_Click(object sender, EventArgs e)
+        {
+            int mahd = (cthd.max()) + 1;
+            hd.id = mahd.ToString();
+            hd.idnhanvien = txtIDNhanVien.Text;
+            hd.ngaylaphoadon = dtPNgayLap.Value;
+            if (hoadon.themHD(hd))
+            {
+                frmChiTietHoaDon frmcthd = new frmChiTietHoaDon(); ;
+                frmcthd.ShowDialog();
+                dgvHoaDon.DataSource = hoadon.laydshd();
+                MessageBox.Show("Cập nhật Thành Công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật Thất Bại !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
         }

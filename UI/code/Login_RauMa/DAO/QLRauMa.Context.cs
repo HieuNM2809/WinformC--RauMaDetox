@@ -368,5 +368,34 @@ namespace DAO
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("DOIMATKHAU", taikhoanParameter, matkhauParameter);
         }
+    
+        public virtual int THEMCTHD(string stt, string idhd, string masp, Nullable<int> soluong, Nullable<decimal> dongia, Nullable<decimal> tongtien)
+        {
+            var sttParameter = stt != null ?
+                new ObjectParameter("stt", stt) :
+                new ObjectParameter("stt", typeof(string));
+    
+            var idhdParameter = idhd != null ?
+                new ObjectParameter("idhd", idhd) :
+                new ObjectParameter("idhd", typeof(string));
+    
+            var maspParameter = masp != null ?
+                new ObjectParameter("masp", masp) :
+                new ObjectParameter("masp", typeof(string));
+    
+            var soluongParameter = soluong.HasValue ?
+                new ObjectParameter("soluong", soluong) :
+                new ObjectParameter("soluong", typeof(int));
+    
+            var dongiaParameter = dongia.HasValue ?
+                new ObjectParameter("dongia", dongia) :
+                new ObjectParameter("dongia", typeof(decimal));
+    
+            var tongtienParameter = tongtien.HasValue ?
+                new ObjectParameter("tongtien", tongtien) :
+                new ObjectParameter("tongtien", typeof(decimal));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("THEMCTHD", sttParameter, idhdParameter, maspParameter, soluongParameter, dongiaParameter, tongtienParameter);
+        }
     }
 }

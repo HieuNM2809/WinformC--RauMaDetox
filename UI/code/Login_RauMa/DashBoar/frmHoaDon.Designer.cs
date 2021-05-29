@@ -47,6 +47,7 @@
             this.colTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnThemHD = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -85,7 +86,7 @@
             this.btnTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.btnTimKiem.Image = global::DashBoar.Properties.Resources.search3;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(693, 214);
+            this.btnTimKiem.Location = new System.Drawing.Point(693, 199);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(282, 61);
             this.btnTimKiem.TabIndex = 19;
@@ -102,7 +103,7 @@
             this.btnCapNhat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.btnCapNhat.Image = global::DashBoar.Properties.Resources.chínhua1;
             this.btnCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCapNhat.Location = new System.Drawing.Point(693, 143);
+            this.btnCapNhat.Location = new System.Drawing.Point(693, 128);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(282, 60);
             this.btnCapNhat.TabIndex = 18;
@@ -120,7 +121,7 @@
             this.btnXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.btnXoa.Image = global::DashBoar.Properties.Resources.delete;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(693, 291);
+            this.btnXoa.Location = new System.Drawing.Point(693, 276);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(282, 59);
             this.btnXoa.TabIndex = 16;
@@ -161,11 +162,11 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtIDHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.txtIDHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtIDHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDHoaDon.ForeColor = System.Drawing.Color.White;
             this.txtIDHoaDon.Location = new System.Drawing.Point(144, 113);
             this.txtIDHoaDon.Name = "txtIDHoaDon";
-            this.txtIDHoaDon.Size = new System.Drawing.Size(176, 21);
+            this.txtIDHoaDon.Size = new System.Drawing.Size(176, 27);
             this.txtIDHoaDon.TabIndex = 7;
             // 
             // label1
@@ -200,11 +201,11 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtIDNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.txtIDNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtIDNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDNhanVien.ForeColor = System.Drawing.Color.White;
-            this.txtIDNhanVien.Location = new System.Drawing.Point(495, 110);
+            this.txtIDNhanVien.Location = new System.Drawing.Point(467, 110);
             this.txtIDNhanVien.Name = "txtIDNhanVien";
-            this.txtIDNhanVien.Size = new System.Drawing.Size(155, 21);
+            this.txtIDNhanVien.Size = new System.Drawing.Size(183, 27);
             this.txtIDNhanVien.TabIndex = 24;
             // 
             // dgvHoaDon
@@ -280,11 +281,30 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(987, 49);
             this.tableLayoutPanel1.TabIndex = 27;
             // 
+            // btnThemHD
+            // 
+            this.btnThemHD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThemHD.BackColor = System.Drawing.Color.White;
+            this.btnThemHD.FlatAppearance.BorderSize = 0;
+            this.btnThemHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemHD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnThemHD.Image = global::DashBoar.Properties.Resources.plus;
+            this.btnThemHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThemHD.Location = new System.Drawing.Point(693, 56);
+            this.btnThemHD.Name = "btnThemHD";
+            this.btnThemHD.Size = new System.Drawing.Size(282, 60);
+            this.btnThemHD.TabIndex = 29;
+            this.btnThemHD.Text = "Thêm";
+            this.btnThemHD.UseVisualStyleBackColor = false;
+            this.btnThemHD.Click += new System.EventHandler(this.btnThemHD_Click);
+            // 
             // frmHoaDon
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(987, 638);
+            this.Controls.Add(this.btnThemHD);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
@@ -332,5 +352,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colNgayLapHoaDon;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTrangThai;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btnThemHD;
     }
 }

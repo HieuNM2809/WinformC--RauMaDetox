@@ -10,7 +10,6 @@
     <Property Name="MaSp" Type="nvarchar" MaxLength="5" />
     <Property Name="SoLuong" Type="int" />
     <Property Name="DonGia" Type="money" />
-    <Property Name="ChietKhau" Type="money" />
     <Property Name="TongTien" Type="money" />
   </EntityType>
   <EntityType Name="CTPhanQuyen">
@@ -219,6 +218,14 @@
     <Parameter Name="Giatien" Type="money" Mode="In" />
     <Parameter Name="Mota" Type="nvarchar" Mode="In" />
     <Parameter Name="Hinh" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="THEMCTHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stt" Type="nvarchar" Mode="In" />
+    <Parameter Name="idhd" Type="nvarchar" Mode="In" />
+    <Parameter Name="masp" Type="nvarchar" Mode="In" />
+    <Parameter Name="soluong" Type="int" Mode="In" />
+    <Parameter Name="dongia" Type="money" Mode="In" />
+    <Parameter Name="tongtien" Type="money" Mode="In" />
   </Function>
   <Function Name="THEMHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="idhd" Type="nvarchar" Mode="In" />

@@ -10,6 +10,7 @@ namespace BUS
 {
     public class ChiTietHoaDonBUS
     {
+        int i;
         ChiTietHoaDonDAO hd = new ChiTietHoaDonDAO();
         ChiTietHoaDonDTO cthd = new ChiTietHoaDonDTO();
         public List<ChiTietHoaDonDTO> LayDSSP()
@@ -19,6 +20,18 @@ namespace BUS
         public List<ChiTietHoaDonDTO> LayGia(string masp)
         {
             return hd.LayGia(masp);
+        }
+        public List<ChiTietHoaDonDTO> hienthi()
+        {
+            return hd.HienThi();
+        }
+        public bool hienthicthd(ChiTietHoaDonDTO hoadon)
+        {
+            return hd.HienthiCTHoaDon(hoadon);
+        }
+        public int max()
+        {
+            return Convert.ToInt32(hd.MAX());
         }
     }
 }

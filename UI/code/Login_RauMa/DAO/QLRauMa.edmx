@@ -15,7 +15,6 @@
           <Property Name="MaSp" Type="nvarchar" MaxLength="5" />
           <Property Name="SoLuong" Type="int" />
           <Property Name="DonGia" Type="money" />
-          <Property Name="ChietKhau" Type="money" />
           <Property Name="TongTien" Type="money" />
         </EntityType>
         <EntityType Name="CTPhanQuyen">
@@ -225,6 +224,14 @@
           <Parameter Name="Mota" Type="nvarchar" Mode="In" />
           <Parameter Name="Hinh" Type="nvarchar(max)" Mode="In" />
         </Function>
+        <Function Name="THEMCTHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="stt" Type="nvarchar" Mode="In" />
+          <Parameter Name="idhd" Type="nvarchar" Mode="In" />
+          <Parameter Name="masp" Type="nvarchar" Mode="In" />
+          <Parameter Name="soluong" Type="int" Mode="In" />
+          <Parameter Name="dongia" Type="money" Mode="In" />
+          <Parameter Name="tongtien" Type="money" Mode="In" />
+        </Function>
         <Function Name="THEMHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idhd" Type="nvarchar" Mode="In" />
           <Parameter Name="idnv" Type="nvarchar" Mode="In" />
@@ -308,7 +315,6 @@
           <Property Name="MaSp" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Name="SoLuong" Type="Int32" />
           <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="ChietKhau" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="HoaDon" Relationship="Self.FK_CTHoaDon_HoaDon" FromRole="CTHoaDon" ToRole="HoaDon" />
           <NavigationProperty Name="SanPham" Relationship="Self.FK_CTHoaDon_SanPham" FromRole="CTHoaDon" ToRole="SanPham" />
@@ -597,6 +603,14 @@
             <Parameter Name="taikhoan" Mode="In" Type="String" />
             <Parameter Name="matkhau" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="THEMCTHD">
+            <Parameter Name="stt" Mode="In" Type="String" />
+            <Parameter Name="idhd" Mode="In" Type="String" />
+            <Parameter Name="masp" Mode="In" Type="String" />
+            <Parameter Name="soluong" Mode="In" Type="Int32" />
+            <Parameter Name="dongia" Mode="In" Type="Decimal" />
+            <Parameter Name="tongtien" Mode="In" Type="Decimal" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -623,7 +637,6 @@
                 <ScalarProperty Name="MaSp" ColumnName="MaSp" />
                 <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
                 <ScalarProperty Name="DonGia" ColumnName="DonGia" />
-                <ScalarProperty Name="ChietKhau" ColumnName="ChietKhau" />
                 <ScalarProperty Name="TongTien" ColumnName="TongTien" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -743,6 +756,7 @@
           <FunctionImportMapping FunctionImportName="XoaNV" FunctionName="ql_raumaModel.Store.XoaNV" />
           <FunctionImportMapping FunctionImportName="XOASP" FunctionName="ql_raumaModel.Store.XOASP" />
           <FunctionImportMapping FunctionImportName="DOIMATKHAU" FunctionName="ql_raumaModel.Store.DOIMATKHAU" />
+          <FunctionImportMapping FunctionImportName="THEMCTHD" FunctionName="ql_raumaModel.Store.THEMCTHD" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
