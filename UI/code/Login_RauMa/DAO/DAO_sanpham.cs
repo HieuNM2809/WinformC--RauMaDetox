@@ -65,6 +65,11 @@ namespace DAO
                 return false;
             }
         }
+        public string max()
+        {
+            string a = qlrauma.SanPhams.Max(c => c.MaSp);
+            return a;
+        }
         public bool xoaSP(DTO_sanpham sp)
         {
             try
