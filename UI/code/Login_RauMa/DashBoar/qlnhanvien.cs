@@ -17,6 +17,7 @@ namespace DashBoar
             InitializeComponent();
         }
 
+        public static string QuyenNV;
         private void frmloadFill(object frm)
         {
             if (this.panel_show.Controls.Count > 0)
@@ -67,8 +68,20 @@ namespace DashBoar
 
         private void QLNhanVien_Load(object sender, EventArgs e)
         {
-            FrmDangKiTaiKhoan DKTK = new FrmDangKiTaiKhoan();
-            frmloadNoNe(DKTK);
+            if (QuyenNV == "Admin")
+            {
+                tsmlQLNV.Enabled = true;
+                tsmlDKTK.Enabled = true;
+                FrmDangKiTaiKhoan DKTK = new FrmDangKiTaiKhoan();
+                frmloadNoNe(DKTK);
+                return;
+            }
+            if(QuyenNV == "NV")
+            {
+                FrmDoiMatKhau DMK = new FrmDoiMatKhau();
+                frmloadNoNe(DMK);
+            }    
+            
         }
     }
 }

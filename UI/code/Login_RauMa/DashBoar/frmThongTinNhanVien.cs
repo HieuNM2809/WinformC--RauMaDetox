@@ -33,6 +33,7 @@ namespace DashBoar
 
         }
 
+        #region CHỨC NĂNG
         private void btnThem_Click(object sender, EventArgs e)
         {
             if ( String.IsNullOrEmpty(txtHoTen.Text) || String.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtSDT.Text) || String.IsNullOrEmpty(txtTaiKhoan.Text) 
@@ -112,28 +113,6 @@ namespace DashBoar
             else MessageBox.Show(Constants.UPDATE_FAIL, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void dgvThongTinNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex < 0) return;
-                txtID.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtHoTen.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[1].Value.ToString();
-                dtpNgaySinh.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[2].Value.ToString();
-                if (dgvThongTinNhanVien.Rows[e.RowIndex].Cells[3].Value.ToString() == "Nam") radNam.Checked = true;
-                else radNu.Checked = true;
-                cbbChucDanh.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[4].Value.ToString();
-                cbbLoaiNhanVien.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[5].Value.ToString();
-                txtSDT.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[6].Value.ToString();
-                txtTaiKhoan.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[7].Value.ToString();
-                txtMatKhau.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[8].Value.ToString();
-                txtEmail.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[9].Value.ToString();
-
-                string path = string.Format(@"{0}\..\..\imgNhanVien\{1}", Environment.CurrentDirectory,
-                    dgvThongTinNhanVien.Rows[e.RowIndex].Cells[10].Value.ToString());
-
-                picNhanVien.Image = Image.FromFile(path);
-            picNhanVien.Enabled = false;
-        }
-
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             picNhanVien.Enabled = true;
@@ -155,6 +134,29 @@ namespace DashBoar
             picNhanVien.Image = null;
             txtID.Text = i + "";
             frmThongTinNhanVien_Load(sender, e);
+            txtTaiKhoan.Enabled = true;
+        }
+
+        private void dgvThongTinNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+                txtID.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtHoTen.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[1].Value.ToString();
+                dtpNgaySinh.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[2].Value.ToString();
+                if (dgvThongTinNhanVien.Rows[e.RowIndex].Cells[3].Value.ToString() == "Nam") radNam.Checked = true;
+                else radNu.Checked = true;
+                cbbChucDanh.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[4].Value.ToString();
+                cbbLoaiNhanVien.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[5].Value.ToString();
+                txtSDT.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txtTaiKhoan.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[7].Value.ToString();
+                txtMatKhau.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[8].Value.ToString();
+                txtEmail.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[9].Value.ToString();
+
+                string path = string.Format(@"{0}\..\..\imgNhanVien\{1}", Environment.CurrentDirectory,
+                    dgvThongTinNhanVien.Rows[e.RowIndex].Cells[10].Value.ToString());
+
+                picNhanVien.Image = Image.FromFile(path);
+                picNhanVien.Enabled = false;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -172,6 +174,23 @@ namespace DashBoar
             else MessageBox.Show(Constants.DELETE_FAIL, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if(radHoTen.Checked == true )
+            {
+               dgvThongTinNhanVien.DataSource = _nhanvienBUS.TimKiemHoTenNV(txtTimKiem.Text);
+                return;
+            }
+            if(radID.Checked == true )
+            {
+                dgvThongTinNhanVien.DataSource = _nhanvienBUS.TimKiemIDNV(txtTimKiem.Text);
+                return;
+            }    
+        }
+
+        #endregion
+
+        #region HÀM HỖ TRỢ
         private string ChonGioiTinh()
         {
             if (radNam.Checked == true) return radNam.Text;
@@ -193,20 +212,72 @@ namespace DashBoar
 
             bmp.Save(path, ImageFormat.Jpeg);
         }
+        #endregion
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
+        #region THÊM THÔNG TIN BUTTON
+        private void MouseHover(string text, Button btn)
         {
-            if(radHoTen.Checked == true )
-            {
-               dgvThongTinNhanVien.DataSource = _nhanvienBUS.TimKiemHoTenNV(txtTimKiem.Text);
-                return;
-            }
-            if(radID.Checked == true )
-            {
-                dgvThongTinNhanVien.DataSource = _nhanvienBUS.TimKiemIDNV(txtTimKiem.Text);
-                return;
-            }    
+            btn.Image = null;
+            btn.ForeColor = Color.FromArgb(39, 174, 96);
+            btn.Text = text;
         }
+
+        private void MouseLeave(Button btn, string tenhinh)
+        {
+            btn.Text = null;
+            string path = string.Format(@"{0}\..\..\Icon\{1}.png", Environment.CurrentDirectory, tenhinh);
+            btn.Image = Image.FromFile(path);
+        }
+
+        private void btnThem_MouseHover(object sender, EventArgs e)
+        {
+            MouseHover("Thêm", btnThem);
+        }
+
+        private void btnThem_MouseLeave(object sender, EventArgs e)
+        {
+            MouseLeave(btnThem, "plus");
+        }
+
+        private void btnSua_MouseHover(object sender, EventArgs e)
+        {
+            MouseHover("Sửa", btnSua);
+        }
+
+        private void btnSua_MouseLeave(object sender, EventArgs e)
+        {
+            MouseLeave(btnSua, "chinhsua");
+        }
+
+        private void btnXoa_MouseHover(object sender, EventArgs e)
+        {
+            MouseHover("Xóa", btnXoa);
+        }
+
+        private void btnXoa_MouseLeave(object sender, EventArgs e)
+        {
+            MouseLeave(btnXoa, "delete");
+        }
+        private void btnLamMoi_MouseHover(object sender, EventArgs e)
+        {
+            MouseHover("Làm mới", btnLamMoi);
+        }
+
+        private void btnLamMoi_MouseLeave(object sender, EventArgs e)
+        {
+            MouseLeave(btnLamMoi, "loop2");
+        }
+
+        private void btnThoat_MouseHover(object sender, EventArgs e)
+        {
+            MouseHover("Thoát", btnThoat);
+        }
+
+        private void btnThoat_MouseLeave(object sender, EventArgs e)
+        {
+            MouseLeave(btnThoat, "no");
+        }
+        #endregion
     }
 }
 

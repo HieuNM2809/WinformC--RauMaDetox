@@ -21,6 +21,7 @@ namespace DashBoar
         DTO_loaisp loaisanpham = new DTO_loaisp();
         private BUS_sanpham _sanpham= new BUS_sanpham();
         private BUS_loaisp _dsloai = new BUS_loaisp();
+        public static string QuyenSP;
         public QL_SanPham()
         {
             InitializeComponent();
@@ -60,8 +61,12 @@ namespace DashBoar
         {
             string a = "LI001";
             QL_SanPham_Load(sender, e, a);
-            
-           
+            if (QuyenSP == "NV")
+            {
+                tp_qlsp.TabPages.Remove(tp_them);
+                tp_qlsp.TabPages.Remove(tp_suaxoa);
+                return;
+            }
         }
         
    //////////////////////////////////////////////////////// các button thoát//////////////////////////////////////////////////////////

@@ -56,6 +56,7 @@ namespace DashBoar
                         nv.GioiTinh = ChonGioiTinh();
                         nv.ChucDanh = "Nhân Viên";
                         nv.SDT = txtSDT.Text;
+                        nv.Email = txtEmail.Text;
                         nv.TaiKhoan = txtTenTruyCap.Text;
                         nv.LoaiNV = cbbLoaiNV.Text;
                         nv.MatKhau = txtMatKhau.Text.MaHoaMD5();
@@ -100,8 +101,6 @@ namespace DashBoar
             }
         }
 
-      
-
         private string ChonGioiTinh()
         {
             if (radNam.Checked == true) return radNam.Text;
@@ -110,7 +109,7 @@ namespace DashBoar
 
         private void btnThoat_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void FrmDangKiTaiKhoan_Load(object sender, EventArgs e)

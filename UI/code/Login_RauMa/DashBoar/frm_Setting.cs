@@ -50,7 +50,7 @@ namespace DashBoar
         public void btn_xacnhan_Click(object sender, EventArgs e)
         {
             frmDashboar dc = new frmDashboar();
-            lol(dc)
+            lol(dc);
         }
 
     }
