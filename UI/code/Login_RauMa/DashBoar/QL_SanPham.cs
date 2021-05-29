@@ -92,15 +92,18 @@ namespace DashBoar
         /////////////////////////////////////////////////////////xử lý tap xem////////////////////////////////////////////////////
         private void DTGV_xem_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = this.DTGV_xem.Rows[e.RowIndex];
-            if(e.RowIndex>=0)
+            if (e.RowIndex >-1)
             {
-                lbl_mamon.Text = row.Cells[0].Value.ToString();
-                lbl_tenmon.Text = row.Cells[1].Value.ToString();
-                lbl_loai.Text = row.Cells[2].Value.ToString();
-                lbl_gia.Text = row.Cells[3].Value.ToString();
-                lbl_mota.Text = row.Cells[4].Value.ToString();
-                ptb_anhtai.BackgroundImage= (ByteToImg(row.Cells[5].Value.ToString()));
+                DataGridViewRow row = this.DTGV_xem.Rows[e.RowIndex];
+                if (e.RowIndex >= 0)
+                {
+                    lbl_mamon.Text = row.Cells[0].Value.ToString();
+                    lbl_tenmon.Text = row.Cells[1].Value.ToString();
+                    lbl_loai.Text = row.Cells[2].Value.ToString();
+                    lbl_gia.Text = row.Cells[3].Value.ToString();
+                    lbl_mota.Text = row.Cells[4].Value.ToString();
+                    ptb_anhtai.BackgroundImage = (ByteToImg(row.Cells[5].Value.ToString()));
+                }
             }
         }
 
@@ -138,7 +141,8 @@ namespace DashBoar
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            if (tbx_mamon.Text == "" || tbx_tenmon.Text == "" || tbx_gia.Text == "" || cbb_loai.Text == "" || rtb_mota.Text == "")
+          
+            if (tbx_mamon.Text == "" || tbx_tenmon.Text == ""||lbl_duongdan.Text=="" || tbx_gia.Text == "" || cbb_loai.Text == "" || rtb_mota.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
             }
@@ -187,7 +191,8 @@ namespace DashBoar
                 sanpham.Giasp = Convert.ToInt32(tbx_xoa_gia.Text);
                 sanpham.Mota = tbx_xoa_mota.Text;
                 sanpham.MaLoaisp = cbb_xoa_loai.Text;
-                if (_sanpham.SuaSP(sanpham))
+                sanpham.Hinhsp = Convert.ToBase64String(converImgToByte());
+            if (_sanpham.SuaSP(sanpham))
                 {
                     dtgv_xoa.DataSource = _sanpham.LayDSsanpham("001");
                     MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -222,18 +227,22 @@ namespace DashBoar
             tbx_xoa_gia.Text = "";
             tbx_xoa_mamon.Text = "";
             tbx_xoa_mota.Text = "";
-            tbx_xoa_tenmon.Text = "";        
+            tbx_xoa_tenmon.Text = "";
+            ptb_anhrauma.BackgroundImage = null;
         }
 
         private void dtgv_xoa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = this.DTGV_xem.Rows[e.RowIndex];
-            tbx_xoa_mamon.Text = row.Cells[0].Value.ToString();
-            tbx_xoa_tenmon.Text = row.Cells[1].Value.ToString();
-            cbb_xoa_loai.Text = row.Cells[2].Value.ToString();
-            tbx_xoa_gia.Text = row.Cells[3].Value.ToString();
-            tbx_xoa_mota.Text = row.Cells[4].Value.ToString();
-            ptb_anhrauma.BackgroundImage = (ByteToImg(row.Cells[5].Value.ToString()));
+            if (e.RowIndex > -1)
+            {
+                DataGridViewRow row = this.DTGV_xem.Rows[e.RowIndex];
+                tbx_xoa_mamon.Text = row.Cells[0].Value.ToString();
+                tbx_xoa_tenmon.Text = row.Cells[1].Value.ToString();
+                cbb_xoa_loai.Text = row.Cells[2].Value.ToString();
+                tbx_xoa_gia.Text = row.Cells[3].Value.ToString();
+                tbx_xoa_mota.Text = row.Cells[4].Value.ToString();
+                ptb_anhrauma.BackgroundImage = (ByteToImg(row.Cells[5].Value.ToString()));
+            }
         }
 
         private void rdb_xoa_nuoc_CheckedChanged(object sender, EventArgs e)
@@ -251,6 +260,30 @@ namespace DashBoar
         private void ptb_anhrauma_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tbx_gia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Xác thực rằng phím vừa nhấn không phải CTRL hoặc không phải dạng số
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void ptb_anhrauma_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
+            openFile.FilterIndex = 1;
+            openFile.RestoreDirectory = true;
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                lbl_duongdan.Text = openFile.FileName;
+                byte[] byteA = File.ReadAllBytes(openFile.FileName);
+                MemoryStream ms = new MemoryStream(byteA);
+                ptb_anhrauma.BackgroundImage = Image.FromStream(ms);
+            }
         }
     }
 }
