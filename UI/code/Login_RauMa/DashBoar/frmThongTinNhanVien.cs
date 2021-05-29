@@ -140,6 +140,7 @@ namespace DashBoar
         private void dgvThongTinNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
+
                 txtID.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtHoTen.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[1].Value.ToString();
                 dtpNgaySinh.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -157,6 +158,7 @@ namespace DashBoar
 
                 picNhanVien.Image = Image.FromFile(path);
                 picNhanVien.Enabled = false;
+                txtTaiKhoan.Enabled = false;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

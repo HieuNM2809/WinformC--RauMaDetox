@@ -67,6 +67,14 @@ namespace DashBoar
                 tp_qlsp.TabPages.Remove(tp_suaxoa);
                 return;
             }
+            if (_sanpham.max() + 1 < 10)
+            {
+                tbx_mamon.Text = "RM0" + (_sanpham.max() + 1);
+            }
+            else
+            {
+                tbx_mamon.Text = "RM" + (_sanpham.max() + 1);
+            }
         }
         
    //////////////////////////////////////////////////////// các button thoát//////////////////////////////////////////////////////////
@@ -257,10 +265,7 @@ namespace DashBoar
             QL_SanPham_Load(sender, e, a);
         }
  
-        private void ptb_anhrauma_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void tbx_gia_KeyPress(object sender, KeyPressEventArgs e)
         {

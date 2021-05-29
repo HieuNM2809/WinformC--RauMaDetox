@@ -167,5 +167,12 @@ namespace DashBoar
             frm_Setting set = new frm_Setting();
             loadform(set);
         }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            frmlogin DN = new frmlogin();
+            DN.Show();
+            this.Hide();
+        }
     }
 }

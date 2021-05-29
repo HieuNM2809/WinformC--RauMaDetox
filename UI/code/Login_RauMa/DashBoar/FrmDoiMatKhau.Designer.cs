@@ -46,8 +46,8 @@ namespace DashBoar
             this.btnThoat = new System.Windows.Forms.Button();
             this.pnTieuDe = new System.Windows.Forms.Panel();
             this.pnThongTinDMK = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnTieuDe.SuspendLayout();
             this.pnThongTinDMK.SuspendLayout();
@@ -159,9 +159,9 @@ namespace DashBoar
             // 
             // pnTieuDe
             // 
+            resources.ApplyResources(this.pnTieuDe, "pnTieuDe");
             this.pnTieuDe.Controls.Add(this.picLogo);
             this.pnTieuDe.Controls.Add(this.label3);
-            resources.ApplyResources(this.pnTieuDe, "pnTieuDe");
             this.pnTieuDe.Name = "pnTieuDe";
             // 
             // pnThongTinDMK
@@ -184,12 +184,6 @@ namespace DashBoar
             resources.ApplyResources(this.pnThongTinDMK, "pnThongTinDMK");
             this.pnThongTinDMK.Name = "pnThongTinDMK";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
-            // 
             // txtTenDangNhap
             // 
             this.txtTenDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
@@ -197,6 +191,12 @@ namespace DashBoar
             resources.ApplyResources(this.txtTenDangNhap, "txtTenDangNhap");
             this.txtTenDangNhap.ForeColor = System.Drawing.Color.White;
             this.txtTenDangNhap.Name = "txtTenDangNhap";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
             // 
             // FrmDoiMatKhau
             // 

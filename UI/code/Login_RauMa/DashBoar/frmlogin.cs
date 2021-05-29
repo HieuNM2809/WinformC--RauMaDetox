@@ -25,34 +25,34 @@ namespace DashBoar
             this.Close();
         }
 
-        private void txtPassword_MouseEnter(object sender, EventArgs e)
+        private void txtMatKhau_MouseEnter(object sender, EventArgs e)
         {
             pnlPassword.BackgroundImage = Properties.Resources.lock2;
         }
 
-        private void txtPassword_MouseLeave(object sender, EventArgs e)
+        private void txtMatKhau_MouseLeave(object sender, EventArgs e)
         {
             pnlPassword.BackgroundImage = Properties.Resources.lock1;
             txtMatKhau.PasswordChar = '♥';
         }
 
-        private void txtUsername_MouseEnter(object sender, EventArgs e)
+        private void txtTaiKhoan_MouseEnter(object sender, EventArgs e)
         {
             pnlUsername.BackgroundImage = Properties.Resources.user2_1;
         }
 
-        private void txtUsername_MouseLeave(object sender, EventArgs e)
+        private void txttaiKhoan_MouseLeave(object sender, EventArgs e)
         {
             pnlUsername.BackgroundImage = Properties.Resources.user2_2;
         }
 
-        private void txtUsername_Click(object sender, EventArgs e)
+        private void txtTaiKhoan_Click(object sender, EventArgs e)
         {
            
             pnlUsername.BackgroundImage = Properties.Resources.user2_1;
         }
 
-        private void txtPassword_Click(object sender, EventArgs e)
+        private void txtMatKhau_Click(object sender, EventArgs e)
         {
            
             pnlPassword.BackgroundImage = Properties.Resources.lock2;
