@@ -18,11 +18,36 @@ namespace DashBoar
         {
             InitializeComponent();
         }
+        public void tienganh()
+        {
+            label1.Text = "ID bill";
+            label2.Text = "ID staff";
+            label6.Text = "Invoice date";
+            label7.Text = "BILL MANAGEMENT";
+            btnCapNhat.Text = "Update";
+            btnTimKiem.Text = "Search";
+            btnXoa.Text = "Delete";
+            dgvHoaDon.Columns[1].HeaderText = "ID Staff";
+            dgvHoaDon.Columns[2].HeaderText = "Invoice date";
+        }
+        public void tiengviet()
+        {
+            label1.Text = "ID Hóa đơn";
+            label2.Text = "ID Nhân viên";
+            label6.Text = "Ngày lập hóa đơn";
+            label7.Text = "QUẢN LÝ HÓA ĐƠN";
+            btnCapNhat.Text = "Cập nhật";
+            btnTimKiem.Text = "Tìm kiếm";
+            btnXoa.Text = "Xóa";
+            dgvHoaDon.Columns[1].HeaderText = "ID Nhân viên";
+            dgvHoaDon.Columns[2].HeaderText = "Ngày lập hóa đơn";
+        }
         private HoaDonBUS hoadon = new HoaDonBUS();
 
         private HoaDonDTO hd = new HoaDonDTO();
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
+            this. 
             dtPNgayLap.Value = DateTime.Now;
             dgvHoaDon.DataSource = hoadon.laydshd();
 

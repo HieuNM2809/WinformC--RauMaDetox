@@ -50,6 +50,7 @@ namespace DashBoar
         public void btn_xacnhan_Click(object sender, EventArgs e)
         {
             frmDashboar db = new frmDashboar();
+            frmHoaDon hd = new frmHoaDon();
             if (cbb_tyle.Text == "1600x900")
             {
                 db.WindowState = System.Windows.Forms.FormWindowState.Minimized;
@@ -61,11 +62,14 @@ namespace DashBoar
             if(cbb_ngonngu.Text=="Tiếng Việt")
             {
                 db.tiengviet();
+                hd.tiengviet();
             }
             else
             {
                 db.tienganh();
+                hd.tienganh();
             }
+            
             db.ShowDialog();
         }
 

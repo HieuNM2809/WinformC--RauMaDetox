@@ -25,7 +25,7 @@ namespace BUS
         {
             return _NhanVienDAO.LayDSNhanVien();
         }
-        s
+        
         public bool ThemNV(NhanVienDTO nv)
         {
             return _NhanVienDAO.ThemNV(nv);

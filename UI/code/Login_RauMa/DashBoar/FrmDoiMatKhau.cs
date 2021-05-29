@@ -21,8 +21,26 @@ namespace DashBoar
         {
             InitializeComponent();
         }
-
-
+        public void tienganh()
+        {
+            label3.Text = "Change password";
+            lbTenTruyCap.Text = "User name";
+            lbMKC.Text = "Password";
+            lbMKM.Text = "New Password";
+            lbNhapLaiMK.Text = "Confirm new password";
+            btnXacNhan.Text = "Confirm";
+            btnThoat.Text = "Exit";
+        }
+        public void tiengviet()
+        {
+            label3.Text = "Đổi mật khẩu";
+            lbTenTruyCap.Text = "Tài khoản";
+            lbMKC.Text = "Mật khẩu";
+            lbMKM.Text = "Mật khẩu mới";
+            lbNhapLaiMK.Text = "Xác nhận mật khẩu";
+            btnXacNhan.Text = "Xác nhận";
+            btnThoat.Text = "Thoát";
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
