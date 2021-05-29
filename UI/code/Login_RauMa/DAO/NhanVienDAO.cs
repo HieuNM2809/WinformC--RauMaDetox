@@ -233,5 +233,28 @@ namespace DAO
             return lsnhanvien;
         }
         #endregion
+
+        public List<NhanVienDTO> LayDSNhanVienTheoLoai(string text)
+        {
+            List<NhanVienDTO> lsnhanvien = new List<NhanVienDTO>();
+
+            lsnhanvien = qlrauma.NhanViens.Where(v => v.TrangThai == 1 && v.LoaiNV == text).Select(u => new NhanVienDTO
+            {
+                IDNV = u.IDNV,
+                HoTen = u.HoTen,
+                NgaySinh = u.NgaySinh.Value,
+                GioiTinh = u.GioiTinh,
+                ChucDanh = u.ChucDanh,
+                LoaiNV = u.LoaiNV,
+                TaiKhoan = u.TaiKhoan,
+                MatKhau = u.MatKhau,
+                SDT = u.SDT,
+                Email = u.Email,
+                Hinh = u.Hinh
+
+            }).ToList();
+
+            return lsnhanvien;
+        }
     }
 }

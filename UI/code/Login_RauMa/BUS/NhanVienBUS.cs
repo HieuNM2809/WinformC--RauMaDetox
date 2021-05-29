@@ -75,7 +75,10 @@ namespace BUS
         #endregion
 
 
-        
+        public List<NhanVienDTO> LayDSNhanVienTheoLoai(string text)
+        {
+            return _NhanVienDAO.LayDSNhanVienTheoLoai(text);
+        }
     }
 }
 
