@@ -36,6 +36,10 @@ namespace BUS
         {
             return _dssp.xoaSP(sp);
         }
-       
+       public int max()
+        {
+            string[] maSP = _dssp.max().Split('0');
+            return Convert.ToInt32(maSP[1]);
+        }
     }
 }
