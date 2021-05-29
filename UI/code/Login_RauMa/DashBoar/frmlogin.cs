@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
+using DTO;
 
 namespace DashBoar
 {
     public partial class frmlogin : Form
     {
+        private NhanVienBUS _nhanvienBUS = new NhanVienBUS();
         public frmlogin()
         {
             InitializeComponent();
@@ -30,7 +33,7 @@ namespace DashBoar
         private void txtPassword_MouseLeave(object sender, EventArgs e)
         {
             pnlPassword.BackgroundImage = Properties.Resources.lock1;
-            txtPassword.PasswordChar = '♥';
+            txtMatKhau.PasswordChar = '♥';
         }
 
         private void txtUsername_MouseEnter(object sender, EventArgs e)
@@ -71,23 +74,49 @@ namespace DashBoar
 
         private void btnSignin_Click(object sender, EventArgs e)
         {
-            if(txtUsername.Text=="Administrator" && txtPassword.Text=="1234")
+            if (txtTaiKhoan.Text == "Administrator" && txtMatKhau.Text == "1234")
             {
+                MessageBox.Show(Constants.LOGIN_ADMIN_SUCESS, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                QLNhanVien.QuyenNV = "Admin";
+                frmDashboar.Quyen = "Admin";
+                QL_SanPham.QuyenSP = "Admin";
                 frmDashboar Dashboar = new frmDashboar();
                 Dashboar.ShowDialog();
-                this.Close();
-            }    
+                this.Hide();
+                return;
+            }
+            if (_nhanvienBUS.KTDangNhap(txtTaiKhoan.Text, txtMatKhau.Text) != null)
+            {
+                MessageBox.Show(Constants.LOGIN_NV_SUCESS, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                QLNhanVien.QuyenNV = "NV";
+                QL_SanPham.QuyenSP = "NV";
+                frmDashboar.Quyen = "NV";
+                frmDashboar Dashboar = new frmDashboar();
+                Dashboar.ShowDialog();
+                this.Hide();
+                return;
+            }
             else
             {
-                MessageBox.Show("Đăng nhập sai mật khẩu hoặc tên tài khoản!", "Thông Báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-            }    
-            
+                MessageBox.Show(Constants.LOGIN_FAIL, Constants.MESSAGE_TITLE, MessageBoxButtons.OK);
+            }
         }
 
-        private void lnkCreateAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btnDKTK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //frmDangKiTaiKhoan frmDangKi = new frmDangKiTaiKhoan();
-            //frmDangKi.Show();
+            FrmDangKiTaiKhoan DKTK = new FrmDangKiTaiKhoan();
+            DKTK.Show();
+            this.Hide();
+        }
+
+        private void txtTaiKhoan_Enter(object sender, EventArgs e)
+        {
+            txtTaiKhoan.Text = null;
+        }
+
+        private void txtMatKhau_Enter(object sender, EventArgs e)
+        {
+            txtMatKhau.Text = null;
         }
     }
 }

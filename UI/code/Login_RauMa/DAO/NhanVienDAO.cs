@@ -12,6 +12,10 @@ namespace DAO
     {
 
         ql_raumaEntities2 qlrauma = new ql_raumaEntities2();
+        public string MAXIDNV()
+        {
+            return qlrauma.NhanViens.Max(v => v.IDNV);
+        }
 
         public List<NhanVienDTO> LayDSNhanVien()
         {
@@ -36,13 +40,7 @@ namespace DAO
             return lsnhanvien;
         }
 
-        public bool KiemTraNhanVien(string idnv)
-        {
-            int temp = qlrauma.NhanViens.Count(v => v.IDNV == idnv);
-     
-            return temp > 0;
-
-        }
+        #region CHỨC NĂNG
         public bool ThemNV(NhanVienDTO nv)
         {
             try
@@ -106,21 +104,6 @@ namespace DAO
             }
         }
 
-        public bool KiemTraTaiKhoan(string tk)
-        {
-           int i = qlrauma.NhanViens.Count(v => v.TaiKhoan == tk);
-         
-                return i >0;
-        }
-
-        public bool KiemTraMatKhau(string mk)
-        {
-            string maKhoaMatKhau = mk.MaHoaMD5();
-            int i = qlrauma.NhanViens.Count(v => v.MatKhau == maKhoaMatKhau);
-            qlrauma.SaveChanges();
-            return i > 0;
-        }
-
         public bool DangKiTaiKhoan(NhanVienDTO nv)
         {
             try
@@ -150,10 +133,30 @@ namespace DAO
                 return false;
             }
         }
+        #endregion
 
-        public string MAXIDNV()
+        #region KIỂM TRA
+        public bool KiemTraTaiKhoan(string tk)
         {
-            return qlrauma.NhanViens.Max(v => v.IDNV);
+           int i = qlrauma.NhanViens.Count(v => v.TaiKhoan == tk);
+         
+                return i >0;
+        }
+
+        public bool KiemTraNhanVien(string idnv)
+        {
+            int temp = qlrauma.NhanViens.Count(v => v.IDNV == idnv);
+     
+            return temp > 0;
+
+        }
+
+        public bool KiemTraMatKhau(string mk)
+        {
+            string maKhoaMatKhau = mk.MaHoaMD5();
+            int i = qlrauma.NhanViens.Count(v => v.MatKhau == maKhoaMatKhau);
+            qlrauma.SaveChanges();
+            return i > 0;
         }
 
         public NhanVienDTO KTDangNhap(string taikhoan, string matkhau)
@@ -181,7 +184,9 @@ namespace DAO
 
             return nhanvienDTO;
         }
-
+        #endregion
+  
+        #region TÌM KIẾM
         public List<NhanVienDTO> TimKiemIDNV(string idnv)
         {
             List<NhanVienDTO> lsnhanvien = new List<NhanVienDTO>();
@@ -227,6 +232,6 @@ namespace DAO
 
             return lsnhanvien;
         }
+        #endregion
     }
-
 }

@@ -88,7 +88,7 @@ namespace DashBoar
             this.pnHinhAnh = new System.Windows.Forms.Panel();
             this.pnThongtinThem = new System.Windows.Forms.Panel();
             this.pnChucNang = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pndtgv = new System.Windows.Forms.Panel();
             this.pnTimKiem = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinNhanVien)).BeginInit();
             this.groupBox6.SuspendLayout();
@@ -102,7 +102,7 @@ namespace DashBoar
             this.pnHinhAnh.SuspendLayout();
             this.pnThongtinThem.SuspendLayout();
             this.pnChucNang.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pndtgv.SuspendLayout();
             this.pnTimKiem.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -333,6 +333,8 @@ namespace DashBoar
             this.btnThoat.TabIndex = 12;
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.btnThoat.MouseLeave += new System.EventHandler(this.btnThoat_MouseLeave);
+            this.btnThoat.MouseHover += new System.EventHandler(this.btnThoat_MouseHover);
             // 
             // btnThem
             // 
@@ -347,6 +349,8 @@ namespace DashBoar
             this.btnThem.TabIndex = 8;
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnThem.MouseLeave += new System.EventHandler(this.btnThem_MouseLeave);
+            this.btnThem.MouseHover += new System.EventHandler(this.btnThem_MouseHover);
             // 
             // btnSua
             // 
@@ -363,6 +367,8 @@ namespace DashBoar
             this.btnSua.TabIndex = 9;
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            this.btnSua.MouseLeave += new System.EventHandler(this.btnSua_MouseLeave);
+            this.btnSua.MouseHover += new System.EventHandler(this.btnSua_MouseHover);
             // 
             // btnLamMoi
             // 
@@ -379,6 +385,8 @@ namespace DashBoar
             this.btnLamMoi.TabIndex = 11;
             this.btnLamMoi.UseVisualStyleBackColor = false;
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            this.btnLamMoi.MouseLeave += new System.EventHandler(this.btnLamMoi_MouseLeave);
+            this.btnLamMoi.MouseHover += new System.EventHandler(this.btnLamMoi_MouseHover);
             // 
             // btnXoa
             // 
@@ -395,6 +403,8 @@ namespace DashBoar
             this.btnXoa.TabIndex = 10;
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnXoa.MouseLeave += new System.EventHandler(this.btnXoa_MouseLeave);
+            this.btnXoa.MouseHover += new System.EventHandler(this.btnXoa_MouseHover);
             // 
             // btnTimKiem
             // 
@@ -619,6 +629,7 @@ namespace DashBoar
             // 
             // txtTaiKhoan
             // 
+            this.txtTaiKhoan.Enabled = false;
             this.txtTaiKhoan.Location = new System.Drawing.Point(146, 288);
             this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
@@ -753,6 +764,8 @@ namespace DashBoar
             // 
             // pnThongTinNV
             // 
+            this.pnThongTinNV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pnThongTinNV.Controls.Add(this.grTTNV);
             this.pnThongTinNV.Location = new System.Drawing.Point(12, 59);
             this.pnThongTinNV.Name = "pnThongTinNV";
@@ -761,6 +774,9 @@ namespace DashBoar
             // 
             // pnHinhAnh
             // 
+            this.pnHinhAnh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnHinhAnh.Controls.Add(this.grHinhNhanVien);
             this.pnHinhAnh.Location = new System.Drawing.Point(889, 59);
             this.pnHinhAnh.Name = "pnHinhAnh";
@@ -769,6 +785,9 @@ namespace DashBoar
             // 
             // pnThongtinThem
             // 
+            this.pnThongtinThem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnThongtinThem.Controls.Add(this.grTTT);
             this.pnThongtinThem.Location = new System.Drawing.Point(889, 282);
             this.pnThongtinThem.Name = "pnThongtinThem";
@@ -777,21 +796,24 @@ namespace DashBoar
             // 
             // pnChucNang
             // 
+            this.pnChucNang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnChucNang.Controls.Add(this.groupBox1);
             this.pnChucNang.Location = new System.Drawing.Point(12, 464);
             this.pnChucNang.Name = "pnChucNang";
             this.pnChucNang.Size = new System.Drawing.Size(1242, 129);
             this.pnChucNang.TabIndex = 14;
             // 
-            // panel1
+            // pndtgv
             // 
-            this.panel1.Controls.Add(this.pnTimKiem);
-            this.panel1.Controls.Add(this.dgvThongTinNhanVien);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 609);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1266, 312);
-            this.panel1.TabIndex = 15;
+            this.pndtgv.Controls.Add(this.pnTimKiem);
+            this.pndtgv.Controls.Add(this.dgvThongTinNhanVien);
+            this.pndtgv.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pndtgv.Location = new System.Drawing.Point(0, 609);
+            this.pndtgv.Name = "pndtgv";
+            this.pndtgv.Size = new System.Drawing.Size(1266, 312);
+            this.pndtgv.TabIndex = 15;
             // 
             // pnTimKiem
             // 
@@ -810,7 +832,7 @@ namespace DashBoar
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(1266, 921);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pndtgv);
             this.Controls.Add(this.pnChucNang);
             this.Controls.Add(this.pnThongtinThem);
             this.Controls.Add(this.pnHinhAnh);
@@ -837,7 +859,7 @@ namespace DashBoar
             this.pnHinhAnh.ResumeLayout(false);
             this.pnThongtinThem.ResumeLayout(false);
             this.pnChucNang.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.pndtgv.ResumeLayout(false);
             this.pnTimKiem.ResumeLayout(false);
             this.pnTimKiem.PerformLayout();
             this.ResumeLayout(false);
@@ -904,7 +926,7 @@ namespace DashBoar
         private System.Windows.Forms.Panel pnHinhAnh;
         private System.Windows.Forms.Panel pnThongtinThem;
         private System.Windows.Forms.Panel pnChucNang;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pndtgv;
         private System.Windows.Forms.Panel pnTimKiem;
     }
 }

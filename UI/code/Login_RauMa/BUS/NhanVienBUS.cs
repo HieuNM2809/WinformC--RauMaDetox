@@ -12,17 +12,20 @@ namespace BUS
     public class NhanVienBUS
     {
         private NhanVienDAO _NhanVienDAO = new NhanVienDAO();
+        public bool KTDinhDangEmail(string email)
+        {
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(email);
 
+            return match.Success;
+        }
+
+        #region CHỨC NĂNG
         public List<NhanVienDTO> LayDSNhanVien()
         {
             return _NhanVienDAO.LayDSNhanVien();
         }
-
-        public bool KiemTraNhanVien(string IDNV)
-        {
-            return _NhanVienDAO.KiemTraNhanVien(IDNV);
-        }
-
+        s
         public bool ThemNV(NhanVienDTO nv)
         {
             return _NhanVienDAO.ThemNV(nv);
@@ -37,24 +40,7 @@ namespace BUS
         {
             return _NhanVienDAO.XoaNV(nv);
         }
-
-        public bool KTDinhDangEmail(string email)
-        {
-            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            Match match = regex.Match(email);
-
-            return match.Success;
-        }
-
-        public string MAXID()
-        {
-            return _NhanVienDAO.MAXIDNV();
-        }
-
-        public NhanVienDTO KTDangNhap(string taikhoan, string matkhau)
-        {
-            return _NhanVienDAO.KTDangNhap(taikhoan, matkhau);
-        }
+        
         public List<NhanVienDTO> TimKiemIDNV(string idnv)
         {
             return _NhanVienDAO.TimKiemIDNV(idnv);
@@ -64,10 +50,32 @@ namespace BUS
         {
             return _NhanVienDAO.TimKiemHoTenNV(hoten);
         }
+        #endregion
+
+
+        public string MAXID()
+        {
+            return _NhanVienDAO.MAXIDNV();
+        }
+
+        #region KIỂM TRA
+        public bool KiemTraNhanVien(string IDNV)
+        {
+            return _NhanVienDAO.KiemTraNhanVien(IDNV);
+        }
+        public NhanVienDTO KTDangNhap(string taikhoan, string matkhau)
+        {
+            return _NhanVienDAO.KTDangNhap(taikhoan, matkhau);
+        }
+        
         public bool KiemTraTK(string tk)
         {
             return _NhanVienDAO.KiemTraTaiKhoan(tk);
         }
+        #endregion
+
+
+        
     }
 }
 

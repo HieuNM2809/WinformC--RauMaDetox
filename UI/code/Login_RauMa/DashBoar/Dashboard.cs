@@ -12,6 +12,7 @@ namespace DashBoar
 {
     public partial class frmDashboar : Form
     {
+        public static string Quyen;
         public frmDashboar()
         {
             InitializeComponent();

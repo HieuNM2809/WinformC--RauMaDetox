@@ -12,8 +12,6 @@ namespace DTO
 
         public static string MESSAGE_TITLE = "Thông báo";
         public static string ERR_REQUIRED = "Vui lòng điền đủ thông tin!";
-        public static string ERR_REQUIRED_2 = "Vui lòng kiểm tra thông tin!";
-
         public static string ERR_MAIL_FORMAT = "Email chưa đúng định dạng!";
         public static string LOGIN_SUCESS = "Đăng nhập thành công!";
         public static string LOGIN_FAIL = "Đăng nhập thất bại!";
@@ -40,7 +38,10 @@ namespace DTO
         public static string PASSWORD_SUCESS = "Đổi mật khẩu thành công!";
         public static string PASSWORD_FAIL = "Đổi mật khẩu thất bại!";
         public static string PASSWORD_INCORRECT = "Mật khẩu không đúng!";
-  
+
+        public static string LOGIN_ADMIN_SUCESS = "Đăng nhập admin thành công!";
+        public static string LOGIN_NV_SUCESS = "Đăng nhập nhân viên thành công!";
+
         #endregion
     }
 }
