@@ -16,7 +16,7 @@ namespace DashBoar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmChiTietHoaDon());
+            Application.Run(new frmlogin());
         }
     }
 }

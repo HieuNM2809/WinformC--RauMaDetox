@@ -89,9 +89,10 @@
             this.txtTaiKhoan.Size = new System.Drawing.Size(356, 29);
             this.txtTaiKhoan.TabIndex = 1;
             this.txtTaiKhoan.Text = "Tài khoản";
-            this.txtTaiKhoan.Click += new System.EventHandler(this.txtUsername_Click);
-            this.txtTaiKhoan.MouseEnter += new System.EventHandler(this.txtUsername_MouseEnter);
-            this.txtTaiKhoan.MouseLeave += new System.EventHandler(this.txtUsername_MouseLeave);
+            this.txtTaiKhoan.Click += new System.EventHandler(this.txtTaiKhoan_Click);
+            this.txtTaiKhoan.Enter += new System.EventHandler(this.txtTaiKhoan_Enter);
+            this.txtTaiKhoan.MouseEnter += new System.EventHandler(this.txtTaiKhoan_MouseEnter);
+            this.txtTaiKhoan.MouseLeave += new System.EventHandler(this.txttaiKhoan_MouseLeave);
             // 
             // pnlPW
             // 
@@ -133,11 +134,12 @@
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '♥';
             this.txtMatKhau.Size = new System.Drawing.Size(356, 29);
-            this.txtMatKhau.TabIndex = 4;
+            this.txtMatKhau.TabIndex = 2;
             this.txtMatKhau.Text = "PASSWORD";
-            this.txtMatKhau.Click += new System.EventHandler(this.txtPassword_Click);
-            this.txtMatKhau.MouseEnter += new System.EventHandler(this.txtPassword_MouseEnter);
-            this.txtMatKhau.MouseLeave += new System.EventHandler(this.txtPassword_MouseLeave);
+            this.txtMatKhau.Click += new System.EventHandler(this.txtMatKhau_Click);
+            this.txtMatKhau.Enter += new System.EventHandler(this.txtMatKhau_Enter);
+            this.txtMatKhau.MouseEnter += new System.EventHandler(this.txtMatKhau_MouseEnter);
+            this.txtMatKhau.MouseLeave += new System.EventHandler(this.txtMatKhau_MouseLeave);
             // 
             // btnClose
             // 
@@ -174,7 +176,7 @@
             this.btnDKTK.Location = new System.Drawing.Point(171, 510);
             this.btnDKTK.Name = "btnDKTK";
             this.btnDKTK.Size = new System.Drawing.Size(157, 22);
-            this.btnDKTK.TabIndex = 18;
+            this.btnDKTK.TabIndex = 4;
             this.btnDKTK.TabStop = true;
             this.btnDKTK.Text = "Đăng kí Tài Khoản";
             // 
@@ -192,7 +194,7 @@
             this.btnSignin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSignin.Name = "btnSignin";
             this.btnSignin.Size = new System.Drawing.Size(482, 74);
-            this.btnSignin.TabIndex = 17;
+            this.btnSignin.TabIndex = 3;
             this.btnSignin.Text = "Đăng nhập";
             this.btnSignin.UseVisualStyleBackColor = false;
             this.btnSignin.Click += new System.EventHandler(this.btnSignin_Click);

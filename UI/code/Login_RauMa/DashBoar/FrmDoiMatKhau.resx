@@ -223,7 +223,7 @@
     <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
   <data name="txtMatKhauCu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 130</value>
+    <value>258, 133</value>
   </data>
   <data name="txtMatKhauCu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -235,7 +235,7 @@
     <value>295, 24</value>
   </data>
   <data name="txtMatKhauCu.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;txtMatKhauCu.Name" xml:space="preserve">
     <value>txtMatKhauCu</value>
@@ -286,7 +286,7 @@
     <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
   <data name="txtMatKhauMoi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 198</value>
+    <value>258, 201</value>
   </data>
   <data name="txtMatKhauMoi.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -298,7 +298,7 @@
     <value>295, 24</value>
   </data>
   <data name="txtMatKhauMoi.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;txtMatKhauMoi.Name" xml:space="preserve">
     <value>txtMatKhauMoi</value>
@@ -316,7 +316,7 @@
     <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
   <data name="txtNhapLaiMKM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>202, 275</value>
+    <value>259, 278</value>
   </data>
   <data name="txtNhapLaiMKM.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -328,7 +328,7 @@
     <value>294, 24</value>
   </data>
   <data name="txtNhapLaiMKM.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;txtNhapLaiMKM.Name" xml:space="preserve">
     <value>txtNhapLaiMKM</value>
@@ -343,7 +343,7 @@
     <value>13</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 160</value>
+    <value>258, 163</value>
   </data>
   <data name="panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -367,7 +367,7 @@
     <value>10</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 224</value>
+    <value>258, 227</value>
   </data>
   <data name="panel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -391,7 +391,7 @@
     <value>8</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 303</value>
+    <value>258, 306</value>
   </data>
   <data name="panel4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -478,7 +478,7 @@
     <value>Microsoft YaHei UI, 10.2pt, style=Bold</value>
   </data>
   <data name="btnXacNhan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 347</value>
+    <value>36, 347</value>
   </data>
   <data name="btnXacNhan.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -487,7 +487,7 @@
     <value>227, 61</value>
   </data>
   <data name="btnXacNhan.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="btnXacNhan.Text" xml:space="preserve">
     <value>Xác Nhận</value>
@@ -511,7 +511,7 @@
     <value>Microsoft YaHei UI, 10.2pt, style=Bold</value>
   </data>
   <data name="btnThoat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>269, 347</value>
+    <value>302, 347</value>
   </data>
   <data name="btnThoat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -520,7 +520,7 @@
     <value>251, 61</value>
   </data>
   <data name="btnThoat.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="btnThoat.Text" xml:space="preserve">
     <value>Thoát</value>
@@ -537,8 +537,11 @@
   <data name="&gt;&gt;btnThoat.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="pnTieuDe.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="pnTieuDe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>74, 27</value>
+    <value>109, 23</value>
   </data>
   <data name="pnTieuDe.Size" type="System.Drawing.Size, System.Drawing">
     <value>418, 188</value>
@@ -562,7 +565,7 @@
     <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
   <data name="txtTenDangNhap.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 53</value>
+    <value>258, 56</value>
   </data>
   <data name="txtTenDangNhap.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -586,7 +589,7 @@
     <value>11</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 82</value>
+    <value>258, 85</value>
   </data>
   <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -613,7 +616,7 @@
     <value>7, 331</value>
   </data>
   <data name="pnThongTinDMK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>556, 485</value>
+    <value>593, 435</value>
   </data>
   <data name="pnThongTinDMK.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -640,7 +643,7 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>575, 828</value>
+    <value>616, 775</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

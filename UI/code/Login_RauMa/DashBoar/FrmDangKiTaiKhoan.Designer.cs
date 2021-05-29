@@ -68,22 +68,24 @@ namespace DashBoar
             // 
             this.txtNhaplaiMatKhau.Location = new System.Drawing.Point(186, 317);
             this.txtNhaplaiMatKhau.Name = "txtNhaplaiMatKhau";
-            this.txtNhaplaiMatKhau.Size = new System.Drawing.Size(174, 22);
-            this.txtNhaplaiMatKhau.TabIndex = 6;
+            this.txtNhaplaiMatKhau.PasswordChar = '*';
+            this.txtNhaplaiMatKhau.Size = new System.Drawing.Size(174, 26);
+            this.txtNhaplaiMatKhau.TabIndex = 8;
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(187, 274);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(174, 22);
-            this.txtMatKhau.TabIndex = 5;
+            this.txtMatKhau.PasswordChar = '*';
+            this.txtMatKhau.Size = new System.Drawing.Size(174, 26);
+            this.txtMatKhau.TabIndex = 7;
             // 
             // txtTenTruyCap
             // 
             this.txtTenTruyCap.Location = new System.Drawing.Point(186, 232);
             this.txtTenTruyCap.Name = "txtTenTruyCap";
-            this.txtTenTruyCap.Size = new System.Drawing.Size(174, 22);
-            this.txtTenTruyCap.TabIndex = 4;
+            this.txtTenTruyCap.Size = new System.Drawing.Size(174, 26);
+            this.txtTenTruyCap.TabIndex = 6;
             // 
             // btnThoat
             // 
@@ -96,7 +98,7 @@ namespace DashBoar
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(251, 61);
-            this.btnThoat.TabIndex = 35;
+            this.btnThoat.TabIndex = 10;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click_1);
@@ -112,7 +114,7 @@ namespace DashBoar
             this.btnXacNhan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(227, 61);
-            this.btnXacNhan.TabIndex = 34;
+            this.btnXacNhan.TabIndex = 9;
             this.btnXacNhan.Text = "Xác Nhận";
             this.btnXacNhan.UseVisualStyleBackColor = false;
             this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
@@ -126,7 +128,7 @@ namespace DashBoar
             this.lbNhapLaiMKDK.Location = new System.Drawing.Point(28, 315);
             this.lbNhapLaiMKDK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNhapLaiMKDK.Name = "lbNhapLaiMKDK";
-            this.lbNhapLaiMKDK.Size = new System.Drawing.Size(177, 24);
+            this.lbNhapLaiMKDK.Size = new System.Drawing.Size(205, 26);
             this.lbNhapLaiMKDK.TabIndex = 30;
             this.lbNhapLaiMKDK.Text = "Nhập lại mật khẩu";
             // 
@@ -139,7 +141,7 @@ namespace DashBoar
             this.lbTenTrungCapDK.Location = new System.Drawing.Point(28, 230);
             this.lbTenTrungCapDK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTenTrungCapDK.Name = "lbTenTrungCapDK";
-            this.lbTenTrungCapDK.Size = new System.Drawing.Size(127, 24);
+            this.lbTenTrungCapDK.Size = new System.Drawing.Size(143, 26);
             this.lbTenTrungCapDK.TabIndex = 31;
             this.lbTenTrungCapDK.Text = "Tên truy cập";
             // 
@@ -152,7 +154,7 @@ namespace DashBoar
             this.lbMKDK.Location = new System.Drawing.Point(28, 274);
             this.lbMKDK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbMKDK.Name = "lbMKDK";
-            this.lbMKDK.Size = new System.Drawing.Size(94, 24);
+            this.lbMKDK.Size = new System.Drawing.Size(109, 26);
             this.lbMKDK.TabIndex = 32;
             this.lbMKDK.Text = "Mật khẩu";
             // 
@@ -165,7 +167,7 @@ namespace DashBoar
             this.lbHoTenDK.Location = new System.Drawing.Point(28, 22);
             this.lbHoTenDK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbHoTenDK.Name = "lbHoTenDK";
-            this.lbHoTenDK.Size = new System.Drawing.Size(72, 24);
+            this.lbHoTenDK.Size = new System.Drawing.Size(82, 26);
             this.lbHoTenDK.TabIndex = 36;
             this.lbHoTenDK.Text = "Họ tên";
             // 
@@ -178,7 +180,7 @@ namespace DashBoar
             this.lbNgaySinhDK.Location = new System.Drawing.Point(28, 189);
             this.lbNgaySinhDK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNgaySinhDK.Name = "lbNgaySinhDK";
-            this.lbNgaySinhDK.Size = new System.Drawing.Size(103, 24);
+            this.lbNgaySinhDK.Size = new System.Drawing.Size(118, 26);
             this.lbNgaySinhDK.TabIndex = 37;
             this.lbNgaySinhDK.Text = "Ngày sinh";
             // 
@@ -191,7 +193,7 @@ namespace DashBoar
             this.lbSDT.Location = new System.Drawing.Point(28, 108);
             this.lbSDT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSDT.Name = "lbSDT";
-            this.lbSDT.Size = new System.Drawing.Size(50, 24);
+            this.lbSDT.Size = new System.Drawing.Size(58, 26);
             this.lbSDT.TabIndex = 38;
             this.lbSDT.Text = "SDT";
             // 
@@ -199,15 +201,15 @@ namespace DashBoar
             // 
             this.txtHoTen.Location = new System.Drawing.Point(187, 24);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(171, 22);
+            this.txtHoTen.Size = new System.Drawing.Size(171, 26);
             this.txtHoTen.TabIndex = 1;
             // 
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(187, 110);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(174, 22);
-            this.txtSDT.TabIndex = 2;
+            this.txtSDT.Size = new System.Drawing.Size(174, 26);
+            this.txtSDT.TabIndex = 3;
             // 
             // dtpNgaySinh
             // 
@@ -216,8 +218,8 @@ namespace DashBoar
             this.dtpNgaySinh.Location = new System.Drawing.Point(187, 189);
             this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(174, 25);
-            this.dtpNgaySinh.TabIndex = 3;
+            this.dtpNgaySinh.Size = new System.Drawing.Size(174, 29);
+            this.dtpNgaySinh.TabIndex = 5;
             // 
             // pnDangKi
             // 
@@ -255,8 +257,8 @@ namespace DashBoar
             // 
             this.txtEmail.Location = new System.Drawing.Point(187, 152);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(174, 22);
-            this.txtEmail.TabIndex = 50;
+            this.txtEmail.Size = new System.Drawing.Size(174, 26);
+            this.txtEmail.TabIndex = 4;
             // 
             // lbEmail
             // 
@@ -267,7 +269,7 @@ namespace DashBoar
             this.lbEmail.Location = new System.Drawing.Point(28, 152);
             this.lbEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(62, 24);
+            this.lbEmail.Size = new System.Drawing.Size(73, 26);
             this.lbEmail.TabIndex = 49;
             this.lbEmail.Text = "Email";
             // 
@@ -303,7 +305,7 @@ namespace DashBoar
             this.lbGioiTinhDK.Location = new System.Drawing.Point(28, 66);
             this.lbGioiTinhDK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbGioiTinhDK.Name = "lbGioiTinhDK";
-            this.lbGioiTinhDK.Size = new System.Drawing.Size(87, 24);
+            this.lbGioiTinhDK.Size = new System.Drawing.Size(101, 26);
             this.lbGioiTinhDK.TabIndex = 47;
             this.lbGioiTinhDK.Text = "Giới tính";
             // 
@@ -317,7 +319,7 @@ namespace DashBoar
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Size = new System.Drawing.Size(171, 45);
-            this.groupBox2.TabIndex = 46;
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
             // radNu
@@ -327,7 +329,7 @@ namespace DashBoar
             this.radNu.Location = new System.Drawing.Point(83, 12);
             this.radNu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radNu.Name = "radNu";
-            this.radNu.Size = new System.Drawing.Size(47, 21);
+            this.radNu.Size = new System.Drawing.Size(54, 24);
             this.radNu.TabIndex = 1;
             this.radNu.Text = "Nữ";
             this.radNu.UseVisualStyleBackColor = true;
@@ -340,7 +342,7 @@ namespace DashBoar
             this.radNam.Location = new System.Drawing.Point(15, 12);
             this.radNam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radNam.Name = "radNam";
-            this.radNam.Size = new System.Drawing.Size(58, 21);
+            this.radNam.Size = new System.Drawing.Size(67, 24);
             this.radNam.TabIndex = 0;
             this.radNam.TabStop = true;
             this.radNam.Text = "Nam";
@@ -354,8 +356,8 @@ namespace DashBoar
             "Full time"});
             this.cbbLoaiNV.Location = new System.Drawing.Point(186, 362);
             this.cbbLoaiNV.Name = "cbbLoaiNV";
-            this.cbbLoaiNV.Size = new System.Drawing.Size(174, 24);
-            this.cbbLoaiNV.TabIndex = 44;
+            this.cbbLoaiNV.Size = new System.Drawing.Size(174, 28);
+            this.cbbLoaiNV.TabIndex = 9;
             // 
             // lbCongViecDK
             // 
@@ -366,7 +368,7 @@ namespace DashBoar
             this.lbCongViecDK.Location = new System.Drawing.Point(28, 364);
             this.lbCongViecDK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCongViecDK.Name = "lbCongViecDK";
-            this.lbCongViecDK.Size = new System.Drawing.Size(104, 24);
+            this.lbCongViecDK.Size = new System.Drawing.Size(118, 26);
             this.lbCongViecDK.TabIndex = 43;
             this.lbCongViecDK.Text = "Công việc";
             // 
@@ -392,7 +394,7 @@ namespace DashBoar
             this.lbl_dktk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.lbl_dktk.Location = new System.Drawing.Point(197, 129);
             this.lbl_dktk.Name = "lbl_dktk";
-            this.lbl_dktk.Size = new System.Drawing.Size(227, 27);
+            this.lbl_dktk.Size = new System.Drawing.Size(271, 31);
             this.lbl_dktk.TabIndex = 29;
             this.lbl_dktk.Text = "ĐĂNG KÍ TÀI KHOẢN";
             // 
