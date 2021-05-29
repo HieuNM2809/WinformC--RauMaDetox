@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.dgvDSHD = new System.Windows.Forms.DataGridView();
+            this._ColSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._ColIDHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._ColMaSp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._ColTenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._ColSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._ColDonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._ColTongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colTongTien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colDonGia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -43,30 +50,23 @@
             this.cbbGia = new System.Windows.Forms.ComboBox();
             this.lbl_soluong = new System.Windows.Forms.Label();
             this.lblGia = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this._ColSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._ColIDHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._ColMaSp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._ColTenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._ColSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._ColDonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._ColTongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnXacNhan = new System.Windows.Forms.Button();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnThemCTHD = new System.Windows.Forms.Button();
-            this.lbl_tongtien = new System.Windows.Forms.Label();
-            this.lbl_tong = new System.Windows.Forms.Label();
-            this.btn_bo = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtTongSoLuong = new System.Windows.Forms.TextBox();
             this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.lbl_tong = new System.Windows.Forms.Label();
+            this.lbl_tongtien = new System.Windows.Forms.Label();
+            this.txtTongSoLuong = new System.Windows.Forms.TextBox();
+            this.btnThemCTHD = new System.Windows.Forms.Button();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_bo = new System.Windows.Forms.Button();
+            this.btnXacNhan = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHD)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvDSHD
@@ -88,6 +88,55 @@
             this.dgvDSHD.RowTemplate.Height = 24;
             this.dgvDSHD.Size = new System.Drawing.Size(576, 318);
             this.dgvDSHD.TabIndex = 0;
+            // 
+            // _ColSTT
+            // 
+            this._ColSTT.DataPropertyName = "STT";
+            this._ColSTT.HeaderText = "STT";
+            this._ColSTT.MinimumWidth = 6;
+            this._ColSTT.Name = "_ColSTT";
+            // 
+            // _ColIDHoaDon
+            // 
+            this._ColIDHoaDon.DataPropertyName = "IDHoaDon";
+            this._ColIDHoaDon.HeaderText = "ID Hóa Đơn";
+            this._ColIDHoaDon.MinimumWidth = 6;
+            this._ColIDHoaDon.Name = "_ColIDHoaDon";
+            // 
+            // _ColMaSp
+            // 
+            this._ColMaSp.DataPropertyName = "MaSp";
+            this._ColMaSp.HeaderText = "Mã Sản Phẩm";
+            this._ColMaSp.MinimumWidth = 6;
+            this._ColMaSp.Name = "_ColMaSp";
+            // 
+            // _ColTenSP
+            // 
+            this._ColTenSP.DataPropertyName = "TenSp";
+            this._ColTenSP.HeaderText = "Tên Sản Phẩm";
+            this._ColTenSP.MinimumWidth = 6;
+            this._ColTenSP.Name = "_ColTenSP";
+            // 
+            // _ColSoLuong
+            // 
+            this._ColSoLuong.DataPropertyName = "SoLuong";
+            this._ColSoLuong.HeaderText = "Số Lượng";
+            this._ColSoLuong.MinimumWidth = 6;
+            this._ColSoLuong.Name = "_ColSoLuong";
+            // 
+            // _ColDonGia
+            // 
+            this._ColDonGia.DataPropertyName = "DonGia";
+            this._ColDonGia.HeaderText = "Đơn Giá";
+            this._ColDonGia.MinimumWidth = 6;
+            this._ColDonGia.Name = "_ColDonGia";
+            // 
+            // _ColTongTien
+            // 
+            this._ColTongTien.DataPropertyName = "TongTien";
+            this._ColTongTien.HeaderText = "Tổng Tiền";
+            this._ColTongTien.MinimumWidth = 6;
+            this._ColTongTien.Name = "_ColTongTien";
             // 
             // colSTT
             // 
@@ -242,158 +291,6 @@
             this.lblGia.Text = "Giá Tiền";
             this.lblGia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.dgvDSHD, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lstDSSP, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1165, 324);
-            this.tableLayoutPanel1.TabIndex = 8;
-            // 
-            // _ColSTT
-            // 
-            this._ColSTT.DataPropertyName = "STT";
-            this._ColSTT.HeaderText = "STT";
-            this._ColSTT.MinimumWidth = 6;
-            this._ColSTT.Name = "_ColSTT";
-            // 
-            // _ColIDHoaDon
-            // 
-            this._ColIDHoaDon.DataPropertyName = "IDHoaDon";
-            this._ColIDHoaDon.HeaderText = "ID Hóa Đơn";
-            this._ColIDHoaDon.MinimumWidth = 6;
-            this._ColIDHoaDon.Name = "_ColIDHoaDon";
-            // 
-            // _ColMaSp
-            // 
-            this._ColMaSp.DataPropertyName = "MaSp";
-            this._ColMaSp.HeaderText = "Mã Sản Phẩm";
-            this._ColMaSp.MinimumWidth = 6;
-            this._ColMaSp.Name = "_ColMaSp";
-            // 
-            // _ColTenSP
-            // 
-            this._ColTenSP.DataPropertyName = "TenSp";
-            this._ColTenSP.HeaderText = "Tên Sản Phẩm";
-            this._ColTenSP.MinimumWidth = 6;
-            this._ColTenSP.Name = "_ColTenSP";
-            // 
-            // _ColSoLuong
-            // 
-            this._ColSoLuong.DataPropertyName = "SoLuong";
-            this._ColSoLuong.HeaderText = "Số Lượng";
-            this._ColSoLuong.MinimumWidth = 6;
-            this._ColSoLuong.Name = "_ColSoLuong";
-            // 
-            // _ColDonGia
-            // 
-            this._ColDonGia.DataPropertyName = "DonGia";
-            this._ColDonGia.HeaderText = "Đơn Giá";
-            this._ColDonGia.MinimumWidth = 6;
-            this._ColDonGia.Name = "_ColDonGia";
-            // 
-            // _ColTongTien
-            // 
-            this._ColTongTien.DataPropertyName = "TongTien";
-            this._ColTongTien.HeaderText = "Tổng Tiền";
-            this._ColTongTien.MinimumWidth = 6;
-            this._ColTongTien.Name = "_ColTongTien";
-            // 
-            // btnXacNhan
-            // 
-            this.btnXacNhan.BackColor = System.Drawing.Color.White;
-            this.btnXacNhan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnXacNhan.FlatAppearance.BorderSize = 0;
-            this.btnXacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXacNhan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btnXacNhan.Location = new System.Drawing.Point(3, 3);
-            this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(282, 99);
-            this.btnXacNhan.TabIndex = 0;
-            this.btnXacNhan.Text = "xác nhận";
-            this.btnXacNhan.UseVisualStyleBackColor = false;
-            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.btn_bo, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.btnXacNhan, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(585, 127);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(577, 105);
-            this.tableLayoutPanel5.TabIndex = 3;
-            // 
-            // btnThemCTHD
-            // 
-            this.btnThemCTHD.BackColor = System.Drawing.Color.White;
-            this.btnThemCTHD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnThemCTHD.FlatAppearance.BorderSize = 0;
-            this.btnThemCTHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemCTHD.Image = global::DashBoar.Properties.Resources.plus;
-            this.btnThemCTHD.Location = new System.Drawing.Point(3, 127);
-            this.btnThemCTHD.Name = "btnThemCTHD";
-            this.btnThemCTHD.Size = new System.Drawing.Size(576, 105);
-            this.btnThemCTHD.TabIndex = 2;
-            this.btnThemCTHD.UseVisualStyleBackColor = false;
-            this.btnThemCTHD.Click += new System.EventHandler(this.btnThemCTHD_Click);
-            // 
-            // lbl_tongtien
-            // 
-            this.lbl_tongtien.AutoSize = true;
-            this.lbl_tongtien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_tongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tongtien.ForeColor = System.Drawing.Color.White;
-            this.lbl_tongtien.Location = new System.Drawing.Point(3, 59);
-            this.lbl_tongtien.Name = "lbl_tongtien";
-            this.lbl_tongtien.Size = new System.Drawing.Size(282, 59);
-            this.lbl_tongtien.TabIndex = 7;
-            this.lbl_tongtien.Text = "Tổng Tiền";
-            this.lbl_tongtien.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lbl_tong
-            // 
-            this.lbl_tong.AutoSize = true;
-            this.lbl_tong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_tong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tong.ForeColor = System.Drawing.Color.White;
-            this.lbl_tong.Location = new System.Drawing.Point(3, 0);
-            this.lbl_tong.Name = "lbl_tong";
-            this.lbl_tong.Size = new System.Drawing.Size(282, 59);
-            this.lbl_tong.TabIndex = 6;
-            this.lbl_tong.Text = "Tổng Số Lượng";
-            this.lbl_tong.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btn_bo
-            // 
-            this.btn_bo.BackColor = System.Drawing.Color.White;
-            this.btn_bo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_bo.FlatAppearance.BorderSize = 0;
-            this.btn_bo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_bo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_bo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btn_bo.Location = new System.Drawing.Point(291, 3);
-            this.btn_bo.Name = "btn_bo";
-            this.btn_bo.Size = new System.Drawing.Size(283, 99);
-            this.btn_bo.TabIndex = 1;
-            this.btn_bo.Text = "Bỏ chọn";
-            this.btn_bo.UseVisualStyleBackColor = false;
-            this.btn_bo.Click += new System.EventHandler(this.btn_bo_Click);
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
@@ -412,6 +309,41 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(577, 118);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
+            // txtTongTien
+            // 
+            this.txtTongTien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongTien.Location = new System.Drawing.Point(291, 62);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(283, 27);
+            this.txtTongTien.TabIndex = 11;
+            // 
+            // lbl_tong
+            // 
+            this.lbl_tong.AutoSize = true;
+            this.lbl_tong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_tong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tong.ForeColor = System.Drawing.Color.White;
+            this.lbl_tong.Location = new System.Drawing.Point(3, 0);
+            this.lbl_tong.Name = "lbl_tong";
+            this.lbl_tong.Size = new System.Drawing.Size(282, 59);
+            this.lbl_tong.TabIndex = 6;
+            this.lbl_tong.Text = "Tổng Số Lượng";
+            this.lbl_tong.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lbl_tongtien
+            // 
+            this.lbl_tongtien.AutoSize = true;
+            this.lbl_tongtien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_tongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tongtien.ForeColor = System.Drawing.Color.White;
+            this.lbl_tongtien.Location = new System.Drawing.Point(3, 59);
+            this.lbl_tongtien.Name = "lbl_tongtien";
+            this.lbl_tongtien.Size = new System.Drawing.Size(282, 59);
+            this.lbl_tongtien.TabIndex = 7;
+            this.lbl_tongtien.Text = "Tổng Tiền";
+            this.lbl_tongtien.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // txtTongSoLuong
             // 
             this.txtTongSoLuong.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -421,14 +353,82 @@
             this.txtTongSoLuong.Size = new System.Drawing.Size(283, 27);
             this.txtTongSoLuong.TabIndex = 10;
             // 
-            // txtTongTien
+            // btnThemCTHD
             // 
-            this.txtTongTien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTongTien.Location = new System.Drawing.Point(291, 62);
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(283, 27);
-            this.txtTongTien.TabIndex = 11;
+            this.btnThemCTHD.BackColor = System.Drawing.Color.White;
+            this.btnThemCTHD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnThemCTHD.FlatAppearance.BorderSize = 0;
+            this.btnThemCTHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemCTHD.Image = global::DashBoar.Properties.Resources.plus;
+            this.btnThemCTHD.Location = new System.Drawing.Point(3, 127);
+            this.btnThemCTHD.Name = "btnThemCTHD";
+            this.btnThemCTHD.Size = new System.Drawing.Size(576, 105);
+            this.btnThemCTHD.TabIndex = 2;
+            this.btnThemCTHD.UseVisualStyleBackColor = false;
+            this.btnThemCTHD.Click += new System.EventHandler(this.btnThemCTHD_Click);
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.btn_bo, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnXacNhan, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(585, 127);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 105F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(577, 105);
+            this.tableLayoutPanel5.TabIndex = 3;
+            // 
+            // btn_bo
+            // 
+            this.btn_bo.BackColor = System.Drawing.Color.White;
+            this.btn_bo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_bo.FlatAppearance.BorderSize = 0;
+            this.btn_bo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_bo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_bo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_bo.Location = new System.Drawing.Point(291, 3);
+            this.btn_bo.Name = "btn_bo";
+            this.btn_bo.Size = new System.Drawing.Size(283, 99);
+            this.btn_bo.TabIndex = 1;
+            this.btn_bo.Text = "Bỏ chọn";
+            this.btn_bo.UseVisualStyleBackColor = false;
+            this.btn_bo.Click += new System.EventHandler(this.btn_bo_Click);
+            // 
+            // btnXacNhan
+            // 
+            this.btnXacNhan.BackColor = System.Drawing.Color.White;
+            this.btnXacNhan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnXacNhan.FlatAppearance.BorderSize = 0;
+            this.btnXacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXacNhan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnXacNhan.Location = new System.Drawing.Point(3, 3);
+            this.btnXacNhan.Name = "btnXacNhan";
+            this.btnXacNhan.Size = new System.Drawing.Size(282, 99);
+            this.btnXacNhan.TabIndex = 0;
+            this.btnXacNhan.Text = "xác nhận";
+            this.btnXacNhan.UseVisualStyleBackColor = false;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.dgvDSHD, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lstDSSP, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1165, 324);
+            this.tableLayoutPanel1.TabIndex = 8;
             // 
             // frmChiTietHoaDon
             // 
@@ -447,10 +447,10 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

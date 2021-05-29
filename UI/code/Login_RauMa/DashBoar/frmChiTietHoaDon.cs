@@ -94,17 +94,18 @@ namespace DashBoar
             
             int mahd = (cthd.max());
             ChiTietHoaDonDTO hoadon = new ChiTietHoaDonDTO();
-            
+
             for (int i = 0; i <= lstDSSP.Items.Count; i++)
             {
                 count--;
-                hoadon.STT =count.ToString();
+                hoadon.STT = lstDSSP.Items[i].SubItems[1].Text;
                 hoadon.IDHoaDon = mahd.ToString();
                 hoadon.MaSp = cbbTenSP.SelectedValue.ToString();
-                hoadon.TenSp = lstDSSP.Items[i].SubItems[1].Text;
-                hoadon.SoLuong = Convert.ToInt32(lstDSSP.Items[i].SubItems[2].Text);
-                hoadon.DonGia = Convert.ToInt32(lstDSSP.Items[i].SubItems[3].Text);
-                hoadon.TongTien = Convert.ToInt32(lstDSSP.Items[i].SubItems[4].Text);
+                hoadon.TenSp = lstDSSP.Items[i].SubItems[2].Text;
+                hoadon.SoLuong = Convert.ToInt32(lstDSSP.Items[i].SubItems[3].Text);
+                hoadon.DonGia = Convert.ToInt32(lstDSSP.Items[i].SubItems[4].Text);
+                hoadon.TongTien = Convert.ToInt32(lstDSSP.Items[i].SubItems[5].Text);
+            }
                 if (cthd.hienthicthd(hoadon))
                 {
                    dgvDSHD.DataSource = cthd.hienthi();
@@ -114,7 +115,7 @@ namespace DashBoar
                 {
                     MessageBox.Show("Cập nhật Thất Bại !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            }
+            
             
                
         }
