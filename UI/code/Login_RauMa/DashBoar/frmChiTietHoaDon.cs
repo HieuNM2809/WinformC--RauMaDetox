@@ -20,6 +20,22 @@ namespace DashBoar
         {
             InitializeComponent();
         }
+        public void tienganh()
+        {
+            lblGia.Text = "Price";
+            lbl_chietkhau.Text = "Discout";
+            lbl_soluong.Text = "Amount";
+            lbl_tensp.Text = "Product's name";
+            lbl_tong.Text = "Total";
+            lbl_tongtien.Text = "Total money";
+            btnXacNhan.Text = "Confirm";
+            btn_bo.Text = "Unchecked";
+            lstDSSP.Columns[0].Name = "akl";
+        }
+        public void tiengviet()
+        {
+
+        }
         private void frmChiTietHoaDon_Load(object sender, EventArgs e)
         {
             cbbTenSP.DataSource = cthd.LayDSSP();

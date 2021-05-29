@@ -46,7 +46,7 @@ namespace DashBoar
             this.pnDangKi = new System.Windows.Forms.Panel();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lbEmail = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gB_hình = new System.Windows.Forms.GroupBox();
             this.picNV = new System.Windows.Forms.PictureBox();
             this.lbGioiTinhDK = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -56,9 +56,9 @@ namespace DashBoar
             this.lbCongViecDK = new System.Windows.Forms.Label();
             this.ofdMoFile = new System.Windows.Forms.OpenFileDialog();
             this.picLogo = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_dktk = new System.Windows.Forms.Label();
             this.pnDangKi.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gB_hình.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picNV)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -68,21 +68,21 @@ namespace DashBoar
             // 
             this.txtNhaplaiMatKhau.Location = new System.Drawing.Point(186, 317);
             this.txtNhaplaiMatKhau.Name = "txtNhaplaiMatKhau";
-            this.txtNhaplaiMatKhau.Size = new System.Drawing.Size(174, 26);
+            this.txtNhaplaiMatKhau.Size = new System.Drawing.Size(174, 22);
             this.txtNhaplaiMatKhau.TabIndex = 6;
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(187, 274);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(174, 26);
+            this.txtMatKhau.Size = new System.Drawing.Size(174, 22);
             this.txtMatKhau.TabIndex = 5;
             // 
             // txtTenTruyCap
             // 
             this.txtTenTruyCap.Location = new System.Drawing.Point(186, 232);
             this.txtTenTruyCap.Name = "txtTenTruyCap";
-            this.txtTenTruyCap.Size = new System.Drawing.Size(174, 26);
+            this.txtTenTruyCap.Size = new System.Drawing.Size(174, 22);
             this.txtTenTruyCap.TabIndex = 4;
             // 
             // btnThoat
@@ -126,7 +126,7 @@ namespace DashBoar
             this.lbNhapLaiMKDK.Location = new System.Drawing.Point(28, 315);
             this.lbNhapLaiMKDK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNhapLaiMKDK.Name = "lbNhapLaiMKDK";
-            this.lbNhapLaiMKDK.Size = new System.Drawing.Size(205, 26);
+            this.lbNhapLaiMKDK.Size = new System.Drawing.Size(177, 24);
             this.lbNhapLaiMKDK.TabIndex = 30;
             this.lbNhapLaiMKDK.Text = "Nhập lại mật khẩu";
             // 
@@ -139,7 +139,7 @@ namespace DashBoar
             this.lbTenTrungCapDK.Location = new System.Drawing.Point(28, 230);
             this.lbTenTrungCapDK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTenTrungCapDK.Name = "lbTenTrungCapDK";
-            this.lbTenTrungCapDK.Size = new System.Drawing.Size(143, 26);
+            this.lbTenTrungCapDK.Size = new System.Drawing.Size(127, 24);
             this.lbTenTrungCapDK.TabIndex = 31;
             this.lbTenTrungCapDK.Text = "Tên truy cập";
             // 
@@ -152,7 +152,7 @@ namespace DashBoar
             this.lbMKDK.Location = new System.Drawing.Point(28, 274);
             this.lbMKDK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbMKDK.Name = "lbMKDK";
-            this.lbMKDK.Size = new System.Drawing.Size(109, 26);
+            this.lbMKDK.Size = new System.Drawing.Size(94, 24);
             this.lbMKDK.TabIndex = 32;
             this.lbMKDK.Text = "Mật khẩu";
             // 
@@ -165,7 +165,7 @@ namespace DashBoar
             this.lbHoTenDK.Location = new System.Drawing.Point(28, 22);
             this.lbHoTenDK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbHoTenDK.Name = "lbHoTenDK";
-            this.lbHoTenDK.Size = new System.Drawing.Size(82, 26);
+            this.lbHoTenDK.Size = new System.Drawing.Size(72, 24);
             this.lbHoTenDK.TabIndex = 36;
             this.lbHoTenDK.Text = "Họ tên";
             // 
@@ -178,7 +178,7 @@ namespace DashBoar
             this.lbNgaySinhDK.Location = new System.Drawing.Point(28, 189);
             this.lbNgaySinhDK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNgaySinhDK.Name = "lbNgaySinhDK";
-            this.lbNgaySinhDK.Size = new System.Drawing.Size(118, 26);
+            this.lbNgaySinhDK.Size = new System.Drawing.Size(103, 24);
             this.lbNgaySinhDK.TabIndex = 37;
             this.lbNgaySinhDK.Text = "Ngày sinh";
             // 
@@ -191,7 +191,7 @@ namespace DashBoar
             this.lbSDT.Location = new System.Drawing.Point(28, 108);
             this.lbSDT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSDT.Name = "lbSDT";
-            this.lbSDT.Size = new System.Drawing.Size(58, 26);
+            this.lbSDT.Size = new System.Drawing.Size(50, 24);
             this.lbSDT.TabIndex = 38;
             this.lbSDT.Text = "SDT";
             // 
@@ -199,14 +199,14 @@ namespace DashBoar
             // 
             this.txtHoTen.Location = new System.Drawing.Point(187, 24);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(171, 26);
+            this.txtHoTen.Size = new System.Drawing.Size(171, 22);
             this.txtHoTen.TabIndex = 1;
             // 
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(187, 110);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(174, 26);
+            this.txtSDT.Size = new System.Drawing.Size(174, 22);
             this.txtSDT.TabIndex = 2;
             // 
             // dtpNgaySinh
@@ -216,7 +216,7 @@ namespace DashBoar
             this.dtpNgaySinh.Location = new System.Drawing.Point(187, 189);
             this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(174, 29);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(174, 25);
             this.dtpNgaySinh.TabIndex = 3;
             // 
             // pnDangKi
@@ -227,7 +227,7 @@ namespace DashBoar
             this.pnDangKi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.pnDangKi.Controls.Add(this.txtEmail);
             this.pnDangKi.Controls.Add(this.lbEmail);
-            this.pnDangKi.Controls.Add(this.groupBox1);
+            this.pnDangKi.Controls.Add(this.gB_hình);
             this.pnDangKi.Controls.Add(this.lbGioiTinhDK);
             this.pnDangKi.Controls.Add(this.groupBox2);
             this.pnDangKi.Controls.Add(this.cbbLoaiNV);
@@ -255,7 +255,7 @@ namespace DashBoar
             // 
             this.txtEmail.Location = new System.Drawing.Point(187, 152);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(174, 26);
+            this.txtEmail.Size = new System.Drawing.Size(174, 22);
             this.txtEmail.TabIndex = 50;
             // 
             // lbEmail
@@ -267,20 +267,20 @@ namespace DashBoar
             this.lbEmail.Location = new System.Drawing.Point(28, 152);
             this.lbEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(73, 26);
+            this.lbEmail.Size = new System.Drawing.Size(62, 24);
             this.lbEmail.TabIndex = 49;
             this.lbEmail.Text = "Email";
             // 
-            // groupBox1
+            // gB_hình
             // 
-            this.groupBox1.Controls.Add(this.picNV);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(402, 24);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(202, 154);
-            this.groupBox1.TabIndex = 48;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Hình ảnh";
+            this.gB_hình.Controls.Add(this.picNV);
+            this.gB_hình.ForeColor = System.Drawing.Color.White;
+            this.gB_hình.Location = new System.Drawing.Point(402, 24);
+            this.gB_hình.Name = "gB_hình";
+            this.gB_hình.Size = new System.Drawing.Size(202, 154);
+            this.gB_hình.TabIndex = 48;
+            this.gB_hình.TabStop = false;
+            this.gB_hình.Text = "Hình ảnh";
             // 
             // picNV
             // 
@@ -303,7 +303,7 @@ namespace DashBoar
             this.lbGioiTinhDK.Location = new System.Drawing.Point(28, 66);
             this.lbGioiTinhDK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbGioiTinhDK.Name = "lbGioiTinhDK";
-            this.lbGioiTinhDK.Size = new System.Drawing.Size(101, 26);
+            this.lbGioiTinhDK.Size = new System.Drawing.Size(87, 24);
             this.lbGioiTinhDK.TabIndex = 47;
             this.lbGioiTinhDK.Text = "Giới tính";
             // 
@@ -327,7 +327,7 @@ namespace DashBoar
             this.radNu.Location = new System.Drawing.Point(83, 12);
             this.radNu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radNu.Name = "radNu";
-            this.radNu.Size = new System.Drawing.Size(54, 24);
+            this.radNu.Size = new System.Drawing.Size(47, 21);
             this.radNu.TabIndex = 1;
             this.radNu.Text = "Nữ";
             this.radNu.UseVisualStyleBackColor = true;
@@ -340,7 +340,7 @@ namespace DashBoar
             this.radNam.Location = new System.Drawing.Point(15, 12);
             this.radNam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radNam.Name = "radNam";
-            this.radNam.Size = new System.Drawing.Size(67, 24);
+            this.radNam.Size = new System.Drawing.Size(58, 21);
             this.radNam.TabIndex = 0;
             this.radNam.TabStop = true;
             this.radNam.Text = "Nam";
@@ -354,7 +354,7 @@ namespace DashBoar
             "Full time"});
             this.cbbLoaiNV.Location = new System.Drawing.Point(186, 362);
             this.cbbLoaiNV.Name = "cbbLoaiNV";
-            this.cbbLoaiNV.Size = new System.Drawing.Size(174, 28);
+            this.cbbLoaiNV.Size = new System.Drawing.Size(174, 24);
             this.cbbLoaiNV.TabIndex = 44;
             // 
             // lbCongViecDK
@@ -366,7 +366,7 @@ namespace DashBoar
             this.lbCongViecDK.Location = new System.Drawing.Point(28, 364);
             this.lbCongViecDK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCongViecDK.Name = "lbCongViecDK";
-            this.lbCongViecDK.Size = new System.Drawing.Size(118, 26);
+            this.lbCongViecDK.Size = new System.Drawing.Size(104, 24);
             this.lbCongViecDK.TabIndex = 43;
             this.lbCongViecDK.Text = "Công việc";
             // 
@@ -385,25 +385,26 @@ namespace DashBoar
             this.picLogo.TabIndex = 28;
             this.picLogo.TabStop = false;
             // 
-            // label3
+            // lbl_dktk
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.label3.Location = new System.Drawing.Point(184, 129);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(271, 31);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "ĐĂNG KÍ TÀI KHOẢN";
+            this.lbl_dktk.AutoSize = true;
+            this.lbl_dktk.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_dktk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.lbl_dktk.Location = new System.Drawing.Point(197, 129);
+            this.lbl_dktk.Name = "lbl_dktk";
+            this.lbl_dktk.Size = new System.Drawing.Size(227, 27);
+            this.lbl_dktk.TabIndex = 29;
+            this.lbl_dktk.Text = "ĐĂNG KÍ TÀI KHOẢN";
             // 
             // FrmDangKiTaiKhoan
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::DashBoar.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(616, 647);
             this.Controls.Add(this.pnDangKi);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbl_dktk);
             this.Controls.Add(this.picLogo);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -413,7 +414,7 @@ namespace DashBoar
             this.Load += new System.EventHandler(this.FrmDangKiTaiKhoan_Load);
             this.pnDangKi.ResumeLayout(false);
             this.pnDangKi.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
+            this.gB_hình.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picNV)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -448,10 +449,10 @@ namespace DashBoar
         private System.Windows.Forms.RadioButton radNu;
         private System.Windows.Forms.RadioButton radNam;
         private System.Windows.Forms.Label lbGioiTinhDK;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gB_hình;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lbEmail;
         private System.Windows.Forms.PictureBox picLogo;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_dktk;
     }
 }

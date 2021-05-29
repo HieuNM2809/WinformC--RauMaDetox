@@ -41,19 +41,19 @@
             this.lblGia = new System.Windows.Forms.Label();
             this.txtChietKhau = new System.Windows.Forms.RichTextBox();
             this.cbbTenSP = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_chietkhau = new System.Windows.Forms.Label();
+            this.lbl_tensp = new System.Windows.Forms.Label();
+            this.lbl_soluong = new System.Windows.Forms.Label();
             this.numSoLuong = new System.Windows.Forms.NumericUpDown();
             this.cbbGia = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.txtTongTien = new System.Windows.Forms.RichTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_tong = new System.Windows.Forms.Label();
+            this.lbl_tongtien = new System.Windows.Forms.Label();
             this.txtTongSoLuong = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_bo = new System.Windows.Forms.Button();
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -151,9 +151,9 @@
             this.tableLayoutPanel3.Controls.Add(this.lblGia, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.txtChietKhau, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.cbbTenSP, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label3, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_chietkhau, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_tensp, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_soluong, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.numSoLuong, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.cbbGia, 1, 3);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -200,44 +200,44 @@
             this.cbbTenSP.TabIndex = 4;
             this.cbbTenSP.SelectedValueChanged += new System.EventHandler(this.cbbTenSP_SelectedValueChanged);
             // 
-            // label1
+            // lbl_chietkhau
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(282, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Chiết Khấu";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_chietkhau.AutoSize = true;
+            this.lbl_chietkhau.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_chietkhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_chietkhau.ForeColor = System.Drawing.Color.White;
+            this.lbl_chietkhau.Location = new System.Drawing.Point(3, 0);
+            this.lbl_chietkhau.Name = "lbl_chietkhau";
+            this.lbl_chietkhau.Size = new System.Drawing.Size(282, 29);
+            this.lbl_chietkhau.TabIndex = 0;
+            this.lbl_chietkhau.Text = "Chiết Khấu";
+            this.lbl_chietkhau.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // lbl_tensp
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(282, 29);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tên Sản Phẩm";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_tensp.AutoSize = true;
+            this.lbl_tensp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_tensp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tensp.ForeColor = System.Drawing.Color.White;
+            this.lbl_tensp.Location = new System.Drawing.Point(3, 29);
+            this.lbl_tensp.Name = "lbl_tensp";
+            this.lbl_tensp.Size = new System.Drawing.Size(282, 29);
+            this.lbl_tensp.TabIndex = 1;
+            this.lbl_tensp.Text = "Tên Sản Phẩm";
+            this.lbl_tensp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // lbl_soluong
             // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(282, 29);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Số Lượng";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_soluong.AutoSize = true;
+            this.lbl_soluong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_soluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_soluong.ForeColor = System.Drawing.Color.White;
+            this.lbl_soluong.Location = new System.Drawing.Point(3, 58);
+            this.lbl_soluong.Name = "lbl_soluong";
+            this.lbl_soluong.Size = new System.Drawing.Size(282, 29);
+            this.lbl_soluong.TabIndex = 2;
+            this.lbl_soluong.Text = "Số Lượng";
+            this.lbl_soluong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // numSoLuong
             // 
@@ -264,8 +264,8 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.txtTongTien, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label5, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_tong, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_tongtien, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.txtTongSoLuong, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(585, 3);
@@ -285,31 +285,31 @@
             this.txtTongTien.TabIndex = 9;
             this.txtTongTien.Text = "";
             // 
-            // label4
+            // lbl_tong
             // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(282, 59);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Tổng Số Lượng";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_tong.AutoSize = true;
+            this.lbl_tong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_tong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tong.ForeColor = System.Drawing.Color.White;
+            this.lbl_tong.Location = new System.Drawing.Point(3, 0);
+            this.lbl_tong.Name = "lbl_tong";
+            this.lbl_tong.Size = new System.Drawing.Size(282, 59);
+            this.lbl_tong.TabIndex = 6;
+            this.lbl_tong.Text = "Tổng Số Lượng";
+            this.lbl_tong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // lbl_tongtien
             // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 59);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(282, 59);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Tổng Tiền";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_tongtien.AutoSize = true;
+            this.lbl_tongtien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_tongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tongtien.ForeColor = System.Drawing.Color.White;
+            this.lbl_tongtien.Location = new System.Drawing.Point(3, 59);
+            this.lbl_tongtien.Name = "lbl_tongtien";
+            this.lbl_tongtien.Size = new System.Drawing.Size(282, 59);
+            this.lbl_tongtien.TabIndex = 7;
+            this.lbl_tongtien.Text = "Tổng Tiền";
+            this.lbl_tongtien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtTongSoLuong
             // 
@@ -338,7 +338,7 @@
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.button3, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btn_bo, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnXacNhan, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(585, 127);
@@ -348,20 +348,20 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(577, 105);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
-            // button3
+            // btn_bo
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.button3.Location = new System.Drawing.Point(291, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(283, 99);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Bỏ chọn";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_bo.BackColor = System.Drawing.Color.White;
+            this.btn_bo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_bo.FlatAppearance.BorderSize = 0;
+            this.btn_bo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_bo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_bo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_bo.Location = new System.Drawing.Point(291, 3);
+            this.btn_bo.Name = "btn_bo";
+            this.btn_bo.Size = new System.Drawing.Size(283, 99);
+            this.btn_bo.TabIndex = 1;
+            this.btn_bo.Text = "Bỏ chọn";
+            this.btn_bo.UseVisualStyleBackColor = false;
             // 
             // btnXacNhan
             // 
@@ -433,18 +433,18 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.RichTextBox txtChietKhau;
         private System.Windows.Forms.ComboBox cbbTenSP;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_chietkhau;
+        private System.Windows.Forms.Label lbl_tensp;
+        private System.Windows.Forms.Label lbl_soluong;
         private System.Windows.Forms.NumericUpDown numSoLuong;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.RichTextBox txtTongTien;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl_tong;
+        private System.Windows.Forms.Label lbl_tongtien;
         private System.Windows.Forms.RichTextBox txtTongSoLuong;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_bo;
         private System.Windows.Forms.Button btnXacNhan;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lblGia;

@@ -21,7 +21,34 @@ namespace DashBoar
         {
             InitializeComponent();
         }
-
+        public void tienganh()
+        {
+            lbHoTenDK.Text = "Full name";
+            lbMKDK.Text = "Password";
+            lbNgaySinhDK.Text = "Birth day";
+            lbNhapLaiMKDK.Text = "Confirm new password";
+            lbSDT.Text = "Phone";
+            lbTenTrungCapDK.Text = "User name";
+            lbCongViecDK.Text = "Work";
+            gB_hình.Text = "Picture";
+            lbl_dktk.Text = "Register an account";
+            btnThoat.Text = "Exit";
+            btnXacNhan.Text = "Confirm";
+        }
+        public void tiengviet()
+        {
+            lbHoTenDK.Text = "Họ tên";
+            lbMKDK.Text = "Mật khẩu";
+            lbNgaySinhDK.Text = "Ngày sinh";
+            lbNhapLaiMKDK.Text = "Xác nhận mật khẩu";
+            lbSDT.Text = "SĐT";
+            lbTenTrungCapDK.Text = "Tên đăng nhập";
+            lbCongViecDK.Text = "Công việc";
+            gB_hình.Text = "Hình ảnh";
+            lbl_dktk.Text = "Đăng ký tài khoản";
+            btnThoat.Text = "Thoát";
+            btnXacNhan.Text = "Xác nhận";
+        }
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
           
@@ -60,7 +87,7 @@ namespace DashBoar
                         nv.LoaiNV = cbbLoaiNV.Text;
                         nv.MatKhau = txtMatKhau.Text.MaHoaMD5();
                         nv.Hinh = string.Format("{0}.jpg", i);
-
+                        
                         picNV.Text = i + ".jpg";
 
                         SaveImage(picNV.Image);

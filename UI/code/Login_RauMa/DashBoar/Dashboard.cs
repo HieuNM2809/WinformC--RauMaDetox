@@ -16,6 +16,22 @@ namespace DashBoar
         {
             InitializeComponent();
         }
+        public void tienganh()
+        {
+            btnCaiDat.Text = "Setting";
+            btnHoaDon.Text = "Bill";
+            btnQLTaiKhoan.Text = "Staff";
+            btnSanPham.Text = "Product";
+            btnThoat.Text = "Exit";
+        }
+        public void tiengviet()
+        {
+            btnCaiDat.Text = "Cài đặt";
+            btnHoaDon.Text = "Hóa đơn";
+            btnQLTaiKhoan.Text = "Nhân viên";
+            btnSanPham.Text = "Sản phẩm";
+            btnThoat.Text = "Thoát";
+        }
         private void loadform(object Form)
         {
             if (this.pnlform.Controls.Count > 0)

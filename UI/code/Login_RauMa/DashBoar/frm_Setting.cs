@@ -36,10 +36,10 @@ namespace DashBoar
         }
         public void lol(object Form)
         {
-            frmDashboar db = Form as frmDashboar;
+           Form db = Form as Form;
             if (cbb_tyle.Text == "1600x900")
             {
-                db.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+               db.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             }
             else
             {
@@ -49,8 +49,24 @@ namespace DashBoar
         }
         public void btn_xacnhan_Click(object sender, EventArgs e)
         {
-            frmDashboar dc = new frmDashboar();
-            lol(dc)
+            frmDashboar db = new frmDashboar();
+            if (cbb_tyle.Text == "1600x900")
+            {
+                db.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            }
+            else
+            {
+                db.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            }
+            if(cbb_ngonngu.Text=="Tiếng Việt")
+            {
+                db.tiengviet();
+            }
+            else
+            {
+                db.tienganh();
+            }
+            db.ShowDialog();
         }
 
     }
