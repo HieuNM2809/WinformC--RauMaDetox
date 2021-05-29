@@ -10,6 +10,7 @@ namespace BUS
 {
     public class ChiTietHoaDonBUS
     {
+        int i;
         ChiTietHoaDonDAO hd = new ChiTietHoaDonDAO();
         ChiTietHoaDonDTO cthd = new ChiTietHoaDonDTO();
         public List<ChiTietHoaDonDTO> LayDSSP()
