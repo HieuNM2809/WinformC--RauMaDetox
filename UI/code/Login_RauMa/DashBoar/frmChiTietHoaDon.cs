@@ -16,6 +16,7 @@ namespace DashBoar
     {
         ChiTietHoaDonBUS cthd = new ChiTietHoaDonBUS();
         int count = 0;
+        float Tong ;
         public frmChiTietHoaDon()
         {
             InitializeComponent();
@@ -45,14 +46,32 @@ namespace DashBoar
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            count++; 
+            count++;
+            //int i;
+            //for ( i = 0; i < lstDSSP.Items.Count; i++)
+            //{
+            //    lstDSSP.Items[i].SubItems[1].Text = count.ToString();
+            //    lstDSSP.Items[i].SubItems[2].Text = cbbTenSP.Text;
+            //    lstDSSP.Items[i].SubItems[3].Text = numSoLuong.Text;
+            //    lstDSSP.Items[i].SubItems[4].Text = cbbGia.Text;
+            //    lstDSSP.Items[i].SubItems[5].Text = txtChietKhau.Text;
+            //    Tong = Tong * Convert.ToInt32(lstDSSP.Items[i].SubItems[2].Text) * Convert.ToInt32(lstDSSP.Items[i].SubItems[3].Text) * (1 - (Convert.ToInt32(lstDSSP.Items[i].SubItems[4].Text)));
+            //    lstDSSP.Items[i].SubItems[6].Text = Tong.ToString();
+
+            //}
+
+
             ListViewItem lst = new ListViewItem(count.ToString());
             lst.SubItems.Add(cbbTenSP.Text);
             lst.SubItems.Add(numSoLuong.Text);
             lst.SubItems.Add(cbbGia.Text);
             lst.SubItems.Add(txtChietKhau.Text);
-            lst.SubItems.Add(txtTongTien.Text);
+            string a = cbbGia.Text;
+            string b = numSoLuong.Text;
+            Tong += (Convert.ToInt32(a)) * (Convert.ToInt32(b));
+            lst.SubItems.Add(Tong.ToString());
             lstDSSP.Items.Add(lst);
+
         }
 
         private void cbbTenSP_SelectedValueChanged(object sender, EventArgs e)
