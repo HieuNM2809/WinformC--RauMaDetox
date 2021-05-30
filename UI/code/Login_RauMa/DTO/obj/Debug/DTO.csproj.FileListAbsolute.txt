@@ -1,5 +1,6 @@
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DTO\bin\Debug\DTO.dll
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DTO\bin\Debug\DTO.pdb
+D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DTO\obj\Debug\DTO.dll
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DTO\obj\Debug\DTO.pdb

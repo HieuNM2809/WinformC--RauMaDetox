@@ -24,6 +24,8 @@ namespace DAO
         public string IDNV { get; set; }
         public Nullable<System.DateTime> NgayLapHoaDon { get; set; }
         public Nullable<short> TrangThai { get; set; }
+        public Nullable<decimal> Tongtien { get; set; }
+        public Nullable<int> Tongso { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHoaDon> CTHoaDons { get; set; }

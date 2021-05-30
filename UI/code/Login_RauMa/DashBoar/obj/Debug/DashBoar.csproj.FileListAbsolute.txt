@@ -71,6 +71,7 @@ D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\pt\Micr
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.csproj.AssemblyReference.cache
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.frmDashboar.resources
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.frmChiTietHoaDon.resources
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.FrmDangKiTaiKhoan.resources
@@ -90,4 +91,3 @@ D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\en\Dash
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.csproj.CopyComplete
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.exe
 D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.pdb
-D:\đồ én\WinformC--RauMaDetox\UI\code\Login_RauMa\DashBoar\obj\Debug\DashBoar.csproj.AssemblyReference.cache

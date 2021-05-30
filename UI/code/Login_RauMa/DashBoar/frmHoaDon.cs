@@ -93,17 +93,7 @@ namespace DashBoar
         private void btnXoa_Click(object sender, EventArgs e)
         {
             hd.id = txtIDHoaDon.Text;
-            if (hoadon.XoaHD(hd))
-            {
-                dgvHoaDon.DataSource = hoadon.laydshd();
-                MessageBox.Show("Xóa Thành Công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else
-            {
-                MessageBox.Show("Xóa Thất Bại !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+           
         }
 
         private void tạoHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -115,6 +105,7 @@ namespace DashBoar
         {
             int mahd = (cthd.max()) + 1;
             hd.id = mahd.ToString();
+            txtIDNhanVien.Text = "1";
             hd.idnhanvien = txtIDNhanVien.Text;
             hd.ngaylaphoadon = dtPNgayLap.Value;
             if (hoadon.themHD(hd))

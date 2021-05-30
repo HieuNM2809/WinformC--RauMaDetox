@@ -32,15 +32,21 @@ namespace DAO
             qlrauma.SaveChanges();
             return true;
         }
-        public bool CapnhatHD(HoaDonDTO hd)
+        public bool themtien(int tongtien,int soluong,string id)
         {
-            int temp = qlrauma.CAPNHATHD(hd.id, hd.idnhanvien, hd.ngaylaphoadon);
+            int temp = qlrauma.nhapct(id, tongtien, soluong);
             qlrauma.SaveChanges();
             return true;
         }
-        public bool XoaHD(HoaDonDTO hd)
+        public bool CapnhatHD(HoaDonDTO hd)
         {
-            int temp = qlrauma.XOAHD(hd.id);
+            //int temp = qlrauma.CAPNHATHD(hd.id, hd.idnhanvien, hd.ngaylaphoadon);
+            qlrauma.SaveChanges();
+            return true;
+        }
+        public bool XoaHD(string id)
+        {
+            int temp = qlrauma.XOAHD(id);
             qlrauma.SaveChanges();
             return true;
         }

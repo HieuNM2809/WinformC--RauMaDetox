@@ -21,10 +21,10 @@ namespace DAO
             }).ToList();
             return lssanpham;
         }
-        public List<ChiTietHoaDonDTO> HienThi()
+        public List<ChiTietHoaDonDTO> HienThi(string b)
         {
             List<ChiTietHoaDonDTO> lssanpham = new List<ChiTietHoaDonDTO>();
-                lssanpham = qlrauma.CTHoaDons.Select(u => new ChiTietHoaDonDTO
+                lssanpham = qlrauma.CTHoaDons.Where(l=>l.IDHoaDon==b).Select(u => new ChiTietHoaDonDTO
                 {
                     STT=u.STT,
                     IDHoaDon=u.HoaDon.IDHoaDon,
@@ -53,13 +53,24 @@ namespace DAO
             a = qlrauma.HoaDons.Max(c => c.IDHoaDon);
             return a;
         }
-
-        public bool HienthiCTHoaDon (ChiTietHoaDonDTO cthd)
+        public string   masp(string a)
+        {
+            string b = "";
+            b = qlrauma.SanPhams.Where(k => k.TenSp == a).SingleOrDefault().MaSp;
+               
+            return b;
+        }
+        public bool Themcthd (ChiTietHoaDonDTO cthd)
         {
             qlrauma.THEMCTHD(cthd.STT,cthd.IDHoaDon,cthd.MaSp,cthd.SoLuong, cthd.DonGia,cthd.TongTien);
             qlrauma.SaveChanges();
             return true;
-            
+        }
+       public bool xoact( string a,string b)
+        {
+            qlrauma.xoacthd(a, b);
+            qlrauma.SaveChanges();
+            return true;
         }
     }
 }

@@ -16,24 +16,18 @@ namespace DashBoar
     {
         ChiTietHoaDonDTO hoadon = new ChiTietHoaDonDTO();
         ChiTietHoaDonBUS cthd = new ChiTietHoaDonBUS();
+        HoaDonDTO hd = new HoaDonDTO();
+        HoaDonBUS hdb = new HoaDonBUS();
         int count = 0;
-        float Tong = 0;
-        float TongTien = 0;
-        double soluong = 0;
+        int Tong = 0;
+        int TongTien = 0;
+        int soluong = 0;
         public frmChiTietHoaDon()
         {
             InitializeComponent();
         }
         public void tienganh()
         {
-            lblGia.Text = "Price";
-            lbl_soluong.Text = "Amount";
-            lbl_tensp.Text = "Product's name";
-            lbl_tong.Text = "Total";
-            lbl_tongtien.Text = "Total money";
-            btnXacNhan.Text = "Confirm";
-            btn_bo.Text = "Unchecked";
-            lstDSSP.Columns[0].Name = "akl";
         }
         public void tiengviet()
         {
@@ -44,25 +38,45 @@ namespace DashBoar
             cbbTenSP.DataSource = cthd.LayDSSP();
             cbbTenSP.DisplayMember = "Tensp";
             cbbTenSP.ValueMember = "Masp";
+            dgvDSHD.DataSource = cthd.hienthi(cthd.max().ToString());
+            if (txtTongSoLuong.Text == "" && txtTongTien.Text == "")
+            {
+                button1.Text = "THOÁT";
+            }
+            else
+            {
+                button1.Text = "In Hóa Đơn";
+            }
 
-            dgvDSHD.DataSource = cthd.hienthi();
         }
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
             count++;
-            ListViewItem lst = new ListViewItem(count.ToString());
-            lst.SubItems.Add(cbbTenSP.Text);
-            lst.SubItems.Add(numSoLuong.Text);
-            lst.SubItems.Add(cbbGia.Text);
+
             string a = cbbGia.Text;
             string b = numSoLuong.Text;
             Tong = ((Convert.ToInt32(a)) * (Convert.ToInt32(b)));
-            lst.SubItems.Add(Tong.ToString());
-            lstDSSP.Items.Add(lst);
+            ChiTietHoaDonDTO lis = new ChiTietHoaDonDTO();
+            {
+                lis.IDHoaDon = Convert.ToString(cthd.max());
+                lis.STT =count.ToString();
+                lis.MaSp = cthd.laymasp(cbbTenSP.Text);
+                lis.SoLuong = Convert.ToInt32 ( numSoLuong.Text);
+                lis.TenSp = cbbTenSP.Text;
+                lis.DonGia = Convert.ToInt32 (cbbGia.Text);
+                lis.TongTien = Convert.ToInt32(numSoLuong.Text) * Convert.ToInt32(cbbGia.Text);                
+            }
+          if(cthd.them(lis))
+            {
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmChiTietHoaDon_Load(sender, e);
+            }
+            else MessageBox.Show("Thêm Thất bại", "Thông báo");
             TongTien = TongTien + Tong;
             soluong = soluong +(Convert.ToInt32(numSoLuong.Text));
             txtTongSoLuong.Text = soluong.ToString();
             txtTongTien.Text = TongTien.ToString();
+            
         }
 
         private void cbbTenSP_SelectedValueChanged(object sender, EventArgs e)
@@ -76,35 +90,54 @@ namespace DashBoar
         {
 
         }
-        private void btn_bo_Click(object sender, EventArgs e)
+        private void btnThemCTHD_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < lstDSSP.Items.Count; i++)
+        }
+
+        private void btn_bo_Click_1(object sender, EventArgs e)
+        {
+            string c = cthd.max().ToString();
+            if (lbl_ma.Text!="")
             {
-                if (lstDSSP.Items[i].Selected)
+                if (cthd.loadlai(lbl_ma.Text,c))
                 {
-                    lstDSSP.Items[i].Remove();
-                    i--;
+                    frmChiTietHoaDon_Load(sender, e);
+                    TongTien = TongTien - Convert.ToInt32 (lbl_tien.Text);
+                    txtTongTien.Text = TongTien.ToString();
+                    numSoLuong.Text = "0";
+                    soluong = soluong - Convert.ToInt32(lbl_soluong.Text);
                 }
             }
         }
 
-        private void btnThemCTHD_Click(object sender, EventArgs e)
+        private void dgvDSHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int mahd = (cthd.max());
-            for (int i = 1; i < lstDSSP.Items.Count; i++)
+            if (e.RowIndex > -1)
             {
-                hoadon.STT = i.ToString();
-                hoadon.IDHoaDon = mahd.ToString();
-                hoadon.MaSp = cbbTenSP.SelectedValue.ToString();
-                hoadon.TenSp = lstDSSP.Items[i].SubItems[1].Text;
-                hoadon.SoLuong = Convert.ToInt32(lstDSSP.Items[i].SubItems[2].Text);
-                hoadon.DonGia = Convert.ToInt32(lstDSSP.Items[i].SubItems[3].Text);
-                hoadon.TongTien = Convert.ToInt32(lstDSSP.Items[i].SubItems[4].Text);
-                if(cthd.hienthicthd(hoadon))
+                DataGridViewRow row = this.dgvDSHD.Rows[e.RowIndex];
+                lbl_ma.Text = row.Cells[6].Value.ToString();
+                lbl_tien.Text = row.Cells[5].Value.ToString();
+                lblso.Text = row.Cells[3].Value.ToString();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string c = cthd.max().ToString();
+            if (TongTien == 0 || soluong == 0)
+            {
+                hdb.XoaHD(c);
+                this.Close();
+            }
+            else
+            {
+                if (hdb.them(c, TongTien, soluong))
                 {
-                    frmChiTietHoaDon_Load(sender,e); 
-                    MessageBox.Show("Thêm Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }    
+                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frmChiTietHoaDon_Load(sender, e);
+                }
+                else MessageBox.Show("Thêm Thất bại", "Thông báo");
+                this.Close();
             }
         }
     }

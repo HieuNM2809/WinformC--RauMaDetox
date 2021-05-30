@@ -4,12 +4,13 @@
     <EntitySetMapping Name="CTHoaDons">
       <EntityTypeMapping TypeName="ql_raumaModel.CTHoaDon">
         <MappingFragment StoreEntitySet="CTHoaDon">
-          <ScalarProperty Name="STT" ColumnName="STT" />
           <ScalarProperty Name="IDHoaDon" ColumnName="IDHoaDon" />
           <ScalarProperty Name="MaSp" ColumnName="MaSp" />
           <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
           <ScalarProperty Name="DonGia" ColumnName="DonGia" />
           <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+          <ScalarProperty Name="Tensp" ColumnName="Tensp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -31,6 +32,8 @@
           <ScalarProperty Name="IDNV" ColumnName="IDNV" />
           <ScalarProperty Name="NgayLapHoaDon" ColumnName="NgayLapHoaDon" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="Tongtien" ColumnName="Tongtien" />
+          <ScalarProperty Name="Tongso" ColumnName="Tongso" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -94,8 +97,10 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="CAPNHATHD" FunctionName="ql_raumaModel.Store.CAPNHATHD" />
     <FunctionImportMapping FunctionImportName="CapNhatNV" FunctionName="ql_raumaModel.Store.CapNhatNV" />
+    <FunctionImportMapping FunctionImportName="DOIMATKHAU" FunctionName="ql_raumaModel.Store.DOIMATKHAU" />
+    <FunctionImportMapping FunctionImportName="LAYGIA" FunctionName="ql_raumaModel.Store.LAYGIA" />
+    <FunctionImportMapping FunctionImportName="nhapct" FunctionName="ql_raumaModel.Store.nhapct" />
     <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="ql_raumaModel.Store.sp_alterdiagram" />
     <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="ql_raumaModel.Store.sp_creatediagram" />
     <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="ql_raumaModel.Store.sp_dropdiagram" />
@@ -121,13 +126,13 @@
     <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="ql_raumaModel.Store.sp_renamediagram" />
     <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="ql_raumaModel.Store.sp_upgraddiagrams" />
     <FunctionImportMapping FunctionImportName="SUASP" FunctionName="ql_raumaModel.Store.SUASP" />
+    <FunctionImportMapping FunctionImportName="THEMCTHD" FunctionName="ql_raumaModel.Store.THEMCTHD" />
     <FunctionImportMapping FunctionImportName="THEMHD" FunctionName="ql_raumaModel.Store.THEMHD" />
     <FunctionImportMapping FunctionImportName="ThemNV" FunctionName="ql_raumaModel.Store.ThemNV" />
     <FunctionImportMapping FunctionImportName="THEMSP" FunctionName="ql_raumaModel.Store.THEMSP" />
+    <FunctionImportMapping FunctionImportName="XaoNV" FunctionName="ql_raumaModel.Store.XaoNV" />
+    <FunctionImportMapping FunctionImportName="xoacthd" FunctionName="ql_raumaModel.Store.xoacthd" />
     <FunctionImportMapping FunctionImportName="XOAHD" FunctionName="ql_raumaModel.Store.XOAHD" />
-    <FunctionImportMapping FunctionImportName="XoaNV" FunctionName="ql_raumaModel.Store.XoaNV" />
     <FunctionImportMapping FunctionImportName="XOASP" FunctionName="ql_raumaModel.Store.XOASP" />
-    <FunctionImportMapping FunctionImportName="DOIMATKHAU" FunctionName="ql_raumaModel.Store.DOIMATKHAU" />
-    <FunctionImportMapping FunctionImportName="THEMCTHD" FunctionName="ql_raumaModel.Store.THEMCTHD" />
   </EntityContainerMapping>
 </Mapping>

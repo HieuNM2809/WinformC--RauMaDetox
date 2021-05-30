@@ -186,3 +186,82 @@ BEGIN
 	INSERT INTO CTHoaDon(STT,IDHoaDon,MaSp,SoLuong,DonGia,TongTien) 
 	VALUES (@stt,@idhd,@masp,@soluong,@dongia,@tongtien)
 END
+CREATE PROCEDURE xoacthd
+(
+@STT NVARCHAR(10),
+@idhoadon nvarchar(3)
+)
+as
+begin
+delete from CTHoaDon Where (STT=@STT AND IDHoaDon=@idhoadon)
+end
+CREATE PROCEDURE nhapct
+(
+@idhoadon nvarchar(3),
+@tongtien money,
+@tongso int
+)
+as
+begin
+update HoaDon Set Tongtien=@tongtien,Tongso=@tongso
+ Where (IDHoaDon=@idhoadon)
+end
+CREATE PROCEDURE XOAHD
+(
+@idhoadon nvarchar(3)
+)
+as
+begin
+delete from CTHoaDon Where (IDHoaDon=@idhoadon)
+end
+CREATE PROCEDURE nhapct
+(
+@idhoadon nvarchar(3),
+@tongtien money,
+@tongso int
+)
+as
+begin
+update HoaDon Set Tongtien=@tongtien,Tongso=@tongso
+ Where (IDHoaDon=@idhoadon)
+end
+--proccthd
+CREATE PROCEDURE xoacthd
+(
+@STT NVARCHAR(10),
+@idhoadon nvarchar(3)
+)
+as
+begin
+delete from CTHoaDon Where (STT=@STT AND IDHoaDon=@idhoadon)
+end
+CREATE PROCEDURE nhapct
+(
+@idhoadon nvarchar(3),
+@tongtien money,
+@tongso int
+)
+as
+begin
+update HoaDon Set Tongtien=@tongtien,Tongso=@tongso
+ Where (IDHoaDon=@idhoadon)
+end
+CREATE PROCEDURE XOAHD
+(
+@idhoadon nvarchar(3)
+)
+as
+begin
+delete from CTHoaDon Where (IDHoaDon=@idhoadon)
+end
+CREATE PROCEDURE nhapct
+(
+@idhoadon nvarchar(3),
+@tongtien money,
+@tongso int
+)
+as
+begin
+update HoaDon Set Tongtien=@tongtien,Tongso=@tongso
+ Where (IDHoaDon=@idhoadon)
+end

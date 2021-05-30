@@ -21,17 +21,26 @@ namespace BUS
         {
             return hd.LayGia(masp);
         }
-        public List<ChiTietHoaDonDTO> hienthi()
+        public List<ChiTietHoaDonDTO> hienthi(string b)
         {
-            return hd.HienThi();
+            return hd.HienThi(b);
         }
-        public bool hienthicthd(ChiTietHoaDonDTO hoadon)
+        public bool them(ChiTietHoaDonDTO hoadon)
         {
-            return hd.HienthiCTHoaDon(hoadon);
+            return hd.Themcthd(hoadon);
         }
         public int max()
         {
             return Convert.ToInt32(hd.MAX());
+        }
+        public string laymasp(string a)
+        {
+            return hd.masp(a);
+        }
+        public bool loadlai(string a,string b)
+        {
+            return hd.xoact(a, b);
+            
         }
     }
 }

@@ -2,15 +2,16 @@
 <Schema Namespace="ql_raumaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="CTHoaDon">
     <Key>
-      <PropertyRef Name="STT" />
       <PropertyRef Name="IDHoaDon" />
+      <PropertyRef Name="STT" />
     </Key>
-    <Property Name="STT" Type="nvarchar" MaxLength="3" Nullable="false" />
     <Property Name="IDHoaDon" Type="nvarchar" MaxLength="3" Nullable="false" />
     <Property Name="MaSp" Type="nvarchar" MaxLength="5" />
     <Property Name="SoLuong" Type="int" />
+    <Property Name="STT" Type="nchar" MaxLength="10" Nullable="false" />
     <Property Name="DonGia" Type="money" />
     <Property Name="TongTien" Type="money" />
+    <Property Name="Tensp" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="CTPhanQuyen">
     <Key>
@@ -30,6 +31,8 @@
     <Property Name="IDNV" Type="nvarchar" MaxLength="3" />
     <Property Name="NgayLapHoaDon" Type="datetime" />
     <Property Name="TrangThai" Type="smallint" />
+    <Property Name="Tongtien" Type="money" />
+    <Property Name="Tongso" Type="int" />
   </EntityType>
   <EntityType Name="LoaiSP">
     <Key>
@@ -158,11 +161,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Function Name="CAPNHATHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="idhd" Type="nvarchar" Mode="In" />
-    <Parameter Name="idnv" Type="nvarchar" Mode="In" />
-    <Parameter Name="ngaylap" Type="datetime" Mode="In" />
-  </Function>
   <Function Name="CapNhatNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="idnv" Type="nvarchar" Mode="In" />
     <Parameter Name="hoten" Type="nvarchar" Mode="In" />
@@ -181,6 +179,15 @@
     <Parameter Name="matkhau" Type="varchar" Mode="In" />
   </Function>
   <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="LAYGIA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="masp" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="laymax" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar" />
+  <Function Name="nhapct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idhoadon" Type="nvarchar" Mode="In" />
+    <Parameter Name="tongtien" Type="money" Mode="In" />
+    <Parameter Name="tongso" Type="int" Mode="In" />
+  </Function>
   <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
     <Parameter Name="owner_id" Type="int" Mode="In" />
@@ -253,11 +260,15 @@
     <Parameter Name="Mota" Type="nvarchar" Mode="In" />
     <Parameter Name="Hinh" Type="nvarchar(max)" Mode="In" />
   </Function>
-  <Function Name="XOAHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="idhd" Type="nvarchar" Mode="In" />
-  </Function>
-  <Function Name="XoaNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+  <Function Name="XaoNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="idnv" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="xoacthd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="STT" Type="nvarchar" Mode="In" />
+    <Parameter Name="idhoadon" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="XOAHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idhoadon" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="XOASP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="masp" Type="nvarchar" Mode="In" />
