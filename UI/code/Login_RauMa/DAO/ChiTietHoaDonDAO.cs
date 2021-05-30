@@ -47,6 +47,18 @@ namespace DAO
             qlrauma.SaveChanges();
             return lssanpham;
         }
+
+        public List<ChiTietHoaDonDTO> LayTong(string idhd)
+        {
+            List<ChiTietHoaDonDTO> lssanpham = new List<ChiTietHoaDonDTO>();
+            lssanpham = qlrauma.HoaDons.Where(v => v.IDHoaDon == idhd).Select(u => new ChiTietHoaDonDTO
+            {
+                Tongsoluong=(int)u.Tongso
+            }).ToList();
+            qlrauma.SaveChanges();
+            return lssanpham;
+        }
+
         public string MAX()
         {
             string a = "0";
@@ -60,6 +72,7 @@ namespace DAO
                
             return b;
         }
+        
         public bool Themcthd (ChiTietHoaDonDTO cthd)
         {
             qlrauma.THEMCTHD(cthd.STT,cthd.IDHoaDon,cthd.MaSp,cthd.SoLuong, cthd.DonGia,cthd.TongTien);

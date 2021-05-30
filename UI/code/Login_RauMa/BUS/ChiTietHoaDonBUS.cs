@@ -29,6 +29,10 @@ namespace BUS
         {
             return hd.Themcthd(hoadon);
         }
+        public List<ChiTietHoaDonDTO> LayTong(string idhd)
+        {
+            return hd.LayTong(idhd);
+        }
         public int max()
         {
             return Convert.ToInt32(hd.MAX());

@@ -62,20 +62,9 @@ namespace DashBoar
         
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            hd.id = txtIDHoaDon.Text;
-            hd.idnhanvien = txtIDNhanVien.Text;
-            hd.ngaylaphoadon = dtPNgayLap.Value;
-            if (hoadon.CapnhatHD(hd))
-            {
-                dgvHoaDon.DataSource = hoadon.laydshd();
-                MessageBox.Show("Cập nhật Thành Công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else
-            {
-                MessageBox.Show("Cập nhật Thất Bại !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            frmChiTietHoaDon frmcthd = new frmChiTietHoaDon();
+            cthd.hienthi(txtIDHoaDon.Text);
+            frmcthd.ShowDialog();
         }
 
         private void dgvHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
