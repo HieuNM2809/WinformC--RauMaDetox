@@ -94,19 +94,32 @@ namespace DashBoar
         private void btn_bo_Click_1(object sender, EventArgs e)
         {
             string c = cthd.max().ToString();
-            if (lbl_ma.Text!="")
+            if (lbl_ma.Text != "")
             {
-                if (cthd.loadlai(lbl_ma.Text,c))
+                if (dgvDSHD.RowCount > 0)
                 {
-                    frmChiTietHoaDon_Load(sender, e);
-                    TongTien = TongTien - Convert.ToInt32 (lbl_tien.Text);
-                    txtTongTien.Text = TongTien.ToString();
-                    numSoLuong.Text = "0";
-                    soluong = soluong - Convert.ToInt32(lblso.Text);
-                    txtTongSoLuong.Text = soluong.ToString();
-                    frmChiTietHoaDon_Load(sender, e);
+                    if (cthd.loadlai(lbl_ma.Text, c)==true)
+                    {
+                        frmChiTietHoaDon_Load(sender, e);
+                        try
+                        {
+                            TongTien = TongTien - Convert.ToInt32(lbl_tien.Text);
+                            txtTongTien.Text = TongTien.ToString();
+                            lbl_tien.Text = "O";
+                            numSoLuong.Text = "0";
+                            soluong = soluong - Convert.ToInt32(lblso.Text);
+                            txtTongSoLuong.Text = soluong.ToString();
+                            lblso.Text = "0";
+                        }
+                        catch
+                        {
+                            return;
+                        }
+                        frmChiTietHoaDon_Load(sender, e);
+                    }
                 }
             }
+            else return;
         }
 
         private void dgvDSHD_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -123,9 +136,9 @@ namespace DashBoar
         private void button1_Click(object sender, EventArgs e)
         {
             string c = cthd.max().ToString();
-            if (TongTien == 0 || soluong == 0)
+            if (txtTongSoLuong.Text=="0" || txtTongTien.Text == "0")
             {
-                hdb.XoaHD(c);
+              if(  hdb.XoaHD(c)==true)
                 this.Close();
             }
             else
