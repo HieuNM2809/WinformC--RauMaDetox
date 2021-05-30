@@ -35,6 +35,7 @@ namespace DashBoar
             this.tsmlDMK = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmlQLNV = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmlTTNV = new System.Windows.Forms.ToolStripMenuItem();
+            this.tmslBaoCao = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_show = new System.Windows.Forms.Panel();
             this.mnsQL_NhanVien.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +49,8 @@ namespace DashBoar
             this.mnsQL_NhanVien.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.mnsQL_NhanVien.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tàiKhoảnToolStripMenuItem,
-            this.tsmlQLNV});
+            this.tsmlQLNV,
+            this.tmslBaoCao});
             this.mnsQL_NhanVien.Location = new System.Drawing.Point(0, 0);
             this.mnsQL_NhanVien.Name = "mnsQL_NhanVien";
             this.mnsQL_NhanVien.Size = new System.Drawing.Size(1288, 36);
@@ -95,6 +97,14 @@ namespace DashBoar
             this.tsmlTTNV.Text = "Thông tin nhân viên";
             this.tsmlTTNV.Click += new System.EventHandler(this.thôngTinNhânViênToolStripMenuItem_Click);
             // 
+            // tmslBaoCao
+            // 
+            this.tmslBaoCao.Enabled = false;
+            this.tmslBaoCao.Name = "tmslBaoCao";
+            this.tmslBaoCao.Size = new System.Drawing.Size(103, 32);
+            this.tmslBaoCao.Text = "Báo cáo";
+            this.tmslBaoCao.Click += new System.EventHandler(this.báoCáoToolStripMenuItem_Click);
+            // 
             // panel_show
             // 
             this.panel_show.Location = new System.Drawing.Point(12, 39);
@@ -131,5 +141,6 @@ namespace DashBoar
         private System.Windows.Forms.ToolStripMenuItem tsmlQLNV;
         private System.Windows.Forms.ToolStripMenuItem tsmlTTNV;
         private System.Windows.Forms.Panel panel_show;
+        private System.Windows.Forms.ToolStripMenuItem tmslBaoCao;
     }
 }

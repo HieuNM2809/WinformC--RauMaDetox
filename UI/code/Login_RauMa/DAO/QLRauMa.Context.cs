@@ -299,7 +299,7 @@ namespace DAO
                 new ObjectParameter("ngaylap", ngaylap) :
                 new ObjectParameter("ngaylap", typeof(System.DateTime));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("THEMHD", idhdParameter, idnvParameter, ngaylapParameter);
+
         }
     
         public virtual int ThemNV(string idnv, string hoten, Nullable<System.DateTime> ngaysinh, string gioitinh, string chucdanh, string loainv, string sdt, string taikhoan, string matkhau, string hinh, string email)

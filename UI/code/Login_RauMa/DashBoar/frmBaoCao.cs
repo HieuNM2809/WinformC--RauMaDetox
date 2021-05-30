@@ -23,6 +23,7 @@ namespace DashBoar
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
@@ -47,7 +48,8 @@ namespace DashBoar
                     frmXemBaoCao frmBC = new frmXemBaoCao();
                     frmBC.XemDSNVTheoNhom();
                     frmBC.ShowDialog();
-                  }
+                
+                 }
         }
     }
 }
