@@ -72,6 +72,7 @@ namespace DashBoar
             {
                 tsmlQLNV.Enabled = true;
                 tsmlDKTK.Enabled = true;
+                tmslBaoCao.Enabled = true;
                 FrmDangKiTaiKhoan DKTK = new FrmDangKiTaiKhoan();
                 frmloadNoNe(DKTK);
                 return;
@@ -82,6 +83,12 @@ namespace DashBoar
                 frmloadNoNe(DMK);
             }    
             
+        }
+
+        private void báoCáoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaoCao dk = new frmBaoCao();
+            frmloadNoNe(dk);
         }
     }
 }
