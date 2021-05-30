@@ -90,11 +90,11 @@
             this.dgvDSHD.ReadOnly = true;
             this.dgvDSHD.RowHeadersWidth = 51;
             this.dgvDSHD.RowTemplate.Height = 24;
-<<<<<<< Updated upstream
+
             this.dgvDSHD.Size = new System.Drawing.Size(1159, 281);
-=======
+
             this.dgvDSHD.Size = new System.Drawing.Size(649, 401);
->>>>>>> Stashed changes
+
             this.dgvDSHD.TabIndex = 0;
             this.dgvDSHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSHD_CellClick);
             // 
@@ -149,31 +149,15 @@
             // 
             // Idhoadon
             // 
-<<<<<<< Updated upstream
+
             this.Idhoadon.DataPropertyName = "IDHoaDon";
             this.Idhoadon.HeaderText = "ID Hòa Đơn";
             this.Idhoadon.MinimumWidth = 6;
             this.Idhoadon.Name = "Idhoadon";
             this.Idhoadon.ReadOnly = true;
-=======
-            this.lstDSSP.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colSTT,
-            this.colTenSp,
-            this.colSoLuong,
-            this.colDonGia,
-            this.colChietKhau,
-            this.colTongTien});
-            this.lstDSSP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstDSSP.GridLines = true;
-            this.lstDSSP.HideSelection = false;
-            this.lstDSSP.Location = new System.Drawing.Point(658, 4);
-            this.lstDSSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lstDSSP.Name = "lstDSSP";
-            this.lstDSSP.Size = new System.Drawing.Size(650, 401);
-            this.lstDSSP.TabIndex = 1;
-            this.lstDSSP.UseCompatibleStateImageBehavior = false;
-            this.lstDSSP.View = System.Windows.Forms.View.Details;
->>>>>>> Stashed changes
+
+            
+
             // 
             // tableLayoutPanel2
             // 
@@ -228,49 +212,43 @@
             this.lblGia.ForeColor = System.Drawing.Color.White;
             this.lblGia.Location = new System.Drawing.Point(3, 108);
             this.lblGia.Name = "lblGia";
-<<<<<<< Updated upstream
+
             this.lblGia.Size = new System.Drawing.Size(272, 31);
-=======
+
             this.lblGia.Size = new System.Drawing.Size(318, 39);
->>>>>>> Stashed changes
+
             this.lblGia.TabIndex = 11;
             this.lblGia.Text = "Giá Tiền";
             this.lblGia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-<<<<<<< Updated upstream
-=======
+
+
             // txtChietKhau
             // 
-            this.txtChietKhau.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtChietKhau.Location = new System.Drawing.Point(327, 4);
-            this.txtChietKhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtChietKhau.Name = "txtChietKhau";
-            this.txtChietKhau.Size = new System.Drawing.Size(319, 28);
-            this.txtChietKhau.TabIndex = 10;
-            this.txtChietKhau.Text = "";
+            
             // 
->>>>>>> Stashed changes
+
             // cbbTenSP
             // 
             this.cbbTenSP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbbTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbTenSP.FormattingEnabled = true;
-<<<<<<< Updated upstream
+
             this.cbbTenSP.Location = new System.Drawing.Point(281, 12);
             this.cbbTenSP.Name = "cbbTenSP";
             this.cbbTenSP.Size = new System.Drawing.Size(272, 28);
-=======
+
             this.cbbTenSP.Location = new System.Drawing.Point(327, 40);
             this.cbbTenSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbbTenSP.Name = "cbbTenSP";
             this.cbbTenSP.Size = new System.Drawing.Size(319, 33);
->>>>>>> Stashed changes
+
             this.cbbTenSP.TabIndex = 4;
             this.cbbTenSP.SelectedValueChanged += new System.EventHandler(this.cbbTenSP_SelectedValueChanged);
             // 
             // lblso
             // 
-<<<<<<< Updated upstream
+
             this.lblso.AutoSize = true;
             this.lblso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.lblso.Location = new System.Drawing.Point(559, 46);
@@ -278,18 +256,7 @@
             this.lblso.Size = new System.Drawing.Size(14, 41);
             this.lblso.TabIndex = 2;
             this.lblso.Text = "label1";
-=======
-            this.lbl_chietkhau.AutoSize = true;
-            this.lbl_chietkhau.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_chietkhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_chietkhau.ForeColor = System.Drawing.Color.White;
-            this.lbl_chietkhau.Location = new System.Drawing.Point(3, 0);
-            this.lbl_chietkhau.Name = "lbl_chietkhau";
-            this.lbl_chietkhau.Size = new System.Drawing.Size(318, 36);
-            this.lbl_chietkhau.TabIndex = 0;
-            this.lbl_chietkhau.Text = "Chiết Khấu";
-            this.lbl_chietkhau.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
->>>>>>> Stashed changes
+
             // 
             // lbl_tensp
             // 
@@ -297,15 +264,15 @@
             this.lbl_tensp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_tensp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tensp.ForeColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream
+
             this.lbl_tensp.Location = new System.Drawing.Point(3, 9);
             this.lbl_tensp.Name = "lbl_tensp";
             this.lbl_tensp.Size = new System.Drawing.Size(272, 37);
-=======
+
             this.lbl_tensp.Location = new System.Drawing.Point(3, 36);
             this.lbl_tensp.Name = "lbl_tensp";
             this.lbl_tensp.Size = new System.Drawing.Size(318, 36);
->>>>>>> Stashed changes
+
             this.lbl_tensp.TabIndex = 1;
             this.lbl_tensp.Text = "Tên Sản Phẩm";
             this.lbl_tensp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -316,15 +283,15 @@
             this.lbl_soluong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_soluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_soluong.ForeColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream
+
             this.lbl_soluong.Location = new System.Drawing.Point(3, 46);
             this.lbl_soluong.Name = "lbl_soluong";
             this.lbl_soluong.Size = new System.Drawing.Size(272, 41);
-=======
+
             this.lbl_soluong.Location = new System.Drawing.Point(3, 72);
             this.lbl_soluong.Name = "lbl_soluong";
             this.lbl_soluong.Size = new System.Drawing.Size(318, 36);
->>>>>>> Stashed changes
+
             this.lbl_soluong.TabIndex = 2;
             this.lbl_soluong.Text = "Số Lượng";
             this.lbl_soluong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -333,16 +300,16 @@
             // 
             this.numSoLuong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.numSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
+
             this.numSoLuong.Location = new System.Drawing.Point(281, 49);
             this.numSoLuong.Name = "numSoLuong";
             this.numSoLuong.Size = new System.Drawing.Size(272, 27);
-=======
+
             this.numSoLuong.Location = new System.Drawing.Point(327, 76);
             this.numSoLuong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numSoLuong.Name = "numSoLuong";
             this.numSoLuong.Size = new System.Drawing.Size(319, 31);
->>>>>>> Stashed changes
+
             this.numSoLuong.TabIndex = 5;
             // 
             // cbbGia
@@ -350,16 +317,16 @@
             this.cbbGia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbGia.FormattingEnabled = true;
-<<<<<<< Updated upstream
+
             this.cbbGia.Location = new System.Drawing.Point(281, 90);
             this.cbbGia.Name = "cbbGia";
             this.cbbGia.Size = new System.Drawing.Size(272, 28);
-=======
+
             this.cbbGia.Location = new System.Drawing.Point(327, 112);
             this.cbbGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbbGia.Name = "cbbGia";
             this.cbbGia.Size = new System.Drawing.Size(319, 33);
->>>>>>> Stashed changes
+
             this.cbbGia.TabIndex = 12;
             // 
             // lbl_tien
@@ -444,15 +411,15 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-<<<<<<< Updated upstream
+
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.button1.Location = new System.Drawing.Point(3, 127);
-=======
+
             this.button1.Image = global::DashBoar.Properties.Resources.plus;
             this.button1.Location = new System.Drawing.Point(3, 159);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
->>>>>>> Stashed changes
+
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(649, 131);
             this.button1.TabIndex = 2;
@@ -522,13 +489,13 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-<<<<<<< Updated upstream
+
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1165, 327);
-=======
+
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1311, 409);
->>>>>>> Stashed changes
+
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // lbl_ma

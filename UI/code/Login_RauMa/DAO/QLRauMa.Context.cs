@@ -298,7 +298,7 @@ namespace DAO
             var ngaylapParameter = ngaylap.HasValue ?
                 new ObjectParameter("ngaylap", ngaylap) :
                 new ObjectParameter("ngaylap", typeof(System.DateTime));
-    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("THEMHD", idhdParameter, idnvParameter, ngaylapParameter);
 
         }
     
