@@ -37,10 +37,17 @@ namespace DashBoar
 
                  if (radDSNVTL.Checked == true)
                  {
-                frmXemBaoCao frmBC = new frmXemBaoCao();
-                frmBC.XemDSNVTheoLoai(cbbLoaiNV.Text);
-                frmBC.ShowDialog();
+                    frmXemBaoCao frmBC = new frmXemBaoCao();
+                    frmBC.XemDSNVTheoLoai(cbbLoaiNV.Text);
+                    frmBC.ShowDialog();
                  }
+
+                 if (radDSNVTN.Checked == true)
+                 {
+                    frmXemBaoCao frmBC = new frmXemBaoCao();
+                    frmBC.XemDSNVTheoNhom();
+                    frmBC.ShowDialog();
+                  }
         }
     }
 }

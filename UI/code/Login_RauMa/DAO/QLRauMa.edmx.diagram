@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="950af9ef367e47eab7cfd45ee6f0bddb" Name="Diagram1" ZoomLevel="64">
+      <Diagram DiagramId="950af9ef367e47eab7cfd45ee6f0bddb" Name="Diagram1" ZoomLevel="143">
         <EntityTypeShape EntityType="ql_raumaModel.CTHoaDon" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="ql_raumaModel.CTPhanQuyen" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ql_raumaModel.HoaDon" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />

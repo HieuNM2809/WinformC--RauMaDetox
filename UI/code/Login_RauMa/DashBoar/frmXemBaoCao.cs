@@ -26,6 +26,8 @@ namespace DashBoar
         {
 
             this.rptvXBC.RefreshReport();
+
+
         }
 
         public void XemDanhSachNhanVien()
@@ -58,5 +60,24 @@ namespace DashBoar
         //    rptvXBC.LocalReport.SubreportProcessing += LocalReport_SubreportProcessing;
         //    rptvXBC.RefreshReport();
         //}
+
+
+        public void XemDSNVTheoNhom()
+        {
+            List<NhanVienDTO> lsnv = new List<NhanVienDTO>();
+            lsnv = nv.LayDSNhanVien();
+            rptvXBC.LocalReport.ReportEmbeddedResource = "DashBoar.rptDSNVTheoNhom.rdlc";
+            rptvXBC.LocalReport.DataSources.Add(new ReportDataSource("DSNVTheoNhom", lsnv));
+            rptvXBC.LocalReport.SubreportProcessing += LocalReport_SubreportProcessing;
+            rptvXBC.RefreshReport();
+        }
+
+        private void LocalReport_SubreportProcessing(object sender, SubreportProcessingEventArgs e)
+        {
+            string lnv = e.Parameters["paLoaiNV"].Values[0].ToString();
+            List<NhanVienDTO> lsnv = new List<NhanVienDTO>();
+            lsnv = nv.LayDSNhanVienTheoLoai(lnv);
+            e.DataSources.Add(new ReportDataSource("DSNVTheoNhom", lsnv));
+        }
     }
 }

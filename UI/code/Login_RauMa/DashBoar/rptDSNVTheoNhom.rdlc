@@ -119,6 +119,11 @@
                   <CellContents>
                     <Subreport Name="subreport1">
                       <ReportName>subrptDSNV</ReportName>
+                      <Parameters>
+                        <Parameter Name="paLoaiNV">
+                          <Value>=Fields!LoaiNV.Value</Value>
+                        </Parameter>
+                      </Parameters>
                       <Style>
                         <Border>
                           <Style>None</Style>
