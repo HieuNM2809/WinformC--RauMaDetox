@@ -47,7 +47,6 @@ namespace DashBoar
 
             dgvDSHD.DataSource = cthd.hienthi();
         }
-
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
             count++;
@@ -77,12 +76,10 @@ namespace DashBoar
         {
 
         }
-
         private void btn_bo_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < lstDSSP.Items.Count; i++)
             {
-
                 if (lstDSSP.Items[i].Selected)
                 {
                     lstDSSP.Items[i].Remove();
@@ -93,10 +90,7 @@ namespace DashBoar
 
         private void btnThemCTHD_Click(object sender, EventArgs e)
         {
-            
             int mahd = (cthd.max());
-            
-
             for (int i = 1; i < lstDSSP.Items.Count; i++)
             {
                 hoadon.STT = i.ToString();
@@ -112,7 +106,6 @@ namespace DashBoar
                     MessageBox.Show("Thêm Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }    
             }
-              
         }
     }
 }

@@ -164,8 +164,7 @@ namespace DashBoar
 
         private void btnCaiDat_Click(object sender, EventArgs e)
         {
-            frm_Setting set = new frm_Setting();
-            loadform(set);
+          
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)

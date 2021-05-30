@@ -13,7 +13,6 @@ using DTO;
 
 namespace DashBoar
 {
-   
     public partial class FrmDangKiTaiKhoan : Form
     {
         private DangKiTaiKhoanBUS _DKTK = new DangKiTaiKhoanBUS();
@@ -103,23 +102,19 @@ namespace DashBoar
                         
                     }
                     else MessageBox.Show(Constants.ACCOUNT_EXIST, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+                    }
         }
-
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }  
-
         private void SaveImage(Image image)
         {
             int i = int.Parse(_DKTK.MAXID()) + 1;
             Bitmap bmp = new Bitmap(image);
             string path = string.Format(@"{0}\..\..\imgNhanVien\{1}.jpg", Environment.CurrentDirectory, i);
-
             bmp.Save(path, ImageFormat.Jpeg);
         }
-
         private void picNV_Click(object sender, EventArgs e)
         {
             if (ofdMoFile.ShowDialog() == DialogResult.OK)
@@ -127,18 +122,15 @@ namespace DashBoar
                 picNV.Image = Image.FromFile(ofdMoFile.FileName);
             }
         }
-
         private string ChonGioiTinh()
         {
             if (radNam.Checked == true) return radNam.Text;
             else return radNu.Text;
         }
-
         private void btnThoat_Click_1(object sender, EventArgs e)
         {
             this.Hide();
         }
-
         private void FrmDangKiTaiKhoan_Load(object sender, EventArgs e)
         {
             cbbLoaiNV.SelectedIndex = 0;

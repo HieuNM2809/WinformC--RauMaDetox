@@ -67,7 +67,7 @@ namespace DAO
         }
         public string max()
         {
-            string a = "RM00";
+            string a = "RM01";
             return a;
         }
         public bool xoaSP(DTO_sanpham sp)

@@ -217,14 +217,14 @@ namespace DashBoar
         #endregion
 
         #region THÊM THÔNG TIN BUTTON
-        private void MouseHover(string text, Button btn)
+        private void mh(string text, Button btn)
         {
             btn.Image = null;
             btn.ForeColor = Color.FromArgb(39, 174, 96);
             btn.Text = text;
         }
 
-        private void MouseLeave(Button btn, string tenhinh)
+        private void ml(Button btn, string tenhinh)
         {
             btn.Text = null;
             string path = string.Format(@"{0}\..\..\Icon\{1}.png", Environment.CurrentDirectory, tenhinh);
@@ -233,51 +233,51 @@ namespace DashBoar
 
         private void btnThem_MouseHover(object sender, EventArgs e)
         {
-            MouseHover("Thêm", btnThem);
+            mh("Thêm", btnThem);
         }
 
         private void btnThem_MouseLeave(object sender, EventArgs e)
         {
-            MouseLeave(btnThem, "plus");
+            ml(btnThem, "plus");
         }
 
         private void btnSua_MouseHover(object sender, EventArgs e)
         {
-            MouseHover("Sửa", btnSua);
+            mh("Sửa", btnSua);
         }
 
         private void btnSua_MouseLeave(object sender, EventArgs e)
         {
-            MouseLeave(btnSua, "chinhsua");
+            ml(btnSua, "chinhsua");
         }
 
         private void btnXoa_MouseHover(object sender, EventArgs e)
         {
-            MouseHover("Xóa", btnXoa);
+            mh("Xóa", btnXoa);
         }
 
         private void btnXoa_MouseLeave(object sender, EventArgs e)
         {
-            MouseLeave(btnXoa, "delete");
+            ml(btnXoa, "delete");
         }
         private void btnLamMoi_MouseHover(object sender, EventArgs e)
         {
-            MouseHover("Làm mới", btnLamMoi);
+           mh("Làm mới", btnLamMoi);
         }
 
         private void btnLamMoi_MouseLeave(object sender, EventArgs e)
         {
-            MouseLeave(btnLamMoi, "loop2");
+            ml(btnLamMoi, "loop2");
         }
 
         private void btnThoat_MouseHover(object sender, EventArgs e)
         {
-            MouseHover("Thoát", btnThoat);
+            mh("Thoát", btnThoat);
         }
 
         private void btnThoat_MouseLeave(object sender, EventArgs e)
         {
-            MouseLeave(btnThoat, "no");
+           ml(btnThoat, "no");
         }
         #endregion
     }
