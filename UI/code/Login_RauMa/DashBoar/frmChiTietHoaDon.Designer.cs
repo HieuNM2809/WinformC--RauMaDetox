@@ -84,12 +84,17 @@
             this.sum,
             this.Idhoadon});
             this.dgvDSHD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDSHD.Location = new System.Drawing.Point(3, 3);
+            this.dgvDSHD.Location = new System.Drawing.Point(3, 4);
+            this.dgvDSHD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvDSHD.Name = "dgvDSHD";
             this.dgvDSHD.ReadOnly = true;
             this.dgvDSHD.RowHeadersWidth = 51;
             this.dgvDSHD.RowTemplate.Height = 24;
+<<<<<<< Updated upstream
             this.dgvDSHD.Size = new System.Drawing.Size(1159, 281);
+=======
+            this.dgvDSHD.Size = new System.Drawing.Size(649, 401);
+>>>>>>> Stashed changes
             this.dgvDSHD.TabIndex = 0;
             this.dgvDSHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSHD_CellClick);
             // 
@@ -144,11 +149,31 @@
             // 
             // Idhoadon
             // 
+<<<<<<< Updated upstream
             this.Idhoadon.DataPropertyName = "IDHoaDon";
             this.Idhoadon.HeaderText = "ID Hòa Đơn";
             this.Idhoadon.MinimumWidth = 6;
             this.Idhoadon.Name = "Idhoadon";
             this.Idhoadon.ReadOnly = true;
+=======
+            this.lstDSSP.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colSTT,
+            this.colTenSp,
+            this.colSoLuong,
+            this.colDonGia,
+            this.colChietKhau,
+            this.colTongTien});
+            this.lstDSSP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstDSSP.GridLines = true;
+            this.lstDSSP.HideSelection = false;
+            this.lstDSSP.Location = new System.Drawing.Point(658, 4);
+            this.lstDSSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lstDSSP.Name = "lstDSSP";
+            this.lstDSSP.Size = new System.Drawing.Size(650, 401);
+            this.lstDSSP.TabIndex = 1;
+            this.lstDSSP.UseCompatibleStateImageBehavior = false;
+            this.lstDSSP.View = System.Windows.Forms.View.Details;
+>>>>>>> Stashed changes
             // 
             // tableLayoutPanel2
             // 
@@ -160,12 +185,13 @@
             this.tableLayoutPanel2.Controls.Add(this.button1, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 327);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 408);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.96443F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.03557F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1165, 235);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1311, 294);
             this.tableLayoutPanel2.TabIndex = 9;
             // 
             // tableLayoutPanel3
@@ -183,14 +209,15 @@
             this.tableLayoutPanel3.Controls.Add(this.cbbGia, 1, 3);
             this.tableLayoutPanel3.Controls.Add(this.lbl_tien, 2, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.627119F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.35593F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.74576F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(576, 118);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(649, 147);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // lblGia
@@ -199,26 +226,51 @@
             this.lblGia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGia.ForeColor = System.Drawing.Color.White;
-            this.lblGia.Location = new System.Drawing.Point(3, 87);
+            this.lblGia.Location = new System.Drawing.Point(3, 108);
             this.lblGia.Name = "lblGia";
+<<<<<<< Updated upstream
             this.lblGia.Size = new System.Drawing.Size(272, 31);
+=======
+            this.lblGia.Size = new System.Drawing.Size(318, 39);
+>>>>>>> Stashed changes
             this.lblGia.TabIndex = 11;
             this.lblGia.Text = "Giá Tiền";
             this.lblGia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+<<<<<<< Updated upstream
+=======
+            // txtChietKhau
+            // 
+            this.txtChietKhau.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtChietKhau.Location = new System.Drawing.Point(327, 4);
+            this.txtChietKhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtChietKhau.Name = "txtChietKhau";
+            this.txtChietKhau.Size = new System.Drawing.Size(319, 28);
+            this.txtChietKhau.TabIndex = 10;
+            this.txtChietKhau.Text = "";
+            // 
+>>>>>>> Stashed changes
             // cbbTenSP
             // 
             this.cbbTenSP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbbTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbTenSP.FormattingEnabled = true;
+<<<<<<< Updated upstream
             this.cbbTenSP.Location = new System.Drawing.Point(281, 12);
             this.cbbTenSP.Name = "cbbTenSP";
             this.cbbTenSP.Size = new System.Drawing.Size(272, 28);
+=======
+            this.cbbTenSP.Location = new System.Drawing.Point(327, 40);
+            this.cbbTenSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbbTenSP.Name = "cbbTenSP";
+            this.cbbTenSP.Size = new System.Drawing.Size(319, 33);
+>>>>>>> Stashed changes
             this.cbbTenSP.TabIndex = 4;
             this.cbbTenSP.SelectedValueChanged += new System.EventHandler(this.cbbTenSP_SelectedValueChanged);
             // 
             // lblso
             // 
+<<<<<<< Updated upstream
             this.lblso.AutoSize = true;
             this.lblso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.lblso.Location = new System.Drawing.Point(559, 46);
@@ -226,6 +278,18 @@
             this.lblso.Size = new System.Drawing.Size(14, 41);
             this.lblso.TabIndex = 2;
             this.lblso.Text = "label1";
+=======
+            this.lbl_chietkhau.AutoSize = true;
+            this.lbl_chietkhau.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_chietkhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_chietkhau.ForeColor = System.Drawing.Color.White;
+            this.lbl_chietkhau.Location = new System.Drawing.Point(3, 0);
+            this.lbl_chietkhau.Name = "lbl_chietkhau";
+            this.lbl_chietkhau.Size = new System.Drawing.Size(318, 36);
+            this.lbl_chietkhau.TabIndex = 0;
+            this.lbl_chietkhau.Text = "Chiết Khấu";
+            this.lbl_chietkhau.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+>>>>>>> Stashed changes
             // 
             // lbl_tensp
             // 
@@ -233,9 +297,15 @@
             this.lbl_tensp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_tensp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tensp.ForeColor = System.Drawing.Color.White;
+<<<<<<< Updated upstream
             this.lbl_tensp.Location = new System.Drawing.Point(3, 9);
             this.lbl_tensp.Name = "lbl_tensp";
             this.lbl_tensp.Size = new System.Drawing.Size(272, 37);
+=======
+            this.lbl_tensp.Location = new System.Drawing.Point(3, 36);
+            this.lbl_tensp.Name = "lbl_tensp";
+            this.lbl_tensp.Size = new System.Drawing.Size(318, 36);
+>>>>>>> Stashed changes
             this.lbl_tensp.TabIndex = 1;
             this.lbl_tensp.Text = "Tên Sản Phẩm";
             this.lbl_tensp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -246,9 +316,15 @@
             this.lbl_soluong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_soluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_soluong.ForeColor = System.Drawing.Color.White;
+<<<<<<< Updated upstream
             this.lbl_soluong.Location = new System.Drawing.Point(3, 46);
             this.lbl_soluong.Name = "lbl_soluong";
             this.lbl_soluong.Size = new System.Drawing.Size(272, 41);
+=======
+            this.lbl_soluong.Location = new System.Drawing.Point(3, 72);
+            this.lbl_soluong.Name = "lbl_soluong";
+            this.lbl_soluong.Size = new System.Drawing.Size(318, 36);
+>>>>>>> Stashed changes
             this.lbl_soluong.TabIndex = 2;
             this.lbl_soluong.Text = "Số Lượng";
             this.lbl_soluong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -257,9 +333,16 @@
             // 
             this.numSoLuong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.numSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< Updated upstream
             this.numSoLuong.Location = new System.Drawing.Point(281, 49);
             this.numSoLuong.Name = "numSoLuong";
             this.numSoLuong.Size = new System.Drawing.Size(272, 27);
+=======
+            this.numSoLuong.Location = new System.Drawing.Point(327, 76);
+            this.numSoLuong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.numSoLuong.Name = "numSoLuong";
+            this.numSoLuong.Size = new System.Drawing.Size(319, 31);
+>>>>>>> Stashed changes
             this.numSoLuong.TabIndex = 5;
             // 
             // cbbGia
@@ -267,9 +350,16 @@
             this.cbbGia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbGia.FormattingEnabled = true;
+<<<<<<< Updated upstream
             this.cbbGia.Location = new System.Drawing.Point(281, 90);
             this.cbbGia.Name = "cbbGia";
             this.cbbGia.Size = new System.Drawing.Size(272, 28);
+=======
+            this.cbbGia.Location = new System.Drawing.Point(327, 112);
+            this.cbbGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbbGia.Name = "cbbGia";
+            this.cbbGia.Size = new System.Drawing.Size(319, 33);
+>>>>>>> Stashed changes
             this.cbbGia.TabIndex = 12;
             // 
             // lbl_tien
@@ -293,20 +383,22 @@
             this.tableLayoutPanel4.Controls.Add(this.lbl_tongtien, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.txtTongSoLuong, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(585, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(658, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(577, 118);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(650, 147);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // txtTongTien
             // 
             this.txtTongTien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTongTien.Location = new System.Drawing.Point(291, 62);
+            this.txtTongTien.Location = new System.Drawing.Point(328, 77);
+            this.txtTongTien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(283, 53);
+            this.txtTongTien.Size = new System.Drawing.Size(319, 66);
             this.txtTongTien.TabIndex = 9;
             this.txtTongTien.Text = "0";
             // 
@@ -318,7 +410,7 @@
             this.lbl_tong.ForeColor = System.Drawing.Color.White;
             this.lbl_tong.Location = new System.Drawing.Point(3, 0);
             this.lbl_tong.Name = "lbl_tong";
-            this.lbl_tong.Size = new System.Drawing.Size(282, 59);
+            this.lbl_tong.Size = new System.Drawing.Size(319, 73);
             this.lbl_tong.TabIndex = 6;
             this.lbl_tong.Text = "Tổng Số Lượng";
             this.lbl_tong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -329,9 +421,9 @@
             this.lbl_tongtien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_tongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tongtien.ForeColor = System.Drawing.Color.White;
-            this.lbl_tongtien.Location = new System.Drawing.Point(3, 59);
+            this.lbl_tongtien.Location = new System.Drawing.Point(3, 73);
             this.lbl_tongtien.Name = "lbl_tongtien";
-            this.lbl_tongtien.Size = new System.Drawing.Size(282, 59);
+            this.lbl_tongtien.Size = new System.Drawing.Size(319, 74);
             this.lbl_tongtien.TabIndex = 7;
             this.lbl_tongtien.Text = "Tổng Tiền";
             this.lbl_tongtien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -339,9 +431,10 @@
             // txtTongSoLuong
             // 
             this.txtTongSoLuong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTongSoLuong.Location = new System.Drawing.Point(291, 3);
+            this.txtTongSoLuong.Location = new System.Drawing.Point(328, 4);
+            this.txtTongSoLuong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTongSoLuong.Name = "txtTongSoLuong";
-            this.txtTongSoLuong.Size = new System.Drawing.Size(283, 53);
+            this.txtTongSoLuong.Size = new System.Drawing.Size(319, 65);
             this.txtTongSoLuong.TabIndex = 8;
             this.txtTongSoLuong.Text = "0";
             // 
@@ -351,11 +444,17 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< Updated upstream
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.button1.Location = new System.Drawing.Point(3, 127);
+=======
+            this.button1.Image = global::DashBoar.Properties.Resources.plus;
+            this.button1.Location = new System.Drawing.Point(3, 159);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+>>>>>>> Stashed changes
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(576, 105);
+            this.button1.Size = new System.Drawing.Size(649, 131);
             this.button1.TabIndex = 2;
             this.button1.Text = "Thoát";
             this.button1.UseVisualStyleBackColor = false;
@@ -369,11 +468,12 @@
             this.tableLayoutPanel5.Controls.Add(this.btn_bo, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnXacNhan, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(585, 127);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(658, 159);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(577, 105);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(650, 131);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
             // btn_bo
@@ -384,9 +484,10 @@
             this.btn_bo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_bo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_bo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btn_bo.Location = new System.Drawing.Point(291, 3);
+            this.btn_bo.Location = new System.Drawing.Point(328, 4);
+            this.btn_bo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_bo.Name = "btn_bo";
-            this.btn_bo.Size = new System.Drawing.Size(283, 99);
+            this.btn_bo.Size = new System.Drawing.Size(319, 123);
             this.btn_bo.TabIndex = 1;
             this.btn_bo.Text = "Bỏ món";
             this.btn_bo.UseVisualStyleBackColor = false;
@@ -400,9 +501,10 @@
             this.btnXacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btnXacNhan.Location = new System.Drawing.Point(3, 3);
+            this.btnXacNhan.Location = new System.Drawing.Point(3, 4);
+            this.btnXacNhan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(282, 99);
+            this.btnXacNhan.Size = new System.Drawing.Size(319, 123);
             this.btnXacNhan.TabIndex = 0;
             this.btnXacNhan.Text = "Chọn món";
             this.btnXacNhan.UseVisualStyleBackColor = false;
@@ -416,12 +518,17 @@
             this.tableLayoutPanel1.Controls.Add(this.lbl_ma, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+<<<<<<< Updated upstream
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1165, 327);
+=======
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1311, 409);
+>>>>>>> Stashed changes
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // lbl_ma
@@ -436,13 +543,14 @@
             // 
             // frmChiTietHoaDon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.ClientSize = new System.Drawing.Size(1165, 562);
+            this.ClientSize = new System.Drawing.Size(1311, 702);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmChiTietHoaDon";
             this.Text = "frmChiTietHoaDon";
             this.Load += new System.EventHandler(this.frmChiTietHoaDon_Load);

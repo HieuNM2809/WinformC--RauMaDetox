@@ -117,4 +117,346 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="cbbLoaiNV.Items" xml:space="preserve">
+    <value>Part time</value>
+  </data>
+  <data name="cbbLoaiNV.Items1" xml:space="preserve">
+    <value>Full time</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cbbLoaiNV.Location" type="System.Drawing.Point, System.Drawing">
+    <value>320, 343</value>
+  </data>
+  <data name="cbbLoaiNV.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 28</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cbbLoaiNV.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;cbbLoaiNV.Name" xml:space="preserve">
+    <value>cbbLoaiNV</value>
+  </data>
+  <data name="&gt;&gt;cbbLoaiNV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbbLoaiNV.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbbLoaiNV.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pnTieuDe.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="picLogo.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="picLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picLogo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 16</value>
+  </data>
+  <data name="picLogo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="picLogo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 125</value>
+  </data>
+  <data name="picLogo.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;picLogo.Name" xml:space="preserve">
+    <value>picLogo</value>
+  </data>
+  <data name="&gt;&gt;picLogo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picLogo.Parent" xml:space="preserve">
+    <value>pnTieuDe</value>
+  </data>
+  <data name="&gt;&gt;picLogo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 12pt, style=Bold</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 145</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 31</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>BÁO CÁO</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>pnTieuDe</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnTieuDe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 3</value>
+  </data>
+  <data name="pnTieuDe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 177</value>
+  </data>
+  <data name="pnTieuDe.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;pnTieuDe.Name" xml:space="preserve">
+    <value>pnTieuDe</value>
+  </data>
+  <data name="&gt;&gt;pnTieuDe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnTieuDe.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnTieuDe.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="radDSNV.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radDSNV.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt, style=Bold</value>
+  </data>
+  <data name="radDSNV.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 276</value>
+  </data>
+  <data name="radDSNV.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="radDSNV.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 34</value>
+  </data>
+  <data name="radDSNV.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="radDSNV.Text" xml:space="preserve">
+    <value>Xem danh sách nhân viên</value>
+  </data>
+  <data name="&gt;&gt;radDSNV.Name" xml:space="preserve">
+    <value>radDSNV</value>
+  </data>
+  <data name="&gt;&gt;radDSNV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radDSNV.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;radDSNV.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="radDSNVTL.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radDSNVTL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt, style=Bold</value>
+  </data>
+  <data name="radDSNVTL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 343</value>
+  </data>
+  <data name="radDSNVTL.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="radDSNVTL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 34</value>
+  </data>
+  <data name="radDSNVTL.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="radDSNVTL.Text" xml:space="preserve">
+    <value>Xem DSNV theo loại NV</value>
+  </data>
+  <data name="&gt;&gt;radDSNVTL.Name" xml:space="preserve">
+    <value>radDSNVTL</value>
+  </data>
+  <data name="&gt;&gt;radDSNVTL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radDSNVTL.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;radDSNVTL.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="radDSNVTN.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radDSNVTN.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt, style=Bold</value>
+  </data>
+  <data name="radDSNVTN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 415</value>
+  </data>
+  <data name="radDSNVTN.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="radDSNVTN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>349, 34</value>
+  </data>
+  <data name="radDSNVTN.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="radDSNVTN.Text" xml:space="preserve">
+    <value>Xem DSNV theo nhóm loại NV</value>
+  </data>
+  <data name="&gt;&gt;radDSNVTN.Name" xml:space="preserve">
+    <value>radDSNVTN</value>
+  </data>
+  <data name="&gt;&gt;radDSNVTN.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radDSNVTN.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;radDSNVTN.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="radTTCT.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radTTCT.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt, style=Bold</value>
+  </data>
+  <data name="radTTCT.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 484</value>
+  </data>
+  <data name="radTTCT.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="radTTCT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>370, 34</value>
+  </data>
+  <data name="radTTCT.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="radTTCT.Text" xml:space="preserve">
+    <value>Xem thông tin chi tiết nhân viên</value>
+  </data>
+  <data name="&gt;&gt;radTTCT.Name" xml:space="preserve">
+    <value>radTTCT</value>
+  </data>
+  <data name="&gt;&gt;radTTCT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radTTCT.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;radTTCT.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnXacNhan.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnXacNhan.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 10.2pt, style=Bold</value>
+  </data>
+  <data name="btnXacNhan.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnXacNhan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 524</value>
+  </data>
+  <data name="btnXacNhan.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="btnXacNhan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 61</value>
+  </data>
+  <data name="btnXacNhan.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="btnXacNhan.Text" xml:space="preserve">
+    <value>Xem báo cáo</value>
+  </data>
+  <data name="&gt;&gt;btnXacNhan.Name" xml:space="preserve">
+    <value>btnXacNhan</value>
+  </data>
+  <data name="&gt;&gt;btnXacNhan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnXacNhan.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnXacNhan.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnThoat.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnThoat.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 10.2pt, style=Bold</value>
+  </data>
+  <data name="btnThoat.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnThoat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>413, 524</value>
+  </data>
+  <data name="btnThoat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="btnThoat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 61</value>
+  </data>
+  <data name="btnThoat.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="btnThoat.Text" xml:space="preserve">
+    <value>Thoát</value>
+  </data>
+  <data name="&gt;&gt;btnThoat.Name" xml:space="preserve">
+    <value>btnThoat</value>
+  </data>
+  <data name="&gt;&gt;btnThoat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnThoat.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnThoat.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>9, 20</value>
+  </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>591, 604</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>frmXemBaoCao</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmBaoCao</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
