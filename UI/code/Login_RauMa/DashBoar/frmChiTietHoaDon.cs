@@ -39,7 +39,7 @@ namespace DashBoar
             cbbTenSP.DisplayMember = "Tensp";
             cbbTenSP.ValueMember = "Masp";
             dgvDSHD.DataSource = cthd.hienthi(cthd.max().ToString());
-            if (txtTongSoLuong.Text == "" && txtTongTien.Text == "")
+            if (txtTongSoLuong.Text == "0" && txtTongTien.Text == "0")
             {
                 button1.Text = "THOÁT";
             }
@@ -52,7 +52,6 @@ namespace DashBoar
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
             count++;
-
             string a = cbbGia.Text;
             string b = numSoLuong.Text;
             Tong = ((Convert.ToInt32(a)) * (Convert.ToInt32(b)));
@@ -66,16 +65,14 @@ namespace DashBoar
                 lis.DonGia = Convert.ToInt32 (cbbGia.Text);
                 lis.TongTien = Convert.ToInt32(numSoLuong.Text) * Convert.ToInt32(cbbGia.Text);                
             }
-          if(cthd.them(lis))
-            {
-                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                frmChiTietHoaDon_Load(sender, e);
-            }
-            else MessageBox.Show("Thêm Thất bại", "Thông báo");
             TongTien = TongTien + Tong;
-            soluong = soluong +(Convert.ToInt32(numSoLuong.Text));
+            soluong = soluong + (Convert.ToInt32(numSoLuong.Text));
             txtTongSoLuong.Text = soluong.ToString();
             txtTongTien.Text = TongTien.ToString();
+            if (cthd.them(lis))
+            {
+                frmChiTietHoaDon_Load(sender, e);
+            }
             
         }
 
@@ -105,7 +102,9 @@ namespace DashBoar
                     TongTien = TongTien - Convert.ToInt32 (lbl_tien.Text);
                     txtTongTien.Text = TongTien.ToString();
                     numSoLuong.Text = "0";
-                    soluong = soluong - Convert.ToInt32(lbl_soluong.Text);
+                    soluong = soluong - Convert.ToInt32(lblso.Text);
+                    txtTongSoLuong.Text = soluong.ToString();
+                    frmChiTietHoaDon_Load(sender, e);
                 }
             }
         }

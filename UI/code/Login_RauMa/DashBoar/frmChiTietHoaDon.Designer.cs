@@ -40,6 +40,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lblGia = new System.Windows.Forms.Label();
             this.cbbTenSP = new System.Windows.Forms.ComboBox();
+            this.lblso = new System.Windows.Forms.Label();
             this.lbl_tensp = new System.Windows.Forms.Label();
             this.lbl_soluong = new System.Windows.Forms.Label();
             this.numSoLuong = new System.Windows.Forms.NumericUpDown();
@@ -56,7 +57,6 @@
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_ma = new System.Windows.Forms.Label();
-            this.lblso = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHD)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -217,6 +217,16 @@
             this.cbbTenSP.TabIndex = 4;
             this.cbbTenSP.SelectedValueChanged += new System.EventHandler(this.cbbTenSP_SelectedValueChanged);
             // 
+            // lblso
+            // 
+            this.lblso.AutoSize = true;
+            this.lblso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.lblso.Location = new System.Drawing.Point(559, 46);
+            this.lblso.Name = "lblso";
+            this.lblso.Size = new System.Drawing.Size(14, 41);
+            this.lblso.TabIndex = 2;
+            this.lblso.Text = "label1";
+            // 
             // lbl_tensp
             // 
             this.lbl_tensp.AutoSize = true;
@@ -298,7 +308,7 @@
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.Size = new System.Drawing.Size(283, 53);
             this.txtTongTien.TabIndex = 9;
-            this.txtTongTien.Text = "";
+            this.txtTongTien.Text = "0";
             // 
             // lbl_tong
             // 
@@ -333,7 +343,7 @@
             this.txtTongSoLuong.Name = "txtTongSoLuong";
             this.txtTongSoLuong.Size = new System.Drawing.Size(283, 53);
             this.txtTongSoLuong.TabIndex = 8;
-            this.txtTongSoLuong.Text = "";
+            this.txtTongSoLuong.Text = "0";
             // 
             // button1
             // 
@@ -423,16 +433,6 @@
             this.lbl_ma.Size = new System.Drawing.Size(46, 17);
             this.lbl_ma.TabIndex = 1;
             this.lbl_ma.Text = "label1";
-            // 
-            // lblso
-            // 
-            this.lblso.AutoSize = true;
-            this.lblso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.lblso.Location = new System.Drawing.Point(559, 46);
-            this.lblso.Name = "lblso";
-            this.lblso.Size = new System.Drawing.Size(14, 41);
-            this.lblso.TabIndex = 2;
-            this.lblso.Text = "label1";
             // 
             // frmChiTietHoaDon
             // 
