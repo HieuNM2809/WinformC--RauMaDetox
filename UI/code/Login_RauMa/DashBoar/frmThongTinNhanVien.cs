@@ -74,9 +74,9 @@ namespace DashBoar
                     nv.TaiKhoan = txtTaiKhoan.Text;
                     nv.MatKhau = txtMatKhau.Text.MaHoaMD5();
                     nv.Email = txtEmail.Text;
-                    //nv.Hinh = string.Format("{0}.jpg", txtID.Text);
+                    nv.Hinh = string.Format("{0}.jpg", txtID.Text);
 
-                    //SaveImage(picNhanVien.Image);
+                    SaveImage(picNhanVien.Image);
 
                     if (_nhanvienBUS.ThemNV(nv))
                     {
@@ -155,10 +155,10 @@ namespace DashBoar
             txtMatKhau.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[8].Value.ToString();
             txtEmail.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[9].Value.ToString();
 
-            //string path = string.Format(@"{0}\..\..\imgNhanVien\{1}", Environment.CurrentDirectory,
-            //    dgvThongTinNhanVien.Rows[e.RowIndex].Cells[10].Value.ToString());
+            string path = string.Format(@"{0}\..\..\imgNhanVien\{1}", Environment.CurrentDirectory,
+                dgvThongTinNhanVien.Rows[e.RowIndex].Cells[10].Value.ToString());
 
-            //picNhanVien.Image = Image.FromFile(path);
+            picNhanVien.Image = Image.FromFile(path);
             picNhanVien.Enabled = false;
             txtTaiKhoan.Enabled = false;
         }
@@ -279,10 +279,10 @@ namespace DashBoar
        
         private void picNhanVien_Click_1(object sender, EventArgs e)
         {
-           //if(ofdimgNhanVien.ShowDialog() == DialogResult.OK)
-           // {
-           //     picNhanVien.Image = Image.FromFile(ofdimgNhanVien.FileName);
-           // }    
+            if (ofdimgNhanVien.ShowDialog() == DialogResult.OK)
+            {
+                picNhanVien.Image = Image.FromFile(ofdimgNhanVien.FileName);
+            }
         }
     }
 }
