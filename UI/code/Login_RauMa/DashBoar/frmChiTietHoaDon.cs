@@ -138,7 +138,6 @@ namespace DashBoar
             string c = cthd.max().ToString();
             if (txtTongSoLuong.Text=="0" || txtTongTien.Text == "0")
             {
-              if(  hdb.XoaHD(c)==true)
                 this.Close();
             }
             else

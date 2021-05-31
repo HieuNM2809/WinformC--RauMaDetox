@@ -857,11 +857,10 @@
             this.btn_Themanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Themanh.Location = new System.Drawing.Point(79, 19);
             this.btn_Themanh.Name = "btn_Themanh";
-            this.btn_Themanh.Size = new System.Drawing.Size(104, 27);
+            this.btn_Themanh.Size = new System.Drawing.Size(104, 45);
             this.btn_Themanh.TabIndex = 123;
             this.btn_Themanh.Text = "Tải ảnh";
             this.btn_Themanh.UseVisualStyleBackColor = false;
-            this.btn_Themanh.Click += new System.EventHandler(this.btn_Themanh_Click);
             // 
             // groupBox5
             // 
@@ -904,8 +903,8 @@
             this.tableLayoutPanel22.Name = "tableLayoutPanel22";
             this.tableLayoutPanel22.RowCount = 3;
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.35443F));
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.70886F));
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.93671F));
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.77778F));
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.44444F));
             this.tableLayoutPanel22.Size = new System.Drawing.Size(250, 90);
             this.tableLayoutPanel22.TabIndex = 134;
             // 
@@ -955,7 +954,6 @@
             // 
             // tbx_mamon
             // 
-            this.tbx_mamon.Enabled = false;
             this.tbx_mamon.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_mamon.ForeColor = System.Drawing.Color.Black;
             this.tbx_mamon.Location = new System.Drawing.Point(143, 37);
@@ -963,6 +961,7 @@
             this.tbx_mamon.Name = "tbx_mamon";
             this.tbx_mamon.Size = new System.Drawing.Size(421, 34);
             this.tbx_mamon.TabIndex = 115;
+            this.tbx_mamon.TextChanged += new System.EventHandler(this.tbx_mamon_TextChanged);
             // 
             // tbx_tenmon
             // 

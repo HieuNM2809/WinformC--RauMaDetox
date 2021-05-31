@@ -52,7 +52,7 @@ namespace DashBoar
         {
           
             if (string.IsNullOrEmpty(txtHoTen.Text) || string.IsNullOrEmpty(txtMatKhau.Text) || string.IsNullOrEmpty(txtNhaplaiMatKhau.Text)
-                || string.IsNullOrEmpty(txtSDT.Text) || string.IsNullOrEmpty(txtTenTruyCap.Text) || picNV.Image == null )
+                || string.IsNullOrEmpty(txtSDT.Text) || string.IsNullOrEmpty(txtTenTruyCap.Text) /*|| picNV.Image == null*/ )
             {
                 MessageBox.Show(Constants.ERR_REQUIRED, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -86,11 +86,11 @@ namespace DashBoar
                         nv.TaiKhoan = txtTenTruyCap.Text;
                         nv.LoaiNV = cbbLoaiNV.Text;
                         nv.MatKhau = txtMatKhau.Text.MaHoaMD5();
-                        nv.Hinh = string.Format("{0}.jpg", i);
+                        //nv.Hinh = string.Format("{0}.jpg", i);
                         
-                        picNV.Text = i + ".jpg";
+                        //picNV.Text = i + ".jpg";
 
-                        SaveImage(picNV.Image);
+                        //SaveImage(picNV.Image);
 
                         if (_DKTK.DangKiTK(nv))
                         {
@@ -117,10 +117,7 @@ namespace DashBoar
         }
         private void picNV_Click(object sender, EventArgs e)
         {
-            if (ofdMoFile.ShowDialog() == DialogResult.OK)
-            {
-                picNV.Image = Image.FromFile(ofdMoFile.FileName);
-            }
+
         }
         private string ChonGioiTinh()
         {

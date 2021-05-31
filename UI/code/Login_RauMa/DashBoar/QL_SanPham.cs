@@ -133,24 +133,13 @@ namespace DashBoar
         
         private void btn_Themanh_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFile = new OpenFileDialog();
-            openFile.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
-            openFile.FilterIndex = 1;
-            openFile.RestoreDirectory = true;
-            if (openFile.ShowDialog() == DialogResult.OK)
-            {
-              lbl_duongdan.Text = openFile.FileName;
-                byte[] byteA = File.ReadAllBytes(openFile.FileName);
-                MemoryStream ms = new MemoryStream(byteA);
-                ptb_anhto.BackgroundImage = Image.FromStream(ms);
-            }   
 
         }
 
         private void btn_them_Click(object sender, EventArgs e)
         {
           
-            if (tbx_mamon.Text == "" || tbx_tenmon.Text == ""||lbl_duongdan.Text=="" || tbx_gia.Text == "" || cbb_loai.Text == "" || rtb_mota.Text == "")
+            if (tbx_mamon.Text == "" || tbx_tenmon.Text == ""/*|| lbl_duongdan.Text == ""*/ || tbx_gia.Text == "" || cbb_loai.Text == "" || rtb_mota.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
             }
@@ -165,7 +154,7 @@ namespace DashBoar
                         spham.Giasp = Convert.ToInt32(tbx_gia.Text);
                         spham.Mota = rtb_mota.Text;
                         spham.MaLoaisp = cbb_loai.Text;
-                        spham.Hinhsp=  Convert.ToBase64String(converImgToByte());
+                        //spham.Hinhsp=  Convert.ToBase64String(converImgToByte());
                     };
                     if (_sanpham.ThemSP(spham))
                     {
@@ -289,6 +278,11 @@ namespace DashBoar
                 MemoryStream ms = new MemoryStream(byteA);
                 ptb_anhrauma.BackgroundImage = Image.FromStream(ms);
             }
+        }
+
+        private void tbx_mamon_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

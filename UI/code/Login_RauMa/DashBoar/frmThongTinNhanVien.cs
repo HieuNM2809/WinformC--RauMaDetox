@@ -2,18 +2,20 @@
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using Microsoft.Bot.Builder.Dialogs;
 
 namespace DashBoar
 {
-    public partial class frmThongTinNhanVien : Form
+    public partial class MethodInvoker : Form
     {
         private NhanVienBUS _nhanvienBUS = new NhanVienBUS();
         private PhanQuyenBUS _phanQuyenBUS = new PhanQuyenBUS();
 
-        public frmThongTinNhanVien()
+        public MethodInvoker()
         {
             InitializeComponent();
             cbbLoaiNhanVien.SelectedIndex = 0;
@@ -28,7 +30,7 @@ namespace DashBoar
             cbbChucDanh.DataSource = _phanQuyenBUS.LayDSPhanQuyen();
             cbbChucDanh.DisplayMember = "LoaiQuyen";
             cbbChucDanh.ValueMember = "IDQuyen";
-            
+
             dgvThongTinNhanVien.DataSource = _nhanvienBUS.LayDSNhanVien();
 
         }
@@ -36,10 +38,10 @@ namespace DashBoar
         #region CHỨC NĂNG
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if ( String.IsNullOrEmpty(txtHoTen.Text) || String.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtSDT.Text) || String.IsNullOrEmpty(txtTaiKhoan.Text) 
+            if (String.IsNullOrEmpty(txtHoTen.Text) || String.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtSDT.Text) || String.IsNullOrEmpty(txtTaiKhoan.Text)
                 || String.IsNullOrEmpty(txtMatKhau.Text) || dtpNgaySinh.Value >= DateTime.Now)
             {
-                MessageBox.Show(Constants.ERR_REQUIRED, Constants.MESSAGE_TITLE,MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(Constants.ERR_REQUIRED, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
@@ -56,12 +58,12 @@ namespace DashBoar
                         MessageBox.Show(Constants.ERR_MAIL_FORMAT, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-                    if(_nhanvienBUS.KiemTraTK(txtTaiKhoan.Text))
+                    if (_nhanvienBUS.KiemTraTK(txtTaiKhoan.Text))
                     {
                         MessageBox.Show(Constants.ACCOUNT_EXIST, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }    
+                    }
                     NhanVienDTO nv = new NhanVienDTO();
-                   
+
                     nv.IDNV = txtID.Text;
                     nv.HoTen = txtHoTen.Text;
                     nv.NgaySinh = dtpNgaySinh.Value;
@@ -72,12 +74,12 @@ namespace DashBoar
                     nv.TaiKhoan = txtTaiKhoan.Text;
                     nv.MatKhau = txtMatKhau.Text.MaHoaMD5();
                     nv.Email = txtEmail.Text;
-                    nv.Hinh = string.Format("{0}.jpg", txtID.Text);
+                    //nv.Hinh = string.Format("{0}.jpg", txtID.Text);
 
-                    SaveImage(picNhanVien.Image);
+                    //SaveImage(picNhanVien.Image);
 
                     if (_nhanvienBUS.ThemNV(nv))
-                    {   
+                    {
                         frmThongTinNhanVien_Load(sender, e);
                         MessageBox.Show(Constants.ADD_SUCESS, Constants.MESSAGE_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -92,7 +94,7 @@ namespace DashBoar
         }
 
         private void btnSua_Click(object sender, EventArgs e)
-        {   
+        {
             NhanVienDTO nv = new NhanVienDTO();
             nv.IDNV = txtID.Text;
             nv.HoTen = txtHoTen.Text;
@@ -117,9 +119,9 @@ namespace DashBoar
         {
             picNhanVien.Enabled = true;
             int i = 1;
-            if (_nhanvienBUS.MAXID() == null) txtID.Text = i+"";
+            if (_nhanvienBUS.MAXID() == null) txtID.Text = i + "";
 
-            else i = int.Parse(_nhanvienBUS.MAXID()) + 1; 
+            else i = int.Parse(_nhanvienBUS.MAXID()) + 1;
             foreach (Control ctrTTNV in this.grTTNV.Controls)
             {
                 if (ctrTTNV is TextBox)
@@ -141,24 +143,24 @@ namespace DashBoar
         {
             if (e.RowIndex < 0) return;
 
-                txtID.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtHoTen.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[1].Value.ToString();
-                dtpNgaySinh.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[2].Value.ToString();
-                if (dgvThongTinNhanVien.Rows[e.RowIndex].Cells[3].Value.ToString() == "Nam") radNam.Checked = true;
-                else radNu.Checked = true;
-                cbbChucDanh.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[4].Value.ToString();
-                cbbLoaiNhanVien.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[5].Value.ToString();
-                txtSDT.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[6].Value.ToString();
-                txtTaiKhoan.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[7].Value.ToString();
-                txtMatKhau.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[8].Value.ToString();
-                txtEmail.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[9].Value.ToString();
+            txtID.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtHoTen.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[1].Value.ToString();
+            dtpNgaySinh.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[2].Value.ToString();
+            if (dgvThongTinNhanVien.Rows[e.RowIndex].Cells[3].Value.ToString() == "Nam") radNam.Checked = true;
+            else radNu.Checked = true;
+            cbbChucDanh.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[4].Value.ToString();
+            cbbLoaiNhanVien.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtSDT.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtTaiKhoan.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[7].Value.ToString();
+            txtMatKhau.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[8].Value.ToString();
+            txtEmail.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[9].Value.ToString();
 
-                string path = string.Format(@"{0}\..\..\imgNhanVien\{1}", Environment.CurrentDirectory,
-                    dgvThongTinNhanVien.Rows[e.RowIndex].Cells[10].Value.ToString());
+            //string path = string.Format(@"{0}\..\..\imgNhanVien\{1}", Environment.CurrentDirectory,
+            //    dgvThongTinNhanVien.Rows[e.RowIndex].Cells[10].Value.ToString());
 
-                picNhanVien.Image = Image.FromFile(path);
-                picNhanVien.Enabled = false;
-                txtTaiKhoan.Enabled = false;
+            //picNhanVien.Image = Image.FromFile(path);
+            picNhanVien.Enabled = false;
+            txtTaiKhoan.Enabled = false;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -178,16 +180,16 @@ namespace DashBoar
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if(radHoTen.Checked == true )
+            if (radHoTen.Checked == true)
             {
-               dgvThongTinNhanVien.DataSource = _nhanvienBUS.TimKiemHoTenNV(txtTimKiem.Text);
+                dgvThongTinNhanVien.DataSource = _nhanvienBUS.TimKiemHoTenNV(txtTimKiem.Text);
                 return;
             }
-            if(radID.Checked == true )
+            if (radID.Checked == true)
             {
                 dgvThongTinNhanVien.DataSource = _nhanvienBUS.TimKiemIDNV(txtTimKiem.Text);
                 return;
-            }    
+            }
         }
 
         #endregion
@@ -199,16 +201,10 @@ namespace DashBoar
             else return radNu.Text;
         }
 
-        private void picNhanVien_Click(object sender, EventArgs e)
-        {
-            if(ofdimgNhanVien.ShowDialog() == DialogResult.OK)
-            {
-                picNhanVien.Image = Image.FromFile(ofdimgNhanVien.FileName);
-            }    
-        }
         
+
         private void SaveImage(Image image)
-        {  
+        {
             Bitmap bmp = new Bitmap(image);
             string path = string.Format(@"{0}\..\..\imgNhanVien\{1}.jpg", Environment.CurrentDirectory, txtID.Text);
 
@@ -217,14 +213,14 @@ namespace DashBoar
         #endregion
 
         #region THÊM THÔNG TIN BUTTON
-        private void mh(string text, Button btn)
+        private void MouseHover(string text, Button btn)
         {
             btn.Image = null;
             btn.ForeColor = Color.FromArgb(39, 174, 96);
             btn.Text = text;
         }
 
-        private void ml(Button btn, string tenhinh)
+        private void MouseLeave(Button btn, string tenhinh)
         {
             btn.Text = null;
             string path = string.Format(@"{0}\..\..\Icon\{1}.png", Environment.CurrentDirectory, tenhinh);
@@ -233,53 +229,62 @@ namespace DashBoar
 
         private void btnThem_MouseHover(object sender, EventArgs e)
         {
-            mh("Thêm", btnThem);
+            MouseHover("Thêm", btnThem);
         }
 
         private void btnThem_MouseLeave(object sender, EventArgs e)
         {
-            ml(btnThem, "plus");
+            MouseLeave(btnThem, "plus");
         }
 
         private void btnSua_MouseHover(object sender, EventArgs e)
         {
-            mh("Sửa", btnSua);
+            MouseHover("Sửa", btnSua);
         }
 
         private void btnSua_MouseLeave(object sender, EventArgs e)
         {
-            ml(btnSua, "chinhsua");
+            MouseLeave(btnSua, "chinhsua");
         }
 
         private void btnXoa_MouseHover(object sender, EventArgs e)
         {
-            mh("Xóa", btnXoa);
+            MouseHover("Xóa", btnXoa);
         }
 
         private void btnXoa_MouseLeave(object sender, EventArgs e)
         {
-            ml(btnXoa, "delete");
+            MouseLeave(btnXoa, "delete");
         }
         private void btnLamMoi_MouseHover(object sender, EventArgs e)
         {
-           mh("Làm mới", btnLamMoi);
+            MouseHover("Làm mới", btnLamMoi);
         }
 
         private void btnLamMoi_MouseLeave(object sender, EventArgs e)
         {
-            ml(btnLamMoi, "loop2");
+            MouseLeave(btnLamMoi, "loop2");
         }
 
         private void btnThoat_MouseHover(object sender, EventArgs e)
         {
-            mh("Thoát", btnThoat);
+            MouseHover("Thoát", btnThoat);
         }
 
         private void btnThoat_MouseLeave(object sender, EventArgs e)
         {
-           ml(btnThoat, "no");
+            MouseLeave(btnThoat, "no");
         }
         #endregion
+       
+        private void picNhanVien_Click_1(object sender, EventArgs e)
+        {
+           //if(ofdimgNhanVien.ShowDialog() == DialogResult.OK)
+           // {
+           //     picNhanVien.Image = Image.FromFile(ofdimgNhanVien.FileName);
+           // }    
+        }
     }
 }
+
 

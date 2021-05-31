@@ -62,7 +62,7 @@ namespace DashBoar
 
         private void thôngTinNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThongTinNhanVien TTNV = new frmThongTinNhanVien();
+            MethodInvoker TTNV = new MethodInvoker();
             frmloadFill(TTNV);
         }
 
