@@ -218,6 +218,13 @@
     <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SUAHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idhd" Type="nvarchar" Mode="In" />
+    <Parameter Name="idnv" Type="nvarchar" Mode="In" />
+    <Parameter Name="ngaylap" Type="datetime" Mode="In" />
+    <Parameter Name="tongso" Type="int" Mode="In" />
+    <Parameter Name="tongtien" Type="int" Mode="In" />
+  </Function>
   <Function Name="SUASP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="masp" Type="nvarchar" Mode="In" />
     <Parameter Name="Tensp" Type="nvarchar" Mode="In" />
@@ -238,6 +245,8 @@
     <Parameter Name="idhd" Type="nvarchar" Mode="In" />
     <Parameter Name="idnv" Type="nvarchar" Mode="In" />
     <Parameter Name="ngaylap" Type="datetime" Mode="In" />
+    <Parameter Name="tongso" Type="int" Mode="In" />
+    <Parameter Name="tongtien" Type="int" Mode="In" />
   </Function>
   <Function Name="ThemNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="idnv" Type="nvarchar" Mode="In" />

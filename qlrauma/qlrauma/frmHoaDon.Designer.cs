@@ -40,12 +40,14 @@ namespace QLRauma
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
+            this.btnCapNhat = new System.Windows.Forms.Button();
+            this.btnXacNhan = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colIDNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNgayLapHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongsoluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCapNhat = new System.Windows.Forms.Button();
-            this.btnXacNhan = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.penal.SuspendLayout();
@@ -189,6 +191,8 @@ namespace QLRauma
             this.ID,
             this.colIDNV,
             this.colNgayLapHoaDon,
+            this.tongsoluong,
+            this.tongtien,
             this.trangthai});
             this.dgvHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHoaDon.GridColor = System.Drawing.Color.White;
@@ -200,36 +204,6 @@ namespace QLRauma
             this.dgvHoaDon.Size = new System.Drawing.Size(981, 282);
             this.dgvHoaDon.TabIndex = 0;
             this.dgvHoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDon_CellClick);
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "id";
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.Width = 125;
-            // 
-            // colIDNV
-            // 
-            this.colIDNV.HeaderText = "ID Nhân Viên";
-            this.colIDNV.MinimumWidth = 6;
-            this.colIDNV.Name = "colIDNV";
-            this.colIDNV.Width = 125;
-            // 
-            // colNgayLapHoaDon
-            // 
-            this.colNgayLapHoaDon.HeaderText = "Ngày Lập Hóa Đơn";
-            this.colNgayLapHoaDon.MinimumWidth = 6;
-            this.colNgayLapHoaDon.Name = "colNgayLapHoaDon";
-            this.colNgayLapHoaDon.Width = 125;
-            // 
-            // trangthai
-            // 
-            this.trangthai.HeaderText = "Trạng Thái";
-            this.trangthai.MinimumWidth = 6;
-            this.trangthai.Name = "trangthai";
-            this.trangthai.Visible = false;
-            this.trangthai.Width = 125;
             // 
             // btnCapNhat
             // 
@@ -264,6 +238,55 @@ namespace QLRauma
             this.btnXacNhan.UseVisualStyleBackColor = false;
             this.btnXacNhan.Click += new System.EventHandler(this.btnThemHD_Click);
             // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "id";
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.Width = 125;
+            // 
+            // colIDNV
+            // 
+            this.colIDNV.DataPropertyName = "idnhanvien";
+            this.colIDNV.HeaderText = "ID Nhân Viên";
+            this.colIDNV.MinimumWidth = 6;
+            this.colIDNV.Name = "colIDNV";
+            this.colIDNV.Width = 125;
+            // 
+            // colNgayLapHoaDon
+            // 
+            this.colNgayLapHoaDon.DataPropertyName = "ngaylaphoadon";
+            this.colNgayLapHoaDon.HeaderText = "Ngày Lập Hóa Đơn";
+            this.colNgayLapHoaDon.MinimumWidth = 6;
+            this.colNgayLapHoaDon.Name = "colNgayLapHoaDon";
+            this.colNgayLapHoaDon.Width = 125;
+            // 
+            // tongsoluong
+            // 
+            this.tongsoluong.DataPropertyName = "Tongso";
+            this.tongsoluong.HeaderText = "Tổng số lượng";
+            this.tongsoluong.MinimumWidth = 6;
+            this.tongsoluong.Name = "tongsoluong";
+            this.tongsoluong.Width = 125;
+            // 
+            // tongtien
+            // 
+            this.tongtien.DataPropertyName = "Tongtien";
+            this.tongtien.HeaderText = "Tổng tiền";
+            this.tongtien.MinimumWidth = 6;
+            this.tongtien.Name = "tongtien";
+            this.tongtien.Width = 125;
+            // 
+            // trangthai
+            // 
+            this.trangthai.DataPropertyName = "trangthai";
+            this.trangthai.HeaderText = "Trạng Thái";
+            this.trangthai.MinimumWidth = 6;
+            this.trangthai.Name = "trangthai";
+            this.trangthai.Visible = false;
+            this.trangthai.Width = 125;
+            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -274,6 +297,7 @@ namespace QLRauma
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmHoaDon";
             this.Text = "frmHoaDon";
+            this.Load += new System.EventHandler(this.frmHoaDon_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -290,10 +314,6 @@ namespace QLRauma
         private System.Windows.Forms.DataGridView dgvHoaDon;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colIDNV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayLapHoaDon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn trangthai;
         private System.Windows.Forms.Panel penal;
         private System.Windows.Forms.DateTimePicker dtPNgayLap;
         private System.Windows.Forms.TextBox txtIDNhanVien;
@@ -303,5 +323,11 @@ namespace QLRauma
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnXacNhan;
         private System.Windows.Forms.Button btnCapNhat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIDNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayLapHoaDon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tongsoluong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tongtien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn trangthai;
     }
 }

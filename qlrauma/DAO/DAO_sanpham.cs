@@ -19,7 +19,7 @@ namespace DAO
             {
                 Masp = u.MaSp,
                 Tensp = u.TenSp,
-                MaLoaisp = u.MaLoaiSp,
+                MaLoaisp = u.LoaiSP.LoaiSP1,
                 Giasp = (int)u.GiaTien,
                 Mota = u.MoTa,
                 Hinhsp = u.Hinh
@@ -34,7 +34,7 @@ namespace DAO
             {
                 Masp = u.MaSp,
                 Tensp = u.TenSp,
-                MaLoaisp = u.MaLoaiSp,
+                MaLoaisp = u.LoaiSP.LoaiSP1,
                 Giasp = (int)u.GiaTien,
                 Mota = u.MoTa,
                 Hinhsp = u.Hinh
@@ -64,7 +64,8 @@ namespace DAO
         }
         public string max()
         {
-            string a = "RM01";
+            string a = "RM00";
+            a = qlrauma.SanPhams.Max(u => u.MaSp);
             return a;
         }
         public bool xoaSP(DTO_sanpham sp)

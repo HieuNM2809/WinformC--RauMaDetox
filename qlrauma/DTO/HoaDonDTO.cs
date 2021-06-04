@@ -12,5 +12,7 @@ namespace DTO
         public string idnhanvien { get; set; }
         public DateTime ngaylaphoadon { get; set; }
         public byte trangthai { get; set; }
+        public Nullable<decimal> Tongtien { get; set; }
+        public Nullable<int> Tongso { get; set; }
     }
 }

@@ -223,6 +223,13 @@
           <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SUAHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idhd" Type="nvarchar" Mode="In" />
+          <Parameter Name="idnv" Type="nvarchar" Mode="In" />
+          <Parameter Name="ngaylap" Type="datetime" Mode="In" />
+          <Parameter Name="tongso" Type="int" Mode="In" />
+          <Parameter Name="tongtien" Type="int" Mode="In" />
+        </Function>
         <Function Name="SUASP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="masp" Type="nvarchar" Mode="In" />
           <Parameter Name="Tensp" Type="nvarchar" Mode="In" />
@@ -243,6 +250,8 @@
           <Parameter Name="idhd" Type="nvarchar" Mode="In" />
           <Parameter Name="idnv" Type="nvarchar" Mode="In" />
           <Parameter Name="ngaylap" Type="datetime" Mode="In" />
+          <Parameter Name="tongso" Type="int" Mode="In" />
+          <Parameter Name="tongtien" Type="int" Mode="In" />
         </Function>
         <Function Name="ThemNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idnv" Type="nvarchar" Mode="In" />
@@ -578,6 +587,13 @@
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="SUAHD">
+            <Parameter Name="idhd" Mode="In" Type="String" />
+            <Parameter Name="idnv" Mode="In" Type="String" />
+            <Parameter Name="ngaylap" Mode="In" Type="DateTime" />
+            <Parameter Name="tongso" Mode="In" Type="Int32" />
+            <Parameter Name="tongtien" Mode="In" Type="Int32" />
+          </FunctionImport>
           <FunctionImport Name="SUASP">
             <Parameter Name="masp" Mode="In" Type="String" />
             <Parameter Name="Tensp" Mode="In" Type="String" />
@@ -598,6 +614,8 @@
             <Parameter Name="idhd" Mode="In" Type="String" />
             <Parameter Name="idnv" Mode="In" Type="String" />
             <Parameter Name="ngaylap" Mode="In" Type="DateTime" />
+            <Parameter Name="tongso" Mode="In" Type="Int32" />
+            <Parameter Name="tongtien" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="ThemNV">
             <Parameter Name="idnv" Mode="In" Type="String" />
@@ -775,6 +793,7 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="ql_raumaModel.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="ql_raumaModel.Store.sp_upgraddiagrams" />
+          <FunctionImportMapping FunctionImportName="SUAHD" FunctionName="ql_raumaModel.Store.SUAHD" />
           <FunctionImportMapping FunctionImportName="SUASP" FunctionName="ql_raumaModel.Store.SUASP" />
           <FunctionImportMapping FunctionImportName="THEMCTHD" FunctionName="ql_raumaModel.Store.THEMCTHD" />
           <FunctionImportMapping FunctionImportName="THEMHD" FunctionName="ql_raumaModel.Store.THEMHD" />

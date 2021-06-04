@@ -46,6 +46,7 @@ namespace QLRauma
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.ptb_anhtai = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_mota = new System.Windows.Forms.Label();
@@ -61,6 +62,7 @@ namespace QLRauma
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.rb_nuoc = new System.Windows.Forms.RadioButton();
             this.rb_topping = new System.Windows.Forms.RadioButton();
+            this.btn_thoat = new System.Windows.Forms.Button();
             this.tp_them = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
@@ -69,6 +71,7 @@ namespace QLRauma
             this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Themanh = new System.Windows.Forms.Button();
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
+            this.ptb_anhto = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
@@ -84,6 +87,9 @@ namespace QLRauma
             this.rtb_mota = new System.Windows.Forms.RichTextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_nhaplai = new System.Windows.Forms.Button();
+            this.btn_huy = new System.Windows.Forms.Button();
+            this.btn_them = new System.Windows.Forms.Button();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.Thêm = new System.Windows.Forms.Label();
             this.lbl_duongdan = new System.Windows.Forms.Label();
@@ -100,6 +106,10 @@ namespace QLRauma
             this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_sua = new System.Windows.Forms.Button();
+            this.btn_xoa_nhaplai = new System.Windows.Forms.Button();
+            this.btn_xoa = new System.Windows.Forms.Button();
+            this.btn_xoa_huy = new System.Windows.Forms.Button();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
@@ -120,19 +130,9 @@ namespace QLRauma
             this.label21 = new System.Windows.Forms.Label();
             this.tbx_xoa_mota = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.ptb_anhrauma = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.label26 = new System.Windows.Forms.Label();
-            this.ptb_anhtai = new System.Windows.Forms.PictureBox();
-            this.btn_thoat = new System.Windows.Forms.Button();
-            this.ptb_anhto = new System.Windows.Forms.PictureBox();
-            this.btn_nhaplai = new System.Windows.Forms.Button();
-            this.btn_huy = new System.Windows.Forms.Button();
-            this.btn_them = new System.Windows.Forms.Button();
-            this.btn_sua = new System.Windows.Forms.Button();
-            this.btn_xoa_nhaplai = new System.Windows.Forms.Button();
-            this.btn_xoa = new System.Windows.Forms.Button();
-            this.btn_xoa_huy = new System.Windows.Forms.Button();
-            this.ptb_anhrauma = new System.Windows.Forms.PictureBox();
             this.tp_qlsp.SuspendLayout();
             this.tp_view.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -142,6 +142,7 @@ namespace QLRauma
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhtai)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -152,6 +153,7 @@ namespace QLRauma
             this.tableLayoutPanel21.SuspendLayout();
             this.tableLayoutPanel22.SuspendLayout();
             this.tableLayoutPanel23.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhto)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
@@ -173,10 +175,8 @@ namespace QLRauma
             this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
-            this.tableLayoutPanel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhtai)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_anhrauma)).BeginInit();
+            this.tableLayoutPanel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // tp_qlsp
@@ -396,6 +396,19 @@ namespace QLRauma
             this.tableLayoutPanel5.Size = new System.Drawing.Size(225, 325);
             this.tableLayoutPanel5.TabIndex = 163;
             // 
+            // ptb_anhtai
+            // 
+            this.ptb_anhtai.BackColor = System.Drawing.Color.White;
+            this.ptb_anhtai.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptb_anhtai.BackgroundImage")));
+            this.ptb_anhtai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptb_anhtai.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptb_anhtai.Location = new System.Drawing.Point(20, 8);
+            this.ptb_anhtai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ptb_anhtai.Name = "ptb_anhtai";
+            this.ptb_anhtai.Size = new System.Drawing.Size(193, 299);
+            this.ptb_anhtai.TabIndex = 134;
+            this.ptb_anhtai.TabStop = false;
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
@@ -612,6 +625,25 @@ namespace QLRauma
             this.rb_topping.UseVisualStyleBackColor = true;
             this.rb_topping.CheckedChanged += new System.EventHandler(this.rb_topping_CheckedChanged);
             // 
+            // btn_thoat
+            // 
+            this.btn_thoat.BackColor = System.Drawing.Color.White;
+            this.btn_thoat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_thoat.FlatAppearance.BorderSize = 0;
+            this.btn_thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_thoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_thoat.Image = global::qlrauma.Properties.Resources.exits;
+            this.btn_thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_thoat.Location = new System.Drawing.Point(1093, 440);
+            this.btn_thoat.Name = "btn_thoat";
+            this.btn_thoat.Size = new System.Drawing.Size(189, 75);
+            this.btn_thoat.TabIndex = 160;
+            this.btn_thoat.Text = "Thoát";
+            this.btn_thoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_thoat.UseVisualStyleBackColor = false;
+            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click_1);
+            // 
             // tp_them
             // 
             this.tp_them.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
@@ -622,7 +654,7 @@ namespace QLRauma
             this.tp_them.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tp_them.Name = "tp_them";
             this.tp_them.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tp_them.Size = new System.Drawing.Size(1273, 632);
+            this.tp_them.Size = new System.Drawing.Size(1291, 846);
             this.tp_them.TabIndex = 5;
             this.tp_them.Text = "Thêm";
             // 
@@ -639,7 +671,7 @@ namespace QLRauma
             this.tableLayoutPanel8.RowCount = 2;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 69.69697F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.30303F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(1267, 528);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(1285, 742);
             this.tableLayoutPanel8.TabIndex = 133;
             // 
             // tableLayoutPanel9
@@ -657,7 +689,7 @@ namespace QLRauma
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(1261, 361);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(1279, 511);
             this.tableLayoutPanel9.TabIndex = 131;
             // 
             // groupBox5
@@ -669,7 +701,7 @@ namespace QLRauma
             this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox5.Size = new System.Drawing.Size(258, 357);
+            this.groupBox5.Size = new System.Drawing.Size(262, 507);
             this.groupBox5.TabIndex = 125;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Hình ảnh sản phẩm";
@@ -686,24 +718,24 @@ namespace QLRauma
             this.tableLayoutPanel21.RowCount = 2;
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.7317F));
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.26829F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(252, 324);
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(256, 474);
             this.tableLayoutPanel21.TabIndex = 124;
             // 
             // tableLayoutPanel22
             // 
             this.tableLayoutPanel22.ColumnCount = 3;
             this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.35714F));
-            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.92857F));
-            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.6F));
+            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.4F));
             this.tableLayoutPanel22.Controls.Add(this.btn_Themanh, 1, 1);
             this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel22.Location = new System.Drawing.Point(3, 232);
+            this.tableLayoutPanel22.Location = new System.Drawing.Point(3, 338);
             this.tableLayoutPanel22.Name = "tableLayoutPanel22";
             this.tableLayoutPanel22.RowCount = 3;
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.35443F));
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 67.79661F));
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.25424F));
-            this.tableLayoutPanel22.Size = new System.Drawing.Size(246, 89);
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.10526F));
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.84962F));
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(250, 133);
             this.tableLayoutPanel22.TabIndex = 134;
             // 
             // btn_Themanh
@@ -715,9 +747,9 @@ namespace QLRauma
             this.btn_Themanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Themanh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.btn_Themanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Themanh.Location = new System.Drawing.Point(78, 19);
+            this.btn_Themanh.Location = new System.Drawing.Point(78, 27);
             this.btn_Themanh.Name = "btn_Themanh";
-            this.btn_Themanh.Size = new System.Drawing.Size(102, 53);
+            this.btn_Themanh.Size = new System.Drawing.Size(117, 49);
             this.btn_Themanh.TabIndex = 123;
             this.btn_Themanh.Text = "Tải ảnh";
             this.btn_Themanh.UseVisualStyleBackColor = false;
@@ -737,8 +769,23 @@ namespace QLRauma
             this.tableLayoutPanel23.RowCount = 2;
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.063291F));
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.24051F));
-            this.tableLayoutPanel23.Size = new System.Drawing.Size(246, 223);
+            this.tableLayoutPanel23.Size = new System.Drawing.Size(250, 329);
             this.tableLayoutPanel23.TabIndex = 134;
+            // 
+            // ptb_anhto
+            // 
+            this.ptb_anhto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptb_anhto.BackColor = System.Drawing.Color.White;
+            this.ptb_anhto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptb_anhto.BackgroundImage")));
+            this.ptb_anhto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptb_anhto.Location = new System.Drawing.Point(46, 19);
+            this.ptb_anhto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ptb_anhto.Name = "ptb_anhto";
+            this.ptb_anhto.Size = new System.Drawing.Size(178, 308);
+            this.ptb_anhto.TabIndex = 112;
+            this.ptb_anhto.TabStop = false;
             // 
             // groupBox4
             // 
@@ -746,11 +793,11 @@ namespace QLRauma
             this.groupBox4.Controls.Add(this.tableLayoutPanel11);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(267, 2);
+            this.groupBox4.Location = new System.Drawing.Point(271, 2);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(614, 357);
+            this.groupBox4.Size = new System.Drawing.Size(623, 507);
             this.groupBox4.TabIndex = 124;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin chi tiết";
@@ -782,7 +829,7 @@ namespace QLRauma
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(608, 324);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(617, 474);
             this.tableLayoutPanel11.TabIndex = 119;
             // 
             // label8
@@ -793,9 +840,9 @@ namespace QLRauma
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(3, 35);
+            this.label8.Location = new System.Drawing.Point(3, 65);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(132, 38);
+            this.label8.Size = new System.Drawing.Size(134, 38);
             this.label8.TabIndex = 113;
             this.label8.Text = "Mã món:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -806,7 +853,7 @@ namespace QLRauma
             this.cbb_loai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_loai.ForeColor = System.Drawing.Color.Black;
             this.cbb_loai.FormattingEnabled = true;
-            this.cbb_loai.Location = new System.Drawing.Point(141, 251);
+            this.cbb_loai.Location = new System.Drawing.Point(143, 371);
             this.cbb_loai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbb_loai.Name = "cbb_loai";
             this.cbb_loai.Size = new System.Drawing.Size(421, 37);
@@ -820,9 +867,9 @@ namespace QLRauma
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(3, 249);
+            this.label14.Location = new System.Drawing.Point(3, 369);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(132, 40);
+            this.label14.Size = new System.Drawing.Size(134, 40);
             this.label14.TabIndex = 110;
             this.label14.Text = "Loại:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -831,7 +878,7 @@ namespace QLRauma
             // 
             this.tbx_mamon.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_mamon.ForeColor = System.Drawing.Color.Black;
-            this.tbx_mamon.Location = new System.Drawing.Point(141, 37);
+            this.tbx_mamon.Location = new System.Drawing.Point(143, 67);
             this.tbx_mamon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbx_mamon.Name = "tbx_mamon";
             this.tbx_mamon.Size = new System.Drawing.Size(421, 34);
@@ -845,9 +892,9 @@ namespace QLRauma
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.label18.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label18.Location = new System.Drawing.Point(3, 177);
+            this.label18.Location = new System.Drawing.Point(3, 267);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(132, 37);
+            this.label18.Size = new System.Drawing.Size(134, 37);
             this.label18.TabIndex = 109;
             this.label18.Text = "Giá:";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -857,7 +904,7 @@ namespace QLRauma
             this.tbx_gia.BackColor = System.Drawing.SystemColors.Window;
             this.tbx_gia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_gia.ForeColor = System.Drawing.Color.Black;
-            this.tbx_gia.Location = new System.Drawing.Point(141, 179);
+            this.tbx_gia.Location = new System.Drawing.Point(143, 269);
             this.tbx_gia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbx_gia.Name = "tbx_gia";
             this.tbx_gia.Size = new System.Drawing.Size(421, 34);
@@ -872,9 +919,9 @@ namespace QLRauma
             this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(3, 108);
+            this.label19.Location = new System.Drawing.Point(3, 168);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(132, 34);
+            this.label19.Size = new System.Drawing.Size(134, 34);
             this.label19.TabIndex = 108;
             this.label19.Text = "Tên món:";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -883,7 +930,7 @@ namespace QLRauma
             // 
             this.tbx_tenmon.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_tenmon.ForeColor = System.Drawing.Color.Black;
-            this.tbx_tenmon.Location = new System.Drawing.Point(141, 110);
+            this.tbx_tenmon.Location = new System.Drawing.Point(143, 170);
             this.tbx_tenmon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbx_tenmon.Name = "tbx_tenmon";
             this.tbx_tenmon.Size = new System.Drawing.Size(421, 34);
@@ -896,15 +943,16 @@ namespace QLRauma
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.tableLayoutPanel10.ColumnCount = 1;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel10.Controls.Add(this.label13, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.rtb_mota, 0, 1);
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(887, 3);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(900, 3);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
-            this.tableLayoutPanel10.RowCount = 2;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(371, 355);
+            this.tableLayoutPanel10.RowCount = 3;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.34653F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.9802F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.47525F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(376, 505);
             this.tableLayoutPanel10.TabIndex = 126;
             // 
             // label13
@@ -917,7 +965,7 @@ namespace QLRauma
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(3, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(365, 177);
+            this.label13.Size = new System.Drawing.Size(370, 330);
             this.label13.TabIndex = 111;
             this.label13.Text = "Mô tả:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -925,10 +973,10 @@ namespace QLRauma
             // rtb_mota
             // 
             this.rtb_mota.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rtb_mota.Location = new System.Drawing.Point(3, 179);
+            this.rtb_mota.Location = new System.Drawing.Point(3, 332);
             this.rtb_mota.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rtb_mota.Name = "rtb_mota";
-            this.rtb_mota.Size = new System.Drawing.Size(233, 174);
+            this.rtb_mota.Size = new System.Drawing.Size(233, 107);
             this.rtb_mota.TabIndex = 119;
             this.rtb_mota.Text = "";
             // 
@@ -937,11 +985,11 @@ namespace QLRauma
             this.groupBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.groupBox6.Controls.Add(this.tableLayoutPanel12);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox6.Location = new System.Drawing.Point(3, 369);
+            this.groupBox6.Location = new System.Drawing.Point(3, 519);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox6.Size = new System.Drawing.Size(1261, 157);
+            this.groupBox6.Size = new System.Drawing.Size(1279, 221);
             this.groupBox6.TabIndex = 130;
             this.groupBox6.TabStop = false;
             // 
@@ -963,10 +1011,67 @@ namespace QLRauma
             this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 31);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 2;
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.67742F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.32258F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(1255, 124);
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.23404F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.76596F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(1273, 188);
             this.tableLayoutPanel12.TabIndex = 134;
+            // 
+            // btn_nhaplai
+            // 
+            this.btn_nhaplai.BackColor = System.Drawing.Color.White;
+            this.btn_nhaplai.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_nhaplai.FlatAppearance.BorderSize = 0;
+            this.btn_nhaplai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_nhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nhaplai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_nhaplai.Image = ((System.Drawing.Image)(resources.GetObject("btn_nhaplai.Image")));
+            this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_nhaplai.Location = new System.Drawing.Point(555, 3);
+            this.btn_nhaplai.Name = "btn_nhaplai";
+            this.btn_nhaplai.Size = new System.Drawing.Size(175, 64);
+            this.btn_nhaplai.TabIndex = 132;
+            this.btn_nhaplai.Text = "Nhập lại";
+            this.btn_nhaplai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_nhaplai.UseVisualStyleBackColor = false;
+            this.btn_nhaplai.Click += new System.EventHandler(this.btn_nhaplai_Click);
+            // 
+            // btn_huy
+            // 
+            this.btn_huy.BackColor = System.Drawing.Color.White;
+            this.btn_huy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_huy.FlatAppearance.BorderSize = 0;
+            this.btn_huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_huy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_huy.Image = global::qlrauma.Properties.Resources.exits;
+            this.btn_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_huy.Location = new System.Drawing.Point(917, 3);
+            this.btn_huy.Name = "btn_huy";
+            this.btn_huy.Size = new System.Drawing.Size(175, 64);
+            this.btn_huy.TabIndex = 133;
+            this.btn_huy.Text = "Hủy";
+            this.btn_huy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_huy.UseVisualStyleBackColor = false;
+            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
+            // 
+            // btn_them
+            // 
+            this.btn_them.BackColor = System.Drawing.Color.White;
+            this.btn_them.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_them.FlatAppearance.BorderSize = 0;
+            this.btn_them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_them.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_them.Image = global::qlrauma.Properties.Resources.plus;
+            this.btn_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_them.Location = new System.Drawing.Point(193, 3);
+            this.btn_them.Name = "btn_them";
+            this.btn_them.Size = new System.Drawing.Size(175, 64);
+            this.btn_them.TabIndex = 124;
+            this.btn_them.Text = "Thêm";
+            this.btn_them.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_them.UseVisualStyleBackColor = false;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // tableLayoutPanel7
             // 
@@ -979,7 +1084,7 @@ namespace QLRauma
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1267, 100);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1285, 100);
             this.tableLayoutPanel7.TabIndex = 132;
             // 
             // Thêm
@@ -990,7 +1095,7 @@ namespace QLRauma
             this.Thêm.ForeColor = System.Drawing.Color.Orange;
             this.Thêm.Location = new System.Drawing.Point(3, 0);
             this.Thêm.Name = "Thêm";
-            this.Thêm.Size = new System.Drawing.Size(1261, 100);
+            this.Thêm.Size = new System.Drawing.Size(1279, 100);
             this.Thêm.TabIndex = 123;
             this.Thêm.Text = "Thêm";
             this.Thêm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1151,7 +1256,7 @@ namespace QLRauma
             this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 238F));
             this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 242F));
             this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
-            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel20.Controls.Add(this.btn_sua, 0, 0);
             this.tableLayoutPanel20.Controls.Add(this.btn_xoa_nhaplai, 2, 0);
             this.tableLayoutPanel20.Controls.Add(this.btn_xoa, 1, 0);
@@ -1163,6 +1268,82 @@ namespace QLRauma
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel20.Size = new System.Drawing.Size(888, 70);
             this.tableLayoutPanel20.TabIndex = 167;
+            // 
+            // btn_sua
+            // 
+            this.btn_sua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_sua.BackColor = System.Drawing.Color.White;
+            this.btn_sua.FlatAppearance.BorderSize = 0;
+            this.btn_sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_sua.Image = global::qlrauma.Properties.Resources.chínhua;
+            this.btn_sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_sua.Location = new System.Drawing.Point(47, 3);
+            this.btn_sua.Name = "btn_sua";
+            this.btn_sua.Size = new System.Drawing.Size(131, 64);
+            this.btn_sua.TabIndex = 164;
+            this.btn_sua.Text = "Sửa";
+            this.btn_sua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_sua.UseVisualStyleBackColor = false;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
+            // 
+            // btn_xoa_nhaplai
+            // 
+            this.btn_xoa_nhaplai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_xoa_nhaplai.BackColor = System.Drawing.Color.White;
+            this.btn_xoa_nhaplai.FlatAppearance.BorderSize = 0;
+            this.btn_xoa_nhaplai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_xoa_nhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoa_nhaplai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_xoa_nhaplai.Image = ((System.Drawing.Image)(resources.GetObject("btn_xoa_nhaplai.Image")));
+            this.btn_xoa_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_xoa_nhaplai.Location = new System.Drawing.Point(478, 3);
+            this.btn_xoa_nhaplai.Name = "btn_xoa_nhaplai";
+            this.btn_xoa_nhaplai.Size = new System.Drawing.Size(180, 64);
+            this.btn_xoa_nhaplai.TabIndex = 165;
+            this.btn_xoa_nhaplai.Text = "Nhập lại";
+            this.btn_xoa_nhaplai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_xoa_nhaplai.UseVisualStyleBackColor = false;
+            this.btn_xoa_nhaplai.Click += new System.EventHandler(this.btn_xoa_nhaplai_Click);
+            // 
+            // btn_xoa
+            // 
+            this.btn_xoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_xoa.BackColor = System.Drawing.Color.White;
+            this.btn_xoa.FlatAppearance.BorderSize = 0;
+            this.btn_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_xoa.Image = ((System.Drawing.Image)(resources.GetObject("btn_xoa.Image")));
+            this.btn_xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_xoa.Location = new System.Drawing.Point(245, 3);
+            this.btn_xoa.Name = "btn_xoa";
+            this.btn_xoa.Size = new System.Drawing.Size(171, 64);
+            this.btn_xoa.TabIndex = 163;
+            this.btn_xoa.Text = "Xóa";
+            this.btn_xoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_xoa.UseVisualStyleBackColor = false;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
+            // 
+            // btn_xoa_huy
+            // 
+            this.btn_xoa_huy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_xoa_huy.BackColor = System.Drawing.Color.White;
+            this.btn_xoa_huy.FlatAppearance.BorderSize = 0;
+            this.btn_xoa_huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_xoa_huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoa_huy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btn_xoa_huy.Image = global::qlrauma.Properties.Resources.exits;
+            this.btn_xoa_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_xoa_huy.Location = new System.Drawing.Point(696, 3);
+            this.btn_xoa_huy.Name = "btn_xoa_huy";
+            this.btn_xoa_huy.Size = new System.Drawing.Size(151, 64);
+            this.btn_xoa_huy.TabIndex = 166;
+            this.btn_xoa_huy.Text = "Hủy";
+            this.btn_xoa_huy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_xoa_huy.UseVisualStyleBackColor = false;
+            this.btn_xoa_huy.Click += new System.EventHandler(this.btn_xoa_huy_Click);
             // 
             // tableLayoutPanel19
             // 
@@ -1443,10 +1624,22 @@ namespace QLRauma
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             this.tableLayoutPanel17.RowCount = 3;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.703704F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.6748F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.46342F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.878049F));
             this.tableLayoutPanel17.Size = new System.Drawing.Size(215, 246);
             this.tableLayoutPanel17.TabIndex = 137;
+            // 
+            // ptb_anhrauma
+            // 
+            this.ptb_anhrauma.BackColor = System.Drawing.Color.White;
+            this.ptb_anhrauma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptb_anhrauma.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptb_anhrauma.Location = new System.Drawing.Point(13, 11);
+            this.ptb_anhrauma.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ptb_anhrauma.Name = "ptb_anhrauma";
+            this.ptb_anhrauma.Size = new System.Drawing.Size(189, 220);
+            this.ptb_anhrauma.TabIndex = 134;
+            this.ptb_anhrauma.TabStop = false;
             // 
             // tableLayoutPanel13
             // 
@@ -1474,198 +1667,6 @@ namespace QLRauma
             this.label26.Text = "MENU";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ptb_anhtai
-            // 
-            this.ptb_anhtai.BackColor = System.Drawing.Color.White;
-            this.ptb_anhtai.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptb_anhtai.BackgroundImage")));
-            this.ptb_anhtai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ptb_anhtai.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ptb_anhtai.Location = new System.Drawing.Point(20, 8);
-            this.ptb_anhtai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ptb_anhtai.Name = "ptb_anhtai";
-            this.ptb_anhtai.Size = new System.Drawing.Size(193, 299);
-            this.ptb_anhtai.TabIndex = 134;
-            this.ptb_anhtai.TabStop = false;
-            // 
-            // btn_thoat
-            // 
-            this.btn_thoat.BackColor = System.Drawing.Color.White;
-            this.btn_thoat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_thoat.FlatAppearance.BorderSize = 0;
-            this.btn_thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btn_thoat.Image = global::qlrauma.Properties.Resources.exits;
-            this.btn_thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_thoat.Location = new System.Drawing.Point(1093, 440);
-            this.btn_thoat.Name = "btn_thoat";
-            this.btn_thoat.Size = new System.Drawing.Size(189, 75);
-            this.btn_thoat.TabIndex = 160;
-            this.btn_thoat.Text = "Thoát";
-            this.btn_thoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_thoat.UseVisualStyleBackColor = false;
-            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click_1);
-            // 
-            // ptb_anhto
-            // 
-            this.ptb_anhto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ptb_anhto.BackColor = System.Drawing.Color.White;
-            this.ptb_anhto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptb_anhto.BackgroundImage")));
-            this.ptb_anhto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ptb_anhto.Location = new System.Drawing.Point(46, 13);
-            this.ptb_anhto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ptb_anhto.Name = "ptb_anhto";
-            this.ptb_anhto.Size = new System.Drawing.Size(175, 208);
-            this.ptb_anhto.TabIndex = 112;
-            this.ptb_anhto.TabStop = false;
-            // 
-            // btn_nhaplai
-            // 
-            this.btn_nhaplai.BackColor = System.Drawing.Color.White;
-            this.btn_nhaplai.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_nhaplai.FlatAppearance.BorderSize = 0;
-            this.btn_nhaplai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_nhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nhaplai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btn_nhaplai.Image = ((System.Drawing.Image)(resources.GetObject("btn_nhaplai.Image")));
-            this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_nhaplai.Location = new System.Drawing.Point(548, 3);
-            this.btn_nhaplai.Name = "btn_nhaplai";
-            this.btn_nhaplai.Size = new System.Drawing.Size(173, 68);
-            this.btn_nhaplai.TabIndex = 132;
-            this.btn_nhaplai.Text = "Nhập lại";
-            this.btn_nhaplai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_nhaplai.UseVisualStyleBackColor = false;
-            this.btn_nhaplai.Click += new System.EventHandler(this.btn_nhaplai_Click);
-            // 
-            // btn_huy
-            // 
-            this.btn_huy.BackColor = System.Drawing.Color.White;
-            this.btn_huy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_huy.FlatAppearance.BorderSize = 0;
-            this.btn_huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_huy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btn_huy.Image = global::qlrauma.Properties.Resources.exits;
-            this.btn_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_huy.Location = new System.Drawing.Point(906, 3);
-            this.btn_huy.Name = "btn_huy";
-            this.btn_huy.Size = new System.Drawing.Size(173, 68);
-            this.btn_huy.TabIndex = 133;
-            this.btn_huy.Text = "Hủy";
-            this.btn_huy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_huy.UseVisualStyleBackColor = false;
-            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
-            // 
-            // btn_them
-            // 
-            this.btn_them.BackColor = System.Drawing.Color.White;
-            this.btn_them.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_them.FlatAppearance.BorderSize = 0;
-            this.btn_them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_them.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btn_them.Image = global::qlrauma.Properties.Resources.plus;
-            this.btn_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_them.Location = new System.Drawing.Point(190, 3);
-            this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(173, 68);
-            this.btn_them.TabIndex = 124;
-            this.btn_them.Text = "Thêm";
-            this.btn_them.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_them.UseVisualStyleBackColor = false;
-            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
-            // 
-            // btn_sua
-            // 
-            this.btn_sua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_sua.BackColor = System.Drawing.Color.White;
-            this.btn_sua.FlatAppearance.BorderSize = 0;
-            this.btn_sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btn_sua.Image = global::qlrauma.Properties.Resources.chínhua;
-            this.btn_sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sua.Location = new System.Drawing.Point(47, 3);
-            this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(131, 64);
-            this.btn_sua.TabIndex = 164;
-            this.btn_sua.Text = "Sửa";
-            this.btn_sua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_sua.UseVisualStyleBackColor = false;
-            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
-            // 
-            // btn_xoa_nhaplai
-            // 
-            this.btn_xoa_nhaplai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_xoa_nhaplai.BackColor = System.Drawing.Color.White;
-            this.btn_xoa_nhaplai.FlatAppearance.BorderSize = 0;
-            this.btn_xoa_nhaplai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_xoa_nhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xoa_nhaplai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btn_xoa_nhaplai.Image = ((System.Drawing.Image)(resources.GetObject("btn_xoa_nhaplai.Image")));
-            this.btn_xoa_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_xoa_nhaplai.Location = new System.Drawing.Point(478, 3);
-            this.btn_xoa_nhaplai.Name = "btn_xoa_nhaplai";
-            this.btn_xoa_nhaplai.Size = new System.Drawing.Size(180, 64);
-            this.btn_xoa_nhaplai.TabIndex = 165;
-            this.btn_xoa_nhaplai.Text = "Nhập lại";
-            this.btn_xoa_nhaplai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_xoa_nhaplai.UseVisualStyleBackColor = false;
-            this.btn_xoa_nhaplai.Click += new System.EventHandler(this.btn_xoa_nhaplai_Click);
-            // 
-            // btn_xoa
-            // 
-            this.btn_xoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_xoa.BackColor = System.Drawing.Color.White;
-            this.btn_xoa.FlatAppearance.BorderSize = 0;
-            this.btn_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btn_xoa.Image = ((System.Drawing.Image)(resources.GetObject("btn_xoa.Image")));
-            this.btn_xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_xoa.Location = new System.Drawing.Point(245, 3);
-            this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.Size = new System.Drawing.Size(171, 64);
-            this.btn_xoa.TabIndex = 163;
-            this.btn_xoa.Text = "Xóa";
-            this.btn_xoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_xoa.UseVisualStyleBackColor = false;
-            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
-            // 
-            // btn_xoa_huy
-            // 
-            this.btn_xoa_huy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_xoa_huy.BackColor = System.Drawing.Color.White;
-            this.btn_xoa_huy.FlatAppearance.BorderSize = 0;
-            this.btn_xoa_huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_xoa_huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xoa_huy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btn_xoa_huy.Image = global::qlrauma.Properties.Resources.exits;
-            this.btn_xoa_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_xoa_huy.Location = new System.Drawing.Point(696, 3);
-            this.btn_xoa_huy.Name = "btn_xoa_huy";
-            this.btn_xoa_huy.Size = new System.Drawing.Size(151, 64);
-            this.btn_xoa_huy.TabIndex = 166;
-            this.btn_xoa_huy.Text = "Hủy";
-            this.btn_xoa_huy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_xoa_huy.UseVisualStyleBackColor = false;
-            this.btn_xoa_huy.Click += new System.EventHandler(this.btn_xoa_huy_Click);
-            // 
-            // ptb_anhrauma
-            // 
-            this.ptb_anhrauma.BackColor = System.Drawing.Color.White;
-            this.ptb_anhrauma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ptb_anhrauma.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ptb_anhrauma.Location = new System.Drawing.Point(13, 11);
-            this.ptb_anhrauma.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ptb_anhrauma.Name = "ptb_anhrauma";
-            this.ptb_anhrauma.Size = new System.Drawing.Size(189, 191);
-            this.ptb_anhrauma.TabIndex = 134;
-            this.ptb_anhrauma.TabStop = false;
-            // 
             // QL_SanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1688,6 +1689,7 @@ namespace QLRauma
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhtai)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -1701,6 +1703,7 @@ namespace QLRauma
             this.tableLayoutPanel21.ResumeLayout(false);
             this.tableLayoutPanel22.ResumeLayout(false);
             this.tableLayoutPanel23.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhto)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel11.PerformLayout();
@@ -1728,11 +1731,9 @@ namespace QLRauma
             this.tableLayoutPanel16.ResumeLayout(false);
             this.tableLayoutPanel16.PerformLayout();
             this.tableLayoutPanel17.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhrauma)).EndInit();
             this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhtai)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_anhrauma)).EndInit();
             this.ResumeLayout(false);
 
         }

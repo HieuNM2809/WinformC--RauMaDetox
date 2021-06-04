@@ -71,6 +71,8 @@ namespace QLRauma
             txtIDNhanVien.Text = "1";
             hd.idnhanvien = txtIDNhanVien.Text;
             hd.ngaylaphoadon = dtPNgayLap.Value;
+            hd.Tongso = 0;
+            hd.Tongtien = 0;
             if (hoadon.themHD(hd))
             {
                 frmChiTietHoaDon frmcthd = new frmChiTietHoaDon(); ;

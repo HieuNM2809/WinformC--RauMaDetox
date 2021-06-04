@@ -27,10 +27,21 @@ namespace DAO
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+
+        internal int THEMHD(string id, string idnhanvien, DateTime ngaylaphoadon, int? tongso, decimal? tongtien)
+        {
+            throw new NotImplementedException();
+        }
+
         public DbSet<CTHoaDon> CTHoaDons { get; set; }
         public DbSet<CTPhanQuyen> CTPhanQuyens { get; set; }
         public DbSet<HoaDon> HoaDons { get; set; }
+
+        internal void SUAHD(string id, string idnhanvien, DateTime ngaylaphoadon, int? tongso, decimal? tongtien)
+        {
+            throw new NotImplementedException();
+        }
+
         public DbSet<LoaiSP> LoaiSPs { get; set; }
         public DbSet<NhanVien> NhanViens { get; set; }
         public DbSet<PhanQuyen> PhanQuyens { get; set; }
@@ -228,6 +239,31 @@ namespace DAO
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
         }
     
+        public virtual int SUAHD(string idhd, string idnv, Nullable<System.DateTime> ngaylap, Nullable<int> tongso, Nullable<int> tongtien)
+        {
+            var idhdParameter = idhd != null ?
+                new ObjectParameter("idhd", idhd) :
+                new ObjectParameter("idhd", typeof(string));
+    
+            var idnvParameter = idnv != null ?
+                new ObjectParameter("idnv", idnv) :
+                new ObjectParameter("idnv", typeof(string));
+    
+            var ngaylapParameter = ngaylap.HasValue ?
+                new ObjectParameter("ngaylap", ngaylap) :
+                new ObjectParameter("ngaylap", typeof(System.DateTime));
+    
+            var tongsoParameter = tongso.HasValue ?
+                new ObjectParameter("tongso", tongso) :
+                new ObjectParameter("tongso", typeof(int));
+    
+            var tongtienParameter = tongtien.HasValue ?
+                new ObjectParameter("tongtien", tongtien) :
+                new ObjectParameter("tongtien", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SUAHD", idhdParameter, idnvParameter, ngaylapParameter, tongsoParameter, tongtienParameter);
+        }
+    
         public virtual int SUASP(string masp, string tensp, string maloaisp, Nullable<decimal> giatien, string mota, string hinh)
         {
             var maspParameter = masp != null ?
@@ -286,7 +322,7 @@ namespace DAO
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("THEMCTHD", sttParameter, idhdParameter, maspParameter, soluongParameter, dongiaParameter, tongtienParameter);
         }
     
-        public virtual int THEMHD(string idhd, string idnv, Nullable<System.DateTime> ngaylap)
+        public virtual int THEMHD(string idhd, string idnv, Nullable<System.DateTime> ngaylap, Nullable<int> tongso, Nullable<int> tongtien)
         {
             var idhdParameter = idhd != null ?
                 new ObjectParameter("idhd", idhd) :
@@ -300,7 +336,15 @@ namespace DAO
                 new ObjectParameter("ngaylap", ngaylap) :
                 new ObjectParameter("ngaylap", typeof(System.DateTime));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("THEMHD", idhdParameter, idnvParameter, ngaylapParameter);
+            var tongsoParameter = tongso.HasValue ?
+                new ObjectParameter("tongso", tongso) :
+                new ObjectParameter("tongso", typeof(int));
+    
+            var tongtienParameter = tongtien.HasValue ?
+                new ObjectParameter("tongtien", tongtien) :
+                new ObjectParameter("tongtien", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("THEMHD", idhdParameter, idnvParameter, ngaylapParameter, tongsoParameter, tongtienParameter);
         }
     
         public virtual int ThemNV(string idnv, string hoten, Nullable<System.DateTime> ngaysinh, string gioitinh, string chucdanh, string loainv, string sdt, string taikhoan, string matkhau, string hinh, string email)

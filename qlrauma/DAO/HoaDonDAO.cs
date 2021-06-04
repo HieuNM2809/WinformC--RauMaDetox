@@ -27,7 +27,7 @@ namespace DAO
         }
         public bool themHD(HoaDonDTO hd)
         {
-            int temp = qlrauma.THEMHD(hd.id, hd.idnhanvien, hd.ngaylaphoadon);
+            int temp = qlrauma.THEMHD(hd.id, hd.idnhanvien, hd.ngaylaphoadon,hd.Tongso,hd.Tongtien);
             qlrauma.SaveChanges();
             return true;
         }
@@ -39,13 +39,7 @@ namespace DAO
         }
         public bool CapnhatHD(HoaDonDTO hd)
         {
-            //int temp = qlrauma.CAPNHATHD(hd.id, hd.idnhanvien, hd.ngaylaphoadon);
-            qlrauma.SaveChanges();
-            return true;
-        }
-        public bool XoaHD(string id)
-        {
-            int temp = qlrauma.XOAHD(id);
+            qlrauma.SUAHD(hd.id, hd.idnhanvien, hd.ngaylaphoadon, hd.Tongso, hd.Tongtien);
             qlrauma.SaveChanges();
             return true;
         }

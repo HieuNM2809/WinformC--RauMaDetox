@@ -1,3 +1,4 @@
+C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\BUS\bin\Debug\BUS.dll
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\BUS\bin\Debug\BUS.pdb
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\BUS\bin\Debug\DAO.dll
@@ -8,7 +9,6 @@ C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\BUS\bin\Debug\DAO.dll.config
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\BUS\bin\Debug\DTO.pdb
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\BUS\bin\Debug\EntityFramework.xml
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
-C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\BUS\obj\Debug\BUS.dll
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\BUS\obj\Debug\BUS.pdb

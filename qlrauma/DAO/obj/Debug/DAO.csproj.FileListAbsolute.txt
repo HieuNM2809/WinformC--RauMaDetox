@@ -1,3 +1,5 @@
+C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DAO\bin\Debug\DAO.dll.config
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DAO\bin\Debug\DAO.dll
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DAO\bin\Debug\DAO.pdb
@@ -5,8 +7,6 @@ C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DAO\bin\Debug\DTO.dll
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DAO\bin\Debug\EntityFramework.dll
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DAO\bin\Debug\DTO.pdb
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DAO\bin\Debug\EntityFramework.xml
-C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
-C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DAO\obj\Debug\DAO.csproj.CopyComplete
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DAO\obj\Debug\DAO.dll
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DAO\obj\Debug\DAO.pdb

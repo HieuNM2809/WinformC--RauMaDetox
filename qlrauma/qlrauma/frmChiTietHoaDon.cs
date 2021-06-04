@@ -113,7 +113,13 @@ namespace QLRauma
 
         private void dgvDSHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.RowIndex > -1)
+            {
+                DataGridViewRow row = this.dgvDSHD.Rows[e.RowIndex];
+                lbl_ma.Text = row.Cells[6].Value.ToString();
+                lbl_tien.Text = row.Cells[5].Value.ToString();
+                lblso.Text = row.Cells[3].Value.ToString();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -68,12 +68,14 @@ namespace qlrauma
             this.tsmlDKTK.Name = "tsmlDKTK";
             this.tsmlDKTK.Size = new System.Drawing.Size(237, 28);
             this.tsmlDKTK.Text = "Đăng kí tài khoản";
+            this.tsmlDKTK.Click += new System.EventHandler(this.đăngKíTàiKhoảnToolStripMenuItem_Click);
             // 
             // tsmlDMK
             // 
             this.tsmlDMK.Name = "tsmlDMK";
             this.tsmlDMK.Size = new System.Drawing.Size(237, 28);
             this.tsmlDMK.Text = "Đổi mật khẩu";
+            this.tsmlDMK.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
             // 
             // tsmlQLNV
             // 
@@ -90,6 +92,7 @@ namespace qlrauma
             this.tsmlTTNV.Name = "tsmlTTNV";
             this.tsmlTTNV.Size = new System.Drawing.Size(254, 28);
             this.tsmlTTNV.Text = "Thông tin nhân viên";
+            this.tsmlTTNV.Click += new System.EventHandler(this.thôngTinNhânViênToolStripMenuItem_Click);
             // 
             // tmslBaoCao
             // 
@@ -100,9 +103,10 @@ namespace qlrauma
             // 
             // panel_show
             // 
-            this.panel_show.Location = new System.Drawing.Point(5, 34);
+            this.panel_show.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_show.Location = new System.Drawing.Point(0, 31);
             this.panel_show.Name = "panel_show";
-            this.panel_show.Size = new System.Drawing.Size(1116, 793);
+            this.panel_show.Size = new System.Drawing.Size(1127, 805);
             this.panel_show.TabIndex = 1;
             // 
             // QLNhanVien
