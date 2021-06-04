@@ -10,3 +10,15 @@ C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DAO\bin\Debug\EntityFramework.xml
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DAO\obj\Debug\DAO.csproj.CopyComplete
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DAO\obj\Debug\DAO.dll
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DAO\obj\Debug\DAO.pdb
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\DAO\bin\Debug\DAO.dll.config
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\DAO\bin\Debug\DAO.dll
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\DAO\bin\Debug\DAO.pdb
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\DAO\bin\Debug\DTO.dll
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\DAO\bin\Debug\EntityFramework.dll
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\DAO\bin\Debug\DTO.pdb
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\DAO\bin\Debug\EntityFramework.xml
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\DAO\obj\Debug\DAO.dll
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\DAO\obj\Debug\DAO.pdb

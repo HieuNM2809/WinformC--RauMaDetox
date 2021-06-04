@@ -144,7 +144,26 @@ namespace qlrauma
 
         private void dgvThongTinNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return;
 
+            txtID.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtHoTen.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[1].Value.ToString();
+            dtpNgaySinh.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[2].Value.ToString();
+            if (dgvThongTinNhanVien.Rows[e.RowIndex].Cells[3].Value.ToString() == "Nam") radNam.Checked = true;
+            else radNu.Checked = true;
+            cbbChucDanh.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[4].Value.ToString();
+            cbbLoaiNhanVien.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtSDT.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtTaiKhoan.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[7].Value.ToString();
+            txtMatKhau.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[8].Value.ToString();
+            txtEmail.Text = dgvThongTinNhanVien.Rows[e.RowIndex].Cells[9].Value.ToString();
+
+            string path = string.Format(@"{0}\..\..\imgNhanVien\{1}", Environment.CurrentDirectory,
+                dgvThongTinNhanVien.Rows[e.RowIndex].Cells[10].Value.ToString());
+
+            picNhanVien.Image = Image.FromFile(path);
+            picNhanVien.Enabled = false;
+            txtTaiKhoan.Enabled = false;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -173,10 +192,10 @@ namespace qlrauma
 
         private void picNhanVien_Click(object sender, EventArgs e)
         {
-            //if (ofdimgNhanVien.ShowDialog() == DialogResult.OK)
-            //{
-            //    picNhanVien.Image = Image.FromFile(ofdimgNhanVien.FileName);
-            //}
+            if (ofdNhanVien.ShowDialog() == DialogResult.OK)
+            {
+                picNhanVien.Image = Image.FromFile(ofdNhanVien.FileName);
+            }
         }
 
         private void SaveImage(Image image)
@@ -252,5 +271,10 @@ namespace qlrauma
             ml(btnThoat, "no");
         }
         #endregion
+
+        private void f(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -80,8 +80,8 @@ namespace QLRauma
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.92233F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.07767F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1165, 562);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1311, 702);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // dgvDSHD
@@ -103,7 +103,7 @@ namespace QLRauma
             this.dgvDSHD.Name = "dgvDSHD";
             this.dgvDSHD.RowHeadersWidth = 51;
             this.dgvDSHD.RowTemplate.Height = 29;
-            this.dgvDSHD.Size = new System.Drawing.Size(1159, 310);
+            this.dgvDSHD.Size = new System.Drawing.Size(1305, 388);
             this.dgvDSHD.TabIndex = 0;
             this.dgvDSHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSHD_CellClick);
             // 
@@ -174,14 +174,14 @@ namespace QLRauma
             this.tableLayoutPanel2.Controls.Add(this.button1, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 316);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 394);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1159, 244);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1305, 306);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -195,22 +195,22 @@ namespace QLRauma
             this.tableLayoutPanel3.Controls.Add(this.lbl_tong, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.txtTongSoLuong, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(582, 2);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(655, 2);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(574, 118);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(647, 149);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // txtTongTien
             // 
             this.txtTongTien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTongTien.Location = new System.Drawing.Point(290, 61);
+            this.txtTongTien.Location = new System.Drawing.Point(326, 76);
             this.txtTongTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(281, 55);
+            this.txtTongTien.Size = new System.Drawing.Size(318, 71);
             this.txtTongTien.TabIndex = 4;
             this.txtTongTien.Text = "0";
             // 
@@ -221,9 +221,9 @@ namespace QLRauma
             this.lbl_tongtien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_tongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbl_tongtien.ForeColor = System.Drawing.Color.White;
-            this.lbl_tongtien.Location = new System.Drawing.Point(3, 59);
+            this.lbl_tongtien.Location = new System.Drawing.Point(3, 74);
             this.lbl_tongtien.Name = "lbl_tongtien";
-            this.lbl_tongtien.Size = new System.Drawing.Size(281, 59);
+            this.lbl_tongtien.Size = new System.Drawing.Size(317, 75);
             this.lbl_tongtien.TabIndex = 2;
             this.lbl_tongtien.Text = "Tổng Tiền";
             this.lbl_tongtien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -237,7 +237,7 @@ namespace QLRauma
             this.lbl_tong.ForeColor = System.Drawing.Color.White;
             this.lbl_tong.Location = new System.Drawing.Point(3, 0);
             this.lbl_tong.Name = "lbl_tong";
-            this.lbl_tong.Size = new System.Drawing.Size(281, 59);
+            this.lbl_tong.Size = new System.Drawing.Size(317, 74);
             this.lbl_tong.TabIndex = 1;
             this.lbl_tong.Text = "Tổng Số Lượng";
             this.lbl_tong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -245,10 +245,10 @@ namespace QLRauma
             // txtTongSoLuong
             // 
             this.txtTongSoLuong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTongSoLuong.Location = new System.Drawing.Point(290, 2);
+            this.txtTongSoLuong.Location = new System.Drawing.Point(326, 2);
             this.txtTongSoLuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTongSoLuong.Name = "txtTongSoLuong";
-            this.txtTongSoLuong.Size = new System.Drawing.Size(281, 55);
+            this.txtTongSoLuong.Size = new System.Drawing.Size(318, 70);
             this.txtTongSoLuong.TabIndex = 3;
             this.txtTongSoLuong.Text = "0";
             // 
@@ -258,7 +258,7 @@ namespace QLRauma
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel4.Controls.Add(this.lblso, 2, 2);
             this.tableLayoutPanel4.Controls.Add(this.lbl_tien, 2, 1);
             this.tableLayoutPanel4.Controls.Add(this.lbl_tensp, 0, 0);
@@ -276,16 +276,16 @@ namespace QLRauma
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(573, 118);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(646, 149);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // lblso
             // 
             this.lblso.AutoSize = true;
             this.lblso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.lblso.Location = new System.Drawing.Point(555, 78);
+            this.lblso.Location = new System.Drawing.Point(625, 98);
             this.lblso.Name = "lblso";
-            this.lblso.Size = new System.Drawing.Size(15, 40);
+            this.lblso.Size = new System.Drawing.Size(18, 51);
             this.lblso.TabIndex = 8;
             this.lblso.Text = "label1";
             // 
@@ -293,9 +293,9 @@ namespace QLRauma
             // 
             this.lbl_tien.AutoSize = true;
             this.lbl_tien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.lbl_tien.Location = new System.Drawing.Point(555, 39);
+            this.lbl_tien.Location = new System.Drawing.Point(625, 49);
             this.lbl_tien.Name = "lbl_tien";
-            this.lbl_tien.Size = new System.Drawing.Size(15, 39);
+            this.lbl_tien.Size = new System.Drawing.Size(18, 49);
             this.lbl_tien.TabIndex = 7;
             this.lbl_tien.Text = "label1";
             // 
@@ -308,7 +308,7 @@ namespace QLRauma
             this.lbl_tensp.ForeColor = System.Drawing.Color.White;
             this.lbl_tensp.Location = new System.Drawing.Point(3, 0);
             this.lbl_tensp.Name = "lbl_tensp";
-            this.lbl_tensp.Size = new System.Drawing.Size(270, 39);
+            this.lbl_tensp.Size = new System.Drawing.Size(305, 49);
             this.lbl_tensp.TabIndex = 0;
             this.lbl_tensp.Text = "Tên Sản Phẩm";
             this.lbl_tensp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -320,9 +320,9 @@ namespace QLRauma
             this.lbl_soluong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_soluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbl_soluong.ForeColor = System.Drawing.Color.White;
-            this.lbl_soluong.Location = new System.Drawing.Point(3, 39);
+            this.lbl_soluong.Location = new System.Drawing.Point(3, 49);
             this.lbl_soluong.Name = "lbl_soluong";
-            this.lbl_soluong.Size = new System.Drawing.Size(270, 39);
+            this.lbl_soluong.Size = new System.Drawing.Size(305, 49);
             this.lbl_soluong.TabIndex = 1;
             this.lbl_soluong.Text = "Số Lượng";
             this.lbl_soluong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -334,9 +334,9 @@ namespace QLRauma
             this.lblGia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblGia.ForeColor = System.Drawing.Color.White;
-            this.lblGia.Location = new System.Drawing.Point(3, 78);
+            this.lblGia.Location = new System.Drawing.Point(3, 98);
             this.lblGia.Name = "lblGia";
-            this.lblGia.Size = new System.Drawing.Size(270, 40);
+            this.lblGia.Size = new System.Drawing.Size(305, 51);
             this.lblGia.TabIndex = 2;
             this.lblGia.Text = "Giá Tiền";
             this.lblGia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -345,10 +345,10 @@ namespace QLRauma
             // 
             this.cbbTenSP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbbTenSP.FormattingEnabled = true;
-            this.cbbTenSP.Location = new System.Drawing.Point(279, 2);
+            this.cbbTenSP.Location = new System.Drawing.Point(314, 2);
             this.cbbTenSP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbTenSP.Name = "cbbTenSP";
-            this.cbbTenSP.Size = new System.Drawing.Size(270, 24);
+            this.cbbTenSP.Size = new System.Drawing.Size(305, 28);
             this.cbbTenSP.TabIndex = 3;
             this.cbbTenSP.SelectedValueChanged += new System.EventHandler(this.cbbTenSP_SelectedValueChanged);
             this.cbbTenSP.Click += new System.EventHandler(this.cbbTenSP_SelectedValueChanged);
@@ -356,19 +356,19 @@ namespace QLRauma
             // numSoLuong
             // 
             this.numSoLuong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numSoLuong.Location = new System.Drawing.Point(279, 41);
+            this.numSoLuong.Location = new System.Drawing.Point(314, 51);
             this.numSoLuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numSoLuong.Name = "numSoLuong";
-            this.numSoLuong.Size = new System.Drawing.Size(270, 22);
+            this.numSoLuong.Size = new System.Drawing.Size(305, 26);
             this.numSoLuong.TabIndex = 4;
             // 
             // lbl_ma
             // 
             this.lbl_ma.AutoSize = true;
             this.lbl_ma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.lbl_ma.Location = new System.Drawing.Point(555, 0);
+            this.lbl_ma.Location = new System.Drawing.Point(625, 0);
             this.lbl_ma.Name = "lbl_ma";
-            this.lbl_ma.Size = new System.Drawing.Size(15, 39);
+            this.lbl_ma.Size = new System.Drawing.Size(18, 49);
             this.lbl_ma.TabIndex = 6;
             this.lbl_ma.Text = "label1";
             // 
@@ -376,9 +376,10 @@ namespace QLRauma
             // 
             this.cbbGia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbbGia.FormattingEnabled = true;
-            this.cbbGia.Location = new System.Drawing.Point(279, 81);
+            this.cbbGia.Location = new System.Drawing.Point(314, 102);
+            this.cbbGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbbGia.Name = "cbbGia";
-            this.cbbGia.Size = new System.Drawing.Size(270, 24);
+            this.cbbGia.Size = new System.Drawing.Size(305, 28);
             this.cbbGia.TabIndex = 9;
             // 
             // button1
@@ -387,10 +388,10 @@ namespace QLRauma
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.button1.Location = new System.Drawing.Point(3, 124);
+            this.button1.Location = new System.Drawing.Point(3, 155);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(573, 118);
+            this.button1.Size = new System.Drawing.Size(646, 149);
             this.button1.TabIndex = 2;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = false;
@@ -404,12 +405,12 @@ namespace QLRauma
             this.tableLayoutPanel5.Controls.Add(this.btn_bo, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnXacNhan, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(582, 124);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(655, 155);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(574, 118);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(647, 149);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
             // btn_bo
@@ -419,10 +420,10 @@ namespace QLRauma
             this.btn_bo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_bo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btn_bo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btn_bo.Location = new System.Drawing.Point(290, 2);
+            this.btn_bo.Location = new System.Drawing.Point(326, 2);
             this.btn_bo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_bo.Name = "btn_bo";
-            this.btn_bo.Size = new System.Drawing.Size(281, 114);
+            this.btn_bo.Size = new System.Drawing.Size(318, 145);
             this.btn_bo.TabIndex = 4;
             this.btn_bo.Text = "Bỏ món";
             this.btn_bo.UseVisualStyleBackColor = false;
@@ -438,7 +439,7 @@ namespace QLRauma
             this.btnXacNhan.Location = new System.Drawing.Point(3, 2);
             this.btnXacNhan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(281, 114);
+            this.btnXacNhan.Size = new System.Drawing.Size(317, 145);
             this.btnXacNhan.TabIndex = 3;
             this.btnXacNhan.Text = "Chọn món";
             this.btnXacNhan.UseVisualStyleBackColor = false;
@@ -446,9 +447,9 @@ namespace QLRauma
             // 
             // frmChiTietHoaDon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1165, 562);
+            this.ClientSize = new System.Drawing.Size(1311, 702);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

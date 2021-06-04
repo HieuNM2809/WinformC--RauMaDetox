@@ -27,3 +27,32 @@ C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\qlrauma\bin\Debug\EntityFramework
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\qlrauma\obj\Debug\qlrauma.csproj.CopyComplete
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\qlrauma\obj\Debug\qlrauma.exe
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\qlrauma\obj\Debug\qlrauma.pdb
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\obj\Debug\qlrauma.csprojAssemblyReference.cache
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\obj\Debug\QLRauma.frmChiTietHoaDon.resources
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\obj\Debug\QLRauma.FrmDangKiTaiKhoan.resources
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\obj\Debug\QLRauma.frmDashboar.resources
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\obj\Debug\QLRauma.FrmDoiMatKhau.resources
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\obj\Debug\QLRauma.frmHoaDon.resources
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\obj\Debug\QLRauma.frmlogin.resources
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\obj\Debug\qlrauma.frmThongTinNhanVien.resources
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\obj\Debug\qlrauma.frm_SuaCTHD.resources
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\obj\Debug\qlrauma.Properties.Resources.resources
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\obj\Debug\qlrauma.QLNhanVien.resources
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\obj\Debug\QLRauma.QL_SanPham.resources
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\obj\Debug\qlrauma.csproj.GenerateResource.cache
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\obj\Debug\qlrauma.csproj.CoreCompileInputs.cache
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\bin\Debug\qlrauma.exe.config
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\bin\Debug\qlrauma.exe
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\bin\Debug\qlrauma.pdb
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\bin\Debug\BUS.dll
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\bin\Debug\DTO.dll
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\bin\Debug\DAO.dll
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\bin\Debug\EntityFramework.dll
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\bin\Debug\BUS.pdb
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\bin\Debug\DTO.pdb
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\bin\Debug\DAO.pdb
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\bin\Debug\DAO.dll.config
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\bin\Debug\EntityFramework.xml
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\obj\Debug\qlrauma.csproj.CopyComplete
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\obj\Debug\qlrauma.exe
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\qlrauma\obj\Debug\qlrauma.pdb

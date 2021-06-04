@@ -4,3 +4,8 @@ C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DTO\obj\Debug\DTO.csproj.Assembly
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DTO\obj\Debug\DTO.dll
 C:\Users\Thanh Duy\OneDrive\Máy tính\qlrauma\DTO\obj\Debug\DTO.pdb
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\DTO\bin\Debug\DTO.dll
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\DTO\bin\Debug\DTO.pdb
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\DTO\obj\Debug\DTO.dll
+D:\HỌC TẬP\ĐỒ ÁN LẬP TRÌNH WINDOWS\WinformC--RauMaDetox\WinformC--RauMaDetox\qlrauma\DTO\obj\Debug\DTO.pdb

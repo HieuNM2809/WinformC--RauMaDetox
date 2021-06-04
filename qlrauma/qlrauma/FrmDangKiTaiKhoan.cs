@@ -82,11 +82,11 @@ namespace QLRauma
                         nv.TaiKhoan = txtTenTruyCap.Text;
                         nv.LoaiNV = cbbLoaiNV.Text;
                         nv.MatKhau = txtMatKhau.Text.MaHoaMD5();
-                        //nv.Hinh = string.Format("{0}.jpg", i);
+                        nv.Hinh = string.Format("{0}.jpg", i);
 
-                        //picNV.Text = i + ".jpg";
+                        picNV.Text = i + ".jpg";
 
-                        //SaveImage(picNV.Image);
+                        SaveImage(picNV.Image);
 
                         if (_DKTK.DangKiTK(nv))
                         {
@@ -106,14 +106,23 @@ namespace QLRauma
         }
         private void SaveImage(Image image)
         {
-            int i = int.Parse(_DKTK.MAXID()) + 1;
+            int i = 1;
+            if (_DKTK.MAXID() == null)
+            {
+                 
+                return;
+            }
+            else { i = int.Parse(_DKTK.MAXID()) + 1; }
             Bitmap bmp = new Bitmap(image);
             string path = string.Format(@"{0}\..\..\imgNhanVien\{1}.jpg", Environment.CurrentDirectory, i);
             bmp.Save(path, ImageFormat.Jpeg);
         }
         private void picNV_Click(object sender, EventArgs e)
         {
-
+            if (ofdDKTK.ShowDialog() == DialogResult.OK)
+            {
+                picNV.Image = Image.FromFile(ofdDKTK.FileName);
+            }
         }
         private string ChonGioiTinh()
         {

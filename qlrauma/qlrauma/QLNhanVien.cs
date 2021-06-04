@@ -13,12 +13,18 @@ namespace qlrauma
 {
     public partial class QLNhanVien : Form
     {
+
+        public static string QuyenNV;
         public QLNhanVien()
         {
             InitializeComponent();
+            if (QuyenNV == "NV")
+            {
+                tsmlTTNV.Enabled = false;
+                tmslBaoCao.Enabled = false;
+            }
         }
 
-        public static string QuyenNV;
         private void frmloadFill(object frm)
         {
             if (this.panel_show.Controls.Count > 0)
@@ -47,12 +53,7 @@ namespace qlrauma
         private void đăngKíTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmDangKiTaiKhoan dk = new FrmDangKiTaiKhoan();
-            panel_show.Show();
-            panel_show.Controls.Clear();
-            dk.TopLevel = false;
-            dk.Dock = DockStyle.Left;
-            panel_show.Controls.Add(dk);
-            dk.Show();
+            frmloadNoNe(dk);
         }
 
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -63,8 +64,8 @@ namespace qlrauma
 
         private void thôngTinNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //MethodInvoker TTNV = new MethodInvoker();
-            //frmloadFill(TTNV);
+            frmThongTinNhanVien ttvc = new frmThongTinNhanVien();
+            frmloadFill(ttvc);
         }
 
         private void QLNhanVien_Load(object sender, EventArgs e)

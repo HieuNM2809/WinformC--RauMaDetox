@@ -25,5 +25,14 @@ namespace DTO
             }
             return sb.ToString().ToLower();
         }
+
+        public static bool KiemTraSo(this string text, int n)
+        {
+            if (int.TryParse(text, out n))
+            {
+                return true;
+            }
+            else return false;
+        }
     }
 }

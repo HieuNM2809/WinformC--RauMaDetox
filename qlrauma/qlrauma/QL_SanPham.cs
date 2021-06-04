@@ -27,6 +27,11 @@ namespace QLRauma
             cbb_xoa_loai.DataSource = _dsloai.LayDSloaisp();
             cbb_xoa_loai.DisplayMember = "MaLoaiSp";
             cbb_xoa_loai.ValueMember = "MaLoaiSp";
+            if (QuyenSP == "NV")
+            {
+                tp_qlsp.TabPages.Remove(tp_suaxoa);
+                tp_qlsp.TabPages.Remove(tp_them);
+            }
         }
         ////////////////////////////////////////////////////xử lý ảnh//////////////////////////////////////////////////////
         private byte[] converImgToByte()
